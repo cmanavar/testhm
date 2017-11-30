@@ -38,7 +38,8 @@ class WebservicesController extends AppController {
 
     public function beforeFilter(Event $event) {
         $this->Auth->allow(['homepage', 'categoryDetails', 'categoryList', 'serviceDetails', 'getServicesSubQuestions', 'helpDetails',
-            'createCart', 'addCartProduct', 'cartDetails', 'cartClear', 'removeCartProduct', 'counteunreadmsg', 'msgList', 'msgView', 'cartOrderPlaced', 'forgorPassword', 'changePassword']);
+            'createCart', 'addCartProduct', 'cartDetails', 'cartClear', 'removeCartProduct', 'counteunreadmsg', 'msgList', 'msgView', 
+            'cartOrderPlaced', 'forgorPassword', 'changePassword', 'applyCouponCode']);
     }
 
     //***********************************************************************************************//
@@ -903,6 +904,15 @@ class WebservicesController extends AppController {
             } else {
                 $this->wrong('Sorry, Userdata is not found!');
             }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+    
+    public function applyCouponCode() {
+        $user_id = $this->checkVerifyApiKey('CUSTOMER');
+        if ($user_id) {
+            echo $user_id; exit;
         } else {
             $this->wrong('Invalid API key.');
         }

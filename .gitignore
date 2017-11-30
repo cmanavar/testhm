@@ -1,2 +1,4 @@
-
 tmp/*
+logs/*
+config/app.php
+sendgrid/sendmail.php
