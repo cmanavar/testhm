@@ -16,9 +16,11 @@ if ($result) {
 }
 
 function sendemail($msg, $to, $ccEmail, $name = null, $subject = null) {
+    $username = base64_decode('dW5jb2Rl');
+    $password = base64_decode('dU4kJCQzMzM=');
     require 'vendor/autoload.php';
     require 'lib/SendGrid.php';
-    $sendgrid = new SendGrid("uncode", "uN$$$333", array("turn_off_ssl_verification" => true));
+    $sendgrid = new SendGrid($username, $password, array("turn_off_ssl_verification" => true));
     $email = new SendGrid\Email();
     $email->addTo($to)->
             addCc($ccEmail)->
