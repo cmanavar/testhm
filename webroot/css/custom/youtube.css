@@ -1,0 +1,81 @@
+
+/*
+SimpleYouTubePlayer
+by John E Maddox
+*/
+
+/* === media list === */
+
+/* BOF For demo, centers video list on screen */
+
+#mList {
+  max-width: 100%;
+  margin: auto;
+}
+ @media screen and (orientation: landscape) and (min-width: 801px) {
+
+#mList {
+  max-width: 100%;
+}
+}
+
+/* EOF demo */
+
+
+#mList A.video {
+  /*margin: 10px;*/
+    width: 100%;
+    margin-bottom: 10px;
+    /*width: 275px;*/
+    /*height: 155px;*/
+    height:200px;
+    height : 179px;
+    line-height: 155px; /* match height */
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #000;
+    display: inline-table;
+}
+
+/* media list title overlay */
+
+
+#mList A.video DIV {
+  visibility: visible;
+  background: rgba(0, 0, 0, .8);
+}
+
+/* On hover actions */
+
+
+#mList A.video:hover DIV { visibility: hidden; }
+
+#mList A.video:hover { border: 1px solid #F00; }
+
+/* === popup media player === */
+
+/* background overlay */
+
+#mPlayer {
+  display: none;
+  background: rgba(0, 0, 0, .8);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  left: 0;
+  top: 0;
+}
+
+/* video player */
+
+#mPlayer DIV {
+  position: fixed;
+  background: #000;
+  width: 560px; /* width of YouTube Player */
+  height: 315px; /* height of YouTube Player */
+  left: calc(50vw - 280px); /* 280 is .5(560), centers x axis*/
+  top: calc(50vh - 157px); /* 157 is .5(315), centers y axis*/
+}

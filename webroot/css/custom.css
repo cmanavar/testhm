@@ -1,0 +1,41 @@
+.page-header{ margin-top:20px; }
+.tag-color{ color:#FF8000; }
+.control-label-details{ margin-bottom: 0; padding-top: 7px; !important; }
+.secheme-header{ background-color:#337ab7; !important; }
+.secheme-title{ color:#FFFFFF !important; font-size:18px; font-weight:bold; !important; }
+label.error { color: red; font-size:11px; font-weight: normal;}
+input.error,input.error:focus{ border:1px solid red; }
+textarea.error{ border:1px solid red; }
+select.error{ border:1px solid red; }
+.quick-info { color:#000; font:18px; font-weight:bold; }
+.quick-info a{ color:#000; font:18px; font-weight:normal !important; }
+.huge{ font-size:25px !important; }
+.panel-danger a{ color:#A94442; }
+.error-message { color: red; width:315% }
+.chkbox{ width:40% !important; }
+#saturnimg{ margin-top:13% !important; margin-left:7% !important; }
+.secheme-header:first-child a:hover{ background-color:#337ab7 !important; }	
+.secheme-header .active{ background-color:#337ab7 !important; }
+.secheme-title:first-child a:hover{ background-color:#337ab7 !important; }
+.secheme-title .active{ background-color:#337ab7 !important; }	
+.btn-password{ margin-right:10px !important; }
+.file{ margin-top: 7px ;}
+.date-group label.error{ display:none !important;}
+.date-group select.error{ border:1px solid #F00 !important;}
+.form-date{width: 32%;padding:0 !important;margin:0 !important;display:inline !important;}
+.navbar-brand { padding:0px !important; width:250px !important; padding-left:5px !important; } 
+input[type="radio"] { margin-left: 7px; margin-right: 7px; }
+.control-emi-label { font-size:16px; margin-bottom: 0; padding-top: 5px !important; }
+.permission_denied { color: #F00; }
+.btn.btn.btn-warning.pull-right{ margin-right:10px !important; }
+.btn.btn.btn-danger.pull-right{ margin-right:10px !important; }
+.btn.btn.btn-success.pull-right{ margin-right:10px !important; }
+input[type="checkbox"], input[type="radio"]{
+    margin: 12px 12px 0 7px;
+}
+
+/*Select scheme header*/
+/*select {
+    margin-bottom: -13px;
+    margin-top: 1px;
+}*/
