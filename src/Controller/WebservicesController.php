@@ -38,7 +38,7 @@ class WebservicesController extends AppController {
 
     public function beforeFilter(Event $event) {
         $this->Auth->allow(['homepage', 'categoryDetails', 'categoryList', 'serviceDetails', 'getServicesSubQuestions', 'helpDetails',
-            'createCart', 'addCartProduct', 'cartDetails', 'cartClear', 'removeCartProduct', 'counteunreadmsg', 'msgList', 'msgView', 
+            'createCart', 'addCartProduct', 'cartDetails', 'cartClear', 'removeCartProduct', 'counteunreadmsg', 'msgList', 'msgView',
             'cartOrderPlaced', 'forgorPassword', 'changePassword', 'applyCouponCode']);
     }
 
@@ -861,7 +861,7 @@ class WebservicesController extends AppController {
                 'from_mail' => EMAIL_FROM_EMAIL_ADDRESS,
             );
             //if ($this->sendemails($fields)) {
-                $this->success('Mail Send!');
+            $this->success('Mail Send!');
 //            } else {
 //                $this->wrong('Sorry, Something wrong!');
 //            }
@@ -908,11 +908,64 @@ class WebservicesController extends AppController {
             $this->wrong('Invalid API key.');
         }
     }
-    
+
     public function applyCouponCode() {
         $user_id = $this->checkVerifyApiKey('CUSTOMER');
         if ($user_id) {
-            echo $user_id; exit;
+            $this->loadModel('Carts');
+            $this->loadModel('Coupons');
+            $requestArr = $this->getInputArr();
+            $requiredFields = array(
+                'Cart Id' => (isset($requestArr['cart_id']) && $requestArr['cart_id'] != '') ? $requestArr['cart_id'] : '',
+                'Coupon Code' => (isset($requestArr['coupon_code']) && $requestArr['coupon_code'] != '') ? $requestArr['coupon_code'] : ''
+            );
+            $validate = $this->checkRequiredFields($requiredFields);
+            if ($validate != "") {
+                $this->wrong($validate);
+            }
+            $cart_id = $requestArr['cart_id'];
+            $coupon_code = $requestArr['coupon_code'];
+            $cartExist = $this->Carts->find('all')->where(['id' => $requestArr['cart_id'], 'status' => 'PROCESS'])->hydrate(false)->first();
+            if ($cartExist) {
+                $cartDetails = $this->totalCartPrice($cart_id);
+                $couponCodeDetails = $this->Coupons->find('all')->where(['code' => $requestArr['coupon_code']])->hydrate(false)->first();
+                if ($couponCodeDetails) {
+                    $todayDate = date('Y-m-d');
+                    $validTo = $couponCodeDetails['valid_to']->format('Y-m-d');
+                    $validFrom = $couponCodeDetails['valid_from']->format('Y-m-d');
+                    $curDate = strtotime($todayDate);
+                    if ($curDate < strtotime($validTo) || $curDate > strtotime($validFrom)) {
+                        echo json_encode(['status' => 'fail', 'msg' => 'Sorry, Discount coupon was expired!', 'data' => $cartDetails]);
+                        exit;
+                    } else {
+                        //echo ' valid';
+                        $discount = 0.00;
+                        if (isset($couponCodeDetails['discount_type']) && $couponCodeDetails['discount_type'] == 'PRICE') {
+                            $discount = $couponCodeDetails['amount'];
+                            $cartDetails["total"]["discount"] = "-" . number_format($discount, 2);
+                            $cartDetails["total"]["total_amount"] = $cartDetails["total"]["total_amount"] - $discount;
+                        } else {
+                            $discountPercentage = $couponCodeDetails['amount'];
+                            if ($cartDetails["total"]["total_amount"] != 0.00) {
+                                $discount = ($couponCodeDetails['amount'] * $cartDetails["total"]["total_amount"]) / 100;
+                                $cartDetails["total"]["discount"] = "-" . number_format($discount, 2);
+                                $cartDetails["total"]["total_amount"] = $cartDetails["total"]["total_amount"] - $discount;
+                            } else {
+                                $cartDetails["total"]["discount"] = "-" . number_format($cartDetails["total"]["total_amount"], 2) . "%";
+                            }
+                        }
+                        echo json_encode(['status' => 'fail', 'msg' => 'Coupon code Applied!', 'data' => $cartDetails]);
+                    exit;
+                    }
+                    echo $todayDate . " " . $validTo . " " . $validFrom;
+                    exit;
+                } else {
+                    echo json_encode(['status' => 'fail', 'msg' => 'Sorry. No Discount coupon is invalid!', 'data' => $cartDetails]);
+                    exit;
+                }
+            } else {
+                $this->wrong('Sorry, Cart is not Exist!');
+            }
         } else {
             $this->wrong('Invalid API key.');
         }

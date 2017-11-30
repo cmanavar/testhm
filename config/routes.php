@@ -70,6 +70,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/cart/cancel', ['controller' => 'Webservices', 'action' => 'cartClear']);
     $routes->connect('/webservices/cart/product/add', ['controller' => 'Webservices', 'action' => 'addCartProduct']);
     $routes->connect('/webservices/cart/product/remove', ['controller' => 'Webservices', 'action' => 'removeCartProduct']);
+    $routes->connect('/webservices/apply/couponcode/', ['controller' => 'Webservices', 'action' => 'applyCouponCode']);
     $routes->connect('/webservices/place/cartorder', ['controller' => 'Webservices', 'action' => 'cartOrderPlaced']);
     $routes->connect('/webservices/getcount/unreadmsg', ['controller' => 'Webservices', 'action' => 'counteunreadmsg']);
     $routes->connect('/webservices/messages/list', ['controller' => 'Webservices', 'action' => 'msgList']);

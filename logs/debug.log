@@ -5569,3 +5569,12 @@
 2017-11-30 00:30:07 Notice: Notice (8): Undefined variable: headers in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 873]
 
 
+2017-11-30 23:34:28 Notice: Notice (8): Undefined variable: couponCodeExist in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 932]
+
+
+2017-11-30 23:43:54 Notice: Notice (8): Undefined index: discount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 950]
+
+
+2017-11-30 23:44:15 Notice: Notice (8): Undefined index: discount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 950]
+
+

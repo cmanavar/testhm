@@ -12870,3 +12870,62 @@ Stack Trace:
 
 2017-11-30 22:16:52 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
 Request URL: /hmen/webservices/cart/detail
+2017-11-30 23:21:36 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/apply_coupon_code.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/apply_coupon_code.ctp',
+)
+Request URL: /hmen/webservices/apply/couponcode/
+2017-11-30 23:22:49 Error: Fatal Error (4): syntax error, unexpected '" "' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 934]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2017-11-30 23:22:49 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '" "' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';'
+Request URL: /hmen/webservices/apply/couponcode/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/Applications/X...', 934)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-11-30 23:23:08 Error: Fatal Error (1): Call to undefined function Cake\I18n\datefmt_create() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/I18n/Time.php, line 610]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2017-11-30 23:23:08 Error: [Cake\Error\FatalErrorException] Call to undefined function Cake\I18n\datefmt_create()
+Request URL: /hmen/webservices/apply/couponcode/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 610)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-11-30 23:23:52 Error: Fatal Error (1): Call to undefined function Cake\I18n\datefmt_create() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/I18n/Time.php, line 610]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2017-11-30 23:23:52 Error: [Cake\Error\FatalErrorException] Call to undefined function Cake\I18n\datefmt_create()
+Request URL: /hmen/webservices/apply/couponcode/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 610)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-11-30 23:43:54 Warning: Warning (2): Division by zero in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 950]
+
+
+2017-11-30 23:44:15 Warning: Warning (2): Division by zero in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 950]
+
+
