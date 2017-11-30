@@ -84,7 +84,7 @@ $HTTP_HOST = $_SERVER['HTTP_HOST'];
 if ($HTTP_HOST == 'localhost') {
     $url = 'http://localhost/hmen/';
 } else {
-    $url = 'http://hmen.in/';
+    $url = 'http://uncode.in/hmen/';
 }
 //echo $HTTP_HOST;
 //exit;

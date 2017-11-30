@@ -207,8 +207,8 @@ return [
              * the following line and set the port accordingly
              */
             //'port' => 'nonstandard_port_number',
-            'username' => 'root',
-            'password' => 'uN$$$333',
+            'username' => 'hmen_user',
+            'password' => 'hM$$$333',
             'database' => 'hmen',
             'encoding' => 'utf8',
             'timezone' => 'UTC',

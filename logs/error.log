@@ -12868,3 +12868,5 @@ Stack Trace:
 #2 {main}
 
 
+2017-11-30 22:16:52 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+Request URL: /hmen/webservices/cart/detail
