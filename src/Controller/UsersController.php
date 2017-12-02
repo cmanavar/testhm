@@ -258,6 +258,7 @@ class UsersController extends AppController {
         $this->autoRender = false;
         $user = $this->Users->newEntity();
         $requestArr = $this->getInputArr();
+        //pr($requestArr); exit;
         $requiredFields = array(
             'Full name' => (isset($requestArr['full_name']) && $requestArr['full_name'] != '') ? $requestArr['full_name'] : '',
             'Email' => (isset($requestArr['email']) && $requestArr['email'] != '') ? $requestArr['email'] : '',
@@ -296,15 +297,18 @@ class UsersController extends AppController {
                 $userData['active'] = 'N';
                 $userData['refer_key'] = $this->getReferKey($name, $phone_no);
                 $userData['referral_id'] = 0;
-                if (isset($requestArr['refereal_code']) && $requestArr['refereal_code'] != '') {
-                    $affiliateUsers = $this->Users->find('all')->where(['refer_key' => $requestArr['refereal_code']])->hydrate(false)->first();
+                if (isset($requestArr['referral_code']) && $requestArr['referral_code'] != '') {
+                    $affiliateUsers = $this->Users->find('all')->where(['refer_key' => $requestArr['referral_code']])->hydrate(false)->first();
                     if (isset($affiliateUsers) && !empty($affiliateUsers)) {
                         $flagAff = true;
                         $userData['referral_id'] = $vW['user_id'] = $affiliateUsers['id'];
                     }
                 }
                 $user = $this->Users->patchEntity($user, $userData);
+                $user->created_by = 0;
+                $user->modified_by = 0;
                 $user->created = date("Y-m-d H:i:s");
+                $user->modified = date("Y-m-d H:i:s");
                 $otpT = rand(199999, 999999);
                 // SEND OTP
                 $msgT = "Dear $name, Your OTP code is $otpT, Further you needs to provide this code to OTP screen. Regards, H-Men";
@@ -355,6 +359,7 @@ class UsersController extends AppController {
                     );
                     $userMapping = $this->UserMapping->patchEntity($userMapping, $map_data);
                     $userMapping->created = date("Y-m-d H:i:s");
+                    $userMapping->modified = date("Y-m-d H:i:s");
                     if ($this->UserMapping->save($userMapping)) {
                         $this->loadModel('Otps');
                         $otp = $this->Otps->newEntity();

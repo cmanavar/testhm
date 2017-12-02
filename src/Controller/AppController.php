@@ -152,17 +152,20 @@ class AppController extends Controller {
             'to' => $phonenumber,
             'msg' => $msg
         );
+        //print_r($rslt); exit;
         $handle = curl_init('http://t.saurustechnology.com/SmsStatuswithId.aspx');
         curl_setopt($handle, CURLOPT_POST, true);
         curl_setopt($handle, CURLOPT_POSTFIELDS, $fields);
         curl_setopt($handle, CURLOPT_RETURNTRANSFER, TRUE);
         curl_exec($handle);
+        //print_r(curl_error($handle)); exit;
         if (curl_error($handle)) {
             $msgError = "cURL Error #:" . $err;
             $rslt = ['status' => 'fail', 'msg' => $msgError];
         } else {
             $rslt = ['status' => 'success', 'msg' => 'Send!'];
         }
+        //print_r($rslt); exit;
         //curl_close($handle);
         return $rslt;
     }
@@ -242,12 +245,12 @@ class AppController extends Controller {
         }
     }
 
-    public function newMsg($user_id, $title, $type, $details) {
+    public function newMsg($user_id, $title, $msgtype, $details) {
         $msgTable = TableRegistry::get('Messages');
         $msg = $msgTable->newEntity();
         $msgArr['user_id'] = $user_id;
         $msgArr['message_title'] = $title;
-        $msgArr['type'] = $type;
+        $msgArr['msg_type'] = $msgtype;
         $msgArr['message_detail'] = $details;
         $msgArr['seen'] = 'N';
         $msgArr['created_by'] = $user_id;
@@ -272,6 +275,7 @@ class AppController extends Controller {
         $walletArr['purpose_id'] = $purpose_id;
         $wallet = $walletTable->patchEntity($wallet, $walletArr);
         $wallet->created = date('Y-m-d H:i:s');
+        $wallet->modified = date('Y-m-d H:i:s');
         if ($walletSave = $walletTable->save($wallet)) {
             return $walletSave['id'];
         } else {

@@ -553,6 +553,7 @@ class WebservicesController extends AppController {
                     $cartArr = ['user_id' => $user_id, 'category_id' => $category_id, 'service_id' => $service_id, 'status' => 'PROCESS'];
                     $carts = $this->Carts->patchEntity($carts, $cartArr);
                     $carts->created = date("Y-m-d H:i:s");
+                    $carts->modified = date("Y-m-d H:i:s");
                     $rslt = $this->Carts->save($carts);
                     if ($rslt->id) {
                         $this->success('Cart created!', ['id' => $rslt->id]);
@@ -658,7 +659,7 @@ class WebservicesController extends AppController {
                                     } else {
                                         $this->wrong("Sorry, Questions quantity is not found!.");
                                     }
-                                    //print_r($questionDetails);
+                                    //print_r($questionDetails); exit;
                                 } else {
                                     $this->wrong("Sorry, Questions data is not found!.");
                                 }
@@ -677,8 +678,11 @@ class WebservicesController extends AppController {
                         );
                         //pr($order_data); exit;
                         $cartOrders = $this->CartOrders->patchEntity($cartOrders, $order_data);
+                        $cartOrders->order_id = 0;
                         $cartOrders->created_at = date('Y-m-d H:i:s');
+                        $cartOrders->modified_at = date('Y-m-d H:i:s');
                         $cartOrderSave = $this->CartOrders->save($cartOrders);
+                        //pr($cartOrderSave); exit;
                         if ($cartOrderSave) {
                             $cartOrderId = $cartOrderSave['id'];
                             if (!empty($questionsData)) {
@@ -701,6 +705,7 @@ class WebservicesController extends AppController {
                                     );
                                     $queAnsData = $this->CartOrderQuestions->patchEntity($queAnsData, $qa_data);
                                     $queAnsData->created_at = date('Y-m-d H:i:s');
+                                    $queAnsData->modified_at = date('Y-m-d H:i:s');
                                     if ($this->CartOrderQuestions->save($queAnsData)) {
                                         $flag = true;
                                     } else {
@@ -809,6 +814,7 @@ class WebservicesController extends AppController {
     }
 
     public function totalCartPrice($cartID) {
+        //echo $cartID; exit;
         if (isset($cartID) && $cartID != '') {
             $this->loadModel('Carts');
             $this->loadModel('Categories');
@@ -864,8 +870,10 @@ class WebservicesController extends AppController {
                 if (isset($od['on_inspection']) && $od['on_inspection'] == 'Y') {
                     $total['on_inspection'] = 'Y';
                 }
-                $order_amount += $od['total_amount'];
+                $totAmount = isset($od['total_amount']) && $od['total_amount'] != '' ? $od['total_amount'] : 0;
+                $order_amount += $totAmount;
             }
+            //pr($order_amount); exit;
             $total['order_amount'] = $order_amount;
             $total['tax'] = $order_amount * GST_TAX / 100;
             $total['total_amount'] = $total['order_amount'] + $total['tax'];
@@ -1065,8 +1073,8 @@ class WebservicesController extends AppController {
                 // Wallet Amount Apply
                 $order = $this->Orders->patchEntity($order, $orderData);
                 $order->schedule_date = date('Y-m-d', strtotime($requestArr['schedule_date']));
-                $order->created = date('Y-m-d H:i:s');
-                $order->modified = date('Y-m-d H:i:s');
+                $order->created_at = date('Y-m-d H:i:s');
+                $order->modified_at = date('Y-m-d H:i:s');
                 if ($this->Orders->save($order)) {
                     $cartArr = $this->Carts->get($cart_id);
                     $cartUpdate['status'] = 'PLACED';
