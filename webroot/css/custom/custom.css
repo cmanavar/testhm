@@ -225,7 +225,7 @@ body .login-window .loginbox .lgarea{background: rgba(255, 255, 255, 0.4) none r
 /*sachin End*/
 
 body , #page-wrapper {background: rgba(0, 0, 0, 0) url("../../img/clinicsoftwarebg.png") repeat scroll 0 0; border-left:none;}
-#container .background_1{background: rgba(0, 0, 0, 0) url("../../img/background-1.png")repeat scroll 0 0 !important; }
+/*#container .background_1{background: rgba(0, 0, 0, 0) url("../../img/background-1.png")repeat scroll 0 0 !important; }
 #container .background_2{background: rgba(0, 0, 0, 0) url("../../img/background-2.png")repeat scroll 0 0 !important; }
 #container .background_3{background: rgba(0, 0, 0, 0) url("../../img/background-3.png")repeat scroll 0 0 !important; }
 #container .background_4{background: rgba(0, 0, 0, 0) url("../../img/background-4.png")repeat scroll 0 0 !important; }
@@ -242,7 +242,7 @@ body , #page-wrapper {background: rgba(0, 0, 0, 0) url("../../img/clinicsoftware
 #container .background_15{background: rgba(0, 0, 0, 0) url("../../img/background-15.png")repeat scroll 0 0 !important; }
 #container .background_16{background: rgba(0, 0, 0, 0) url("../../img/background-16.png")repeat scroll 0 0 !important; }
 #container .background_17{background: rgba(0, 0, 0, 0) url("../../img/background-17.png")repeat scroll 0 0 !important; }
-#container .clinicsoftwarebg{background: rgba(0, 0, 0, 0) url("../../img/clinicsoftwarebg.png")repeat scroll 0 0 !important; }
+#container .clinicsoftwarebg{background: rgba(0, 0, 0, 0) url("../../img/clinicsoftwarebg.png")repeat scroll 0 0 !important; }*/
 
 
 /*SMS*/
@@ -313,7 +313,7 @@ div.dataTables_filter input { text-transform: uppercase;}
 }
 .login-box{
     //background: url("../../img/lockscreen.png") repeat scroll 0 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(255, 255, 255, 0.2);
     color: #ffffff;
     padding: 15px;
     position: relative;

@@ -92,6 +92,13 @@ if ($HTTP_HOST == 'localhost') {
 define('CORE_PATH', CAKE_CORE_INCLUDE_PATH . DS);
 define('CAKE', CORE_PATH . 'src' . DS);
 
+define('WEBSITE_PATH', 'http://www.hmen.in/');
+define('WEBSITE_TOC_PATH', 'http://www.hmen.in/toc.html');
+define('EMAIL_FOOTER_TEXT', '218 Devashish Business Park, Bodakdev, Ahmedabad-380054, India');
+define('SOCIAL_MEDIA_LINK_FB', 'https://www.facebook.com/hmenahmedabad/');
+define('SOCIAL_MEDIA_LINK_TW', '#');
+define('SOCIAL_MEDIA_LINK_IN', 'https://www.instagram.com/hmenahmedabad/');
+
 define('APP_PATH', $url);
 define('IMAGE_URL_PATH', $url . 'img/');
 
@@ -109,7 +116,17 @@ define('VENDOR_AGREEMENT_PATH', 'vendors/agreements/');
 define('VENDOR_IDPROOF_PATH', 'vendors/idproof/');
 
 define('GST_TAX', 18);
+define('REFERRAL_COMISSION', 100.00);
 define('EMAIL_FROM_NAME', 'Uncode Lab');
 define('EMAIL_FROM_EMAIL_ADDRESS', 'uncodelab@gmail.com');
+
+
+// Msg Title for Referral
+define('MSG_TYPE_REFERRAL', 'REFERRAL');
+define('MSG_TYPE_CASHBACK', 'CASHBACK');
+define('MSG_TYPE_OFFER', 'OFFER');
+define('MSG_TYPE_OTHER', 'OTHER');
+define('MSG_TITLE_REFERRAL', 'Rewarded for refer');
+
 
 

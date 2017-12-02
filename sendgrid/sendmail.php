@@ -17,7 +17,7 @@ if ($result) {
 
 function sendemail($msg, $to, $ccEmail, $name = null, $subject = null) {
     $username = base64_decode('dW5jb2Rl');
-    $password = base64_decode('dU4kJCQzMzM=');
+    $password = base64_decode('VW4kJCQzMzM=');
     require 'vendor/autoload.php';
     require 'lib/SendGrid.php';
     $sendgrid = new SendGrid($username, $password, array("turn_off_ssl_verification" => true));

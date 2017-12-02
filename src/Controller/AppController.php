@@ -19,7 +19,7 @@ namespace App\Controller;
 use Cake\Controller\Controller;
 use Cake\ORM\TableRegistry;
 
-header('Access-Control-Allow-Origin: *');  
+header('Access-Control-Allow-Origin: *');
 
 /**
  * Application Controller
@@ -180,12 +180,13 @@ class AppController extends Controller {
         foreach ($fields as $key => $value) {
             $fields_string .= $key . '=' . $value . '&';
         }
-        rtrim($fields_string, '&');
+        $fields_string = rtrim($fields_string, '&');
         if ($_SERVER['HTTP_HOST'] == 'localhost') {
             $url = 'http://' . $_SERVER['HTTP_HOST'] . '/hmen/sendgrid/sendmail.php';
         } else {
             $url = 'http://' . $_SERVER['HTTP_HOST'] . '/sendgrid/sendmail.php';
         }
+        //echo $url."?".$fields_string; exit;
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, count($fields));
@@ -228,6 +229,78 @@ class AppController extends Controller {
         $serviceCategoryTable = TableRegistry::get('ServiceCategory');
         $categories = $serviceCategoryTable->find()->select(['name'])->where(['id' => $category_id])->hydrate(false)->first();
         return (isset($categories['name']) && $categories['name'] != '') ? $categories['name'] : '-';
+    }
+
+    public function orderIdCreate() {
+        $orderTable = TableRegistry::get('Orders');
+        $tmpId = date('YmdHis') . rand(1111, 9999);
+        $orderIdExist = $orderTable->find()->select(['id'])->where(['order_id' => $tmpId])->hydrate(false)->first();
+        if ($orderIdExist) {
+            $this->orderIdCreate();
+        } else {
+            return $tmpId;
+        }
+    }
+
+    public function newMsg($user_id, $title, $type, $details) {
+        $msgTable = TableRegistry::get('Messages');
+        $msg = $msgTable->newEntity();
+        $msgArr['user_id'] = $user_id;
+        $msgArr['message_title'] = $title;
+        $msgArr['type'] = $type;
+        $msgArr['message_detail'] = $details;
+        $msgArr['seen'] = 'N';
+        $msgArr['created_by'] = $user_id;
+        $msgArr['modified_by'] = $user_id;
+        $msg = $msgTable->patchEntity($msg, $msgArr);
+        $msg->created_at = date('Y-m-d H:i:s');
+        $msg->modified_at = date('Y-m-d H:i:s');
+        if ($msgTable->save($msg)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function addWalletAmount($user_id, $amount, $wallet_type, $purpose, $purpose_id) {
+        $walletTable = TableRegistry::get('Wallets');
+        $wallet = $walletTable->newEntity();
+        $walletArr['user_id'] = $user_id;
+        $walletArr['amount'] = $amount;
+        $walletArr['wallet_type'] = $wallet_type;
+        $walletArr['purpose'] = $purpose;
+        $walletArr['purpose_id'] = $purpose_id;
+        $wallet = $walletTable->patchEntity($wallet, $walletArr);
+        $wallet->created = date('Y-m-d H:i:s');
+        if ($walletSave = $walletTable->save($wallet)) {
+            return $walletSave['id'];
+        } else {
+            return false;
+        }
+    }
+
+    public function walletAmount($userId) {
+        $this->loadModel('Wallets');
+        $result = [];
+        $credits = $debits = 0;
+        $totCredit = $this->Wallets->find('all')->select(["credits" => "SUM(amount)"])->where(['user_id' => $userId, 'wallet_type' => 'CREDIT'])->hydrate(false)->first();
+        $credits = (isset($totCredit['credits']) && $totCredit['credits'] != '') ? $totCredit['credits'] : 0.00;
+        $totDebit = $this->Wallets->find('all')->select(["debits" => "SUM(amount)"])->where(['user_id' => $userId, 'wallet_type' => 'DEBIT'])->hydrate(false)->first();
+        $debits = (isset($totDebit['debits']) && $totDebit['debits'] != '') ? $totDebit['debits'] : 0.00;
+        $balance = $credits - $debits;
+        return $balance;
+    }
+
+    public function getUserName($userId) {
+        $userTable = TableRegistry::get('Users');
+        $user = $userTable->find()->select(['name'])->where(['id' => $userId])->hydrate(false)->first();
+        return $user['name'];
+    }
+
+    public function getOrderId($id) {
+        $orderTable = TableRegistry::get('Orders');
+        $order = $orderTable->find()->select(['order_id'])->where(['id' => $id])->hydrate(false)->first();
+        return $order['order_id'];
     }
 
 }

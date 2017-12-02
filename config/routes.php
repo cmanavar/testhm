@@ -55,9 +55,10 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/forgot_password/link', ['controller' => 'Webservices', 'action' => 'forgorPassword']);
     $routes->connect('/reset/password/*', ['controller' => 'Users', 'action' => 'resetpasswords']);//reset/password/
     $routes->connect('/webservices/change/password', ['controller' => 'Webservices', 'action' => 'changePassword']);
-    $routes->connect('/webservices/email/activate/*', ['controller' => 'Users', 'action' => 'verifiedEmail']);
+    $routes->connect('/webservices/email/activate/*', ['controller' => 'Users', 'action' => 'verifiedemail']);
     $routes->connect('/webservices/phonenumber/activate', ['controller' => 'Users', 'action' => 'verifiedPhone']);
     $routes->connect('/webservices/update/profile', ['controller' => 'Users', 'action' => 'updateProfile']);
+    $routes->connect('/webservices/wallets/details', ['controller' => 'Webservices', 'action' => 'walletDetails']);
     $routes->connect('/webservices/vendor/login', ['controller' => 'Vendors', 'action' => 'login']); //P
     $routes->connect('/webservices/services/list', ['controller' => 'Webservices', 'action' => 'homepage']);
     $routes->connect('/webservices/categories/details/*', ['controller' => 'Webservices', 'action' => 'categoryDetails']);
@@ -70,7 +71,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/cart/cancel', ['controller' => 'Webservices', 'action' => 'cartClear']);
     $routes->connect('/webservices/cart/product/add', ['controller' => 'Webservices', 'action' => 'addCartProduct']);
     $routes->connect('/webservices/cart/product/remove', ['controller' => 'Webservices', 'action' => 'removeCartProduct']);
-    $routes->connect('/webservices/apply/couponcode/', ['controller' => 'Webservices', 'action' => 'applyCouponCode']);
+    $routes->connect('/webservices/apply/couponcode', ['controller' => 'Webservices', 'action' => 'applyCouponCode']);
     $routes->connect('/webservices/place/cartorder', ['controller' => 'Webservices', 'action' => 'cartOrderPlaced']);
     $routes->connect('/webservices/getcount/unreadmsg', ['controller' => 'Webservices', 'action' => 'counteunreadmsg']);
     $routes->connect('/webservices/messages/list', ['controller' => 'Webservices', 'action' => 'msgList']);

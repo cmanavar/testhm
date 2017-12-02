@@ -61,7 +61,11 @@ class UsersController extends AppController {
                 if ($user) {
                     if (in_array($user['user_type'], ['ADMIN', 'SALES'])) {
                         $this->Auth->setUser($user);
-                        return $this->redirect(['controller' => 'Dashboard', 'action' => 'index']);
+                        $users = $this->Users->get($user['id']);
+                        $users->last_login = date('Y-m-d H:i:s');
+                        if ($this->Users->save($users)) {
+                            return $this->redirect(['controller' => 'Dashboard', 'action' => 'index']);
+                        }
                     } else {
                         $this->Flash->error(__('Your account does not have access!'));
                     }
@@ -273,6 +277,7 @@ class UsersController extends AppController {
             if (isset($userExists['status']) && $userExists['status'] == 'fail') {
                 $this->wrong($userExists['msg']);
             } else {
+                $flagAff = false;
                 $password = $this->randomPassword();
                 $userData = [];
                 $userData['name'] = $name;
@@ -289,6 +294,15 @@ class UsersController extends AppController {
                 $userData['phone_verified'] = 'N';
                 $userData['email_verified'] = 'N';
                 $userData['active'] = 'N';
+                $userData['refer_key'] = $this->getReferKey($name, $phone_no);
+                $userData['referral_id'] = 0;
+                if (isset($requestArr['refereal_code']) && $requestArr['refereal_code'] != '') {
+                    $affiliateUsers = $this->Users->find('all')->where(['refer_key' => $requestArr['refereal_code']])->hydrate(false)->first();
+                    if (isset($affiliateUsers) && !empty($affiliateUsers)) {
+                        $flagAff = true;
+                        $userData['referral_id'] = $vW['user_id'] = $affiliateUsers['id'];
+                    }
+                }
                 $user = $this->Users->patchEntity($user, $userData);
                 $user->created = date("Y-m-d H:i:s");
                 $otpT = rand(199999, 999999);
@@ -303,25 +317,31 @@ class UsersController extends AppController {
                 $mailData['name'] = $name;
                 $mailData['email'] = $email;
                 $mailData['password'] = $password;
-                if ($_SERVER['HTTP_HOST'] == 'localhost') {
-                    $mailData['activation_link'] = 'http://' . $_SERVER['HTTP_HOST'] . '/hmen/webservices/email/activate/' . base64_encode($email);
-                } else {
-                    $mailData['activation_link'] = 'http://' . $_SERVER['HTTP_HOST'] . '/webservices/email/activate/' . base64_encode($email);
-                }
+                $mailData['activation_link'] = APP_PATH . '/webservices/email/activate/' . base64_encode($email);
                 $this->set('mailData', $mailData);
                 $view_output = $this->render('/Element/signup_self');
                 //echo $view_output; exit;
                 $fields = array(
                     'msg' => $view_output,
-                    'tomail' => 'chiragce1992@gmail.com',
-                    //'cc_email' => $patient['email'],
-                    'subject' => 'TEST EMAIL',
+                    'tomail' => $email,
+                    'subject' => 'Welcome To H-Men! Confirm Your Email',
                     'from_name' => EMAIL_FROM_NAME,
                     'from_mail' => EMAIL_FROM_EMAIL_ADDRESS,
                 );
                 $this->sendemails($fields);
                 $saveUsers = $this->Users->save($user);
                 if ($saveUsers) {
+                    if ($flagAff == true) {
+                        $this->loadModel('Wallets');
+                        $vW['amount'] = REFERRAL_COMISSION;
+                        $vW['wallet_type'] = 'CREDIT';
+                        $vW['purpose'] = 'REFERRAL';
+                        $vW['purpose_id'] = $saveUsers['id'];
+                        $walletId = $this->addWalletAmount($vW['user_id'], $vW['amount'], $vW['wallet_type'], $vW['purpose'], $vW['purpose_id']);
+                        if ($walletId) {
+                            $this->newMsg($vW['user_id'], MSG_TITLE_REFERRAL, MSG_TYPE_REFERRAL, 'Rs. 100 Rewarded for referring to ' . $name);
+                        }
+                    }
                     //generate api key
                     $api_key = $this->Users->generateAPIkey();
                     $mappingData = [];
@@ -348,7 +368,7 @@ class UsersController extends AppController {
                         $otp->expired = date('Y-m-d H:i:s', strtotime("+15 minutes", strtotime($dateTimes)));
                         // USER SEND EMAIL CODE HERE
                         if ($this->Otps->save($otp)) {
-                            $this->success('You are Signed up successfully, Please check your E-mail for Account credentials', ['otp' => $otpT]);
+                            $this->success('You are Signed up successfully, Please check your E-mail for Account credentials', ['otp' => $otpT, 'id' => $saveUsers['id']]);
                         } else {
                             $this->wrong('UNABLE TO ADD THE USER OTP DATA.');
                         }
@@ -409,7 +429,10 @@ class UsersController extends AppController {
                             $rslt['city'] = $user['city'];
                             $rslt['email_verified'] = $user['email_verified'];
                             $rslt['phone_verified'] = $user['phone_verified'];
-                            $rslt['wallet_amount'] = 0;
+                            $rslt['wallet_amount'] = $this->walletAmount($user['id']);
+                            $users = $this->Users->get($user['id']);
+                            $users->last_login = date('Y-m-d H:i:s');
+                            $this->Users->save($users);
                             $this->success('LOGIN!', $rslt);
                         } else {
                             $this->wrong('Sorry, Your account is not exists!');
@@ -452,6 +475,9 @@ class UsersController extends AppController {
                                 $rslt['email_verified'] = $userDetails['email_verified'];
                                 $rslt['phone_verified'] = $userDetails['phone_verified'];
                                 $rslt['wallet_amount'] = 0;
+                                $users = $this->Users->get($userDetails['id']);
+                                $users->last_login = date('Y-m-d H:i:s');
+                                $this->Users->save($users);
                                 $this->success('LOGIN!', $rslt);
                             } else {
                                 $this->wrong('Sorry, Your account is not exists!');
@@ -483,6 +509,7 @@ class UsersController extends AppController {
                     $userData['phone_verified'] = 'N';
                     $userData['email_verified'] = 'N';
                     $userData['active'] = 'Y';
+                    $userData['refer_key'] = $this->getReferKey($requestArr['full_name'], $phoneNumber);
                     $user = $this->Users->patchEntity($user, $userData);
                     $user->created = date("Y-m-d H:i:s");
                     if ($emailAddress != "") {
@@ -596,15 +623,19 @@ class UsersController extends AppController {
     //***********************************************************************************************//
 
 
-    public function verifiedEmail($key) {
+    public function verifiedemail($key) {
+        $this->layout = 'resetpasswords';
         $this->loadModel('Users');
         $email = (isset($key) && $key != '') ? base64_decode($key) : '';
         $requiredFields = array(
             'Activation Key' => $email
         );
+        $status = '';
         $validate = $this->checkRequiredFields($requiredFields);
         if ($validate != "") {
-            $this->wrong($validate);
+            //$this->wrong($validate);
+            $this->Flash->error($validate);
+            $status = 'error';
         } else {
             $userExist = $this->Users->find()->select(['id'])->where(['email' => $email, 'user_type' => 'CUSTOMER'])->hydrate(false)->first();
             if (isset($userExist['id']) && $userExist['id'] != '') {
@@ -615,15 +646,22 @@ class UsersController extends AppController {
                 $users->modified = date("Y-m-d H:i:s");
                 $users->modified_by = $userId;
                 if ($this->Users->save($users)) {
-                    $this->success('Your email address is verified!');
+                    //$this->success('Your email address is verified!');
+                    $this->set('msg', 'Your email address is verified!');
+                    $status = 'success';
+                    $this->Flash->success('Your email address is verified!');
                 } else {
-                    $this->wrong(Configure::read('Settings.FAIL'));
+                    $status = 'error';
+//                    $this->wrong(Configure::read('Settings.FAIL'));
+                    $this->Flash->error(Configure::read('Settings.FAIL'));
                 }
             } else {
-                $this->wrong('Sorry, Userdata is not found!');
+                $status = 'error';
+                //$this->wrong('Sorry, Userdata is not found!');
+                $this->Flash->error('Sorry, Userdata is not found!');
             }
-            exit;
         }
+        $this->set('status', $status);
     }
 
     //***********************************************************************************************//
@@ -755,8 +793,8 @@ class UsersController extends AppController {
                 $this->success('Email Address is already verified');
             } else {
                 $mailData = [];
-                $mailData['name'] = $userArr['name'];
-                $mailData['email'] = $userArr['email'];
+                //$mailData['name'] = $userArr['name'];
+                //$mailData['email'] = $userArr['email'];
                 $mailData['activation_link'] = APP_PATH . 'webservices/email/activate/' . base64_encode($userArr['email']);
                 $this->set('mailData', $mailData);
                 $view_output = $this->render('/Element/signup_self');
@@ -839,6 +877,17 @@ class UsersController extends AppController {
         } else {
             $this->Flash->error('Sorry, Token is missing!');
         }
+    }
+
+    public function getReferKey($name, $phone = '') {
+        $nameArr = explode(" ", $name);
+        $first = strtoupper($nameArr[0]);
+        if (isset($phone) && $phone != '') {
+            $second = substr($phone, -5);
+        } else {
+            $second = rand(11111, 99999);
+        }
+        return $first . $second;
     }
 
 }

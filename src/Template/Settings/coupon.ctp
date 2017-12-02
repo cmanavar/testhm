@@ -55,6 +55,17 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label class="col-sm-3 control-label">CASHBACK <span class="text-danger">*</span></label>
+                                <div class="col-sm-6">
+                                    <div class="custom-radio radio ">
+                                        <?php $valsArr['val'] = (isset($coupon['user_type']) && $coupon['user_type'] == 'YES') ? $coupon['user_type'] : 'NO'; ?>
+
+
+                                        <?php echo $this->Form->radio('user_type', [['value' => 'YES', 'text' => 'YES'], ['value' => 'NO', 'text' => 'NO']], $valsArr); ?>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label class="col-sm-3 control-label">AMOUNT <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="input text">
@@ -67,7 +78,7 @@
                                     <label class="col-sm-3 control-label">VALID TO <span class="text-danger">*</span></label>
                                     <div class="col-sm-6">
                                         <div class="input text">
-                                            <?php echo $this->Form->input('valid_to', ['label' => false, 'div' => false, 'type' => 'text', 'class' => 'form-control required dateField', 'placeholder' => 'VALID TO', 'value'=>$coupon['valid_to']->format('d-m-Y')]); ?>
+                                            <?php echo $this->Form->input('valid_to', ['label' => false, 'div' => false, 'type' => 'text', 'class' => 'form-control required dateField', 'placeholder' => 'VALID TO', 'value' => $coupon['valid_to']->format('d-m-Y')]); ?>
                                         </div>
                                     </div>
                                 </div>
@@ -82,23 +93,23 @@
                                 </div>
                             <?php } ?>
                             <?php if (isset($coupon['valid_from']) && !empty($coupon['valid_from'])) { ?>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label">VALID FROM <span class="text-danger">*</span></label>
-                                <div class="col-sm-6">
-                                    <div class="input text">
-                                        <?php echo $this->Form->input('valid_from', ['label' => false, 'div' => false, 'type' => 'text', 'class' => 'form-control required dateField', 'placeholder' => 'VALID FROM', 'value'=>$coupon['valid_from']->format('d-m-Y')]); ?>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">VALID FROM <span class="text-danger">*</span></label>
+                                    <div class="col-sm-6">
+                                        <div class="input text">
+                                            <?php echo $this->Form->input('valid_from', ['label' => false, 'div' => false, 'type' => 'text', 'class' => 'form-control required dateField', 'placeholder' => 'VALID FROM', 'value' => $coupon['valid_from']->format('d-m-Y')]); ?>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             <?php } else { ?>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label">VALID FROM <span class="text-danger">*</span></label>
-                                <div class="col-sm-6">
-                                    <div class="input text">
-                                        <?php echo $this->Form->input('valid_from', ['label' => false, 'div' => false, 'type' => 'text', 'class' => 'form-control required dateField', 'placeholder' => 'VALID FROM']); ?>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">VALID FROM <span class="text-danger">*</span></label>
+                                    <div class="col-sm-6">
+                                        <div class="input text">
+                                            <?php echo $this->Form->input('valid_from', ['label' => false, 'div' => false, 'type' => 'text', 'class' => 'form-control required dateField', 'placeholder' => 'VALID FROM']); ?>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             <?php } ?>
                         </div>
                     </div>
