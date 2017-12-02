@@ -58,7 +58,7 @@ class WebservicesController extends AppController {
         if ($user_id) {
             $this->loadModel('Messages');
             $unseen_count = 0;
-            $msgList = $this->Messages->find('all')->select(['id', 'user_id', 'message_title', 'type', 'message_detail', 'seen', 'created_at', 'modified_at'])->where(['user_id' => $user_id, 'seen' => 'N'])->hydrate(false)->toArray();
+            $msgList = $this->Messages->find('all')->select(['id', 'user_id', 'message_title', 'msg_type', 'message_detail', 'seen', 'created_at', 'modified_at'])->where(['user_id' => $user_id, 'seen' => 'N'])->hydrate(false)->toArray();
             if (isset($msgList) && !empty($msgList)) {
                 $msg = [];
                 foreach ($msgList as $key => $message) {
@@ -66,7 +66,7 @@ class WebservicesController extends AppController {
                     $tmp['id'] = $message['id'];
                     $tmp['user_id'] = $message['user_id'];
                     $tmp['message_title'] = $message['message_title'];
-                    $tmp['type'] = $message['type'];
+                    $tmp['type'] = $message['msg_type'];
                     $tmp['message_detail'] = $message['message_detail'];
                     $tmp['seen'] = $message['seen'];
                     if ($tmp['seen'] == 'N') {
