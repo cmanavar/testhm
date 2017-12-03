@@ -13134,3 +13134,40 @@ Exception Attributes: array (
   'plugin' => NULL,
 )
 Request URL: /hmen/webservices/profile/summary
+2017-12-03 15:56:35 Error: [Cake\View\Exception\MissingTemplateException] Template file "Orders/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Orders/index.ctp',
+)
+Request URL: /hmen/orders
+2017-12-03 16:09:14 Error: Fatal Error (1): Call to undefined method Cake\I18n\Time::formate() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 68]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2017-12-03 16:09:15 Error: [Cake\Error\FatalErrorException] Call to undefined method Cake\I18n\Time::formate()
+Request URL: /hmen/orders
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 68)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-12-03 16:15:03 Error: Fatal Error (1): Call to undefined function base_url() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 85]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2017-12-03 16:15:03 Error: [Cake\Error\FatalErrorException] Call to undefined function base_url()
+Request URL: /hmen/orders
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 85)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

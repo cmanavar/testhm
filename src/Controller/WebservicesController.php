@@ -423,37 +423,22 @@ class WebservicesController extends AppController {
                 $rateArr = [];
                 $rateCards = $this->ServiceRatecards->find('all')->where(['service_id' => $sDetails['id']])->hydrate(false)->toArray();
                 if (!empty($rateCards)) {
-                    $tmpCount = 0;
                     foreach ($rateCards as $ratecard) {
                         //pr($ratecard); exit;
+                        $tmp = [];
+                        $tmp['id'] = $ratecard['id'];
+                        $tmp['service_id'] = $ratecard['service_id'];
+                        $tmp['title'] = $ratecard['title'];
+                        $tmp['title2'] = '';
                         if ($ratecard['qunatity'] == 'YES') {
                             $rates = $this->ServiceRatecardRates->find('all')->where(['ratecards_id' => $ratecard['id']])->hydrate(false)->toArray();
-                            if (!empty($rates)) {
-                                foreach ($rates as $rate) {
-                                    $tmpCount = $tmpCount + 1;
-                                    $tmp = [];
-                                    $tmp['id'] = $tmpCount;
-                                    $tmp['service_id'] = $ratecard['service_id'];
-                                    $tmp['title'] = $ratecard['title'];
-                                    $tmp['title2'] = $rate['qunatity_title'];
-                                    //$tmp['qunatity'] = ucwords(strtolower(str_replace('_', ' ', $ratecard['qunatity'])));
-                                    $tmp['qunatity'] = $ratecard['qunatity'];
-                                    $tmp['price'] = number_format($rate['rate'], 2);
-                                    $rateArr[] = $tmp;
-                                }
+                            foreach ($rates as $rate) {
+                                $tmp['price'][] = ['quantity' => $rate['qunatity_title'], 'amount' => number_format($rate['rate'], 2)];
                             }
                         } else {
-                            $tmpCount = $tmpCount + 1;
-                            $tmp = [];
-                            $tmp['id'] = $tmpCount;
-                            $tmp['service_id'] = $ratecard['service_id'];
-                            $tmp['title'] = $ratecard['title'];
-                            $tmp['title2'] = '';
-                            //$tmp['qunatity'] = ucwords(strtolower(str_replace('_', ' ', $ratecard['qunatity'])));
-                            $tmp['qunatity'] = $ratecard['qunatity'];
-                            $tmp['price'] = number_format($ratecard['price'], 2);
-                            $rateArr[] = $tmp;
+                            $tmp['price'][] = ['quantity' => $ratecard['qunatity'], 'amount' => number_format($ratecard['price'], 2)];
                         }
+                        $rateArr[] = $tmp;
                     }
                 }
                 $rslt['service_ratecard'] = $rateArr;
@@ -565,19 +550,13 @@ class WebservicesController extends AppController {
             $this->loadModel('Carts');
             $this->loadModel('Services');
             $requestArr = $this->getInputArr();
-            if (isset($requestArr['service_id']) && $requestArr['service_id'] != '') {
-                $service_id = $requestArr['service_id'];
-            } else {
-                $this->wrong('Sorry, Service id is missing!');
-            }
             // Check Cart is already Exist or not
-            $checkArrs = $this->Carts->find('all')->where(['user_id' => $user_id, 'service_id !=' => $service_id, 'status' => 'PROCESS'])->hydrate(false)->first();
+            $checkArrs = $this->Carts->find('all')->where(['user_id' => $user_id, 'status' => 'PROCESS'])->hydrate(false)->first();
             if (empty($checkArrs)) {
-                $checkArr = $this->Carts->find('all')->where(['user_id' => $user_id, 'service_id' => $service_id, 'status' => 'PROCESS'])->hydrate(false)->first();
+                $checkArr = $this->Carts->find('all')->where(['user_id' => $user_id, 'status' => 'PROCESS'])->hydrate(false)->first();
                 if (empty($checkArr)) {
                     $carts = $this->Carts->newEntity();
-                    $category_id = $this->Services->getCategoryIdusingServiceId($service_id);
-                    $cartArr = ['user_id' => $user_id, 'category_id' => $category_id, 'service_id' => $service_id, 'status' => 'PROCESS'];
+                    $cartArr = ['user_id' => $user_id, 'status' => 'PROCESS'];
                     $carts = $this->Carts->patchEntity($carts, $cartArr);
                     $carts->created = date("Y-m-d H:i:s");
                     $carts->modified = date("Y-m-d H:i:s");
@@ -593,8 +572,7 @@ class WebservicesController extends AppController {
                     //$this->success('Cart already Exist!', ['id' => $checkArr['id']]);
                 }
             } else {
-                $serviceName = $this->Services->getServiceName($checkArrs['service_id']);
-                echo json_encode(['status' => 'fail', 'msg' => 'Sorry, Your cart is already in process, please cancelled it.', 'data' => ['cart_id' => $checkArrs['id'], 'service_name' => $serviceName]]);
+                echo json_encode(['status' => 'fail', 'msg' => 'Sorry, Your cart is already in process!', 'data' => ['cart_id' => $checkArrs['id']]]);
                 exit;
             }
         } else {
@@ -623,7 +601,7 @@ class WebservicesController extends AppController {
                 $this->loadModel('CartOrderQuestions');
                 $this->loadModel('Services');
                 // Check Cart is exist or not
-                $checkCart = $this->Carts->find('all')->where(['user_id' => $user_id, 'id' => $cartId, 'service_id' => $serviceId, 'status' => 'PROCESS'])->hydrate(false)->first();
+                $checkCart = $this->Carts->find('all')->where(['user_id' => $user_id, 'id' => $cartId, 'status' => 'PROCESS'])->hydrate(false)->first();
                 if ($checkCart) {
                     $serviceDetails = $this->Services->find('all')->where(['id' => $serviceId])->hydrate(false)->first();
                     if (!isset($serviceDetails) || empty($serviceDetails)) {
@@ -855,6 +833,7 @@ class WebservicesController extends AppController {
             $condArr = ['cart_id' => $cartID];
             $cartOrders = $this->CartOrders->find('all')->where($condArr)->hydrate(false)->toArray();
             $ordersDetails = [];
+            //pr($cartOrders); exit;
             foreach ($cartOrders as $order) {
                 $tmp = [];
                 $tmp['cart_order_id'] = $order['id'];
@@ -862,7 +841,7 @@ class WebservicesController extends AppController {
                 $tmp['category_name'] = $this->Services->getCategoryName($order['category_id']);
                 $tmp['service_id'] = $order['service_id'];
                 $tmp['service_name'] = $this->Services->getServiceName($order['service_id']);
-                $tmp['banner_img'] = $this->Services->getServiceBannerPath($order['service_id']);
+                $tmp['banner_img'] = $this->Services->getServiceImagePAth($order['service_id']);
                 //$tmp['banner_img'] = $this->Services->getServiceName($order['service_id']);
                 $tmpDetails = $this->CartOrderQuestions->find('all')->where(['cart_order_id' => $order['id']])->hydrate(false)->toArray();
                 foreach ($tmpDetails as $orderQues) {
@@ -901,6 +880,7 @@ class WebservicesController extends AppController {
             $total['tax'] = 0.00;
             $total['total_amount'] = 0.00;
             $order_amount = 0.00;
+            //pr($ordersDetails); exit;
             foreach ($ordersDetails as $od) {
                 if (isset($od['on_inspection']) && $od['on_inspection'] == 'Y') {
                     $total['on_inspection'] = 'Y';
@@ -908,10 +888,11 @@ class WebservicesController extends AppController {
                 $totAmount = isset($od['total_amount']) && $od['total_amount'] != '' ? $od['total_amount'] : 0;
                 $order_amount += $totAmount;
             }
-            //pr($order_amount); exit;
+            $tax = $order_amount * GST_TAX / 100;
+            $totals = $order_amount + $tax;
             $total['order_amount'] = number_format($order_amount, 2);
-            $total['tax'] = number_format($order_amount * GST_TAX / 100, 2);
-            $total['total_amount'] = number_format($total['order_amount'] + $total['tax'], 2);
+            $total['tax'] = number_format($tax, 2);
+            $total['total_amount'] = number_format($totals, 2);
             return ['services' => $ordersDetails, 'total' => $total];
         } else {
             $this->wrong('Cart Id is missing!');
@@ -1030,8 +1011,6 @@ class WebservicesController extends AppController {
                 $order = $this->Orders->newEntity();
                 $orderData = [];
                 $orderData['user_id'] = $user_id;
-                $orderData['category_id'] = $cartExist['category_id'];
-                $orderData['service_id'] = $cartExist['service_id'];
                 $orderData['cart_id'] = $cart_id;
                 $orderData['order_id'] = $this->orderIdCreate();
                 $orderData['user_address'] = $requestArr['user_address'];
@@ -1278,6 +1257,7 @@ class WebservicesController extends AppController {
     public function orderLists() {
         $userId = $this->checkVerifyApiKey('CUSTOMER');
         if ($userId) {
+            $this->loadModel('CartOrders');
             $this->loadModel('Orders');
             $this->loadModel('Services');
             $requestArr = $this->getInputArr();
@@ -1319,14 +1299,14 @@ class WebservicesController extends AppController {
                 $condArr["status"] = $filter_val['order_status'];
             }
             $orderLists = [];
-            $orders = $this->Orders->find('all')->select(['service_id', 'status', 'order_id', 'created_at'])->where($condArr)->hydrate(false)->toArray();
-//            pr($orders);
-//            exit;
+            $orders = $this->Orders->find('all')->select(['cart_id', 'status', 'order_id', 'created_at'])->where($condArr)->hydrate(false)->toArray();
             if (!empty($orders)) {
                 foreach ($orders as $val) {
                     $tmp = [];
-                    $tmp['name'] = $this->Services->getServiceName($val['service_id']);
-                    $tmp['images'] = $this->Services->getServiceImagePath($val['service_id']);
+                    $serviceArr = $this->CartOrders->find('all')->select(['service_id'])->where(['cart_id'=>$val['cart_id']])->hydrate(false)->first();
+                    $service_id = $serviceArr['service_id'];
+                    $tmp['name'] = $this->Services->getServiceName($service_id);
+                    $tmp['images'] = $this->Services->getServiceImagePath($service_id);
                     $tmp['status'] = $val['status'];
                     $tmp['order_id'] = $val['order_id'];
                     $tmp['date'] = $val['created_at']->format('d-M-Y');

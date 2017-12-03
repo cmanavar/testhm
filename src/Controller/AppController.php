@@ -296,6 +296,18 @@ class AppController extends Controller {
         return $user['name'];
     }
 
+    public function getEmail($userId) {
+        $userTable = TableRegistry::get('Users');
+        $user = $userTable->find()->select(['email'])->where(['id' => $userId])->hydrate(false)->first();
+        return $user['email'];
+    }
+
+    public function getPhone($userId) {
+        $userTable = TableRegistry::get('Users');
+        $user = $userTable->find()->select(['phone_no'])->where(['id' => $userId])->hydrate(false)->first();
+        return (isset($user['phone_no']) && ($user['phone_no'] != '')) ? $user['phone_no'] : '-';
+    }
+
     public function getOrderId($id) {
         $orderTable = TableRegistry::get('Orders');
         $order = $orderTable->find()->select(['order_id'])->where(['id' => $id])->hydrate(false)->first();

@@ -5614,3 +5614,30 @@
 2017-12-03 15:36:11 Notice: Notice (8): Undefined variable: user_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1394]
 
 
+2017-12-03 16:11:17 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2017-12-03 16:11:34 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2017-12-03 16:12:01 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2017-12-03 16:12:24 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2017-12-03 16:12:47 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2017-12-03 16:15:03 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2017-12-03 16:15:21 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2017-12-03 16:15:46 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2017-12-03 16:16:19 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
