@@ -5584,3 +5584,24 @@
 2017-12-03 12:34:16 Notice: Notice (8): A non well formed numeric value encountered in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1172]
 
 
+2017-12-03 13:09:06 Notice: Notice (8): Undefined index: filter_key in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1274]
+
+
+2017-12-03 13:09:06 Notice: Notice (8): Undefined index: filter_vals in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1275]
+
+
+2017-12-03 13:09:06 Notice: Notice (8): Undefined index: filter_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1276]
+
+
+2017-12-03 13:16:14 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1309]
+
+
+2017-12-03 13:16:40 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1309]
+
+
+2017-12-03 13:21:42 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1309]
+
+
+2017-12-03 13:27:49 Notice: Notice (8): Undefined index: create_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1321]
+
+

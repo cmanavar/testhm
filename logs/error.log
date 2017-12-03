@@ -13058,3 +13058,71 @@ Stack Trace:
 #2 {main}
 
 
+2017-12-03 12:40:41 Error: [Cake\Controller\Exception\MissingActionException] Action WebservicesController::orders() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'WebservicesController',
+  'action' => 'orders',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/webservices/orders
+2017-12-03 12:40:41 Error: [Cake\Controller\Exception\MissingActionException] Action WebservicesController::orders() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'WebservicesController',
+  'action' => 'orders',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/webservices/orders
+2017-12-03 13:09:06 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/order_lists.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/order_lists.ctp',
+)
+Request URL: /hmen/webservices/orders
+2017-12-03 13:10:17 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/order_lists.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/order_lists.ctp',
+)
+Request URL: /hmen/webservices/orders
+2017-12-03 13:14:20 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/order_lists.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/order_lists.ctp',
+)
+Request URL: /hmen/webservices/orders
+2017-12-03 13:22:08 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/order_lists.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/order_lists.ctp',
+)
+Request URL: /hmen/webservices/orders
+2017-12-03 13:27:49 Error: Fatal Error (1): Call to a member function formate() on null in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1321]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2017-12-03 13:27:49 Error: [Cake\Error\FatalErrorException] Call to a member function formate() on null
+Request URL: /hmen/webservices/orders
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 1321)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-12-03 13:27:59 Error: Fatal Error (1): Call to undefined method Cake\I18n\Time::formate() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1321]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2017-12-03 13:27:59 Error: [Cake\Error\FatalErrorException] Call to undefined method Cake\I18n\Time::formate()
+Request URL: /hmen/webservices/orders
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 1321)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

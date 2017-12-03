@@ -39,7 +39,8 @@ class WebservicesController extends AppController {
     public function beforeFilter(Event $event) {
         $this->Auth->allow(['homepage', 'categoryDetails', 'categoryList', 'serviceDetails', 'getServicesSubQuestions', 'helpDetails',
             'createCart', 'addCartProduct', 'cartDetails', 'cartClear', 'removeCartProduct', 'counteunreadmsg', 'msgList', 'msgView',
-            'cartOrderPlaced', 'forgorPassword', 'changePassword', 'applyCouponCode', 'walletDetails', 'getCartId', 'orderDetails']);
+            'cartOrderPlaced', 'forgorPassword', 'changePassword', 'applyCouponCode', 'walletDetails', 'getCartId', 'orderDetails',
+            'orderLists']);
     }
 
     public function counteunreadmsg() {
@@ -1260,6 +1261,70 @@ class WebservicesController extends AppController {
             }
             $rslt['total'] = ['current_balance' => $this->walletAmount($userId)];
             $this->success('Wallet Data Fatched!', $rslt);
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function orderLists() {
+        $userId = $this->checkVerifyApiKey('CUSTOMER');
+        if ($userId) {
+            $this->loadModel('Orders');
+            $this->loadModel('Services');
+            $requestArr = $this->getInputArr();
+            $filter_key = (isset($requestArr['filter_key']) && $requestArr['filter_key'] != '') ? $requestArr['filter_key'] : '';
+            $filter_vals = (isset($requestArr['filter_vals']) && $requestArr['filter_vals'] != '') ? $requestArr['filter_vals'] : '';
+            $filter_status = (isset($requestArr['filter_status']) && $requestArr['filter_status'] != '') ? $requestArr['filter_status'] : '';
+            $to_date = date('Y-m-d');
+            if (isset($filter_key) && ($filter_key == 'days')) {
+                $from_date = date('Y-m-d', strtotime('-' . $filter_vals . '  days', strtotime($to_date)));
+                $filter_type = 'date';
+                $filter_val = ['from_date' => $from_date, 'to_date' => $to_date, 'order_status' => (isset($filter_status) && $filter_status != '') ? $filter_status : ''];
+                $filter_titles = "Last " . $filter_vals . " days ago";
+            } else if (isset($filter_key) && ($filter_key == 'months')) {
+                $from_date = date('Y-m-d', strtotime('-' . $filter_vals . '  month', strtotime($to_date)));
+                $filter_type = 'date';
+                $filter_val = ['from_date' => $from_date, 'to_date' => $to_date, 'order_status' => (isset($filter_status) && $filter_status != '') ? $filter_status : ''];
+                $filter_titles = "Last " . $filter_vals . " months ago";
+            } else if (isset($filter_key) && ($filter_key == 'years')) {
+                $from_date = date('Y-01-01', strtotime($filter_vals . '-01-01'));
+                $filter_type = 'year';
+                $filter_val = ['year' => $filter_vals, 'order_status' => (isset($filter_status) && $filter_status != '') ? $filter_status : ''];
+                $filter_titles = "Last " . $filter_vals . " years";
+            } else {
+                $filter_type = 'date';
+                $from_date = date('Y-m-d', strtotime('-6 month', strtotime($to_date)));
+                $filter_val = ['from_date' => $from_date, 'to_date' => $to_date, 'order_status' => (isset($filter_status) && $filter_status != '') ? $filter_status : ''];
+                $filter_titles = "Last 6 months ago";
+            }
+            $condArr = [];
+            $condArr["user_id"] = $userId;
+            if ($filter_type == 'date') {
+                $condArr["DATE_FORMAT(created_at,'%Y-%m-%d') >="] = $filter_val['from_date'];
+                $condArr["DATE_FORMAT(created_at,'%Y-%m-%d') <="] = $filter_val['to_date'];
+            } else if ($filter_type == 'year') {
+                $condArr["DATE_FORMAT(created_at,'%Y')"] = $filter_val['year'];
+            }
+            //pr($filter_val['order_status']); exit;
+            if (isset($filter_val['order_status']) && $filter_val['order_status'] != '') {
+                $condArr["status"] = $filter_val['order_status'];
+            }
+            $orderLists = [];
+            $orders = $this->Orders->find('all')->select(['service_id', 'status', 'order_id', 'created_at'])->where($condArr)->hydrate(false)->toArray();
+//            pr($orders);
+//            exit;
+            if (!empty($orders)) {
+                foreach ($orders as $val) {
+                    $tmp = [];
+                    $tmp['name'] = $this->Services->getServiceName($val['service_id']);
+                    $tmp['images'] = $this->Services->getServiceImagePath($val['service_id']);
+                    $tmp['status'] = $val['status'];
+                    $tmp['order_id'] = $val['order_id'];
+                    $tmp['date'] = $val['created_at']->format('d-M-Y');
+                    $orderLists[] = $tmp;
+                }
+            }
+            $this->success('orders fetched successfully', ["filter_name" => $filter_titles, "orders" => $orderLists]);
         } else {
             $this->wrong('Invalid API key.');
         }

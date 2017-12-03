@@ -73,6 +73,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/cart/product/remove', ['controller' => 'Webservices', 'action' => 'removeCartProduct']);
     $routes->connect('/webservices/apply/couponcode', ['controller' => 'Webservices', 'action' => 'applyCouponCode']);
     $routes->connect('/webservices/place/cartorder', ['controller' => 'Webservices', 'action' => 'cartOrderPlaced']);
+    $routes->connect('/webservices/orders', ['controller' => 'Webservices', 'action' => 'orderLists']);
     $routes->connect('/webservices/order/detail', ['controller' => 'Webservices', 'action' => 'orderDetails']);
     $routes->connect('/webservices/getcount/unreadmsg', ['controller' => 'Webservices', 'action' => 'counteunreadmsg']);
     $routes->connect('/webservices/messages/list', ['controller' => 'Webservices', 'action' => 'msgList']);
