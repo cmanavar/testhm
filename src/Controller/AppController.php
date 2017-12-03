@@ -184,12 +184,7 @@ class AppController extends Controller {
             $fields_string .= $key . '=' . $value . '&';
         }
         $fields_string = rtrim($fields_string, '&');
-        if ($_SERVER['HTTP_HOST'] == 'localhost') {
-            $url = 'http://' . $_SERVER['HTTP_HOST'] . '/hmen/sendgrid/sendmail.php';
-        } else {
-            $url = 'http://' . $_SERVER['HTTP_HOST'] . '/sendgrid/sendmail.php';
-        }
-        //echo $url."?".$fields_string; exit;
+        $url = APP_PATH . '/sendgrid/sendmail.php';
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POST, count($fields));
