@@ -40,7 +40,7 @@ class WebservicesController extends AppController {
         $this->Auth->allow(['homepage', 'categoryDetails', 'categoryList', 'serviceDetails', 'getServicesSubQuestions', 'helpDetails',
             'createCart', 'addCartProduct', 'cartDetails', 'cartClear', 'removeCartProduct', 'counteunreadmsg', 'msgList', 'msgView',
             'cartOrderPlaced', 'forgorPassword', 'changePassword', 'applyCouponCode', 'walletDetails', 'getCartId', 'orderDetails',
-            'orderLists']);
+            'orderLists', 'orderQuery']);
     }
 
     public function counteunreadmsg() {
@@ -1170,7 +1170,7 @@ class WebservicesController extends AppController {
                 $orderDetails['is_visiting_charge'] = $order['is_visiting_charge'];
                 $orderDetails['is_coupon_applied'] = $order['is_coupon_applied'];
                 $orderDetails['coupon_code'] = $order['coupon_code'];
-                $orderDetails['discount'] = $order['discount'];
+                $orderDetails['discount'] = (is_string($order['discount'])) ? $order['discount'] : number_format($order['discount'], 2);
                 $orderDetails['wallet_amount'] = number_format($order['wallet_amount'], 2);
                 $orderDetails['amount'] = number_format($order['amount'], 2);
                 $orderDetails['on_inspections_cost'] = number_format($order['on_inspections_cost'], 2);
@@ -1178,6 +1178,13 @@ class WebservicesController extends AppController {
                 $orderDetails['total_amount'] = number_format($order['total_amount'], 2);
                 $orderDetails['status'] = $order['status'];
                 $orderDetails['payment_status'] = $order['payment_status'];
+                $orderDetails['total'] = [
+                    'amount' => number_format($order['amount'], 2),
+                    'tax' => number_format($order['tax'], 2),
+                    'discount' => (is_string($order['discount'])) ? $order['discount'] : number_format($order['discount'], 2),
+                    'wallet_amount' => number_format($order['wallet_amount'], 2),
+                    'total_amount' => number_format($order['total_amount'], 2)
+                ];
                 $condArr = ['cart_id' => $order['cart_id']];
                 $cartOrders = $this->CartOrders->find('all')->where($condArr)->hydrate(false)->toArray();
                 $ordersItems = [];
@@ -1204,9 +1211,11 @@ class WebservicesController extends AppController {
                                 $tmp['amount'] = number_format($order['total_amount'] / $tmp['quantity'], 2);
                                 $tmp['total_amount'] = number_format($order['total_amount'], 2);
                             }
+                            $tmp['serviceImage'] = $this->Services->getServiceImagePath($order['service_id']);
                             $tmp['on_inspection'] = 'N';
                         } else {
                             $tmp['serviceDescription'] = $questArr['answer'];
+                            $tmp['serviceImage'] = $this->Services->getServiceImagePath($order['service_id']);
                             $tmp['quantity'] = $orderQues['question_quantity'];
                             $tmp['on_inspection'] = 'Y';
                             $tmp['amount'] = 0.00;
@@ -1325,6 +1334,47 @@ class WebservicesController extends AppController {
                 }
             }
             $this->success('orders fetched successfully', ["filter_name" => $filter_titles, "orders" => $orderLists]);
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function orderQuery() {
+        $userId = $this->checkVerifyApiKey('CUSTOMER');
+        if ($userId) {
+            $this->loadModel('Orders');
+            $this->loadModel('OrderQueries');
+            $requestArr = $this->getInputArr();
+            $requiredFields = array(
+                'Order Id' => (isset($requestArr['order_id']) && $requestArr['order_id'] != '') ? $requestArr['order_id'] : '',
+                'Query' => (isset($requestArr['query']) && $requestArr['query'] != '') ? $requestArr['query'] : ''
+            );
+            $validate = $this->checkRequiredFields($requiredFields);
+            if ($validate != "") {
+                $this->wrong($validate);
+            }
+            $order_id = $requestArr['order_id'];
+            $query_txt = $requestArr['query'];
+            $checkOrderExist = $this->Orders->find('all')->select(['id', 'service_id'])->where(['order_id' => $order_id])->hydrate(false)->first();
+            if ($checkOrderExist) {
+                $orders_id = $checkOrderExist['id'];
+                $service_id = $checkOrderExist['service_id'];
+                $query = $this->OrderQueries->newEntity();
+                $queryData['user_id'] = $userId;
+                $queryData['service_id'] = $service_id;
+                $queryData['order_id'] = $orders_id;
+                $queryData['queries'] = $query_txt;
+                $query = $this->OrderQueries->patchEntity($query, $queryData);
+                $query->created = date('Y-m-d H:i:s');
+                $query->modified = date('Y-m-d H:i:s');
+                if ($this->OrderQueries->save($query)) {
+                    $this->wrong('Query is Submitted Successfully!');
+                } else {
+                    $this->wrong('Query is not Submitted!');
+                }
+            } else {
+                $this->wrong('Order id is invalid.');
+            }
         } else {
             $this->wrong('Invalid API key.');
         }
