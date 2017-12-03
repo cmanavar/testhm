@@ -39,7 +39,7 @@ class WebservicesController extends AppController {
     public function beforeFilter(Event $event) {
         $this->Auth->allow(['homepage', 'categoryDetails', 'categoryList', 'serviceDetails', 'getServicesSubQuestions', 'helpDetails',
             'createCart', 'addCartProduct', 'cartDetails', 'cartClear', 'removeCartProduct', 'counteunreadmsg', 'msgList', 'msgView',
-            'cartOrderPlaced', 'forgorPassword', 'changePassword', 'applyCouponCode', 'walletDetails']);
+            'cartOrderPlaced', 'forgorPassword', 'changePassword', 'applyCouponCode', 'walletDetails', 'getCartId']);
     }
 
     public function counteunreadmsg() {
@@ -67,11 +67,21 @@ class WebservicesController extends AppController {
                     $tmp['user_id'] = $message['user_id'];
                     $tmp['message_title'] = $message['message_title'];
                     $tmp['type'] = $message['msg_type'];
+                    if ($message['msg_type'] == 'OFFER') {
+                        $tmp['image'] = IMAGE_URL_PATH . 'icons/msg-offer.png';
+                    } else if ($message['msg_type'] == 'REFERRAL') {
+                        $tmp['image'] = IMAGE_URL_PATH . 'icons/msg-referral.png';
+                    } else if ($message['msg_type'] == 'CASHBACK') {
+                        $tmp['image'] = IMAGE_URL_PATH . 'icons/msg-cashback.png';
+                    } else {
+                        $tmp['image'] = IMAGE_URL_PATH . 'icons/msg-other.png';
+                    }
                     $tmp['message_detail'] = $message['message_detail'];
                     $tmp['seen'] = $message['seen'];
                     if ($tmp['seen'] == 'N') {
                         $unseen_count++;
                     }
+                    $tmp['created'] = $message['created_at']->format('d-M-Y h:i A');
                     $msg[] = $tmp;
                 }
                 $resp_data = ['unseen_count' => $unseen_count, 'messages' => $msg];
@@ -503,7 +513,7 @@ class WebservicesController extends AppController {
                             $tmpA['id'] = $v['id'];
                             $tmpA['question_id'] = $v['question_id'];
                             $tmpA['label'] = $v['label'];
-                            $tmpA['quantity'] = $v['quantity'];
+                            $tmpA['quantity'] = (isset($v['quantity']) && $v['quantity'] == 'YES') ? 'Y' : 'N';
                             $tmpA['price'] = $v['price'];
                             $tmpA['child_questions'] = ($this->checkChildQuestionsExist($val['id'], $v['id'])) ? 'Yes' : 'No';
                             $answerArrs[] = $tmpA;
@@ -530,6 +540,22 @@ class WebservicesController extends AppController {
         $faqsArr = $this->Faqs->find('all')->select(['id', 'question', 'answer'])->hydrate(false)->toArray();
         $rslt['faq'] = $faqsArr;
         $this->success('Info Fetched Successfully', $rslt);
+    }
+
+    public function getCartId() {
+        $user_id = $this->checkVerifyApiKey('CUSTOMER');
+        if ($user_id) {
+            $this->loadModel('Carts');
+            $checkArrs = $this->Carts->find('all')->where(['user_id' => $user_id, 'status' => 'PROCESS'])->hydrate(false)->first();
+            if (!empty($checkArrs)) {
+                //pr($checkArrs); exit;
+                $this->success('Cart Found!', ['id' => $checkArrs['id']]);
+            } else {
+                $this->wrong('Sorry, no cart availble');
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
     }
 
     public function createCart() {
@@ -561,7 +587,9 @@ class WebservicesController extends AppController {
                         $this->wrong(Configure::read('Settings.FAIL'));
                     }
                 } else {
-                    $this->success('Cart already Exist!', ['id' => $checkArr['id']]);
+                    echo json_encode(['status' => 'fail', 'msg' => 'Cart already Exist!', 'data' => ['id' => $checkArr['id']]]);
+                    exit;
+                    //$this->success('Cart already Exist!', ['id' => $checkArr['id']]);
                 }
             } else {
                 $serviceName = $this->Services->getServiceName($checkArrs['service_id']);
@@ -745,6 +773,7 @@ class WebservicesController extends AppController {
             $requestArr = $this->getInputArr();
             $cartId = isset($requestArr['cart_id']) ? $requestArr['cart_id'] : $this->wrong('Sorry, Cart id missing');
             $checkCart = $this->Carts->find('all')->where(['user_id' => $user_id, 'id' => $cartId, 'status' => 'PROCESS'])->hydrate(false)->first();
+            //pr($checkCart); exit;
             if (isset($checkCart) && !empty($checkCart)) {
                 $cartPriceDetails = $this->totalCartPrice($cartId);
                 $this->success("Cart Order Details Fetched!", $cartPriceDetails);
@@ -828,11 +857,16 @@ class WebservicesController extends AppController {
             foreach ($cartOrders as $order) {
                 $tmp = [];
                 $tmp['cart_order_id'] = $order['id'];
+                $tmp['category_id'] = $order['category_id'];
                 $tmp['category_name'] = $this->Services->getCategoryName($order['category_id']);
+                $tmp['service_id'] = $order['service_id'];
                 $tmp['service_name'] = $this->Services->getServiceName($order['service_id']);
+                $tmp['banner_img'] = $this->Services->getServiceBannerPath($order['service_id']);
+                //$tmp['banner_img'] = $this->Services->getServiceName($order['service_id']);
                 $tmpDetails = $this->CartOrderQuestions->find('all')->where(['cart_order_id' => $order['id']])->hydrate(false)->toArray();
                 foreach ($tmpDetails as $orderQues) {
                     $questArr = $this->getQuestionDetails($orderQues['question_id'], $orderQues['answer_id']);
+                    //pr($questArr); exit;
                     if (isset($order['on_inspections']) && $order['on_inspections'] == 'N') {
                         if ($questArr['parent_question'] != '' && $questArr['parent_answer'] != '') {
                             $answerTitle = $this->ServiceQuestionAnswers->find('all')->where(['id' => $questArr['parent_answer']])->hydrate(false)->first();
@@ -874,9 +908,9 @@ class WebservicesController extends AppController {
                 $order_amount += $totAmount;
             }
             //pr($order_amount); exit;
-            $total['order_amount'] = $order_amount;
-            $total['tax'] = $order_amount * GST_TAX / 100;
-            $total['total_amount'] = $total['order_amount'] + $total['tax'];
+            $total['order_amount'] = number_format($order_amount, 2);
+            $total['tax'] = number_format($order_amount * GST_TAX / 100, 2);
+            $total['total_amount'] = number_format($total['order_amount'] + $total['tax'], 2);
             return ['services' => $ordersDetails, 'total' => $total];
         } else {
             $this->wrong('Cart Id is missing!');
@@ -1110,7 +1144,12 @@ class WebservicesController extends AppController {
                     $tmp['user_id'] = $history['user_id'];
                     $tmp['amount'] = $history['amount'];
                     $tmp['wallet_type'] = $history['wallet_type'];
-                    $tmp['created'] = $history['created']->format('d-M-Y');
+                    if ($history['wallet_type'] == 'CREDIT') {
+                        $tmp['image'] = IMAGE_URL_PATH . 'icons/wallet-credit.png';
+                    } else {
+                        $tmp['image'] = IMAGE_URL_PATH . 'icons/wallet-debit.png';
+                    }
+                    $tmp['created'] = $history['created']->format('d-M-Y h:i A');
                     if ($history['purpose'] == 'REFERRAL') {
                         $userName = $this->getUserName($history['purpose_id']);
                         $tmp['details'] = 'Received Rewarded for refer to ' . $userName;
@@ -1121,9 +1160,10 @@ class WebservicesController extends AppController {
                         $orderId = $this->getOrderId($history['purpose_id']);
                         $tmp['details'] = 'Received Cashback for Order. id #' . $orderId;
                     }
-                    $rslt[] = $tmp;
+                    $rslt['data'][] = $tmp;
                 }
             }
+            $rslt['total'] = ['current_balance' => $this->walletAmount($userId)];
             $this->success('Wallet Data Fatched!', $rslt);
         } else {
             $this->wrong('Invalid API key.');

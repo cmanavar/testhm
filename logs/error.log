@@ -12929,3 +12929,25 @@ Stack Trace:
 2017-11-30 23:44:15 Warning: Warning (2): Division by zero in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 950]
 
 
+2017-12-02 23:02:49 Error: [BadMethodCallException] Unknown method "getServiceBanner"
+Request URL: /hmen/webservices/cart/detail
+2017-12-03 11:07:48 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Messages.msg_type' in 'field list'
+Request URL: /hmen/webservices/messages/list
+2017-12-03 11:24:10 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Messages.msg_type' in 'field list'
+Request URL: /hmen/webservices/messages/list
+2017-12-03 11:45:58 Error: Fatal Error (1): Call to a member function format() on null in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 84]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2017-12-03 11:45:58 Error: [Cake\Error\FatalErrorException] Call to a member function format() on null
+Request URL: /hmen/webservices/messages/list
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 84)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

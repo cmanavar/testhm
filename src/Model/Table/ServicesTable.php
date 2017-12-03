@@ -77,7 +77,7 @@ class ServicesTable extends Table {
         $categories = $serviceCategoryTable->find()->select(['name'])->where(['id' => $category_id])->hydrate(false)->first();
         return (isset($categories['name']) && $categories['name'] != '') ? $categories['name'] : '-';
     }
-    
+
     //*******************************************************************************//
     // * Function          :  hasOrders
     // * Parameter         :  
@@ -95,20 +95,24 @@ class ServicesTable extends Table {
             return false;
         }
     }
-    
+
     public function getServiceName($id) {
         $serviceTable = TableRegistry::get('Services');
         $services = $serviceTable->find()->select(['service_name'])->where(['id' => $id])->hydrate(false)->first();
         return (isset($services['service_name']) && $services['service_name'] != '') ? $services['service_name'] : '-';
     }
-    
+
     public function getCategoryIdusingServiceId($id) {
         $serviceTable = TableRegistry::get('Services');
         $services = $serviceTable->find()->select(['category_id'])->where(['id' => $id])->hydrate(false)->first();
         return (isset($services['category_id']) && $services['category_id'] != '') ? $services['category_id'] : '-';
     }
-    
-    
+
+    public function getServiceBannerPath($id) {
+        $serviceTable = TableRegistry::get('Services');
+        $services = $serviceTable->find()->select(['banner_image'])->where(['id' => $id])->hydrate(false)->first();
+        return (isset($services['banner_image']) && $services['banner_image'] != '') ? IMAGE_URL_PATH . 'services/banner/' . $services['banner_image'] : '';
+    }
 
 }
 

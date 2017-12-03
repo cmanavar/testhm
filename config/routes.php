@@ -76,6 +76,8 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/getcount/unreadmsg', ['controller' => 'Webservices', 'action' => 'counteunreadmsg']);
     $routes->connect('/webservices/messages/list', ['controller' => 'Webservices', 'action' => 'msgList']);
     $routes->connect('/webservices/messages/view', ['controller' => 'Webservices', 'action' => 'msgView']);
+    $routes->connect('/webservices/get/cartid', ['controller' => 'Webservices', 'action' => 'getCartId']);
+    
     
     
     
