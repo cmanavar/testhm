@@ -40,7 +40,7 @@ class WebservicesController extends AppController {
         $this->Auth->allow(['homepage', 'categoryDetails', 'categoryList', 'serviceDetails', 'getServicesSubQuestions', 'helpDetails',
             'createCart', 'addCartProduct', 'cartDetails', 'cartClear', 'removeCartProduct', 'counteunreadmsg', 'msgList', 'msgView',
             'cartOrderPlaced', 'forgorPassword', 'changePassword', 'applyCouponCode', 'walletDetails', 'getCartId', 'orderDetails',
-            'orderLists', 'orderQuery']);
+            'orderLists', 'orderQuery', 'orderSummary']);
     }
 
     public function counteunreadmsg() {
@@ -1375,6 +1375,31 @@ class WebservicesController extends AppController {
             } else {
                 $this->wrong('Order id is invalid.');
             }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function orderSummary() {
+        $userId = $this->checkVerifyApiKey('CUSTOMER');
+        if ($userId) {
+            $this->loadModel('Orders');
+            $this->loadModel('Carts');
+            $this->loadModel('CartOrders');
+            $onGoingOrdercount = 0;
+            $cartProductCount = 0;
+            // Ongoing Orders - Start
+            $onGoingOrdercount = $this->Orders->find()->where(['user_id' => $userId, 'status' => 'PENDING'])->hydrate(false)->count();
+            // Ongoing Orders - End
+            // Cart Product - Start
+            $checkArrs = $this->Carts->find('all')->select(['id'])->where(['user_id' => $userId, 'status' => 'PROCESS'])->hydrate(false)->first();
+            //pr($checkArrs); exit;
+            if (isset($checkArrs) && !empty($checkArrs)) {
+                $cartId = $checkArrs['id'];
+                $cartProductCount = $this->CartOrders->find()->where(['user_id' => $userId, 'cart_id' => $cartId])->hydrate(false)->count();
+            }
+            // Cart Product - End
+            $this->success('Order Summary Fatched!', ['totOngoingOrder' => $onGoingOrdercount, 'totCart' => $cartProductCount]);
         } else {
             $this->wrong('Invalid API key.');
         }

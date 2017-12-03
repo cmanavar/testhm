@@ -5611,3 +5611,6 @@
 2017-12-03 14:40:08 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1358]
 
 
+2017-12-03 15:36:11 Notice: Notice (8): Undefined variable: user_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1394]
+
+

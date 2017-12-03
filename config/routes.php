@@ -58,6 +58,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/email/activate/*', ['controller' => 'Users', 'action' => 'verifiedemail']);
     $routes->connect('/webservices/phonenumber/activate', ['controller' => 'Users', 'action' => 'verifiedPhone']);
     $routes->connect('/webservices/update/profile', ['controller' => 'Users', 'action' => 'updateProfile']);
+    $routes->connect('/webservices/profile/summary', ['controller' => 'Webservices', 'action' => 'orderSummary']);
     $routes->connect('/webservices/wallets/details', ['controller' => 'Webservices', 'action' => 'walletDetails']);
     $routes->connect('/webservices/vendor/login', ['controller' => 'Vendors', 'action' => 'login']); //P
     $routes->connect('/webservices/services/list', ['controller' => 'Webservices', 'action' => 'homepage']);

@@ -13126,3 +13126,11 @@ Stack Trace:
 #2 {main}
 
 
+2017-12-03 15:31:07 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::orderSummary() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'orderSummary',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/webservices/profile/summary
