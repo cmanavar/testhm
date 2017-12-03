@@ -114,6 +114,12 @@ class ServicesTable extends Table {
         return (isset($services['banner_image']) && $services['banner_image'] != '') ? IMAGE_URL_PATH . 'services/banner/' . $services['banner_image'] : '';
     }
 
+    public function getServiceImagePath($id) {
+        $serviceTable = TableRegistry::get('Services');
+        $services = $serviceTable->find()->select(['square_image'])->where(['id' => $id])->hydrate(false)->first();
+        return (isset($services['square_image']) && $services['square_image'] != '') ? IMAGE_URL_PATH . 'services/square/' . $services['square_image'] : '';
+    }
+    
 }
 
 ?>

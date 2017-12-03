@@ -39,7 +39,7 @@ class WebservicesController extends AppController {
     public function beforeFilter(Event $event) {
         $this->Auth->allow(['homepage', 'categoryDetails', 'categoryList', 'serviceDetails', 'getServicesSubQuestions', 'helpDetails',
             'createCart', 'addCartProduct', 'cartDetails', 'cartClear', 'removeCartProduct', 'counteunreadmsg', 'msgList', 'msgView',
-            'cartOrderPlaced', 'forgorPassword', 'changePassword', 'applyCouponCode', 'walletDetails', 'getCartId']);
+            'cartOrderPlaced', 'forgorPassword', 'changePassword', 'applyCouponCode', 'walletDetails', 'getCartId', 'orderDetails']);
     }
 
     public function counteunreadmsg() {
@@ -1114,7 +1114,7 @@ class WebservicesController extends AppController {
                     $cartUpdate['status'] = 'PLACED';
                     $cartArr = $this->Carts->patchEntity($cartArr, $cartUpdate);
                     if ($this->Carts->save($cartArr)) {
-                        $this->success('Order Placed Successfully!');
+                        $this->success('Order Placed Successfully!', ['order_id' => $orderData['order_id']]);
                     } else {
                         $this->wrong('Sorry, Order is not placed!');
                     }
@@ -1123,6 +1123,101 @@ class WebservicesController extends AppController {
                 }
             } else {
                 $this->wrong('Sorry, Cart is not Exist!');
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function orderDetails() {
+        $userId = $this->checkVerifyApiKey('CUSTOMER');
+        if ($userId) {
+            //echo $userId; exit;
+            $this->loadModel('Orders');
+            $this->loadModel('Services');
+            $this->loadModel('Carts');
+            $this->loadModel('CartOrders');
+            $this->loadModel('CartOrderQuestions');
+            $this->loadModel('ServiceQuestionAnswers');
+            $this->loadModel('Coupons');
+            $requestArr = $this->getInputArr();
+            $requiredFields = array(
+                'Order Id' => (isset($requestArr['order_id']) && $requestArr['order_id'] != '') ? $requestArr['order_id'] : ''
+            );
+            $validate = $this->checkRequiredFields($requiredFields);
+            if ($validate != "") {
+                $this->wrong($validate);
+            }
+            $order_id = $requestArr['order_id'];
+            $order = $this->Orders->find('all')->where(['order_id' => $order_id])->hydrate(false)->first();
+            if (!empty($order)) {
+                //pr($orderExist); exit;
+                $orderDetails = [];
+                $orderDetails['user_id'] = $order['user_id'];
+                $orderDetails['category_id'] = $order['category_id'];
+                $orderDetails['category_name'] = $this->Services->getCategoryName($order['category_id']);
+                $orderDetails['service_id'] = $order['service_id'];
+                $orderDetails['service_name'] = $this->Services->getServiceName($order['category_id']);
+                $orderDetails['images'] = $this->Services->getServiceImagePath($order['service_id']);
+                $orderDetails['order_id'] = $order['order_id'];
+                $orderDetails['user_address'] = $order['user_address'];
+                $orderDetails['created_at'] = $order['created_at']->format('d-M-Y h:i A');
+                $orderDetails['schedule_date'] = $order['schedule_date']->format('d-M-Y');
+                $orderDetails['schedule_time'] = $order['schedule_time'];
+                $orderDetails['on_inspections'] = $order['on_inspections'];
+                $orderDetails['is_minimum_charge'] = $order['is_minimum_charge'];
+                $orderDetails['is_visiting_charge'] = $order['is_visiting_charge'];
+                $orderDetails['is_coupon_applied'] = $order['is_coupon_applied'];
+                $orderDetails['coupon_code'] = $order['coupon_code'];
+                $orderDetails['discount'] = $order['discount'];
+                $orderDetails['wallet_amount'] = number_format($order['wallet_amount'], 2);
+                $orderDetails['amount'] = number_format($order['amount'], 2);
+                $orderDetails['on_inspections_cost'] = number_format($order['on_inspections_cost'], 2);
+                $orderDetails['tax'] = number_format($order['tax'], 2);
+                $orderDetails['total_amount'] = number_format($order['total_amount'], 2);
+                $orderDetails['status'] = $order['status'];
+                $orderDetails['payment_status'] = $order['payment_status'];
+                $condArr = ['cart_id' => $order['cart_id']];
+                $cartOrders = $this->CartOrders->find('all')->where($condArr)->hydrate(false)->toArray();
+                $ordersItems = [];
+                foreach ($cartOrders as $order) {
+                    $tmp = [];
+                    $tmpDetails = $this->CartOrderQuestions->find('all')->where(['cart_order_id' => $order['id']])->hydrate(false)->toArray();
+                    foreach ($tmpDetails as $orderQues) {
+                        $questArr = $this->getQuestionDetails($orderQues['question_id'], $orderQues['answer_id']);
+                        //pr($questArr); exit;
+                        if (isset($order['on_inspections']) && $order['on_inspections'] == 'N') {
+                            if ($questArr['parent_question'] != '' && $questArr['parent_answer'] != '') {
+                                $answerTitle = $this->ServiceQuestionAnswers->find('all')->where(['id' => $questArr['parent_answer']])->hydrate(false)->first();
+                                $tmp['serviceDescription'] = $answerTitle['label'];
+                                $tmp['quantity'] = $orderQues['question_quantity'];
+                                $tmp['total_amount'] = number_format($order['total_amount'], 2);
+                            } else {
+                                $tmp['serviceDescription'] = $questArr['answer'];
+                                $tmp['quantity'] = $orderQues['question_quantity'];
+                            }
+                            if ($tmp['quantity'] == 0) {
+                                $tmp['amount'] = 0.00;
+                                $tmp['total_amount'] = number_format($order['total_amount'], 2);
+                            } else {
+                                $tmp['amount'] = number_format($order['total_amount'] / $tmp['quantity'], 2);
+                                $tmp['total_amount'] = number_format($order['total_amount'], 2);
+                            }
+                            $tmp['on_inspection'] = 'N';
+                        } else {
+                            $tmp['serviceDescription'] = $questArr['answer'];
+                            $tmp['quantity'] = $orderQues['question_quantity'];
+                            $tmp['on_inspection'] = 'Y';
+                            $tmp['amount'] = 0.00;
+                            $tmp['total_amount'] = number_format($order['total_amount'], 2);
+                        }
+                    }
+                    $ordersItems[] = $tmp;
+                }
+                $orderDetails['services'] = $ordersItems;
+                $this->success('order detail fetched successfully', $orderDetails);
+            } else {
+                $this->wrong('Sorry, Order not found!');
             }
         } else {
             $this->wrong('Invalid API key.');

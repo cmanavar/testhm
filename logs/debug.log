@@ -5581,3 +5581,6 @@
 2017-12-03 11:45:58 Notice: Notice (8): Undefined index: created in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 84]
 
 
+2017-12-03 12:34:16 Notice: Notice (8): A non well formed numeric value encountered in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1172]
+
+

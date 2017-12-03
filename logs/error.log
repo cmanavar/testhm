@@ -12951,3 +12951,110 @@ Stack Trace:
 #2 {main}
 
 
+2017-12-03 11:51:23 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Webservice could not be found.
+Exception Attributes: array (
+  'class' => 'Webservice',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/webservice/order/detail
+2017-12-03 11:51:26 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Webservice could not be found.
+Exception Attributes: array (
+  'class' => 'Webservice',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/webservice/order/detail
+2017-12-03 11:53:38 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Webservice could not be found.
+Exception Attributes: array (
+  'class' => 'Webservice',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/webservice/order/detail
+2017-12-03 11:53:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Webservice could not be found.
+Exception Attributes: array (
+  'class' => 'Webservice',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/webservice/order/detail
+2017-12-03 11:53:55 Error: [Cake\Controller\Exception\MissingActionException] Action WebservicesController::order() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'WebservicesController',
+  'action' => 'order',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/webservices/order/detail
+2017-12-03 11:55:22 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/order_details.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/order_details.ctp',
+)
+Request URL: /hmen/webservices/order/detail
+2017-12-03 11:55:49 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/order_details.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/order_details.ctp',
+)
+Request URL: /hmen/webservices/order/detail
+2017-12-03 11:55:55 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/order_details.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/order_details.ctp',
+)
+Request URL: /hmen/webservices/order/detail
+2017-12-03 11:55:56 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/order_details.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/order_details.ctp',
+)
+Request URL: /hmen/webservices/order/detail
+2017-12-03 11:55:57 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/order_details.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/order_details.ctp',
+)
+Request URL: /hmen/webservices/order/detail
+2017-12-03 11:56:13 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/order_details.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/order_details.ctp',
+)
+Request URL: /hmen/webservices/order/detail
+2017-12-03 12:04:54 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/order_details.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/order_details.ctp',
+)
+Request URL: /hmen/webservices/order/detail
+2017-12-03 12:10:17 Error: Fatal Error (1): Call to a member function getCategoryName() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1154]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2017-12-03 12:10:17 Error: [Cake\Error\FatalErrorException] Call to a member function getCategoryName() on boolean
+Request URL: /hmen/webservices/order/detail
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 1154)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-12-03 12:27:56 Error: Fatal Error (1): Call to a member function find() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1178]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2017-12-03 12:27:56 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /hmen/webservices/order/detail
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 1178)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
