@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
                         <div class="col-md-12 col-xs-12 text-center" style="padding: 60px 0px; background: none;">
-                            <?= //$this->Html->image('logo/hlogo200px.png', ['height' => 54, 'width' => 200]) . "<br/>" ?>
+                            <?php //$this->Html->image('logo/hlogo200px.png', ['height' => 54, 'width' => 200]) . "<br/>" ?>
                         </div>
                     </div>
                 </div>
