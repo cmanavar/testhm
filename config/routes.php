@@ -66,6 +66,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/categories/list', ['controller' => 'Webservices', 'action' => 'categoryList']);
     $routes->connect('/webservices/service/details/*', ['controller' => 'Webservices', 'action' => 'serviceDetails']);
     $routes->connect('/webservices/service/getsubquestions', ['controller' => 'Webservices', 'action' => 'getServicesSubQuestions']);
+    $routes->connect('/webservices/service/review', ['controller' => 'Webservices', 'action' => 'storeReview']);
     $routes->connect('/webservices/help/details', ['controller' => 'Webservices', 'action' => 'helpDetails']);
     $routes->connect('/webservices/cart/create', ['controller' => 'Webservices', 'action' => 'createCart']);
     $routes->connect('/webservices/cart/detail', ['controller' => 'Webservices', 'action' => 'cartDetails']);
@@ -77,6 +78,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/orders', ['controller' => 'Webservices', 'action' => 'orderLists']);
     $routes->connect('/webservices/order/detail', ['controller' => 'Webservices', 'action' => 'orderDetails']);
     $routes->connect('/webservices/order/query', ['controller' => 'Webservices', 'action' => 'orderQuery']);
+    $routes->connect('/webservices/order/update', ['controller' => 'Webservices', 'action' => 'updateOrder']);
     $routes->connect('/webservices/getcount/unreadmsg', ['controller' => 'Webservices', 'action' => 'counteunreadmsg']);
     $routes->connect('/webservices/messages/list', ['controller' => 'Webservices', 'action' => 'msgList']);
     $routes->connect('/webservices/messages/view', ['controller' => 'Webservices', 'action' => 'msgView']);

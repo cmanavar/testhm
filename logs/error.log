@@ -13171,3 +13171,18 @@ Stack Trace:
 #2 {main}
 
 
+2017-12-04 23:09:22 Error: [Cake\Controller\Exception\MissingActionException] Action WebservicesController::service() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'WebservicesController',
+  'action' => 'service',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/webservices/service/review/
+2017-12-04 23:10:00 Warning: Warning (2): Attempt to assign property of non-object in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1410]
+
+
+2017-12-05 23:04:08 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "orders"
+Request URL: /hmen/webservices/order/update
+2017-12-05 23:04:39 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "orders"
+Request URL: /hmen/webservices/order/update

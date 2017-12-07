@@ -397,6 +397,8 @@ class UsersController extends AppController {
 
 
     public function appuserslogin() {
+        $this->layout = 'ajax';
+        $this->autoRender = false;
         $this->loadModel('Users');
         $user = $this->Users->newEntity();
         $requestArr = $this->getInputArr();
@@ -528,11 +530,7 @@ class UsersController extends AppController {
                     $mailData['name'] = $requestArr['full_name'];
                     $mailData['email'] = $emailAddress;
                     $mailData['password'] = $password;
-                    if ($_SERVER['HTTP_HOST'] == 'localhost') {
-                        $mailData['activation_link'] = 'http://' . $_SERVER['HTTP_HOST'] . '/hmen/webservices/email/activate/' . base64_encode($emailAddress);
-                    } else {
-                        $mailData['activation_link'] = 'http://' . $_SERVER['HTTP_HOST'] . '/webservices/email/activate/' . base64_encode($emailAddress);
-                    }
+                    $mailData['activation_link'] = APP_PATH . '/webservices/email/activate/' . base64_encode($email);
                     $this->set('mailData', $mailData);
                     $view_output = $this->render('/Element/signup_self');
 

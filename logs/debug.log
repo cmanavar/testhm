@@ -5641,3 +5641,21 @@
 2017-12-03 16:16:19 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
 
 
+2017-12-04 23:58:16 Notice: Notice (8): Undefined index: amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1297]
+
+
+2017-12-04 23:58:16 Notice: Notice (8): Undefined index: tax in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1298]
+
+
+2017-12-04 23:58:16 Notice: Notice (8): Undefined index: discount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1299]
+
+
+2017-12-04 23:58:16 Notice: Notice (8): Undefined index: discount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1299]
+
+
+2017-12-04 23:58:16 Notice: Notice (8): Undefined index: wallet_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1300]
+
+
+2017-12-05 22:55:13 Notice: Notice (8): Undefined variable: user_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1506]
+
+

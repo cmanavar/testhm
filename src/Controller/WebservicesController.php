@@ -40,7 +40,7 @@ class WebservicesController extends AppController {
         $this->Auth->allow(['homepage', 'categoryDetails', 'categoryList', 'serviceDetails', 'getServicesSubQuestions', 'helpDetails',
             'createCart', 'addCartProduct', 'cartDetails', 'cartClear', 'removeCartProduct', 'counteunreadmsg', 'msgList', 'msgView',
             'cartOrderPlaced', 'forgorPassword', 'changePassword', 'applyCouponCode', 'walletDetails', 'getCartId', 'orderDetails',
-            'orderLists', 'orderQuery', 'orderSummary']);
+            'orderLists', 'orderQuery', 'orderSummary', 'storeReview', 'updateOrder']);
     }
 
     public function counteunreadmsg() {
@@ -572,7 +572,7 @@ class WebservicesController extends AppController {
                     //$this->success('Cart already Exist!', ['id' => $checkArr['id']]);
                 }
             } else {
-                echo json_encode(['status' => 'fail', 'msg' => 'Sorry, Your cart is already in process!', 'data' => ['cart_id' => $checkArrs['id']]]);
+                echo json_encode(['status' => 'fail', 'msg' => 'Sorry, Your cart is already in process!', 'data' => ['id' => $checkArrs['id']]]);
                 exit;
             }
         } else {
@@ -755,6 +755,7 @@ class WebservicesController extends AppController {
             //pr($checkCart); exit;
             if (isset($checkCart) && !empty($checkCart)) {
                 $cartPriceDetails = $this->totalCartPrice($cartId);
+                //pr($cartPriceDetails); exit;
                 $this->success("Cart Order Details Fetched!", $cartPriceDetails);
             } else {
                 $this->wrong("Sorry, Cart not found!");
@@ -822,6 +823,97 @@ class WebservicesController extends AppController {
     }
 
     public function totalCartPrice($cartID) {
+        //echo $cartID; exit;
+        if (isset($cartID) && $cartID != '') {
+            $this->loadModel('Carts');
+            $this->loadModel('Categories');
+            $this->loadModel('Services');
+            $this->loadModel('CartOrders');
+            $this->loadModel('CartOrderQuestions');
+            $this->loadModel('ServiceQuestionAnswers');
+            $condArr = ['cart_id' => $cartID];
+            $cartOrders = $this->CartOrders->find('all')->where($condArr)->hydrate(false)->toArray();
+            $ordersDetails = [];
+            //pr($cartOrders); exit;
+            foreach ($cartOrders as $order) {
+                $tmp = [];
+                $tmp['cart_order_id'] = $order['id'];
+                $tmp['category_id'] = $order['category_id'];
+                $tmp['category_name'] = $this->Services->getCategoryName($order['category_id']);
+                $tmp['service_id'] = $order['service_id'];
+                $tmp['service_name'] = $this->Services->getServiceName($order['service_id']);
+                $tmp['banner_img'] = $this->Services->getServiceImagePAth($order['service_id']);
+                //$tmp['banner_img'] = $this->Services->getServiceName($order['service_id']);
+                $tmpDetails = $this->CartOrderQuestions->find('all')->where(['cart_order_id' => $order['id']])->hydrate(false)->toArray();
+                foreach ($tmpDetails as $orderQues) {
+                    $questArr = $this->getQuestionDetails($orderQues['question_id'], $orderQues['answer_id']);
+                    //pr($questArr); exit;
+                    if (isset($order['on_inspections']) && $order['on_inspections'] == 'N') {
+                        if ($questArr['parent_question'] != '' && $questArr['parent_answer'] != '') {
+                            $answerTitle = $this->ServiceQuestionAnswers->find('all')->where(['id' => $questArr['parent_answer']])->hydrate(false)->first();
+                            $tmp['serviceDescription'] = $answerTitle['label'];
+                            $tmp['quantity'] = $orderQues['question_quantity'];
+                            $tmp['total_amount'] = $order['total_amount'];
+                        } else {
+                            $tmp['serviceDescription'] = $questArr['answer'];
+                            $tmp['quantity'] = $orderQues['question_quantity'];
+                        }
+                        if ($tmp['quantity'] == 0) {
+                            $tmp['amount'] = 0;
+                            $tmp['total_amount'] = $order['total_amount'];
+                        } else {
+                            $tmp['amount'] = $order['total_amount'] / $tmp['quantity'];
+                            $tmp['total_amount'] = $order['total_amount'];
+                        }
+                        $tmp['on_inspection'] = 'N';
+                    } else {
+                        $tmp['serviceDescription'] = $questArr['answer'];
+                        $tmp['quantity'] = $orderQues['question_quantity'];
+                        $tmp['on_inspection'] = 'Y';
+                        $tmp['amount'] = 0;
+                        $tmp['total_amount'] = $order['total_amount'];
+                    }
+                }
+
+                $ordersDetails[$order['category_id']]['category'] = $this->Services->getCategoryName($order['category_id']);
+                $ordersDetails[$order['category_id']]['services'][] = $tmp;
+            }
+            $finalOrderDetails = [];
+            if (!empty($ordersDetails)) {
+                foreach ($ordersDetails as $key => $val) {
+                    $finalOrderDetails[] = $val;
+                }
+            }
+
+            $total['on_inspection'] = 'N';
+            $total['order_amount'] = 0.00;
+            $total['tax'] = 0.00;
+            $total['total_amount'] = 0.00;
+            $order_amount = 0.00;
+
+            foreach ($ordersDetails as $od) {
+                //pr($od); exit;
+                foreach ($od['services'] as $val) {
+                    if (isset($val['on_inspection']) && $val['on_inspection'] == 'Y') {
+                        $total['on_inspection'] = 'Y';
+                    }
+                    $totAmount = isset($val['total_amount']) && $val['total_amount'] != '' ? $val['total_amount'] : 0;
+                    $order_amount += $totAmount;
+                }
+            }
+            $tax = $order_amount * GST_TAX / 100;
+            $totals = $order_amount + $tax;
+            $total['order_amount'] = number_format($order_amount, 2);
+            $total['tax'] = number_format($tax, 2);
+            $total['total_amount'] = number_format($totals, 2);
+            //pr($total); exit;
+            return ['services' => $finalOrderDetails, 'total' => $total];
+        } else {
+            $this->wrong('Cart Id is missing!');
+        }
+    }
+
+    public function totalCartPrice2($cartID) {
         //echo $cartID; exit;
         if (isset($cartID) && $cartID != '') {
             $this->loadModel('Carts');
@@ -1028,9 +1120,9 @@ class WebservicesController extends AppController {
                 $orderData['total_amount'] = 0.00;
                 $cartDetails = $this->totalCartPrice($cart_id);
                 $orderData['on_inspections'] = (isset($cartDetails['on_inspection']) && $cartDetails['on_inspection'] != '') ? $cartDetails['on_inspection'] : 'N';
-                $orderData['amount'] = $cartDetails['total']['order_amount'];
-                $orderData['tax'] = $cartDetails['total']['tax'];
-                $orderData['total_amount'] = $cartDetails['total']['total_amount'];
+                $orderData['amount'] = str_replace(",", "", $cartDetails['total']['order_amount']);
+                $orderData['tax'] = str_replace(",", "", $cartDetails['total']['tax']);
+                $orderData['total_amount'] = str_replace(",", "", $cartDetails['total']['total_amount']);
                 $orderData['discount'] = 0.00;
                 $orderData['payable_amount'] = 0.00;
                 $orderData['payment_method'] = '';
@@ -1039,56 +1131,11 @@ class WebservicesController extends AppController {
                 $orderData['payment_status'] = 'PENDING';
                 $orderData['cart_product'] = json_encode($cartDetails);
                 $orderData['created_by'] = $orderData['modified_by'] = $user_id;
-                //pr($cartDetails); //exit;
-                // Discount Coupon applied or not
-                if ($coupon_code != '') {
-                    $orderData['on_inspections'] = (isset($cartDetails['total']['on_inspection']) && $cartDetails['total']['on_inspection'] == 'Y') ? $cartDetails['total']['on_inspection'] : 'N';
-                    $couponCodeDetails = $this->Coupons->find('all')->where(['code' => $coupon_code])->hydrate(false)->first();
-                    if (isset($couponCodeDetails) && !empty($couponCodeDetails)) {
-                        $todayDate = date('Y-m-d');
-                        $validTo = $couponCodeDetails['valid_to']->format('Y-m-d');
-                        $validFrom = $couponCodeDetails['valid_from']->format('Y-m-d');
-                        $curDate = strtotime($todayDate);
-                        if ($curDate > strtotime($validTo) && $curDate < strtotime($validFrom)) {
-                            $orderData['is_coupon_applied'] = 'Y';
-                            $orderData['coupon_code'] = $coupon_code;
-                            $discount = 0.00;
-                            if (isset($couponCodeDetails['discount_type']) && $couponCodeDetails['discount_type'] == 'PRICE') {
-                                $discount = $couponCodeDetails['amount'];
-                                $orderData['discount'] = number_format($discount, 2);
-                                $orderData["payable_amount"] = number_format($cartDetails["total"]["total_amount"], 2);
-                                //$orderData["payable_amount"] = number_format($cartDetails["total"]["total_amount"] - $discount, 2);
-                            } else {
-                                $discountPercentage = $couponCodeDetails['amount'];
-                                if ($cartDetails["total"]["total_amount"] != 0.00) {
-                                    $discount = ($couponCodeDetails['amount'] * $cartDetails["total"]["total_amount"]) / 100;
-                                    $orderData['discount'] = number_format($discount, 2);
-                                    $orderData["payable_amount"] = number_format($cartDetails["total"]["total_amount"], 2);
-                                    //$orderData["payable_amount"] = number_format($cartDetails["total"]["total_amount"] - $discount, 2);
-                                } else {
-                                    $discount = $couponCodeDetails['amount'] . "%";
-                                    $orderData['discount'] = $discount;
-                                    $orderData["payable_amount"] = number_format($cartDetails["total"]["total_amount"], 2);
-                                }
-                            }
-                        }
-                    }
-                }
-                // Discount Coupon applied or not
-                // Wallet Amount Apply
-                if ($wallet_amount != '') {
-                    $orderData['wallet_amount'] = $wallet_amount;
-                    if ($cartDetails["total"]["total_amount"] != 0.00) {
-                        $orderData["payable_amount"] = number_format($orderData["payable_amount"] - $wallet_amount, 2);
-                    } else {
-                        $orderData["payable_amount"] = number_format($orderData["payable_amount"], 2);
-                    }
-                }
-                // Wallet Amount Apply
                 $order = $this->Orders->patchEntity($order, $orderData);
                 $order->schedule_date = date('Y-m-d', strtotime($requestArr['schedule_date']));
                 $order->created_at = date('Y-m-d H:i:s');
                 $order->modified_at = date('Y-m-d H:i:s');
+                //pr($order); exit;
                 if ($this->Orders->save($order)) {
                     $cartArr = $this->Carts->get($cart_id);
                     $cartUpdate['status'] = 'PLACED';
@@ -1134,11 +1181,6 @@ class WebservicesController extends AppController {
                 //pr($orderExist); exit;
                 $orderDetails = [];
                 $orderDetails['user_id'] = $order['user_id'];
-                $orderDetails['category_id'] = $order['category_id'];
-                $orderDetails['category_name'] = $this->Services->getCategoryName($order['category_id']);
-                $orderDetails['service_id'] = $order['service_id'];
-                $orderDetails['service_name'] = $this->Services->getServiceName($order['category_id']);
-                $orderDetails['images'] = $this->Services->getServiceImagePath($order['service_id']);
                 $orderDetails['order_id'] = $order['order_id'];
                 $orderDetails['user_address'] = $order['user_address'];
                 $orderDetails['created_at'] = $order['created_at']->format('d-M-Y h:i A');
@@ -1157,6 +1199,7 @@ class WebservicesController extends AppController {
                 $orderDetails['total_amount'] = number_format($order['total_amount'], 2);
                 $orderDetails['status'] = $order['status'];
                 $orderDetails['payment_status'] = $order['payment_status'];
+                $orderDetails['services'] = [];
                 $orderDetails['total'] = [
                     'amount' => number_format($order['amount'], 2),
                     'tax' => number_format($order['tax'], 2),
@@ -1169,6 +1212,13 @@ class WebservicesController extends AppController {
                 $ordersItems = [];
                 foreach ($cartOrders as $order) {
                     $tmp = [];
+                    $tmp['cart_order_id'] = $order['id'];
+                    $tmp['category_id'] = $order['category_id'];
+                    $tmp['category_name'] = $this->Services->getCategoryName($order['category_id']);
+                    $tmp['service_id'] = $order['service_id'];
+                    $tmp['service_name'] = $this->Services->getServiceName($order['service_id']);
+                    $tmp['banner_img'] = $this->Services->getServiceImagePAth($order['service_id']);
+                    //$tmp['banner_img'] = $this->Services->getServiceName($order['service_id']);
                     $tmpDetails = $this->CartOrderQuestions->find('all')->where(['cart_order_id' => $order['id']])->hydrate(false)->toArray();
                     foreach ($tmpDetails as $orderQues) {
                         $questArr = $this->getQuestionDetails($orderQues['question_id'], $orderQues['answer_id']);
@@ -1178,32 +1228,42 @@ class WebservicesController extends AppController {
                                 $answerTitle = $this->ServiceQuestionAnswers->find('all')->where(['id' => $questArr['parent_answer']])->hydrate(false)->first();
                                 $tmp['serviceDescription'] = $answerTitle['label'];
                                 $tmp['quantity'] = $orderQues['question_quantity'];
-                                $tmp['total_amount'] = number_format($order['total_amount'], 2);
+                                $tmp['total_amount'] = $order['total_amount'];
                             } else {
                                 $tmp['serviceDescription'] = $questArr['answer'];
                                 $tmp['quantity'] = $orderQues['question_quantity'];
                             }
                             if ($tmp['quantity'] == 0) {
-                                $tmp['amount'] = 0.00;
-                                $tmp['total_amount'] = number_format($order['total_amount'], 2);
+                                $tmp['amount'] = 0;
+                                $tmp['total_amount'] = $order['total_amount'];
                             } else {
-                                $tmp['amount'] = number_format($order['total_amount'] / $tmp['quantity'], 2);
-                                $tmp['total_amount'] = number_format($order['total_amount'], 2);
+                                $tmp['amount'] = $order['total_amount'] / $tmp['quantity'];
+                                $tmp['total_amount'] = $order['total_amount'];
                             }
-                            $tmp['serviceImage'] = $this->Services->getServiceImagePath($order['service_id']);
                             $tmp['on_inspection'] = 'N';
                         } else {
                             $tmp['serviceDescription'] = $questArr['answer'];
-                            $tmp['serviceImage'] = $this->Services->getServiceImagePath($order['service_id']);
                             $tmp['quantity'] = $orderQues['question_quantity'];
                             $tmp['on_inspection'] = 'Y';
-                            $tmp['amount'] = 0.00;
-                            $tmp['total_amount'] = number_format($order['total_amount'], 2);
+                            $tmp['amount'] = 0;
+                            $tmp['total_amount'] = $order['total_amount'];
                         }
                     }
-                    $ordersItems[] = $tmp;
+
+                    $ordersDetails[$order['category_id']]['category'] = $this->Services->getCategoryName($order['category_id']);
+                    $ordersDetails[$order['category_id']]['services'][] = $tmp;
                 }
-                $orderDetails['services'] = $ordersItems;
+                $finalOrderDetails = [];
+                if (!empty($ordersDetails)) {
+                    foreach ($ordersDetails as $key => $val) {
+                        $finalOrderDetails[] = $val;
+                    }
+                }
+                $orderDetails['services'] = $finalOrderDetails;
+
+
+
+
                 $this->success('order detail fetched successfully', $orderDetails);
             } else {
                 $this->wrong('Sorry, Order not found!');
@@ -1303,7 +1363,7 @@ class WebservicesController extends AppController {
             if (!empty($orders)) {
                 foreach ($orders as $val) {
                     $tmp = [];
-                    $serviceArr = $this->CartOrders->find('all')->select(['service_id'])->where(['cart_id'=>$val['cart_id']])->hydrate(false)->first();
+                    $serviceArr = $this->CartOrders->find('all')->select(['service_id'])->where(['cart_id' => $val['cart_id']])->hydrate(false)->first();
                     $service_id = $serviceArr['service_id'];
                     $tmp['name'] = $this->Services->getServiceName($service_id);
                     $tmp['images'] = $this->Services->getServiceImagePath($service_id);
@@ -1327,7 +1387,11 @@ class WebservicesController extends AppController {
             $requestArr = $this->getInputArr();
             $requiredFields = array(
                 'Order Id' => (isset($requestArr['order_id']) && $requestArr['order_id'] != '') ? $requestArr['order_id'] : '',
-                'Query' => (isset($requestArr['query']) && $requestArr['query'] != '') ? $requestArr['query'] : ''
+                'Query' => (isset($requestArr['query']) && $requestArr['query'] != '') ? $requestArr['query'] : '',
+                'vendor_on_time' => (isset($requestArr['vendor_on_time']) && $requestArr['vendor_on_time'] != '') ? $requestArr['vendor_on_time'] : '',
+                'vendor_with_uniform_id' => (isset($requestArr['vendor_with_uniform_id']) && $requestArr['vendor_with_uniform_id'] != '') ? $requestArr['vendor_with_uniform_id'] : '',
+                'vendor_work_knowledge' => (isset($requestArr['vendor_work_knowledge']) && $requestArr['vendor_work_knowledge'] != '') ? $requestArr['vendor_work_knowledge'] : '',
+                'work_cleanliness' => (isset($requestArr['work_cleanliness']) && $requestArr['work_cleanliness'] != '') ? $requestArr['work_cleanliness'] : '',
             );
             $validate = $this->checkRequiredFields($requiredFields);
             if ($validate != "") {
@@ -1335,14 +1399,21 @@ class WebservicesController extends AppController {
             }
             $order_id = $requestArr['order_id'];
             $query_txt = $requestArr['query'];
+            $vendor_on_time = $requestArr['vendor_on_time'];
+            $vendor_with_uniform_id = $requestArr['vendor_with_uniform_id'];
+            $vendor_work_knowledge = $requestArr['vendor_work_knowledge'];
+            $work_cleanliness = $requestArr['work_cleanliness'];
             $checkOrderExist = $this->Orders->find('all')->select(['id', 'service_id'])->where(['order_id' => $order_id])->hydrate(false)->first();
             if ($checkOrderExist) {
                 $orders_id = $checkOrderExist['id'];
                 $service_id = $checkOrderExist['service_id'];
                 $query = $this->OrderQueries->newEntity();
                 $queryData['user_id'] = $userId;
-                $queryData['service_id'] = $service_id;
                 $queryData['order_id'] = $orders_id;
+                $queryData['vendor_on_time'] = $vendor_on_time;
+                $queryData['vendor_with_uniform_id'] = $vendor_with_uniform_id;
+                $queryData['vendor_work_knowledge'] = $vendor_work_knowledge;
+                $queryData['work_cleanliness'] = $work_cleanliness;
                 $queryData['queries'] = $query_txt;
                 $query = $this->OrderQueries->patchEntity($query, $queryData);
                 $query->created = date('Y-m-d H:i:s');
@@ -1369,7 +1440,7 @@ class WebservicesController extends AppController {
             $onGoingOrdercount = 0;
             $cartProductCount = 0;
             // Ongoing Orders - Start
-            $onGoingOrdercount = $this->Orders->find()->where(['user_id' => $userId, 'status' => 'PENDING'])->hydrate(false)->count();
+            $onGoingOrdercount = $this->Orders->find()->where(['user_id' => $userId, 'status' => 'SCHEDULE'])->hydrate(false)->count();
             // Ongoing Orders - End
             // Cart Product - Start
             $checkArrs = $this->Carts->find('all')->select(['id'])->where(['user_id' => $userId, 'status' => 'PROCESS'])->hydrate(false)->first();
@@ -1380,6 +1451,74 @@ class WebservicesController extends AppController {
             }
             // Cart Product - End
             $this->success('Order Summary Fatched!', ['totOngoingOrder' => $onGoingOrdercount, 'totCart' => $cartProductCount]);
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function storeReview() {
+        $userId = $this->checkVerifyApiKey('CUSTOMER');
+        if ($userId) {
+            $this->loadModel('ServiceReviews');
+            $requestArr = $this->getInputArr();
+            $requiredFields = array(
+                'Service Id' => (isset($requestArr['service_id']) && $requestArr['service_id'] != '') ? $requestArr['service_id'] : '',
+                'Review Title' => (isset($requestArr['review_title']) && $requestArr['review_title'] != '') ? $requestArr['review_title'] : '',
+                'Review Description' => (isset($requestArr['review_description']) && $requestArr['review_description'] != '') ? $requestArr['review_description'] : '',
+                'Review Rattings' => (isset($requestArr['review_rates']) && $requestArr['review_rates'] != '') ? $requestArr['review_rates'] : '',
+            );
+            $validate = $this->checkRequiredFields($requiredFields);
+            if ($validate != "") {
+                $this->wrong($validate);
+            }
+            $serviceReview = $this->ServiceReviews->newEntity();
+            $review = [];
+            $review['user_id'] = $userId;
+            $review['service_id'] = $requestArr['service_id'];
+            $review['review_title'] = $requestArr['review_title'];
+            $review['review_description'] = $requestArr['review_description'];
+            $review['review_rates'] = $requestArr['review_rates'];
+            $serviceReview = $this->ServiceReviews->patchEntity($serviceReview, $review);
+            $serviceReview->created = date('Y-m-d H:i:s');
+            if ($this->ServiceReviews->save($serviceReview)) {
+                $this->success('Review Submited!');
+            } else {
+                $this->wrong('Review not Submited!');
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function updateOrder() {
+        $userId = $this->checkVerifyApiKey('CUSTOMER');
+        if ($userId) {
+            $this->loadModel('Orders');
+            $requestArr = $this->getInputArr();
+            $requiredFields = array(
+                'Order Id' => (isset($requestArr['order_id']) && $requestArr['order_id'] != '') ? $requestArr['order_id'] : ''
+            );
+            $validate = $this->checkRequiredFields($requiredFields);
+            if ($validate != "") {
+                $this->wrong($validate);
+            }
+            $order_id = $requestArr['order_id'];
+            $orderExist = $this->Orders->find('all')->where(['order_id' => $order_id, 'user_id' => $userId])->hydrate(false)->first();
+            if(isset($orderExist) && !empty($orderExist)) {
+                $order = $this->Orders->get($orderExist['id']);
+                $updatedData['status'] = (isset($requestArr['status']) && $requestArr['status'] != '') ? $requestArr['status'] : '';
+                $updatedData['reason_order_cancelled'] = (isset($requestArr['reason']) && $requestArr['reason'] != '') ? $requestArr['reason'] : '';
+                $updatedData['user_id'] = $userId;
+                $order = $this->Orders->patchEntity($order, $updatedData);
+                $order->modified_at = date('Y-m-d H:i:s');
+                if($this->Orders->save($order)) {
+                    $this->success('Order Updated!');
+                } else {
+                    $this->wrong('Order Updated Faild!');
+                }
+            } else {
+                $this->wrong('Sorry Order is not Exist!');
+            }
         } else {
             $this->wrong('Invalid API key.');
         }
