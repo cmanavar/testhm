@@ -130,3 +130,6 @@ define('MSG_TITLE_REFERRAL', 'Rewarded for refer');
 
 
 
+define('PAGINATION_LIMIT', 10);
+
+

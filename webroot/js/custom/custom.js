@@ -103,6 +103,15 @@ $(function () {
         create: false,
     });
 
+    var $select = $('#question_type').selectize({
+        allowEmptyOption: true,
+        create: false,
+    });
+
+    var $select = $('#parent_questions_answer1').selectize({
+        allowEmptyOption: true,
+        create: false,
+    });
 
 
 
@@ -131,9 +140,13 @@ $(document).ready(function () {
             data: '',
             dataType: "json",
             success: function (rslt) {
-                //console.log(rslt); return;
                 if (rslt.status == "success") {
-                    $('#parent_questions_answer1').append(rslt.data);
+                    var selectize = $('#parent_questions_answer1')[0].selectize;
+                    rslt.data.forEach(function (element) {
+                        selectize.addOption({value:element.key,text:element.val});
+                    });
+                    selectize.refreshOptions();
+                    //$('#parent_questions_answer1').selectize.enable();
                 } else {
                     alert(rslt.msg);
                 }
@@ -605,6 +618,6 @@ $(document).ready(function () {
     var myDate = new Date();
     myDate.setDate(myDate.getDate() + 1);
     $('.tomorrowDate').val($.datepicker.formatDate("dd-mm-yy", myDate));
-            //tomorrowDate
+    //tomorrowDate
 
 });

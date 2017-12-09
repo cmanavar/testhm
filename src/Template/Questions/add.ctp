@@ -81,6 +81,14 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label class="col-sm-3 control-label">QUESTIONS'S TYPE <span class="text-danger">*</span></label>
+                                <div class="col-sm-6">
+                                    <div class="input tel">
+                                        <?php echo $this->Form->input('que_type', ['label' => false, 'type' => 'select', 'options' => ['QUANTITY' => 'QUANTITY', 'QUESTION' => 'QUESTION'], 'empty' => 'SELECT QUESTIONS TYPE', 'id' => 'question_type', 'class' => 'demo-default', 'placeholder' => 'SELECT QUESTIONS TYPE']); ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label class="col-sm-3 control-label">QUESTION TITLE <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="input text">

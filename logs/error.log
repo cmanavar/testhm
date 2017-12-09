@@ -13186,3 +13186,22 @@ Request URL: /hmen/webservices/service/review/
 Request URL: /hmen/webservices/order/update
 2017-12-05 23:04:39 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "orders"
 Request URL: /hmen/webservices/order/update
+2017-12-09 09:26:03 Error: [Cake\Controller\Exception\MissingActionException] Action WebservicesController::service() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'WebservicesController',
+  'action' => 'service',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/webservices/service/reviews/1
+2017-12-09 10:09:21 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "users"
+Request URL: /hmen/webservices/service/reviews/1
+2017-12-09 10:56:36 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "users"
+Request URL: /hmen/webservices/service/reviews/1
+2017-12-09 10:57:05 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "users"
+Request URL: /hmen/webservices/service/reviews/1
+2017-12-09 11:01:25 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/service_reviews.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/service_reviews.ctp',
+)
+Request URL: /hmen/webservices/service/reviews/1

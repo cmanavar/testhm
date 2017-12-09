@@ -145,6 +145,7 @@ class QuestionsController extends AppController {
                 $question = $this->ServiceQuestions->patchEntity($question, $this->request->data());
                 $question->modified_by = $this->request->session()->read('Auth.User.id');
                 $question->modified = date("Y-m-d H:i:s");
+                //pr($question); exit;
                 if ($this->ServiceQuestions->save($question)) {
                     $this->Flash->success(Configure::read('Settings.SAVE'));
                     return $this->redirect(['action' => 'index', $service_id]);
@@ -154,6 +155,7 @@ class QuestionsController extends AppController {
             }
             $question['parent_questions'] = $this->Questions->getQuestions($question['parent_question_id']);
             $question['parent_answers'] = $this->Questions->getAnswers($question['parent_answer_id']);
+            //pr($question); exit;
             $this->set('question', $question);
             $this->set('service_id', $service_id);
         } else {
@@ -241,12 +243,20 @@ class QuestionsController extends AppController {
         $this->loadModel('ServiceQuestionAnswers');
         $answersArr = $this->ServiceQuestionAnswers->find('list', ['keyField' => 'id', 'valueField' => 'label'])->where(['question_id' => $id])->toArray();
         if (isset($answersArr) && !empty($answersArr)) {
-            $str = '';
-            foreach ($answersArr as $key => $val) {
-                $str .= '<option value="' . $key . '">' . $val . '</option>';
-            }
+//            $str = '';
+//            foreach ($answersArr as $key => $val) {
+//                $str .= '<option value="' . $key . '">' . $val . '</option>';
+//            }
             //$this->common->success('Answer Fatched!', $str);
-            $this->data = ['status' => 'success', 'msg' => 'Answer Fetched!', 'data' => $str];
+            //print_r($answersArr); exit;
+            $rslt = [];
+            foreach ($answersArr as $key => $val) {
+                $tmp = [];
+                $tmp['key'] = $key;
+                $tmp['val'] = $val;
+                $rslt[] = $tmp;
+            }
+            $this->data = ['status' => 'success', 'msg' => 'Answer Fetched!', 'data' => $rslt];
         } else {
             //$this->common->fail("Sorry, Answer not found!");
             $this->data = ['status' => 'fail', 'msg' => 'Answer not found!'];

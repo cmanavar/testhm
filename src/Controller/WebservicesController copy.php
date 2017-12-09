@@ -40,7 +40,7 @@ class WebservicesController extends AppController {
         $this->Auth->allow(['homepage', 'categoryDetails', 'categoryList', 'serviceDetails', 'getServicesSubQuestions', 'helpDetails',
             'createCart', 'addCartProduct', 'cartDetails', 'cartClear', 'removeCartProduct', 'counteunreadmsg', 'msgList', 'msgView',
             'cartOrderPlaced', 'forgorPassword', 'changePassword', 'applyCouponCode', 'walletDetails', 'getCartId', 'orderDetails',
-            'orderLists', 'orderQuery', 'orderSummary', 'storeReview', 'updateOrder', 'serviceReviews']);
+            'orderLists', 'orderQuery', 'orderSummary', 'storeReview', 'updateOrder']);
     }
 
     public function counteunreadmsg() {
@@ -369,10 +369,6 @@ class WebservicesController extends AppController {
                 $rslt['visit_charge'] = $sDetails['visit_charge'];
                 $rslt['minimum_charge'] = $sDetails['minimum_charge'];
                 $rslt['banner_image'] = IMAGE_URL_PATH . 'services/banner/' . $sDetails['banner_image'];
-                $nextStep = '';
-                $nextStep = $this->nextStepQuestions(0, 0, $id);
-                $rslt['nextstep'] = $nextStep;
-                //echo $nextStep; exit;
                 // Questions - Start
                 $questionArr = [];
                 $quesArr = $this->ServiceQuestions->find('all')->where(['category_id' => $sDetails['category_id'], 'service_id' => $sDetails['id'], 'questions_type' => 'parent'])->hydrate(false)->toArray();
@@ -397,16 +393,7 @@ class WebservicesController extends AppController {
                                 $tmpA['label'] = $v['label'];
                                 $tmpA['quantity'] = $v['quantity'];
                                 $tmpA['price'] = $v['price'];
-                                //$tmpA['child_questions'] = ($this->nextStepQuestions($val['id'], $v['id'])) ? $this->nextStepQuestions($val['id'], $v['id']) : '-';
-                                //$tmpA['quantity'] = $v['quantity'];
-                                $tmpA['nextstep'] = "-";
-                                if ($v['quantity'] == 'YES') {
-                                    $tmpA['nextstep'] = "QUANTITY";
-                                }
-                                if ($v['quantity'] == 'NO') {
-                                    $tmpA['nextstep'] = ($this->nextStepQuestions($val['id'], $v['id'], $id)) ? $this->nextStepQuestions($val['id'], $v['id'], $id) : '-';
-                                }
-
+                                $tmpA['child_questions'] = ($this->checkChildQuestionsExist($val['id'], $v['id'])) ? 'Yes' : 'No';
                                 $answerArrs[] = $tmpA;
                             }
                         }
@@ -415,10 +402,23 @@ class WebservicesController extends AppController {
                     }
                 }
                 $rslt['questions'] = $questionArr;
-                if (empty($questionArr)) {
-                    $rslt['nextstep'] = 'DESCRIPTION';
-                }
                 // Questions - End
+                // Review - Start
+                $reviewsArr = [];
+                $reviews = $this->ServiceReviews->find('all')->where(['service_id' => $sDetails['id']])->hydrate(false)->toArray();
+                foreach ($reviews as $review) {
+                    $tmpArr = $userData = [];
+                    $tmpArr['review_title'] = $review['review_title'];
+                    $tmpArr['review_description'] = $review['review_description'];
+                    $tmpArr['review_rates'] = $review['review_rates'];
+                    $userData = $this->Users->getuserId($review['user_id'])->toArray();
+                    $tmpArr['service_name'] = $this->Services->getServiceName($val['service_id']);
+                    $tmpArr['user_name'] = $userData['name'];
+                    $tmpArr['user_pic'] = ($userData['profile_pic'] != '') ? IMAGE_URL_PATH . 'users/' . $userData['profile_pic'] : '';
+                    $reviewsArr[] = $tmpArr;
+                }
+                $rslt['service_reveiws'] = $reviewsArr;
+                // Review - End
                 // Ratecard - Start
                 $rateArr = [];
                 $rateCards = $this->ServiceRatecards->find('all')->where(['service_id' => $sDetails['id']])->hydrate(false)->toArray();
@@ -452,63 +452,11 @@ class WebservicesController extends AppController {
         }
     }
 
-    public function serviceReviews($id = '') {
-        $this->layout = 'ajax';
-        $requestArr = $this->getInputArr();
-        if(isset($requestArr['page_no']) && $requestArr['page_no'] != '') {
-            $page_no = $requestArr['page_no'];
-        } else {
-            $page_no = 1;
-        }
-        $this->loadModel('Users');
-        $this->loadModel('Services');
-        $this->loadModel('ServiceReviews');
-        if (isset($id) && $id != '') {
-            $rslt = [];
-            $sDetails = $this->Services->find('all')->where(['status' => 'ACTIVE', 'id' => $id])->order(['id' => 'ASC'])->hydrate(false)->first();
-            if (isset($sDetails) && !empty($sDetails)) {
-                // Review - Start
-                $reviewsArr = [];
-                $reviews = $this->ServiceReviews->find('all')->where(['service_id' => $sDetails['id']])->order(['id' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no)->hydrate(false)->toArray();
-                foreach ($reviews as $review) {
-                    $tmpArr = $userData = [];
-                    $tmpArr['review_title'] = $review['review_title'];
-                    $tmpArr['review_description'] = $review['review_description'];
-                    $tmpArr['review_rates'] = $review['review_rates'];
-                    $userData = $this->Users->getuserId($review['user_id'])->toArray();
-                    $tmpArr['service_name'] = $this->Services->getServiceName($id);
-                    $tmpArr['user_name'] = $userData['name'];
-                    $tmpArr['user_pic'] = ($userData['profile_pic'] != '') ? IMAGE_URL_PATH . 'users/' . $userData['profile_pic'] : '';
-                    $reviewsArr[] = $tmpArr;
-                }
-                $nextPageReviews = $this->ServiceReviews->find('all')->where(['service_id' => $sDetails['id']])->order(['id' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no+1)->hydrate(false)->toArray();
-                $rslt['service_reveiws'] = $reviewsArr;
-                $rslt['next_page'] = (!empty($nextPageReviews)) ? true : false;
-                // Review - End
-                $this->success("Service Reviews Fetched!", $rslt);
-            } else {
-                $this->wrong('Service reviews not found!');
-            }
-        } else {
-            $this->wrong('Service Id is missing!');
-        }
-    }
-
     function checkChildQuestionsExist($question_id, $answer_id) {
         $cond_arr = ['parent_question_id' => $question_id, 'parent_answer_id' => $answer_id, 'questions_type' => 'child'];
         $counts = $this->ServiceQuestions->find('all')->where($cond_arr)->hydrate(false)->count();
         if (isset($counts) && ($counts != 0)) {
             return true;
-        } else {
-            return false;
-        }
-    }
-
-    function nextStepQuestions($question_id, $answer_id, $serviceId) {
-        $cond_arr = ['parent_question_id' => $question_id, 'parent_answer_id' => $answer_id, 'service_id' => $serviceId];
-        $questions = $this->ServiceQuestions->find('all')->select(['que_type'])->where($cond_arr)->hydrate(false)->first();
-        if (isset($questions) && !empty($questions)) {
-            return $questions['que_type'];
         } else {
             return false;
         }
@@ -534,7 +482,6 @@ class WebservicesController extends AppController {
             $quesArr = $this->ServiceQuestions->find('all')->where($condArr)->hydrate(false)->toArray();
             if (!empty($quesArr)) {
                 foreach ($quesArr as $key => $val) {
-                    //pr($val); exit;
                     $tmp = [];
                     $tmp['id'] = $val['id'];
                     $tmp['question'] = $val['question_title'];
@@ -552,16 +499,9 @@ class WebservicesController extends AppController {
                             $tmpA['id'] = $v['id'];
                             $tmpA['question_id'] = $v['question_id'];
                             $tmpA['label'] = $v['label'];
-                            // $tmpA['quantity'] = (isset($v['quantity']) && $v['quantity'] == 'YES') ? 'Y' : 'N';
+                            $tmpA['quantity'] = (isset($v['quantity']) && $v['quantity'] == 'YES') ? 'Y' : 'N';
                             $tmpA['price'] = $v['price'];
-                            //$tmpA['child_questions'] = ($this->checkChildQuestionsExist($val['id'], $v['id'])) ? 'Yes' : 'No';
-                            $tmpA['nextstep'] = "-";
-                            if ($v['quantity'] == 'YES') {
-                                $tmpA['nextstep'] = "QUANTITY";
-                            }
-                            if ($v['quantity'] == 'NO') {
-                                $tmpA['nextstep'] = ($this->nextStepQuestions($val['id'], $v['id'], $val['service_id'])) ? $this->nextStepQuestions($val['id'], $v['id'], $val['service_id']) : '-';
-                            }
+                            $tmpA['child_questions'] = ($this->checkChildQuestionsExist($val['id'], $v['id'])) ? 'Yes' : 'No';
                             $answerArrs[] = $tmpA;
                         }
                     }
@@ -1564,14 +1504,14 @@ class WebservicesController extends AppController {
             }
             $order_id = $requestArr['order_id'];
             $orderExist = $this->Orders->find('all')->where(['order_id' => $order_id, 'user_id' => $userId])->hydrate(false)->first();
-            if (isset($orderExist) && !empty($orderExist)) {
+            if(isset($orderExist) && !empty($orderExist)) {
                 $order = $this->Orders->get($orderExist['id']);
                 $updatedData['status'] = (isset($requestArr['status']) && $requestArr['status'] != '') ? $requestArr['status'] : '';
                 $updatedData['reason_order_cancelled'] = (isset($requestArr['reason']) && $requestArr['reason'] != '') ? $requestArr['reason'] : '';
                 $updatedData['user_id'] = $userId;
                 $order = $this->Orders->patchEntity($order, $updatedData);
                 $order->modified_at = date('Y-m-d H:i:s');
-                if ($this->Orders->save($order)) {
+                if($this->Orders->save($order)) {
                     $this->success('Order Updated!');
                 } else {
                     $this->wrong('Order Updated Faild!');

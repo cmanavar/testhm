@@ -5659,3 +5659,90 @@
 2017-12-05 22:55:13 Notice: Notice (8): Undefined variable: user_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1506]
 
 
+2017-12-07 23:37:07 Notice: Notice (8): Use of undefined constant getanswers - assumed 'getanswers' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/QuestionsController.php, line 249]
+
+
+2017-12-07 23:37:18 Notice: Notice (8): Use of undefined constant getanswers - assumed 'getanswers' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/QuestionsController.php, line 249]
+
+
+2017-12-08 22:55:06 Notice: Notice (8): Undefined index: questions_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 469]
+
+
+2017-12-08 22:55:06 Notice: Notice (8): Undefined index: questions_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 469]
+
+
+2017-12-08 22:55:39 Notice: Notice (8): Undefined index: que_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 469]
+
+
+2017-12-08 22:55:39 Notice: Notice (8): Undefined index: que_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 469]
+
+
+2017-12-08 22:55:57 Notice: Notice (8): Undefined index: que_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 469]
+
+
+2017-12-08 22:55:57 Notice: Notice (8): Undefined index: que_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 469]
+
+
+2017-12-09 10:09:21 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 466]
+
+
+2017-12-09 10:59:17 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:17 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:17 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:17 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:17 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:17 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:17 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:17 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:17 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:17 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:18 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:18 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:18 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:18 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:18 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:18 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:18 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:18 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:18 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
+2017-12-09 10:59:18 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
+
+
