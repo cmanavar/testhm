@@ -47,7 +47,7 @@
                                                         <th width="2%">Sr.no</th>
                                                         <th>Service Name</th> 
                                                         <th>Category Name</th>
-                                                        <th width="40%">Descriptions</th>
+<!--                                                        <th width="40%">Descriptions</th>-->
                                                         <th>Status</th>
                                                         <th width="17%">Actions</th>
                                                     </tr>   
@@ -61,7 +61,7 @@
                                                                 <td><?php echo $key + 1; ?></td>
                                                                 <td><?php echo stripslashes($val['service_name']) ?></td>
                                                                 <td><?php echo stripslashes($val['category_name']) ?></td>
-                                                                <td><?php echo stripslashes(substr($val['service_description'], 0, 100)); ?></td>
+<!--                                                                <td><?php echo stripslashes(substr($val['service_description'], 0, 100)); ?></td>-->
                                                                 <td><?php echo stripslashes($val['status']) ?></td>
                                                                 <td>
                                                                     <?php echo $this->Html->link('', ['controller' => 'Services', 'action' => 'view', $val['id']], ['class' => 'btn btn-info fa fa-eye', 'escape' => false, 'title' => 'VIEW']); ?>

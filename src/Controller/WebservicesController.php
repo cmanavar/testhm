@@ -365,7 +365,7 @@ class WebservicesController extends AppController {
                 $rslt['category_id'] = $sDetails['category_id'];
                 $rslt['category_name'] = $this->Services->getCategoryName($sDetails['category_id']);
                 $rslt['service_name'] = $sDetails['service_name'];
-                $rslt['service_details'] = $sDetails['service_description'];
+                $rslt['service_details'] = html_entity_decode($sDetails['service_description']);
                 $rslt['visit_charge'] = $sDetails['visit_charge'];
                 $rslt['minimum_charge'] = $sDetails['minimum_charge'];
                 $rslt['banner_image'] = IMAGE_URL_PATH . 'services/banner/' . $sDetails['banner_image'];

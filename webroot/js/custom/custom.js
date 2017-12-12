@@ -143,7 +143,7 @@ $(document).ready(function () {
                 if (rslt.status == "success") {
                     var selectize = $('#parent_questions_answer1')[0].selectize;
                     rslt.data.forEach(function (element) {
-                        selectize.addOption({value:element.key,text:element.val});
+                        selectize.addOption({value: element.key, text: element.val});
                     });
                     selectize.refreshOptions();
                     //$('#parent_questions_answer1').selectize.enable();
@@ -619,5 +619,20 @@ $(document).ready(function () {
     myDate.setDate(myDate.getDate() + 1);
     $('.tomorrowDate').val($.datepicker.formatDate("dd-mm-yy", myDate));
     //tomorrowDate
+
+    tinymce.init({
+        selector: 'textarea',
+        height: 350,
+        menubar: false,
+        plugins: [
+            'advlist autolink lists link image charmap print preview anchor textcolor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table contextmenu paste code help'
+        ],
+        toolbar: 'undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
+        content_css: [
+            '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+            '//www.tinymce.com/css/codepen.min.css']
+    });
 
 });

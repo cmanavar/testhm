@@ -13,6 +13,7 @@
 <?php echo $this->Html->script('maskedinput.js', ['block' => 'scriptBottom']); ?>
 <?php echo $this->Html->script('custom/upload_image.js', array('block' => 'scriptBottom')); ?>
 <?php echo $this->Html->script('custom/dashboard.js', ['block' => 'scriptBottom']); ?>
+<?php echo $this->Html->script('https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=p4pvlweh2kmrrrcrtkp63pmc73mi9srsg8ov8jjoces5hqby', ['block' => 'scriptBottom']); ?>
 <div id="page-wrapper">
     <div class="row">
         <div class="col-md-12">

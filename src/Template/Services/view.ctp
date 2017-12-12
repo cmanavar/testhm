@@ -43,7 +43,7 @@
                                 </tr>
                                 <tr>
                                     <td width="30%"><label class="control-label">Service Description</label></td>
-                                    <td><?= $services['service_description']; ?></td>
+                                    <td><?= html_entity_decode($services['service_description']); ?></td>
                                 </tr>
                                 <tr>
                                     <td width="30%"><label class="control-label">Service Category</label></td>

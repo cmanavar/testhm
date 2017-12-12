@@ -52,7 +52,6 @@ class ServicesController extends AppController {
         if (!empty($services)) {
             foreach ($services as $key => $service) {
                 $services[$key]['category_name'] = $this->Services->getCategoryName($service['category_id']);
-                ;
             }
         }
         $this->set('services', $services);
@@ -132,11 +131,15 @@ class ServicesController extends AppController {
         $serviceCategories = $this->ServiceCategory->find('list')->toArray();
         $this->set('serviceCategories', $serviceCategories);
         $service = $this->Services->getservicesId($id); //LISTING CATEGORYDATA
+        $service['service_description'] = html_entity_decode($service['service_description']);
+        //pr($service); exit;
         if ($this->request->is(['patch', 'post', 'put'])) {
             $validator = new ServicesValidator();
             $errors = $validator->errors($this->request->data());
             if (empty($errors)) {
+                $this->request->data['service_description'] = htmlentities($this->request->data['service_description']);
                 $service = $this->Services->patchEntity($service, $this->request->data);
+                //pr($this->request->data); exit;
                 if (isset($this->request->data['banner']['name']) && $this->request->data['banner']['name'] != '') {
                     $file = $this->request->data['banner']['name'];
                     $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
