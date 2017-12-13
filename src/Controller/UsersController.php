@@ -319,7 +319,9 @@ class UsersController extends AppController {
                 // SEND EMAIL
                 $mailData = [];
                 $mailData['name'] = $name;
-                $mailData['email'] = $email;
+                $senderEmail = str_replace("@", "<span>@</span>", $email);
+                $senderEmail = str_replace(".", "<span>.</span>", $email);
+                $mailData['email'] = $senderEmail;
                 $mailData['password'] = $password;
                 $mailData['activation_link'] = APP_PATH . '/webservices/email/activate/' . base64_encode($email);
                 $this->set('mailData', $mailData);
@@ -400,6 +402,7 @@ class UsersController extends AppController {
         $this->layout = 'ajax';
         $this->autoRender = false;
         $this->loadModel('Users');
+        $this->loadModel('UserMapping');
         $user = $this->Users->newEntity();
         $requestArr = $this->getInputArr();
         $requiredFields = array(
@@ -456,11 +459,13 @@ class UsersController extends AppController {
                 $conditionArr['active'] = 'Y';
                 $conditionArr['user_type'] = 'CUSTOMER';
                 $emailAddress = (isset($requestArr['user']) && $requestArr['user'] != '') ? $requestArr['user'] : '';
+                $tpa_token = (isset($requestArr['token']) && $requestArr['token'] != '') ? $requestArr['token'] : '';
                 $phoneNumber = (isset($requestArr['phone_no']) && $requestArr['phone_no'] != '') ? $requestArr['phone_no'] : '';
                 if ($emailAddress != '' && $phoneNumber != '') {
-                    $conditionArr['OR'] = ['email' => $emailAddress, 'phone_no' => $phoneNumber];
+                    $conditionArr['OR'] = ['email' => $emailAddress, 'phone_no' => $phoneNumber, 'tpa_token' => $tpa_token];
                 } else {
                     $conditionArr['email'] = $emailAddress;
+                    $conditionArr['tpa_token'] = $tpa_token;
                 }
                 $userExist = '';
                 $userExist = $this->Users->find('all')->select(['id'])->where($conditionArr)->hydrate(false)->first();
@@ -476,7 +481,7 @@ class UsersController extends AppController {
                                 $rslt['name'] = $userDetails['name'];
                                 $rslt['email'] = $userDetails['email'];
                                 $rslt['phone_no'] = $userDetails['phone_no'];
-                                $rslt['profile_pic'] = '';
+                                $rslt['profile_pic'] = ($userDetails['profile_pic'] != '') ? IMAGE_URL_PATH . 'users/' . $userDetails['profile_pic'] : IMAGE_URL_PATH . 'users/user.png';
                                 $rslt['address'] = $userDetails['address'];
                                 $rslt['city'] = $userDetails['city'];
                                 $rslt['email_verified'] = $userDetails['email_verified'];
@@ -506,6 +511,7 @@ class UsersController extends AppController {
                     $userData['email'] = $emailAddress;
                     $userData['phone_no'] = $phoneNumber;
                     $userData['password'] = $password;
+                    $userData['tpa_token'] = $tpa_token;
                     $userData['city'] = (isset($requestArr['city']) && $requestArr['city'] != '') ? $requestArr['city'] : '';
                     $userData['signup_with'] = $requestArr['signup_tag'];
                     $userData['user_type'] = 'CUSTOMER';
@@ -517,6 +523,7 @@ class UsersController extends AppController {
                     $userData['email_verified'] = 'N';
                     $userData['active'] = 'Y';
                     $userData['refer_key'] = $this->getReferKey($requestArr['full_name'], $phoneNumber);
+                    $userData['tmplog'] = json_encode($requestArr);
                     $user = $this->Users->patchEntity($user, $userData);
                     $user->created = date("Y-m-d H:i:s");
                     if ($emailAddress != "") {
@@ -528,26 +535,27 @@ class UsersController extends AppController {
                     // SEND EMAIL
                     $mailData = [];
                     $mailData['name'] = $requestArr['full_name'];
-                    $mailData['email'] = $emailAddress;
+                    $senderEmail = str_replace("@", "<span>@</span>", $emailAddress);
+                    $senderEmail = str_replace(".", "<span>.</span>", $senderEmail);
+                    $mailData['email'] = $senderEmail;
                     $mailData['password'] = $password;
-                    $mailData['activation_link'] = APP_PATH . '/webservices/email/activate/' . base64_encode($email);
+                    //$mailData['activation_link'] = APP_PATH . '/webservices/email/activate/' . base64_encode($emailAddress);
                     $this->set('mailData', $mailData);
-                    $view_output = $this->render('/Element/signup_self');
-
+                    $view_output = $this->render('/Element/signup_tpa');
                     $fields = array(
                         'msg' => $view_output,
                         'tomail' => $emailAddress,
-                        'subject' => 'TEST EMAIL',
+                        'subject' => 'Welcome To H-Men! Confirm Your Email',
                         'from_name' => EMAIL_FROM_NAME,
                         'from_mail' => EMAIL_FROM_EMAIL_ADDRESS,
                     );
                     $this->sendemails($fields);
                     $saveUsers = $this->Users->save($user);
+                    //print_r($saveUsers); exit;
                     if ($saveUsers) {
                         //generate api key
                         $api_key = $this->Users->generateAPIkey();
                         $mappingData = [];
-                        $this->loadModel('UserMapping');
                         $userMapping = $this->UserMapping->newEntity();
                         $map_data = array(
                             'user_id' => $saveUsers['id'],
@@ -557,6 +565,8 @@ class UsersController extends AppController {
                         );
                         $userMapping = $this->UserMapping->patchEntity($userMapping, $map_data);
                         $userMapping->created = date("Y-m-d H:i:s");
+                        $userMapping->modified = date("Y-m-d H:i:s");
+                        //pr($userMapping); exit; modified
                         if ($this->UserMapping->save($userMapping)) {
                             $userDetails = $this->Users->get($saveUsers['id']);
                             if (!empty($userDetails)) {
@@ -568,7 +578,7 @@ class UsersController extends AppController {
                                         $rslt['name'] = $userDetails['name'];
                                         $rslt['email'] = $userDetails['email'];
                                         $rslt['phone_no'] = $userDetails['phone_no'];
-                                        $rslt['profile_pic'] = '';
+                                        $rslt['profile_pic'] = ($userDetails['profile_pic'] != '') ? IMAGE_URL_PATH . 'users/' . $userDetails['profile_pic'] : IMAGE_URL_PATH . 'users/user.png';
                                         $rslt['address'] = $userDetails['address'];
                                         $rslt['city'] = $userDetails['city'];
                                         $rslt['email_verified'] = $userDetails['email_verified'];

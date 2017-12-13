@@ -455,7 +455,7 @@ class WebservicesController extends AppController {
     public function serviceReviews($id = '') {
         $this->layout = 'ajax';
         $requestArr = $this->getInputArr();
-        if(isset($requestArr['page_no']) && $requestArr['page_no'] != '') {
+        if (isset($requestArr['page_no']) && $requestArr['page_no'] != '') {
             $page_no = $requestArr['page_no'];
         } else {
             $page_no = 1;
@@ -481,7 +481,7 @@ class WebservicesController extends AppController {
                     $tmpArr['user_pic'] = ($userData['profile_pic'] != '') ? IMAGE_URL_PATH . 'users/' . $userData['profile_pic'] : '';
                     $reviewsArr[] = $tmpArr;
                 }
-                $nextPageReviews = $this->ServiceReviews->find('all')->where(['service_id' => $sDetails['id']])->order(['id' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no+1)->hydrate(false)->toArray();
+                $nextPageReviews = $this->ServiceReviews->find('all')->where(['service_id' => $sDetails['id']])->order(['id' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no + 1)->hydrate(false)->toArray();
                 $rslt['service_reveiws'] = $reviewsArr;
                 $rslt['next_page'] = (!empty($nextPageReviews)) ? true : false;
                 // Review - End
@@ -660,6 +660,7 @@ class WebservicesController extends AppController {
                 $this->loadModel('CartOrders');
                 $this->loadModel('CartOrderQuestions');
                 $this->loadModel('Services');
+                $this->loadModel('ServiceQuestionAnswers');
                 // Check Cart is exist or not
                 $checkCart = $this->Carts->find('all')->where(['user_id' => $user_id, 'id' => $cartId, 'status' => 'PROCESS'])->hydrate(false)->first();
                 if ($checkCart) {
@@ -674,62 +675,105 @@ class WebservicesController extends AppController {
                         if (empty($questionsData)) {
                             $this->wrong("Sorry, Questions data is not found!");
                         } else {
+                            $total_price = 0;
                             foreach ($questionsData as $questions) {
                                 $questionDetails = $questionStoreDetails = [];
                                 $question_id = $questions->question_id;
                                 $answer_id = $questions->answer_id;
-                                $quantity = isset($questions->question_quantity) ? $questions->question_quantity : "";
-                                $answer_text = isset($questions->question_text_ans) ? $questions->question_text_ans : "";
-                                $questionDetails = $this->getQuestionDetails($question_id, $answer_id);
-                                //pr($questionDetails); exit;
-                                if (!empty($questionDetails)) {
-                                    if (isset($questionDetails['quantity']) && ($questionDetails['quantity'] != '')) {
-                                        //print_r($questionDetails['quantity']); exit;
-                                        if ($questionDetails['quantity'] == 'YES') {
-                                            $on_inspection = 'N';
-                                            //print_r($questionDetails['price']); exit;
-                                            if ($questionDetails['price'] != '0') {
-
-                                                if (strpos($questionDetails['answer'], '-') !== false) {
-                                                    $explodeArr = explode('-', $questionDetails['answer']);
-                                                    $min_quantity = $explodeArr[0];
-                                                    $max_quantity = $explodeArr[1];
-                                                    if ($quantity >= $min_quantity && $quantity <= $max_quantity) {
-                                                        $total_price = $questionDetails['price'] * $quantity;
-                                                    } else {
-                                                        $this->wrong('Sorry, Quantity values is out of range ' . $min_quantity . ' to ' . $max_quantity);
+                                $quantity = isset($questions->text_quantity) && $questions->text_quantity != 'NO_QUANTITY' ? $questions->text_quantity : 0;
+                                $answer_text = isset($questions->text_description) && $questions->text_description != 'NO_DESCRIPTION' ? $questions->text_description : "";
+                                //echo $question_id." ".$answer_id; exit;
+                                if ($question_id != 0) {
+                                    if ($answer_id == 0) {
+                                        $ansArr = $this->ServiceQuestionAnswers->find('all')->select(['id', 'label', 'quantity', 'price'])->where(['question_id' => $question_id, 'quantity' => 'YES'])->hydrate(false)->toArray();
+                                        foreach ($ansArr as $ans) {
+                                            if ($ans['quantity'] == 'YES') {
+                                                $on_inspection = 'N';
+                                                if ($ans['price'] != '0') {
+                                                    if (strpos($ans['answer'], '-') !== false) {
+                                                        $explodeArr = explode('-', $ans['answer']);
+                                                        $min_quantity = $explodeArr[0];
+                                                        $max_quantity = $explodeArr[1];
+                                                        if ($quantity >= $min_quantity && $quantity <= $max_quantity) {
+                                                            $total_price = $ans['price'] * $quantity;
+                                                        } else if (strpos($ans['answer'], '+') !== false) {
+                                                            $explodeArr = explode('+', $ans['answer']);
+                                                            $min_quantity = $explodeArr[0];
+                                                            if ($min_quantity <= $quantity) {
+                                                                $total_price = $ans['price'] * $quantity;
+                                                            }
+                                                        } else {
+                                                            $total_price = $ans['price'] * $quantity;
+                                                        }
                                                     }
-                                                } else if (strpos($questionDetails['answer'], '+') !== false) {
-                                                    $explodeArr = explode('+', $questionDetails['answer']);
-                                                    $min_quantity = $explodeArr[0];
-                                                    if ($min_quantity <= $quantity) {
-                                                        $total_price = $questionDetails['price'] * $quantity;
-                                                    } else {
-                                                        $msg = 'Sorry, Quantity must be grater than ' . $min_quantity . '.because you select ' . $questionDetails['answer'];
-                                                        $this->wrong($msg);
-                                                    }
-                                                } else {
-                                                    $total_price = $questionDetails['price'] * $quantity;
                                                 }
-                                            }
-                                        } else if ($questionDetails['quantity'] == 'NO') {
-                                            $on_inspection = 'N';
-                                            if ($questionDetails['price'] != '0') {
-                                                $total_price = $questionDetails['price'];
+                                                break;
+                                            } else if ($ans['quantity'] == 'NO') {
+                                                $on_inspection = 'N';
+                                                if ($questionDetails['price'] != '0') {
+                                                    $total_price = $questionDetails['price'];
+                                                } else {
+                                                    $total_price = '0';
+                                                }
+                                                break;
                                             } else {
+                                                $on_inspection = 'Y';
                                                 $total_price = '0';
+                                                break;
                                             }
-                                        } else {
-                                            $on_inspection = 'Y';
-                                            $total_price = '0';
                                         }
-                                    } else {
-                                        $this->wrong("Sorry, Questions quantity is not found!.");
                                     }
-                                    //print_r($questionDetails); exit;
-                                } else {
-                                    $this->wrong("Sorry, Questions data is not found!.");
                                 }
+                                echo $total_price; exit;
+//                                $questionDetails = $this->getQuestionDetails($question_id, $answer_id);
+//                                pr($questionDetails); exit;
+//                                if (!empty($questionDetails)) {
+//                                    if (isset($questionDetails['quantity']) && ($questionDetails['quantity'] != '')) {
+//                                        //print_r($questionDetails['quantity']); exit;
+//                                        if ($questionDetails['quantity'] == 'YES') {
+//                                            $on_inspection = 'N';
+//                                            //print_r($questionDetails['price']); exit;
+//                                            if ($questionDetails['price'] != '0') {
+//                                                if (strpos($questionDetails['answer'], '-') !== false) {
+//                                                    $explodeArr = explode('-', $questionDetails['answer']);
+//                                                    $min_quantity = $explodeArr[0];
+//                                                    $max_quantity = $explodeArr[1];
+//                                                    if ($quantity >= $min_quantity && $quantity <= $max_quantity) {
+//                                                        $total_price = $questionDetails['price'] * $quantity;
+//                                                    } else {
+//                                                        $this->wrong('Sorry, Quantity values is out of range ' . $min_quantity . ' to ' . $max_quantity);
+//                                                    }
+//                                                } else if (strpos($questionDetails['answer'], '+') !== false) {
+//                                                    $explodeArr = explode('+', $questionDetails['answer']);
+//                                                    $min_quantity = $explodeArr[0];
+//                                                    if ($min_quantity <= $quantity) {
+//                                                        $total_price = $questionDetails['price'] * $quantity;
+//                                                    } else {
+//                                                        $msg = 'Sorry, Quantity must be grater than ' . $min_quantity . '.because you select ' . $questionDetails['answer'];
+//                                                        $this->wrong($msg);
+//                                                    }
+//                                                } else {
+//                                                    $total_price = $questionDetails['price'] * $quantity;
+//                                                }
+//                                            }
+//                                        } else if ($questionDetails['quantity'] == 'NO') {
+//                                            $on_inspection = 'N';
+//                                            if ($questionDetails['price'] != '0') {
+//                                                $total_price = $questionDetails['price'];
+//                                            } else {
+//                                                $total_price = '0';
+//                                            }
+//                                        } else {
+//                                            $on_inspection = 'Y';
+//                                            $total_price = '0';
+//                                        }
+//                                    } else {
+//                                        $this->wrong("Sorry, Questions quantity is not found!.");
+//                                    }
+//                                    //print_r($questionDetails); exit;
+//                                } else {
+//                                    $this->wrong("Sorry, Questions data is not found!.");
+//                                }
                             }
                         }
                         $cartOrders = $this->CartOrders->newEntity();

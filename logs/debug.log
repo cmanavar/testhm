@@ -5746,3 +5746,6 @@
 2017-12-09 10:59:18 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 479]
 
 
+2017-12-13 01:44:53 Notice: Notice (8): Undefined variable: total_price in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 723]
+
+
