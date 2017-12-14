@@ -53,8 +53,10 @@ class SettingsController extends AppController {
                 move_uploaded_file($this->request->data['banner_images']['tmp_name'], WWW_ROOT . 'img/' . BANNER_IMAGE_PATH . $filename);
                 $banner['banner_images'] = $filename;
             }
-            $banner->created = date("Y-m-d H:i:s");
+            $banner->created_at = date("Y-m-d H:i:s");
+            $banner->modified_at = date("Y-m-d H:i:s");
             $banner->created_by = $this->request->session()->read('Auth.User.id');
+            $banner->modified_by = $this->request->session()->read('Auth.User.id');  
             if ($this->Banners->save($banner)) {
                 $this->Flash->success(Configure::read('Settings.SAVE'));
                 return $this->redirect(['action' => 'banner']);
@@ -169,8 +171,10 @@ class SettingsController extends AppController {
         $faqs = $this->Faqs->find('all')->hydrate(false)->toArray(); //LISTING SERVICES
         if ($this->request->is('post')) {
             $faq = $this->Faqs->patchEntity($faq, $this->request->data);
-            $faq->created = date("Y-m-d H:i:s");
+            $faq->created_at = date("Y-m-d H:i:s");
+            $faq->modified_at = date("Y-m-d H:i:s");
             $faq->created_by = $this->request->session()->read('Auth.User.id');
+            $faq->modified_by = $this->request->session()->read('Auth.User.id');
             if ($this->Faqs->save($faq)) {
                 $this->Flash->success(Configure::read('Settings.SAVE'));
                 return $this->redirect(['action' => 'faq']);

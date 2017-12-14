@@ -5749,3 +5749,54 @@
 2017-12-13 01:44:53 Notice: Notice (8): Undefined variable: total_price in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 723]
 
 
+2017-12-13 23:29:21 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2017-12-14 20:35:24 Notice: Notice (8): Undefined variable: checkParentQuentions in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 685]
+
+
+2017-12-14 21:15:57 Notice: Notice (8): Undefined index: que_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 688]
+
+
+2017-12-14 21:16:00 Notice: Notice (8): Undefined index: que_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 688]
+
+
+2017-12-14 21:32:46 Notice: Notice (8): Undefined index: price in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 702]
+
+
+2017-12-14 21:32:46 Notice: Notice (8): Undefined index: answer in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 704]
+
+
+2017-12-14 21:32:46 Notice: Notice (8): Undefined variable: quantity in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 714]
+
+
+2017-12-14 21:33:04 Notice: Notice (8): Undefined index: answer in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 704]
+
+
+2017-12-14 21:33:04 Notice: Notice (8): Undefined variable: quantity in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 714]
+
+
+2017-12-14 21:33:16 Notice: Notice (8): Undefined index: label in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 704]
+
+
+2017-12-14 21:33:16 Notice: Notice (8): Undefined variable: quantity in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 714]
+
+
+2017-12-14 21:39:30 Notice: Notice (8): Undefined variable: queData in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 747]
+
+
+2017-12-14 21:50:22 Notice: Notice (8): Undefined variable: ans in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 721]
+
+
+2017-12-14 23:13:55 Notice: Notice (8): Undefined index: quantity in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 928]
+
+
+2017-12-14 23:13:55 Notice: Notice (8): Undefined index: quantity in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 928]
+
+
+2017-12-14 23:16:25 Notice: Notice (8): Undefined index: question_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 919]
+
+
+2017-12-14 23:16:26 Notice: Notice (8): Undefined index: question_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 919]
+
+

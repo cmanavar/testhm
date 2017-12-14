@@ -57,9 +57,16 @@ class WebservicesController extends AppController {
     public function msgList() {
         $user_id = $this->checkVerifyApiKey('CUSTOMER');
         if ($user_id) {
+            $requestArr = $this->getInputArr();
+            if (isset($requestArr['page_no']) && $requestArr['page_no'] != '') {
+                $page_no = $requestArr['page_no'];
+            } else {
+                $page_no = 1;
+            }
             $this->loadModel('Messages');
-            $unseen_count = 0;
-            $msgList = $this->Messages->find('all')->select(['id', 'user_id', 'message_title', 'msg_type', 'message_detail', 'seen', 'created_at', 'modified_at'])->where(['user_id' => $user_id, 'seen' => 'N'])->hydrate(false)->toArray();
+            $unseenCount = 0;
+            $unseenCount = $this->Messages->find('all')->where(['user_id' => $user_id, 'seen' => 'N'])->hydrate(false)->count();
+            $msgList = $this->Messages->find('all')->select(['id', 'user_id', 'message_title', 'msg_type', 'message_detail', 'seen', 'created_at', 'modified_at'])->where(['user_id' => $user_id])->order(['id' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no)->hydrate(false)->toArray();
             if (isset($msgList) && !empty($msgList)) {
                 $msg = [];
                 foreach ($msgList as $key => $message) {
@@ -79,13 +86,12 @@ class WebservicesController extends AppController {
                     }
                     $tmp['message_detail'] = $message['message_detail'];
                     $tmp['seen'] = $message['seen'];
-                    if ($tmp['seen'] == 'N') {
-                        $unseen_count++;
-                    }
                     $tmp['created'] = $message['created_at']->format('d-M-Y h:i A');
                     $msg[] = $tmp;
                 }
-                $resp_data = ['unseen_count' => $unseen_count, 'messages' => $msg];
+                $nextPageReviews = $this->Messages->find('all')->where(['user_id' => $user_id])->order(['id' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no + 1)->hydrate(false)->toArray();
+                $next_page = (!empty($nextPageReviews)) ? true : false;
+                $resp_data = ['unseen_count' => $unseenCount, 'messages' => $msg, 'next_page' => $next_page];
                 $this->success('Messages fetched successfully.', $resp_data);
             } else {
                 $resp_data = ['unseen_count' => $unseen_count, 'messages' => $msgList];
@@ -395,8 +401,8 @@ class WebservicesController extends AppController {
                                 $tmpA['id'] = $v['id'];
                                 $tmpA['question_id'] = $v['question_id'];
                                 $tmpA['label'] = $v['label'];
-                                $tmpA['quantity'] = $v['quantity'];
-                                $tmpA['price'] = $v['price'];
+                                //$tmpA['quantity'] = $v['quantity'];
+                                //$tmpA['price'] = $v['price'];
                                 //$tmpA['child_questions'] = ($this->nextStepQuestions($val['id'], $v['id'])) ? $this->nextStepQuestions($val['id'], $v['id']) : '-';
                                 //$tmpA['quantity'] = $v['quantity'];
                                 $tmpA['nextstep'] = "-";
@@ -660,6 +666,7 @@ class WebservicesController extends AppController {
                 $this->loadModel('CartOrders');
                 $this->loadModel('CartOrderQuestions');
                 $this->loadModel('Services');
+                $this->loadModel('ServiceQuestions');
                 $this->loadModel('ServiceQuestionAnswers');
                 // Check Cart is exist or not
                 $checkCart = $this->Carts->find('all')->where(['user_id' => $user_id, 'id' => $cartId, 'status' => 'PROCESS'])->hydrate(false)->first();
@@ -669,6 +676,7 @@ class WebservicesController extends AppController {
                         $this->wrong("Sorry, Service Details not found!");
                     }
                     // Check Cart is already Exist or not
+                    $on_inspection = 'N';
                     $checkCart = $this->Carts->find('all')->where(['id' => $requestArr['cart_id'], 'status' => 'PROCESS'])->hydrate(false)->first();
                     if (!empty($checkCart)) {
                         $questionsData = isset($requestArr['questions_data']) ? $requestArr['questions_data'] : array();
@@ -680,100 +688,49 @@ class WebservicesController extends AppController {
                                 $questionDetails = $questionStoreDetails = [];
                                 $question_id = $questions->question_id;
                                 $answer_id = $questions->answer_id;
-                                $quantity = isset($questions->text_quantity) && $questions->text_quantity != 'NO_QUANTITY' ? $questions->text_quantity : 0;
-                                $answer_text = isset($questions->text_description) && $questions->text_description != 'NO_DESCRIPTION' ? $questions->text_description : "";
-                                //echo $question_id." ".$answer_id; exit;
-                                if ($question_id != 0) {
-                                    if ($answer_id == 0) {
-                                        $ansArr = $this->ServiceQuestionAnswers->find('all')->select(['id', 'label', 'quantity', 'price'])->where(['question_id' => $question_id, 'quantity' => 'YES'])->hydrate(false)->toArray();
-                                        foreach ($ansArr as $ans) {
-                                            if ($ans['quantity'] == 'YES') {
-                                                $on_inspection = 'N';
-                                                if ($ans['price'] != '0') {
-                                                    if (strpos($ans['answer'], '-') !== false) {
-                                                        $explodeArr = explode('-', $ans['answer']);
+                                if (isset($questions->text_quantity) && $questions->text_quantity != 'NO_QUANTITY') {
+                                    //echo $question_id . " " . $answer_id;
+                                    $AnswersArr = $this->ServiceQuestionAnswers->find('all')->where(['question_id' => $question_id, 'id' => $answer_id])->hydrate(false)->first();
+                                    if ($AnswersArr['quantity'] == 'YES') {
+                                        $total_price = $questions->text_quantity * $AnswersArr['price'];
+                                    } else {
+                                        $questionsArr = $this->ServiceQuestions->find('all')->where(['parent_question_id' => $question_id, 'parent_answer_id' => $answer_id])->hydrate(false)->first();
+                                        if (isset($questionsArr['id']) && $questionsArr['id'] != '') {
+                                            $queId = $questionsArr['id'];
+                                            $ansArr = $this->ServiceQuestionAnswers->find('all')->where(['question_id' => $queId])->hydrate(false)->toArray();
+                                            foreach ($ansArr as $ans) {
+                                                if ($ans['quantity'] == 'YES') {
+                                                    if (strpos($ans['label'], '-') !== false) {
+                                                        $explodeArr = explode('-', $ans['label']);
                                                         $min_quantity = $explodeArr[0];
                                                         $max_quantity = $explodeArr[1];
-                                                        if ($quantity >= $min_quantity && $quantity <= $max_quantity) {
-                                                            $total_price = $ans['price'] * $quantity;
-                                                        } else if (strpos($ans['answer'], '+') !== false) {
-                                                            $explodeArr = explode('+', $ans['answer']);
-                                                            $min_quantity = $explodeArr[0];
-                                                            if ($min_quantity <= $quantity) {
-                                                                $total_price = $ans['price'] * $quantity;
-                                                            }
-                                                        } else {
-                                                            $total_price = $ans['price'] * $quantity;
+                                                        if ($questions->text_quantity >= $min_quantity && $questions->text_quantity <= $max_quantity) {
+                                                            $total_price = $ans['price'] * $questions->text_quantity;
                                                         }
+                                                    } else if (strpos($ans['label'], '+') !== false) {
+                                                        $explodeArr = explode('+', $ans['label']);
+                                                        $min_quantity = $explodeArr[0];
+                                                        if ($min_quantity <= $questions->text_quantity) {
+                                                            $total_price = $ans['price'] * $questions->text_quantity;
+                                                        }
+                                                    } else {
+                                                        $total_price = $ans['price'] * $questions->text_quantity;
                                                     }
                                                 }
-                                                break;
-                                            } else if ($ans['quantity'] == 'NO') {
-                                                $on_inspection = 'N';
-                                                if ($questionDetails['price'] != '0') {
-                                                    $total_price = $questionDetails['price'];
-                                                } else {
-                                                    $total_price = '0';
-                                                }
-                                                break;
-                                            } else {
-                                                $on_inspection = 'Y';
-                                                $total_price = '0';
-                                                break;
                                             }
                                         }
                                     }
+                                } else {
+                                    $questionsArr = $this->ServiceQuestionAnswers->find('all')->where(['question_id' => $question_id, 'id' => $answer_id])->hydrate(false)->first();
+                                    if (isset($questionsArr['quantity']) && $questionsArr['quantity'] == 'NO') {
+                                        if ($questionsArr['price'] != 0) {
+                                            $total_price = $questionsArr['price'];
+                                        }
+                                    } else {
+                                        $on_inspection = 'Y';
+                                        $total_price = '0';
+                                    }
                                 }
-                                echo $total_price; exit;
-//                                $questionDetails = $this->getQuestionDetails($question_id, $answer_id);
-//                                pr($questionDetails); exit;
-//                                if (!empty($questionDetails)) {
-//                                    if (isset($questionDetails['quantity']) && ($questionDetails['quantity'] != '')) {
-//                                        //print_r($questionDetails['quantity']); exit;
-//                                        if ($questionDetails['quantity'] == 'YES') {
-//                                            $on_inspection = 'N';
-//                                            //print_r($questionDetails['price']); exit;
-//                                            if ($questionDetails['price'] != '0') {
-//                                                if (strpos($questionDetails['answer'], '-') !== false) {
-//                                                    $explodeArr = explode('-', $questionDetails['answer']);
-//                                                    $min_quantity = $explodeArr[0];
-//                                                    $max_quantity = $explodeArr[1];
-//                                                    if ($quantity >= $min_quantity && $quantity <= $max_quantity) {
-//                                                        $total_price = $questionDetails['price'] * $quantity;
-//                                                    } else {
-//                                                        $this->wrong('Sorry, Quantity values is out of range ' . $min_quantity . ' to ' . $max_quantity);
-//                                                    }
-//                                                } else if (strpos($questionDetails['answer'], '+') !== false) {
-//                                                    $explodeArr = explode('+', $questionDetails['answer']);
-//                                                    $min_quantity = $explodeArr[0];
-//                                                    if ($min_quantity <= $quantity) {
-//                                                        $total_price = $questionDetails['price'] * $quantity;
-//                                                    } else {
-//                                                        $msg = 'Sorry, Quantity must be grater than ' . $min_quantity . '.because you select ' . $questionDetails['answer'];
-//                                                        $this->wrong($msg);
-//                                                    }
-//                                                } else {
-//                                                    $total_price = $questionDetails['price'] * $quantity;
-//                                                }
-//                                            }
-//                                        } else if ($questionDetails['quantity'] == 'NO') {
-//                                            $on_inspection = 'N';
-//                                            if ($questionDetails['price'] != '0') {
-//                                                $total_price = $questionDetails['price'];
-//                                            } else {
-//                                                $total_price = '0';
-//                                            }
-//                                        } else {
-//                                            $on_inspection = 'Y';
-//                                            $total_price = '0';
-//                                        }
-//                                    } else {
-//                                        $this->wrong("Sorry, Questions quantity is not found!.");
-//                                    }
-//                                    //print_r($questionDetails); exit;
-//                                } else {
-//                                    $this->wrong("Sorry, Questions data is not found!.");
-//                                }
                             }
                         }
                         $cartOrders = $this->CartOrders->newEntity();
@@ -797,14 +754,14 @@ class WebservicesController extends AppController {
                         if ($cartOrderSave) {
                             $cartOrderId = $cartOrderSave['id'];
                             if (!empty($questionsData)) {
-                                //print_R($queData); exit;
+                                //print_R($questionsData); exit;
                                 $flag = false;
                                 foreach ($questionsData as $queData) {
                                     $queAnsData = $this->CartOrderQuestions->newEntity();
                                     $question_id = $queData->question_id;
                                     $answer_id = $queData->answer_id;
-                                    $question_quantity = isset($queData->question_quantity) ? $queData->question_quantity : '';
-                                    $question_text_ans = isset($queData->question_text_ans) ? $queData->question_text_ans : '';
+                                    $question_quantity = isset($queData->text_quantity) && $queData->text_quantity != 'NO_QUANTITY' ? $queData->text_quantity : '-';
+                                    $question_text_ans = isset($queData->text_description) && $queData->text_description ? $queData->text_description : '-';
                                     $qa_data = array(
                                         'user_id' => $user_id,
                                         'cart_id' => $cartId,
@@ -860,7 +817,11 @@ class WebservicesController extends AppController {
             if (isset($checkCart) && !empty($checkCart)) {
                 $cartPriceDetails = $this->totalCartPrice($cartId);
                 //pr($cartPriceDetails); exit;
-                $this->success("Cart Order Details Fetched!", $cartPriceDetails);
+                if (!empty($cartPriceDetails['services'])) {
+                    $this->success("Cart Order Details Fetched!", $cartPriceDetails);
+                } else {
+                    $this->wrong("Sorry, Cart is empty!");
+                }
             } else {
                 $this->wrong("Sorry, Cart not found!");
             }
@@ -940,6 +901,11 @@ class WebservicesController extends AppController {
             $ordersDetails = [];
             //pr($cartOrders); exit;
             foreach ($cartOrders as $order) {
+                if (isset($order['on_inspections']) && $order['on_inspections'] == 'N') {
+                    if ($order['total_amount'] == 0) {
+                        continue;
+                    }
+                }
                 $tmp = [];
                 $tmp['cart_order_id'] = $order['id'];
                 $tmp['category_id'] = $order['category_id'];
@@ -951,17 +917,11 @@ class WebservicesController extends AppController {
                 $tmpDetails = $this->CartOrderQuestions->find('all')->where(['cart_order_id' => $order['id']])->hydrate(false)->toArray();
                 foreach ($tmpDetails as $orderQues) {
                     $questArr = $this->getQuestionDetails($orderQues['question_id'], $orderQues['answer_id']);
-                    //pr($questArr); exit;
+                    //pr($questArr); //exit;
                     if (isset($order['on_inspections']) && $order['on_inspections'] == 'N') {
-                        if ($questArr['parent_question'] != '' && $questArr['parent_answer'] != '') {
-                            $answerTitle = $this->ServiceQuestionAnswers->find('all')->where(['id' => $questArr['parent_answer']])->hydrate(false)->first();
-                            $tmp['serviceDescription'] = $answerTitle['label'];
-                            $tmp['quantity'] = $orderQues['question_quantity'];
-                            $tmp['total_amount'] = $order['total_amount'];
-                        } else {
-                            $tmp['serviceDescription'] = $questArr['answer'];
-                            $tmp['quantity'] = $orderQues['question_quantity'];
-                        }
+                        $tmp['serviceDescription'] = (isset($questArr['answer']) && $questArr['answer'] != '') ? $questArr['answer'] : '';
+                        $tmp['quantity'] = $orderQues['question_quantity'];
+                        $tmp['total_amount'] = $order['total_amount'];
                         if ($tmp['quantity'] == 0) {
                             $tmp['amount'] = 0;
                             $tmp['total_amount'] = $order['total_amount'];
@@ -971,7 +931,7 @@ class WebservicesController extends AppController {
                         }
                         $tmp['on_inspection'] = 'N';
                     } else {
-                        $tmp['serviceDescription'] = $questArr['answer'];
+                        $tmp['serviceDescription'] = (isset($questArr['answer']) && $questArr['answer'] != '') ? $questArr['answer'] : '';
                         $tmp['quantity'] = $orderQues['question_quantity'];
                         $tmp['on_inspection'] = 'Y';
                         $tmp['amount'] = 0;
@@ -981,6 +941,7 @@ class WebservicesController extends AppController {
 
                 $ordersDetails[$order['category_id']]['category'] = $this->Services->getCategoryName($order['category_id']);
                 $ordersDetails[$order['category_id']]['services'][] = $tmp;
+                //pr($ordersDetails); exit;
             }
             $finalOrderDetails = [];
             if (!empty($ordersDetails)) {
@@ -1108,6 +1069,8 @@ class WebservicesController extends AppController {
             $service_answers = $this->serviceQuestionAnswers->find('all')->where($condArrA)->hydrate(false)->first();
             if (isset($service_answers) && !empty($service_answers)) {
                 $answerData = $service_answers;
+                //$rslt['question_id'] = (isset($answerData['question_id']) && $answerData['question_id'] != '') ? $answerData['question_id'] : '';
+                //$rslt['answer_id'] = (isset($answerData['id']) && $answerData['id'] != '') ? $answerData['id'] : '';
                 $rslt['parent_question'] = (isset($service_questions['parent_question_id']) && $service_questions['parent_question_id'] != '') ? $service_questions['parent_question_id'] : '';
                 $rslt['parent_answer'] = (isset($service_questions['parent_answer_id']) && $service_questions['parent_answer_id'] != '') ? $service_questions['parent_answer_id'] : '';
                 $rslt['answer'] = (isset($answerData['label']) && $answerData['label'] != '') ? $answerData['label'] : '';
@@ -1380,10 +1343,14 @@ class WebservicesController extends AppController {
     public function walletDetails() {
         $userId = $this->checkVerifyApiKey('CUSTOMER');
         if ($userId) {
+            $requestArr = $this->getInputArr();
+            if (isset($requestArr['page_no']) && $requestArr['page_no'] != '') {
+                $page_no = $requestArr['page_no'];
+            } else {
+                $page_no = 1;
+            }
             $this->loadModel('Wallets');
-            $walletHistory = $this->Wallets->find('all')->where(['user_id' => $userId])->order(['id' => 'DESC'])->hydrate(false)->toArray();
-            //pr($walletHistory);
-            //exit;
+            $walletHistory = $this->Wallets->find('all')->where(['user_id' => $userId])->order(['id' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no)->hydrate(false)->toArray();
             $rslt = [];
             if (isset($walletHistory) && !empty($walletHistory)) {
                 foreach ($walletHistory as $history) {
@@ -1412,6 +1379,8 @@ class WebservicesController extends AppController {
                 }
             }
             $rslt['total'] = ['current_balance' => $this->walletAmount($userId)];
+            $nextPageHistory = $this->Wallets->find('all')->where(['user_id' => $userId])->order(['id' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no + 1)->hydrate(false)->toArray();
+            $rslt['next_page'] = (!empty($nextPageHistory)) ? true : false;
             $this->success('Wallet Data Fatched!', $rslt);
         } else {
             $this->wrong('Invalid API key.');

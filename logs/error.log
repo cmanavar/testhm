@@ -13205,3 +13205,15 @@ Exception Attributes: array (
   'file' => 'Webservices/service_reviews.ctp',
 )
 Request URL: /hmen/webservices/service/reviews/1
+2017-12-14 20:33:56 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'answer_id' in 'where clause'
+Request URL: /hmen/webservices/cart/product/add
+2017-12-14 20:49:47 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'questions_id' in 'where clause'
+Request URL: /hmen/webservices/cart/product/add
+2017-12-14 22:16:33 Error: [Cake\Controller\Exception\MissingActionException] Action WebservicesController::service() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'WebservicesController',
+  'action' => 'service',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/webservices/service/review/1
