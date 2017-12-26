@@ -3,20 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Ratecards/edit.ctp</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Ratecards/index.ctp</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Ratecards/view.ctp</file>
             <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/config/routes.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/webroot/index.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/webroot/js/custom/custom.js</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/AppController.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Ratecards/add.ctp</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/config/paths.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Model/Table/QuestionsTable.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/QuestionsController.php</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/ServiceCategoryController.php</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/ServiceCategory/add.ctp</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/ServicesController.php</file>
             <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/RatecardsController.php</file>
         </group>
     </open-files>
 </project-private>

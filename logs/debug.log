@@ -5800,3 +5800,9 @@
 2017-12-14 23:16:26 Notice: Notice (8): Undefined index: question_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 919]
 
 
+2017-12-16 23:33:05 Notice: Notice (8): Undefined variable: profile_pic in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php, line 861]
+
+
+2017-12-20 21:04:39 Notice: Notice (8): Array to string conversion in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/StringTemplate.php, line 238]
+
+

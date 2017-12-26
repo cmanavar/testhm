@@ -13217,3 +13217,52 @@ Exception Attributes: array (
   'plugin' => NULL,
 )
 Request URL: /hmen/webservices/service/review/1
+2017-12-16 22:22:38 Error: [Cake\Controller\Exception\MissingActionException] Action WebservicesController::order() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'WebservicesController',
+  'action' => 'order',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/webservices/order/list
+2017-12-16 22:23:03 Error: [Cake\Controller\Exception\MissingActionException] Action WebservicesController::order() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'WebservicesController',
+  'action' => 'order',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/webservices/order/lists
+2017-12-16 22:26:20 Error: [Cake\Controller\Exception\MissingActionException] Action WebservicesController::order() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'WebservicesController',
+  'action' => 'order',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/webservices/order/details
+2017-12-16 22:50:53 Warning: Warning (2): file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/hmen/webroot/img/users/): failed to open stream: Is a directory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php, line 509]
+
+
+2017-12-16 23:31:35 Warning: Warning (2): get_object_vars() expects parameter 1 to be object, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/AppController.php, line 76]
+
+
+2017-12-16 23:33:05 Warning: Warning (2): file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/hmen/webroot/img/users/) [<a href='http://php.net/function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: Is a directory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php, line 862]
+
+
+2017-12-17 00:02:12 Error: Fatal Error (4): syntax error, unexpected '}' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php, line 876]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2017-12-17 00:02:12 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /hmen/webservices/update/profile
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/Applications/X...', 876)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

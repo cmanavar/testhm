@@ -20,7 +20,7 @@
                                             <table style="box-sizing:border-box;width:100%;border-spacing:0;border-collapse:separate!important" width="100%">
                                                 <tbody>
                                                     <tr>
-                                                        <td align="left" style="box-sizing:border-box;padding:0;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-size:16px;vertical-align:top;text-align:left" valign="top"><span><a href="<?= WEBSITE_PATH ?>" style="box-sizing:border-box;color:#348eda;font-weight:400;text-decoration:none" target="_blank"><img alt="H-MEN" height="22" src="<?= APP_PATH ?>img/logo/hlogo200px.png" style="max-width:100%;border-style:none;width:200px;height:54px" width="123"></a></span></td>
+                                                        <td align="left" style="box-sizing:border-box;padding:0;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-size:16px;vertical-align:top;text-align:left" valign="top"><span><a href="<?= WEBSITE_PATH ?>" style="box-sizing:border-box;color:#348eda;font-weight:400;text-decoration:none" target="_blank"><img alt="H-MEN" height="22" src="<?= APP_PATH ?>img/logo/hlogo150px.png" style="max-width:100%;border-style:none;width:150px;height:41px" width="123"></a></span></td>
                                                     </tr>
                                                 </tbody>
                                             </table>

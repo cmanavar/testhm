@@ -440,6 +440,7 @@ class UsersController extends AppController {
                             $rslt['email_verified'] = $user['email_verified'];
                             $rslt['phone_verified'] = $user['phone_verified'];
                             $rslt['wallet_amount'] = $this->walletAmount($user['id']);
+                            $rslt['referral'] = ($user['referral_id'] != 0) ? 'YES' : 'NO';
                             $users = $this->Users->get($user['id']);
                             $users->last_login = date('Y-m-d H:i:s');
                             $this->Users->save($users);
@@ -486,7 +487,8 @@ class UsersController extends AppController {
                                 $rslt['city'] = $userDetails['city'];
                                 $rslt['email_verified'] = $userDetails['email_verified'];
                                 $rslt['phone_verified'] = $userDetails['phone_verified'];
-                                $rslt['wallet_amount'] = 0;
+                                $rslt['wallet_amount'] = $this->walletAmount($userDetails['id']);
+                                $rslt['referral'] = ($userDetails['referral_id'] != 0) ? 'YES' : 'NO';
                                 $users = $this->Users->get($userDetails['id']);
                                 $users->last_login = date('Y-m-d H:i:s');
                                 $this->Users->save($users);
@@ -501,9 +503,13 @@ class UsersController extends AppController {
                         $this->wrong('User Details not found!');
                     }
                 } else {
-                    $profile_picture = isset($requestArr['profile']) && $requestArr['profile'] != '' ? $requestArr['profile'] : '';
+                    $profile_pic = '';
+                    $profile_picture = isset($requestArr['tpa_image']) && $requestArr['tpa_image'] != '' ? $requestArr['tpa_image'] : '';
                     if ($profile_picture != '') {
-                        
+                        $url = $profile_picture;
+                        $profile_pic = date('Ymdhis') . rand(11, 99) . '.jpg';
+                        $img = WWW_ROOT . 'img/users/' . $profile_pic;
+                        file_put_contents($img, file_get_contents($url));
                     }
                     $password = $this->randomPassword();
                     $userData = [];
@@ -515,7 +521,7 @@ class UsersController extends AppController {
                     $userData['city'] = (isset($requestArr['city']) && $requestArr['city'] != '') ? $requestArr['city'] : '';
                     $userData['signup_with'] = $requestArr['signup_tag'];
                     $userData['user_type'] = 'CUSTOMER';
-                    $userData['profile_pic'] = '';
+                    $userData['profile_pic'] = $profile_pic;
                     $userData['ip_address'] = $this->get_client_ip();
                     $userData['email_newsletters'] = (isset($requestArr['email_newsletters']) && $requestArr['email_newsletters'] != '') ? $requestArr['email_newsletters'] : 'N';
                     $userData['device'] = json_encode($requestArr['device_detail']);
@@ -545,7 +551,7 @@ class UsersController extends AppController {
                     $fields = array(
                         'msg' => $view_output,
                         'tomail' => $emailAddress,
-                        'subject' => 'Welcome To H-Men! Confirm Your Email',
+                        'subject' => 'Welcome To H-Men!',
                         'from_name' => EMAIL_FROM_NAME,
                         'from_mail' => EMAIL_FROM_EMAIL_ADDRESS,
                     );
@@ -848,13 +854,40 @@ class UsersController extends AppController {
                 $this->wrong(__('RECORD DOES NOT EXIST'));
             }
             $user = $this->Users->getuserId($user_id); //LISTING USERDATA
-            //pr($user); exit;
+//            pr($user); exit;
+            $imageFlag = 0;
             $requestArr = $this->getInputArr();
+            if (isset($requestArr['image']) && $requestArr['image'] != '') {
+                $data = $requestArr['image'];
+                $uri = substr($data, strpos($data, ",") + 1);
+                $profile_pic = date('Ymdhis') . rand(11, 99) . '.jpg';
+                $img = WWW_ROOT . 'img/users/' . $profile_pic;
+                file_put_contents($img, base64_decode($uri));
+                unset($requestArr['image']);
+                $requestArr['profile_pic'] = $profile_pic;
+                $imageFlag = 1;
+            }
+            if (isset($requestArr['referral_code']) && $requestArr['referral_code'] != '') {
+                $affiliateUsers = $this->Users->find('all')->where(['refer_key' => $requestArr['referral_code']])->hydrate(false)->first();
+                //pr($affiliateUsers); exit;
+                if (isset($affiliateUsers) && !empty($affiliateUsers)) {
+                    $flagAff = true;
+                    $requestArr['referral_id'] = $affiliateUsers['id'];
+                } else {
+                    $this->wrong("Sorry, Referral code is invalid!");
+                }
+                unset($requestArr['referral_code']);
+            }
             $user = $this->Users->patchEntity($user, $requestArr);
             $user->modified_by = $this->request->session()->read('Auth.User.id');
             $user->modified = date("Y-m-d H:i:s");
             if ($this->Users->save($user)) {
-                $this->success(Configure::read('Settings.SAVE'));
+                $users = $this->Users->getuserId($user_id); //LISTING USERDATA
+                $rslt = [];
+                if ($imageFlag == 1) {
+                    $rslt['profile_pic'] = ($users['profile_pic'] != '') ? IMAGE_URL_PATH . 'users/' . $users['profile_pic'] : IMAGE_URL_PATH . 'users/user.png';
+                }
+                $this->success(Configure::read('Settings.SAVE'), $rslt);
             } else {
                 $this->wrong(Configure::read('Settings.FAIL'));
             }

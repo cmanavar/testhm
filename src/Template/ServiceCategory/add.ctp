@@ -143,7 +143,15 @@
                                 <label class="col-sm-3 control-label">STATUS <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="custom-radio radio ">
-                                        <?php echo $this->Form->radio('status', [['value' => 'ACTIVE', 'text' => 'ACTIVE'], ['value' => 'INACTIVE', 'text' => 'INACTIVE']], ['value' => 'ACTIVE']); ?>
+                                        <?php echo $this->Form->radio('display_app', [['value' => 'YES', 'text' => 'YES'], ['value' => 'NO', 'text' => 'NO']], ['default' => 'NO']); ?>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">STATUS <span class="text-danger">*</span></label>
+                                <div class="col-sm-6">
+                                    <div class="custom-radio radio ">
+                                        <?php echo $this->Form->radio('status', [['value' => 'ACTIVE', 'text' => 'ACTIVE'], ['value' => 'INACTIVE', 'text' => 'INACTIVE']], ['default' => 'ACTIVE']); ?>
                                     </div>  
                                 </div>
                             </div>

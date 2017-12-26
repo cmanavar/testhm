@@ -235,7 +235,7 @@ class WebservicesController extends AppController {
         // Get Banner Images - End
         // Get Category Icon - Start
         $categoryIcon = [];
-        $category = $this->ServiceCategory->find('all')->select(['id', 'name', 'icon_image'])->where(['status' => 'ACTIVE'])->order(['order_id' => 'ASC'])->hydrate(false)->toArray();
+        $category = $this->ServiceCategory->find('all')->select(['id', 'name', 'icon_image'])->where(['status' => 'ACTIVE', 'display_app' => 'YES'])->order(['order_id' => 'ASC'])->hydrate(false)->toArray();
         foreach ($category as $val) {
             $tmp = [];
             if (isset($val) && !empty($val)) {
@@ -248,7 +248,7 @@ class WebservicesController extends AppController {
         // Get Category Icon - End
         // Get Service Details - Start
         $serviceDetails = [];
-        $category = $this->ServiceCategory->find('all')->select(['id', 'name', 'banner_image'])->where(['status' => 'ACTIVE'])->order(['order_id' => 'ASC'])->hydrate(false)->toArray();
+        $category = $this->ServiceCategory->find('all')->select(['id', 'name', 'banner_image'])->where(['status' => 'ACTIVE', 'display_app' => 'YES'])->order(['order_id' => 'ASC'])->hydrate(false)->toArray();
         foreach ($category as $val) {
             $tmp = $tmpS = [];
             if (isset($val) && !empty($val)) {
@@ -1266,6 +1266,7 @@ class WebservicesController extends AppController {
                 $orderDetails['total_amount'] = number_format($order['total_amount'], 2);
                 $orderDetails['status'] = $order['status'];
                 $orderDetails['payment_status'] = $order['payment_status'];
+                $orderDetails['images'] = '';
                 $orderDetails['services'] = [];
                 $orderDetails['total'] = [
                     'amount' => number_format($order['amount'], 2),
@@ -1285,6 +1286,7 @@ class WebservicesController extends AppController {
                     $tmp['service_id'] = $order['service_id'];
                     $tmp['service_name'] = $this->Services->getServiceName($order['service_id']);
                     $tmp['banner_img'] = $this->Services->getServiceImagePAth($order['service_id']);
+                    $orderDetails['images'] = $this->Services->getServiceImagePAth($order['service_id']);
                     //$tmp['banner_img'] = $this->Services->getServiceName($order['service_id']);
                     $tmpDetails = $this->CartOrderQuestions->find('all')->where(['cart_order_id' => $order['id']])->hydrate(false)->toArray();
                     foreach ($tmpDetails as $orderQues) {
@@ -1394,6 +1396,11 @@ class WebservicesController extends AppController {
             $this->loadModel('Orders');
             $this->loadModel('Services');
             $requestArr = $this->getInputArr();
+            if (isset($requestArr['page_no']) && $requestArr['page_no'] != '') {
+                $page_no = $requestArr['page_no'];
+            } else {
+                $page_no = 1;
+            }
             $filter_key = (isset($requestArr['filter_key']) && $requestArr['filter_key'] != '') ? $requestArr['filter_key'] : '';
             $filter_vals = (isset($requestArr['filter_vals']) && $requestArr['filter_vals'] != '') ? $requestArr['filter_vals'] : '';
             $filter_status = (isset($requestArr['filter_status']) && $requestArr['filter_status'] != '') ? $requestArr['filter_status'] : '';
@@ -1432,7 +1439,7 @@ class WebservicesController extends AppController {
                 $condArr["status"] = $filter_val['order_status'];
             }
             $orderLists = [];
-            $orders = $this->Orders->find('all')->select(['cart_id', 'status', 'order_id', 'created_at'])->where($condArr)->hydrate(false)->toArray();
+            $orders = $this->Orders->find('all')->select(['cart_id', 'status', 'order_id', 'created_at'])->where($condArr)->order(['created_at' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no)->hydrate(false)->toArray();
             if (!empty($orders)) {
                 foreach ($orders as $val) {
                     $tmp = [];
@@ -1446,7 +1453,9 @@ class WebservicesController extends AppController {
                     $orderLists[] = $tmp;
                 }
             }
-            $this->success('orders fetched successfully', ["filter_name" => $filter_titles, "orders" => $orderLists]);
+            $nextPageOrders = $this->Orders->find('all')->select(['cart_id', 'status', 'order_id', 'created_at'])->where($condArr)->order(['created_at' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no + 1)->hydrate(false)->toArray();
+            $next_page = (!empty($nextPageOrders)) ? true : false;
+            $this->success('orders fetched successfully', ["filter_name" => $filter_titles, "orders" => $orderLists, "next_page" => $next_page]);
         } else {
             $this->wrong('Invalid API key.');
         }

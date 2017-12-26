@@ -110,20 +110,24 @@
                                             <?php echo $this->Form->input('label', ['label' => false, 'class' => 'form-control required normal-font input-label-' . $val['id'], 'disabled' => 'disabled', 'placeholder' => 'ENTER QUESTION TITLE', 'maxlength' => 255, 'value' => $val['label']]); ?>
                                             <label id="question-title-error-<?= $val['id']; ?>" class="error" style="display:none;" for="question-title">THIS FIELD IS REQUIRED.</label>
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-sm-3">
+                                            <?php echo $this->Form->input('label', ['label' => false, 'class' => 'form-control required normal-font input-label-' . $val['id'], 'disabled' => 'disabled', 'placeholder' => 'ENTER QUESTION TITLE', 'maxlength' => 255, 'value' => $val['label']]); ?>
+                                            <label id="question-title-error-<?= $val['id']; ?>" class="error" style="display:none;" for="question-title">THIS FIELD IS REQUIRED.</label>
+                                        </div>
+                                        <div class="col-md-1">
                                             <?php $quen = $val['quantity']; ?>
                                             <select class="answer_quantity input-quantity-<?= $val['id']; ?>" name="quantity" id="answer_quantity" disabled="disabled">
                                                 <option value="YES" <?= $quen == 'YES' ? ' selected="selected"' : ''; ?>>YES</option>
                                                 <option value="NO" <?= $quen == 'NO' ? ' selected="selected"' : ''; ?>>NO</option>
-                                                <option value="ON_INSPECTION" <?= $quen == 'ON_INSPECTION' ? ' selected="selected"' : ''; ?>>ON INSPECTION</option>
+                                                <option value="ON_INSPECTION" <?= $quen == 'ON_INSPECTION' ? ' selected="selected"' : ''; ?>>INSPECTION</option>
                                             </select>
                                             <label id="question-quantity-error-<?= $val['id']; ?>" class="error" style="display:none;" for="question-quantity">THIS FIELD IS REQUIRED.</label>
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-md-1">
                                             <?php echo $this->Form->input('price', ['label' => false, 'class' => 'form-control required normal-font input-price-' . $val['id'], 'disabled' => 'disabled', 'placeholder' => 'ENTER QUESTION PRICE', 'maxlength' => 255, 'value' => $val['price']]); ?>
                                             <label id="question-price-error-<?= $val['id']; ?>" class="error" style="display:none;" for="question-price">THIS FIELD IS REQUIRED.</label>
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-md-1">
                                             <div class="div-edit-<?= $val['id']; ?>">
                                                 <?php echo $this->Html->link('', 'javascript:void(0)', ['class' => 'btn btn-warning btn-que-edit fa fa-pencil', 'data-id' => $val['id'], 'escape' => false, 'title' => 'EDIT']); ?>
                                                 <a data-toggle="modal" title = 'DELETE' url=<?php echo $this->Url->build(['controller' => 'Questions', 'action' => 'deleteanswer', $question['id']]) ?> data-value="<?php echo $val['id']; ?>" data-target="#delete" href="#" class="btn btn-danger fa fa-trash-o btn-que-delete delete"></a>
