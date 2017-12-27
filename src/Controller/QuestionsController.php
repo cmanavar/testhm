@@ -84,7 +84,7 @@ class QuestionsController extends AppController {
             $serviceQuestions = $this->ServiceQuestions->newEntity();
             $sQ = $sA = [];
             $category_id = $this->Questions->getCategoryId($service_id);
-//            pr($this->request->data); exit;
+            //pr($this->request->data); exit;
             $sQ['category_id'] = $category_id;
             $sQ['service_id'] = $service_id;
             $sQ['questions_type'] = $this->request->data['questions_type'];
@@ -102,6 +102,19 @@ class QuestionsController extends AppController {
                         $serviceQuestionAnswers = $this->ServiceQuestionAnswers->newEntity();
                         $sA['question_id'] = $rslt->id;
                         $sA['label'] = $val['label'];
+                        $icon_img = '';
+                        if (isset($val['icon']['name']) && $val['icon']['name'] != '') {
+                            $file = $val['icon']['name'];
+                            $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                            $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                            $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                            if (!file_exists(WWW_ROOT . 'img/' . QUETIONS_ICON_PATH)) {
+                                mkdir(QUETIONS_ICON_PATH, 0777, true);
+                            }
+                            move_uploaded_file($val['icon']['tmp_name'], WWW_ROOT . 'img/' . QUETIONS_ICON_PATH . $filename);
+                            $icon_img = $filename;
+                        }
+                        $sA['icon_img'] = $icon_img;
                         $sA['quantity'] = $val['quantity'];
                         $sA['price'] = $val['price'];
                         $sA['created_by'] = $this->request->session()->read('Auth.User.id');

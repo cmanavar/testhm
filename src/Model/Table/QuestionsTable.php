@@ -87,7 +87,7 @@ class QuestionsTable extends Table {
     //******************************************************************************//
     public function getAnswersByQuesId($questions_id) {
         $serviceQuestionAnswersTable = TableRegistry::get('ServiceQuestionAnswers');
-        $answerArr = $serviceQuestionAnswersTable->find('all')->select(['id', 'label', 'quantity', 'price'])->where(['question_id' => $questions_id])->hydrate(false)->toArray();
+        $answerArr = $serviceQuestionAnswersTable->find('all')->select(['id', 'label', 'icon_img', 'quantity', 'price'])->where(['question_id' => $questions_id])->hydrate(false)->toArray();
         return $answerArr;
     }
 

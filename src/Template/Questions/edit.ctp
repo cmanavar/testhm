@@ -73,14 +73,14 @@
                                     </div>
                                 </div>
                             <?php } ?>
-                            <div class="form-group parents-info" >
-                                <label class="col-sm-3 control-label">QUESTION TYPE <span class="text-danger">*</span></label>
-                                <div class="col-sm-6">
-                                    <div class="input tel">
-                                        <?php echo $this->Form->input('que_type', ['label' => false, 'type' => 'select', 'options' => ['QUANTITY' => 'QUANTITY', 'QUESTION' => 'QUESTION'], 'empty' => 'SELECT QUESTION TYPE', 'id' => 'question_type', 'class' => ' demo-default', 'placeholder' => 'ENTER QUESTION TYPE']); ?>
-                                    </div>
-                                </div>
-                            </div>
+                            <!--                            <div class="form-group parents-info" >
+                                                            <label class="col-sm-3 control-label">QUESTION TYPE <span class="text-danger">*</span></label>
+                                                            <div class="col-sm-6">
+                                                                <div class="input tel">
+                            <?php //echo $this->Form->input('que_type', ['label' => false, 'type' => 'select', 'options' => ['QUANTITY' => 'QUANTITY', 'QUESTION' => 'QUESTION'], 'empty' => 'SELECT QUESTION TYPE', 'id' => 'question_type', 'class' => ' demo-default', 'placeholder' => 'ENTER QUESTION TYPE']); ?>
+                                                                </div>
+                                                            </div>
+                                                        </div>-->
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">QUESTION TITLE <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
@@ -103,16 +103,29 @@
                             <input type="hidden" id="addnewanswer" value='<?php echo $this->Url->build(["controller" => "Questions", "action" => "addnewanswer", $question['id']], true); ?>'>
                             <?php if (isset($question['answers']) && !empty($question['answers'])) { ?>
                                 <?php foreach ($question['answers'] as $key => $val) { ?>
-                                    <?php // pr($val); exit; ?>
+                                    <?php //pr($val); exit; ?>
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">ANSWER DETAILS <?php echo $key + 1 ?><span class="text-danger">*</span></label>
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-2">
                                             <?php echo $this->Form->input('label', ['label' => false, 'class' => 'form-control required normal-font input-label-' . $val['id'], 'disabled' => 'disabled', 'placeholder' => 'ENTER QUESTION TITLE', 'maxlength' => 255, 'value' => $val['label']]); ?>
                                             <label id="question-title-error-<?= $val['id']; ?>" class="error" style="display:none;" for="question-title">THIS FIELD IS REQUIRED.</label>
                                         </div>
                                         <div class="col-sm-3">
-                                            <?php echo $this->Form->input('label', ['label' => false, 'class' => 'form-control required normal-font input-label-' . $val['id'], 'disabled' => 'disabled', 'placeholder' => 'ENTER QUESTION TITLE', 'maxlength' => 255, 'value' => $val['label']]); ?>
-                                            <label id="question-title-error-<?= $val['id']; ?>" class="error" style="display:none;" for="question-title">THIS FIELD IS REQUIRED.</label>
+                                            <div class="col-sm-2 pull-left">
+                                                <?php echo $this->Form->input('icon', ['label' => false, 'type' => 'file', 'class' => 'required imgpreview input-icon-' . $val['id'], 'disabled' => 'disabled', 'id' => 'iconlogo' . $val['id']]); ?>
+                                            </div>
+                                            <div class="imageblock pull-right">
+                                                <div class="form-group hover-element scanimgblock">
+                                                    <div class="col-sm-1">
+                                                        <?php if (isset($val['icon_img']) && $val['icon_img'] != '') { ?>
+                                                            <?php echo $this->Html->image(QUETIONS_ICON_PATH.$val['icon_img'], ['class' => 'icon_upload', 'alt' => 'Your image', 'id' => 'iconlogo' . $val['id'] . '_upload_preview', 'height' => '50']); ?>
+                                                        <?php } else { ?> 
+                                                            <?php echo $this->Html->image('upload_image.png', ['class' => 'icon_upload', 'alt' => 'Your image', 'id' => 'iconlogo' . $val['id'] . '_upload_preview', 'height' => '50']); ?>
+                                                        <?php } ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                         <div class="col-md-1">
                                             <?php $quen = $val['quantity']; ?>
@@ -127,7 +140,7 @@
                                             <?php echo $this->Form->input('price', ['label' => false, 'class' => 'form-control required normal-font input-price-' . $val['id'], 'disabled' => 'disabled', 'placeholder' => 'ENTER QUESTION PRICE', 'maxlength' => 255, 'value' => $val['price']]); ?>
                                             <label id="question-price-error-<?= $val['id']; ?>" class="error" style="display:none;" for="question-price">THIS FIELD IS REQUIRED.</label>
                                         </div>
-                                        <div class="col-md-1">
+                                        <div class="col-md-2">
                                             <div class="div-edit-<?= $val['id']; ?>">
                                                 <?php echo $this->Html->link('', 'javascript:void(0)', ['class' => 'btn btn-warning btn-que-edit fa fa-pencil', 'data-id' => $val['id'], 'escape' => false, 'title' => 'EDIT']); ?>
                                                 <a data-toggle="modal" title = 'DELETE' url=<?php echo $this->Url->build(['controller' => 'Questions', 'action' => 'deleteanswer', $question['id']]) ?> data-value="<?php echo $val['id']; ?>" data-target="#delete" href="#" class="btn btn-danger fa fa-trash-o btn-que-delete delete"></a>
