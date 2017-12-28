@@ -13266,3 +13266,19 @@ Stack Trace:
 #2 {main}
 
 
+2017-12-29 04:43:19 Error: Fatal Error (1): Call to undefined function App\Controller\getsubquestionArr() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 400]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2017-12-29 04:43:19 Error: [Cake\Error\FatalErrorException] Call to undefined function App\Controller\getsubquestionArr()
+Request URL: /hmen/webservices/service/details/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 400)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

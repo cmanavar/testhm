@@ -384,40 +384,44 @@ class WebservicesController extends AppController {
                 $quesArr = $this->ServiceQuestions->find('all')->where(['category_id' => $sDetails['category_id'], 'service_id' => $sDetails['id'], 'questions_type' => 'parent'])->hydrate(false)->toArray();
                 if (!empty($quesArr)) {
                     foreach ($quesArr as $key => $val) {
-                        $tmp = [];
-                        $tmp['id'] = $val['id'];
-                        $tmp['question'] = $val['question_title'];
-                        if (isset($val['answer_type']) && $val['answer_type'] == 't') {
-                            $tmp['answer_type'] = 'text';
-                        } else {
-                            $tmp['answer_type'] = 'radio_button';
-                        }
-                        $answerArrs = [];
+//                        $tmp = [];
+//                        $tmp[question]
                         $service_questions_answers = $this->ServiceQuestionAnswers->find('all')->where(['question_id' => $val['id']])->hydrate(false)->toArray();
                         if (isset($service_questions_answers) && !empty($service_questions_answers)) {
-                            foreach ($service_questions_answers as $v) {
-                                //print_r($v); exit;
-                                $tmpA = [];
-                                $tmpA['id'] = $v['id'];
-                                $tmpA['question_id'] = $v['question_id'];
-                                $tmpA['label'] = $v['label'];
-                                //$tmpA['quantity'] = $v['quantity'];
-                                //$tmpA['price'] = $v['price'];
-                                //$tmpA['child_questions'] = ($this->nextStepQuestions($val['id'], $v['id'])) ? $this->nextStepQuestions($val['id'], $v['id']) : '-';
-                                //$tmpA['quantity'] = $v['quantity'];
-                                $tmpA['nextstep'] = "-";
-                                if ($v['quantity'] == 'YES') {
-                                    $tmpA['nextstep'] = "QUANTITY";
+                            foreach ($service_questions_answers as $k => $v) {
+                                $tmp = [];
+                                $step = $key + 1;
+                                $tmp['option_step'] = $step;
+                                $tmp['option_name'] = $v['label'];
+                                $tmp['option_id'] = $v['id'];
+                                $tmp['option_quantity'] = substr($v['quantity'], 0, 1);
+                                $checkChildQuestions = ($this->checkChildQuestionsExist($val['id'], $v['id'])) ? 'Yes' : 'No';
+                                $subArr = '';
+                                if ($checkChildQuestions == 'Yes') {
+                                    $subArr = [];
+                                    $qID = $val['id'];
+                                    $aID = $v['id'];
+                                    $tmp = $this->getsubquestionArr($qID, $aID);
+                                    if(isset($tmp) && !empty($tmp)) {
+                                        foreach ($tmp as $k1 => $v1) {
+                                            $tmpS = [];
+                                            $steps = $step + 1;
+                                            $tmpS['option_step'] = $step;
+                                            $tmpS['option_name'] = $v1['option_name'];
+                                            $tmpS['option_id'] = $v['id']."_".$v1['option_id'];
+                                            $tmpS['option_quantity'] = substr($v1['option_quantity'], 0, 1);
+                                            $checkChildQuestions1 = ($this->checkChildQuestionsExist($v1['question_id'], $v1['option_id'])) ? 'Yes' : 'No';
+                                            $subArr[] = $tmpS;
+                                        }
+                                    }
+                                    
                                 }
-                                if ($v['quantity'] == 'NO') {
-                                    $tmpA['nextstep'] = ($this->nextStepQuestions($val['id'], $v['id'], $id)) ? $this->nextStepQuestions($val['id'], $v['id'], $id) : '-';
-                                }
-
-                                $answerArrs[] = $tmpA;
+                                $tmp['sub'] = $subArr;
+                                $questionArr[] = $tmp;
                             }
                         }
-                        $tmp['answers'] = $answerArrs;
-                        $questionArr[] = $tmp;
+                        //pr($service_questions_answers);
+                        //exit;
                     }
                 }
                 $rslt['questions'] = $questionArr;
@@ -456,6 +460,27 @@ class WebservicesController extends AppController {
         } else {
             $this->wrong('Service Id is missing!');
         }
+    }
+
+    public function getsubquestionArr($qID, $aID) {
+        $childQuestionID = $this->ServiceQuestions->find('all')->where(['questions_type' => 'child', 'parent_question_id' => $qID, 'parent_answer_id' => $aID])->hydrate(false)->toArray();
+        $rslt = [];
+        if (!empty($childQuestionID)) {
+            foreach ($childQuestionID as $key => $val) {
+                $service_questions_answers = $this->ServiceQuestionAnswers->find('all')->where(['question_id' => $val['id']])->hydrate(false)->toArray();
+                if (isset($service_questions_answers) && !empty($service_questions_answers)) { 
+                    foreach ($service_questions_answers as $k => $v) {
+                        $tmpS = [];
+                        $tmpS['question_id'] = $v['question_id'];
+                        $tmpS['option_name'] = $v['label'];
+                        $tmpS['option_id'] = $v['id'];
+                        $tmpS['option_quantity'] = substr($v['quantity'], 0, 1);
+                        $rslt[] = $tmpS;
+                    }
+                }
+            }
+        }
+        return $rslt;
     }
 
     public function serviceReviews($id = '') {
