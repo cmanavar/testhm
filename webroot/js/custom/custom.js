@@ -238,8 +238,8 @@ $(document).ready(function () {
                 '<label class="col-md-3 control-label padng_rgtrmv">ANSWER DETAILS ' + room + '<span class="text-maroon"> *</span></label>\n\
                  <div class="col-md-2"><input class="form-control" name="answers[' + room + '][label]" id="answer_val" placeholder="Label ' + room + '"></div>\n\
                  <div class="col-sm-3">\n\
-                 <div class="col-sm-2 pull-left"><input class="required imgpreview" name="answers[' + room + '][icon]" id="icons' + room +'" type="file" /></div>\n\
-                 <div class="imageblock pull-right"><div class="form-group hover-element scanimgblock"><div class="col-sm-1"><img src="/hmen/img/upload_image.png" class="icon_upload" alt="Your image" id="icons'+room+'_upload_preview" height="30"></div></div></div>\n\
+                 <div class="col-sm-2 pull-left"><input class="required imgpreview" name="answers[' + room + '][icon]" id="icons' + room + '" type="file" /></div>\n\
+                 <div class="imageblock pull-right"><div class="form-group hover-element scanimgblock"><div class="col-sm-1"><img src="/hmen/img/upload_image.png" class="icon_upload" alt="Your image" id="icons' + room + '_upload_preview" height="30"></div></div></div>\n\
                  </div> \n\
                  <div class="col-md-1"><select class="" name="answers[' + room + '][quantity]" id="answer_quantity' + room + '"><option value="YES">YES</option><option value="NO">NO</option><option value="ON_INSPECTION">INSPECTION</option></select></div>\n\
                  <div class="col-md-1"><input class="form-control" type="number" name="answers[' + room + '][price]" id="answer_val" placeholder="Price"></div>';
@@ -254,8 +254,8 @@ $(document).ready(function () {
             allowEmptyOption: true,
             create: false,
         });
-        
-        $("#icons"+room).change(function () {
+
+        $("#icons" + room).change(function () {
             readURL(this);
         });
         function readURL(input) {
@@ -263,7 +263,7 @@ $(document).ready(function () {
                 var reader = new FileReader();
                 reader.onload = function (e) {
                     //icons1_upload_preview
-                    $('#icons'+room+'_upload_preview').attr('src', e.target.result);
+                    $('#icons' + room + '_upload_preview').attr('src', e.target.result);
                 }
                 reader.readAsDataURL(input.files[0]);
             }
@@ -359,10 +359,10 @@ $(document).ready(function () {
                 '<label class="col-md-3 control-label padng_rgtrmv">ANSWER DETAILS ' + room + '<span class="text-maroon"> *</span></label>\n\
                  <div class="col-md-2"><div class="input text"><input class="form-control ans-label" name="label" id="answer_val' + room + '" placeholder="Label ' + room + '"></div><label id="question-title-error-' + room + '" class="error" style="display:none;" for="question-title">THIS FIELD IS REQUIRED.</label></div>\n\
                  <div class="col-sm-3">\n\
-                 <div class="col-sm-2 pull-left"><input class="required imgpreview" name="answers[' + room + '][icon]" id="icons' + room +'" type="file" /></div>\n\
-                 <div class="imageblock pull-right"><div class="form-group hover-element scanimgblock"><div class="col-sm-1"><img src="/hmen/img/upload_image.png" class="icon_upload" alt="Your image" id="icons'+room+'_upload_preview" height="30"></div></div></div>\n\
+                 <div class="col-sm-2 pull-left"><input class="required imgpreview ans-icons" name="icon" id="icons' + room + '" type="file" /></div>\n\
+                 <div class="imageblock pull-right"><div class="form-group hover-element scanimgblock"><div class="col-sm-1"><img src="/hmen/img/upload_image.png" class="icon_upload" alt="Your image" id="icons' + room + '_upload_preview" height="30"></div></div></div>\n\
                  </div> \n\
-                 <div class="col-md-1"><div class="input text"><select class="ans-qunat" name="quantity" id="answer_quantity' + room + '"><option value="YES">YES</option><option value="NO">NO</option><option value="ON_INSPECTION">ON INSPECTION</option></select></div></div>\n\
+                 <div class="col-md-1"><div class="input text"><select class="ans-qunat" name="quantity" id="answer_quantity' + room + '"><option value="YES">YES</option><option value="NO">NO</option><option value="ON_INSPECTION">INSPECTION</option></select></div></div>\n\
                  <div class="col-md-1"><div class="input text"><input class="form-control ans-price" id="answer_price' + room + '" type="number" name="price" placeholder="Price(Rs.)"></div><label id="question-price-error-' + room + '" class="error" style="display:none;" for="question-price">THIS FIELD IS REQUIRED.</label></div>\n\
                  <div class="col-md-2"><a href="javascript:void(0)" class="btn btn-success btn-new-que-save fa fa-save" data-id="' + room + '" title="SAVE"></a> <a href="javascript:void(0)" class="btn btn-danger btn-new-que-cancel fa fa-times" data-id="' + room + '" title="SAVE"></a></div>';
         objTo.appendChild(divtest);
@@ -373,8 +373,8 @@ $(document).ready(function () {
             allowEmptyOption: true,
             create: false,
         });
-        
-        $("#icons"+room).change(function () {
+
+        $("#icons" + room).change(function () {
             readURL(this);
         });
         function readURL(input) {
@@ -382,7 +382,7 @@ $(document).ready(function () {
                 var reader = new FileReader();
                 reader.onload = function (e) {
                     //icons1_upload_preview
-                    $('#icons'+room+'_upload_preview').attr('src', e.target.result);
+                    $('#icons' + room + '_upload_preview').attr('src', e.target.result);
                 }
                 reader.readAsDataURL(input.files[0]);
             }
@@ -409,17 +409,32 @@ $(document).ready(function () {
         var id = $(this).attr('data-id');
         $('.input-label-' + id).removeAttr('disabled');
         $('.input-price-' + id).removeAttr('disabled');
+        $('.input-icon-' + id).removeAttr('disabled');
         $('.input-quantity-' + id)[0].selectize.enable();
         $('.div-edit-' + id).css('display', 'none');
         $('.div-save-' + id).css('display', 'block');
         $('.btn-que-edit').attr('disabled', 'disabled');
         $('.btn-que-delete').attr('disabled', 'disabled');
+        $("#iconlogo" + id).change(function () {
+            readURL(this);
+        });
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    //icons1_upload_preview
+                    $('#iconlogo' + id + '_upload_preview').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
     });
 
     $('.btn-que-cancel').click(function () {
         var id = $(this).attr('data-id');
         $('.input-label-' + id).attr('disabled', 'disabled');
         $('.input-price-' + id).attr('disabled', 'disabled');
+        $('.input-icon-' + id).attr('disabled', 'disabled');
         $('.input-quantity-' + id)[0].selectize.disable();
         $('.div-edit-' + id).css('display', 'block');
         $('.div-save-' + id).css('display', 'none');
@@ -430,6 +445,7 @@ $(document).ready(function () {
     $('.btn-que-save').click(function () {
         var id = $(this).attr('data-id');
         var title = '';
+        var icons = '';
         var quantity = '';
         var price = '';
         if (id == '') {
@@ -438,6 +454,7 @@ $(document).ready(function () {
         title = $('.input-label-' + id).val();
         price = $('.input-price-' + id).val();
         quantity = $('.input-quantity-' + id).val();
+        var file = document.querySelector(".input-icon-" + id).files[0];
         if (title == '') {
             $('#question-title-error-' + id).css('display', 'block');
             $('.input-label-' + id).addClass('error');
@@ -458,62 +475,108 @@ $(document).ready(function () {
             }
         }
         var url = $('#updateanswer').val();
-        $.ajax({
-            type: "POST",
-            url: url + '/' + id,
-            data: {title: title, quantity: quantity, price: price},
-            success: function (data) {
-                console.log(data);
-                location.reload();
-            }
-        });
+        if (isEmpty(file)) {
+            getBase64(file, function (result) {
+                icons = result;
+                $.ajax({
+                    type: "POST",
+                    url: url + '/' + id,
+                    data: {title: title, quantity: quantity, price: price, icons: icons},
+                    success: function (data) {
+                        console.log(data);
+                        location.reload();
+                    }
+                });
+            });
+        } else {
+            $.ajax({
+                type: "POST",
+                url: url + '/' + id,
+                data: {title: title, quantity: quantity, price: price},
+                success: function (data) {
+                    console.log(data);
+                    location.reload();
+                }
+            });
+        }
     });
+
+    function isEmpty(obj) {
+        for (var prop in obj) {
+            if (obj.hasOwnProperty(prop))
+                return false;
+        }
+
+        return JSON.stringify(obj) === JSON.stringify({});
+    }
 
     // answer_val_section
     $(document).on('click', '#answer_val_section .btn-new-que-save', function () {
         //$('.btn-new-que-save').click(function () {
+        //.preventDefault();
         var id = $(this).attr('data-id');
         var title = '';
         var quant = '';
+        var icons = '';
         var price = '';
         var flag = 0;
+        var file = document.querySelector(".ans-icons").files[0];
         title = $('.ans-label').val();
         price = $('.ans-price').val();
         quant = $('.ans-qunat').val();
-        if (title == '') {
-            $('#question-title-error-' + id).css('display', 'block');
-            $('#answer_val' + id).addClass('error');
-            flag = 1;
-        }
-        if (price == '') {
-            $('#question-price-error-' + id).css('display', 'block');
-            $('.input-price-' + id).addClass('error');
-            $('#answer_price' + id).addClass('error');
-            flag = 1;
-        } else {
-            if (quant == 'YES') {
-                if (price == 0) {
-                    $('.input-price-' + id).addClass('error');
-                    $('#question-price-error-' + id).html('PLEASE ENTER PRICE!');
-                    $('#question-price-error-' + id).css('display', 'block');
-                    flag = 1;
+        getBase64(file, function (result) {
+            icons = result;
+            //console.log("ICONS" + icons);
+            if (title == '') {
+                $('#question-title-error-' + id).css('display', 'block');
+                $('#answer_val' + id).addClass('error');
+                flag = 1;
+            }
+            if (price == '') {
+                $('#question-price-error-' + id).css('display', 'block');
+                $('.input-price-' + id).addClass('error');
+                $('#answer_price' + id).addClass('error');
+                flag = 1;
+            } else {
+                if (quant == 'YES') {
+                    if (price == 0) {
+                        $('.input-price-' + id).addClass('error');
+                        $('#question-price-error-' + id).html('PLEASE ENTER PRICE!');
+                        $('#question-price-error-' + id).css('display', 'block');
+                        flag = 1;
+                    }
                 }
             }
-        }
-        if (flag == 1) {
-            return false;
-        }
-        var url = $('#addnewanswer').val();
-        $.ajax({
-            type: "POST",
-            url: url,
-            data: {title: title, quantity: quant, price: price},
-            success: function (data) {
-                console.log(data);
-                location.reload();
+            if (flag == 1) {
+                return false;
             }
+            //console.log({title: title, quantity: quant, price: price, icons: icons});
+            var url = $('#addnewanswer').val();
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: {title: title, quantity: quant, price: price, icons: icons},
+                success: function (data) {
+                    console.log(data);
+//                    return;
+                    location.reload();
+                }
+            });
         });
     });
+
+    function getBase64(file, callback) {
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function () {
+            console.log(reader.result);
+            //return reader.result;
+            callback(reader.result);
+        };
+        reader.onerror = function (error) {
+            console.log('Error: ', error);
+        };
+    }
 
     $(document).on('click', '#answer_val_section .btn-new-que-cancel', function () {
         var val = $(this).attr('data-id');

@@ -289,6 +289,23 @@ class QuestionsController extends AppController {
             $updatedArr['label'] = $_POST['title'];
             $updatedArr['quantity'] = $_POST['quantity'];
             $updatedArr['price'] = $_POST['price'];
+            if (isset($_POST['icons']) && $_POST['icons'] != '') {
+                $data = $_POST['icons'];
+                $pos  = strpos($data, ';');
+                $type = explode(':', substr($data, 0, $pos))[1];
+                $fileArr = array(
+                    'image/png' => 'png',
+                    'image/jpeg' => 'jpe',
+                    'image/jpeg' => 'jpeg',
+                    'image/jpeg' => 'jpg'
+                );
+                $ext = $fileArr[$type];
+                $uri = substr($data, strpos($data, ",") + 1);
+                $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                $img = WWW_ROOT . 'img/' . QUETIONS_ICON_PATH. $filename;
+                file_put_contents($img, base64_decode($uri));
+                $updatedArr['icon_img'] = $filename;
+            }
             $answer = $this->ServiceQuestionAnswers->patchEntity($answer, $updatedArr);
             $answer->modified_by = $this->request->session()->read('Auth.User.id');
             $answer->modified = date("Y-m-d H:i:s");
@@ -312,11 +329,30 @@ class QuestionsController extends AppController {
         if (isset($question) && !empty($question)) {
             $answer = $this->ServiceQuestionAnswers->newEntity();
             $service_id = $question->service_id;
+            $filename = '';
+            if (isset($_POST['icons']) && $_POST['icons'] != '') {
+                $data = $_POST['icons'];
+                $pos  = strpos($data, ';');
+                $type = explode(':', substr($data, 0, $pos))[1];
+                $fileArr = array(
+                    'image/png' => 'png',
+                    'image/jpeg' => 'jpe',
+                    'image/jpeg' => 'jpeg',
+                    'image/jpeg' => 'jpg'
+                );
+                $ext = $fileArr[$type];
+                $uri = substr($data, strpos($data, ",") + 1);
+                $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                $img = WWW_ROOT . 'img/' . QUETIONS_ICON_PATH. $filename;
+                file_put_contents($img, base64_decode($uri));
+            }
             $updatedArr = [];
             $updatedArr['question_id'] = $id;
             $updatedArr['label'] = $_POST['title'];
+            $updatedArr['icon_img'] = $filename;
             $updatedArr['quantity'] = $_POST['quantity'];
             $updatedArr['price'] = $_POST['price'];
+            //print_r($updatedArr); exit;
             $answer = $this->ServiceQuestionAnswers->patchEntity($answer, $updatedArr);
             $answer->created_by = $this->request->session()->read('Auth.User.id');
             $answer->created = date("Y-m-d H:i:s");
