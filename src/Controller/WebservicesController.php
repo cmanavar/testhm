@@ -40,7 +40,7 @@ class WebservicesController extends AppController {
         $this->Auth->allow(['homepage', 'categoryDetails', 'categoryList', 'serviceDetails', 'getServicesSubQuestions', 'helpDetails',
             'createCart', 'addCartProduct', 'cartDetails', 'cartClear', 'removeCartProduct', 'counteunreadmsg', 'msgList', 'msgView',
             'cartOrderPlaced', 'forgorPassword', 'changePassword', 'applyCouponCode', 'walletDetails', 'getCartId', 'orderDetails',
-            'orderLists', 'orderQuery', 'orderSummary', 'storeReview', 'updateOrder', 'serviceReviews']);
+            'orderLists', 'orderQuery', 'orderSummary', 'storeReview', 'updateOrder', 'serviceReviews', 'getquestionArr']);
     }
 
     public function counteunreadmsg() {
@@ -86,7 +86,8 @@ class WebservicesController extends AppController {
                     }
                     $tmp['message_detail'] = $message['message_detail'];
                     $tmp['seen'] = $message['seen'];
-                    $tmp['created'] = $message['created_at']->format('d-M-Y h:i A');
+                    $tmp['date'] = $message['created_at']->format('d-M-Y');
+                    $tmp['datetime'] = $message['created_at']->format('d-M-Y h:i A');
                     $msg[] = $tmp;
                 }
                 $nextPageReviews = $this->Messages->find('all')->where(['user_id' => $user_id])->order(['id' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no + 1)->hydrate(false)->toArray();
@@ -375,60 +376,6 @@ class WebservicesController extends AppController {
                 $rslt['visit_charge'] = $sDetails['visit_charge'];
                 $rslt['minimum_charge'] = $sDetails['minimum_charge'];
                 $rslt['banner_image'] = IMAGE_URL_PATH . 'services/banner/' . $sDetails['banner_image'];
-                $nextStep = '';
-                $nextStep = $this->nextStepQuestions(0, 0, $id);
-                $rslt['nextstep'] = $nextStep;
-                //echo $nextStep; exit;
-                // Questions - Start
-                $questionArr = [];
-                $quesArr = $this->ServiceQuestions->find('all')->where(['category_id' => $sDetails['category_id'], 'service_id' => $sDetails['id'], 'questions_type' => 'parent'])->hydrate(false)->toArray();
-                if (!empty($quesArr)) {
-                    foreach ($quesArr as $key => $val) {
-//                        $tmp = [];
-//                        $tmp[question]
-                        $service_questions_answers = $this->ServiceQuestionAnswers->find('all')->where(['question_id' => $val['id']])->hydrate(false)->toArray();
-                        if (isset($service_questions_answers) && !empty($service_questions_answers)) {
-                            foreach ($service_questions_answers as $k => $v) {
-                                $tmp = [];
-                                $step = $key + 1;
-                                $tmp['option_step'] = $step;
-                                $tmp['option_name'] = $v['label'];
-                                $tmp['option_id'] = $v['id'];
-                                $tmp['option_quantity'] = substr($v['quantity'], 0, 1);
-                                $checkChildQuestions = ($this->checkChildQuestionsExist($val['id'], $v['id'])) ? 'Yes' : 'No';
-                                $subArr = '';
-                                if ($checkChildQuestions == 'Yes') {
-                                    $subArr = [];
-                                    $qID = $val['id'];
-                                    $aID = $v['id'];
-                                    $tmp = $this->getsubquestionArr($qID, $aID);
-                                    if(isset($tmp) && !empty($tmp)) {
-                                        foreach ($tmp as $k1 => $v1) {
-                                            $tmpS = [];
-                                            $steps = $step + 1;
-                                            $tmpS['option_step'] = $step;
-                                            $tmpS['option_name'] = $v1['option_name'];
-                                            $tmpS['option_id'] = $v['id']."_".$v1['option_id'];
-                                            $tmpS['option_quantity'] = substr($v1['option_quantity'], 0, 1);
-                                            $checkChildQuestions1 = ($this->checkChildQuestionsExist($v1['question_id'], $v1['option_id'])) ? 'Yes' : 'No';
-                                            $subArr[] = $tmpS;
-                                        }
-                                    }
-                                    
-                                }
-                                $tmp['sub'] = $subArr;
-                                $questionArr[] = $tmp;
-                            }
-                        }
-                        //pr($service_questions_answers);
-                        //exit;
-                    }
-                }
-                $rslt['questions'] = $questionArr;
-                if (empty($questionArr)) {
-                    $rslt['nextstep'] = 'DESCRIPTION';
-                }
-                // Questions - End
                 // Ratecard - Start
                 $rateArr = [];
                 $rateCards = $this->ServiceRatecards->find('all')->where(['service_id' => $sDetails['id']])->hydrate(false)->toArray();
@@ -462,18 +409,83 @@ class WebservicesController extends AppController {
         }
     }
 
+    public function getquestionArr($id) {
+        $this->loadModel('Users');
+        $this->loadModel('Services');
+        $this->loadModel('ServiceQuestions');
+        $this->loadModel('ServiceQuestionAnswers');
+        $this->loadModel('ServiceReviews');
+        $this->loadModel('ServiceRatecards');
+        $this->loadModel('ServiceRatecardRates');
+        if (isset($id) && $id != '') {
+            $rslt = [];
+            $sDetails = $this->Services->find('all')->where(['status' => 'ACTIVE', 'id' => $id])->order(['id' => 'ASC'])->hydrate(false)->first();
+            if (isset($sDetails) && !empty($sDetails)) {
+                // Questions - Start
+                $questionArr = [];
+                $quesArr = $this->ServiceQuestions->find('all')->where(['category_id' => $sDetails['category_id'], 'service_id' => $sDetails['id'], 'questions_type' => 'parent'])->hydrate(false)->toArray();
+                if (!empty($quesArr)) {
+                    foreach ($quesArr as $key => $val) {
+                        $service_questions_answers = $this->ServiceQuestionAnswers->find('all')->where(['question_id' => $val['id']])->hydrate(false)->toArray();
+                        if (isset($service_questions_answers) && !empty($service_questions_answers)) {
+                            foreach ($service_questions_answers as $k => $v) {
+                                //pr($v); exit;
+                                $tmp = [];
+                                $step = $key + 1;
+                                $tmp['option_step'] = $step;
+                                $tmp['option_name'] = $v['label'];
+                                $tmp['option_id'] = $v['id'];
+                                $tmp['icon_imgs'] = ($v['icon_img'] != '') ? QUETIONS_ICON_URL_PATH . $v['icon_img'] : '';
+                                $tmp['option_quantity'] = substr($v['quantity'], 0, 1);
+                                $checkChildQuestions = ($this->checkChildQuestionsExist($val['id'], $v['id'])) ? 'Yes' : 'No';
+                                $subArr = '';
+                                if ($checkChildQuestions == 'Yes') {
+                                    $subArr = [];
+                                    $qID = $val['id'];
+                                    $aID = $v['id'];
+                                    $tmpsq = $this->getsubquestionArr($qID, $aID);
+                                    //pr($tmpsq); exit;
+                                    if (isset($tmpsq) && !empty($tmpsq)) {
+                                        foreach ($tmpsq as $k1 => $v1) {
+                                            $tmpS = [];
+                                            $steps = $step + 1;
+                                            $tmpS['option_step'] = $steps;
+                                            $tmpS['option_name'] = $v1['option_name'];
+                                            $tmpS['option_id'] = $v['id'] . "_" . $v1['option_id'];
+                                            $tmpS['icon_imgs'] = ($v1['icon_img'] != '') ? QUETIONS_ICON_URL_PATH . $v1['icon_img'] : '';
+                                            $tmpS['option_quantity'] = substr($v1['option_quantity'], 0, 1);
+                                            $checkChildQuestions1 = ($this->checkChildQuestionsExist($v1['question_id'], $v1['option_id'])) ? 'Yes' : 'No';
+                                            $tmp['sub'][] = $tmpS;
+                                        }
+                                    }
+                                } else {
+                                    $tmp['sub'] = '';
+                                }
+                                //$tmp['sub'] = $subArr;
+                                $questionArr[] = $tmp;
+                            }
+                        }
+                    }
+                }
+                // Questions - End
+                $this->success('Service Questions Fetched Successfully', $questionArr);
+            }
+        }
+    }
+
     public function getsubquestionArr($qID, $aID) {
         $childQuestionID = $this->ServiceQuestions->find('all')->where(['questions_type' => 'child', 'parent_question_id' => $qID, 'parent_answer_id' => $aID])->hydrate(false)->toArray();
         $rslt = [];
         if (!empty($childQuestionID)) {
             foreach ($childQuestionID as $key => $val) {
                 $service_questions_answers = $this->ServiceQuestionAnswers->find('all')->where(['question_id' => $val['id']])->hydrate(false)->toArray();
-                if (isset($service_questions_answers) && !empty($service_questions_answers)) { 
+                if (isset($service_questions_answers) && !empty($service_questions_answers)) {
                     foreach ($service_questions_answers as $k => $v) {
                         $tmpS = [];
                         $tmpS['question_id'] = $v['question_id'];
                         $tmpS['option_name'] = $v['label'];
                         $tmpS['option_id'] = $v['id'];
+                        $tmpS['icon_img'] = $v['icon_img'];
                         $tmpS['option_quantity'] = substr($v['quantity'], 0, 1);
                         $rslt[] = $tmpS;
                     }

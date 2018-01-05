@@ -13282,3 +13282,107 @@ Stack Trace:
 #2 {main}
 
 
+2018-01-05 14:26:24 Error: Fatal Error (1): Call to a member function find() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 489]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-05 14:26:24 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /hmen/webservices/service/details/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 489)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-05 14:26:41 Error: Fatal Error (1): Call to a member function find() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 489]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-05 14:26:41 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /hmen/webservices/service/details/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 489)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-05 14:48:00 Error: [Cake\Controller\Exception\MissingActionException] Action QuestionsController::icons() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'QuestionsController',
+  'action' => 'icons',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/questions/icons/users/201712280116235a43f.png
+2018-01-05 14:48:05 Error: [Cake\Controller\Exception\MissingActionException] Action QuestionsController::icons() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'QuestionsController',
+  'action' => 'icons',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/questions/icons//201712280116235a43f.png
+2018-01-05 14:48:08 Error: [Cake\Controller\Exception\MissingActionException] Action QuestionsController::icons() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'QuestionsController',
+  'action' => 'icons',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/questions/icons/201712280116235a43f.png
+2018-01-05 14:48:23 Error: [Cake\Controller\Exception\MissingActionException] Action QuestionsController::icons() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'QuestionsController',
+  'action' => 'icons',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/questions/icons/201712280116235a43f.png
+2018-01-05 14:51:18 Error: [Cake\Controller\Exception\MissingActionException] Action QuestionsController::icons() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'QuestionsController',
+  'action' => 'icons',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/questions/icons/201712290317475a456.png
+2018-01-05 14:51:25 Error: [Cake\Controller\Exception\MissingActionException] Action QuestionsController::icons() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'QuestionsController',
+  'action' => 'icons',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/questions/icons/201712290317475a456.png
+2018-01-05 14:56:25 Error: [Cake\Controller\Exception\MissingActionException] Action QuestionsController::icons() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'QuestionsController',
+  'action' => 'icons',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/questions/icons/
+2018-01-05 14:56:38 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/questions/icons/
+2018-01-05 14:56:55 Error: [Cake\Controller\Exception\MissingActionException] Action QuestionsController::icons() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'QuestionsController',
+  'action' => 'icons',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/questions/icons/201712290317475a456.png

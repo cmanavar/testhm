@@ -110,6 +110,7 @@ define('SERVICE_BANNER_PATH', 'services/banner/');
 define('SERVICE_SQUARE_BANNER_PATH', 'services/square/');
 
 define('QUETIONS_ICON_PATH', 'questions/icons/');
+define('QUETIONS_ICON_URL_PATH', $url . 'img/questions/icons/');
 
 define('BANNER_IMAGE_PATH', 'banners/');
 

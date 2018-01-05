@@ -65,6 +65,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/categories/details/*', ['controller' => 'Webservices', 'action' => 'categoryDetails']);
     $routes->connect('/webservices/categories/list', ['controller' => 'Webservices', 'action' => 'categoryList']);
     $routes->connect('/webservices/service/details/*', ['controller' => 'Webservices', 'action' => 'serviceDetails']);
+    $routes->connect('/webservices/service/questions/*', ['controller' => 'Webservices', 'action' => 'getquestionArr']);    
     $routes->connect('/webservices/service/reviews/*', ['controller' => 'Webservices', 'action' => 'serviceReviews']);
     $routes->connect('/webservices/service/getsubquestions', ['controller' => 'Webservices', 'action' => 'getServicesSubQuestions']);
     $routes->connect('/webservices/service/review', ['controller' => 'Webservices', 'action' => 'storeReview']);
