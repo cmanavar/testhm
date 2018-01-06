@@ -79,7 +79,7 @@ class QuestionsController extends AppController {
         $this->loadModel('ServiceQuestions');
         $this->loadModel('ServiceQuestionAnswers');
         $question = $this->ServiceQuestions->newEntity();
-        $parent_questions = $this->ServiceQuestions->find('list', ['keyField' => 'id', 'valueField' => 'question_title'])->where(['questions_type' => 'parent', 'service_id' => $service_id])->toArray();
+        $parent_questions = $this->ServiceQuestions->find('list', ['keyField' => 'id', 'valueField' => 'question_title'])->where(['service_id' => $service_id])->toArray();
         if ($this->request->is('post')) {
             $serviceQuestions = $this->ServiceQuestions->newEntity();
             $sQ = $sA = [];

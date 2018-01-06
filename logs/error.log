@@ -13386,3 +13386,18 @@ Exception Attributes: array (
   'plugin' => NULL,
 )
 Request URL: /hmen/questions/icons/201712290317475a456.png
+2018-01-05 16:50:38 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/test_notifications.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/test_notifications.ctp',
+)
+Request URL: /hmen/test
+2018-01-06 19:57:09 Error: [PDOException] SQLSTATE[HY000] [2002] Connection refused
+Request URL: /hmen/webservices/service/questions/1
+2018-01-06 19:57:18 Error: [PDOException] SQLSTATE[HY000] [2002] Connection refused
+Request URL: /hmen/webservices/service/questions/1
+2018-01-06 19:57:19 Error: [PDOException] SQLSTATE[HY000] [2002] Connection refused
+Request URL: /hmen/webservices/service/questions/1
+2018-01-06 19:57:21 Error: [PDOException] SQLSTATE[HY000] [2002] Connection refused
+Request URL: /hmen/webservices/service/questions/1
+2018-01-06 19:57:23 Error: [PDOException] SQLSTATE[HY000] [2002] Connection refused
+Request URL: /hmen/webservices/service/questions/1

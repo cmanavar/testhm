@@ -86,6 +86,8 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/messages/view', ['controller' => 'Webservices', 'action' => 'msgView']);
     $routes->connect('/webservices/get/cartid', ['controller' => 'Webservices', 'action' => 'getCartId']);
     
+    $routes->connect('/test', ['controller' => 'Webservices', 'action' => 'testNotifications']);
+    
     
     
     

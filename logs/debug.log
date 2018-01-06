@@ -5839,3 +5839,15 @@
 2018-01-05 14:57:50 Notice: Notice (8): Undefined index: icon_img in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 454]
 
 
+2018-01-05 16:56:14 Notice: Notice (8): Undefined variable: url in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1651]
+
+
+2018-01-05 16:56:14 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1651]
+
+
+2018-01-05 17:00:56 Notice: Notice (8): Undefined variable: url in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1652]
+
+
+2018-01-05 17:00:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1652]
+
+

@@ -40,7 +40,7 @@ class WebservicesController extends AppController {
         $this->Auth->allow(['homepage', 'categoryDetails', 'categoryList', 'serviceDetails', 'getServicesSubQuestions', 'helpDetails',
             'createCart', 'addCartProduct', 'cartDetails', 'cartClear', 'removeCartProduct', 'counteunreadmsg', 'msgList', 'msgView',
             'cartOrderPlaced', 'forgorPassword', 'changePassword', 'applyCouponCode', 'walletDetails', 'getCartId', 'orderDetails',
-            'orderLists', 'orderQuery', 'orderSummary', 'storeReview', 'updateOrder', 'serviceReviews', 'getquestionArr']);
+            'orderLists', 'orderQuery', 'orderSummary', 'storeReview', 'updateOrder', 'serviceReviews', 'getquestionArr', 'testNotifications']);
     }
 
     public function counteunreadmsg() {
@@ -410,6 +410,104 @@ class WebservicesController extends AppController {
     }
 
     public function getquestionArr($id) {
+        $this->loadModel('Services');
+        $this->loadModel('ServiceQuestions');
+        $this->loadModel('ServiceQuestionAnswers');
+        if (isset($id) && $id != '') {
+            $sDetails = $this->Services->find('all')->where(['status' => 'ACTIVE', 'id' => $id])->order(['id' => 'ASC'])->hydrate(false)->first();
+            if (isset($sDetails) && !empty($sDetails)) {
+                $questionArr = [];
+                $quesArr = $this->ServiceQuestions->find('all')->where(['category_id' => $sDetails['category_id'], 'service_id' => $sDetails['id'], 'questions_type' => 'parent'])->hydrate(false)->toArray();
+                if (!empty($quesArr)) {
+                    foreach ($quesArr as $key1 => $val1) {
+                        $service_questions_answers1 = $this->ServiceQuestionAnswers->find('all')->where(['question_id' => $val1['id']])->hydrate(false)->toArray();
+                        if (isset($service_questions_answers1) && !empty($service_questions_answers1)) {
+                            foreach ($service_questions_answers1 as $key2 => $val2) {
+                                $tmp = [];
+                                $step = $key1 + 1;
+                                $tmp['option_step'] = $step;
+                                $tmp['option_name'] = $val2['label'];
+                                $tmp['option_id'] = $val2['id'];
+                                $tmp['icon_imgs'] = ($val2['icon_img'] != '') ? QUETIONS_ICON_URL_PATH . $val2['icon_img'] : '';
+                                $tmp['option_quantity'] = substr($val2['quantity'], 0, 1);
+                                $checkChildQuestions = ($this->checkChildQuestionsExist($val1['id'], $val2['id'])) ? 'Yes' : 'No';
+                                if ($checkChildQuestions == 'Yes') {
+                                    $qID = $val1['id'];
+                                    $aID = $val2['id'];
+                                    $tmpsq = $this->getsubquestionArr($qID, $aID);
+                                    //pr($tmpsq); exit;
+                                    if (isset($tmpsq) && !empty($tmpsq)) {
+                                        foreach ($tmpsq as $key3 => $val3) {
+                                            $tmpS = [];
+                                            $steps = $step + 1;
+                                            $tmpS['option_step'] = $steps;
+                                            $tmpS['option_name'] = $val3['option_name'];
+                                            $tmpS['option_id'] = $val3['option_id'];
+                                            $tmpS['icon_imgs'] = ($val3['icon_img'] != '') ? QUETIONS_ICON_URL_PATH . $val3['icon_img'] : '';
+                                            $tmpS['option_quantity'] = substr($val3['option_quantity'], 0, 1);
+                                            $checkChildQuestions1 = ($this->checkChildQuestionsExist($val3['question_id'], $val3['option_id'])) ? 'Yes' : 'No';
+                                            if ($checkChildQuestions1 == 'Yes') {
+                                                $qID = $val3['question_id'];
+                                                $aID = $val3['option_id'];
+                                                $tmpssq = $this->getsubquestionArr($qID, $aID);
+                                                //pr($tmpsq); exit;
+                                                if (isset($tmpssq) && !empty($tmpssq)) {
+                                                    foreach ($tmpssq as $key4 => $val4) {
+                                                        $tmpSS = [];
+                                                        $stepss = $steps + 1;
+                                                        $tmpSS['option_step'] = $stepss;
+                                                        $tmpSS['option_name'] = $val4['option_name'];
+                                                        $tmpSS['option_id'] = $val4['option_id'];
+                                                        $tmpSS['icon_imgs'] = ($val4['icon_img'] != '') ? QUETIONS_ICON_URL_PATH . $val4['icon_img'] : '';
+                                                        $tmpSS['option_quantity'] = substr($val4['option_quantity'], 0, 1);
+                                                        $checkChildQuestions2 = ($this->checkChildQuestionsExist($val4['question_id'], $val4['option_id'])) ? 'Yes' : 'No';
+                                                        if ($checkChildQuestions2 == 'Yes') {
+                                                            $qID = $val4['question_id'];
+                                                            $aID = $val4['option_id'];
+                                                            $tmpsssq = $this->getsubquestionArr($qID, $aID);
+                                                            // pr($tmpsssq); exit;
+                                                            if (isset($tmpsssq) && !empty($tmpsssq)) {
+                                                                foreach ($tmpsssq as $key5 => $val5) {
+                                                                    $tmpSSS = [];
+                                                                    $stepsss = $stepss + 1;
+                                                                    $tmpSSS['option_step'] = $stepsss;
+                                                                    $tmpSSS['option_name'] = $val5['option_name'];
+                                                                    $tmpSSS['option_id'] = $val5['option_id'];
+                                                                    $tmpSSS['icon_imgs'] = ($val5['icon_img'] != '') ? QUETIONS_ICON_URL_PATH . $val5['icon_img'] : '';
+                                                                    $tmpSSS['option_quantity'] = substr($val5['option_quantity'], 0, 1);
+                                                                    $tmpSS['sub'][] = $tmpSSS;
+                                                                }
+                                                            }
+                                                        } else {
+                                                            $tmpSS['sub'] = '';
+                                                        }
+                                                        $tmpS['sub'][] = $tmpSS;
+                                                    }
+                                                }
+                                            } else {
+                                                $tmpS['sub'] = '';
+                                            }
+                                            $tmp['sub'][] = $tmpS;
+                                        }
+                                    }
+                                } else {
+                                    $tmp['sub'] = '';
+                                }
+                                $questionArr[] = $tmp;
+                            }
+                        }
+                    }
+                }
+                $this->success('Service Questions Fetched Successfully', $questionArr);
+            } else {
+                $this->wrong('Service data not found!');
+            }
+        } else {
+            $this->wrong('Service Id is missing!');
+        }
+    }
+
+    public function getquestionArr2($id) {
         $this->loadModel('Users');
         $this->loadModel('Services');
         $this->loadModel('ServiceQuestions');
@@ -451,7 +549,7 @@ class WebservicesController extends AppController {
                                             $steps = $step + 1;
                                             $tmpS['option_step'] = $steps;
                                             $tmpS['option_name'] = $v1['option_name'];
-                                            $tmpS['option_id'] = $v['id'] . "_" . $v1['option_id'];
+                                            $tmpS['option_id'] = $v1['option_id'];
                                             $tmpS['icon_imgs'] = ($v1['icon_img'] != '') ? QUETIONS_ICON_URL_PATH . $v1['icon_img'] : '';
                                             $tmpS['option_quantity'] = substr($v1['option_quantity'], 0, 1);
                                             $checkChildQuestions1 = ($this->checkChildQuestionsExist($v1['question_id'], $v1['option_id'])) ? 'Yes' : 'No';
@@ -1641,6 +1739,25 @@ class WebservicesController extends AppController {
         } else {
             $this->wrong('Invalid API key.');
         }
+    }
+
+    //public function testNotifications($title, $msg, $url = '', $user = 'All') {
+    public function testNotifications() {
+        $title = 'Title 1';
+        //$msg = 'Lorem lipsum is dummy text';
+        $msg = 'Message Aviyo?';
+        //$url = 'http://localhost/www/#/tab/message';
+        $url = '';
+        $user = '806e3158-f53b-46d0-85a1-3b257c25610d';
+        $response = $this->sendMessage($title, $msg, $url, $user);
+        pr($response);
+        exit;
+        $return["allresponses"] = $response;
+        $return = json_encode($return);
+
+        print("\n\nJSON received:\n");
+        print($return);
+        print("\n");
     }
 
 }
