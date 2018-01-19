@@ -751,19 +751,21 @@ class WebservicesController extends AppController {
                     $checkCart = $this->Carts->find('all')->where(['id' => $requestArr['cart_id'], 'status' => 'PROCESS'])->hydrate(false)->first();
                     if (!empty($checkCart)) {
                         $questionsData = isset($requestArr['questions_data']) ? $requestArr['questions_data'] : array();
+                        // pr($questionsData); exit;
                         if (empty($questionsData)) {
                             $this->wrong("Sorry, Questions data is not found!");
                         } else {
                             $total_price = 0;
                             foreach ($questionsData as $questions) {
                                 $questionDetails = $questionStoreDetails = [];
-                                $question_id = $questions->question_id;
-                                $answer_id = $questions->answer_id;
-                                if (isset($questions->text_quantity) && $questions->text_quantity != 'NO_QUANTITY') {
+                                $question_id = $questions->option_step;
+                                $answer_id = $questions->option_id;
+                                if (isset($questions->option_quantity) && $questions->option_quantity != '') {
                                     //echo $question_id . " " . $answer_id;
                                     $AnswersArr = $this->ServiceQuestionAnswers->find('all')->where(['question_id' => $question_id, 'id' => $answer_id])->hydrate(false)->first();
+                                    //pr($AnswersArr); exit;
                                     if ($AnswersArr['quantity'] == 'YES') {
-                                        $total_price = $questions->text_quantity * $AnswersArr['price'];
+                                        $total_price = $questions->option_quantity * $AnswersArr['price'];
                                     } else {
                                         $questionsArr = $this->ServiceQuestions->find('all')->where(['parent_question_id' => $question_id, 'parent_answer_id' => $answer_id])->hydrate(false)->first();
                                         if (isset($questionsArr['id']) && $questionsArr['id'] != '') {
@@ -775,17 +777,17 @@ class WebservicesController extends AppController {
                                                         $explodeArr = explode('-', $ans['label']);
                                                         $min_quantity = $explodeArr[0];
                                                         $max_quantity = $explodeArr[1];
-                                                        if ($questions->text_quantity >= $min_quantity && $questions->text_quantity <= $max_quantity) {
-                                                            $total_price = $ans['price'] * $questions->text_quantity;
+                                                        if ($questions->option_quantity >= $min_quantity && $questions->option_quantity <= $max_quantity) {
+                                                            $total_price = $ans['price'] * $questions->option_quantity;
                                                         }
                                                     } else if (strpos($ans['label'], '+') !== false) {
                                                         $explodeArr = explode('+', $ans['label']);
                                                         $min_quantity = $explodeArr[0];
-                                                        if ($min_quantity <= $questions->text_quantity) {
-                                                            $total_price = $ans['price'] * $questions->text_quantity;
+                                                        if ($min_quantity <= $questions->option_quantity) {
+                                                            $total_price = $ans['price'] * $questions->option_quantity;
                                                         }
                                                     } else {
-                                                        $total_price = $ans['price'] * $questions->text_quantity;
+                                                        $total_price = $ans['price'] * $questions->option_quantity;
                                                     }
                                                 }
                                             }
@@ -793,6 +795,8 @@ class WebservicesController extends AppController {
                                     }
                                 } else {
                                     $questionsArr = $this->ServiceQuestionAnswers->find('all')->where(['question_id' => $question_id, 'id' => $answer_id])->hydrate(false)->first();
+                                    //pr($questionsArr); exit;
+                                    continue;
                                     if (isset($questionsArr['quantity']) && $questionsArr['quantity'] == 'NO') {
                                         if ($questionsArr['price'] != 0) {
                                             $total_price = $questionsArr['price'];
@@ -829,10 +833,10 @@ class WebservicesController extends AppController {
                                 $flag = false;
                                 foreach ($questionsData as $queData) {
                                     $queAnsData = $this->CartOrderQuestions->newEntity();
-                                    $question_id = $queData->question_id;
-                                    $answer_id = $queData->answer_id;
-                                    $question_quantity = isset($queData->text_quantity) && $queData->text_quantity != 'NO_QUANTITY' ? $queData->text_quantity : '-';
-                                    $question_text_ans = isset($queData->text_description) && $queData->text_description ? $queData->text_description : '-';
+                                    $question_id = $queData->option_step;
+                                    $answer_id = $queData->option_id;
+                                    $question_quantity = isset($queData->option_quantity) && $queData->option_quantity != '' ? $queData->option_quantity : '-';
+                                    $question_text_ans = isset($queData->option_description) && $queData->option_description ? $queData->option_description : '-';
                                     $qa_data = array(
                                         'user_id' => $user_id,
                                         'cart_id' => $cartId,

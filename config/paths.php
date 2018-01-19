@@ -92,8 +92,8 @@ if ($HTTP_HOST == 'localhost') {
 define('CORE_PATH', CAKE_CORE_INCLUDE_PATH . DS);
 define('CAKE', CORE_PATH . 'src' . DS);
 
-define('WEBSITE_PATH', 'http://www.hmen.in/');
-define('WEBSITE_TOC_PATH', 'http://www.hmen.in/toc.html');
+define('WEBSITE_PATH', 'http://hmen.in/');
+define('WEBSITE_TOC_PATH', 'http://hmen.in/terms-of-use.html');
 define('EMAIL_FOOTER_TEXT', '218 Devashish Business Park, Bodakdev, Ahmedabad-380054, India');
 define('SOCIAL_MEDIA_LINK_FB', 'https://www.facebook.com/hmenahmedabad/');
 define('SOCIAL_MEDIA_LINK_TW', '#');

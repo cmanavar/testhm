@@ -158,7 +158,6 @@ class AppController extends Controller {
         curl_setopt($handle, CURLOPT_POSTFIELDS, $fields);
         curl_setopt($handle, CURLOPT_RETURNTRANSFER, TRUE);
         curl_exec($handle);
-        //print_r(curl_error($handle)); exit;
         if (curl_error($handle)) {
             $msgError = "cURL Error #:" . $err;
             $rslt = ['status' => 'fail', 'msg' => $msgError];

@@ -139,6 +139,11 @@ $selected = 'selectedmenu';
                             <li class=""><a href="<?php echo $this->Url->build(["controller" => "Users", "action" => "index", 'app']); ?>"><i class="fa fa-user"></i> &nbsp;APP USERS</a> </li>
                         </ul>
                     </li>
+                    <li class="<?php echo ($this->name == 'Members' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>">
+                        <a href="<?php echo $this->Url->build(["controller" => "Members", "action" => "index"]); ?>">
+                            <i class="fa fa-user fa-fw"></i> Members
+                        </a>
+                    </li>
                     <li class="<?php echo ($this->name == 'Vendors' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>">
                         <a href="<?php echo $this->Url->build(["controller" => "Vendors", "action" => "index"]); ?>">
                             <i class="fa fa-user fa-fw"></i> Vendors

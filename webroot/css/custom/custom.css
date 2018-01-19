@@ -170,7 +170,7 @@ body {
 .dropdown-menu.navbar-nav li a{padding:15px 9px 15px 8px; }
 .navbar-brand{width:140px;text-align: left;}
 .error {color: red;font-weight: normal;}
-input.error {border: 1px solid red;}
+input.error, textarea.error {border: 1px solid red;}
 .login-panel{width:360px;}
 #page-wrapper{margin-left: 0px;}
 .sidebar{width: 181px;}
@@ -1060,3 +1060,27 @@ input[type=radio], input[type=checkbox] {
 .custom-radio label{
     padding-right: 10px;
 }
+
+.date select {
+    border: 1px solid #d0d0d0;
+    padding: 8px 8px;
+    display: inline-block;
+    margin-right: 8px;
+    background: transparent;
+    height: 36px;
+}
+
+.black-header {
+    color: #333;
+    border-bottom: 1px solid #333;
+    padding-bottom: 9px;
+    margin: 15px 0 30px;
+}
+
+/*.family-headings {
+    top: 27px;
+}
+
+.family-label {
+    padding-bottom: 5px;
+}*/

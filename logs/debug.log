@@ -5851,3 +5851,147 @@
 2018-01-05 17:00:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1652]
 
 
+2018-01-08 11:56:19 Notice: Notice (8): Undefined property: stdClass::$question_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 761]
+
+
+2018-01-08 11:56:19 Notice: Notice (8): Undefined property: stdClass::$answer_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 762]
+
+
+2018-01-08 11:57:37 Notice: Notice (8): Undefined property: stdClass::$option_step in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 761]
+
+
+2018-01-08 11:57:37 Notice: Notice (8): Undefined property: stdClass::$option_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 762]
+
+
+2018-01-08 11:57:37 Notice: Notice (8): Undefined property: stdClass::$option_step in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 761]
+
+
+2018-01-08 11:57:37 Notice: Notice (8): Undefined property: stdClass::$option_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 762]
+
+
+2018-01-08 11:58:05 Notice: Notice (8): Undefined property: stdClass::$option_step in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 761]
+
+
+2018-01-08 11:58:05 Notice: Notice (8): Undefined property: stdClass::$option_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 762]
+
+
+2018-01-08 11:58:05 Notice: Notice (8): Undefined property: stdClass::$option_step in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 761]
+
+
+2018-01-08 11:58:05 Notice: Notice (8): Undefined property: stdClass::$option_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 762]
+
+
+2018-01-08 11:58:35 Notice: Notice (8): Undefined property: stdClass::$text_quantity in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 768]
+
+
+2018-01-08 11:58:35 Notice: Notice (8): Undefined property: stdClass::$question_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 836]
+
+
+2018-01-08 11:58:35 Notice: Notice (8): Undefined property: stdClass::$answer_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 837]
+
+
+2018-01-08 11:58:35 Notice: Notice (8): Undefined property: stdClass::$question_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 836]
+
+
+2018-01-08 11:58:35 Notice: Notice (8): Undefined property: stdClass::$answer_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 837]
+
+
+2018-01-08 11:59:31 Notice: Notice (8): Undefined property: stdClass::$option_step in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 761]
+
+
+2018-01-08 11:59:31 Notice: Notice (8): Undefined property: stdClass::$option_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 762]
+
+
+2018-01-08 11:59:31 Notice: Notice (8): Undefined property: stdClass::$option_step in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 761]
+
+
+2018-01-08 11:59:31 Notice: Notice (8): Undefined property: stdClass::$option_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 762]
+
+
+2018-01-08 11:59:33 Notice: Notice (8): Undefined property: stdClass::$text_quantity in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 768]
+
+
+2018-01-08 12:00:16 Notice: Notice (8): Undefined property: stdClass::$text_quantity in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 768]
+
+
+2018-01-08 12:01:15 Notice: Notice (8): Undefined property: stdClass::$question_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 836]
+
+
+2018-01-08 12:01:15 Notice: Notice (8): Undefined property: stdClass::$answer_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 837]
+
+
+2018-01-08 12:01:15 Notice: Notice (8): Undefined property: stdClass::$question_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 836]
+
+
+2018-01-08 12:01:15 Notice: Notice (8): Undefined property: stdClass::$answer_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 837]
+
+
+2018-01-18 16:05:05 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/add.ctp, line 50]
+
+
+2018-01-18 16:06:21 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/add.ctp, line 50]
+
+
+2018-01-18 16:06:43 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/add.ctp, line 50]
+
+
+2018-01-18 16:09:20 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/add.ctp, line 81]
+
+
+2018-01-19 12:48:28 Notice: Notice (8): Undefined variable: sendMsg in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 118]
+
+
+2018-01-19 12:51:48 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/membership_signup.ctp, line 54]
+
+
+2018-01-19 19:10:28 Notice: Notice (8): Undefined index: shift_start in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 65]
+
+
+2018-01-19 19:10:28 Notice: Notice (8): Undefined index: shift_end in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 65]
+
+
+2018-01-19 19:10:28 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 68]
+
+
+2018-01-19 19:10:28 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 70]
+
+
+2018-01-19 19:11:09 Notice: Notice (8): Undefined index: shift_start in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 65]
+
+
+2018-01-19 19:11:09 Notice: Notice (8): Undefined index: shift_end in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 65]
+
+
+2018-01-19 19:11:09 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 68]
+
+
+2018-01-19 19:11:09 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 70]
+
+
+2018-01-19 19:11:40 Notice: Notice (8): Undefined index: shift_start in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 65]
+
+
+2018-01-19 19:11:40 Notice: Notice (8): Undefined index: shift_end in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 65]
+
+
+2018-01-19 19:11:40 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 68]
+
+
+2018-01-19 19:11:40 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 70]
+
+
+2018-01-19 19:11:48 Notice: Notice (8): Undefined index: shift_end in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 65]
+
+
+2018-01-19 19:11:48 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 68]
+
+
+2018-01-19 19:11:48 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 70]
+
+
+2018-01-19 19:12:01 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 68]
+
+
+2018-01-19 19:12:01 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 70]
+
+

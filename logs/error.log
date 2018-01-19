@@ -13401,3 +13401,360 @@ Request URL: /hmen/webservices/service/questions/1
 Request URL: /hmen/webservices/service/questions/1
 2018-01-06 19:57:23 Error: [PDOException] SQLSTATE[HY000] [2002] Connection refused
 Request URL: /hmen/webservices/service/questions/1
+2018-01-18 15:48:26 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Members could not be found.
+Exception Attributes: array (
+  'class' => 'Members',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/members
+2018-01-18 15:48:28 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Members could not be found.
+Exception Attributes: array (
+  'class' => 'Members',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/members
+2018-01-18 15:48:29 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Members could not be found.
+Exception Attributes: array (
+  'class' => 'Members',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/members
+2018-01-18 15:49:19 Error: Fatal Error (1): Call to a member function getVendors() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 52]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-18 15:49:19 Error: [Cake\Error\FatalErrorException] Call to a member function getVendors() on boolean
+Request URL: /hmen/members
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 52)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-18 15:49:36 Error: [BadMethodCallException] Unknown method "getMembers"
+Request URL: /hmen/members
+2018-01-18 15:52:17 Error: [BadMethodCallException] Unknown method "getMembers"
+Request URL: /hmen/members
+2018-01-18 15:52:35 Error: [Cake\View\Exception\MissingTemplateException] Template file "Members/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Members/index.ctp',
+)
+Request URL: /hmen/members
+2018-01-18 16:05:37 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /hmen/members/add
+2018-01-18 16:05:45 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /hmen/members/add
+2018-01-18 16:05:46 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /hmen/members/add
+2018-01-18 16:05:46 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /hmen/members/add
+2018-01-18 16:05:47 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /hmen/members/add
+2018-01-18 16:05:59 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /hmen/members/add
+2018-01-18 16:06:00 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /hmen/members/add
+2018-01-18 16:06:08 Error: [RuntimeException] Unable to find table class for current entity
+Request URL: /hmen/members/add
+2018-01-18 18:12:46 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'HmenPlan.phone_no' in 'field list'
+Request URL: /hmen/members/add
+2018-01-18 18:15:27 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'HmenPlan.phone_no' in 'field list'
+Request URL: /hmen/members/add
+2018-01-19 12:48:07 Error: [Cake\View\Exception\MissingTemplateException] Template file "Element/membership_signup.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Element/membership_signup.ctp',
+)
+Request URL: /hmen/members/add
+2018-01-19 12:48:28 Error: [Cake\View\Exception\MissingTemplateException] Template file "Element/membership_signup.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Element/membership_signup.ctp',
+)
+Request URL: /hmen/members/add
+2018-01-19 12:48:51 Error: [Cake\View\Exception\MissingTemplateException] Template file "Element/membership_signup.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Element/membership_signup.ctp',
+)
+Request URL: /hmen/members/add
+2018-01-19 12:48:57 Error: [Cake\View\Exception\MissingTemplateException] Template file "Element/membership_signup.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Element/membership_signup.ctp',
+)
+Request URL: /hmen/members/add
+2018-01-19 16:35:50 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-01-19 16:35:50 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-01-19 16:35:50 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-01-19 16:36:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-01-19 16:36:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-01-19 16:36:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-01-19 16:36:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-01-19 16:38:27 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-01-19 16:38:27 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-01-19 16:38:27 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-01-19 16:39:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-01-19 16:39:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-01-19 16:39:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-01-19 16:39:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-01-19 17:03:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-01-19 17:03:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-01-19 17:03:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-01-19 17:03:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-01-19 17:06:38 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-01-19 17:06:38 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-01-19 17:06:38 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-01-19 17:06:58 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-01-19 17:12:10 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_type' in 'where clause'
+Request URL: /hmen/members/add
+2018-01-19 17:14:04 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_type' in 'where clause'
+Request URL: /hmen/members/add
+2018-01-19 17:22:42 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-01-19 17:22:42 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-01-19 17:22:45 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-01-19 17:29:26 Error: Fatal Error (1): Call to undefined method App\Controller\MembersController::getReferKey() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 110]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-19 17:29:26 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\MembersController::getReferKey()
+Request URL: /hmen/members/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 110)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-19 18:02:09 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-01-19 18:02:09 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-01-19 18:02:09 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-01-19 18:02:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-01-19 19:15:11 Error: Fatal Error (1): Call to a member function getVendorId() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 304]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-19 19:15:11 Error: [Cake\Error\FatalErrorException] Call to a member function getVendorId() on boolean
+Request URL: /hmen/members/view/11
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 304)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

@@ -57,6 +57,11 @@ $(function () {
         create: false,
     });
 
+    var $select = $('#payment-type').selectize({
+        allowEmptyOption: true,
+        create: false,
+    });
+
     var $select = $('#answer-type').selectize({
         allowEmptyOption: true,
         create: false,
@@ -224,6 +229,23 @@ $(document).ready(function () {
             while (container.hasChildNodes()) {
                 container.removeChild(container.lastChild);
             }
+        }
+    });
+
+    $("#payment-type").change(function () {
+        var values = $(this).val();
+        if(values == 'CHEQUE') {
+            $('#chequeDetails').css('display','block');
+            $('#transcationDetails').css('display','none');
+            $('#otherDetails').css('display','none');
+        } else if (values == 'UPI') {
+            $('#transcationDetails').css('display','block');
+            $('#chequeDetails').css('display','none');
+            $('#otherDetails').css('display','none');
+        } else if (values == 'OTHER') {
+            $('#otherDetails').css('display','block');
+            $('#chequeDetails').css('display','none');
+            $('#transcationDetails').css('display','none');
         }
     });
 
@@ -713,6 +735,21 @@ $(document).ready(function () {
     $('.dateField').datepicker({
         dateFormat: 'dd-mm-yy',
         minDate: 0,
+    });
+    $('.pastDate').datepicker({
+        dateFormat: 'dd-mm-yy',
+        maxDate: 0,
+    });
+    $('.aniversary_date').datepicker({
+        dateFormat: 'dd-mm-yy',
+        minDate: 0,
+    });
+    $('.aniversary_date').datepicker({
+        dateFormat: 'dd-mm-yy',
+        minDate: 0,
+    });
+    $('.datepicker').datepicker({
+        dateFormat: 'dd-mm-yy',
     });
     $('.todayDate').val($.datepicker.formatDate("dd-mm-yy", new Date()));
     var myDate = new Date();
