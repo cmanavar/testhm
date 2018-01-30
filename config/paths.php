@@ -124,13 +124,13 @@ define('REFERRAL_COMISSION', 100.00);
 define('EMAIL_FROM_NAME', 'Uncode Lab');
 define('EMAIL_FROM_EMAIL_ADDRESS', 'uncodelab@gmail.com');
 
-
 // Msg Title for Referral
 define('MSG_TYPE_REFERRAL', 'REFERRAL');
 define('MSG_TYPE_CASHBACK', 'CASHBACK');
 define('MSG_TYPE_OFFER', 'OFFER');
 define('MSG_TYPE_OTHER', 'OTHER');
 define('MSG_TITLE_REFERRAL', 'Rewarded for refer');
+define('MSG_TITLE_CASHBACK_PLAN', 'Membership Plan Cashback');
 
 
 
@@ -140,4 +140,8 @@ define('COMPANY_NAME_EXCEL', 'H-MEN');
 define('ADDRESS_1_EXCEL', '218,Devashish Business park, MochaCafe Building,');
 define('ADDRESS_2_EXCEL', 'Opp. S.G Highway Bodakdev, Ahmedabad');
 define('MOBILE_PHONE_EXCEL', '7096460460');
+
+// RAZORPAY DETAILS:
+//define('RAZORPAY_KEY_ID','rzp_test_zNXT8SF5EYUl5S');
+//define('RAZORPAY_KEY_SECRET','kpV8ky5ehex7bsX5qhLjb36Y');
 

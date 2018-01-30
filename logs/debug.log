@@ -8533,3 +8533,21 @@
 2018-01-29 20:20:05 Notice: Notice (8): Undefined variable: haystack in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php, line 44]
 
 
+2018-01-30 14:12:05 Notice: Notice (8): Undefined index: user_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 209]
+
+
+2018-01-30 14:12:05 Notice: Notice (8): Undefined index: user_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 211]
+
+
+2018-01-30 14:14:23 Notice: Notice (8): Undefined index: user_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 210]
+
+
+2018-01-30 14:14:23 Notice: Notice (8): Undefined index: user_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 212]
+
+
+2018-01-30 14:18:10 Notice: Notice (8): Undefined index: user_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 210]
+
+
+2018-01-30 14:18:10 Notice: Notice (8): Undefined index: user_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 212]
+
+

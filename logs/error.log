@@ -17698,3 +17698,131 @@ Request URL: /hmen/users/hmen
 2018-01-29 22:08:11 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
 
 
+2018-01-30 12:47:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Payment could not be found.
+Exception Attributes: array (
+  'class' => 'Payment',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/payment/abc
+2018-01-30 12:47:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Payment could not be found.
+Exception Attributes: array (
+  'class' => 'Payment',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/payment/abc
+2018-01-30 12:47:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Payment could not be found.
+Exception Attributes: array (
+  'class' => 'Payment',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/payment/abc
+2018-01-30 12:48:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Payment could not be found.
+Exception Attributes: array (
+  'class' => 'Payment',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/payment/abc
+2018-01-30 12:48:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Payment could not be found.
+Exception Attributes: array (
+  'class' => 'Payment',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/payment/abc/
+2018-01-30 14:08:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-01-30 14:08:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-01-30 14:08:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-01-30 14:08:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-01-30 14:13:43 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-01-30 14:13:43 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-01-30 14:13:43 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-01-30 14:17:34 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-01-30 14:17:34 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-01-30 14:17:34 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-01-30 14:17:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png

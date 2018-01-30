@@ -1844,6 +1844,8 @@ class WebservicesController extends AppController {
         if ($user_id) {
             $this->loadModel('Users');
             $this->loadModel('UserDetails');
+            $this->loadModel('Wallets');
+            $this->loadModel('Plans');
             $user = $this->Users->newEntity();
             $requestArr = $this->getInputArr();
             $myfile = fopen("newfileMember.txt", "w") or die("Unable to open file!");
@@ -1985,6 +1987,16 @@ class WebservicesController extends AppController {
                                 $users->cheque_date = (isset($requestArr['cheque_date']) && $requestArr['cheque_date'] != '') ? date('Y-m-d', strtotime($requestArr['cheque_date'])) : date('Y-m-d', strtotime('1980-01-01'));
                                 $users->created = date("Y-m-d H:i:s");
                                 $users->created_by = $user_id;
+                                $planDetails = $this->Plans->find('all')->where(['id' => $plan_id])->hydrate(false)->first();
+                                $vW = [];
+                                $vW['amount'] = $planDetails['cashback'];
+                                $vW['wallet_type'] = 'CREDIT';
+                                $vW['purpose'] = 'CASHBACK';
+                                $vW['purpose_id'] = 0;
+                                $walletId = $this->addWalletAmount($userId, $vW['amount'], $vW['wallet_type'], $vW['purpose'], $vW['purpose_id']);
+                                if ($walletId) {
+                                    $this->newMsg($userId, MSG_TITLE_REFERRAL, MSG_TYPE_CASHBACK, 'Rs. ' . $planDetails['cashback'] . ' Cashback for Membership');
+                                }
                                 if ($this->UserDetails->save($users)) {
                                     $this->success(__('THE MEMBER HAS BEEN SAVED.'));
                                 } else {

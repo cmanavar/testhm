@@ -68,6 +68,7 @@ class MembersController extends AppController {
         $this->loadModel('Plans');
         $this->loadModel('Users');
         $this->loadModel('UserDetails');
+        $this->loadModel('Wallets');
         $planLists = $this->Plans->find('list', [ 'keyField' => 'id', 'valueField' => 'name'])->hydrate(false)->toArray();
         $this->set('planLists', $planLists);
         $referUsers = $this->Users->find('all')->select(['id', 'name', 'phone_no'])->where(['user_type' => 'MEMBERSHIP'])->hydrate(false)->toArray();
@@ -108,7 +109,7 @@ class MembersController extends AppController {
                         $userData['city'] = (isset($this->request->data['city']) && $this->request->data['city'] != '') ? $this->request->data['city'] : '';
                         $userData['signup_with'] = 'SELF';
                         $userData['user_type'] = 'MEMBERSHIP';
-                        $userData['plan_id'] = (isset($this->request->data['plan_id']) && $this->request->data['plan_id'] != '') ? $this->request->data['plan_id'] : '';
+                        $userData['plan_id'] = $plan_id = (isset($this->request->data['plan_id']) && $this->request->data['plan_id'] != '') ? $this->request->data['plan_id'] : '';
                         $userData['ip_address'] = $this->get_client_ip();
                         $userData['refer_key'] = $this->getReferKey($name, $phone_no);
                         $userData['referral_id'] = (isset($this->request->data['refer_id']) && $this->request->data['refer_id'] != '') ? $this->request->data['refer_id'] : 0;
@@ -200,6 +201,16 @@ class MembersController extends AppController {
                                 $users->cheque_date = (isset($this->request->data['cheque_date']) && $this->request->data['cheque_date'] != '') ? date('Y-m-d', strtotime($this->request->data['cheque_date'])) : date('Y-m-d', strtotime('1980-01-01'));
                                 $users->created = date("Y-m-d H:i:s");
                                 $users->created_by = $this->request->session()->read('Auth.User.id');
+                                $planDetails = $this->Plans->find('all')->where(['id' => $plan_id])->hydrate(false)->first();
+                                $vW = [];
+                                $vW['amount'] = $planDetails['cashback'];
+                                $vW['wallet_type'] = 'CREDIT';
+                                $vW['purpose'] = 'CASHBACK';
+                                $vW['purpose_id'] = 0;
+                                $walletId = $this->addWalletAmount($userId, $vW['amount'], $vW['wallet_type'], $vW['purpose'], $vW['purpose_id']);
+                                if ($walletId) {
+                                    $this->newMsg($userId, MSG_TITLE_REFERRAL, MSG_TYPE_CASHBACK, 'Rs. ' . $planDetails['cashback'] . ' Cashback for Membership');
+                                }
                                 if ($this->UserDetails->save($users)) {
                                     $this->Flash->success(__('THE MEMBER HAS BEEN SAVED.'));
                                     return $this->redirect(['action' => 'index']);
