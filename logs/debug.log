@@ -8551,3 +8551,15 @@
 2018-01-30 14:18:10 Notice: Notice (8): Undefined index: user_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 212]
 
 
+2018-01-30 17:51:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PaymentsController.php, line 82]
+
+
+2018-01-30 17:51:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PaymentsController.php, line 83]
+
+
+2018-01-30 18:20:42 Notice: Notice (8): Undefined index: hmen_order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PaymentsController.php, line 75]
+
+
+2018-01-30 18:55:57 Notice: Notice (8): Undefined variable: secret in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PaymentsController.php, line 187]
+
+

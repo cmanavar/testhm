@@ -17845,3 +17845,134 @@ Exception Attributes: array (
   '_ext' => NULL,
 )
 Request URL: /hmen/img/services/square/201801301533075a704.png
+2018-01-30 17:33:21 Error: [Cake\View\Exception\MissingTemplateException] Template file "Payments/order_create.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Payments/order_create.ctp',
+)
+Request URL: /hmen/webservices/payment/order/create
+2018-01-30 17:48:33 Error: [Cake\View\Exception\MissingTemplateException] Template file "Payments/order_create.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Payments/order_create.ctp',
+)
+Request URL: /hmen/webservices/payment/order/create
+2018-01-30 17:49:27 Error: [Cake\View\Exception\MissingTemplateException] Template file "Payments/order_create.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Payments/order_create.ctp',
+)
+Request URL: /hmen/webservices/payment/order/create
+2018-01-30 17:49:42 Error: [Cake\View\Exception\MissingTemplateException] Template file "Payments/order_create.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Payments/order_create.ctp',
+)
+Request URL: /hmen/webservices/payment/order/create
+2018-01-30 17:49:51 Error: [Cake\View\Exception\MissingTemplateException] Template file "Payments/order_create.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Payments/order_create.ctp',
+)
+Request URL: /hmen/webservices/payment/order/create
+2018-01-30 17:49:53 Error: [Cake\View\Exception\MissingTemplateException] Template file "Payments/order_create.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Payments/order_create.ctp',
+)
+Request URL: /hmen/webservices/payment/order/create
+2018-01-30 18:10:23 Warning: Warning (2): curl_setopt(): You must pass either an object or an array with the CURLOPT_HTTPHEADER argument in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PaymentsController.php, line 88]
+
+
+2018-01-30 18:20:18 Warning: Warning (2): Illegal string offset 'id' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PaymentsController.php, line 106]
+
+
+2018-01-30 18:20:18 Warning: Warning (2): Illegal string offset 'amount' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PaymentsController.php, line 107]
+
+
+2018-01-30 18:20:18 Warning: Warning (2): Illegal string offset 'id' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PaymentsController.php, line 120]
+
+
+2018-01-30 18:20:18 Warning: Warning (2): Illegal string offset 'amount' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PaymentsController.php, line 121]
+
+
+2018-01-30 18:20:18 Warning: Warning (2): Illegal string offset 'receipt' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PaymentsController.php, line 122]
+
+
+2018-01-30 18:20:18 Warning: Warning (2): Illegal string offset 'created_at' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PaymentsController.php, line 123]
+
+
+2018-01-30 18:20:42 Error: Fatal Error (1): Undefined class constant 'FULL' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/I18n/Time.php, line 597]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-30 18:20:42 Error: [Cake\Error\FatalErrorException] Undefined class constant 'FULL'
+Request URL: /hmen/webservices/payment/order/create
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Undefined class...', '/Applications/X...', 597)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-30 18:20:57 Error: Fatal Error (1): Undefined class constant 'FULL' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/I18n/Time.php, line 597]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-30 18:20:57 Error: [Cake\Error\FatalErrorException] Undefined class constant 'FULL'
+Request URL: /hmen/webservices/payment/order/create
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Undefined class...', '/Applications/X...', 597)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-30 18:22:51 Error: Fatal Error (1): Undefined class constant 'FULL' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/I18n/Time.php, line 597]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-30 18:22:51 Error: [Cake\Error\FatalErrorException] Undefined class constant 'FULL'
+Request URL: /hmen/webservices/payment/order/create
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Undefined class...', '/Applications/X...', 597)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-30 18:22:52 Error: Fatal Error (1): Undefined class constant 'FULL' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/I18n/Time.php, line 597]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-30 18:22:52 Error: [Cake\Error\FatalErrorException] Undefined class constant 'FULL'
+Request URL: /hmen/webservices/payment/order/create
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Undefined class...', '/Applications/X...', 597)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-30 18:24:08 Error: Fatal Error (1): Call to undefined method Cake\I18n\Time::date() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PaymentsController.php, line 76]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-30 18:24:08 Error: [Cake\Error\FatalErrorException] Call to undefined method Cake\I18n\Time::date()
+Request URL: /hmen/webservices/payment/order/create
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 76)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

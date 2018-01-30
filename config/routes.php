@@ -96,6 +96,9 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/appoinment/details', ['controller' => 'Webservices', 'action' => 'appoinmentDetails']);
     $routes->connect('/webservices/appoinment/completed', ['controller' => 'Webservices', 'action' => 'appoinmentCompleted']);
     $routes->connect('/webservices/appoinment/declined', ['controller' => 'Webservices', 'action' => 'appoinmentDeclined']);
+    $routes->connect('/webservices/payment/order/create', ['controller' => 'Payments', 'action' => 'orderCreate']);
+    $routes->connect('/webservices/payment/response', ['controller' => 'Payments', 'action' => 'storeResponse']);
+    
     $routes->connect('/test', ['controller' => 'Webservices', 'action' => 'testNotifications']);
     
     

@@ -142,6 +142,6 @@ define('ADDRESS_2_EXCEL', 'Opp. S.G Highway Bodakdev, Ahmedabad');
 define('MOBILE_PHONE_EXCEL', '7096460460');
 
 // RAZORPAY DETAILS:
-//define('RAZORPAY_KEY_ID','rzp_test_zNXT8SF5EYUl5S');
-//define('RAZORPAY_KEY_SECRET','kpV8ky5ehex7bsX5qhLjb36Y');
+define('RAZORPAY_KEY_ID','rzp_test_zNXT8SF5EYUl5S');
+define('RAZORPAY_KEY_SECRET','kpV8ky5ehex7bsX5qhLjb36Y');
 
