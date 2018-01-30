@@ -155,10 +155,10 @@ class ServicesController extends AppController {
                     $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
                     $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
                     $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
-                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_ICON_PATH)) {
-                        mkdir('img/' . SERVICE_ICON_PATH, 0777, true);
+                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_BANNER_PATH)) {
+                        mkdir('img/' . SERVICE_BANNER_PATH, 0777, true);
                     }
-                    move_uploaded_file($this->request->data['banner']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_ICON_PATH . $filename);
+                    move_uploaded_file($this->request->data['banner']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_BANNER_PATH . $filename);
                     $service['banner_image'] = $filename;
                 }
                 if (isset($this->request->data['square']['name']) && $this->request->data['square']['name'] != '') {
@@ -167,10 +167,10 @@ class ServicesController extends AppController {
                     $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
                     $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
                     $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
-                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_ICON_PATH)) {
-                        mkdir('img/' . SERVICE_ICON_PATH, 0777, true);
+                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_SQUARE_BANNER_PATH)) {
+                        mkdir('img/' . SERVICE_SQUARE_BANNER_PATH, 0777, true);
                     }
-                    move_uploaded_file($this->request->data['square']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_ICON_PATH . $filename);
+                    move_uploaded_file($this->request->data['square']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_SQUARE_BANNER_PATH . $filename);
                     $service['square_image'] = $filename;
                 }
                 $service->created = date("Y-m-d H:i:s");

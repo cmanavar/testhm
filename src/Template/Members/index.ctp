@@ -71,7 +71,7 @@
                                                                             <td>: <?php echo $val['email']; ?></td>
                                                                         </tr>
                                                                         <tr>
-                                                                            <td width="16%"><b>PHONE NO </b></td>
+                                                                            <td width="70px;"><b>PHONE NO </b></td>
                                                                             <td>: <?php echo $val['phone_no']; ?></td>
                                                                         </tr>
                                                                     </table>
@@ -79,12 +79,12 @@
                                                                 <td>
                                                                     <table>
                                                                         <tr>
-                                                                            <td width="57%"><b>PAYMENT TYPE </b></td>
+                                                                            <td width="90px"><b>Payment Type</b></td>
                                                                             <td>: <?php echo $val['payment_type']; ?></td>
                                                                         </tr>
                                                                         <?php if ($val['payment_type'] == 'CHEQUE') { ?>
                                                                             <tr>
-                                                                                <td><b>Bank Name: </b></td>
+                                                                                <td><b>Bank Name </b></td>
                                                                                 <td>: <?php echo $val['bank_name']; ?></td>
                                                                             </tr>
                                                                             <tr>
@@ -98,7 +98,8 @@
                                                                         <?php } ?>
                                                                         <?php if ($val['payment_type'] == 'UPI') { ?>
                                                                             <tr>
-                                                                                <td><b>Transaction Id : </b><?php echo $val['transcation_id']; ?></td>
+                                                                                <td width=""><b>Transaction Id</b></td>
+                                                                                <td>: <?php echo $val['transcation_id']; ?></td>
                                                                             </tr>
                                                                         <?php } ?>
                                                                     </table>

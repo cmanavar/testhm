@@ -126,7 +126,7 @@ define('EMAIL_FROM_EMAIL_ADDRESS', 'uncodelab@gmail.com');
 
 // Msg Title for Referral
 define('MSG_TYPE_REFERRAL', 'REFERRAL');
-define('MSG_TYPE_CASHBACK', 'CASHBACK');
+define('MSG_TYPE_CASHBACK', 'MEMBERSHIP_CASHBACK');
 define('MSG_TYPE_OFFER', 'OFFER');
 define('MSG_TYPE_OTHER', 'OTHER');
 define('MSG_TITLE_REFERRAL', 'Rewarded for refer');

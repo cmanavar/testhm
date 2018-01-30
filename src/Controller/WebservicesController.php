@@ -1499,6 +1499,9 @@ class WebservicesController extends AppController {
                     } else if ($history['purpose'] == 'CASHBACK') {
                         $orderId = $this->getOrderId($history['purpose_id']);
                         $tmp['details'] = 'Received Cashback for Order. id #' . $orderId;
+                    } else if ($history['purpose'] == 'MEMBERSHIP_CASHBACK') {
+                        $orderId = $this->getOrderId($history['purpose_id']);
+                        $tmp['details'] = 'Received Cashback for Membership Plan Signup';
                     }
                     $rslt['data'][] = $tmp;
                 }
@@ -1848,6 +1851,7 @@ class WebservicesController extends AppController {
             $this->loadModel('Plans');
             $user = $this->Users->newEntity();
             $requestArr = $this->getInputArr();
+            //pr($requestArr); exit;
             $myfile = fopen("newfileMember.txt", "w") or die("Unable to open file!");
             $txt = "Array\n";
             fwrite($myfile, $txt);
@@ -1884,7 +1888,7 @@ class WebservicesController extends AppController {
                         $userData['city'] = (isset($requestArr['city']) && $requestArr['city'] != '') ? $requestArr['city'] : '';
                         $userData['signup_with'] = 'SELF';
                         $userData['user_type'] = 'MEMBERSHIP';
-                        $userData['plan_id'] = (isset($requestArr['plan_id']) && $requestArr['plan_id'] != '') ? $requestArr['plan_id'] : '';
+                        $userData['plan_id'] = $plan_id = (isset($requestArr['plan_id']) && $requestArr['plan_id'] != '') ? $requestArr['plan_id'] : '';
                         $userData['ip_address'] = (isset($requestArr['ip_address']) && $requestArr['ip_address'] != '') ? $requestArr['ip_address'] : '';
                         $userData['refer_key'] = $this->getReferKey($name, $phone_no);
                         $userData['referral_id'] = (isset($requestArr['referral_id']) && $requestArr['referral_id'] != '') ? $requestArr['referral_id'] : 0;
@@ -1965,11 +1969,6 @@ class WebservicesController extends AppController {
                                 $users = $this->UserDetails->newEntity();
                                 $userData = [];
                                 $userData['user_id'] = $userId;
-                                $userData['person_1'] = (isset($requestArr['person_1']) && $requestArr['person_1'] != '') ? $requestArr['person_1'] : '';
-                                $userData['person_2'] = (isset($requestArr['person_2']) && $requestArr['person_2'] != '') ? $requestArr['person_2'] : '';
-                                $userData['person_3'] = (isset($requestArr['person_3']) && $requestArr['person_3'] != '') ? $requestArr['person_3'] : '';
-                                $userData['person_4'] = (isset($requestArr['person_4']) && $requestArr['person_4'] != '') ? $requestArr['person_4'] : '';
-                                $userData['person_5'] = (isset($requestArr['person_5']) && $requestArr['person_5'] != '') ? $requestArr['person_5'] : '';
                                 $userData['occupation'] = (isset($requestArr['occupation']) && $requestArr['occupation'] != '') ? $requestArr['occupation'] : '';
                                 $userData['company_name'] = (isset($requestArr['company_name']) && $requestArr['company_name'] != '') ? $requestArr['company_name'] : '';
                                 $userData['company_website'] = (isset($requestArr['company_website']) && $requestArr['company_website'] != '') ? $requestArr['company_website'] : '';
@@ -1978,24 +1977,41 @@ class WebservicesController extends AppController {
                                 $userData['cheque_no'] = $chequeNo;
                                 $userData['transcation_id'] = $transcationId;
                                 $userData['other_details'] = $otherDetails;
+                                $person = [];
+                                $birthdate = [];
+                                $tindex = 1;
+                                foreach ($requestArr['persons'] as $key => $val) {
+                                    if ($tindex < 6) {
+                                        $person[$tindex] = $val->person;
+                                        $birthdate[$tindex] = $val->birthdate;
+                                    }
+                                    $tindex++;
+                                }
+                                $userData['person_1'] = (isset($person[1]) && $person[1] != '') ? $person[1] : '';
+                                $userData['person_2'] = (isset($person[2]) && $person[2] != '') ? $person[2] : '';
+                                $userData['person_3'] = (isset($person[3]) && $person[3] != '') ? $person[3] : '';
+                                $userData['person_4'] = (isset($person[4]) && $person[4] != '') ? $person[4] : '';
+                                $userData['person_5'] = (isset($person[5]) && $person[5] != '') ? $person[5] : '';
                                 $users = $this->UserDetails->patchEntity($users, $userData);
-                                $users->birthdate_1 = (isset($requestArr['birthdate_1']) && $requestArr['birthdate_1'] != '') ? date('Y-m-d', strtotime($requestArr['birthdate_1'])) : date('Y-m-d', strtotime('1980-01-01'));
-                                $users->birthdate_2 = (isset($requestArr['birthdate_2']) && $requestArr['birthdate_2'] != '') ? date('Y-m-d', strtotime($requestArr['birthdate_2'])) : date('Y-m-d', strtotime('1980-01-01'));
-                                $users->birthdate_3 = (isset($requestArr['birthdate_3']) && $requestArr['birthdate_3'] != '') ? date('Y-m-d', strtotime($requestArr['birthdate_3'])) : date('Y-m-d', strtotime('1980-01-01'));
-                                $users->birthdate_4 = (isset($requestArr['birthdate_4']) && $requestArr['birthdate_4'] != '') ? date('Y-m-d', strtotime($requestArr['birthdate_4'])) : date('Y-m-d', strtotime('1980-01-01'));
-                                $users->birthdate_5 = (isset($requestArr['birthdate_5']) && $requestArr['birthdate_5'] != '') ? date('Y-m-d', strtotime($requestArr['birthdate_5'])) : date('Y-m-d', strtotime('1980-01-01'));
+                                $users->birthdate_1 = (isset($birthdate[1]) && $birthdate[1] != '') ? date('Y-m-d', strtotime($birthdate[1])) : date('Y-m-d', strtotime('1980-01-01'));
+                                $users->birthdate_2 = (isset($birthdate[2]) && $birthdate[2] != '') ? date('Y-m-d', strtotime($birthdate[2])) : date('Y-m-d', strtotime('1980-01-01'));
+                                $users->birthdate_3 = (isset($birthdate[3]) && $birthdate[3] != '') ? date('Y-m-d', strtotime($birthdate[3])) : date('Y-m-d', strtotime('1980-01-01'));
+                                $users->birthdate_4 = (isset($birthdate[4]) && $birthdate[4] != '') ? date('Y-m-d', strtotime($birthdate[4])) : date('Y-m-d', strtotime('1980-01-01'));
+                                $users->birthdate_5 = (isset($birthdate[5]) && $birthdate[5] != '') ? date('Y-m-d', strtotime($birthdate[5])) : date('Y-m-d', strtotime('1980-01-01'));
                                 $users->cheque_date = (isset($requestArr['cheque_date']) && $requestArr['cheque_date'] != '') ? date('Y-m-d', strtotime($requestArr['cheque_date'])) : date('Y-m-d', strtotime('1980-01-01'));
                                 $users->created = date("Y-m-d H:i:s");
                                 $users->created_by = $user_id;
                                 $planDetails = $this->Plans->find('all')->where(['id' => $plan_id])->hydrate(false)->first();
-                                $vW = [];
-                                $vW['amount'] = $planDetails['cashback'];
-                                $vW['wallet_type'] = 'CREDIT';
-                                $vW['purpose'] = 'CASHBACK';
-                                $vW['purpose_id'] = 0;
-                                $walletId = $this->addWalletAmount($userId, $vW['amount'], $vW['wallet_type'], $vW['purpose'], $vW['purpose_id']);
-                                if ($walletId) {
-                                    $this->newMsg($userId, MSG_TITLE_REFERRAL, MSG_TYPE_CASHBACK, 'Rs. ' . $planDetails['cashback'] . ' Cashback for Membership');
+                                if ($planDetails['cashback'] != 0.00) {
+                                    $vW = [];
+                                    $vW['amount'] = $planDetails['cashback'];
+                                    $vW['wallet_type'] = 'CREDIT';
+                                    $vW['purpose'] = 'MEMBERSHIP_CASHBACK';
+                                    $vW['purpose_id'] = 0;
+                                    $walletId = $this->addWalletAmount($userId, $vW['amount'], $vW['wallet_type'], $vW['purpose'], $vW['purpose_id']);
+                                    if ($walletId) {
+                                        $this->newMsg($userId, MSG_TITLE_REFERRAL, MSG_TYPE_CASHBACK, 'Rs. ' . $planDetails['cashback'] . ' Cashback for Membership');
+                                    }
                                 }
                                 if ($this->UserDetails->save($users)) {
                                     $this->success(__('THE MEMBER HAS BEEN SAVED.'));

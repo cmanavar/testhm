@@ -201,7 +201,12 @@ class AppController extends Controller {
     public function checkVerifyApiKey($user_type) {
         $this->loadModel('UserMapping');
         $api_key = $this->getAPIKey();
-        $conditionArr = ['user_type' => $user_type, 'mapping_key' => 'api_key', 'mapping_value' => $api_key];
+        if ($user_type == 'CUSTOMER') {
+            $conditionArr = ['user_type IN' => ['CUSTOMER', 'MEMBERSHIP'], 'mapping_key' => 'api_key', 'mapping_value' => $api_key];
+        } else {
+            $conditionArr = ['user_type' => $user_type, 'mapping_key' => 'api_key', 'mapping_value' => $api_key];
+        }
+        //pr($conditionArr); exit;
         $userMapping = $this->UserMapping->find('all')->where($conditionArr)->hydrate(false)->first();
         if (!empty($userMapping)) {
             return $userMapping['user_id'];
@@ -387,7 +392,7 @@ class AppController extends Controller {
             if (in_array($this->name, ['ServiceCategory', 'Services', 'Settings', 'Reports'])) {
                 $this->redirect(array('controller' => 'Pages', 'action' => 'permissiondenied'));
             }
-            if(($this->name == 'Users') && ($this->request->action != 'appuser')) {
+            if (($this->name == 'Users') && ($this->request->action != 'appuser')) {
                 $this->redirect(array('controller' => 'Pages', 'action' => 'permissiondenied'));
             }
         }
@@ -396,7 +401,6 @@ class AppController extends Controller {
                 $this->redirect(array('controller' => 'Pages', 'action' => 'permissiondenied'));
             }
         }
-        
     }
 
 }

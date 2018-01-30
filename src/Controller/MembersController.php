@@ -202,14 +202,16 @@ class MembersController extends AppController {
                                 $users->created = date("Y-m-d H:i:s");
                                 $users->created_by = $this->request->session()->read('Auth.User.id');
                                 $planDetails = $this->Plans->find('all')->where(['id' => $plan_id])->hydrate(false)->first();
-                                $vW = [];
-                                $vW['amount'] = $planDetails['cashback'];
-                                $vW['wallet_type'] = 'CREDIT';
-                                $vW['purpose'] = 'CASHBACK';
-                                $vW['purpose_id'] = 0;
-                                $walletId = $this->addWalletAmount($userId, $vW['amount'], $vW['wallet_type'], $vW['purpose'], $vW['purpose_id']);
-                                if ($walletId) {
-                                    $this->newMsg($userId, MSG_TITLE_REFERRAL, MSG_TYPE_CASHBACK, 'Rs. ' . $planDetails['cashback'] . ' Cashback for Membership');
+                                if ($planDetails['cashback'] != 0.00) {
+                                    $vW = [];
+                                    $vW['amount'] = $planDetails['cashback'];
+                                    $vW['wallet_type'] = 'CREDIT';
+                                    $vW['purpose'] = 'MEMBERSHIP_CASHBACK';
+                                    $vW['purpose_id'] = 0;
+                                    $walletId = $this->addWalletAmount($userId, $vW['amount'], $vW['wallet_type'], $vW['purpose'], $vW['purpose_id']);
+                                    if ($walletId) {
+                                        $this->newMsg($userId, MSG_TITLE_REFERRAL, MSG_TYPE_CASHBACK, 'Rs. ' . $planDetails['cashback'] . ' Cashback for Membership');
+                                    }
                                 }
                                 if ($this->UserDetails->save($users)) {
                                     $this->Flash->success(__('THE MEMBER HAS BEEN SAVED.'));

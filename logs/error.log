@@ -17826,3 +17826,22 @@ Exception Attributes: array (
   '_ext' => NULL,
 )
 Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-01-30 14:44:58 Warning: Warning (2): get_object_vars() expects parameter 1 to be object, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/AppController.php, line 76]
+
+
+2018-01-30 15:33:18 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/services/banner/201801301533075a704.png
+2018-01-30 15:33:18 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/services/square/201801301533075a704.png
