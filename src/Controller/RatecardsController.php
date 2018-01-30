@@ -35,6 +35,9 @@ use Cake\Event\Event;
 class RatecardsController extends AppController {
 
     public function beforeFilter(Event $event) {
+        if (in_array($this->request->session()->read('Auth.User.user_type'), ['ADMIN', 'OPERATION_MANAGER', 'TELLY_CALLER'])) {
+            AppController::checkNormalAccess();
+        }
         $this->Auth->allow(['updaterate', 'addnewrate','delete']);
     }
 

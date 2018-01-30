@@ -53,11 +53,11 @@ class UsersTable extends Table {
     public function getuserlisting($user_type = '') {
         $userTable = TableRegistry::get('Users');
         if ($user_type == 'hmen') {
-            $user = $userTable->find('all')->where(['OR' => [['user_type' => 'ADMIN'], ['user_type' => 'SALES']]])->order(['id' => 'DESC']);
+            $user = $userTable->find('all')->where(['OR' => [['user_type IN' => ['ADMIN', 'OPERATION_MANAGER', 'TELLY_CALLER']]]])->order(['id' => 'DESC']);
         } elseif ($user_type == 'app') {
-            $user = $userTable->find('all')->where(['user_type' => 'CUSTOMER'])->order(['id' => 'DESC']);
+            $user = $userTable->find('all')->where(['user_type IN' => ['CUSTOMER', 'MEMBERSHIP']])->order(['id' => 'DESC']);
         } elseif ($user_type == 'vendors') {
-            $user = $userTable->find('all')->where(['user_type' => 'VENDORS'])->order(['id' => 'DESC']);
+            $user = $userTable->find('all')->where(['user_type IN' => ['VENDORS', 'SALES']])->order(['id' => 'DESC']);
         } else {
             $user = $userTable->find('all')->order(['id' => 'DESC']);
         }

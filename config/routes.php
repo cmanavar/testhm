@@ -62,6 +62,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/wallets/details', ['controller' => 'Webservices', 'action' => 'walletDetails']);
     $routes->connect('/webservices/vendor/login', ['controller' => 'Vendors', 'action' => 'login']); //P
     $routes->connect('/webservices/services/list', ['controller' => 'Webservices', 'action' => 'homepage']);
+    $routes->connect('/webservices/services/lists', ['controller' => 'Webservices', 'action' => 'serviceLists']);
     $routes->connect('/webservices/categories/details/*', ['controller' => 'Webservices', 'action' => 'categoryDetails']);
     $routes->connect('/webservices/categories/list', ['controller' => 'Webservices', 'action' => 'categoryList']);
     $routes->connect('/webservices/service/details/*', ['controller' => 'Webservices', 'action' => 'serviceDetails']);
@@ -85,7 +86,16 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/messages/list', ['controller' => 'Webservices', 'action' => 'msgList']);
     $routes->connect('/webservices/messages/view', ['controller' => 'Webservices', 'action' => 'msgView']);
     $routes->connect('/webservices/get/cartid', ['controller' => 'Webservices', 'action' => 'getCartId']);
-    
+    $routes->connect('/webservices/survey/add', ['controller' => 'Webservices', 'action' => 'surverysubmit']);
+    $routes->connect('/webservices/survey/list', ['controller' => 'Webservices', 'action' => 'surverylists']);
+    $routes->connect('/webservices/membership/add', ['controller' => 'Webservices', 'action' => 'addMembership']);
+    $routes->connect('/webservices/membership/lists', ['controller' => 'Webservices', 'action' => 'listMembership']);
+    $routes->connect('/webservices/plan/lists', ['controller' => 'Webservices', 'action' => 'planLists']);
+    $routes->connect('/webservices/referenceuser/lists', ['controller' => 'Webservices', 'action' => 'referenceUsers']);
+    $routes->connect('/webservices/appoinment/lists', ['controller' => 'Webservices', 'action' => 'appoinmentLists']);
+    $routes->connect('/webservices/appoinment/details', ['controller' => 'Webservices', 'action' => 'appoinmentDetails']);
+    $routes->connect('/webservices/appoinment/completed', ['controller' => 'Webservices', 'action' => 'appoinmentCompleted']);
+    $routes->connect('/webservices/appoinment/declined', ['controller' => 'Webservices', 'action' => 'appoinmentDeclined']);
     $routes->connect('/test', ['controller' => 'Webservices', 'action' => 'testNotifications']);
     
     

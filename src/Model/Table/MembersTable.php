@@ -28,18 +28,36 @@ class MembersTable extends Table {
     // * Author            :  Chirag Manavar
     // * Date              :  24-October-2017
     //******************************************************************************//
-    public function getVendorId($id) {
+    public function geMemberId($id) {
         $usersTable = TableRegistry::get('Users');
-        $vendorsTable = TableRegistry::get('VendorDetails');
-        $vendors = $usersTable->find('all')->where(['user_type' => 'VENDOR', 'id' => $id])->order(['id' => 'DESC'])->hydrate(false)->first();
-        $vendorsData = $vendorsTable->find('all')->where(['user_id' => $vendors['id']])->hydrate(false)->first();
-        $vendors['service_id'] = $vendorsData['service_id'];
-        $vendors['service_name'] = $this->getServiceName($vendorsData['service_id']);
-        $vendors['shift_start'] = $vendorsData['shift_start'];
-        $vendors['shift_end'] = $vendorsData['shift_end'];
-        $vendors['agreement'] = $vendorsData['agreement'];
-        $vendors['id_proof'] = $vendorsData['id_proof'];
-        return $vendors;
+        $plansTable = TableRegistry::get('Plans');
+        $usersDetailTable = TableRegistry::get('UserDetails');
+        $members = $usersTable->find('all')->where(['user_type' => 'MEMBERSHIP', 'id' => $id])->order(['id' => 'DESC'])->hydrate(false)->first();
+        $userData = $usersDetailTable->find('all')->where(['user_id' => $members['id']])->hydrate(false)->first();
+        $reference_user_name = '-';
+        $reference_user_name = $this->getUserName($members['referral_id']);
+        $members['reference_user_name'] = $reference_user_name;
+        $members['plan_name'] = $this->getPlanName($members['plan_id']);
+        $members['person_1'] = $userData['person_1'];
+        $members['birthdate_1'] = $userData['birthdate_1'];
+        $members['person_2'] = $userData['person_2'];
+        $members['birthdate_2'] = $userData['birthdate_2'];
+        $members['person_3'] = $userData['person_3'];
+        $members['birthdate_3'] = $userData['birthdate_3'];
+        $members['person_4'] = $userData['person_4'];
+        $members['birthdate_4'] = $userData['birthdate_4'];
+        $members['person_5'] = $userData['person_5'];
+        $members['birthdate_5'] = $userData['birthdate_5'];
+        $members['occupation'] = $userData['occupation'];
+        $members['company_name'] = $userData['company_name'];
+        $members['company_website'] = $userData['company_website'];
+        $members['payment_type'] = $userData['payment_type'];
+        $members['bank_name'] = $userData['bank_name'];
+        $members['cheque_no'] = $userData['cheque_no'];
+        $members['cheque_date'] = $userData['cheque_date'];
+        $members['transcation_id'] = $userData['transcation_id'];
+        $members['other_details'] = $userData['other_details'];
+        return $members;
     }
 
     //*******************************************************************************//
@@ -66,11 +84,18 @@ class MembersTable extends Table {
     //******************************************************************************//
     public function getMembers() {
         $usersTable = TableRegistry::get('Users');
+        $userDetailsTable = TableRegistry::get('UserDetails');
         $plansTable = TableRegistry::get('Plans');
-        $users = $usersTable->find('all')->select(['id','name', 'phone_no', 'email', 'address', 'city', 'active', 'plan_id'])->where(['user_type' => 'MEMBERSHIP'])->order(['id' => 'ASC'])->hydrate(false)->toArray();
+        $users = $usersTable->find('all')->select(['id', 'name', 'phone_no', 'email', 'address', 'city', 'active', 'plan_id'])->where(['user_type' => 'MEMBERSHIP'])->order(['id' => 'ASC'])->hydrate(false)->toArray();
         foreach ($users as $key => $val) {
             $planName = $this->getPlanName($val['plan_id']);
             $users[$key]['plan_name'] = $planName;
+            $userDetails = $userDetailsTable->find('all')->select(['payment_type', 'bank_name', 'cheque_no', 'cheque_date', 'transcation_id', 'other_details'])->where(['user_id' => $val['id']])->hydrate(false)->first();
+            if (!empty($userDetails)) {
+                foreach ($userDetails as $k => $v) {
+                    $users[$key][$k] = $v;
+                }
+            }
         }
         return $users;
     }
@@ -79,6 +104,12 @@ class MembersTable extends Table {
         $plansTable = TableRegistry::get('Plans');
         $planDetails = $plansTable->find()->select(['name'])->where(['id' => $plan_id])->hydrate(false)->first();
         return (isset($planDetails['name']) && $planDetails['name'] != '') ? $planDetails['name'] : '-';
+    }
+
+    public function getUserName($user_id) {
+        $usersTable = TableRegistry::get('Users');
+        $userDetails = $usersTable->find()->select(['name'])->where(['id' => $user_id])->hydrate(false)->first();
+        return (isset($userDetails['name']) && $userDetails['name'] != '') ? $userDetails['name'] : '-';
     }
 
     public function getServiceName($service_id) {
@@ -95,9 +126,9 @@ class MembersTable extends Table {
     // * Author            :  Chirag Manavar
     // * Date              :  26-October-2017
     //******************************************************************************//
-    public function vendorExists($vendor_id) {
+    public function memberExists($user_id) {
         $userTable = TableRegistry::get('Users');
-        return $userTable->find('all')->where(['id' => $vendor_id, 'user_type' => 'VENDOR']);
+        return $userTable->find('all')->where(['id' => $user_id, 'user_type' => 'MEMBERSHIP']);
     }
 
     //*******************************************************************************//
@@ -130,6 +161,16 @@ class MembersTable extends Table {
         $servicesTable = TableRegistry::get('Services');
         $count = $servicesTable->find('all')->where(['category_id' => $category_id])->count();
         return $count;
+    }
+
+    public function getUserDetailsID($user_id) {
+        $usersDetailTable = TableRegistry::get('UserDetails');
+        $user = $usersDetailTable->find('all')->where(['user_id' => $user_id])->hydrate(false)->first();
+        if (isset($user) && !empty($user)) {
+            return $user['id'];
+        } else {
+            return ['status' => 'fail', 'msg' => 'Invalid User Id'];
+        }
     }
 
 }

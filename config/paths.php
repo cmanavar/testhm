@@ -108,6 +108,7 @@ define('SERVICE_CATEGORY_SQUARE_BANNER_PATH', 'categories/square/');
 
 define('SERVICE_BANNER_PATH', 'services/banner/');
 define('SERVICE_SQUARE_BANNER_PATH', 'services/square/');
+define('SERVICE_ICON_PATH', 'services/icons/');
 
 define('QUETIONS_ICON_PATH', 'questions/icons/');
 define('QUETIONS_ICON_URL_PATH', $url . 'img/questions/icons/');
@@ -135,4 +136,8 @@ define('MSG_TITLE_REFERRAL', 'Rewarded for refer');
 
 define('PAGINATION_LIMIT', 10);
 
+define('COMPANY_NAME_EXCEL', 'H-MEN');
+define('ADDRESS_1_EXCEL', '218,Devashish Business park, MochaCafe Building,');
+define('ADDRESS_2_EXCEL', 'Opp. S.G Highway Bodakdev, Ahmedabad');
+define('MOBILE_PHONE_EXCEL', '7096460460');
 

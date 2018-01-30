@@ -35,7 +35,9 @@ use Cake\Event\Event;
 class ServicesController extends AppController {
 
     public function beforeFilter(Event $event) {
-        //$this->Auth->allow(['delete']);
+        if (in_array($this->request->session()->read('Auth.User.user_type'), ['ADMIN', 'OPERATION_MANAGER', 'TELLY_CALLER'])) {
+            AppController::checkNormalAccess();
+        }
     }
 
     //***********************************************************************************************//
@@ -75,26 +77,100 @@ class ServicesController extends AppController {
             $errors = $validator->errors($this->request->data());
             if (empty($errors)) {
                 $service = $this->Services->patchEntity($service, $this->request->data);
+                if (isset($this->request->data['icon_1']['name']) && $this->request->data['icon_1']['name'] != '') {
+                    $file = $filename = '';
+                    $file = $this->request->data['icon_1']['name'];
+                    $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                    $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                    $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_ICON_PATH)) {
+                        mkdir('img/' . SERVICE_ICON_PATH, 0777, true);
+                    }
+                    move_uploaded_file($this->request->data['icon_1']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_ICON_PATH . $filename);
+                    $service['icon_1'] = $filename;
+                }
+                if (isset($this->request->data['icon_2']['name']) && $this->request->data['icon_2']['name'] != '') {
+                    $file = $filename = '';
+                    $file = $this->request->data['icon_2']['name'];
+                    $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                    $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                    $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_ICON_PATH)) {
+                        mkdir('img/' . SERVICE_ICON_PATH, 0777, true);
+                    }
+                    move_uploaded_file($this->request->data['icon_2']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_ICON_PATH . $filename);
+                    $service['icon_2'] = $filename;
+                }
+                if (isset($this->request->data['icon_3']['name']) && $this->request->data['icon_3']['name'] != '') {
+                    $file = $filename = '';
+                    $file = $this->request->data['icon_3']['name'];
+                    $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                    $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                    $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_ICON_PATH)) {
+                        mkdir('img/' . SERVICE_ICON_PATH, 0777, true);
+                    }
+                    move_uploaded_file($this->request->data['icon_3']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_ICON_PATH . $filename);
+                    $service['icon_3'] = $filename;
+                }
+                if (isset($this->request->data['icon_4']['name']) && $this->request->data['icon_4']['name'] != '') {
+                    $file = $filename = '';
+                    $file = $this->request->data['icon_4']['name'];
+                    $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                    $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                    $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_ICON_PATH)) {
+                        mkdir('img/' . SERVICE_ICON_PATH, 0777, true);
+                    }
+                    move_uploaded_file($this->request->data['icon_4']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_ICON_PATH . $filename);
+                    $service['icon_4'] = $filename;
+                }
+                if (isset($this->request->data['icon_5']['name']) && $this->request->data['icon_5']['name'] != '') {
+                    $file = $filename = '';
+                    $file = $this->request->data['icon_5']['name'];
+                    $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                    $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                    $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_ICON_PATH)) {
+                        mkdir('img/' . SERVICE_ICON_PATH, 0777, true);
+                    }
+                    move_uploaded_file($this->request->data['icon_5']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_ICON_PATH . $filename);
+                    $service['icon_5'] = $filename;
+                }
+                if (isset($this->request->data['icon_6']['name']) && $this->request->data['icon_6']['name'] != '') {
+                    $file = $filename = '';
+                    $file = $this->request->data['icon_6']['name'];
+                    $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                    $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                    $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_ICON_PATH)) {
+                        mkdir('img/' . SERVICE_ICON_PATH, 0777, true);
+                    }
+                    move_uploaded_file($this->request->data['icon_6']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_ICON_PATH . $filename);
+                    $service['icon_6'] = $filename;
+                }
                 if (isset($this->request->data['banner']['name']) && $this->request->data['banner']['name'] != '') {
+                    $file = $filename = '';
                     $file = $this->request->data['banner']['name'];
                     $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
                     $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
                     $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
-                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_BANNER_PATH)) {
-                        mkdir('img/' . SERVICE_BANNER_PATH, 0777, true);
+                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_ICON_PATH)) {
+                        mkdir('img/' . SERVICE_ICON_PATH, 0777, true);
                     }
-                    move_uploaded_file($this->request->data['banner']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_BANNER_PATH . $filename);
+                    move_uploaded_file($this->request->data['banner']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_ICON_PATH . $filename);
                     $service['banner_image'] = $filename;
                 }
                 if (isset($this->request->data['square']['name']) && $this->request->data['square']['name'] != '') {
+                    $file = $filename = '';
                     $file = $this->request->data['square']['name'];
                     $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
                     $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
                     $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
-                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_SQUARE_BANNER_PATH)) {
-                        mkdir('img/' . SERVICE_SQUARE_BANNER_PATH, 0777, true);
+                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_ICON_PATH)) {
+                        mkdir('img/' . SERVICE_ICON_PATH, 0777, true);
                     }
-                    move_uploaded_file($this->request->data['square']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_SQUARE_BANNER_PATH . $filename);
+                    move_uploaded_file($this->request->data['square']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_ICON_PATH . $filename);
                     $service['square_image'] = $filename;
                 }
                 $service->created = date("Y-m-d H:i:s");
@@ -140,7 +216,80 @@ class ServicesController extends AppController {
                 $this->request->data['service_description'] = htmlentities($this->request->data['service_description']);
                 $service = $this->Services->patchEntity($service, $this->request->data);
                 //pr($this->request->data); exit;
+                if (isset($this->request->data['icon_1']['name']) && $this->request->data['icon_1']['name'] != '') {
+                    $file = $filename = '';
+                    $file = $this->request->data['icon_1']['name'];
+                    $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                    $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                    $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_ICON_PATH)) {
+                        mkdir('img/' . SERVICE_ICON_PATH, 0777, true);
+                    }
+                    move_uploaded_file($this->request->data['icon_1']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_ICON_PATH . $filename);
+                    $service['icon_1'] = $filename;
+                }
+                if (isset($this->request->data['icon_2']['name']) && $this->request->data['icon_2']['name'] != '') {
+                    $file = $filename = '';
+                    $file = $this->request->data['icon_2']['name'];
+                    $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                    $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                    $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_ICON_PATH)) {
+                        mkdir('img/' . SERVICE_ICON_PATH, 0777, true);
+                    }
+                    move_uploaded_file($this->request->data['icon_2']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_ICON_PATH . $filename);
+                    $service['icon_2'] = $filename;
+                }
+                if (isset($this->request->data['icon_3']['name']) && $this->request->data['icon_3']['name'] != '') {
+                    $file = $filename = '';
+                    $file = $this->request->data['icon_3']['name'];
+                    $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                    $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                    $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_ICON_PATH)) {
+                        mkdir('img/' . SERVICE_ICON_PATH, 0777, true);
+                    }
+                    move_uploaded_file($this->request->data['icon_3']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_ICON_PATH . $filename);
+                    $service['icon_3'] = $filename;
+                }
+                if (isset($this->request->data['icon_4']['name']) && $this->request->data['icon_4']['name'] != '') {
+                    $file = $filename = '';
+                    $file = $this->request->data['icon_4']['name'];
+                    $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                    $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                    $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_ICON_PATH)) {
+                        mkdir('img/' . SERVICE_ICON_PATH, 0777, true);
+                    }
+                    move_uploaded_file($this->request->data['icon_4']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_ICON_PATH . $filename);
+                    $service['icon_4'] = $filename;
+                }
+                if (isset($this->request->data['icon_5']['name']) && $this->request->data['icon_5']['name'] != '') {
+                    $file = $filename = '';
+                    $file = $this->request->data['icon_5']['name'];
+                    $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                    $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                    $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_ICON_PATH)) {
+                        mkdir('img/' . SERVICE_ICON_PATH, 0777, true);
+                    }
+                    move_uploaded_file($this->request->data['icon_5']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_ICON_PATH . $filename);
+                    $service['icon_5'] = $filename;
+                }
+                if (isset($this->request->data['icon_6']['name']) && $this->request->data['icon_6']['name'] != '') {
+                    $file = $filename = '';
+                    $file = $this->request->data['icon_6']['name'];
+                    $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                    $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                    $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                    if (!file_exists(WWW_ROOT . 'img/' . SERVICE_ICON_PATH)) {
+                        mkdir('img/' . SERVICE_ICON_PATH, 0777, true);
+                    }
+                    move_uploaded_file($this->request->data['icon_6']['tmp_name'], WWW_ROOT . 'img/' . SERVICE_ICON_PATH . $filename);
+                    $service['icon_6'] = $filename;
+                }
                 if (isset($this->request->data['banner']['name']) && $this->request->data['banner']['name'] != '') {
+                    $file = $filename = '';
                     $file = $this->request->data['banner']['name'];
                     $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
                     $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
@@ -152,6 +301,7 @@ class ServicesController extends AppController {
                     $service['banner_image'] = $filename;
                 }
                 if (isset($this->request->data['square']['name']) && $this->request->data['square']['name'] != '') {
+                    $file = $filename = '';
                     $file = $this->request->data['square']['name'];
                     $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
                     $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
@@ -283,7 +433,7 @@ class ServicesController extends AppController {
     public function ratecard($service_id) {
         $this->loadModel('ServiceRatecards');
         $ratecard = $this->ServiceRatecards->newEntity();
-        
+
         $this->set('ratecard', $ratecard);
         $this->set('service_id', $service_id);
     }

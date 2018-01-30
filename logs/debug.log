@@ -5995,3 +5995,2541 @@
 2018-01-19 19:12:01 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 70]
 
 
+2018-01-20 14:13:37 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 67]
+
+
+2018-01-20 14:18:51 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-01-20 14:18:58 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-20 14:18:58 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-20 14:18:58 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 78]
+
+
+2018-01-20 14:19:02 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-20 14:19:02 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-20 14:19:02 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 78]
+
+
+2018-01-20 14:19:22 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-20 14:19:22 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-20 14:19:22 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 78]
+
+
+2018-01-20 14:36:30 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 46]
+
+
+2018-01-20 14:36:30 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 50]
+
+
+2018-01-20 14:36:30 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 55]
+
+
+2018-01-20 14:36:30 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 56]
+
+
+2018-01-20 14:36:30 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 62]
+
+
+2018-01-20 14:36:30 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 66]
+
+
+2018-01-20 14:36:30 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 70]
+
+
+2018-01-20 14:36:30 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 70]
+
+
+2018-01-20 14:36:30 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 74]
+
+
+2018-01-20 14:36:30 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 74]
+
+
+2018-01-20 14:36:30 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 78]
+
+
+2018-01-20 14:36:51 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 46]
+
+
+2018-01-20 14:36:51 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 50]
+
+
+2018-01-20 14:36:51 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 55]
+
+
+2018-01-20 14:36:51 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 56]
+
+
+2018-01-20 14:36:51 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 62]
+
+
+2018-01-20 14:36:51 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 66]
+
+
+2018-01-20 14:36:51 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 70]
+
+
+2018-01-20 14:36:51 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 70]
+
+
+2018-01-20 14:36:51 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 74]
+
+
+2018-01-20 14:36:51 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 74]
+
+
+2018-01-20 14:36:51 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 78]
+
+
+2018-01-20 14:37:02 Notice: Notice (8): Use of undefined constant member - assumed 'member' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 46]
+
+
+2018-01-20 14:37:02 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 50]
+
+
+2018-01-20 14:37:02 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 55]
+
+
+2018-01-20 14:37:02 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 56]
+
+
+2018-01-20 14:37:02 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 62]
+
+
+2018-01-20 14:37:02 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 66]
+
+
+2018-01-20 14:37:02 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 70]
+
+
+2018-01-20 14:37:02 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 70]
+
+
+2018-01-20 14:37:02 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 74]
+
+
+2018-01-20 14:37:02 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 74]
+
+
+2018-01-20 14:37:02 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 78]
+
+
+2018-01-20 14:37:07 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 50]
+
+
+2018-01-20 14:37:07 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 55]
+
+
+2018-01-20 14:37:07 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 56]
+
+
+2018-01-20 14:37:07 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 62]
+
+
+2018-01-20 14:37:07 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 66]
+
+
+2018-01-20 14:37:07 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 70]
+
+
+2018-01-20 14:37:07 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 70]
+
+
+2018-01-20 14:37:07 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 74]
+
+
+2018-01-20 14:37:07 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 74]
+
+
+2018-01-20 14:37:07 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 78]
+
+
+2018-01-20 14:37:08 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 50]
+
+
+2018-01-20 14:37:08 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 55]
+
+
+2018-01-20 14:37:08 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 56]
+
+
+2018-01-20 14:37:08 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 62]
+
+
+2018-01-20 14:37:08 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 66]
+
+
+2018-01-20 14:37:08 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 70]
+
+
+2018-01-20 14:37:08 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 70]
+
+
+2018-01-20 14:37:08 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 74]
+
+
+2018-01-20 14:37:08 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 74]
+
+
+2018-01-20 14:37:08 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 78]
+
+
+2018-01-20 14:37:19 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 50]
+
+
+2018-01-20 14:37:19 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 55]
+
+
+2018-01-20 14:37:19 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 56]
+
+
+2018-01-20 14:37:19 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 62]
+
+
+2018-01-20 14:37:19 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 66]
+
+
+2018-01-20 14:37:19 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 70]
+
+
+2018-01-20 14:37:19 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 70]
+
+
+2018-01-20 14:37:19 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 74]
+
+
+2018-01-20 14:37:19 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 74]
+
+
+2018-01-20 14:37:19 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 78]
+
+
+2018-01-20 14:39:47 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 61]
+
+
+2018-01-20 14:39:47 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 65]
+
+
+2018-01-20 14:39:47 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 69]
+
+
+2018-01-20 14:39:47 Notice: Notice (8): Undefined variable: vendor in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 69]
+
+
+2018-01-20 14:39:47 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 73]
+
+
+2018-01-20 14:39:47 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 73]
+
+
+2018-01-20 14:39:47 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 77]
+
+
+2018-01-20 16:02:38 Notice: Notice (8): Undefined index: reference_user_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 154]
+
+
+2018-01-20 16:41:36 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/add.ctp, line 50]
+
+
+2018-01-20 16:41:36 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/add.ctp, line 64]
+
+
+2018-01-20 16:41:36 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/add.ctp, line 282]
+
+
+2018-01-20 16:46:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/add.ctp, line 50]
+
+
+2018-01-20 16:46:54 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/add.ctp, line 64]
+
+
+2018-01-20 16:46:54 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/add.ctp, line 282]
+
+
+2018-01-20 16:46:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/add.ctp, line 50]
+
+
+2018-01-20 16:46:55 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/add.ctp, line 64]
+
+
+2018-01-20 16:46:55 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/add.ctp, line 282]
+
+
+2018-01-20 16:46:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/add.ctp, line 50]
+
+
+2018-01-20 16:46:55 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/add.ctp, line 64]
+
+
+2018-01-20 16:46:55 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/add.ctp, line 282]
+
+
+2018-01-20 16:49:32 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 64]
+
+
+2018-01-20 16:49:32 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 282]
+
+
+2018-01-20 16:51:48 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 64]
+
+
+2018-01-20 16:51:48 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 282]
+
+
+2018-01-20 16:52:24 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 282]
+
+
+2018-01-20 16:52:27 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 282]
+
+
+2018-01-20 16:54:56 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 282]
+
+
+2018-01-20 16:56:35 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 282]
+
+
+2018-01-20 16:56:41 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 282]
+
+
+2018-01-20 16:57:30 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 282]
+
+
+2018-01-20 16:57:48 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 282]
+
+
+2018-01-20 16:58:01 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 282]
+
+
+2018-01-20 16:58:20 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 282]
+
+
+2018-01-20 16:58:38 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 282]
+
+
+2018-01-20 16:59:22 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 282]
+
+
+2018-01-20 17:02:29 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 286]
+
+
+2018-01-20 17:04:16 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 286]
+
+
+2018-01-20 17:05:33 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 290]
+
+
+2018-01-20 17:08:30 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 284]
+
+
+2018-01-20 17:10:24 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 284]
+
+
+2018-01-20 17:11:41 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 290]
+
+
+2018-01-20 17:11:56 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 290]
+
+
+2018-01-20 17:12:57 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 298]
+
+
+2018-01-20 17:13:31 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 302]
+
+
+2018-01-20 17:14:48 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 306]
+
+
+2018-01-20 17:15:32 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 306]
+
+
+2018-01-20 17:15:50 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 306]
+
+
+2018-01-20 17:16:03 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 306]
+
+
+2018-01-20 17:16:33 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 306]
+
+
+2018-01-20 17:18:18 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 306]
+
+
+2018-01-20 17:18:21 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 306]
+
+
+2018-01-20 17:18:31 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 306]
+
+
+2018-01-20 17:18:55 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 306]
+
+
+2018-01-20 17:20:30 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 310]
+
+
+2018-01-20 17:21:03 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 310]
+
+
+2018-01-20 17:21:36 Notice: Notice (8): Undefined index: transaction_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 284]
+
+
+2018-01-20 17:21:36 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 310]
+
+
+2018-01-20 17:22:07 Notice: Notice (8): Undefined index: transaction_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 284]
+
+
+2018-01-20 17:22:07 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 310]
+
+
+2018-01-20 17:24:15 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 314]
+
+
+2018-01-20 17:26:30 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 318]
+
+
+2018-01-20 17:26:41 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 318]
+
+
+2018-01-20 17:27:01 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 318]
+
+
+2018-01-20 17:27:46 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 318]
+
+
+2018-01-20 17:28:59 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 318]
+
+
+2018-01-20 17:29:31 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 318]
+
+
+2018-01-20 17:29:31 Notice: Notice (8): Undefined index: refer_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 318]
+
+
+2018-01-20 17:30:13 Notice: Notice (8): Undefined index: refer_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 318]
+
+
+2018-01-20 17:31:14 Notice: Notice (8): Undefined index: refer_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 318]
+
+
+2018-01-20 17:31:26 Notice: Notice (8): Undefined index: refer_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/edit.ctp, line 318]
+
+
+2018-01-21 17:44:38 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-21 17:44:38 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-21 17:44:38 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 78]
+
+
+2018-01-22 11:20:59 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-01-22 11:21:53 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-01-22 11:25:17 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-01-22 11:31:54 Notice: Notice (8): Undefined index: user_types in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/index.ctp, line 67]
+
+
+2018-01-22 11:34:05 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-01-22 11:34:19 Notice: Notice (8): Undefined index: name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 46]
+
+
+2018-01-22 11:34:19 Notice: Notice (8): Undefined index: email in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 50]
+
+
+2018-01-22 11:34:19 Notice: Notice (8): Undefined index: phone_no in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 55]
+
+
+2018-01-22 11:34:19 Notice: Notice (8): Undefined index: phone_number_2 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 56]
+
+
+2018-01-22 11:34:19 Notice: Notice (8): Undefined index: profile_pic in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 62]
+
+
+2018-01-22 11:34:19 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-22 11:34:19 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-22 11:34:19 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 78]
+
+
+2018-01-22 11:34:24 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-22 11:34:24 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-22 11:34:24 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 78]
+
+
+2018-01-22 11:34:29 Notice: Notice (8): Undefined index: name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 46]
+
+
+2018-01-22 11:34:29 Notice: Notice (8): Undefined index: email in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 50]
+
+
+2018-01-22 11:34:29 Notice: Notice (8): Undefined index: phone_no in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 55]
+
+
+2018-01-22 11:34:29 Notice: Notice (8): Undefined index: phone_number_2 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 56]
+
+
+2018-01-22 11:34:29 Notice: Notice (8): Undefined index: profile_pic in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 62]
+
+
+2018-01-22 11:34:29 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-22 11:34:29 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-22 11:34:29 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 78]
+
+
+2018-01-22 11:35:28 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-22 11:35:28 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-22 11:35:28 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 78]
+
+
+2018-01-22 11:35:50 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-22 11:35:50 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 74]
+
+
+2018-01-22 11:35:50 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 78]
+
+
+2018-01-22 11:36:22 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 78]
+
+
+2018-01-22 11:36:22 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 78]
+
+
+2018-01-22 11:36:22 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 82]
+
+
+2018-01-22 11:37:03 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 79]
+
+
+2018-01-22 11:37:03 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 79]
+
+
+2018-01-22 11:37:03 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 83]
+
+
+2018-01-22 11:37:04 Notice: Notice (8): Undefined variable: vendorservices in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 79]
+
+
+2018-01-22 11:37:04 Notice: Notice (8): Undefined variable:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 79]
+
+
+2018-01-22 11:37:04 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/view.ctp, line 83]
+
+
+2018-01-22 14:03:03 Notice: Notice (8): Undefined index: mapping_value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Model/Table/MembersTable.php, line 163]
+
+
+2018-01-22 14:30:25 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/add.ctp, line 50]
+
+
+2018-01-22 14:39:34 Notice: Notice (8): Undefined index: profile_picture in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/edit.ctp, line 111]
+
+
+2018-01-22 14:39:34 Notice: Notice (8): Undefined index: profile_picture in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/edit.ctp, line 111]
+
+
+2018-01-22 16:42:54 Notice: Notice (8): Array to string conversion in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/VendorsController.php, line 277]
+
+
+2018-01-22 18:25:10 Notice: Notice (8): Undefined variable: user_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1705]
+
+
+2018-01-23 11:55:36 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/SurveysController.php, line 52]
+
+
+2018-01-23 11:55:40 Notice: Notice (8): Undefined variable: services in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/SurveysController.php, line 52]
+
+
+2018-01-23 12:10:38 Notice: Notice (8): Undefined index: name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 63]
+
+
+2018-01-23 12:10:38 Notice: Notice (8): Undefined index: phone_no in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 65]
+
+
+2018-01-23 12:10:38 Notice: Notice (8): Undefined index: address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 66]
+
+
+2018-01-23 12:10:38 Notice: Notice (8): Undefined index: name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 63]
+
+
+2018-01-23 12:10:38 Notice: Notice (8): Undefined index: phone_no in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 65]
+
+
+2018-01-23 12:10:38 Notice: Notice (8): Undefined index: address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 66]
+
+
+2018-01-23 12:10:59 Notice: Notice (8): Undefined index: phone_no in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 65]
+
+
+2018-01-23 12:10:59 Notice: Notice (8): Undefined index: address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 66]
+
+
+2018-01-23 12:10:59 Notice: Notice (8): Undefined index: phone_no in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 65]
+
+
+2018-01-23 12:10:59 Notice: Notice (8): Undefined index: address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 66]
+
+
+2018-01-23 12:11:25 Notice: Notice (8): Undefined index: address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 66]
+
+
+2018-01-23 12:11:25 Notice: Notice (8): Undefined index: address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 66]
+
+
+2018-01-23 12:16:05 Notice: Notice (8): Undefined index: created_by in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/SurveysController.php, line 54]
+
+
+2018-01-23 12:16:05 Notice: Notice (8): Undefined index: created_by in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/SurveysController.php, line 54]
+
+
+2018-01-23 12:20:02 Notice: Notice (8): Undefined index: plan_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Model/Table/MembersTable.php, line 40]
+
+
+2018-01-23 12:20:02 Notice: Notice (8): Undefined index: name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 50]
+
+
+2018-01-23 12:20:02 Notice: Notice (8): Undefined index: address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 54]
+
+
+2018-01-23 12:20:02 Notice: Notice (8): Undefined index: city in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 58]
+
+
+2018-01-23 12:20:02 Notice: Notice (8): Undefined index: phone_no in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 63]
+
+
+2018-01-23 12:20:02 Notice: Notice (8): Undefined index: email in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 69]
+
+
+2018-01-23 12:20:02 Notice: Notice (8): Undefined index: birthdate in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 73]
+
+
+2018-01-23 12:27:11 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 46]
+
+
+2018-01-23 12:27:11 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 50]
+
+
+2018-01-23 12:27:11 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 54]
+
+
+2018-01-23 12:27:11 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 58]
+
+
+2018-01-23 12:27:11 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 63]
+
+
+2018-01-23 12:27:11 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 69]
+
+
+2018-01-23 12:27:11 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 73]
+
+
+2018-01-23 12:27:15 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 46]
+
+
+2018-01-23 12:27:15 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 50]
+
+
+2018-01-23 12:27:15 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 54]
+
+
+2018-01-23 12:27:15 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 58]
+
+
+2018-01-23 12:27:15 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 63]
+
+
+2018-01-23 12:27:15 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 69]
+
+
+2018-01-23 12:27:15 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 73]
+
+
+2018-01-23 12:27:33 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 46]
+
+
+2018-01-23 12:27:33 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 50]
+
+
+2018-01-23 12:27:33 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 54]
+
+
+2018-01-23 12:27:33 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 58]
+
+
+2018-01-23 12:27:33 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 63]
+
+
+2018-01-23 12:27:33 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 69]
+
+
+2018-01-23 12:27:33 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 73]
+
+
+2018-01-23 12:31:31 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/SurveysController.php, line 64]
+
+
+2018-01-23 12:31:31 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 46]
+
+
+2018-01-23 12:31:31 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 50]
+
+
+2018-01-23 12:31:31 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 54]
+
+
+2018-01-23 12:31:31 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 58]
+
+
+2018-01-23 12:31:31 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 63]
+
+
+2018-01-23 12:31:31 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 69]
+
+
+2018-01-23 12:31:31 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 73]
+
+
+2018-01-23 12:31:38 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 46]
+
+
+2018-01-23 12:31:38 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 50]
+
+
+2018-01-23 12:31:38 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 54]
+
+
+2018-01-23 12:31:38 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 58]
+
+
+2018-01-23 12:31:38 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 63]
+
+
+2018-01-23 12:31:38 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 69]
+
+
+2018-01-23 12:31:38 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 73]
+
+
+2018-01-23 12:32:29 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 46]
+
+
+2018-01-23 12:32:29 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 50]
+
+
+2018-01-23 12:32:29 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 54]
+
+
+2018-01-23 12:32:29 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 58]
+
+
+2018-01-23 12:32:29 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 63]
+
+
+2018-01-23 12:32:29 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 69]
+
+
+2018-01-23 12:32:29 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 73]
+
+
+2018-01-23 12:32:37 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 46]
+
+
+2018-01-23 12:32:37 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 50]
+
+
+2018-01-23 12:32:37 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 54]
+
+
+2018-01-23 12:32:37 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 58]
+
+
+2018-01-23 12:32:37 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 63]
+
+
+2018-01-23 12:32:37 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 69]
+
+
+2018-01-23 12:32:37 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 73]
+
+
+2018-01-23 12:32:49 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 46]
+
+
+2018-01-23 12:32:49 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 50]
+
+
+2018-01-23 12:32:49 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 54]
+
+
+2018-01-23 12:32:49 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 58]
+
+
+2018-01-23 12:34:03 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 50]
+
+
+2018-01-23 12:34:03 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 54]
+
+
+2018-01-23 12:34:03 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 58]
+
+
+2018-01-23 12:34:20 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 50]
+
+
+2018-01-23 12:34:20 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 54]
+
+
+2018-01-23 12:34:20 Notice: Notice (8): Undefined variable: member in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 58]
+
+
+2018-01-23 12:34:47 Notice: Notice (8): Undefined index: address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 54]
+
+
+2018-01-23 12:34:47 Notice: Notice (8): Undefined index: city in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 58]
+
+
+2018-01-23 12:37:25 Notice: Notice (8): Undefined index: city in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 58]
+
+
+2018-01-23 12:37:57 Notice: Notice (8): Undefined index: city in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 58]
+
+
+2018-01-23 12:38:24 Notice: Notice (8): Undefined index: city in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 58]
+
+
+2018-01-23 12:39:47 Notice: Notice (8): Undefined index: city in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 64]
+
+
+2018-01-23 13:08:21 Notice: Notice (8): Array to string conversion in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 80]
+
+
+2018-01-23 14:30:17 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:30:17 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:30:17 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 79]
+
+
+2018-01-23 14:30:17 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 87]
+
+
+2018-01-23 14:30:17 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 95]
+
+
+2018-01-23 14:30:17 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 103]
+
+
+2018-01-23 14:30:17 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 111]
+
+
+2018-01-23 14:30:17 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 118]
+
+
+2018-01-23 14:30:36 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:30:36 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:30:36 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 79]
+
+
+2018-01-23 14:30:36 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 87]
+
+
+2018-01-23 14:30:36 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 95]
+
+
+2018-01-23 14:30:36 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 103]
+
+
+2018-01-23 14:30:36 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 111]
+
+
+2018-01-23 14:30:36 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 118]
+
+
+2018-01-23 14:31:23 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:31:23 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:31:23 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 79]
+
+
+2018-01-23 14:31:23 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 87]
+
+
+2018-01-23 14:31:23 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 95]
+
+
+2018-01-23 14:31:23 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 103]
+
+
+2018-01-23 14:31:23 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 111]
+
+
+2018-01-23 14:31:23 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 118]
+
+
+2018-01-23 14:31:34 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:31:34 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:31:34 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 79]
+
+
+2018-01-23 14:31:34 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 87]
+
+
+2018-01-23 14:31:34 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 95]
+
+
+2018-01-23 14:31:34 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 103]
+
+
+2018-01-23 14:31:34 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 111]
+
+
+2018-01-23 14:31:34 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 118]
+
+
+2018-01-23 14:37:11 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:37:11 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:37:11 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 79]
+
+
+2018-01-23 14:37:11 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 87]
+
+
+2018-01-23 14:37:11 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 95]
+
+
+2018-01-23 14:37:11 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 103]
+
+
+2018-01-23 14:37:11 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 111]
+
+
+2018-01-23 14:37:11 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 118]
+
+
+2018-01-23 14:38:07 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:38:07 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:38:07 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 79]
+
+
+2018-01-23 14:38:07 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 87]
+
+
+2018-01-23 14:38:07 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 95]
+
+
+2018-01-23 14:38:07 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 103]
+
+
+2018-01-23 14:38:07 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 111]
+
+
+2018-01-23 14:38:07 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 118]
+
+
+2018-01-23 14:39:13 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:39:13 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:39:13 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 79]
+
+
+2018-01-23 14:39:13 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 87]
+
+
+2018-01-23 14:39:13 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 95]
+
+
+2018-01-23 14:39:13 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 103]
+
+
+2018-01-23 14:39:13 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 111]
+
+
+2018-01-23 14:39:13 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 118]
+
+
+2018-01-23 14:39:31 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:39:31 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:39:31 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 79]
+
+
+2018-01-23 14:39:31 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 87]
+
+
+2018-01-23 14:39:31 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 95]
+
+
+2018-01-23 14:39:31 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 103]
+
+
+2018-01-23 14:39:31 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 111]
+
+
+2018-01-23 14:39:31 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 118]
+
+
+2018-01-23 14:39:36 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:39:36 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:39:36 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 79]
+
+
+2018-01-23 14:39:36 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 87]
+
+
+2018-01-23 14:39:36 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 95]
+
+
+2018-01-23 14:39:36 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 103]
+
+
+2018-01-23 14:39:36 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 111]
+
+
+2018-01-23 14:39:36 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 118]
+
+
+2018-01-23 14:39:59 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:39:59 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:39:59 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 79]
+
+
+2018-01-23 14:39:59 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 87]
+
+
+2018-01-23 14:39:59 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 95]
+
+
+2018-01-23 14:39:59 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 103]
+
+
+2018-01-23 14:39:59 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 111]
+
+
+2018-01-23 14:39:59 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 118]
+
+
+2018-01-23 14:40:17 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:40:17 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:40:17 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 79]
+
+
+2018-01-23 14:40:17 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 87]
+
+
+2018-01-23 14:40:17 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 95]
+
+
+2018-01-23 14:40:17 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 103]
+
+
+2018-01-23 14:40:17 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 111]
+
+
+2018-01-23 14:40:17 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 118]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 64]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 79]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 87]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 95]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 103]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 111]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 141]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 154]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 167]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 180]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 193]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 214]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 222]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 230]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 245]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 249]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 254]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 262]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 279]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 287]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 293]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 318]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 318]
+
+
+2018-01-23 14:40:45 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 333]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 57]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 57]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 72]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 80]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 88]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 96]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 104]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 134]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 147]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 160]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 173]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 186]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 207]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 215]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 223]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 238]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 242]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 247]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 255]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 272]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 280]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 286]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 311]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 311]
+
+
+2018-01-23 14:41:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 326]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 57]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 57]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 72]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 80]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 88]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 96]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 104]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 134]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 147]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 160]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 173]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 186]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 207]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 215]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 223]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 238]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 242]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 247]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 255]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 272]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 280]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 286]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 311]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 311]
+
+
+2018-01-23 14:42:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 326]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 72]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 80]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 88]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 96]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 104]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 134]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 147]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 160]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 173]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 186]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 207]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 215]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 223]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 238]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 242]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 247]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 255]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 272]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 280]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 286]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 311]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 311]
+
+
+2018-01-23 14:43:06 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 326]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 57]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 72]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 80]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 88]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 96]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 104]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 134]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 147]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 160]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 173]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 186]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 207]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 215]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 223]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 238]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 242]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 247]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 255]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 272]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 280]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 286]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 311]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 311]
+
+
+2018-01-23 14:43:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 326]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 72]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 80]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 88]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 96]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 104]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 134]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 147]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 160]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 173]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 186]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 207]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 215]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 223]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 238]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 242]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 247]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 255]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 272]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 280]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 286]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 311]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 311]
+
+
+2018-01-23 14:44:28 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 326]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 65]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 73]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 81]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 89]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 97]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 127]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 140]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 153]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 166]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 179]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 200]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 208]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 216]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 231]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 235]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 240]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 248]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 265]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 273]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 279]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 304]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 304]
+
+
+2018-01-23 14:44:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 319]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 73]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 81]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 89]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 97]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 127]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 140]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 153]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 166]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 179]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 200]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 208]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 216]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 231]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 235]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 240]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 248]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 265]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 273]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 279]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 304]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 304]
+
+
+2018-01-23 14:46:20 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 319]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 81]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 89]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 97]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 105]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 135]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 148]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 161]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 174]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 187]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 208]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 216]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 224]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 239]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 243]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 248]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 256]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 273]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 281]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 287]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 312]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 312]
+
+
+2018-01-23 14:47:16 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 327]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 81]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 89]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 97]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 105]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 135]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 148]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 161]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 174]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 187]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 208]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 216]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 224]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 239]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 243]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 248]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 256]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 273]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 281]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 287]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 312]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 312]
+
+
+2018-01-23 14:47:53 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 327]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 81]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 89]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 97]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 105]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 135]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 148]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 161]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 174]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 187]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 208]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 216]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 224]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 239]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 243]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 248]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 256]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 273]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 281]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 287]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 312]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 312]
+
+
+2018-01-23 14:47:54 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 327]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 81]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 89]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 97]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 105]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 135]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 148]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 161]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 174]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 187]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 208]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 216]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 224]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 239]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 243]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 248]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 256]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 273]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 281]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 287]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 312]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 312]
+
+
+2018-01-23 14:47:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 327]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: survey in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 69]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 83]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 91]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 99]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 107]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 137]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 150]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 163]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 176]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 189]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 210]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 218]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 226]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 241]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 245]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 250]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 258]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 275]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 283]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 289]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 314]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 314]
+
+
+2018-01-23 14:48:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 329]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 83]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 91]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 99]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 107]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 137]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 150]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 163]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 176]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 189]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 210]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 218]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 226]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 241]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 245]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 250]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 258]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 275]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 283]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 289]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 314]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 314]
+
+
+2018-01-23 14:48:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 329]
+
+
+2018-01-23 14:56:18 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/edit.ctp, line 107]
+
+
+2018-01-23 18:15:59 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 39]
+
+
+2018-01-23 18:23:36 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 39]
+
+
+2018-01-23 18:23:44 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 39]
+
+
+2018-01-23 18:25:29 Notice: Notice (8): Undefined variable: referLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 39]
+
+
+2018-01-24 11:54:33 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 38]
+
+
+2018-01-24 11:54:51 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 38]
+
+
+2018-01-24 11:55:16 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 38]
+
+
+2018-01-24 11:55:25 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 38]
+
+
+2018-01-24 11:55:29 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 38]
+
+
+2018-01-24 11:55:34 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 38]
+
+
+2018-01-24 11:55:38 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 38]
+
+
+2018-01-24 11:55:51 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 38]
+
+
+2018-01-24 11:57:12 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 38]
+
+
+2018-01-24 12:23:25 Notice: Notice (8): Undefined variable: filter_val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/SurveysController.php, line 61]
+
+
+2018-01-24 12:23:29 Notice: Notice (8): Undefined variable: filter_val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/SurveysController.php, line 61]
+
+
+2018-01-24 18:10:03 Notice: Notice (8): Undefined index: icon_1 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 382]
+
+
+2018-01-24 18:10:03 Notice: Notice (8): Undefined index: icon_2 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 389]
+
+
+2018-01-24 18:10:03 Notice: Notice (8): Undefined index: icon_3 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 396]
+
+
+2018-01-24 18:10:03 Notice: Notice (8): Undefined index: icon_4 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 403]
+
+
+2018-01-24 18:10:03 Notice: Notice (8): Undefined index: icon_5 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 410]
+
+
+2018-01-24 18:10:03 Notice: Notice (8): Undefined index: icon_6 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 417]
+
+
+2018-01-24 18:14:43 Notice: Notice (8): Undefined index: icon_1 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 382]
+
+
+2018-01-24 18:14:43 Notice: Notice (8): Undefined index: icon_2 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 389]
+
+
+2018-01-24 18:14:43 Notice: Notice (8): Undefined index: icon_3 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 396]
+
+
+2018-01-24 18:14:43 Notice: Notice (8): Undefined index: icon_4 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 403]
+
+
+2018-01-24 18:14:43 Notice: Notice (8): Undefined index: icon_5 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 410]
+
+
+2018-01-24 18:14:43 Notice: Notice (8): Undefined index: icon_6 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 417]
+
+
+2018-01-24 18:24:30 Notice: Notice (8): Undefined index: icon_1 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 382]
+
+
+2018-01-24 18:24:30 Notice: Notice (8): Undefined index: icon_2 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 389]
+
+
+2018-01-24 18:24:30 Notice: Notice (8): Undefined index: icon_3 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 396]
+
+
+2018-01-24 18:24:30 Notice: Notice (8): Undefined index: icon_4 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 403]
+
+
+2018-01-24 18:24:30 Notice: Notice (8): Undefined index: icon_5 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 410]
+
+
+2018-01-24 18:24:30 Notice: Notice (8): Undefined index: icon_6 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 417]
+
+
+2018-01-24 18:25:50 Notice: Notice (8): Undefined index: icon_3 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 396]
+
+
+2018-01-24 18:25:50 Notice: Notice (8): Undefined index: icon_4 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 403]
+
+
+2018-01-24 18:25:50 Notice: Notice (8): Undefined index: icon_5 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 410]
+
+
+2018-01-25 16:22:37 Notice: Notice (8): Undefined index: image/svg+xml in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/QuestionsController.php, line 344]
+
+
+2018-01-25 16:23:03 Notice: Notice (8): Undefined index: image/svg+xml in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/QuestionsController.php, line 344]
+
+
+2018-01-25 16:24:09 Notice: Notice (8): Undefined index: image/svg+xml in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/QuestionsController.php, line 344]
+
+
+2018-01-25 16:27:21 Notice: Notice (8): Undefined index: image/svg+xml in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/QuestionsController.php, line 344]
+
+
+2018-01-25 16:29:19 Notice: Notice (8): Undefined index: image/svg+xml in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/QuestionsController.php, line 344]
+
+
+2018-01-25 16:32:05 Notice: Notice (8): Undefined index: image/svg+xml in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/QuestionsController.php, line 344]
+
+
+2018-01-25 16:34:19 Notice: Notice (8): Undefined index: image/svg+xml in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/QuestionsController.php, line 344]
+
+
+2018-01-26 12:18:25 Notice: Notice (8): Undefined variable: fp in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1756]
+
+
+2018-01-28 21:08:24 Notice: Notice (8): Undefined index: survey_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1760]
+
+
+2018-01-29 12:09:47 Notice: Notice (8): Undefined variable: userDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Model/Table/MembersTable.php, line 94]
+
+
+2018-01-29 15:53:56 Notice: Notice (8): Trying to get property of non-object in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/surveys.ctp, line 58]
+
+
+2018-01-29 15:53:56 Notice: Notice (8): Trying to get property of non-object in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/surveys.ctp, line 59]
+
+
+2018-01-29 15:53:56 Notice: Notice (8): Trying to get property of non-object in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/surveys.ctp, line 60]
+
+
+2018-01-29 15:53:56 Notice: Notice (8): Trying to get property of non-object in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/surveys.ctp, line 65]
+
+
+2018-01-29 15:55:58 Notice: Notice (8): Trying to get property of non-object in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/surveys.ctp, line 59]
+
+
+2018-01-29 15:55:58 Notice: Notice (8): Trying to get property of non-object in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/surveys.ctp, line 60]
+
+
+2018-01-29 15:55:58 Notice: Notice (8): Trying to get property of non-object in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/surveys.ctp, line 65]
+
+
+2018-01-29 16:37:09 Notice: Notice (8): Undefined variable: centerexpenses in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 87]
+
+
+2018-01-29 16:37:09 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 138]
+
+
+2018-01-29 16:37:09 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 152]
+
+
+2018-01-29 16:37:09 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 158]
+
+
+2018-01-29 16:37:09 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 164]
+
+
+2018-01-29 16:37:09 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 170]
+
+
+2018-01-29 16:37:09 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 176]
+
+
+2018-01-29 16:37:15 Notice: Notice (8): Undefined variable: centerexpenses in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 87]
+
+
+2018-01-29 16:37:15 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 138]
+
+
+2018-01-29 16:37:15 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 152]
+
+
+2018-01-29 16:37:15 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 158]
+
+
+2018-01-29 16:37:15 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 164]
+
+
+2018-01-29 16:37:15 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 170]
+
+
+2018-01-29 16:37:15 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 176]
+
+
+2018-01-29 16:39:09 Notice: Notice (8): Undefined variable: gdImage in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 120]
+
+
+2018-01-29 16:39:09 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 138]
+
+
+2018-01-29 16:39:09 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 152]
+
+
+2018-01-29 16:39:09 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 158]
+
+
+2018-01-29 16:39:09 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 164]
+
+
+2018-01-29 16:39:09 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 170]
+
+
+2018-01-29 16:39:09 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 176]
+
+
+2018-01-29 16:41:38 Notice: Notice (8): Undefined variable: gdImage in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 120]
+
+
+2018-01-29 16:41:38 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 138]
+
+
+2018-01-29 16:41:38 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 152]
+
+
+2018-01-29 16:41:38 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 158]
+
+
+2018-01-29 16:41:38 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 164]
+
+
+2018-01-29 16:41:38 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 170]
+
+
+2018-01-29 16:41:38 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 176]
+
+
+2018-01-29 16:44:18 Notice: Notice (8): Undefined variable: gdImage in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 120]
+
+
+2018-01-29 16:44:18 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 138]
+
+
+2018-01-29 16:44:18 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 152]
+
+
+2018-01-29 16:44:18 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 158]
+
+
+2018-01-29 16:44:18 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 164]
+
+
+2018-01-29 16:44:18 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 170]
+
+
+2018-01-29 16:44:18 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 176]
+
+
+2018-01-29 16:48:18 Notice: Notice (8): Undefined variable: gdImage in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 120]
+
+
+2018-01-29 16:48:18 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 138]
+
+
+2018-01-29 16:48:18 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 152]
+
+
+2018-01-29 16:48:18 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 158]
+
+
+2018-01-29 16:48:18 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 164]
+
+
+2018-01-29 16:48:18 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 170]
+
+
+2018-01-29 16:48:18 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 176]
+
+
+2018-01-29 16:48:19 Notice: Notice (8): Undefined variable: row in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 183]
+
+
+2018-01-29 16:51:29 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 138]
+
+
+2018-01-29 16:51:29 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 152]
+
+
+2018-01-29 16:51:29 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 158]
+
+
+2018-01-29 16:51:29 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 164]
+
+
+2018-01-29 16:51:29 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 170]
+
+
+2018-01-29 16:51:29 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 176]
+
+
+2018-01-29 16:51:29 Notice: Notice (8): Undefined variable: row in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 183]
+
+
+2018-01-29 16:53:32 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 138]
+
+
+2018-01-29 16:53:32 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 152]
+
+
+2018-01-29 16:53:33 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 158]
+
+
+2018-01-29 16:53:33 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 164]
+
+
+2018-01-29 16:53:33 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 170]
+
+
+2018-01-29 16:53:33 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 176]
+
+
+2018-01-29 16:53:33 Notice: Notice (8): Undefined variable: row in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 183]
+
+
+2018-01-29 16:54:04 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 152]
+
+
+2018-01-29 16:54:04 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 158]
+
+
+2018-01-29 16:54:04 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 164]
+
+
+2018-01-29 16:54:04 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 170]
+
+
+2018-01-29 16:54:04 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 176]
+
+
+2018-01-29 16:54:04 Notice: Notice (8): Undefined variable: row in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 183]
+
+
+2018-01-29 16:57:01 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 170]
+
+
+2018-01-29 16:57:01 Notice: Notice (8): Undefined variable: generalsettinglogo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 176]
+
+
+2018-01-29 16:57:01 Notice: Notice (8): Undefined variable: row in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 183]
+
+
+2018-01-29 16:57:33 Notice: Notice (8): Undefined variable: row in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 170]
+
+
+2018-01-29 17:10:18 Notice: Notice (8): Undefined variable: objDrawing in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 134]
+
+
+2018-01-29 17:25:38 Notice: Notice (8): Undefined variable: surveyData in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 90]
+
+
+2018-01-29 17:26:05 Notice: Notice (8): Undefined variable: surveyData in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 90]
+
+
+2018-01-29 17:27:24 Notice: Notice (8): Undefined variable: surveyData in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 90]
+
+
+2018-01-29 17:28:14 Notice: Notice (8): Undefined variable: surveyData in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 90]
+
+
+2018-01-29 17:29:04 Notice: Notice (8): Undefined variable: surveyData in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 90]
+
+
+2018-01-29 17:29:24 Notice: Notice (8): Undefined variable: surveyData in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 90]
+
+
+2018-01-29 17:30:00 Notice: Notice (8): Undefined variable: surveyData in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 90]
+
+
+2018-01-29 17:31:44 Notice: Notice (8): Undefined variable: surveyData in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 90]
+
+
+2018-01-29 17:32:02 Notice: Notice (8): Undefined variable: surveyData in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 90]
+
+
+2018-01-29 17:33:28 Notice: Notice (8): Undefined variable: surveyData in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesreport.ctp, line 90]
+
+
+2018-01-29 18:27:38 Notice: Notice (8): Undefined index: services_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 80]
+
+
+2018-01-29 19:09:25 Notice: Notice (8): Undefined index: name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 98]
+
+
+2018-01-29 19:09:25 Notice: Notice (8): Undefined index: daily in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 100]
+
+
+2018-01-29 19:09:25 Notice: Notice (8): Undefined index: weekly in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 102]
+
+
+2018-01-29 19:09:25 Notice: Notice (8): Undefined index: monthly in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 104]
+
+
+2018-01-29 19:09:25 Notice: Notice (8): Undefined index: name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 98]
+
+
+2018-01-29 19:09:25 Notice: Notice (8): Undefined index: daily in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 100]
+
+
+2018-01-29 19:09:25 Notice: Notice (8): Undefined index: weekly in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 102]
+
+
+2018-01-29 19:09:25 Notice: Notice (8): Undefined index: monthly in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 104]
+
+
+2018-01-29 19:09:25 Notice: Notice (8): Undefined index: name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 98]
+
+
+2018-01-29 19:09:25 Notice: Notice (8): Undefined index: daily in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 100]
+
+
+2018-01-29 19:09:25 Notice: Notice (8): Undefined index: weekly in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 102]
+
+
+2018-01-29 19:09:25 Notice: Notice (8): Undefined index: monthly in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 104]
+
+
+2018-01-29 19:09:25 Notice: Notice (8): Undefined variable: totDaily in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 115]
+
+
+2018-01-29 19:09:25 Notice: Notice (8): Undefined variable: totWeekly in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 117]
+
+
+2018-01-29 19:09:25 Notice: Notice (8): Undefined variable: totMonthly in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 119]
+
+
+2018-01-29 19:10:56 Notice: Notice (8): Undefined variable: totDaily in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 117]
+
+
+2018-01-29 19:10:56 Notice: Notice (8): Undefined variable: totWeekly in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 119]
+
+
+2018-01-29 19:10:56 Notice: Notice (8): Undefined variable: totMonthly in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyreports.ctp, line 121]
+
+
+2018-01-29 19:36:23 Notice: Notice (8): Undefined variable: user_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php, line 109]
+
+
+2018-01-29 20:20:05 Notice: Notice (8): Undefined variable: haystack in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php, line 44]
+
+

@@ -1077,6 +1077,19 @@ input[type=radio], input[type=checkbox] {
     margin: 15px 0 30px;
 }
 
+.black-text {
+    color: #000;
+}
+.black-text:hover {
+    color: #00F;
+}
+.selectize-control .selectize-input.disabled {
+    background: #eee !important;
+}
+.radio-parallel {
+    padding-top: 0px !important;
+    padding-left: 10px;
+}
 /*.family-headings {
     top: 27px;
 }

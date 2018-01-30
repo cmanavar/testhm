@@ -37,10 +37,15 @@ use Cake\I18n\Date;
 class WebservicesController extends AppController {
 
     public function beforeFilter(Event $event) {
+        if (in_array($this->request->session()->read('Auth.User.user_type'), ['ADMIN', 'OPERATION_MANAGER', 'TELLY_CALLER'])) {
+            AppController::checkNormalAccess();
+        }
         $this->Auth->allow(['homepage', 'categoryDetails', 'categoryList', 'serviceDetails', 'getServicesSubQuestions', 'helpDetails',
             'createCart', 'addCartProduct', 'cartDetails', 'cartClear', 'removeCartProduct', 'counteunreadmsg', 'msgList', 'msgView',
             'cartOrderPlaced', 'forgorPassword', 'changePassword', 'applyCouponCode', 'walletDetails', 'getCartId', 'orderDetails',
-            'orderLists', 'orderQuery', 'orderSummary', 'storeReview', 'updateOrder', 'serviceReviews', 'getquestionArr', 'testNotifications']);
+            'orderLists', 'orderQuery', 'orderSummary', 'storeReview', 'updateOrder', 'serviceReviews', 'getquestionArr', 'surverysubmit', 'surverylists',
+            'serviceLists', 'addMembership', 'planLists', 'referenceUsers', 'listMembership', 'appoinmentLists', 'appoinmentDetails',
+            'appoinmentCompleted', 'appoinmentDeclined', 'testNotifications']);
     }
 
     public function counteunreadmsg() {
@@ -376,6 +381,49 @@ class WebservicesController extends AppController {
                 $rslt['visit_charge'] = $sDetails['visit_charge'];
                 $rslt['minimum_charge'] = $sDetails['minimum_charge'];
                 $rslt['banner_image'] = IMAGE_URL_PATH . 'services/banner/' . $sDetails['banner_image'];
+                $rslt['service_description'] = [];
+                if ($sDetails['icon_1'] != '' && $sDetails['desc_heading_1'] != '' && $sDetails['desc_text_1'] != '') {
+                    $tmpD = [];
+                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_1'];
+                    $tmpD['heading'] = $sDetails['desc_heading_1'];
+                    $tmpD['text'] = $sDetails['desc_text_1'];
+                    $rslt['service_description'][] = $tmpD;
+                }
+                if ($sDetails['icon_2'] != '' && $sDetails['desc_heading_2'] != '' && $sDetails['desc_text_2'] != '') {
+                    $tmpD = [];
+                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_2'];
+                    $tmpD['heading'] = $sDetails['desc_heading_2'];
+                    $tmpD['text'] = $sDetails['desc_text_2'];
+                    $rslt['service_description'][] = $tmpD;
+                }
+                if ($sDetails['icon_3'] != '' && $sDetails['desc_heading_3'] != '' && $sDetails['desc_text_3'] != '') {
+                    $tmpD = [];
+                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_3'];
+                    $tmpD['heading'] = $sDetails['desc_heading_3'];
+                    $tmpD['text'] = $sDetails['desc_text_3'];
+                    $rslt['service_description'][] = $tmpD;
+                }
+                if ($sDetails['icon_4'] != '' && $sDetails['desc_heading_4'] != '' && $sDetails['desc_text_4'] != '') {
+                    $tmpD = [];
+                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_4'];
+                    $tmpD['heading'] = $sDetails['desc_heading_4'];
+                    $tmpD['text'] = $sDetails['desc_text_4'];
+                    $rslt['service_description'][] = $tmpD;
+                }
+                if ($sDetails['icon_5'] != '' && $sDetails['desc_heading_5'] != '' && $sDetails['desc_text_5'] != '') {
+                    $tmpD = [];
+                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_5'];
+                    $tmpD['heading'] = $sDetails['desc_heading_5'];
+                    $tmpD['text'] = $sDetails['desc_text_5'];
+                    $rslt['service_description'][] = $tmpD;
+                }
+                if ($sDetails['icon_6'] != '' && $sDetails['desc_heading_6'] != '' && $sDetails['desc_text_6'] != '') {
+                    $tmpD = [];
+                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_6'];
+                    $tmpD['heading'] = $sDetails['desc_heading_6'];
+                    $tmpD['text'] = $sDetails['desc_text_6'];
+                    $rslt['service_description'][] = $tmpD;
+                }
                 // Ratecard - Start
                 $rateArr = [];
                 $rateCards = $this->ServiceRatecards->find('all')->where(['service_id' => $sDetails['id']])->hydrate(false)->toArray();
@@ -571,7 +619,7 @@ class WebservicesController extends AppController {
         }
     }
 
-    function checkChildQuestionsExist($question_id, $answer_id) {
+    public function checkChildQuestionsExist($question_id, $answer_id) {
         $cond_arr = ['parent_question_id' => $question_id, 'parent_answer_id' => $answer_id, 'questions_type' => 'child'];
         $counts = $this->ServiceQuestions->find('all')->where($cond_arr)->hydrate(false)->count();
         if (isset($counts) && ($counts != 0)) {
@@ -581,7 +629,7 @@ class WebservicesController extends AppController {
         }
     }
 
-    function nextStepQuestions($question_id, $answer_id, $serviceId) {
+    public function nextStepQuestions($question_id, $answer_id, $serviceId) {
         $cond_arr = ['parent_question_id' => $question_id, 'parent_answer_id' => $answer_id, 'service_id' => $serviceId];
         $questions = $this->ServiceQuestions->find('all')->select(['que_type'])->where($cond_arr)->hydrate(false)->first();
         if (isset($questions) && !empty($questions)) {
@@ -1131,7 +1179,7 @@ class WebservicesController extends AppController {
         }
     }
 
-    function getQuestionDetails($question_id, $answer_id) {
+    public function getQuestionDetails($question_id, $answer_id) {
         $this->loadModel('serviceQuestions');
         $this->loadModel('serviceQuestionAnswers');
         $rslt = [];
@@ -1698,6 +1746,449 @@ class WebservicesController extends AppController {
         print("\n\nJSON received:\n");
         print($return);
         print("\n");
+    }
+
+    public function surverysubmit() {
+        $user_id = $this->checkVerifyApiKey('SALES');
+        if ($user_id) {
+            $this->loadModel('Surveys');
+            $requestArr = $this->getInputArr();
+            $serveyArrs = $this->getNewSurveyIds();
+            if (!empty($serveyArrs)) {
+                $surveys = $this->Surveys->newEntity();
+                $appoinment_date = $requestArr['appoinment_date'];
+                unset($requestArr['appoinment_date']);
+                $surveys = $this->Surveys->patchEntity($surveys, $requestArr);
+                $surveys->ids = $serveyArrs['ids'];
+                $surveys->survey_id = $serveyArrs['survey_id'];
+                $surveys->appoinment_date = date("Y-m-d", strtotime($appoinment_date));
+                $surveys->created_by = $user_id;
+                $surveys->created = date("Y-m-d H:i:s");
+                $rslt = $this->Surveys->save($surveys);
+                if ($rslt->id) {
+                    $this->success('Survey Added!', ['id' => $rslt->id]);
+                } else {
+                    $this->wrong(Configure::read('Settings.FAIL'));
+                }
+            } else {
+                $this->wrong(Configure::read('Settings.FAIL'));
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function surverylists() {
+        $user_id = $this->checkVerifyApiKey('SALES');
+        if ($user_id) {
+            $this->loadModel('Surveys');
+            $surveyLists = $this->Surveys->find('all')->select(['person_name', 'user_type'])->where(['created_by' => $user_id, "DATE_FORMAT(created,'%Y-%m-%d')" => date('Y-m-d')])->order(['id' => 'DESC'])->hydrate(false)->toArray();
+            //pr($surveyLists); exit;
+            if (!empty($surveyLists)) {
+                $this->success('Survey List!', $surveyLists);
+            } else {
+                $this->success('Survey List Empty!', []);
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function serviceLists() {
+        $this->loadModel('Services');
+        $services = $this->getSurveyServiceLists();
+        if (!empty($services)) {
+            $this->success('Services List!', $services);
+        } else {
+            $this->success('Services List Empty!', []);
+        }
+    }
+
+    public function planLists() {
+        $this->loadModel('Plans');
+        $plans = $this->Plans->find('all')->select(['id', 'name', 'price'])->hydrate(false)->toArray();
+        if (!empty($plans)) {
+            foreach ($plans as $key => $val) {
+                $tax = '';
+                $tax = $val['price'] * GST_TAX / 100;
+                $plans[$key]['tax'] = $tax;
+                $plans[$key]['total'] = $val['price'] + $tax;
+            }
+            $this->success('Plan List!', $plans);
+        } else {
+            $this->success('Plan List Empty!', []);
+        }
+    }
+
+    public function referenceUsers() {
+        $this->loadModel('Users');
+        $referUsers = $this->Users->find('all')->select(['id', 'name', 'phone_no'])->where(['user_type' => 'MEMBERSHIP'])->hydrate(false)->toArray();
+        $referLists = [];
+        if (!empty($referUsers)) {
+            foreach ($referUsers as $tuser) {
+                $tmp = [];
+                $tmp['id'] = $tuser['id'];
+                $tmp['name'] = $tuser['name'] . " | " . $tuser['phone_no'];
+                $referLists[] = $tmp;
+            }
+        }
+        if (!empty($referLists)) {
+            $this->success('Reference List!', $referLists);
+        } else {
+            $this->success('Reference List Empty!', []);
+        }
+    }
+
+    public function addMembership() {
+        $user_id = $this->checkVerifyApiKey('SALES');
+        if ($user_id) {
+            $this->loadModel('Users');
+            $this->loadModel('UserDetails');
+            $user = $this->Users->newEntity();
+            $requestArr = $this->getInputArr();
+            $myfile = fopen("newfileMember.txt", "w") or die("Unable to open file!");
+            $txt = "Array\n";
+            fwrite($myfile, $txt);
+            fwrite($myfile, file_get_contents('php://input'));
+            fwrite($myfile, "Array\n");
+            fwrite($myfile, print_r($requestArr, TRUE));
+            fclose($myfile);
+            if (!isset($requestArr['plan_id']) || $requestArr['plan_id'] == '') {
+                $this->wrong('Sorry, Please select plan.');
+            }
+            $validator = new UsersValidator();
+            $usersController = new UsersController();
+            $requestArr['password'] = $usersController->randomPassword();
+            $errors = $validator->errors($requestArr);
+            if (empty($errors)) {
+                $memberIdArrs = $this->getNewMemberIds();
+                if (!empty($memberIdArrs)) {
+                    $name = $requestArr['name'];
+                    $email = $requestArr['email'];
+                    $phone_no = $requestArr['phone_no'];
+                    //echo $email. " ".$phone_no; exit;
+                    $userExists = $this->uniqueEmailOrPhone($email, $phone_no);
+                    if (isset($userExists['status']) && $userExists['status'] == 'fail') {
+                        $this->wrong($userExists['msg']);
+                    } else {
+                        $uController = new UsersController();
+                        $password = $uController->randomPassword();
+                        $userData = [];
+                        $userData['name'] = $name;
+                        $userData['email'] = $email;
+                        $userData['phone_no'] = $phone_no;
+                        $userData['password'] = $password;
+                        $userData['address'] = (isset($requestArr['address']) && $requestArr['address'] != '') ? $requestArr['address'] : '';
+                        $userData['city'] = (isset($requestArr['city']) && $requestArr['city'] != '') ? $requestArr['city'] : '';
+                        $userData['signup_with'] = 'SELF';
+                        $userData['user_type'] = 'MEMBERSHIP';
+                        $userData['plan_id'] = (isset($requestArr['plan_id']) && $requestArr['plan_id'] != '') ? $requestArr['plan_id'] : '';
+                        $userData['ip_address'] = (isset($requestArr['ip_address']) && $requestArr['ip_address'] != '') ? $requestArr['ip_address'] : '';
+                        $userData['refer_key'] = $this->getReferKey($name, $phone_no);
+                        $userData['referral_id'] = (isset($requestArr['referral_id']) && $requestArr['referral_id'] != '') ? $requestArr['referral_id'] : 0;
+                        $userData['email_newsletters'] = 'Y';
+                        $userData['phone_verified'] = 'Y';
+                        $userData['email_verified'] = 'Y';
+                        $userData['active'] = (isset($requestArr['active']) && $requestArr['active'] != '') ? $requestArr['active'] : 'N';
+                        $user = $this->Users->patchEntity($user, $userData);
+                        $user->ids = $memberIdArrs['ids'];
+                        $user->membership_id = $memberIdArrs['membership_id'];
+                        $paymentType = (isset($requestArr['payment_type']) && $requestArr['payment_type'] != '') ? $requestArr['payment_type'] : '';
+                        $bankName = (isset($requestArr['bank_name']) && $requestArr['bank_name'] != '') ? $requestArr['bank_name'] : '';
+                        $chequeNo = (isset($requestArr['cheque_no']) && $requestArr['cheque_no'] != '') ? $requestArr['cheque_no'] : '';
+                        $transcationId = (isset($requestArr['transcation_id']) && $requestArr['transcation_id'] != '') ? $requestArr['transcation_id'] : '';
+                        $otherDetails = (isset($requestArr['other_details']) && $requestArr['other_details'] != '') ? $requestArr['other_details'] : '';
+                        if ($paymentType == 'CHEQUE') {
+                            $msgT = '';
+                            $sendMsg = [];
+                            $msgT = "Congratulation, your payment with the Cheques No. " . $chequeNo . " has been received and in process. We will update you within 3-4 working days once it is clear. Membership ID: " . $memberIdArrs['membership_id'] . ". Hmen Services.";
+                            $sendMsg = $this->sendOtp($phone_no, $msgT);
+                            if ($sendMsg['status'] == 'fail') {
+                                $this->wrong($sendMsg['msg']);
+                            }
+                        }
+                        if ($paymentType == 'UPI') {
+                            $msgT = '';
+                            $sendMsg = [];
+                            $msgT = "Congratulation, your payment with the UPI Transaction ID. " . $chequeNo . " has been received and in process. It will update in next 24 hours. Membership ID: " . $memberIdArrs['membership_id'] . ". Hmen Services.";
+                            $sendMsg = $this->sendOtp($phone_no, $msgT);
+                            if ($sendMsg['status'] == 'fail') {
+                                $this->wrong($sendMsg['msg']);
+                            }
+                        }
+                        if ($paymentType == 'OTHER') {
+                            $msgT = '';
+                            $sendMsg = [];
+                            $msgT = "Congratulation, your payment in process. We will update you within 3-4 working days once it is clear. Membership ID: " . $memberIdArrs['membership_id'] . ". Hmen Services.";
+                            $sendMsg = $this->sendOtp($phone_no, $msgT);
+                            if ($sendMsg['status'] == 'fail') {
+                                $this->wrong($sendMsg['msg']);
+                            }
+                        }
+                        // SEND SMS 
+                        $msgT = '';
+                        $sendMsg = [];
+                        $msgT = "Dear $name, Your Hmen Account access Email address: $email and  Password: $password You can login after your payment clearance. Regards, Hmen Service.";
+                        $sendMsg = $this->sendOtp($phone_no, $msgT);
+                        if ($sendMsg['status'] == 'fail') {
+                            $this->wrong($sendMsg['msg']);
+                        }
+                        // SEND EMAIL
+                        $this->sentEmails($name, $email, $password);
+                        if (isset($requestArr['birthdate']) && $requestArr['birthdate'] != '') {
+                            $user->birthdate = date('Y-m-d', strtotime($requestArr['birthdate']));
+                        }
+                        if (isset($requestArr['aniversary_date']) && $requestArr['aniversary_date'] != '') {
+                            $user->aniversary_date = date('Y-m-d', strtotime($requestArr['aniversary_date']));
+                        }
+                        $user->created = date("Y-m-d H:i:s");
+                        $user->created_by = $user_id;
+                        $saveUsers = $this->Users->save($user);
+                        if ($saveUsers) {
+                            $userId = $saveUsers['id'];
+                            //generate api key
+                            $api_key = $this->Users->generateAPIkey();
+                            $mappingData = [];
+                            $this->loadModel('UserMapping');
+                            $userMapping = $this->UserMapping->newEntity();
+                            $map_data = array(
+                                'user_id' => $userId,
+                                'user_type' => 'MEMBERSHIP',
+                                'mapping_key' => 'api_key',
+                                'mapping_value' => $api_key
+                            );
+                            $userMapping = $this->UserMapping->patchEntity($userMapping, $map_data);
+                            $userMapping->created = date("Y-m-d H:i:s");
+                            if ($this->UserMapping->save($userMapping)) {
+                                $users = $this->UserDetails->newEntity();
+                                $userData = [];
+                                $userData['user_id'] = $userId;
+                                $userData['person_1'] = (isset($requestArr['person_1']) && $requestArr['person_1'] != '') ? $requestArr['person_1'] : '';
+                                $userData['person_2'] = (isset($requestArr['person_2']) && $requestArr['person_2'] != '') ? $requestArr['person_2'] : '';
+                                $userData['person_3'] = (isset($requestArr['person_3']) && $requestArr['person_3'] != '') ? $requestArr['person_3'] : '';
+                                $userData['person_4'] = (isset($requestArr['person_4']) && $requestArr['person_4'] != '') ? $requestArr['person_4'] : '';
+                                $userData['person_5'] = (isset($requestArr['person_5']) && $requestArr['person_5'] != '') ? $requestArr['person_5'] : '';
+                                $userData['occupation'] = (isset($requestArr['occupation']) && $requestArr['occupation'] != '') ? $requestArr['occupation'] : '';
+                                $userData['company_name'] = (isset($requestArr['company_name']) && $requestArr['company_name'] != '') ? $requestArr['company_name'] : '';
+                                $userData['company_website'] = (isset($requestArr['company_website']) && $requestArr['company_website'] != '') ? $requestArr['company_website'] : '';
+                                $userData['payment_type'] = $paymentType;
+                                $userData['bank_name'] = $bankName;
+                                $userData['cheque_no'] = $chequeNo;
+                                $userData['transcation_id'] = $transcationId;
+                                $userData['other_details'] = $otherDetails;
+                                $users = $this->UserDetails->patchEntity($users, $userData);
+                                $users->birthdate_1 = (isset($requestArr['birthdate_1']) && $requestArr['birthdate_1'] != '') ? date('Y-m-d', strtotime($requestArr['birthdate_1'])) : date('Y-m-d', strtotime('1980-01-01'));
+                                $users->birthdate_2 = (isset($requestArr['birthdate_2']) && $requestArr['birthdate_2'] != '') ? date('Y-m-d', strtotime($requestArr['birthdate_2'])) : date('Y-m-d', strtotime('1980-01-01'));
+                                $users->birthdate_3 = (isset($requestArr['birthdate_3']) && $requestArr['birthdate_3'] != '') ? date('Y-m-d', strtotime($requestArr['birthdate_3'])) : date('Y-m-d', strtotime('1980-01-01'));
+                                $users->birthdate_4 = (isset($requestArr['birthdate_4']) && $requestArr['birthdate_4'] != '') ? date('Y-m-d', strtotime($requestArr['birthdate_4'])) : date('Y-m-d', strtotime('1980-01-01'));
+                                $users->birthdate_5 = (isset($requestArr['birthdate_5']) && $requestArr['birthdate_5'] != '') ? date('Y-m-d', strtotime($requestArr['birthdate_5'])) : date('Y-m-d', strtotime('1980-01-01'));
+                                $users->cheque_date = (isset($requestArr['cheque_date']) && $requestArr['cheque_date'] != '') ? date('Y-m-d', strtotime($requestArr['cheque_date'])) : date('Y-m-d', strtotime('1980-01-01'));
+                                $users->created = date("Y-m-d H:i:s");
+                                $users->created_by = $user_id;
+                                if ($this->UserDetails->save($users)) {
+                                    $this->success(__('THE MEMBER HAS BEEN SAVED.'));
+                                } else {
+                                    $this->wrong(__('UNABLE TO ADD THE MEMBER.'));
+                                }
+                            } else {
+                                $this->wrong(__('UNABLE TO ADD THE MEMBER.'));
+                            }
+                        }
+                    }
+                }
+            } else {
+                $this->wrong('Validation Error!', $errors);
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function sentEmails($name, $email, $password) {
+        $this->layout = 'ajax';
+        $mailData = [];
+        $mailData['name'] = $name;
+        $mailData['email'] = $email;
+        $mailData['password'] = $password;
+        $this->set('mailData', $mailData);
+        //pr($mailData); exit;
+        $view_output = $this->render('/Element/membership_signup');
+        $fields = array(
+            'msg' => $view_output,
+            'tomail' => 'chiragce1992@gmail.com',
+            //'cc_email' => $patient['email'],
+            'subject' => 'Membership Account Details',
+            'from_name' => 'Uncode Lab',
+            'from_mail' => 'uncodelab@gmail.com',
+        );
+        $this->sendemails($fields);
+        return;
+    }
+
+    public function uniqueEmailOrPhone($email, $phone) {
+        $userTable = TableRegistry::get('Users');
+        if ($email != "") {
+            $user = $userTable->find('all')->where(['email' => $email])->hydrate(false)->first();
+            if (isset($user) && !empty($user)) {
+                $msg = 'Account with Email ID ' . $email . ' already exist!';
+                if ($user['active'] == 'N') {
+                    $msg = 'Account with Email ID ' . $email . ' already created but account is inactive!';
+                }
+                return ['status' => 'fail', 'msg' => $msg];
+            }
+        }
+        if ($phone != "") {
+            $user = $userTable->find('all')->where(['phone_no' => $phone])->hydrate(false)->first();
+            if (isset($user) && !empty($user)) {
+                $msg = 'Account with phone number ' . $phone . ' already exist!';
+                if ($user['active'] == 'N') {
+                    $msg = 'Account with phone number ' . $phone . ' already created but account is inactive!';
+                }
+                return ['status' => 'fail', 'msg' => $msg];
+            }
+        }
+        return true;
+    }
+
+    public function getReferKey($name, $phone = '') {
+        $nameArr = explode(" ", $name);
+        $first = strtoupper($nameArr[0]);
+        if (isset($phone) && $phone != '') {
+            $second = substr($phone, -5);
+        } else {
+            $second = rand(11111, 99999);
+        }
+        return $first . $second;
+    }
+
+    public function listMembership() {
+        $user_id = $this->checkVerifyApiKey('SALES');
+        if ($user_id) {
+            $this->loadModel('Users');
+            $userLists = $this->Users->find('all')->select(['name', 'plan_id'])->where(['created_by' => $user_id, 'user_type' => 'MEMBERSHIP', "DATE_FORMAT(created,'%Y-%m-%d')" => date('Y-m-d')])->order(['id' => 'DESC'])->hydrate(false)->toArray();
+            if (!empty($userLists)) {
+                $users = [];
+                foreach ($userLists as $key => $val) {
+                    $tmp = [];
+                    $tmp['name'] = $val['name'];
+                    $tmp['plan'] = $this->getPlanName($val['plan_id']);
+                    $users[] = $tmp;
+                }
+                $this->success('User List!', $users);
+            } else {
+                $this->success('User List Empty!', []);
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function getPlanName($plan_id) {
+        $plansTable = TableRegistry::get('Plans');
+        $planDetails = $plansTable->find()->select(['name'])->where(['id' => $plan_id])->hydrate(false)->first();
+        return (isset($planDetails['name']) && $planDetails['name'] != '') ? ucfirst(strtolower($planDetails['name'])) : '-';
+    }
+
+    public function appoinmentLists() {
+        $user_id = $this->checkVerifyApiKey('SALES');
+        if ($user_id) {
+            $this->loadModel('Surveys');
+            $appoinmentLists = $this->Surveys->find('all')->select(['id', 'person_name', 'appoinment_date', 'appoinment_time'])->where(['created_by' => $user_id, 'appoinment_status' => 'PENDING', "DATE_FORMAT(created,'%Y-%m-%d') <=" => date('Y-m-d')])->hydrate(false)->toArray();
+            if (!empty($appoinmentLists)) {
+                $appoinments = [];
+                foreach ($appoinmentLists as $key => $val) {
+                    $tmp = [];
+                    $tmp['id'] = $val['id'];
+                    $tmp['name'] = $val['person_name'];
+                    $tmp['time'] = $val['appoinment_date']->format('Y-m-d') . " " . $val['appoinment_time'];
+                    $appoinments[] = $tmp;
+                }
+                $this->success('Appoinmnet List!', $appoinments);
+            } else {
+                $this->success('Appoinmnet List Empty!', []);
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function appoinmentDetails() {
+        $user_id = $this->checkVerifyApiKey('SALES');
+        if ($user_id) {
+            $this->loadModel('Surveys');
+            $requestArr = $this->getInputArr();
+            if (isset($requestArr['survey_id']) && $requestArr['survey_id'] != '') {
+                $appoinmentDetails = $this->Surveys->find('all')->select(['id', 'person_name', 'address', 'contact_number', 'appoinment_date', 'appoinment_time'])->where(['id' => $requestArr['survey_id']])->hydrate(false)->first();
+                if (is_array($appoinmentDetails) && !empty($appoinmentDetails)) {
+                    $appoinmentDetails['time'] = $appoinmentDetails['appoinment_date']->format('d-m-Y') . " " . $appoinmentDetails['appoinment_time'];
+                    unset($appoinmentDetails['appoinment_date']);
+                    unset($appoinmentDetails['appoinment_time']);
+                    $this->success('Survey Data Found!', $appoinmentDetails);
+                } else {
+                    $this->wrong(__('SURVEY DATA IS NOT FOUND'));
+                }
+            } else {
+                $this->wrong(__('UNABLE TO VIEW THE APPOINMENT.'));
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function appoinmentCompleted() {
+        $user_id = $this->checkVerifyApiKey('SALES');
+        if ($user_id) {
+            $this->loadModel('Surveys');
+            $requestArr = $this->getInputArr();
+            if (isset($requestArr['survey_id']) && $requestArr['survey_id'] != '') {
+                $appoinmentDetails = $this->Surveys->get($requestArr['survey_id']);
+                if (!empty($appoinmentDetails)) {
+                    $updateValue['appoinment_status'] = 'ACCEPTED';
+                    $appoinmentDetails = $this->Surveys->patchEntity($appoinmentDetails, $updateValue);
+                    $appoinmentDetails->modified = date("Y-m-d H:i:s");
+                    $appoinmentDetails->modified_by = $user_id;
+                    if ($this->Surveys->save($appoinmentDetails)) {
+                        $this->success('APPOINMENT IS COMPLETED');
+                    } else {
+                        $this->wrong(Configure::read('Settings.FAIL'));
+                    }
+                } else {
+                    $this->wrong(__('UNABLE TO FOUND THE APPOINMENT.'));
+                }
+            } else {
+                $this->wrong(__('UNABLE TO COMPLETE THE APPOINMENT.'));
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function appoinmentDeclined() {
+        $user_id = $this->checkVerifyApiKey('SALES');
+        if ($user_id) {
+            $this->loadModel('Surveys');
+            $requestArr = $this->getInputArr();
+            if (isset($requestArr['survey_id']) && $requestArr['survey_id'] != '') {
+                $appoinmentDetails = $this->Surveys->get($requestArr['survey_id']);
+                if (!empty($appoinmentDetails)) {
+                    $updateValue['appoinment_status'] = 'DECLINED';
+                    $appoinmentDetails = $this->Surveys->patchEntity($appoinmentDetails, $updateValue);
+                    $appoinmentDetails->modified = date("Y-m-d H:i:s");
+                    $appoinmentDetails->modified_by = $user_id;
+                    if ($this->Surveys->save($appoinmentDetails)) {
+                        $this->success('APPOINMENT IS DECLINED');
+                    } else {
+                        $this->wrong(Configure::read('Settings.FAIL'));
+                    }
+                } else {
+                    $this->wrong(__('UNABLE TO FOUND THE APPOINMENT.'));
+                }
+            } else {
+                $this->wrong(__('UNABLE TO COMPLETE THE APPOINMENT.'));
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
     }
 
 }

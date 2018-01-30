@@ -2,6 +2,16 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/SurveysController.php</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/config/routes.php</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/webroot/js/custom/custom.js</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/webroot/js/custom/upload_image.js</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/config/paths.php</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Services/edit.ctp</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/ServicesController.php</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Services/add.ctp</file>
+        </group>
     </open-files>
 </project-private>

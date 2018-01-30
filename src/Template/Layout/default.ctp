@@ -18,7 +18,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 $action = $this->request->params['action'];
 
 $controller = $this->request->params['controller'];
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,6 +46,8 @@ $controller = $this->request->params['controller'];
         <?php echo $this->Html->css('custom/menu/yamm.css'); ?>
         <?php echo $this->Html->css('custom/menu/yamm.css'); ?>
         <?php echo $this->Html->css('custom/green.css'); ?>
+        <?php echo $this->Html->css('selectize.css'); ?>
+        <?php echo $this->Html->css('jquery-ui.css'); ?>
 
 
 
@@ -61,18 +62,18 @@ $controller = $this->request->params['controller'];
 
             </div>
         </div>
-        <?php //echo $this->element('sql_dump');  ?>
+        <?php //echo $this->element('sql_dump');   ?>
         <?php
         echo $this->Html->script(array('hmen/jquery.js',
             'bootstrap.min.js',
             'validate/jquery.validate.js',
             // 'custom/custom-validation-form.js',
-            'bootstrap-typeahead.js',
-            'custom/custom.js', 'custom/pagesidebar.js'
+            'bootstrap-typeahead.js', 'selectize.js', 'https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=p4pvlweh2kmrrrcrtkp63pmc73mi9srsg8ov8jjoces5hqby',
+            'custom/custom.js', 'jquery-ui.js',
+            'custom/pagesidebar.js'
                 //'custom/custom-validation-datatable.js',
         ));
         ?>
-
         <?php
         // echo $this->Html->script(array('plugins.js','actions.js'));
         echo $this->fetch('scriptBottom');

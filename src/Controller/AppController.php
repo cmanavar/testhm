@@ -326,7 +326,7 @@ class AppController extends Controller {
             'data' => array("foo" => "bar"),
             'contents' => $content
         );
-        if(isset($user) && $user != '' && $user != 'All') {
+        if (isset($user) && $user != '' && $user != 'All') {
             $fields['include_player_ids'] = array($user);
         } else {
             $fields['included_segments'] = array('All');
@@ -346,6 +346,57 @@ class AppController extends Controller {
         $response = curl_exec($ch);
         curl_close($ch);
         return $response;
+    }
+
+    public function getNewSurveyIds() {
+        $surveyTable = TableRegistry::get('Surveys');
+        $surveys = $surveyTable->find()->select(['ids'])->where(["DATE_FORMAT(created,'%Y-%m-%d')" => date('Y-m-d')])->order(['id' => 'DESC'])->hydrate(false)->first();
+        if (!empty($surveys)) {
+            $arr['ids'] = $ids = $surveys['ids'] + 1;
+            $arr['survey_id'] = 'S-' . date('Ymd') . $ids;
+        } else {
+            $arr['ids'] = '1';
+            $arr['survey_id'] = 'S-' . date('Ymd') . '1';
+        }
+        return $arr;
+    }
+
+    public function getNewMemberIds() {
+        $userTable = TableRegistry::get('Users');
+        $users = $userTable->find()->select(['ids'])->where(["DATE_FORMAT(created,'%Y-%m-%d')" => date('Y-m-d'), "user_type" => "MEMBERSHIP"])->order(['id' => 'DESC'])->hydrate(false)->first();
+        if (!empty($users)) {
+            $arr['ids'] = $ids = $users['ids'] + 1;
+            $arr['membership_id'] = 'M-' . date('Ymd') . $ids;
+        } else {
+            $arr['ids'] = '1';
+            $arr['membership_id'] = 'M-' . date('Ymd') . '1';
+        }
+        return $arr;
+    }
+
+    public function getSurveyServiceLists() {
+        $services = [['id' => 'Carpentry', 'service_name' => 'Carpentry'], ['id' => 'Electrical_Repairs', 'service_name' => 'Electrical Repairs'], ['id' => 'Plumbing', 'service_name' => 'Plumbing'], ['id' => 'Air_Conditioner', 'service_name' => 'Air Conditioner'], ['id' => 'Pest_Control', 'service_name' => 'Pest Control'], ['id' => 'Painting', 'service_name' => 'Painting'], ['id' => 'Microwave_Oven', 'service_name' => 'Microwave Oven'], ['id' => 'Refrigerator', 'service_name' => 'Refrigerator'], ['id' => 'Washing_Machine', 'service_name' => 'Washing Machine'], ['id' => 'Geyser', 'service_name' => 'Geyser'], ['id' => 'Flourmill', 'service_name' => 'Flourmill'], ['id' => 'Gas_Stove', 'service_name' => 'Gas Stove'], ['id' => 'RO_&_Water_Purifir_Installation_and_Repair', 'service_name' => 'RO & Water Purifir Installation and Repair'], ['id' => 'Mason_Work', 'service_name' => 'Mason Work'], ['id' => 'Cleaning', 'service_name' => 'Cleaning'], ['id' => 'Mobile_Repairing', 'service_name' => 'Mobile Repairing'], ['id' => 'Computer/Laptop_repairing', 'service_name' => 'Computer/Laptop repairing'], ['id' => 'CCTV_Camera_Installation/Repair', 'service_name' => 'CCTV Camera Installation/Repair'], ['id' => 'TV_Installation/Repair', 'service_name' => 'TV Installation/Repair'], ['id' => 'AC_Services_&_Repair', 'service_name' => 'AC Services & Repair']];
+        return $services;
+    }
+
+    public function checkNormalAccess() {
+        $authData = $this->request->session()->read('Auth');
+        //echo $this->name . " " . $this->request->action;
+        //exit;
+        if (isset($authData['User']['user_type']) && $authData['User']['user_type'] == 'OPERATION_MANAGER') {
+            if (in_array($this->name, ['ServiceCategory', 'Services', 'Settings', 'Reports'])) {
+                $this->redirect(array('controller' => 'Pages', 'action' => 'permissiondenied'));
+            }
+            if(($this->name == 'Users') && ($this->request->action != 'appuser')) {
+                $this->redirect(array('controller' => 'Pages', 'action' => 'permissiondenied'));
+            }
+        }
+        if (isset($authData['User']['user_type']) && $authData['User']['user_type'] == 'TELLY_CALLER') {
+            if (!in_array($this->name, ['Dashboard', 'Surveys'])) {
+                $this->redirect(array('controller' => 'Pages', 'action' => 'permissiondenied'));
+            }
+        }
+        
     }
 
 }

@@ -13,7 +13,6 @@
 <?php echo $this->Html->script('maskedinput.js', ['block' => 'scriptBottom']); ?>
 <?php echo $this->Html->script('custom/upload_image.js', array('block' => 'scriptBottom')); ?>
 <?php echo $this->Html->script('custom/dashboard.js', ['block' => 'scriptBottom']); ?>
-<?php echo $this->Html->script('https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=p4pvlweh2kmrrrcrtkp63pmc73mi9srsg8ov8jjoces5hqby', ['block' => 'scriptBottom']); ?>
 <div id="page-wrapper">
     <div class="row">
         <div class="col-md-12">
@@ -63,7 +62,253 @@
                                 <label class="col-sm-3 control-label">DESCRIPTION <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="input text">
-                                        <?php echo $this->Form->input('service_description', ['label' => false, 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER SERVICE DESCRIPTION ', 'rows' => 4]); ?>
+                                        <?php echo $this->Form->input('service_description', ['label' => false, 'class' => 'form-control required normal-font service-descriptions', 'placeholder' => 'ENTER SERVICE DESCRIPTION ', 'rows' => 4]); ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">DESCRIPTION 1 </label>
+                                <div class="col-sm-2">
+                                    <div class="custom-radio radio ">
+                                        <?php
+                                        if (isset($service['icon_1']) && $service['icon_1'] != '') {
+                                            echo $this->Html->image(SERVICE_ICON_PATH . $service['icon_1'], ['height' => 50, 'width' => 80]) . "<br/>";
+                                            ?>
+                                            <br/>
+                                            <a data-toggle="modal" url=<?php echo $this->Url->build(['controller' => 'Services', 'action' => 'deleteimage', 'icon_1', $service['icon_1']]) ?> data-value="<?php echo $service['icon_1']; ?>" data-target="#delete" href="#"  class="btn btn-danger btn-sm delete ">REMOVE IMAGE</a>
+                                            <?php
+                                        } else {
+                                            echo $this->Form->input('icon_1', ['label' => false, 'type' => 'file', 'class' => 'imgpreview', 'id' => 'icon_1']);
+                                            ?>
+                                            <br/>
+                                            <div class="imageblock">
+                                                <div class="form-group hover-element scanimgblock">
+                                                    <div class="col-sm-8 td-inputbox">
+                                                        <?php echo $this->Html->image('upload_image.png', ['class' => 'banner_upload', 'alt' => 'Your image', 'id' => 'icon_1_upload_preview', 'height' => '45']); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php
+                                        }
+                                        ?> 
+                                    </div>  
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Description 1</label>
+                                            <?php echo $this->Form->input('desc_heading_1', ['label' => false, 'class' => 'form-control normal-font', 'placeholder' => 'ENTER DESCRIPTION HEADING 1', 'maxlength' => 255]); ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <?php echo $this->Form->input('desc_text_1', ['label' => false, 'class' => 'form-control normal-font', 'placeholder' => 'ENTER DESCRIPTION TEXT 1', 'maxlength' => 255]); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">DESCRIPTION 2 </label>
+                                <div class="col-sm-2">
+                                    <div class="custom-radio radio ">
+                                        <?php
+                                        if (isset($service['icon_2']) && $service['icon_2'] != '') {
+                                            echo $this->Html->image(SERVICE_ICON_PATH . $service['icon_2'], ['height' => 50, 'width' => 80]) . "<br/>";
+                                            ?>
+                                            <br/>
+                                            <a data-toggle="modal" url=<?php echo $this->Url->build(['controller' => 'Services', 'action' => 'deleteimage', 'icon_2', $service['icon_2']]) ?> data-value="<?php echo $service['icon_2']; ?>" data-target="#delete" href="#"  class="btn btn-danger btn-sm delete ">REMOVE IMAGE</a>
+                                            <?php
+                                        } else {
+                                            echo $this->Form->input('icon_2', ['label' => false, 'type' => 'file', 'class' => 'imgpreview', 'id' => 'icon_2']);
+                                            ?>
+                                            <br/>
+                                            <div class="imageblock">
+                                                <div class="form-group hover-element scanimgblock">
+                                                    <div class="col-sm-8 td-inputbox">
+                                                        <?php echo $this->Html->image('upload_image.png', ['class' => 'banner_upload', 'alt' => 'Your image', 'id' => 'icon_2_upload_preview', 'height' => '45']); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php
+                                        }
+                                        ?> 
+                                    </div>  
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Description 2</label>
+                                            <?php echo $this->Form->input('desc_heading_2', ['label' => false, 'class' => 'form-control normal-font', 'placeholder' => 'ENTER DESCRIPTION HEADING 2', 'maxlength' => 255]); ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <?php echo $this->Form->input('desc_text_2', ['label' => false, 'class' => 'form-control normal-font', 'placeholder' => 'ENTER DESCRIPTION TEXT 2', 'maxlength' => 255]); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">DESCRIPTION 3 </label>
+                                <div class="col-sm-2">
+                                    <div class="custom-radio radio ">
+                                        <?php
+                                        if (isset($service['icon_3']) && $service['icon_3'] != '') {
+                                            echo $this->Html->image(SERVICE_ICON_PATH . $service['icon_3'], ['height' => 50, 'width' => 80]) . "<br/>";
+                                            ?>
+                                            <br/>
+                                            <a data-toggle="modal" url=<?php echo $this->Url->build(['controller' => 'Services', 'action' => 'deleteimage', 'icon_3', $service['icon_3']]) ?> data-value="<?php echo $service['icon_3']; ?>" data-target="#delete" href="#"  class="btn btn-danger btn-sm delete ">REMOVE IMAGE</a>
+                                            <?php
+                                        } else {
+                                            echo $this->Form->input('icon_3', ['label' => false, 'type' => 'file', 'class' => 'imgpreview', 'id' => 'icon_3']);
+                                            ?>
+                                            <br/>
+                                            <div class="imageblock">
+                                                <div class="form-group hover-element scanimgblock">
+                                                    <div class="col-sm-8 td-inputbox">
+                                                        <?php echo $this->Html->image('upload_image.png', ['class' => 'banner_upload', 'alt' => 'Your image', 'id' => 'icon_3_upload_preview', 'height' => '45']); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php
+                                        }
+                                        ?> 
+                                    </div>  
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Description 3</label>
+                                            <?php echo $this->Form->input('desc_heading_3', ['label' => false, 'class' => 'form-control normal-font', 'placeholder' => 'ENTER DESCRIPTION HEADING 3', 'maxlength' => 255]); ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <?php echo $this->Form->input('desc_text_3', ['label' => false, 'class' => 'form-control normal-font', 'placeholder' => 'ENTER DESCRIPTION TEXT 3', 'maxlength' => 255]); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">DESCRIPTION 4 </label>
+                                <div class="col-sm-2">
+                                    <div class="custom-radio radio ">
+                                        <?php
+                                        if (isset($service['icon_4']) && $service['icon_4'] != '') {
+                                            echo $this->Html->image(SERVICE_ICON_PATH . $service['icon_4'], ['height' => 50, 'width' => 80]) . "<br/>";
+                                            ?>
+                                            <br/>
+                                            <a data-toggle="modal" url=<?php echo $this->Url->build(['controller' => 'Services', 'action' => 'deleteimage', 'icon_4', $service['icon_4']]) ?> data-value="<?php echo $service['icon_4']; ?>" data-target="#delete" href="#"  class="btn btn-danger btn-sm delete ">REMOVE IMAGE</a>
+                                            <?php
+                                        } else {
+                                            echo $this->Form->input('icon_4', ['label' => false, 'type' => 'file', 'class' => 'imgpreview', 'id' => 'icon_4']);
+                                            ?>
+                                            <br/>
+                                            <div class="imageblock">
+                                                <div class="form-group hover-element scanimgblock">
+                                                    <div class="col-sm-8 td-inputbox">
+                                                        <?php echo $this->Html->image('upload_image.png', ['class' => 'banner_upload', 'alt' => 'Your image', 'id' => 'icon_4_upload_preview', 'height' => '45']); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php
+                                        }
+                                        ?> 
+                                    </div>  
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Description 4</label>
+                                            <?php echo $this->Form->input('desc_heading_4', ['label' => false, 'class' => 'form-control normal-font', 'placeholder' => 'ENTER DESCRIPTION HEADING 4', 'maxlength' => 255]); ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <?php echo $this->Form->input('desc_text_4', ['label' => false, 'class' => 'form-control normal-font', 'placeholder' => 'ENTER DESCRIPTION TEXT 4', 'maxlength' => 255]); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">DESCRIPTION 5 </label>
+                                <div class="col-sm-2">
+                                    <div class="custom-radio radio ">
+                                        <?php
+                                        if (isset($service['icon_5']) && $service['icon_5'] != '') {
+                                            echo $this->Html->image(SERVICE_ICON_PATH . $service['icon_5'], ['height' => 50, 'width' => 80]) . "<br/>";
+                                            ?>
+                                            <br/>
+                                            <a data-toggle="modal" url=<?php echo $this->Url->build(['controller' => 'Services', 'action' => 'deleteimage', 'icon_5', $service['icon_5']]) ?> data-value="<?php echo $service['icon_5']; ?>" data-target="#delete" href="#"  class="btn btn-danger btn-sm delete ">REMOVE IMAGE</a>
+                                            <?php
+                                        } else {
+                                            echo $this->Form->input('icon_5', ['label' => false, 'type' => 'file', 'class' => 'imgpreview', 'id' => 'icon_5']);
+                                            ?>
+                                            <br/>
+                                            <div class="imageblock">
+                                                <div class="form-group hover-element scanimgblock">
+                                                    <div class="col-sm-8 td-inputbox">
+                                                        <?php echo $this->Html->image('upload_image.png', ['class' => 'banner_upload', 'alt' => 'Your image', 'id' => 'icon_5_upload_preview', 'height' => '45']); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php
+                                        }
+                                        ?> 
+                                    </div>  
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Description 5</label>
+                                            <?php echo $this->Form->input('desc_heading_5', ['label' => false, 'class' => 'form-control normal-font', 'placeholder' => 'ENTER DESCRIPTION HEADING 5', 'maxlength' => 255]); ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <?php echo $this->Form->input('desc_text_5', ['label' => false, 'class' => 'form-control normal-font', 'placeholder' => 'ENTER DESCRIPTION TEXT 5', 'maxlength' => 255]); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">DESCRIPTION 6 </label>
+                                <div class="col-sm-2">
+                                    <div class="custom-radio radio ">
+                                        <?php
+                                        if (isset($service['icon_6']) && $service['icon_6'] != '') {
+                                            echo $this->Html->image(SERVICE_ICON_PATH . $service['icon_6'], ['height' => 50, 'width' => 80]) . "<br/>";
+                                            ?>
+                                            <br/>
+                                            <a data-toggle="modal" url=<?php echo $this->Url->build(['controller' => 'Services', 'action' => 'deleteimage', 'icon_6', $service['icon_6']]) ?> data-value="<?php echo $service['icon_6']; ?>" data-target="#delete" href="#"  class="btn btn-danger btn-sm delete ">REMOVE IMAGE</a>
+                                            <?php
+                                        } else {
+                                            echo $this->Form->input('icon_6', ['label' => false, 'type' => 'file', 'class' => 'imgpreview', 'id' => 'icon_6']);
+                                            ?>
+                                            <br/>
+                                            <div class="imageblock">
+                                                <div class="form-group hover-element scanimgblock">
+                                                    <div class="col-sm-8 td-inputbox">
+                                                        <?php echo $this->Html->image('upload_image.png', ['class' => 'banner_upload', 'alt' => 'Your image', 'id' => 'icon_6_upload_preview', 'height' => '45']); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php
+                                        }
+                                        ?> 
+                                    </div>  
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Description 6</label>
+                                            <?php echo $this->Form->input('desc_heading_6', ['label' => false, 'class' => 'form-control normal-font', 'placeholder' => 'ENTER DESCRIPTION HEADING 6', 'maxlength' => 255]); ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <?php echo $this->Form->input('desc_text_6', ['label' => false, 'class' => 'form-control normal-font', 'placeholder' => 'ENTER DESCRIPTION TEXT 6', 'maxlength' => 255]); ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +325,7 @@
                                 <label class="col-sm-3 control-label">VISIT CHARGE <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="input text">
-                                        <?php echo $this->Form->input('visit_charge', ['label' => false, 'class' => 'form-control required normal-font number', 'placeholder' => 'ENTER SERVICE VISIT CHARGE', 'maxlength' => 255]); ?>
+                                        <?php echo $this->Form->input('visit_charge', ['label' => false, 'class' => 'form-control normal-font number', 'placeholder' => 'ENTER SERVICE VISIT CHARGE', 'maxlength' => 255]); ?>
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +333,7 @@
                                 <label class="col-sm-3 control-label">MINIMUM CHARGE <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="input text">
-                                        <?php echo $this->Form->input('minimum_charge', ['label' => false, 'class' => 'form-control required normal-font number', 'placeholder' => 'ENTER MINIMUM SERVICE CHARGE', 'maxlength' => 255]); ?>
+                                        <?php echo $this->Form->input('minimum_charge', ['label' => false, 'class' => 'form-control normal-font number', 'placeholder' => 'ENTER MINIMUM SERVICE CHARGE', 'maxlength' => 255]); ?>
                                     </div>
                                 </div>
                             </div>

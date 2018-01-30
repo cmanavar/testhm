@@ -6,10 +6,7 @@
  * $Author: Uncode Chirag Manavar
  * $URL: /users
 -->
-<?php echo $this->Html->script('selectize.js', array('block' => 'scriptBottom')); ?>
-<?php echo $this->Html->css('selectize.css'); ?>
-<?php echo $this->Html->css('jquery-ui.css'); ?>
-<?php echo $this->Html->script('jquery-ui.js', array('block' => 'scriptBottom')); ?>
+<?php //echo $this->Html->script('jquery-ui.js', array('block' => 'scriptBottom')); ?>
 <?php echo $this->Html->script('maskedinput.js', ['block' => 'scriptBottom']); ?>
 <?php echo $this->Html->script('custom/upload_image.js', array('block' => 'scriptBottom')); ?>
 <?php echo $this->Html->script('custom/dashboard.js', ['block' => 'scriptBottom']); ?>
@@ -283,13 +280,28 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="black-header">
+                                        <i class="fa fa-user fa-fw"></i> ACCOUNT STATUS
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">STATUS <span class="text-danger">*</span></label>
+                                <div class="col-sm-6">
+                                    <div class="custom-radio radio ">
+                                        <?php echo $this->Form->radio('active', [['value' => 'Y', 'text' => 'ACTIVE'], ['value' => 'N', 'text' => 'INACTIVE']], ['value' => 'Y']); ?>
+                                    </div>  
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <label class="col-sm-3  control-label"></label>
                         <div class="col-sm-6">
                             <button type="submit" class="btn btn-primary">SAVE MEMBER</button>                                    
-                            <?php echo $this->Html->link('CANCEL', array('controller' => 'Vendors', 'action' => 'index'), array('class' => 'removeimage btn btn-warning', 'escape' => false)); ?>                        
+                            <?php echo $this->Html->link('CANCEL', array('controller' => 'Members', 'action' => 'index'), array('class' => 'removeimage btn btn-warning', 'escape' => false)); ?>
                         </div>
                     </div>
                     <?php echo $this->Form->end(); ?>

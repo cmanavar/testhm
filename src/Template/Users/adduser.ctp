@@ -77,8 +77,8 @@
                                 <label class="col-sm-3 control-label">USER TYPE <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="input text">
-                                        <?php $options = ['ADMIN' => 'ADMIN', 'SALES' => 'SALES']; ?>
-                                        <?php echo $this->Form->input('user_type', ['label' => false, 'type' => 'select', 'options' => $options, 'id' => 'select-user', 'class' => 'demo-default upper required', 'empty' => '--SELECT USER TYPE--', 'placeholder' => 'Enter User Type']); ?> 
+                                        <?php $options = ['ADMIN' => 'ADMIN', 'OPERATION_MANAGER' => 'OPERATION MANAGER', 'TELLY_CALLER' => 'TELLY CALLER']; ?>
+                                        <?php echo $this->Form->input('user_type', ['label' => false, 'type' => 'select', 'options' => $options, 'id' => 'select-type', 'class' => 'demo-default upper required', 'empty' => '--SELECT USER TYPE--', 'placeholder' => 'Enter User Type']); ?> 
                                     </div>
                                 </div>
                             </div>

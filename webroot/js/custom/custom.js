@@ -43,6 +43,19 @@ $(document).ready(function () {
 
     $(".validate").validate({ignore: ':hidden:not([class~=selectized]),:hidden > .selectized, .selectize-control .selectize-input input'});
 
+    $("#user-type-sales").click(function () {
+        if ($("#user-type-sales").prop("checked")) {
+            $('.salesDetails').css('display', 'block');
+            $('.vendorDetails').css('display', 'none');
+        }
+    });
+    $("#user-type-vendor").click(function () {
+        if ($("#user-type-vendor").prop("checked")) {
+            $('.vendorDetails').css('display', 'block');
+            $('.salesDetails').css('display', 'none');
+        }
+    });
+
 });
 
 
@@ -234,18 +247,18 @@ $(document).ready(function () {
 
     $("#payment-type").change(function () {
         var values = $(this).val();
-        if(values == 'CHEQUE') {
-            $('#chequeDetails').css('display','block');
-            $('#transcationDetails').css('display','none');
-            $('#otherDetails').css('display','none');
+        if (values == 'CHEQUE') {
+            $('#chequeDetails').css('display', 'block');
+            $('#transcationDetails').css('display', 'none');
+            $('#otherDetails').css('display', 'none');
         } else if (values == 'UPI') {
-            $('#transcationDetails').css('display','block');
-            $('#chequeDetails').css('display','none');
-            $('#otherDetails').css('display','none');
+            $('#transcationDetails').css('display', 'block');
+            $('#chequeDetails').css('display', 'none');
+            $('#otherDetails').css('display', 'none');
         } else if (values == 'OTHER') {
-            $('#otherDetails').css('display','block');
-            $('#chequeDetails').css('display','none');
-            $('#transcationDetails').css('display','none');
+            $('#otherDetails').css('display', 'block');
+            $('#chequeDetails').css('display', 'none');
+            $('#transcationDetails').css('display', 'none');
         }
     });
 
@@ -580,8 +593,8 @@ $(document).ready(function () {
                 data: {title: title, quantity: quant, price: price, icons: icons},
                 success: function (data) {
                     console.log(data);
-//                    return;
-                    location.reload();
+                    return;
+                    //location.reload();
                 }
             });
         });
@@ -686,6 +699,22 @@ $(document).ready(function () {
         });
     });
 
+    $('.acc-active').click(function () {
+        var url = $(this).attr('data-url');
+        var tmodified_by = $(this).attr('data-modified_by');
+        var newDate = new Date();
+        var tmodified = newDate.getFullYear() + "-" + newDate.getMonth() + 1 + "-" + newDate.getDate() + " " + newDate.getHours()	+ ":" + newDate.getMinutes() + ":" + newDate.getSeconds();
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: {modified: tmodified, modified_by: tmodified_by},
+            success: function (data) {
+                console.log(data);
+                location.reload();
+            }
+        });
+    });
+
     $(document).on('click', '#answer_val_section .btn-new-rate-save', function () {
         var id = $(this).attr('data-id');
         var title = '';
@@ -758,7 +787,7 @@ $(document).ready(function () {
     //tomorrowDate
 
     tinymce.init({
-        selector: 'textarea',
+        selector: 'textarea.service-descriptions',
         height: 350,
         menubar: false,
         plugins: [
@@ -770,6 +799,13 @@ $(document).ready(function () {
         content_css: [
             '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
             '//www.tinymce.com/css/codepen.min.css']
+    });
+    
+    //var search;
+    $(".btn_excel").on("click", function () {
+        var url = $(".excelurl").attr('value');
+        var getsearchdata = url + "/" + $('div.dataTables_filter input').val();
+        window.location.href = getsearchdata;
     });
 
 });

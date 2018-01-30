@@ -62,4 +62,11 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+    
+     public function permissiondenied(){
+         $authData = $this->request->session()->read('Auth');
+        //if (isset($authData['User']['user_type']) && $authData['User']['user_type'] == 'TELLY_CALLER') {
+          //  return $this->redirect(['controller' => 'dashboard', 'action' => 'index']);
+        //}
+  }
 }

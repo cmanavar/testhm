@@ -40,6 +40,9 @@ use App\Controller\View;
 class UsersController extends AppController {
 
     public function beforeFilter(Event $event) {
+        if (in_array($this->request->session()->read('Auth.User.user_type'), ['ADMIN', 'OPERATION_MANAGER', 'TELLY_CALLER'])) {
+            AppController::checkNormalAccess();
+        }
         $this->Auth->allow(['logout', 'addappusers', 'appuserslogin', 'verifiedEmail', 'verifiedPhone', 'resendOtp', 'resendActivationLinks', 'updateProfile', 'forgorPassword', 'resetPasswords']);
     }
 
@@ -59,7 +62,7 @@ class UsersController extends AppController {
             if (empty($errors)) {
                 $user = $this->Auth->identify();
                 if ($user) {
-                    if (in_array($user['user_type'], ['ADMIN', 'SALES'])) {
+                    if (in_array($user['user_type'], ['ADMIN', 'OPERATION_MANAGER', 'TELLY_CALLER'])) {
                         $this->Auth->setUser($user);
                         $users = $this->Users->get($user['id']);
                         $users->last_login = date('Y-m-d H:i:s');
@@ -104,7 +107,8 @@ class UsersController extends AppController {
     //***********************************************************************************************//
 
 
-    public function index($user_type = '') {
+    public function index() {
+        $user_type = 'hmen';
         $users = $this->Users->getuserlisting($user_type)->toArray(); //LISTING USERDATA
         $this->set('user_type', $user_type);
         $this->set('users', $users);
@@ -144,8 +148,13 @@ class UsersController extends AppController {
             }
         }
         $this->set('user', $user);
-//        $username = $this->Users->getuserlisting()->toArray(); //LISTING USERDATA
-//        $this->set('users', $username);
+    }
+
+    public function appuser() {
+        $user_type = 'app';
+        $users = $this->Users->getuserlisting($user_type)->toArray(); //LISTING USERDATA
+        $this->set('user_type', $user_type);
+        $this->set('users', $users);
     }
 
     //***********************************************************************************************//
@@ -427,7 +436,7 @@ class UsersController extends AppController {
                 //print_r($user); exit;
                 if ($user) {
                     if (isset($user['active']) && $user['active'] == 'Y') {
-                        if (isset($user['user_type']) && $user['user_type'] == 'CUSTOMER') {
+                        if (isset($user['user_type']) && ($user['user_type'] == 'CUSTOMER' || $user['user_type'] == 'MEMBERSHIP')) {
                             $rslt = [];
                             $rslt['api_key'] = $this->Users->getApiKey($user['id']);
                             $rslt['id'] = $user['id'];

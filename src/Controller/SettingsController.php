@@ -35,7 +35,9 @@ use Cake\Event\Event;
 class SettingsController extends AppController {
 
     public function beforeFilter(Event $event) {
-        //$this->Auth->allow(['delete']);
+        if (in_array($this->request->session()->read('Auth.User.user_type'), ['ADMIN', 'OPERATION_MANAGER', 'TELLY_CALLER'])) {
+            AppController::checkNormalAccess();
+        }
     }
 
     public function banner() {

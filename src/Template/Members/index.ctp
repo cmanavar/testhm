@@ -46,9 +46,9 @@
                                                     <tr>
                                                         <th width="2%">Sr.no</th>
                                                         <th>Name</th> 
-                                                        <th>Email id</th>
-                                                        <th>Phone no</th>
-                                                        <th>Address</th>
+                                                        <th>Contact Info</th>
+                                                        <th>Payment Details</th>
+                                                        <th>Status</th>
                                                         <th width="17%">Actions</th>
                                                     </tr>   
                                                 </thead>
@@ -60,14 +60,59 @@
                                                             <tr>
                                                                 <td><?php echo $key + 1; ?></td>
                                                                 <td><?php echo stripslashes($val['name']) ?></td>
-                                                                <td><?php echo stripslashes($val['email']) ?></td>
-                                                                <td><?php echo $val['phone_no']; ?></td>
-                                                                <td><?php echo $val['address']; ?></td>
                                                                 <td>
-        <!--                                                                    <a class='btn btn-info btn-sm' href='#'><i class='fa fa-lg fa-eye'></i></a>-->
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td><b>ADDRESS </b></td>
+                                                                            <td>: <?php echo $val['address']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><b>EMAIL ID </b></td>
+                                                                            <td>: <?php echo $val['email']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td width="16%"><b>PHONE NO </b></td>
+                                                                            <td>: <?php echo $val['phone_no']; ?></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                                <td>
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td width="57%"><b>PAYMENT TYPE </b></td>
+                                                                            <td>: <?php echo $val['payment_type']; ?></td>
+                                                                        </tr>
+                                                                        <?php if ($val['payment_type'] == 'CHEQUE') { ?>
+                                                                            <tr>
+                                                                                <td><b>Bank Name: </b></td>
+                                                                                <td>: <?php echo $val['bank_name']; ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td><b>Cheque No </b></td>
+                                                                                <td>: <?php echo $val['cheque_no']; ?></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td><b>Cheque Date </b></td>
+                                                                                <td>: <?php echo $val['cheque_date']->format('d-m-Y'); ?></td>
+                                                                            </tr>
+                                                                        <?php } ?>
+                                                                        <?php if ($val['payment_type'] == 'UPI') { ?>
+                                                                            <tr>
+                                                                                <td><b>Transaction Id : </b><?php echo $val['transcation_id']; ?></td>
+                                                                            </tr>
+                                                                        <?php } ?>
+                                                                    </table>
+                                                                </td>
+                                                                <td>
+                                                                    <?php if (isset($val['active']) && $val['active'] != 'N') { ?>
+                                                                        <a href="javascript:void(0)" class="btn btn-success btn-sm"> Active </a>
+                                                                    <?php } else { ?>
+                                                                        <a href="javascript:void(0)" class="btn btn-danger btn-sm acc-active" data-url="<?php echo $this->Url->build(['controller' => 'Members', 'action' => 'useractive', $val['id']]) ?>" data-modified_by="<?php echo $this->request->session()->read('Auth.User.id'); ?>"> Inactive </a>
+                                                                    <?php } ?>
+                                                                </td>
+                                                                <td>
                                                                     <?php echo $this->Html->link('', ['controller' => 'Members', 'action' => 'view', $val['id']], ['class' => 'btn btn-info fa fa-eye', 'escape' => false, 'title' => 'VIEW']); ?>
-                                                                    <?php //echo $this->Html->link('', ['controller' => 'Vendors', 'action' => 'edit', $val['id']], ['class' => 'btn btn-warning fa fa-pencil', 'escape' => false, 'title' => 'EDIT']); ?>
-<!--                                                                    <a data-toggle="modal" title = 'DELETE' url=<?php echo $this->Url->build(['controller' => 'Vendors', 'action' => 'delete']) ?> data-value="<?php echo $val['id']; ?>" data-target="#delete" href="#" class="btn btn-danger fa fa-trash-o delete"></a>                                                                    -->
+                                                                    <?php echo $this->Html->link('', ['controller' => 'Members', 'action' => 'edit', $val['id']], ['class' => 'btn btn-warning fa fa-pencil', 'escape' => false, 'title' => 'EDIT']); ?>
                                                                 </td>     
                                                             </tr>
 

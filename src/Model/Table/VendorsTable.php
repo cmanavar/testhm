@@ -31,7 +31,7 @@ class VendorsTable extends Table {
     public function getVendorId($id) {
         $usersTable = TableRegistry::get('Users');
         $vendorsTable = TableRegistry::get('VendorDetails');
-        $vendors = $usersTable->find('all')->where(['user_type' => 'VENDOR', 'id' => $id])->order(['id' => 'DESC'])->hydrate(false)->first();
+        $vendors = $usersTable->find('all')->where(['user_type IN' => ['VENDOR', 'SALES'], 'id' => $id])->order(['id' => 'DESC'])->hydrate(false)->first();
         $vendorsData = $vendorsTable->find('all')->where(['user_id' => $vendors['id']])->hydrate(false)->first();
         $vendors['service_id'] = $vendorsData['service_id'];
         $vendors['service_name'] = $this->getServiceName($vendorsData['service_id']);
@@ -67,7 +67,7 @@ class VendorsTable extends Table {
     public function getVendors() {
         $usersTable = TableRegistry::get('Users');
         $vendorsTable = TableRegistry::get('VendorDetails');
-        $vendors = $usersTable->find('all')->where(['user_type' => 'VENDOR'])->order(['id' => 'ASC'])->hydrate(false)->toArray();
+        $vendors = $usersTable->find('all')->where(['user_type IN' => ['VENDOR', 'SALES']])->order(['id' => 'ASC'])->hydrate(false)->toArray();
         foreach ($vendors as $key => $val) {
             $vendorsData = $vendorsTable->find('all')->where(['user_id' => $val['id']])->hydrate(false)->first();
             $vendors[$key]['service_id'] = $vendorsData['service_id'];
@@ -96,8 +96,7 @@ class VendorsTable extends Table {
     //******************************************************************************//
     public function vendorExists($vendor_id) {
         $userTable = TableRegistry::get('Users');
-        return $userTable->find('all')->where(['id' => $vendor_id, 'user_type' => 'VENDOR']);
-        
+        return $userTable->find('all')->where(['id' => $vendor_id, 'user_type IN' => ['VENDOR', 'SALES']]);
     }
 
     //*******************************************************************************//
@@ -132,6 +131,16 @@ class VendorsTable extends Table {
         return $count;
     }
 
+    public function getVendorDetailsID($user_id) {
+        $vendorsDetailTable = TableRegistry::get('VendorDetails');
+        $vendor = $vendorsDetailTable->find('all')->where(['user_id' => $user_id])->hydrate(false)->first();
+        if (isset($vendor) && !empty($vendor)) {
+            return $vendor['id'];
+        } else {
+            return 0;
+        }
+    }
+    
 }
 
 ?>

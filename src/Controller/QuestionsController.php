@@ -35,6 +35,9 @@ use Cake\Event\Event;
 class QuestionsController extends AppController {
 
     public function beforeFilter(Event $event) {
+        if (in_array($this->request->session()->read('Auth.User.user_type'), ['ADMIN', 'OPERATION_MANAGER', 'TELLY_CALLER'])) {
+            AppController::checkNormalAccess();
+        }
         $this->Auth->allow(['updateanswer', 'addnewanswer']);
     }
 
@@ -104,6 +107,7 @@ class QuestionsController extends AppController {
                         $sA['label'] = $val['label'];
                         $icon_img = '';
                         if (isset($val['icon']['name']) && $val['icon']['name'] != '') {
+                            $file = $filename = $icon_img = '';
                             $file = $val['icon']['name'];
                             $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
                             $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
@@ -354,10 +358,9 @@ class QuestionsController extends AppController {
             $updatedArr['price'] = $_POST['price'];
             //print_r($updatedArr); exit;
             $answer = $this->ServiceQuestionAnswers->patchEntity($answer, $updatedArr);
-            $answer->created_by = $this->request->session()->read('Auth.User.id');
+            $answer->created_by = ($this->request->session()->read('Auth.User.id') != '') ? $this->request->session()->read('Auth.User.id') : 0;
             $answer->created = date("Y-m-d H:i:s");
             if ($this->ServiceQuestionAnswers->save($answer)) {
-                EXIT;
                 $this->Flash->success(Configure::read('Settings.SAVE'));
                 return $this->redirect(['action' => 'index', $service_id, $id]);
             } else {

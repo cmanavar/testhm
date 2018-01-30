@@ -11,8 +11,8 @@
     <div class="row">
         <div class="col-md-12">
             <h1 class="page-header">
-                <i class="fa fa-user fa-fw"></i>VENDORS
-                <a href="<?php echo $this->Url->build(["controller" => "Vendors", "action" => "index"]); ?>"><button class="btn btn-warning btn-sm pull-right" >BACK</button></a>
+                <i class="fa fa-user fa-fw"></i>MEMBERS
+                <a href="<?php echo $this->Url->build(["controller" => "Members", "action" => "index"]); ?>"><button class="btn btn-warning btn-sm pull-right" >BACK</button></a>
             </h1>
         </div>        
         <!-- /.col-lg-12 -->
@@ -42,46 +42,122 @@
                             <table class="table table-bordered">
                                 <?php // foreach ($category as $key => $val) {   ?>
                                 <tr>
-                                    <td width="30%"><label class="control-label">Name</label></td>
-                                    <td><?= $vendor['name']; ?></td>
+                                    <td width="30%"><label class="control-label">Membership Plan</label></td>
+                                    <td><?= $member['plan_name']; ?></td>
                                 </tr>
                                 <tr>
-                                    <td width="30%"><label class="control-label">Email</label></td>
-                                    <td><?= $vendor['email']; ?></td>
+                                    <td width="30%"><label class="control-label">Name</label></td>
+                                    <td><?= $member['name']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td width="30%"><label class="control-label">Address</label></td>
+                                    <td><?= $member['address']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td width="30%"><label class="control-label">City</label></td>
+                                    <td><?= $member['city']; ?></td>
                                 </tr>
                                 <tr>
                                     <td width="30%"><label class="control-label">Phone number</label></td>
                                     <?php
-                                    $phoneNumber = $vendor['phone_no'];
-                                    $phoneNumber .= ($vendor['phone_number_2'] != '') ? ' | ' . $vendor['phone_number_2'] : '';
+                                    $phoneNumber = $member['phone_no'];
                                     ?>
                                     <td><?= $phoneNumber; ?></td>
                                 </tr>
                                 <tr>
-                                    <td width="30%"><label class="control-label">Profile Picture</label></td>
-                                    <td><?= $this->Html->image(USER_PROFILE_PATH . $vendor['profile_pic'], ['height' => 100, 'width' => 100]) . "<br/>" ?></td>
+                                    <td width="30%"><label class="control-label">Email</label></td>
+                                    <td><?= $member['email']; ?></td>
                                 </tr>
                                 <tr>
-                                    <td width="30%"><label class="control-label">Service Name </label></td>
-                                    <td><?= $vendor['service_name']; ?></td>
+                                    <td width="30%"><label class="control-label">Birth Date</label></td>
+                                    <td><?= $member['birthdate']->format('d-M-Y'); ?></td>
+                                </tr>
+                                <?php if (isset($member['aniversary_date']) && $member['aniversary_date'] != '') { ?>
+                                    <tr>
+                                        <td width="30%"><label class="control-label">Anniversary Date</label></td>
+                                        <td><?= $member['aniversary_date']->format('d-M-Y'); ?></td>
+                                    </tr>
+                                <?php } ?>
+                                <?php 
+                                    $familymemberdetails = '';
+                                    if($member['person_1'] != '' || !empty($member['birthdate_1'])) {
+                                        $familymemberdetails .= $member['person_1'] . " | ". $member['birthdate_1']->format('d-M-Y');
+                                    }
+                                    if($member['person_2'] != '' && !empty($member['birthdate_2'])) {
+                                        $familymemberdetails .= "<br/>" . $member['person_2'] . " | ". $member['birthdate_2']->format('d-M-Y');
+                                    }
+                                    if($member['person_3'] != '' && !empty($member['birthdate_3'])) {
+                                        $familymemberdetails .= "<br/>" . $member['person_3'] . " | ". $member['birthdate_3']->format('d-M-Y');
+                                    }
+                                    if($member['person_4'] != '' && !empty($member['birthdate_4'])) {
+                                        $familymemberdetails .= "<br/>" . $member['person_4'] . " | ". $member['birthdate_4']->format('d-M-Y');
+                                    }
+                                    if($member['person_5'] != '' && !empty($member['birthdate_5'])) {
+                                        $familymemberdetails .= "<br/>" . $member['person_5'] . " | ". $member['birthdate_5']->format('d-M-Y');
+                                    }
+                                ?>
+                                <tr>
+                                    <td width="30%"><label class="control-label">Family Member Details</label></td>
+                                    <td><?= $familymemberdetails; ?></td>
                                 </tr>
                                 <tr>
-                                    <td width="30%"><label class="control-label">Shift Timing</label></td>
-                                    <td><?= $vendor['shift_start'] . ' - ' . $vendor['shift_end']; ?></td>
-                                </tr>
-<!--                                <tr>
-                                    <td width="30%"><label class="control-label">Square Image Preview</label></td>
-                                    <td><?= $this->Html->image(SERVICE_SQUARE_BANNER_PATH . $$vendorservices['square_image'], ['height' => 65, 'width' => 65]) . "<br/>" ?></td>
+                                    <td width="30%"><label class="control-label">Occupation</label></td>
+                                    <td><?= $member['occupation']; ?></td>
                                 </tr>
                                 <tr>
-                                    <td width="30%"><label class="control-label">Popular</label></td>
-                                    <td><?= $services['popular']; ?></td>
-                                </tr>-->
+                                    <td width="30%"><label class="control-label">Company Name</label></td>
+                                    <td><?= $member['company_name']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td width="30%"><label class="control-label">Company Website</label></td>
+                                    <td><a href='<?= $member['company_website']; ?>' class="black-text" target="" ><?= $member['company_website']; ?></a></td>
+                                </tr>
+                                <tr>
+                                    <td width="30%"><label class="control-label">Payment Type</label></td>
+                                    <td><?= $member['payment_type']; ?></td>
+                                </tr>
+                                <?php if($member['payment_type'] == 'CHEQUE') { ?>
+                                <tr>
+                                    <td width="30%"><label class="control-label">Cheque Details</label></td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td width="125px;">Bank Name</td>
+                                                <td>: <?= $member['bank_name']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cheque Number</td>
+                                                <td>: <?= $member['cheque_no']; ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cheque Date</td>
+                                                <td>: <?= $member['cheque_date']->format('d-M-Y'); ?></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <?php } ?>
+                                <?php if($member['payment_type'] == 'UPI') { ?>
+                                <tr>
+                                    <td><label class="control-label">Transaction Id </label></td>
+                                    <td>: <?= $member['transcation_id']; ?></td>
+                                </tr>
+                                <?php } ?>
+                                <?php if($member['payment_type'] == 'OTHER') { ?>
+                                <tr>
+                                    <td><label class="control-label">Other Details </label></td>
+                                    <td>: <?= $member['other_details']; ?></td>
+                                </tr>
+                                <?php } ?>
+                                <tr>
+                                    <td width="30%"><label class="control-label">Reference User</label></td>
+                                    <td><?= $member['reference_user_name']; ?></td>
+                                </tr>
                                 <tr>
                                     <td width="30%"><label class="control-label">Status</label></td>
-                                    <td><?= (isset($vendor['active']) && $vendor['active'] == 'Y') ? 'ACTIVE' : 'INACTIVE'; ?></td>
+                                    <td><?= (isset($member['active']) && $member['active'] == 'Y') ? 'Active' : 'Inactive'; ?></td>
                                 </tr>
-                                <?php // }   ?>
+                                <?php // }    ?>
                             </table>
                         </div>
                     </div>
