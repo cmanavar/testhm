@@ -799,15 +799,18 @@ class WebservicesController extends AppController {
                     $checkCart = $this->Carts->find('all')->where(['id' => $requestArr['cart_id'], 'status' => 'PROCESS'])->hydrate(false)->first();
                     if (!empty($checkCart)) {
                         $questionsData = isset($requestArr['questions_data']) ? $requestArr['questions_data'] : array();
-                        // pr($questionsData); exit;
+                        //pr($questionsData); exit;
                         if (empty($questionsData)) {
                             $this->wrong("Sorry, Questions data is not found!");
                         } else {
                             $total_price = 0;
                             foreach ($questionsData as $questions) {
                                 $questionDetails = $questionStoreDetails = [];
-                                $question_id = $questions->option_step;
                                 $answer_id = $questions->option_id;
+                                $getAnswerData = $this->ServiceQuestionAnswers->find('all')->where(['id' => $answer_id])->hydrate(false)->first();
+                                //pr($getAnswerData); exit;
+                                $question_id = $getAnswerData['question_id'];
+                                //$answer_id = $questions->option_id;
                                 if (isset($questions->option_quantity) && $questions->option_quantity != '') {
                                     //echo $question_id . " " . $answer_id;
                                     $AnswersArr = $this->ServiceQuestionAnswers->find('all')->where(['question_id' => $question_id, 'id' => $answer_id])->hydrate(false)->first();
@@ -844,7 +847,7 @@ class WebservicesController extends AppController {
                                 } else {
                                     $questionsArr = $this->ServiceQuestionAnswers->find('all')->where(['question_id' => $question_id, 'id' => $answer_id])->hydrate(false)->first();
                                     //pr($questionsArr); exit;
-                                    continue;
+//                                    continue;
                                     if (isset($questionsArr['quantity']) && $questionsArr['quantity'] == 'NO') {
                                         if ($questionsArr['price'] != 0) {
                                             $total_price = $questionsArr['price'];
@@ -939,7 +942,7 @@ class WebservicesController extends AppController {
             //pr($checkCart); exit;
             if (isset($checkCart) && !empty($checkCart)) {
                 $cartPriceDetails = $this->totalCartPrice($cartId);
-                //pr($cartPriceDetails); exit;
+//                pr($cartPriceDetails); exit;
                 if (!empty($cartPriceDetails['services'])) {
                     $this->success("Cart Order Details Fetched!", $cartPriceDetails);
                 } else {
@@ -1024,6 +1027,7 @@ class WebservicesController extends AppController {
             $ordersDetails = [];
             //pr($cartOrders); exit;
             foreach ($cartOrders as $order) {
+                //pr($order); exit;
                 if (isset($order['on_inspections']) && $order['on_inspections'] == 'N') {
                     if ($order['total_amount'] == 0) {
                         continue;
@@ -1038,6 +1042,7 @@ class WebservicesController extends AppController {
                 $tmp['banner_img'] = $this->Services->getServiceImagePAth($order['service_id']);
                 //$tmp['banner_img'] = $this->Services->getServiceName($order['service_id']);
                 $tmpDetails = $this->CartOrderQuestions->find('all')->where(['cart_order_id' => $order['id']])->hydrate(false)->toArray();
+                //pr($tmpDetails); exit;
                 foreach ($tmpDetails as $orderQues) {
                     $questArr = $this->getQuestionDetails($orderQues['question_id'], $orderQues['answer_id']);
                     //pr($questArr); //exit;
@@ -1452,10 +1457,6 @@ class WebservicesController extends AppController {
                     }
                 }
                 $orderDetails['services'] = $finalOrderDetails;
-
-
-
-
                 $this->success('order detail fetched successfully', $orderDetails);
             } else {
                 $this->wrong('Sorry, Order not found!');

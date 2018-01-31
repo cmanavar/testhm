@@ -77,6 +77,7 @@ class VendorsTable extends Table {
             $vendors[$key]['agreement'] = $vendorsData['agreement'];
             $vendors[$key]['id_proof'] = $vendorsData['id_proof'];
         }
+        //pr($vendors); exit;
         return $vendors;
     }
 

@@ -66,11 +66,11 @@
                                                                 <td><?php echo stripslashes($val['phone_no']) ?></td>
                                                                 <td><?php echo (isset($val['active']) && $val['active'] == 'Y') ? 'ACTIVE' : 'INACTIVE'; ?></td>
                                                                 <td><?php echo $val['shift_start'] . ' - ' . $val['shift_end']; ?></td>
-                                                                <td><?php echo stripslashes($val['user_type']) ?></td>
+                                                                <td><?php echo stripslashes($val['user_type']) ?><?php echo (isset($val['service_name']) && $val['service_name'] != '-') ? " (".$val['service_name'].") " : ''; ?></td>
                                                                 <td>
                                                                     <?php echo $this->Html->link('', ['controller' => 'Vendors', 'action' => 'view', $val['id']], ['class' => 'btn btn-info fa fa-eye', 'escape' => false, 'title' => 'VIEW']); ?>
                                                                     <?php echo $this->Html->link('', ['controller' => 'Vendors', 'action' => 'edit', $val['id']], ['class' => 'btn btn-warning fa fa-pencil', 'escape' => false, 'title' => 'EDIT']); ?>
-<!--                                                                    <a data-toggle="modal" title = 'DELETE' url=<?php echo $this->Url->build(['controller' => 'Vendors', 'action' => 'delete']) ?> data-value="<?php echo $val['id']; ?>" data-target="#delete" href="#" class="btn btn-danger fa fa-trash-o delete"></a>                                                                    -->
+        <!--                                                                    <a data-toggle="modal" title = 'DELETE' url=<?php echo $this->Url->build(['controller' => 'Vendors', 'action' => 'delete']) ?> data-value="<?php echo $val['id']; ?>" data-target="#delete" href="#" class="btn btn-danger fa fa-trash-o delete"></a>                                                                    -->
                                                                 </td>     
                                                             </tr>
 

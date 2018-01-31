@@ -18036,3 +18036,437 @@ Exception Attributes: array (
   'file' => 'Questions/delete.ctp',
 )
 Request URL: /hmen/questions/delete/5
+2018-01-31 15:24:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-01-31 15:24:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-01-31 15:24:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-01-31 15:27:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-01-31 15:27:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-01-31 15:27:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-01-31 15:27:33 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-01-31 15:29:33 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-01-31 15:29:33 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-01-31 15:29:33 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-01-31 15:32:20 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-01-31 15:32:20 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-01-31 15:32:20 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-01-31 15:34:30 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-01-31 15:34:30 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-01-31 15:34:30 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-01-31 16:11:56 Error: [Cake\Controller\Exception\MissingActionException] Action OrdersController::edit() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'edit',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/orders/edit/2
+2018-01-31 16:50:37 Error: [BadMethodCallException] Unknown method "hydrat"
+Request URL: /hmen/webservices/cart/product/add
+2018-01-31 17:21:52 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 98]
+
+
+2018-01-31 17:24:04 Error: [Cake\Controller\Exception\MissingActionException] Action OrdersController::view() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'view',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/orders/view/1
+2018-01-31 17:27:46 Error: Fatal Error (4): syntax error, unexpected '}' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 112]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-31 17:27:46 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /hmen/orders/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/Applications/X...', 112)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-31 17:27:49 Error: Fatal Error (4): syntax error, unexpected '}' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 112]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-31 17:27:49 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /hmen/orders/view/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/Applications/X...', 112)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-31 17:27:56 Warning: Warning (2): Missing argument 1 for App\Controller\OrdersController::view() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 107]
+
+
+2018-01-31 17:27:56 Error: [Cake\View\Exception\MissingTemplateException] Template file "Orders/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Orders/view.ctp',
+)
+Request URL: /hmen/orders/view/
+2018-01-31 17:28:41 Warning: Warning (2): Missing argument 1 for App\Controller\OrdersController::view() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 107]
+
+
+2018-01-31 17:28:45 Warning: Warning (2): Missing argument 1 for App\Controller\OrdersController::view() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 107]
+
+
+2018-01-31 17:29:16 Error: [Cake\View\Exception\MissingTemplateException] Template file "Orders/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Orders/view.ctp',
+)
+Request URL: /hmen/orders/view/1
+2018-01-31 17:29:19 Warning: Warning (2): Missing argument 1 for App\Controller\OrdersController::view() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 107]
+
+
+2018-01-31 17:32:55 Error: [Cake\View\Exception\MissingTemplateException] Template file "Orders/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Orders/view.ctp',
+)
+Request URL: /hmen/orders/view/1
+2018-01-31 17:39:47 Error: [Cake\View\Exception\MissingTemplateException] Template file "Orders/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Orders/view.ctp',
+)
+Request URL: /hmen/orders/view/1
+2018-01-31 17:39:49 Error: [Cake\View\Exception\MissingTemplateException] Template file "Orders/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Orders/view.ctp',
+)
+Request URL: /hmen/orders/view/1
+2018-01-31 17:53:19 Error: Fatal Error (1): Call to a member function find() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 146]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-31 17:53:19 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /hmen/orders/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 146)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-31 17:53:44 Error: Fatal Error (1): Call to a member function find() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 146]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-31 17:53:44 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /hmen/orders/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 146)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-31 17:54:53 Error: Fatal Error (1): Call to a member function getCategoryName() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 154]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-31 17:54:53 Error: [Cake\Error\FatalErrorException] Call to a member function getCategoryName() on boolean
+Request URL: /hmen/orders/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 154)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-31 17:55:11 Error: Fatal Error (1): Call to a member function find() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 161]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-31 17:55:11 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /hmen/orders/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 161)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-31 17:56:36 Error: Fatal Error (1): Call to a member function find() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 161]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-31 17:56:36 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /hmen/orders/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 161)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-31 17:56:37 Error: Fatal Error (1): Call to a member function find() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 161]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-31 17:56:37 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /hmen/orders/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 161)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-31 17:56:57 Error: Fatal Error (1): Call to undefined method App\Controller\OrdersController::getQuestionDetails() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 163]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-31 17:56:57 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\OrdersController::getQuestionDetails()
+Request URL: /hmen/orders/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 163)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-31 17:59:51 Error: Fatal Error (1): Call to undefined method App\Controller\OrdersController::getQuestionDetails() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 166]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-31 17:59:51 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\OrdersController::getQuestionDetails()
+Request URL: /hmen/orders/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 166)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-31 17:59:52 Error: Fatal Error (1): Call to undefined method App\Controller\OrdersController::getQuestionDetails() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 166]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-31 17:59:52 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\OrdersController::getQuestionDetails()
+Request URL: /hmen/orders/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 166)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-31 18:32:51 Error: [Cake\View\Exception\MissingTemplateException] Template file "Orders/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Orders/view.ctp',
+)
+Request URL: /hmen/orders/view/1
+2018-01-31 18:33:40 Warning: Warning (2): Invalid argument supplied for foreach() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/view.ctp, line 87]
+
+
+2018-01-31 18:34:07 Warning: Warning (2): Invalid argument supplied for foreach() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/view.ctp, line 87]
+
+
+2018-01-31 18:34:13 Warning: Warning (2): Invalid argument supplied for foreach() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/view.ctp, line 86]
+
+
+2018-01-31 18:34:40 Warning: Warning (2): Invalid argument supplied for foreach() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/view.ctp, line 86]
+
+
+2018-01-31 18:34:52 Warning: Warning (2): Invalid argument supplied for foreach() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/view.ctp, line 86]
+
+
+2018-01-31 18:35:44 Warning: Warning (2): Invalid argument supplied for foreach() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/view.ctp, line 86]
+
+
+2018-01-31 19:29:51 Error: Fatal Error (1): Unsupported operand types in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/view.ctp, line 92]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-01-31 19:29:51 Error: [Cake\Error\FatalErrorException] Unsupported operand types
+Request URL: /hmen/orders/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Unsupported ope...', '/Applications/X...', 92)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-01-31 20:06:31 Error: [Cake\Controller\Exception\MissingActionException] Action OrdersController::edit() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'edit',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/orders/edit/1
+2018-01-31 20:07:04 Error: [Cake\Controller\Exception\MissingActionException] Action OrdersController::edit() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'edit',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/orders/edit/1
+2018-01-31 20:07:26 Error: [Cake\View\Exception\MissingTemplateException] Template file "Orders/edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Orders/edit.ctp',
+)
+Request URL: /hmen/orders/edit/1
+2018-01-31 20:07:46 Error: [Cake\View\Exception\MissingTemplateException] Template file "Orders/edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Orders/edit.ctp',
+)
+Request URL: /hmen/orders/edit/1
+2018-01-31 20:08:57 Error: [Cake\View\Exception\MissingTemplateException] Template file "Orders/edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Orders/edit.ctp',
+)
+Request URL: /hmen/orders/edit/1
+2018-01-31 22:49:59 Error: [RuntimeException] Cannot insert row in "carts" table, it has no primary key.
+Request URL: /hmen/webservices/cart/create

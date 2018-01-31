@@ -250,7 +250,7 @@
                                     <label class="col-sm-3 control-label">TRANSACTION ID <span class="text-danger">*</span></label>
                                     <div class="col-sm-6">
                                         <div class="input text">
-                                            <?php echo $this->Form->input('transaction_id', ['label' => false, 'type' => 'text', 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER TRANSACTION ID', 'maxlength' => 255]); ?>
+                                            <?php echo $this->Form->input('transcation_id', ['label' => false, 'type' => 'text', 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER TRANSACTION ID', 'maxlength' => 255]); ?>
                                         </div>
                                     </div>
                                 </div>

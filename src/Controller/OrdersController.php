@@ -61,11 +61,11 @@ class OrdersController extends AppController {
             $tmp['username'] = $this->getUserName($order['user_id']);
             $tmp['useremail'] = $this->getEmail($order['user_id']);
             $tmp['userphone'] = $this->getPhone($order['user_id']);
-            $tmp['category_id'] = $order['category_id'];
-            $tmp['category_name'] = $this->getCategoryName($order['category_id']);
-            $tmp['service_id'] = $order['service_id'];
-            $tmp['service_name'] = $this->getServiceName($order['service_id']);
-            $tmp['order_id'] = $order['service_id'];
+            //$tmp['category_id'] = $order['category_id'];
+            //$tmp['category_name'] = $this->getCategoryName($order['category_id']);
+            //$tmp['service_id'] = $order['service_id'];
+            $tmp['service_name'] = $this->getServicesNameUsingCartId($order['cart_id']);
+            $tmp['order_id'] = $order['order_id'];
             $tmp['user_address'] = $order['service_id'];
             $tmp['created_at'] = $order['created_at']->format('d-M-Y h:i A');
             $tmp['schedule_date'] = $order['schedule_date']->format('d-M-Y');
@@ -76,7 +76,281 @@ class OrdersController extends AppController {
             $tmp['status'] = $order['status'];
             $rslt[] = $tmp;
         }
+        //pr($rslt); exit;
         $this->set('orders', $rslt);
+    }
+
+    public function getServicesNameUsingCartId($cartID) {
+        if (isset($cartID) && $cartID != '') {
+            $servicesName = [];
+            $this->loadModel('CartOrders');
+            $this->loadModel('Services');
+            $cart_orders = $this->CartOrders->find('list', ['keyField' => 'id', 'valueField' => 'service_id'])->select(['service_id'])->where(['cart_id' => $cartID])->hydrate(false)->toArray();
+            if (isset($cart_orders) && !empty($cart_orders)) {
+                foreach ($cart_orders as $key => $val) {
+                    $servicesDetails = $this->Services->find('all')->select(['service_name'])->where(['id' => $val])->hydrate(false)->first();
+                    if (isset($servicesDetails) && !empty($servicesDetails)) {
+                        $servicesName[] = $servicesDetails['service_name'];
+                    }
+                }
+            }
+            if (isset($servicesName) && !empty($servicesName)) {
+                return implode(', ', $servicesName);
+            } else {
+                return '-';
+            }
+        } else {
+            return '-';
+        }
+    }
+
+    public function view($id) {
+        if (isset($id) && $id != '') {
+            $this->loadModel('Orders');
+            $this->loadModel('Services');
+            $this->loadModel('Carts');
+            $this->loadModel('CartOrders');
+            $this->loadModel('CartOrderQuestions');
+            $this->loadModel('ServiceQuestionAnswers');
+            $this->loadModel('Coupons');
+            $order_id = $id;
+            $order = $this->Orders->find('all')->where(['id' => $order_id])->hydrate(false)->first();
+            //pr($order); exit;
+            if (!empty($order)) {
+                //pr($orderExist); exit;
+                $orderDetails = [];
+                $orderDetails['id'] = $order['id'];
+                $orderDetails['user_id'] = $order['user_id'];
+                $orderDetails['order_id'] = $order['order_id'];
+                $orderDetails['username'] = $this->getUserName($order['user_id']);
+                $orderDetails['useremail'] = $this->getEmail($order['user_id']);
+                $orderDetails['userphone'] = $this->getPhone($order['user_id']);
+                $orderDetails['user_address'] = $order['user_address'];
+                $orderDetails['created_at'] = $order['created_at']->format('d-M-Y h:i A');
+                $orderDetails['schedule_date'] = $order['schedule_date']->format('d-M-Y');
+                $orderDetails['schedule_time'] = $order['schedule_time'];
+                $orderDetails['on_inspections'] = $order['on_inspections'];
+                $orderDetails['is_minimum_charge'] = $order['is_minimum_charge'];
+                $orderDetails['is_visiting_charge'] = $order['is_visiting_charge'];
+                $orderDetails['is_coupon_applied'] = $order['is_coupon_applied'];
+                $orderDetails['coupon_code'] = $order['coupon_code'];
+                $orderDetails['discount'] = (is_string($order['discount'])) ? $order['discount'] : number_format($order['discount'], 2);
+                $orderDetails['wallet_amount'] = number_format($order['wallet_amount'], 2);
+                $orderDetails['amount'] = number_format($order['amount'], 2);
+                $orderDetails['on_inspections_cost'] = number_format($order['on_inspections_cost'], 2);
+                $orderDetails['tax'] = number_format($order['tax'], 2);
+                $orderDetails['total_amount'] = number_format($order['total_amount'], 2);
+                $orderDetails['status'] = $order['status'];
+                $orderDetails['payment_status'] = $order['payment_status'];
+                $orderDetails['images'] = '';
+                $orderDetails['services'] = [];
+                $orderDetails['total'] = [
+                    'amount' => number_format($order['amount'], 2),
+                    'tax' => number_format($order['tax'], 2),
+                    'discount' => (is_string($order['discount'])) ? $order['discount'] : number_format($order['discount'], 2),
+                    'wallet_amount' => number_format($order['wallet_amount'], 2),
+                    'total_amount' => number_format($order['total_amount'], 2)
+                ];
+                $condArr = ['cart_id' => $order['cart_id']];
+                $cartOrders = $this->CartOrders->find('all')->where($condArr)->hydrate(false)->toArray();
+                $ordersItems = [];
+                foreach ($cartOrders as $order) {
+                    $tmp = [];
+                    $tmp['cart_order_id'] = $order['id'];
+                    $tmp['category_id'] = $order['category_id'];
+                    $tmp['category_name'] = $this->Services->getCategoryName($order['category_id']);
+                    $tmp['service_id'] = $order['service_id'];
+                    $tmp['service_name'] = $this->Services->getServiceName($order['service_id']);
+                    $tmp['banner_img'] = $this->Services->getServiceImagePAth($order['service_id']);
+                    $orderDetails['images'] = $this->Services->getServiceImagePAth($order['service_id']);
+                    //$tmp['banner_img'] = $this->Services->getServiceName($order['service_id']);
+                    $tmpDetails = $this->CartOrderQuestions->find('all')->where(['cart_order_id' => $order['id']])->hydrate(false)->toArray();
+                    foreach ($tmpDetails as $orderQues) {
+                        $questArr = $this->getQuestionDetails($orderQues['question_id'], $orderQues['answer_id']);
+                        //pr($questArr); exit;
+                        if (isset($order['on_inspections']) && $order['on_inspections'] == 'N') {
+                            if ($questArr['parent_question'] != '' && $questArr['parent_answer'] != '') {
+                                $answerTitle = $this->ServiceQuestionAnswers->find('all')->where(['id' => $questArr['parent_answer']])->hydrate(false)->first();
+                                $tmp['serviceDescription'] = $answerTitle['label'];
+                                $tmp['quantity'] = $orderQues['question_quantity'];
+                                $tmp['total_amount'] = $order['total_amount'];
+                            } else {
+                                $tmp['serviceDescription'] = $questArr['answer'];
+                                $tmp['quantity'] = $orderQues['question_quantity'];
+                            }
+                            if ($tmp['quantity'] == 0) {
+                                $tmp['amount'] = 0;
+                                $tmp['total_amount'] = $order['total_amount'];
+                            } else {
+                                $tmp['amount'] = $order['total_amount'] / $tmp['quantity'];
+                                $tmp['total_amount'] = $order['total_amount'];
+                            }
+                            $tmp['on_inspection'] = 'N';
+                        } else {
+                            $tmp['serviceDescription'] = $questArr['answer'];
+                            $tmp['quantity'] = $orderQues['question_quantity'];
+                            $tmp['on_inspection'] = 'Y';
+                            $tmp['amount'] = 0;
+                            $tmp['total_amount'] = $order['total_amount'];
+                        }
+                    }
+
+                    $ordersDetails[$order['category_id']]['category'] = $this->Services->getCategoryName($order['category_id']);
+                    $ordersDetails[$order['category_id']]['services'][] = $tmp;
+                }
+                $finalOrderDetails = [];
+                if (!empty($ordersDetails)) {
+                    foreach ($ordersDetails as $key => $val) {
+                        $finalOrderDetails[] = $val;
+                    }
+                }
+                $orderDetails['services'] = $finalOrderDetails;
+                $this->set('orders', $orderDetails);
+            } else {
+                $this->wrong('Sorry, Order not found!');
+            }
+        } else {
+            $this->Flash->error('Unable to found order data!');
+            return $this->redirect(['action' => 'index']);
+        }
+    }
+    
+    public function edit($id) {
+        if (isset($id) && $id != '') {
+            $this->loadModel('Orders');
+            $this->loadModel('Services');
+            $this->loadModel('Carts');
+            $this->loadModel('CartOrders');
+            $this->loadModel('CartOrderQuestions');
+            $this->loadModel('ServiceQuestionAnswers');
+            $this->loadModel('Coupons');
+            $order_id = $id;
+            $order = $this->Orders->find('all')->where(['id' => $order_id])->hydrate(false)->first();
+            //pr($order); exit;
+            if (!empty($order)) {
+                //pr($orderExist); exit;
+                $orderDetails = [];
+                $orderDetails['id'] = $order['id'];
+                $orderDetails['user_id'] = $order['user_id'];
+                $orderDetails['order_id'] = $order['order_id'];
+                $orderDetails['username'] = $this->getUserName($order['user_id']);
+                $orderDetails['useremail'] = $this->getEmail($order['user_id']);
+                $orderDetails['userphone'] = $this->getPhone($order['user_id']);
+                $orderDetails['user_address'] = $order['user_address'];
+                $orderDetails['created_at'] = $order['created_at']->format('d-M-Y h:i A');
+                $orderDetails['schedule_date'] = $order['schedule_date']->format('d-M-Y');
+                $orderDetails['schedule_time'] = $order['schedule_time'];
+                $orderDetails['on_inspections'] = $order['on_inspections'];
+                $orderDetails['is_minimum_charge'] = $order['is_minimum_charge'];
+                $orderDetails['is_visiting_charge'] = $order['is_visiting_charge'];
+                $orderDetails['is_coupon_applied'] = $order['is_coupon_applied'];
+                $orderDetails['coupon_code'] = $order['coupon_code'];
+                $orderDetails['discount'] = (is_string($order['discount'])) ? $order['discount'] : number_format($order['discount'], 2);
+                $orderDetails['wallet_amount'] = number_format($order['wallet_amount'], 2);
+                $orderDetails['amount'] = number_format($order['amount'], 2);
+                $orderDetails['on_inspections_cost'] = number_format($order['on_inspections_cost'], 2);
+                $orderDetails['tax'] = number_format($order['tax'], 2);
+                $orderDetails['total_amount'] = number_format($order['total_amount'], 2);
+                $orderDetails['status'] = $order['status'];
+                $orderDetails['payment_status'] = $order['payment_status'];
+                $orderDetails['images'] = '';
+                $orderDetails['services'] = [];
+                $orderDetails['total'] = [
+                    'amount' => number_format($order['amount'], 2),
+                    'tax' => number_format($order['tax'], 2),
+                    'discount' => (is_string($order['discount'])) ? $order['discount'] : number_format($order['discount'], 2),
+                    'wallet_amount' => number_format($order['wallet_amount'], 2),
+                    'total_amount' => number_format($order['total_amount'], 2)
+                ];
+                $condArr = ['cart_id' => $order['cart_id']];
+                $cartOrders = $this->CartOrders->find('all')->where($condArr)->hydrate(false)->toArray();
+                $ordersItems = [];
+                foreach ($cartOrders as $order) {
+                    $tmp = [];
+                    $tmp['cart_order_id'] = $order['id'];
+                    $tmp['category_id'] = $order['category_id'];
+                    $tmp['category_name'] = $this->Services->getCategoryName($order['category_id']);
+                    $tmp['service_id'] = $order['service_id'];
+                    $tmp['service_name'] = $this->Services->getServiceName($order['service_id']);
+                    $tmp['banner_img'] = $this->Services->getServiceImagePAth($order['service_id']);
+                    $orderDetails['images'] = $this->Services->getServiceImagePAth($order['service_id']);
+                    //$tmp['banner_img'] = $this->Services->getServiceName($order['service_id']);
+                    $tmpDetails = $this->CartOrderQuestions->find('all')->where(['cart_order_id' => $order['id']])->hydrate(false)->toArray();
+                    foreach ($tmpDetails as $orderQues) {
+                        $questArr = $this->getQuestionDetails($orderQues['question_id'], $orderQues['answer_id']);
+                        //pr($questArr); exit;
+                        if (isset($order['on_inspections']) && $order['on_inspections'] == 'N') {
+                            if ($questArr['parent_question'] != '' && $questArr['parent_answer'] != '') {
+                                $answerTitle = $this->ServiceQuestionAnswers->find('all')->where(['id' => $questArr['parent_answer']])->hydrate(false)->first();
+                                $tmp['serviceDescription'] = $answerTitle['label'];
+                                $tmp['quantity'] = $orderQues['question_quantity'];
+                                $tmp['total_amount'] = $order['total_amount'];
+                            } else {
+                                $tmp['serviceDescription'] = $questArr['answer'];
+                                $tmp['quantity'] = $orderQues['question_quantity'];
+                            }
+                            if ($tmp['quantity'] == 0) {
+                                $tmp['amount'] = 0;
+                                $tmp['total_amount'] = $order['total_amount'];
+                            } else {
+                                $tmp['amount'] = $order['total_amount'] / $tmp['quantity'];
+                                $tmp['total_amount'] = $order['total_amount'];
+                            }
+                            $tmp['on_inspection'] = 'N';
+                        } else {
+                            $tmp['serviceDescription'] = $questArr['answer'];
+                            $tmp['quantity'] = $orderQues['question_quantity'];
+                            $tmp['on_inspection'] = 'Y';
+                            $tmp['amount'] = 0;
+                            $tmp['total_amount'] = $order['total_amount'];
+                        }
+                    }
+
+                    $ordersDetails[$order['category_id']]['category'] = $this->Services->getCategoryName($order['category_id']);
+                    $ordersDetails[$order['category_id']]['services'][] = $tmp;
+                }
+                $finalOrderDetails = [];
+                if (!empty($ordersDetails)) {
+                    foreach ($ordersDetails as $key => $val) {
+                        $finalOrderDetails[] = $val;
+                    }
+                }
+                $orderDetails['services'] = $finalOrderDetails;
+                $this->set('orders', $orderDetails);
+            } else {
+                $this->wrong('Sorry, Order not found!');
+            }
+        } else {
+            $this->Flash->error('Unable to found order data!');
+            return $this->redirect(['action' => 'index']);
+        }
+    }
+
+    public function getQuestionDetails($question_id, $answer_id) {
+        $this->loadModel('serviceQuestions');
+        $this->loadModel('serviceQuestionAnswers');
+        $rslt = [];
+        $condArrQ = ['id' => $question_id];
+        $service_questions = $this->serviceQuestions->find('all')->where($condArrQ)->hydrate(false)->first();
+        //pr($service_questions); exit;
+        if (isset($service_questions['question_title']) && $service_questions['question_title'] != '') {
+            $rslt['questions'] = $service_questions['question_title'];
+            $condArrA = ['id' => $answer_id];
+            $service_answers = $this->serviceQuestionAnswers->find('all')->where($condArrA)->hydrate(false)->first();
+            if (isset($service_answers) && !empty($service_answers)) {
+                $answerData = $service_answers;
+                //$rslt['question_id'] = (isset($answerData['question_id']) && $answerData['question_id'] != '') ? $answerData['question_id'] : '';
+                //$rslt['answer_id'] = (isset($answerData['id']) && $answerData['id'] != '') ? $answerData['id'] : '';
+                $rslt['parent_question'] = (isset($service_questions['parent_question_id']) && $service_questions['parent_question_id'] != '') ? $service_questions['parent_question_id'] : '';
+                $rslt['parent_answer'] = (isset($service_questions['parent_answer_id']) && $service_questions['parent_answer_id'] != '') ? $service_questions['parent_answer_id'] : '';
+                $rslt['answer'] = (isset($answerData['label']) && $answerData['label'] != '') ? $answerData['label'] : '';
+                $rslt['quantity'] = (isset($answerData['quantity']) && $answerData['quantity'] != '') ? $answerData['quantity'] : '';
+                $rslt['price'] = (isset($answerData['price']) && $answerData['price'] != '') ? $answerData['price'] : '';
+            }
+            return $rslt;
+        } else {
+            return $rslt;
+        }
     }
 
 }

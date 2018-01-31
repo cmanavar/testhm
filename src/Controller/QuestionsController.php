@@ -112,21 +112,16 @@ class QuestionsController extends AppController {
                         if (isset($val['icon']['name']) && $val['icon']['name'] != '') {
                             $file = $filename = $icon_img = '';
                             $file = $val['icon']['name'];
-                            //echo $file.'<br>';
                             $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
                             $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
                             $rand = substr($filename, 0, 3).substr(uniqid(), 0, 5);
-                            //echo $rand.'<br>';
                             $filename = date('YmdHis') . $rand . "." . $ext;
-                            //echo $filename;
                             if (!file_exists(WWW_ROOT . 'img/' . QUETIONS_ICON_PATH)) {
                                 mkdir(QUETIONS_ICON_PATH, 0777, true);
                             }
                             move_uploaded_file($val['icon']['tmp_name'], WWW_ROOT . 'img/' . QUETIONS_ICON_PATH . $filename);
                             $icon_img = $filename;
                         }
-                        //pr($icon_img);
-                        //continue;
                         $sA['icon_img'] = $icon_img;
                         $sA['quantity'] = $val['quantity'];
                         $sA['price'] = $val['price'];

@@ -176,9 +176,11 @@ class MembersController extends AppController {
                             $userMapping = $this->UserMapping->patchEntity($userMapping, $map_data);
                             $userMapping->created = date("Y-m-d H:i:s");
                             if ($this->UserMapping->save($userMapping)) {
+                                $planDetails = $this->Plans->find('all')->where(['id' => $plan_id])->hydrate(false)->first();
                                 $users = $this->UserDetails->newEntity();
                                 $userData = [];
                                 $userData['user_id'] = $userId;
+                                $userData['credits'] = $planDetails['totservices'];
                                 $userData['person_1'] = (isset($this->request->data['person_1']) && $this->request->data['person_1'] != '') ? $this->request->data['person_1'] : '';
                                 $userData['person_2'] = (isset($this->request->data['person_2']) && $this->request->data['person_2'] != '') ? $this->request->data['person_2'] : '';
                                 $userData['person_3'] = (isset($this->request->data['person_3']) && $this->request->data['person_3'] != '') ? $this->request->data['person_3'] : '';
@@ -201,7 +203,6 @@ class MembersController extends AppController {
                                 $users->cheque_date = (isset($this->request->data['cheque_date']) && $this->request->data['cheque_date'] != '') ? date('Y-m-d', strtotime($this->request->data['cheque_date'])) : date('Y-m-d', strtotime('1980-01-01'));
                                 $users->created = date("Y-m-d H:i:s");
                                 $users->created_by = $this->request->session()->read('Auth.User.id');
-                                $planDetails = $this->Plans->find('all')->where(['id' => $plan_id])->hydrate(false)->first();
                                 if ($planDetails['cashback'] != 0.00) {
                                     $vW = [];
                                     $vW['amount'] = $planDetails['cashback'];
