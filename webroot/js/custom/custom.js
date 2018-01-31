@@ -590,9 +590,9 @@ $(document).ready(function () {
                 url: url,
                 data: {title: title, quantity: quant, price: price, icons: icons},
                 success: function (data) {
-                    console.log(data);
-                    return;
-                    //location.reload();
+//                    console.log(data);
+//                    return;
+                    location.reload();
                 }
             });
         });
@@ -691,7 +691,7 @@ $(document).ready(function () {
             url: url + '/' + id,
             data: {title: title, price: price},
             success: function (data) {
-                console.log(data);
+                //console.log(data);
                 location.reload();
             }
         });
@@ -707,7 +707,7 @@ $(document).ready(function () {
             url: url,
             data: {modified: tmodified, modified_by: tmodified_by},
             success: function (data) {
-                console.log(data);
+                //console.log(data);
                 location.reload();
             }
         });
@@ -748,7 +748,7 @@ $(document).ready(function () {
             url: url,
             data: {title: title, price: price},
             success: function (data) {
-                console.log(data);
+                //console.log(data);
                 location.reload();
             }
         });
