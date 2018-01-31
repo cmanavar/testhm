@@ -2121,13 +2121,14 @@ class WebservicesController extends AppController {
         $user_id = $this->checkVerifyApiKey('SALES');
         if ($user_id) {
             $this->loadModel('Surveys');
-            $appoinmentLists = $this->Surveys->find('all')->select(['id', 'person_name', 'appoinment_date', 'appoinment_time'])->where(['created_by' => $user_id, 'appoinment_status' => 'PENDING', "DATE_FORMAT(created,'%Y-%m-%d') <=" => date('Y-m-d')])->hydrate(false)->toArray();
+            $appoinmentLists = $this->Surveys->find('all')->select(['id', 'person_name', 'appoinment_date', 'appoinment_time', 'appoinment_status'])->where(['created_by' => $user_id, 'appoinment_status' => 'PENDING', "DATE_FORMAT(created,'%Y-%m-%d') <=" => date('Y-m-d')])->hydrate(false)->toArray();
             if (!empty($appoinmentLists)) {
                 $appoinments = [];
                 foreach ($appoinmentLists as $key => $val) {
                     $tmp = [];
                     $tmp['id'] = $val['id'];
                     $tmp['name'] = $val['person_name'];
+                    $tmp['status'] = $val['appoinment_status'];
                     $tmp['time'] = $val['appoinment_date']->format('Y-m-d') . " " . $val['appoinment_time'];
                     $appoinments[] = $tmp;
                 }
@@ -2146,7 +2147,7 @@ class WebservicesController extends AppController {
             $this->loadModel('Surveys');
             $requestArr = $this->getInputArr();
             if (isset($requestArr['survey_id']) && $requestArr['survey_id'] != '') {
-                $appoinmentDetails = $this->Surveys->find('all')->select(['id', 'person_name', 'address', 'contact_number', 'appoinment_date', 'appoinment_time'])->where(['id' => $requestArr['survey_id']])->hydrate(false)->first();
+                $appoinmentDetails = $this->Surveys->find('all')->select(['id', 'person_name', 'address', 'contact_number', 'appoinment_date', 'appoinment_time', 'appoinment_status'])->where(['id' => $requestArr['survey_id']])->hydrate(false)->first();
                 if (is_array($appoinmentDetails) && !empty($appoinmentDetails)) {
                     $appoinmentDetails['time'] = $appoinmentDetails['appoinment_date']->format('d-m-Y') . " " . $appoinmentDetails['appoinment_time'];
                     unset($appoinmentDetails['appoinment_date']);

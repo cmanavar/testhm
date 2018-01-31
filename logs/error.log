@@ -17976,3 +17976,63 @@ Stack Trace:
 #2 {main}
 
 
+2018-01-31 14:29:41 Error: [Cake\View\Exception\MissingTemplateException] Template file "Questions/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Questions/delete.ctp',
+)
+Request URL: /hmen/questions/delete/5
+2018-01-31 14:37:20 Error: [Cake\View\Exception\MissingTemplateException] Template file "Questions/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Questions/delete.ctp',
+)
+Request URL: /hmen/questions/delete/5
+2018-01-31 14:53:08 Error: [Cake\View\Exception\MissingTemplateException] Template file "Questions/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Questions/delete.ctp',
+)
+Request URL: /hmen/questions/delete/5
+2018-01-31 14:53:12 Error: [Cake\View\Exception\MissingTemplateException] Template file "Questions/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Questions/delete.ctp',
+)
+Request URL: /hmen/questions/delete/5
+2018-01-31 14:53:17 Error: [Cake\View\Exception\MissingTemplateException] Template file "Questions/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Questions/delete.ctp',
+)
+Request URL: /hmen/questions/delete/5
+2018-01-31 14:53:25 Error: [Cake\View\Exception\MissingTemplateException] Template file "Questions/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Questions/delete.ctp',
+)
+Request URL: /hmen/questions/delete/5
+2018-01-31 14:53:31 Error: [Cake\View\Exception\MissingTemplateException] Template file "Questions/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Questions/delete.ctp',
+)
+Request URL: /hmen/questions/delete/5
+2018-01-31 14:53:35 Error: [Cake\View\Exception\MissingTemplateException] Template file "Questions/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Questions/delete.ctp',
+)
+Request URL: /hmen/questions/delete/5
+2018-01-31 14:53:41 Error: [Cake\View\Exception\MissingTemplateException] Template file "Questions/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Questions/delete.ctp',
+)
+Request URL: /hmen/questions/delete/5
+2018-01-31 14:53:44 Error: [Cake\View\Exception\MissingTemplateException] Template file "Questions/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Questions/delete.ctp',
+)
+Request URL: /hmen/questions/delete/5
+2018-01-31 14:53:52 Error: [Cake\View\Exception\MissingTemplateException] Template file "Questions/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Questions/delete.ctp',
+)
+Request URL: /hmen/questions/delete/5
+2018-01-31 14:53:55 Error: [Cake\View\Exception\MissingTemplateException] Template file "Questions/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Questions/delete.ctp',
+)
+Request URL: /hmen/questions/delete/5

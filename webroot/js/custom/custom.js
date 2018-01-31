@@ -263,7 +263,7 @@ $(document).ready(function () {
     });
 
     function add_fields() {
-        //alert('!'); //return;
+        //alert('!'); return;
         room++;
         var objTo = document.getElementById('answer_val_section')
         //var divtest = document.createElement("div");
@@ -274,7 +274,6 @@ $(document).ready(function () {
                  <div class="col-md-2"><input class="form-control" name="answers[' + room + '][label]" id="answer_val" placeholder="Label ' + room + '"></div>\n\
                  <div class="col-sm-3">\n\
                  <div class="col-sm-2 pull-left"><input class="required imgpreview" name="answers[' + room + '][icon]" id="icons' + room + '" type="file" /></div>\n\
-                 <div class="imageblock pull-right"><div class="form-group hover-element scanimgblock"><div class="col-sm-1"><img src="/hmen/img/upload_image.png" class="icon_upload" alt="Your image" id="icons' + room + '_upload_preview" height="30"></div></div></div>\n\
                  </div> \n\
                  <div class="col-md-1"><select class="" name="answers[' + room + '][quantity]" id="answer_quantity' + room + '"><option value="YES">YES</option><option value="NO">NO</option><option value="ON_INSPECTION">INSPECTION</option></select></div>\n\
                  <div class="col-md-1"><input class="form-control" type="number" name="answers[' + room + '][price]" id="answer_val" placeholder="Price"></div>';
@@ -290,19 +289,19 @@ $(document).ready(function () {
             create: false,
         });
 
-        $("#icons" + room).change(function () {
-            readURL(this);
-        });
-        function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    //icons1_upload_preview
-                    $('#icons' + room + '_upload_preview').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
+//        $("#icons" + room).change(function () {
+//            readURL(this);
+//        });
+//        function readURL(input) {
+//            if (input.files && input.files[0]) {
+//                var reader = new FileReader();
+//                reader.onload = function (e) {
+//                    //icons1_upload_preview
+//                    $('#icons' + room + '_upload_preview').attr('src', e.target.result);
+//                }
+//                reader.readAsDataURL(input.files[0]);
+//            }
+//        }
     }
 
     function add_rates() {
@@ -395,7 +394,6 @@ $(document).ready(function () {
                  <div class="col-md-2"><div class="input text"><input class="form-control ans-label" name="label" id="answer_val' + room + '" placeholder="Label ' + room + '"></div><label id="question-title-error-' + room + '" class="error" style="display:none;" for="question-title">THIS FIELD IS REQUIRED.</label></div>\n\
                  <div class="col-sm-3">\n\
                  <div class="col-sm-2 pull-left"><input class="required imgpreview ans-icons" name="icon" id="icons' + room + '" type="file" /></div>\n\
-                 <div class="imageblock pull-right"><div class="form-group hover-element scanimgblock"><div class="col-sm-1"><img src="/hmen/img/upload_image.png" class="icon_upload" alt="Your image" id="icons' + room + '_upload_preview" height="30"></div></div></div>\n\
                  </div> \n\
                  <div class="col-md-1"><div class="input text"><select class="ans-qunat" name="quantity" id="answer_quantity' + room + '"><option value="YES">YES</option><option value="NO">NO</option><option value="ON_INSPECTION">INSPECTION</option></select></div></div>\n\
                  <div class="col-md-1"><div class="input text"><input class="form-control ans-price" id="answer_price' + room + '" type="number" name="price" placeholder="Price(Rs.)"></div><label id="question-price-error-' + room + '" class="error" style="display:none;" for="question-price">THIS FIELD IS REQUIRED.</label></div>\n\

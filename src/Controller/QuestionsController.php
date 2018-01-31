@@ -87,7 +87,7 @@ class QuestionsController extends AppController {
             $serviceQuestions = $this->ServiceQuestions->newEntity();
             $sQ = $sA = [];
             $category_id = $this->Questions->getCategoryId($service_id);
-            //pr($this->request->data); exit;
+//            pr($this->request->data); exit;
             $sQ['category_id'] = $category_id;
             $sQ['service_id'] = $service_id;
             $sQ['questions_type'] = $this->request->data['questions_type'];
@@ -101,7 +101,10 @@ class QuestionsController extends AppController {
             $rslt = $this->ServiceQuestions->save($serviceQuestions);
             if ($rslt->id) {
                 if (isset($this->request->data['answers']) && !empty($this->request->data['answers'])) {
+                    //pr($this->request->data['answers']); exit;
                     foreach ($this->request->data['answers'] as $key => $val) {
+                        //pr($val);
+                        $sA = [];
                         $serviceQuestionAnswers = $this->ServiceQuestionAnswers->newEntity();
                         $sA['question_id'] = $rslt->id;
                         $sA['label'] = $val['label'];
@@ -109,19 +112,26 @@ class QuestionsController extends AppController {
                         if (isset($val['icon']['name']) && $val['icon']['name'] != '') {
                             $file = $filename = $icon_img = '';
                             $file = $val['icon']['name'];
+                            //echo $file.'<br>';
                             $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
                             $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
-                            $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                            $rand = substr($filename, 0, 3).substr(uniqid(), 0, 5);
+                            //echo $rand.'<br>';
+                            $filename = date('YmdHis') . $rand . "." . $ext;
+                            //echo $filename;
                             if (!file_exists(WWW_ROOT . 'img/' . QUETIONS_ICON_PATH)) {
                                 mkdir(QUETIONS_ICON_PATH, 0777, true);
                             }
                             move_uploaded_file($val['icon']['tmp_name'], WWW_ROOT . 'img/' . QUETIONS_ICON_PATH . $filename);
                             $icon_img = $filename;
                         }
+                        //pr($icon_img);
+                        //continue;
                         $sA['icon_img'] = $icon_img;
                         $sA['quantity'] = $val['quantity'];
                         $sA['price'] = $val['price'];
                         $sA['created_by'] = $this->request->session()->read('Auth.User.id');
+                        //pr($sA); exit;
                         $serviceQuestionAnswers = $this->ServiceQuestionAnswers->patchEntity($serviceQuestionAnswers, $sA);
                         $serviceQuestionAnswers->created = date("Y-m-d H:i:s");
                         if ($this->ServiceQuestionAnswers->save($serviceQuestionAnswers)) {
@@ -130,6 +140,7 @@ class QuestionsController extends AppController {
                             $this->Flash->error(Configure::read('Settings.FAIL'));
                         }
                     }
+                    //exit;
                 }
                 $this->Flash->success(Configure::read('Settings.SAVE'));
                 return $this->redirect(['action' => 'index', $service_id]);
