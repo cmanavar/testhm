@@ -96,7 +96,7 @@
                                                             <?php
                                                         }
                                                     } else {
-                                                        echo '<tr><td colspan="7" style="text-align:center;"><b>No Records found </b></td></tr>';
+                                                        echo '<tr><td colspan="8" style="text-align:center;"><b>No Records found </b></td></tr>';
                                                     }
                                                     ?>
                                                 </tbody>

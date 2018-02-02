@@ -328,7 +328,7 @@ return [
     ],
     'Help' => [
         'phone_number' => '+917096460460',
-        'email' => 'info@myawesomewebsite.com',
+        'email' => 'support@hmen.in',
         'service_hours' => ['Monday-Friday (9AM - 4PM)', 'Saturday (12PM - 4PM)']
     ],
 ];

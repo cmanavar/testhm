@@ -112,6 +112,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <?php //echo 1; exit; ?>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">BIRTH DATE <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
@@ -154,10 +155,10 @@
                                     <?php echo $this->Form->input('person_2', ['label' => false, 'class' => 'form-control normal-font', 'placeholder' => 'ENTER NAME', 'value' => $user['person_2']]); ?>
                                 </div>
                                 <div class="col-sm-2">
-                                    <?php if (isset($user['birthdate_2']) && !empty($user['birthdate_2'])) { ?> 
+                                    <?php if (is_array($user['birthdate_2']) && !empty($user['birthdate_2'])) { ?> 
                                         <?php echo $this->Form->input('birthdate_2', ['label' => false, 'type' => 'text', 'class' => 'form-control pastDate required normal-font', 'placeholder' => 'ENTER BIRTHDATE', 'maxlength' => 255, 'value' => $user['birthdate_2']->format('d-m-Y')]); ?>
                                     <?php } else { ?>
-                                        <?php echo $this->Form->input('birthdate_2', ['label' => false, 'type' => 'text', 'class' => 'form-control pastDate normal-font date', 'placeholder' => 'ENTER BIRTHDATE']); ?>
+                                        <?php echo $this->Form->input('birthdate_2', ['label' => false, 'type' => 'text', 'class' => 'form-control pastDate normal-font', 'placeholder' => 'ENTER BIRTHDATE']); ?>
                                     <?php } ?>
                                 </div>
                             </div>
@@ -167,10 +168,10 @@
                                     <?php echo $this->Form->input('person_3', ['label' => false, 'class' => 'form-control normal-font', 'placeholder' => 'ENTER NAME', 'value' => $user['person_3']]); ?>
                                 </div>
                                 <div class="col-sm-2">
-                                    <?php if (isset($user['birthdate_3']) && !empty($user['birthdate_3'])) { ?> 
+                                    <?php if (is_array($user['birthdate_3']) && !empty($user['birthdate_3'])) { ?> 
                                         <?php echo $this->Form->input('birthdate_3', ['label' => false, 'type' => 'text', 'class' => 'form-control pastDate required normal-font', 'placeholder' => 'ENTER BIRTHDATE', 'maxlength' => 255, 'value' => $user['birthdate_3']->format('d-m-Y')]); ?>
                                     <?php } else { ?>
-                                        <?php echo $this->Form->input('birthdate_3', ['label' => false, 'type' => 'text', 'class' => 'form-control pastDate normal-font date', 'placeholder' => 'ENTER BIRTHDATE']); ?>
+                                        <?php echo $this->Form->input('birthdate_3', ['label' => false, 'type' => 'text', 'class' => 'form-control pastDate normal-font', 'placeholder' => 'ENTER BIRTHDATE']); ?>
                                     <?php } ?>
                                 </div>
                             </div>
@@ -180,10 +181,10 @@
                                     <?php echo $this->Form->input('person_4', ['label' => false, 'class' => 'form-control normal-font', 'placeholder' => 'ENTER NAME', 'value' => $user['person_4']]); ?>
                                 </div>
                                 <div class="col-sm-2">
-                                    <?php if (isset($user['birthdate_4']) && !empty($user['birthdate_4'])) { ?> 
+                                    <?php if (is_array($user['birthdate_4']) && !empty($user['birthdate_4'])) { ?> 
                                         <?php echo $this->Form->input('birthdate_4', ['label' => false, 'type' => 'text', 'class' => 'form-control pastDate required normal-font', 'placeholder' => 'ENTER BIRTHDATE', 'maxlength' => 255, 'value' => $user['birthdate_4']->format('d-m-Y')]); ?>
                                     <?php } else { ?>
-                                        <?php echo $this->Form->input('birthdate_4', ['label' => false, 'type' => 'text', 'class' => 'form-control pastDate normal-font date', 'placeholder' => 'ENTER BIRTHDATE']); ?>
+                                        <?php echo $this->Form->input('birthdate_4', ['label' => false, 'type' => 'text', 'class' => 'form-control pastDate normal-font', 'placeholder' => 'ENTER BIRTHDATE']); ?>
                                     <?php } ?>
                                 </div>
                             </div>
@@ -193,10 +194,10 @@
                                     <?php echo $this->Form->input('person_5', ['label' => false, 'class' => 'form-control normal-font', 'placeholder' => 'ENTER NAME', 'value' => $user['person_5']]); ?>
                                 </div>
                                 <div class="col-sm-2">
-                                    <?php if (isset($user['birthdate_5']) && !empty($user['birthdate_5'])) { ?> 
+                                    <?php if (is_array($user['birthdate_5']) && !empty($user['birthdate_5'])) { ?> 
                                         <?php echo $this->Form->input('birthdate_5', ['label' => false, 'type' => 'text', 'class' => 'form-control pastDate required normal-font', 'placeholder' => 'ENTER BIRTHDATE', 'maxlength' => 255, 'value' => $user['birthdate_5']->format('d-m-Y')]); ?>
                                     <?php } else { ?>
-                                        <?php echo $this->Form->input('birthdate_5', ['label' => false, 'type' => 'text', 'class' => 'form-control pastDate normal-font date', 'placeholder' => 'ENTER BIRTHDATE']); ?>
+                                        <?php echo $this->Form->input('birthdate_5', ['label' => false, 'type' => 'text', 'class' => 'form-control pastDate normal-font', 'placeholder' => 'ENTER BIRTHDATE']); ?>
                                     <?php } ?>
                                 </div>
                             </div>

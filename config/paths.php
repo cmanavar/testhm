@@ -83,6 +83,8 @@ define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'vendor' . DS . 'cakephp' . DS . 'c
 $HTTP_HOST = $_SERVER['HTTP_HOST'];
 if ($HTTP_HOST == 'localhost') {
     $url = 'http://localhost/hmen/';
+} elseif ($HTTP_HOST == 'hmen.in') {
+    $url = 'http://hmen.in/admin/';
 } else {
     $url = 'http://uncode.in/hmen/';
 }
@@ -121,6 +123,7 @@ define('VENDOR_IDPROOF_PATH', 'vendors/idproof/');
 
 define('GST_TAX', 18);
 define('REFERRAL_COMISSION', 100.00);
+define('GREEN_CASH_REWERDS_AMOUNT', 100.00);
 define('EMAIL_FROM_NAME', 'Uncode Lab');
 define('EMAIL_FROM_EMAIL_ADDRESS', 'uncodelab@gmail.com');
 
@@ -129,8 +132,11 @@ define('MSG_TYPE_REFERRAL', 'REFERRAL');
 define('MSG_TYPE_CASHBACK', 'MEMBERSHIP_CASHBACK');
 define('MSG_TYPE_OFFER', 'OFFER');
 define('MSG_TYPE_OTHER', 'OTHER');
+define('MSG_TYPE_GREEN_CASH', 'GREENCASH');
 define('MSG_TITLE_REFERRAL', 'Rewarded for refer');
 define('MSG_TITLE_CASHBACK_PLAN', 'Membership Plan Cashback');
+define('MSG_TITLE_REFER_MAMBERSHIP', 'Rewarded for refer');
+
 
 
 
@@ -142,6 +148,6 @@ define('ADDRESS_2_EXCEL', 'Opp. S.G Highway Bodakdev, Ahmedabad');
 define('MOBILE_PHONE_EXCEL', '7096460460');
 
 // RAZORPAY DETAILS:
-define('RAZORPAY_KEY_ID','rzp_test_zNXT8SF5EYUl5S');
-define('RAZORPAY_KEY_SECRET','kpV8ky5ehex7bsX5qhLjb36Y');
+define('RAZORPAY_KEY_ID', 'rzp_test_zNXT8SF5EYUl5S');
+define('RAZORPAY_KEY_SECRET', 'kpV8ky5ehex7bsX5qhLjb36Y');
 

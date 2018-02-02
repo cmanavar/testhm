@@ -118,9 +118,10 @@ class SurveysController extends AppController {
             $serveys = $this->Surveys->get($id);
             if (!is_array($serveys) && !empty($serveys)) {
                 if (isset($serveys['what_service_or_repair_work_usually_you_perform_at_your_place']) && $serveys['what_service_or_repair_work_usually_you_perform_at_your_place'] != '') {
-                    $servicesArr = explode(",", $serveys['what_service_or_repair_work_usually_you_perform_at_your_place']);
-                    $serveys->services_name = $this->getServicesName($servicesArr);
+                    $service_name = str_replace(",", ", ", $serveys['what_service_or_repair_work_usually_you_perform_at_your_place']);
+                    $serveys->services_name = str_replace("_", " ", $service_name);
                 }
+                //pr($serveys); exit;
                 if ($this->request->is(['patch', 'post', 'put'])) {
                     $appoinment_date = $this->request->data['appoinment_date'];
                     unset($this->request->data['appoinment_date']);
@@ -135,7 +136,7 @@ class SurveysController extends AppController {
                         $this->Flash->error(Configure::read('Settings.FAIL'));
                     }
                 }
-                
+                //pr($serveys); exit;
                 $this->set('serveys', $serveys);
             } else {
                 $this->Flash->error(__('RECORD DOES NOT EXIST'));

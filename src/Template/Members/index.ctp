@@ -47,6 +47,7 @@
                                                         <th width="2%">Sr.no</th>
                                                         <th>Name</th> 
                                                         <th>Contact Info</th>
+                                                        <th>Plan Details</th>
                                                         <th>Payment Details</th>
                                                         <th>Status</th>
                                                         <th width="17%">Actions</th>
@@ -56,6 +57,7 @@
                                                     <?php
                                                     if (!empty($members)) {
                                                         foreach ($members as $key => $val) {
+                                                            //pr($val); exit;
                                                             ?>
                                                             <tr>
                                                                 <td><?php echo $key + 1; ?></td>
@@ -76,6 +78,7 @@
                                                                         </tr>
                                                                     </table>
                                                                 </td>
+                                                                <td><?php echo $val['plan_name']; ?></td>
                                                                 <td>
                                                                     <table>
                                                                         <tr>
@@ -120,7 +123,7 @@
                                                             <?php
                                                         }
                                                     } else {
-                                                        echo '<tr><td colspan="6" style="text-align:center;"><b>No Records found </b></td></tr>';
+                                                        echo '<tr><td colspan="7" style="text-align:center;"><b>No Records found </b></td></tr>';
                                                     }
                                                     ?>
                                                 </tbody>

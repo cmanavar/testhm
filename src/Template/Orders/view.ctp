@@ -136,7 +136,7 @@
                                 </tr>
                                 <tr class="text-right">
                                     <td colspan="4"><b>Order Total</b></td>
-                                    <td><?php echo number_format($orders['total']['total_amount'], 2); ?></td>
+                                    <td><?php echo $orders['total']['total_amount']; //echo number_format($orders['total']['total_amount'], 2); ?></td>
                                 </tr>
                                 <?php if (isset($orders['is_coupon_applied']) && $orders['is_coupon_applied'] == 'Y') { ?>
                                 <?php } ?>

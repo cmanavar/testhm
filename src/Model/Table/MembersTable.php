@@ -39,15 +39,15 @@ class MembersTable extends Table {
         $members['reference_user_name'] = $reference_user_name;
         $members['plan_name'] = $this->getPlanName($members['plan_id']);
         $members['person_1'] = $userData['person_1'];
-        $members['birthdate_1'] = $userData['birthdate_1'];
+        $members['birthdate_1'] = (isset($userData['birthdate_1']) && $userData['birthdate_1']->format('Y-m-d') != '1980-01-01') ? $userData['birthdate_1'] : '';
         $members['person_2'] = $userData['person_2'];
-        $members['birthdate_2'] = $userData['birthdate_2'];
+        $members['birthdate_2'] = (isset($userData['birthdate_2']) && $userData['birthdate_2']->format('Y-m-d') != '1980-01-01') ? $userData['birthdate_2'] : '';
         $members['person_3'] = $userData['person_3'];
-        $members['birthdate_3'] = $userData['birthdate_3'];
+        $members['birthdate_3'] = (isset($userData['birthdate_3']) && $userData['birthdate_3']->format('Y-m-d') != '1980-01-01') ? $userData['birthdate_3'] : '';
         $members['person_4'] = $userData['person_4'];
-        $members['birthdate_4'] = $userData['birthdate_4'];
+        $members['birthdate_4'] = (isset($userData['birthdate_4']) && $userData['birthdate_4']->format('Y-m-d') != '1980-01-01') ? $userData['birthdate_4'] : '';
         $members['person_5'] = $userData['person_5'];
-        $members['birthdate_5'] = $userData['birthdate_5'];
+        $members['birthdate_5'] = (isset($userData['birthdate_5']) && $userData['birthdate_5']->format('Y-m-d') != '1980-01-01') ? $userData['birthdate_5'] : '';
         $members['occupation'] = $userData['occupation'];
         $members['company_name'] = $userData['company_name'];
         $members['company_website'] = $userData['company_website'];
@@ -57,6 +57,7 @@ class MembersTable extends Table {
         $members['cheque_date'] = $userData['cheque_date'];
         $members['transcation_id'] = $userData['transcation_id'];
         $members['other_details'] = $userData['other_details'];
+        //pr($members); exit;
         return $members;
     }
 

@@ -117,12 +117,12 @@
                                                 <tr>
                                                     <td>
                                                         <div class="row">
-                                                            <div class="col-md-3">Services Name</div>
-                                                            <div class="col-md-9">: <?php echo $v['service_name']; ?></div>
+                                                            <div class="col-md-4">Services Name</div>
+                                                            <div class="col-md-8">: <?php echo $v['service_name']; ?></div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-md-3">Services Descriptions</div>
-                                                            <div class="col-md-9">: <?php echo $v['serviceDescription']; ?></div>
+                                                            <div class="col-md-4">Services Descriptions</div>
+                                                            <div class="col-md-8">: <?php echo $v['serviceDescription']; ?></div>
                                                         </div>
                                                     </td>
                                                     <td class="text-right"></td>

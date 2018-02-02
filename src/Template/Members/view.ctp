@@ -72,12 +72,13 @@
                                     <td width="30%"><label class="control-label">Birth Date</label></td>
                                     <td><?= $member['birthdate']->format('d-M-Y'); ?></td>
                                 </tr>
-                                <?php if (isset($member['aniversary_date']) && $member['aniversary_date'] != '') { ?>
+                                <?php if (is_array($member['aniversary_date']) && $member['aniversary_date'] != '') { ?>
                                     <tr>
                                         <td width="30%"><label class="control-label">Anniversary Date</label></td>
                                         <td><?= $member['aniversary_date']->format('d-M-Y'); ?></td>
                                     </tr>
                                 <?php } ?>
+                                    <?php //echo 1; exit; ?>
                                 <?php 
                                     $familymemberdetails = '';
                                     if($member['person_1'] != '' || !empty($member['birthdate_1'])) {
@@ -140,13 +141,13 @@
                                 <?php if($member['payment_type'] == 'UPI') { ?>
                                 <tr>
                                     <td><label class="control-label">Transaction Id </label></td>
-                                    <td>: <?= $member['transcation_id']; ?></td>
+                                    <td><?= $member['transcation_id']; ?></td>
                                 </tr>
                                 <?php } ?>
                                 <?php if($member['payment_type'] == 'OTHER') { ?>
                                 <tr>
                                     <td><label class="control-label">Other Details </label></td>
-                                    <td>: <?= $member['other_details']; ?></td>
+                                    <td><?= $member['other_details']; ?></td>
                                 </tr>
                                 <?php } ?>
                                 <tr>

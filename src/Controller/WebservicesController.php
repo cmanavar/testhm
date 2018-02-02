@@ -86,6 +86,8 @@ class WebservicesController extends AppController {
                         $tmp['image'] = IMAGE_URL_PATH . 'icons/msg-referral.png';
                     } else if ($message['msg_type'] == 'CASHBACK') {
                         $tmp['image'] = IMAGE_URL_PATH . 'icons/msg-cashback.png';
+                    } else if ($message['msg_type'] == 'GREENCASH') {
+                        $tmp['image'] = IMAGE_URL_PATH . 'icons/msg-cashback.png';
                     } else {
                         $tmp['image'] = IMAGE_URL_PATH . 'icons/msg-other.png';
                     }
@@ -808,7 +810,7 @@ class WebservicesController extends AppController {
                                 $questionDetails = $questionStoreDetails = [];
                                 $answer_id = $questions->option_id;
                                 $getAnswerData = $this->ServiceQuestionAnswers->find('all')->where(['id' => $answer_id])->hydrate(false)->first();
-                                //pr($getAnswerData); exit;
+                                //pr($questions); exit;
                                 $question_id = $getAnswerData['question_id'];
                                 //$answer_id = $questions->option_id;
                                 if (isset($questions->option_quantity) && $questions->option_quantity != '') {
@@ -1757,12 +1759,22 @@ class WebservicesController extends AppController {
         if ($user_id) {
             $this->loadModel('Surveys');
             $requestArr = $this->getInputArr();
+//            $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+//            $txt = "Array\n";
+//            fwrite($myfile, $txt);
+//            fwrite($myfile, file_get_contents('php://input'));
+//            fwrite($myfile, "Array\n");
+//            fwrite($myfile, print_r($requestArr, TRUE));
+//            fclose($myfile);
             $serveyArrs = $this->getNewSurveyIds();
             if (!empty($serveyArrs)) {
                 $surveys = $this->Surveys->newEntity();
                 $appoinment_date = $requestArr['appoinment_date'];
+                $serviceArr = $requestArr['what_service_or_repair_work_usually_you_perform_at_your_place'];
                 unset($requestArr['appoinment_date']);
+                unset($requestArr['what_service_or_repair_work_usually_you_perform_at_your_place']);
                 $surveys = $this->Surveys->patchEntity($surveys, $requestArr);
+                $surveys->what_service_or_repair_work_usually_you_perform_at_your_place = implode(",",$serviceArr);
                 $surveys->ids = $serveyArrs['ids'];
                 $surveys->survey_id = $serveyArrs['survey_id'];
                 $surveys->appoinment_date = date("Y-m-d", strtotime($appoinment_date));
@@ -1853,13 +1865,13 @@ class WebservicesController extends AppController {
             $user = $this->Users->newEntity();
             $requestArr = $this->getInputArr();
             //pr($requestArr); exit;
-            $myfile = fopen("newfileMember.txt", "w") or die("Unable to open file!");
-            $txt = "Array\n";
-            fwrite($myfile, $txt);
-            fwrite($myfile, file_get_contents('php://input'));
-            fwrite($myfile, "Array\n");
-            fwrite($myfile, print_r($requestArr, TRUE));
-            fclose($myfile);
+//            $myfile = fopen("newfileMember.txt", "w") or die("Unable to open file!");
+//            $txt = "Array\n";
+//            fwrite($myfile, $txt);
+//            fwrite($myfile, file_get_contents('php://input'));
+//            fwrite($myfile, "Array\n");
+//            fwrite($myfile, print_r($requestArr, TRUE));
+//            fclose($myfile);
             if (!isset($requestArr['plan_id']) || $requestArr['plan_id'] == '') {
                 $this->wrong('Sorry, Please select plan.');
             }

@@ -389,8 +389,7 @@ class VendorsController extends AppController {
         $view_output = $this->render('/Element/vendors_template');
         $fields = array(
             'msg' => $view_output,
-            'tomail' => 'chiragce1992@gmail.com',
-            //'cc_email' => $patient['email'],
+            'tomail' => $email,
             'subject' => 'VENDOR EMAIL',
             'from_name' => 'Uncode Lab',
             'from_mail' => 'uncodelab@gmail.com',
@@ -409,8 +408,7 @@ class VendorsController extends AppController {
         $view_output = $this->render('/Element/vendors_template');
         $fields = array(
             'msg' => $view_output,
-            'tomail' => 'chiragce1992@gmail.com',
-            //'cc_email' => $patient['email'],
+            'tomail' => $email,
             'subject' => 'SALES EMAIL',
             'from_name' => 'Uncode Lab',
             'from_mail' => 'uncodelab@gmail.com',

@@ -112,7 +112,7 @@ class MembersController extends AppController {
                         $userData['plan_id'] = $plan_id = (isset($this->request->data['plan_id']) && $this->request->data['plan_id'] != '') ? $this->request->data['plan_id'] : '';
                         $userData['ip_address'] = $this->get_client_ip();
                         $userData['refer_key'] = $this->getReferKey($name, $phone_no);
-                        $userData['referral_id'] = (isset($this->request->data['refer_id']) && $this->request->data['refer_id'] != '') ? $this->request->data['refer_id'] : 0;
+                        $userData['referral_id'] = $referIds = (isset($this->request->data['refer_id']) && $this->request->data['refer_id'] != '') ? $this->request->data['refer_id'] : 0;
                         $userData['email_newsletters'] = 'Y';
                         $userData['phone_verified'] = 'Y';
                         $userData['email_verified'] = 'Y';
@@ -177,6 +177,23 @@ class MembersController extends AppController {
                             $userMapping->created = date("Y-m-d H:i:s");
                             if ($this->UserMapping->save($userMapping)) {
                                 $planDetails = $this->Plans->find('all')->where(['id' => $plan_id])->hydrate(false)->first();
+                                // Membership Plan Green Cash Return to Referral Users.
+                                if ((isset($referIds) && $referIds != '')) {
+                                    $this->loadModel('GreenCashbacks');
+                                    $greencash = $this->GreenCashbacks->newEntity();
+                                    $greenCashArray = [];
+                                    $greenCashArray['user_id'] = $referIds;
+                                    $greenCashArray['amount'] = GREEN_CASH_REWERDS_AMOUNT;
+                                    $greenCashArray['refer_membership_id'] = $userId;
+                                    $greenCashArray['status'] = 'PENDING';
+                                    $greenCashArray['created_by'] = $this->request->session()->read('Auth.User.id');
+                                    $greencash = $this->GreenCashbacks->patchEntity($greencash, $greenCashArray);
+                                    $greencash->created = date("Y-m-d H:i:s");
+                                    $green_cash_id = $this->GreenCashbacks->save($greencash);
+                                    if ($green_cash_id) {
+                                        $this->newMsg($referIds, MSG_TITLE_REFER_MAMBERSHIP, MSG_TYPE_GREEN_CASH, 'Rs. ' . GREEN_CASH_REWERDS_AMOUNT . ' Cashback for Membership Reference');
+                                    }
+                                }
                                 $users = $this->UserDetails->newEntity();
                                 $userData = [];
                                 $userData['user_id'] = $userId;
@@ -316,7 +333,7 @@ class MembersController extends AppController {
                     if (isset($birthdate_1) && $birthdate_1 != '') {
                         $uDetails->birthdate_1 = date('Y-m-d', strtotime($birthdate_1));
                     }
-                    if (isset($birthdate_2) && $birthdate_2 != '') {
+                    if (isset($birthdate_2) && $birthdate_2 != '1980-01-01') {
                         $uDetails->birthdate_2 = date('Y-m-d', strtotime($birthdate_2));
                     }
                     if (isset($birthdate_3) && $birthdate_3 != '') {
@@ -470,7 +487,7 @@ class MembersController extends AppController {
         $view_output = $this->render('/Element/membership_signup');
         $fields = array(
             'msg' => $view_output,
-            'tomail' => 'chiragce1992@gmail.com',
+            'tomail' => $email,
             //'cc_email' => $patient['email'],
             'subject' => 'Membership Account Details',
             'from_name' => 'Uncode Lab',
