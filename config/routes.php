@@ -55,6 +55,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/forgot_password/link', ['controller' => 'Webservices', 'action' => 'forgorPassword']);
     $routes->connect('/reset/password/*', ['controller' => 'Users', 'action' => 'resetpasswords']);//reset/password/
     $routes->connect('/webservices/change/password', ['controller' => 'Webservices', 'action' => 'changePassword']);
+    $routes->connect('/webservices/vandor/change/password', ['controller' => 'Webservices', 'action' => 'changeVandorPassword']);
     $routes->connect('/webservices/email/activate/*', ['controller' => 'Users', 'action' => 'verifiedemail']);
     $routes->connect('/webservices/phonenumber/activate', ['controller' => 'Users', 'action' => 'verifiedPhone']);
     $routes->connect('/webservices/update/profile', ['controller' => 'Users', 'action' => 'updateProfile']);
@@ -96,6 +97,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/appoinment/details', ['controller' => 'Webservices', 'action' => 'appoinmentDetails']);
     $routes->connect('/webservices/appoinment/completed', ['controller' => 'Webservices', 'action' => 'appoinmentCompleted']);
     $routes->connect('/webservices/appoinment/declined', ['controller' => 'Webservices', 'action' => 'appoinmentDeclined']);
+    $routes->connect('/webservices/appoinment/interested', ['controller' => 'Webservices', 'action' => 'appoinmentInterested']);
     $routes->connect('/webservices/payment/order/create', ['controller' => 'Payments', 'action' => 'orderCreate']);
     $routes->connect('/webservices/payment/response', ['controller' => 'Payments', 'action' => 'storeResponse']);
     

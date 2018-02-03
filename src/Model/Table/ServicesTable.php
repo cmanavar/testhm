@@ -120,6 +120,11 @@ class ServicesTable extends Table {
         return (isset($services['square_image']) && $services['square_image'] != '') ? IMAGE_URL_PATH . 'services/square/' . $services['square_image'] : '';
     }
     
+    public function getMinimumServiceCharge($id) {
+        $serviceTable = TableRegistry::get('Services');
+        $services = $serviceTable->find()->select(['minimum_charge'])->where(['id' => $id])->hydrate(false)->first();
+        return (isset($services['minimum_charge']) && $services['minimum_charge'] != '') ? $services['minimum_charge'] : 0;
+    }
 }
 
 ?>

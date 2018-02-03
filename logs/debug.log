@@ -8944,3 +8944,141 @@
 2018-02-02 14:50:02 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
 
 
+2018-02-02 15:18:38 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 15:18:39 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 15:18:47 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 15:42:28 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 15:44:16 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 15:44:20 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 15:49:06 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 129]
+
+
+2018-02-02 15:49:06 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 129]
+
+
+2018-02-02 15:49:06 Notice: Notice (8): Undefined variable: planLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 129]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-02 15:49:18 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-02 16:58:19 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 17:18:47 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 17:18:48 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 17:19:04 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 17:21:53 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 17:26:10 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 17:33:04 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 17:37:09 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 18:50:44 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 18:51:18 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 18:55:15 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 18:55:17 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 18:56:44 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-02 19:29:09 Notice: Notice (8): Undefined index: cart_order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1087]
+
+
+2018-02-02 19:29:09 Notice: Notice (8): Undefined index: cart_order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1087]
+
+
+2018-02-02 19:29:09 Notice: Notice (8): Undefined index: cart_order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1087]
+
+
+2018-02-03 11:09:59 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 11:11:27 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 11:15:09 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+

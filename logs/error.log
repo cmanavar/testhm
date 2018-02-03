@@ -18774,3 +18774,58 @@ Exception Attributes: array (
   '_ext' => NULL,
 )
 Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-02-02 15:02:22 Error: Fatal Error (1): Call to undefined method App\Controller\OrdersController::getVendorsofServices() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 313]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-02 15:02:22 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\OrdersController::getVendorsofServices()
+Request URL: /hmen/orders/edit/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 313)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-02 15:18:25 Error: Fatal Error (4): syntax error, unexpected ')' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 369]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-02 15:18:25 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')'
+Request URL: /hmen/orders/edit/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/Applications/X...', 369)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-02 15:53:22 Warning: Warning (2): Illegal offset type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 131]
+
+
+2018-02-02 15:53:22 Warning: Warning (2): Illegal offset type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 131]
+
+
+2018-02-02 15:53:22 Warning: Warning (2): Illegal offset type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 131]
+
+
+2018-02-02 15:53:58 Warning: Warning (2): Illegal offset type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 131]
+
+
+2018-02-02 15:53:58 Warning: Warning (2): Illegal offset type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 131]
+
+
+2018-02-02 15:53:58 Warning: Warning (2): Illegal offset type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 131]
+
+
+2018-02-02 19:03:23 Warning: Warning (2): get_object_vars() expects parameter 1 to be object, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/AppController.php, line 76]
+
+
+2018-02-02 19:14:22 Error: [BadMethodCallException] Unknown method "getMinimumServiceCharge"
+Request URL: /hmen/webservices/cart/detail

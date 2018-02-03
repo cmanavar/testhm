@@ -64,6 +64,11 @@ $(function () {
         allowEmptyOption: true,
         create: false,
     });
+    
+    var $select = $('.select-category').selectize({
+        allowEmptyOption: true,
+        create: false,
+    });
 
     var $select = $('#select-type').selectize({
         allowEmptyOption: true,

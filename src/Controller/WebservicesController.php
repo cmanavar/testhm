@@ -42,10 +42,10 @@ class WebservicesController extends AppController {
         }
         $this->Auth->allow(['homepage', 'categoryDetails', 'categoryList', 'serviceDetails', 'getServicesSubQuestions', 'helpDetails',
             'createCart', 'addCartProduct', 'cartDetails', 'cartClear', 'removeCartProduct', 'counteunreadmsg', 'msgList', 'msgView',
-            'cartOrderPlaced', 'forgorPassword', 'changePassword', 'applyCouponCode', 'walletDetails', 'getCartId', 'orderDetails',
+            'cartOrderPlaced', 'forgorPassword', 'changePassword', 'changeVandorPassword', 'applyCouponCode', 'walletDetails', 'getCartId', 'orderDetails',
             'orderLists', 'orderQuery', 'orderSummary', 'storeReview', 'updateOrder', 'serviceReviews', 'getquestionArr', 'surverysubmit', 'surverylists',
             'serviceLists', 'addMembership', 'planLists', 'referenceUsers', 'listMembership', 'appoinmentLists', 'appoinmentDetails',
-            'appoinmentCompleted', 'appoinmentDeclined', 'testNotifications']);
+            'appoinmentCompleted', 'appoinmentDeclined', 'appoinmentInterested','testNotifications']);
     }
 
     public function counteunreadmsg() {
@@ -204,7 +204,46 @@ class WebservicesController extends AppController {
                     $user->modified = date('Y-m-d H:i:s');
                     $user->modified_by = $user_id;
                     if ($this->Users->save($user)) {
-                        $this->wrong('Your Password is updated successfully!');
+                        $this->success('Your Password is updated successfully!');
+                    } else {
+                        $this->wrong(Configure::read('Settings.FAIL'));
+                    }
+                } else {
+                    $this->wrong('Sorry, Please enter valid old password!');
+                }
+            } else {
+                $this->wrong('Sorry, Userdata is not found!');
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function changeVandorPassword() {
+        $user_id = $this->checkVerifyApiKey('SALES_VENDOR');
+        if ($user_id) {
+            $this->loadModel('Users');
+            $requestArr = $this->getInputArr();
+            $requiredFields = array(
+                'Old Password' => (isset($requestArr['old_password']) && $requestArr['old_password'] != '') ? $requestArr['old_password'] : '',
+                'New Password' => (isset($requestArr['new_password']) && $requestArr['new_password'] != '') ? $requestArr['new_password'] : ''
+            );
+            $validate = $this->checkRequiredFields($requiredFields);
+            if ($validate != "") {
+                $this->wrong($validate);
+            }
+            $user = $this->Users->get($user_id);
+            if (!empty($user)) {
+                $password = $user->password;
+                $obj = new DefaultPasswordHasher;
+                $postpassword = $obj->check($requestArr['old_password'], $password);
+                if ($postpassword) {
+                    $updatedRecords = ['password' => $requestArr['new_password']];
+                    $user = $this->Users->patchEntity($user, $updatedRecords);
+                    $user->modified = date('Y-m-d H:i:s');
+                    $user->modified_by = $user_id;
+                    if ($this->Users->save($user)) {
+                        $this->success('Your Password is updated successfully!');
                     } else {
                         $this->wrong(Configure::read('Settings.FAIL'));
                     }
@@ -383,49 +422,49 @@ class WebservicesController extends AppController {
                 $rslt['visit_charge'] = $sDetails['visit_charge'];
                 $rslt['minimum_charge'] = $sDetails['minimum_charge'];
                 $rslt['banner_image'] = IMAGE_URL_PATH . 'services/banner/' . $sDetails['banner_image'];
-                $rslt['service_description'] = [];
-                if ($sDetails['icon_1'] != '' && $sDetails['desc_heading_1'] != '' && $sDetails['desc_text_1'] != '') {
-                    $tmpD = [];
-                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_1'];
-                    $tmpD['heading'] = $sDetails['desc_heading_1'];
-                    $tmpD['text'] = $sDetails['desc_text_1'];
-                    $rslt['service_description'][] = $tmpD;
-                }
-                if ($sDetails['icon_2'] != '' && $sDetails['desc_heading_2'] != '' && $sDetails['desc_text_2'] != '') {
-                    $tmpD = [];
-                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_2'];
-                    $tmpD['heading'] = $sDetails['desc_heading_2'];
-                    $tmpD['text'] = $sDetails['desc_text_2'];
-                    $rslt['service_description'][] = $tmpD;
-                }
-                if ($sDetails['icon_3'] != '' && $sDetails['desc_heading_3'] != '' && $sDetails['desc_text_3'] != '') {
-                    $tmpD = [];
-                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_3'];
-                    $tmpD['heading'] = $sDetails['desc_heading_3'];
-                    $tmpD['text'] = $sDetails['desc_text_3'];
-                    $rslt['service_description'][] = $tmpD;
-                }
-                if ($sDetails['icon_4'] != '' && $sDetails['desc_heading_4'] != '' && $sDetails['desc_text_4'] != '') {
-                    $tmpD = [];
-                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_4'];
-                    $tmpD['heading'] = $sDetails['desc_heading_4'];
-                    $tmpD['text'] = $sDetails['desc_text_4'];
-                    $rslt['service_description'][] = $tmpD;
-                }
-                if ($sDetails['icon_5'] != '' && $sDetails['desc_heading_5'] != '' && $sDetails['desc_text_5'] != '') {
-                    $tmpD = [];
-                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_5'];
-                    $tmpD['heading'] = $sDetails['desc_heading_5'];
-                    $tmpD['text'] = $sDetails['desc_text_5'];
-                    $rslt['service_description'][] = $tmpD;
-                }
-                if ($sDetails['icon_6'] != '' && $sDetails['desc_heading_6'] != '' && $sDetails['desc_text_6'] != '') {
-                    $tmpD = [];
-                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_6'];
-                    $tmpD['heading'] = $sDetails['desc_heading_6'];
-                    $tmpD['text'] = $sDetails['desc_text_6'];
-                    $rslt['service_description'][] = $tmpD;
-                }
+//                $rslt['service_description'] = [];
+//                if ($sDetails['icon_1'] != '' && $sDetails['desc_heading_1'] != '' && $sDetails['desc_text_1'] != '') {
+//                    $tmpD = [];
+//                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_1'];
+//                    $tmpD['heading'] = $sDetails['desc_heading_1'];
+//                    $tmpD['text'] = $sDetails['desc_text_1'];
+//                    $rslt['service_description'][] = $tmpD;
+//                }
+//                if ($sDetails['icon_2'] != '' && $sDetails['desc_heading_2'] != '' && $sDetails['desc_text_2'] != '') {
+//                    $tmpD = [];
+//                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_2'];
+//                    $tmpD['heading'] = $sDetails['desc_heading_2'];
+//                    $tmpD['text'] = $sDetails['desc_text_2'];
+//                    $rslt['service_description'][] = $tmpD;
+//                }
+//                if ($sDetails['icon_3'] != '' && $sDetails['desc_heading_3'] != '' && $sDetails['desc_text_3'] != '') {
+//                    $tmpD = [];
+//                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_3'];
+//                    $tmpD['heading'] = $sDetails['desc_heading_3'];
+//                    $tmpD['text'] = $sDetails['desc_text_3'];
+//                    $rslt['service_description'][] = $tmpD;
+//                }
+//                if ($sDetails['icon_4'] != '' && $sDetails['desc_heading_4'] != '' && $sDetails['desc_text_4'] != '') {
+//                    $tmpD = [];
+//                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_4'];
+//                    $tmpD['heading'] = $sDetails['desc_heading_4'];
+//                    $tmpD['text'] = $sDetails['desc_text_4'];
+//                    $rslt['service_description'][] = $tmpD;
+//                }
+//                if ($sDetails['icon_5'] != '' && $sDetails['desc_heading_5'] != '' && $sDetails['desc_text_5'] != '') {
+//                    $tmpD = [];
+//                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_5'];
+//                    $tmpD['heading'] = $sDetails['desc_heading_5'];
+//                    $tmpD['text'] = $sDetails['desc_text_5'];
+//                    $rslt['service_description'][] = $tmpD;
+//                }
+//                if ($sDetails['icon_6'] != '' && $sDetails['desc_heading_6'] != '' && $sDetails['desc_text_6'] != '') {
+//                    $tmpD = [];
+//                    $tmpD['icon'] = IMAGE_URL_PATH . 'services/icons/' . $sDetails['icon_6'];
+//                    $tmpD['heading'] = $sDetails['desc_heading_6'];
+//                    $tmpD['text'] = $sDetails['desc_text_6'];
+//                    $rslt['service_description'][] = $tmpD;
+//                }
                 // Ratecard - Start
                 $rateArr = [];
                 $rateCards = $this->ServiceRatecards->find('all')->where(['service_id' => $sDetails['id']])->hydrate(false)->toArray();
@@ -731,22 +770,63 @@ class WebservicesController extends AppController {
         }
     }
 
+//    public function createCart() {
+//        $user_id = $this->checkVerifyApiKey('CUSTOMER');
+//        if ($user_id) {
+//            $this->loadModel('Carts');
+//            $this->loadModel('Services');
+//            $requestArr = $this->getInputArr();
+//            // Check Cart is already Exist or not
+//            $checkArrs = $this->Carts->find('all')->where(['user_id' => $user_id, 'status' => 'PROCESS'])->hydrate(false)->first();
+//            if (empty($checkArrs)) {
+//                $checkArr = $this->Carts->find('all')->where(['user_id' => $user_id, 'status' => 'PROCESS'])->hydrate(false)->first();
+//                if (empty($checkArr)) {
+//                    $carts = $this->Carts->newEntity();
+//                    $cartArr = ['user_id' => $user_id, 'status' => 'PROCESS'];
+//                    $carts = $this->Carts->patchEntity($carts, $cartArr);
+//                    $carts->created = date("Y-m-d H:i:s");
+//                    $carts->modified = date("Y-m-d H:i:s");
+//                    $rslt = $this->Carts->save($carts);
+//                    if ($rslt->id) {
+//                        $this->success('Cart created!', ['id' => $rslt->id]);
+//                    } else {
+//                        $this->wrong(Configure::read('Settings.FAIL'));
+//                    }
+//                } else {
+//                    echo json_encode(['status' => 'fail', 'msg' => 'Cart already Exist!', 'data' => ['id' => $checkArr['id']]]);
+//                    exit;
+//                    //$this->success('Cart already Exist!', ['id' => $checkArr['id']]);
+//                }
+//            } else {
+//                echo json_encode(['status' => 'fail', 'msg' => 'Sorry, Your cart is already in process!', 'data' => ['id' => $checkArrs['id']]]);
+//                exit;
+//            }
+//        } else {
+//            $this->wrong('Invalid API key.');
+//        }
+//    }
+
     public function createCart() {
         $user_id = $this->checkVerifyApiKey('CUSTOMER');
         if ($user_id) {
             $this->loadModel('Carts');
             $this->loadModel('Services');
             $requestArr = $this->getInputArr();
+            if (isset($requestArr['service_id']) && $requestArr['service_id'] != '') {
+                $service_id = $requestArr['service_id'];
+            } else {
+                $this->wrong('Sorry, Service id is missing!');
+            }
             // Check Cart is already Exist or not
-            $checkArrs = $this->Carts->find('all')->where(['user_id' => $user_id, 'status' => 'PROCESS'])->hydrate(false)->first();
+            $checkArrs = $this->Carts->find('all')->where(['user_id' => $user_id, 'service_id !=' => $service_id, 'status' => 'PROCESS'])->hydrate(false)->first();
             if (empty($checkArrs)) {
-                $checkArr = $this->Carts->find('all')->where(['user_id' => $user_id, 'status' => 'PROCESS'])->hydrate(false)->first();
+                $checkArr = $this->Carts->find('all')->where(['user_id' => $user_id, 'service_id' => $service_id, 'status' => 'PROCESS'])->hydrate(false)->first();
                 if (empty($checkArr)) {
                     $carts = $this->Carts->newEntity();
-                    $cartArr = ['user_id' => $user_id, 'status' => 'PROCESS'];
+                    $category_id = $this->Services->getCategoryIdusingServiceId($service_id);
+                    $cartArr = ['user_id' => $user_id, 'category_id' => $category_id, 'service_id' => $service_id, 'status' => 'PROCESS'];
                     $carts = $this->Carts->patchEntity($carts, $cartArr);
                     $carts->created = date("Y-m-d H:i:s");
-                    $carts->modified = date("Y-m-d H:i:s");
                     $rslt = $this->Carts->save($carts);
                     if ($rslt->id) {
                         $this->success('Cart created!', ['id' => $rslt->id]);
@@ -754,12 +834,11 @@ class WebservicesController extends AppController {
                         $this->wrong(Configure::read('Settings.FAIL'));
                     }
                 } else {
-                    echo json_encode(['status' => 'fail', 'msg' => 'Cart already Exist!', 'data' => ['id' => $checkArr['id']]]);
-                    exit;
-                    //$this->success('Cart already Exist!', ['id' => $checkArr['id']]);
+                    $this->success('Cart already Exist!', ['id' => $checkArr['id']]);
                 }
             } else {
-                echo json_encode(['status' => 'fail', 'msg' => 'Sorry, Your cart is already in process!', 'data' => ['id' => $checkArrs['id']]]);
+                $serviceName = $this->Services->getServiceName($checkArrs['service_id']);
+                echo json_encode(['status' => 'fail', 'msg' => 'Sorry, Your cart is already in process, please cancelled it.', 'data' => ['cart_id' => $checkArrs['id'], 'service_id' => $checkArrs['service_id'], 'service_name' => $serviceName]]);
                 exit;
             }
         } else {
@@ -944,7 +1023,6 @@ class WebservicesController extends AppController {
             //pr($checkCart); exit;
             if (isset($checkCart) && !empty($checkCart)) {
                 $cartPriceDetails = $this->totalCartPrice($cartId);
-//                pr($cartPriceDetails); exit;
                 if (!empty($cartPriceDetails['services'])) {
                     $this->success("Cart Order Details Fetched!", $cartPriceDetails);
                 } else {
@@ -1027,9 +1105,8 @@ class WebservicesController extends AppController {
             $condArr = ['cart_id' => $cartID];
             $cartOrders = $this->CartOrders->find('all')->where($condArr)->hydrate(false)->toArray();
             $ordersDetails = [];
-            //pr($cartOrders); exit;
+            $category_id = '';
             foreach ($cartOrders as $order) {
-                //pr($order); exit;
                 if (isset($order['on_inspections']) && $order['on_inspections'] == 'N') {
                     if ($order['total_amount'] == 0) {
                         continue;
@@ -1037,19 +1114,18 @@ class WebservicesController extends AppController {
                 }
                 $tmp = [];
                 $tmp['cart_order_id'] = $order['id'];
-                $tmp['category_id'] = $order['category_id'];
+                $tmp['category_id'] = $category_id = $order['category_id'];
                 $tmp['category_name'] = $this->Services->getCategoryName($order['category_id']);
                 $tmp['service_id'] = $order['service_id'];
                 $tmp['service_name'] = $this->Services->getServiceName($order['service_id']);
                 $tmp['banner_img'] = $this->Services->getServiceImagePAth($order['service_id']);
-                //$tmp['banner_img'] = $this->Services->getServiceName($order['service_id']);
                 $tmpDetails = $this->CartOrderQuestions->find('all')->where(['cart_order_id' => $order['id']])->hydrate(false)->toArray();
-                //pr($tmpDetails); exit;
+                $serviceDesc = '';
                 foreach ($tmpDetails as $orderQues) {
                     $questArr = $this->getQuestionDetails($orderQues['question_id'], $orderQues['answer_id']);
-                    //pr($questArr); //exit;
                     if (isset($order['on_inspections']) && $order['on_inspections'] == 'N') {
-                        $tmp['serviceDescription'] = (isset($questArr['answer']) && $questArr['answer'] != '') ? $questArr['answer'] : '';
+                        $serviceDesc .= (isset($questArr['answer']) && $questArr['answer'] != '') ? " " . $questArr['answer'] : '';
+                        $tmp['serviceDescription'] = trim($serviceDesc);
                         $tmp['quantity'] = $orderQues['question_quantity'];
                         $tmp['total_amount'] = $order['total_amount'];
                         if ($tmp['quantity'] == 0) {
@@ -1061,17 +1137,16 @@ class WebservicesController extends AppController {
                         }
                         $tmp['on_inspection'] = 'N';
                     } else {
-                        $tmp['serviceDescription'] = (isset($questArr['answer']) && $questArr['answer'] != '') ? $questArr['answer'] : '';
+                        $serviceDesc .= (isset($questArr['answer']) && $questArr['answer'] != '') ? " " . $questArr['answer'] : '';
+                        $tmp['serviceDescription'] = trim($serviceDesc);
                         $tmp['quantity'] = $orderQues['question_quantity'];
                         $tmp['on_inspection'] = 'Y';
                         $tmp['amount'] = 0;
                         $tmp['total_amount'] = $order['total_amount'];
                     }
                 }
-
                 $ordersDetails[$order['category_id']]['category'] = $this->Services->getCategoryName($order['category_id']);
                 $ordersDetails[$order['category_id']]['services'][] = $tmp;
-                //pr($ordersDetails); exit;
             }
             $finalOrderDetails = [];
             if (!empty($ordersDetails)) {
@@ -1079,15 +1154,14 @@ class WebservicesController extends AppController {
                     $finalOrderDetails[] = $val;
                 }
             }
-
             $total['on_inspection'] = 'N';
+            $total['minimum_charges'] = 'N';
             $total['order_amount'] = 0.00;
             $total['tax'] = 0.00;
+            $total['bill_amount'] = 0.00;
             $total['total_amount'] = 0.00;
             $order_amount = 0.00;
-
             foreach ($ordersDetails as $od) {
-                //pr($od); exit;
                 foreach ($od['services'] as $val) {
                     if (isset($val['on_inspection']) && $val['on_inspection'] == 'Y') {
                         $total['on_inspection'] = 'Y';
@@ -1096,12 +1170,23 @@ class WebservicesController extends AppController {
                     $order_amount += $totAmount;
                 }
             }
+            $minimum_charges = $this->Services->getMinimumServiceCharge($category_id);
             $tax = $order_amount * GST_TAX / 100;
             $totals = $order_amount + $tax;
-            $total['order_amount'] = number_format($order_amount, 2);
-            $total['tax'] = number_format($tax, 2);
-            $total['total_amount'] = number_format($totals, 2);
-            //pr($total); exit;
+            if (isset($total['on_inspection']) && $total['on_inspection'] != 'Y') {
+                if ($totals < $minimum_charges) {
+                    $total['order_amount'] = number_format($order_amount, 2);
+                    $total['tax'] = number_format($tax, 2);
+                    $total['minimum_charges'] = 'Y';
+                    $total['bill_amount'] = number_format($totals, 2);
+                    $total['total_amount'] = number_format(150, 2);
+                } else {
+                    $total['order_amount'] = number_format($order_amount, 2);
+                    $total['tax'] = number_format($tax, 2);
+                    $total['bill_amount'] = number_format($totals, 2);
+                    $total['total_amount'] = number_format($totals, 2);
+                }
+            }
             return ['services' => $finalOrderDetails, 'total' => $total];
         } else {
             $this->wrong('Cart Id is missing!');
@@ -1300,13 +1385,14 @@ class WebservicesController extends AppController {
                 $order = $this->Orders->newEntity();
                 $orderData = [];
                 $orderData['user_id'] = $user_id;
+                $orderData['category_id'] = $cartExist['category_id'];
+                $orderData['service_id'] = $cartExist['service_id'];
                 $orderData['cart_id'] = $cart_id;
                 $orderData['order_id'] = $this->orderIdCreate();
                 $orderData['user_address'] = $requestArr['user_address'];
                 //$orderData['schedule_date'] = date('Y-m-d', strtotime($requestArr['schedule_date']));
                 $orderData['schedule_time'] = $requestArr['schedule_time'];
                 $orderData['on_inspections'] = '';
-                $orderData['is_minimum_charge'] = 'N';
                 $orderData['is_visiting_charge'] = 'N';
                 $orderData['is_coupon_applied'] = 'N';
                 $orderData['coupon_code'] = '';
@@ -1316,6 +1402,7 @@ class WebservicesController extends AppController {
                 $orderData['tax'] = 0.00;
                 $orderData['total_amount'] = 0.00;
                 $cartDetails = $this->totalCartPrice($cart_id);
+                $orderData['is_minimum_charge'] = (isset($cartDetails['minimum_charges']) && $cartDetails['minimum_charges'] != 'Y') ? $cartDetails['minimum_charges'] : 'N';
                 $orderData['on_inspections'] = (isset($cartDetails['on_inspection']) && $cartDetails['on_inspection'] != '') ? $cartDetails['on_inspection'] : 'N';
                 $orderData['amount'] = str_replace(",", "", $cartDetails['total']['order_amount']);
                 $orderData['tax'] = str_replace(",", "", $cartDetails['total']['tax']);
@@ -1328,11 +1415,11 @@ class WebservicesController extends AppController {
                 $orderData['payment_status'] = 'PENDING';
                 $orderData['cart_product'] = json_encode($cartDetails);
                 $orderData['created_by'] = $orderData['modified_by'] = $user_id;
+
                 $order = $this->Orders->patchEntity($order, $orderData);
                 $order->schedule_date = date('Y-m-d', strtotime($requestArr['schedule_date']));
                 $order->created_at = date('Y-m-d H:i:s');
                 $order->modified_at = date('Y-m-d H:i:s');
-                //pr($order); exit;
                 if ($this->Orders->save($order)) {
                     $cartArr = $this->Carts->get($cart_id);
                     $cartUpdate['status'] = 'PLACED';
@@ -1774,7 +1861,7 @@ class WebservicesController extends AppController {
                 unset($requestArr['appoinment_date']);
                 unset($requestArr['what_service_or_repair_work_usually_you_perform_at_your_place']);
                 $surveys = $this->Surveys->patchEntity($surveys, $requestArr);
-                $surveys->what_service_or_repair_work_usually_you_perform_at_your_place = implode(",",$serviceArr);
+                $surveys->what_service_or_repair_work_usually_you_perform_at_your_place = implode(",", $serviceArr);
                 $surveys->ids = $serveyArrs['ids'];
                 $surveys->survey_id = $serveyArrs['survey_id'];
                 $surveys->appoinment_date = date("Y-m-d", strtotime($appoinment_date));
@@ -2232,5 +2319,35 @@ class WebservicesController extends AppController {
             $this->wrong('Invalid API key.');
         }
     }
+    
+    public function appoinmentInterested() {
+        $user_id = $this->checkVerifyApiKey('SALES');
+        if ($user_id) {
+            $this->loadModel('Surveys');
+            $requestArr = $this->getInputArr();
+            if (isset($requestArr['survey_id']) && $requestArr['survey_id'] != '') {
+                $appoinmentDetails = $this->Surveys->get($requestArr['survey_id']);
+                if (!empty($appoinmentDetails)) {
+                    $updateValue['appoinment_status'] = 'INTERESTED';
+                    $appoinmentDetails = $this->Surveys->patchEntity($appoinmentDetails, $updateValue);
+                    $appoinmentDetails->modified = date("Y-m-d H:i:s");
+                    $appoinmentDetails->modified_by = $user_id;
+                    if ($this->Surveys->save($appoinmentDetails)) {
+                        $this->success('APPOINMENT IS INTERESTED');
+                    } else {
+                        $this->wrong(Configure::read('Settings.FAIL'));
+                    }
+                } else {
+                    $this->wrong(__('UNABLE TO FOUND THE APPOINMENT.'));
+                }
+            } else {
+                $this->wrong(__('UNABLE TO COMPLETE THE APPOINMENT.'));
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+    
+    
 
 }

@@ -1,35 +1,32 @@
 Array
-{"api_key":"ac6414b4984638ef6f4fc1bec7e02e07","address":"10, Hariprakash Appartment,\nHirawadi, Ahmedabad","user_type":"COMMERCIAL","person_name":"Chirag Manavar","company_name":"Uncode Lab","contact_number":"9016488588","email":"uncode@gmail.com","appoinment_date":"02-02-2018","appoinment_time":"18:30:00","what_service_or_repair_work_usually_you_perform_at_your_place":["Carpentry","Electrical_Repairs","Plumbing","Air_Conditioner"],"who_performs_the_service_or_repair_work_at_your_place":"Test","rating_quality_of_service":5,"rating_price_range":5,"rating_punctuality":5,"rating_cleanliness":5,"rating_professional_behavior":5,"rating_periodic_checkups":5,"rating_over_all":5,"how_often_do_you_typically_use_repair_and_service_work":"EVERY_2_3_MONTH","how_much_usually_they_charge_for_repair_and_service_work":"300_TO_400","according_to_you_who_is_Ideal_service_provider":"Test","if_we_come_up_with_the_service_provider_to_your_satisfaction_wil":"NO"}Array
+{"api_key":"ac6414b4984638ef6f4fc1bec7e02e07","address":"Ahmedabad","user_type":"RESIDENTIAL","person_name":"Samarth","contact_number":"8080803232","email":"samarth@hmen.in","appoinment_date":"03-02-2018","appoinment_time":"19:00:00","what_service_or_repair_work_usually_you_perform_at_your_place":["Carpentry","Electrical_Repairs","Plumbing"],"who_performs_the_service_or_repair_work_at_your_place":"Chirag","rating_quality_of_service":5,"rating_price_range":5,"rating_punctuality":5,"rating_cleanliness":5,"rating_professional_behavior":5,"rating_periodic_checkups":5,"rating_over_all":4,"how_often_do_you_typically_use_repair_and_service_work":"WEEKLY","how_much_usually_they_charge_for_repair_and_service_work":"400_TO_500","according_to_you_who_is_Ideal_service_provider":"Xyz","if_we_come_up_with_the_service_provider_to_your_satisfaction_wil":"YES"}Array
 Array
 (
     [api_key] => ac6414b4984638ef6f4fc1bec7e02e07
-    [address] => 10, Hariprakash Appartment,
-Hirawadi, Ahmedabad
-    [user_type] => COMMERCIAL
-    [person_name] => Chirag Manavar
-    [company_name] => Uncode Lab
-    [contact_number] => 9016488588
-    [email] => uncode@gmail.com
-    [appoinment_date] => 02-02-2018
-    [appoinment_time] => 18:30:00
+    [address] => Ahmedabad
+    [user_type] => RESIDENTIAL
+    [person_name] => Samarth
+    [contact_number] => 8080803232
+    [email] => samarth@hmen.in
+    [appoinment_date] => 03-02-2018
+    [appoinment_time] => 19:00:00
     [what_service_or_repair_work_usually_you_perform_at_your_place] => Array
         (
             [0] => Carpentry
             [1] => Electrical_Repairs
             [2] => Plumbing
-            [3] => Air_Conditioner
         )
 
-    [who_performs_the_service_or_repair_work_at_your_place] => Test
+    [who_performs_the_service_or_repair_work_at_your_place] => Chirag
     [rating_quality_of_service] => 5
     [rating_price_range] => 5
     [rating_punctuality] => 5
     [rating_cleanliness] => 5
     [rating_professional_behavior] => 5
     [rating_periodic_checkups] => 5
-    [rating_over_all] => 5
-    [how_often_do_you_typically_use_repair_and_service_work] => EVERY_2_3_MONTH
-    [how_much_usually_they_charge_for_repair_and_service_work] => 300_TO_400
-    [according_to_you_who_is_Ideal_service_provider] => Test
-    [if_we_come_up_with_the_service_provider_to_your_satisfaction_wil] => NO
+    [rating_over_all] => 4
+    [how_often_do_you_typically_use_repair_and_service_work] => WEEKLY
+    [how_much_usually_they_charge_for_repair_and_service_work] => 400_TO_500
+    [according_to_you_who_is_Ideal_service_provider] => Xyz
+    [if_we_come_up_with_the_service_provider_to_your_satisfaction_wil] => YES
 )

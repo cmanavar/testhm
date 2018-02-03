@@ -66,7 +66,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
+<!--                            <div class="form-group">
                                 <label class="col-sm-3 control-label">DESCRIPTION 1 </label>
                                 <div class="col-sm-2">
                                     <div class="custom-radio radio ">
@@ -311,7 +311,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">CATEGORY <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">

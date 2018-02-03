@@ -214,7 +214,7 @@ class OrdersController extends AppController {
             return $this->redirect(['action' => 'index']);
         }
     }
-    
+
     public function edit($id) {
         if (isset($id) && $id != '') {
             $this->loadModel('Orders');
@@ -228,7 +228,7 @@ class OrdersController extends AppController {
             $order = $this->Orders->find('all')->where(['id' => $order_id])->hydrate(false)->first();
             //pr($order); exit;
             if (!empty($order)) {
-                //pr($orderExist); exit;
+                //pr($order); exit;
                 $orderDetails = [];
                 $orderDetails['id'] = $order['id'];
                 $orderDetails['user_id'] = $order['user_id'];
@@ -265,12 +265,13 @@ class OrdersController extends AppController {
                 $condArr = ['cart_id' => $order['cart_id']];
                 $cartOrders = $this->CartOrders->find('all')->where($condArr)->hydrate(false)->toArray();
                 $ordersItems = [];
+                $serviceArr = [];
                 foreach ($cartOrders as $order) {
                     $tmp = [];
                     $tmp['cart_order_id'] = $order['id'];
                     $tmp['category_id'] = $order['category_id'];
                     $tmp['category_name'] = $this->Services->getCategoryName($order['category_id']);
-                    $tmp['service_id'] = $order['service_id'];
+                    $tmp['service_id'] = $serviceArr[] = $order['service_id'];
                     $tmp['service_name'] = $this->Services->getServiceName($order['service_id']);
                     $tmp['banner_img'] = $this->Services->getServiceImagePAth($order['service_id']);
                     $orderDetails['images'] = $this->Services->getServiceImagePAth($order['service_id']);
@@ -309,6 +310,8 @@ class OrdersController extends AppController {
                     $ordersDetails[$order['category_id']]['category'] = $this->Services->getCategoryName($order['category_id']);
                     $ordersDetails[$order['category_id']]['services'][] = $tmp;
                 }
+                $vendors = $this->getVendorsofServices($serviceArr);
+                $this->set('vendors', $vendors);
                 $finalOrderDetails = [];
                 if (!empty($ordersDetails)) {
                     foreach ($ordersDetails as $key => $val) {
@@ -317,6 +320,23 @@ class OrdersController extends AppController {
                 }
                 $orderDetails['services'] = $finalOrderDetails;
                 $this->set('orders', $orderDetails);
+                if ($this->request->is(['patch', 'post', 'put'])) {
+                    if (isset($this->request->data['order_assign']) && !empty($this->request->data['order_assign'])) {
+                        $orderAssign = $this->request->data['order_assign'];
+                        $this->loadModel('CartOrderAssigns');
+                        foreach ($orderAssign as $key => $val) {
+                            $cartOrders = $insertRecords = [];
+                            $cartOrders = $this->CartOrderAssigns->newEntity();
+                            $insertRecords['cart_order_id'] = $val['cart_order_id'];
+                            $insertRecords['order_id'] = $val['order_id'];
+                            $insertRecords['vendor_id'] = $val['vendor_id'];
+                            $cartOrders = $this->CartOrderAssigns->patchEntity($cartOrders, $insertRecords);
+                            $cartOrders->created = date('Y-m-d H:i:s');
+                            $cartOrders->created_by = $this->request->session()->read('Auth.User.id');
+                            $cartOrders = $this->CartOrderAssigns->save($cartOrders);
+                        }
+                    }
+                }
             } else {
                 $this->wrong('Sorry, Order not found!');
             }
@@ -350,6 +370,25 @@ class OrdersController extends AppController {
             return $rslt;
         } else {
             return $rslt;
+        }
+    }
+
+    public function getVendorsofServices($serviceArr) {
+        if (isset($serviceArr) && !empty($serviceArr)) {
+            $this->loadModel('VendorDetails');
+            $serviceArr = array_unique($serviceArr);
+            $vendors = [];
+            foreach ($serviceArr as $key => $val) {
+                $vendorsUsers = $this->VendorDetails->find('all')->select(['user_id', 'service_id'])->where(['service_id' => $val])->hydrate(false)->toArray();
+                if (!empty($vendorsUsers)) {
+                    foreach ($vendorsUsers as $key => $val) {
+                        $vendors[$val['service_id']][$val['user_id']] = $this->getUserName($val['user_id']);
+                    }
+                }
+            }
+            return $vendors;
+        } else {
+            return [];
         }
     }
 

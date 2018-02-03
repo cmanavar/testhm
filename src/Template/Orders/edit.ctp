@@ -23,7 +23,8 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-12 sp-list">        
+    <div class="col-lg-12 sp-list">  
+        <?php echo $this->Form->create('', ['class' => 'form-horizontal validate capitalize', 'enctype' => 'multipart/form-data']); ?>
         <div class="row" id="scroll">
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -113,7 +114,8 @@
                                             <td colspan="5"><b><?= $service['category']; ?></b></td>
                                         </tr>
                                         <?php if (isset($service['services']) && !empty($service['services'])) { ?>
-                                            <?php foreach ($service['services'] as $k => $v) { ?> 
+                                            <?php foreach ($service['services'] as $k => $v) { ?>
+                                                <?php // pr($v); //exit; ?>
                                                 <tr>
                                                     <td>
                                                         <div class="row">
@@ -125,7 +127,11 @@
                                                             <div class="col-md-8">: <?php echo $v['serviceDescription']; ?></div>
                                                         </div>
                                                     </td>
-                                                    <td class="text-right"></td>
+                                                    <td class="text-left" width='17%'>
+                                                        <input type="hidden" name="order_assign[<?= $k ?>][cart_order_id]" value="<?= $v['cart_order_id']; ?>" />
+                                                        <input type="hidden" name="order_assign[<?= $k ?>][order_id]" value="<?= $orders['order_id']; ?>" />
+                                                        <?php echo $this->Form->input('order_assign[' . $k . '][vendor_id]', ['label' => false, 'type' => 'select', 'options' => $vendors[$v['service_id']], 'empty' => 'SELECT MEMBERSHIP PLAN', 'id' => '', 'class' => ' demo-default select-category required', 'placeholder' => 'ASSIGN VENDORS']); ?>
+                                                    </td>
                                                     <td class="text-right"><?php echo $v['amount']; ?></td>
                                                     <td class="text-right"><?php echo $v['quantity']; ?></td>
                                                     <td class="text-right"><?php echo $v['total_amount']; ?></td>
@@ -163,8 +169,15 @@
                             </table>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-sm-12 pull-right text-right">
+                            <button type="submit" class="btn btn-primary">ORDER SCHEDULED</button>                                    
+                            <?php echo $this->Html->link('CANCEL', array('controller' => 'Members', 'action' => 'index'), array('class' => 'removeimage btn btn-warning', 'escape' => false)); ?>                        
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <?php echo $this->Form->end(); ?>
     </div>
 </div>

@@ -203,6 +203,8 @@ class AppController extends Controller {
         $api_key = $this->getAPIKey();
         if ($user_type == 'CUSTOMER') {
             $conditionArr = ['user_type IN' => ['CUSTOMER', 'MEMBERSHIP'], 'mapping_key' => 'api_key', 'mapping_value' => $api_key];
+        } else if ($user_type == 'SALES_VENDOR') {
+            $conditionArr = ['user_type IN' => ['SALES', 'VENDOR'], 'mapping_key' => 'api_key', 'mapping_value' => $api_key];
         } else {
             $conditionArr = ['user_type' => $user_type, 'mapping_key' => 'api_key', 'mapping_value' => $api_key];
         }
