@@ -142,7 +142,10 @@
                                     <td>If we come up with the Service Provider to your satisfaction will you listen to us?</td>
                                     <td><?= str_replace("_", " ", $servey['if_we_come_up_with_the_service_provider_to_your_satisfaction_wil']); ?></td>
                                 </tr>
-                                
+                                <tr>
+                                    <td>Appointment Status</td>
+                                    <td><?= ucfirst(strtolower($servey['appoinment_status'])) ?></td>
+                                </tr>
                             </table>
                         </div>
                     </div>

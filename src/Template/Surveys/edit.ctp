@@ -235,6 +235,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">STATUS <span class="text-danger">*</span></label>
+                                <div class="col-sm-6">
+                                    <div class="input text">
+                                        <?php echo $this->Form->input('appoinment_status', ['label' => false, 'type'=>'text', 'class' => 'form-control required normal-font', 'placeholder' => 'Status', 'maxlength' => 255, 'value' => $serveys['appoinment_status'], 'readonly' => 'readonly']); ?>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row">

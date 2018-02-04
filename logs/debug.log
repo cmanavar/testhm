@@ -9082,3 +9082,156 @@
 2018-02-03 11:15:09 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
 
 
+2018-02-03 11:19:54 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 11:21:14 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 11:22:31 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 11:22:36 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 12:14:00 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 13:13:01 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 13:13:04 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 14:37:24 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 16:01:14 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 16:30:25 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 16:30:26 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 16:31:52 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 16:33:22 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 16:33:27 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 16:36:19 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 16:36:28 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 17:06:16 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 17:07:31 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 17:12:51 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 17:12:52 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 17:13:06 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 17:13:10 Notice: Notice (8): Undefined index: bill_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 131]
+
+
+2018-02-03 17:13:51 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 17:13:56 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 17:14:05 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 17:14:07 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 17:14:41 Notice: Notice (8): Undefined index: bill_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/view.ctp, line 140]
+
+
+2018-02-03 17:15:05 Notice: Notice (8): Undefined index: bill_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/view.ctp, line 140]
+
+
+2018-02-03 17:16:42 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 17:16:48 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 17:16:59 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 17:17:03 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 17:17:27 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 17:18:22 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 17:20:13 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-03 18:29:38 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 147]
+
+
+2018-02-03 18:29:49 Notice: Notice (8): Undefined index: appointment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/view.ctp, line 147]
+
+
+2018-02-03 18:30:42 Notice: Notice (8): Undefined variable: servey in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 117]
+
+
+2018-02-03 18:30:42 Notice: Notice (8): Undefined variable: servey in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 117]
+
+
+2018-02-03 18:30:42 Notice: Notice (8): Undefined variable: servey in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 117]
+
+
+2018-02-03 18:30:42 Notice: Notice (8): Undefined variable: servey in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 117]
+
+
+2018-02-03 18:30:42 Notice: Notice (8): Undefined variable: servey in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 117]
+
+
+2018-02-03 18:30:42 Notice: Notice (8): Undefined variable: servey in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 117]
+
+
+2018-02-03 18:30:42 Notice: Notice (8): Undefined variable: servey in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 117]
+
+
+2018-02-03 18:30:42 Notice: Notice (8): Undefined variable: servey in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 117]
+
+
+2018-02-03 18:30:42 Notice: Notice (8): Undefined variable: servey in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 117]
+
+
+2018-02-03 18:30:42 Notice: Notice (8): Undefined variable: servey in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 117]
+
+
+2018-02-03 18:30:42 Notice: Notice (8): Undefined variable: servey in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 117]
+
+
+2018-02-03 18:30:42 Notice: Notice (8): Undefined variable: servey in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 117]
+
+
+2018-02-03 18:30:42 Notice: Notice (8): Undefined variable: servey in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 117]
+
+
+2018-02-03 18:30:42 Notice: Notice (8): Undefined variable: servey in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 117]
+
+

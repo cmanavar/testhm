@@ -128,18 +128,29 @@
                                             <b>Discount Applied</b>
                                         <?php } ?>
                                     </td>
-                                    <td><?php echo "- ".number_format($orders['total']['discount'], 2); ?></td>
+                                    <td><?php echo "- " . number_format($orders['total']['discount'], 2); ?></td>
                                 </tr>
                                 <tr class="text-right">
                                     <td colspan="4"><b>Wallet</b></td>
-                                    <td><?php echo "- ".number_format($orders['total']['wallet_amount'], 2); ?></td>
+                                    <td><?php echo "- " . number_format($orders['total']['wallet_amount'], 2); ?></td>
                                 </tr>
-                                <tr class="text-right">
-                                    <td colspan="4"><b>Order Total</b></td>
-                                    <td><?php echo $orders['total']['total_amount']; //echo number_format($orders['total']['total_amount'], 2); ?></td>
-                                </tr>
-                                <?php if (isset($orders['is_coupon_applied']) && $orders['is_coupon_applied'] == 'Y') { ?>
+                                <?php if (isset($orders['is_minimum_charge']) && $orders['is_minimum_charge'] == 'Y') { ?>
+                                    <tr class="text-right">
+                                        <td colspan="4"><b>Bill Amount</b></td>
+                                        <td><?php echo number_format($orders['total']['bill_amount'], 2); ?></td>
+                                    </tr>
                                 <?php } ?>
+                                <tr class="text-right">
+                                    <td colspan="4">
+                                        <b>Order Total</b>
+                                        <?php if (isset($orders['is_minimum_charge']) && $orders['is_minimum_charge'] == 'Y') { ?>
+                                            (Minimum Charges Applied)
+                                        <?php } ?>
+                                    </td>
+                                    <td><?php echo number_format($orders['total']['total_amount'], 2); ?></td>
+                                </tr>
+                                <?php //if (isset($orders['is_coupon_applied']) && $orders['is_coupon_applied'] == 'Y') { ?>
+                                <?php //} ?>
                             </table>
                         </div>
                     </div>

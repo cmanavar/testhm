@@ -50,7 +50,7 @@
                         </div>
                         <div class="col-md-2">
                             <div class="custom-radio radio-parallel radio ">
-                                <?php echo $this->Form->radio('area_type', [['value' => 'RESIDENTIAL', 'text' => 'RESIDENTIAL'], ['value' => 'COMMERCIAL', 'text' => 'COMMERCIAL']], ['value' => 'Y']); ?>
+                                <?php echo $this->Form->radio('area_type', [['value' => 'RESIDENTIAL', 'text' => 'RESIDENTIAL'], ['value' => 'COMMERCIAL', 'text' => 'COMMERCIAL']], ['value' => $filters['area_type']]); ?>
                             </div>
                         </div>
                         <div class="col-md-2">
@@ -79,11 +79,9 @@
                                     <tr>
                                         <th width="2%">Sr.no</th>
                                         <th>Survey Id</th> 
-                                        <th>Name</th> 
-                                        <th>Area Type</th> 
-                                        <th>Email id</th>
-                                        <th>Phone no</th>
-                                        <th>Appoinment Date</th>
+                                        <th>Contact Details</th>
+                                        <th>Appointment Date</th>
+                                        <th>Appointment Status</th>
                                         <th>Survey by</th>
                                         <th>Survey Time</th>
                                         <th width="10%">Actions</th>
@@ -97,11 +95,26 @@
                                             <tr>
                                                 <td><?php echo $key + 1; ?></td>
                                                 <td><?php echo stripslashes($val['survey_id']) ?></td>
-                                                <td><?php echo stripslashes($val['person_name']) ?></td>
-                                                <td><?php echo stripslashes($val['user_type']) ?></td>
-                                                <td><?php echo stripslashes($val['email']) ?></td>
-                                                <td><?php echo $val['contact_number']; ?></td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-md-4">Name</div>
+                                                        <div class="col-md-8">: <?php echo stripslashes($val['person_name']) ?></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">Email</div>
+                                                        <div class="col-md-8">: <?php echo stripslashes($val['email']) ?></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">Phone No</div>
+                                                        <div class="col-md-8">: <?php echo stripslashes($val['contact_number']) ?></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">Area Type</div>
+                                                        <div class="col-md-8">: <?php echo stripslashes($val['user_type']) ?></div>
+                                                    </div>
+                                                </td>
                                                 <td><?php echo $val['appoinment_date']->format('d-m-Y') . " " . $val['appoinment_time']; ?></td>
+                                                <td><?= ucfirst(strtolower($val['appoinment_status'])) ?></td>
                                                 <td><?php echo $val['survey_by']; ?></td>
                                                 <td><?php echo $val['created']->format('d-m-Y h:i'); ?></td>
                                                 <td>
@@ -113,7 +126,7 @@
                                             <?php
                                         }
                                     } else {
-                                        echo '<tr><td colspan="10" style="text-align:center;"><b>No Records found </b></td></tr>';
+                                        echo '<tr><td colspan="8" style="text-align:center;"><b>No Records found </b></td></tr>';
                                     }
                                     ?>
                                 </tbody>

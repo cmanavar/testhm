@@ -1402,8 +1402,9 @@ class WebservicesController extends AppController {
                 $orderData['tax'] = 0.00;
                 $orderData['total_amount'] = 0.00;
                 $cartDetails = $this->totalCartPrice($cart_id);
-                $orderData['is_minimum_charge'] = (isset($cartDetails['minimum_charges']) && $cartDetails['minimum_charges'] != 'Y') ? $cartDetails['minimum_charges'] : 'N';
-                $orderData['on_inspections'] = (isset($cartDetails['on_inspection']) && $cartDetails['on_inspection'] != '') ? $cartDetails['on_inspection'] : 'N';
+                //pr($cartDetails['total']); exit;
+                $orderData['is_minimum_charge'] = (isset($cartDetails['total']['minimum_charges']) && $cartDetails['total']['minimum_charges'] != 'N') ? $cartDetails['total']['minimum_charges'] : 'N';
+                $orderData['on_inspections'] = (isset($cartDetails['total']['on_inspection']) && $cartDetails['total']['on_inspection'] != '') ? $cartDetails['total']['on_inspection'] : 'N';
                 $orderData['amount'] = str_replace(",", "", $cartDetails['total']['order_amount']);
                 $orderData['tax'] = str_replace(",", "", $cartDetails['total']['tax']);
                 $orderData['total_amount'] = str_replace(",", "", $cartDetails['total']['total_amount']);
@@ -1415,7 +1416,7 @@ class WebservicesController extends AppController {
                 $orderData['payment_status'] = 'PENDING';
                 $orderData['cart_product'] = json_encode($cartDetails);
                 $orderData['created_by'] = $orderData['modified_by'] = $user_id;
-
+                // pr($orderData); exit;
                 $order = $this->Orders->patchEntity($order, $orderData);
                 $order->schedule_date = date('Y-m-d', strtotime($requestArr['schedule_date']));
                 $order->created_at = date('Y-m-d H:i:s');
@@ -1857,14 +1858,17 @@ class WebservicesController extends AppController {
             if (!empty($serveyArrs)) {
                 $surveys = $this->Surveys->newEntity();
                 $appoinment_date = $requestArr['appoinment_date'];
+                $appoinment_time = $requestArr['appoinment_time'];
                 $serviceArr = $requestArr['what_service_or_repair_work_usually_you_perform_at_your_place'];
                 unset($requestArr['appoinment_date']);
+                unset($requestArr['appoinment_time']);
                 unset($requestArr['what_service_or_repair_work_usually_you_perform_at_your_place']);
                 $surveys = $this->Surveys->patchEntity($surveys, $requestArr);
                 $surveys->what_service_or_repair_work_usually_you_perform_at_your_place = implode(",", $serviceArr);
                 $surveys->ids = $serveyArrs['ids'];
                 $surveys->survey_id = $serveyArrs['survey_id'];
                 $surveys->appoinment_date = date("Y-m-d", strtotime($appoinment_date));
+                $surveys->appoinment_time = date("H:i:s", strtotime($appoinment_time));
                 $surveys->created_by = $user_id;
                 $surveys->created = date("Y-m-d H:i:s");
                 $rslt = $this->Surveys->save($surveys);
@@ -2221,7 +2225,7 @@ class WebservicesController extends AppController {
         $user_id = $this->checkVerifyApiKey('SALES');
         if ($user_id) {
             $this->loadModel('Surveys');
-            $appoinmentLists = $this->Surveys->find('all')->select(['id', 'person_name', 'appoinment_date', 'appoinment_time', 'appoinment_status'])->where(['created_by' => $user_id, 'appoinment_status' => 'PENDING', "DATE_FORMAT(created,'%Y-%m-%d') <=" => date('Y-m-d')])->hydrate(false)->toArray();
+            $appoinmentLists = $this->Surveys->find('all')->select(['id', 'person_name', 'appoinment_date', 'appoinment_time', 'appoinment_status'])->where(['created_by' => $user_id, 'appoinment_status' => 'PENDING', "DATE_FORMAT(appoinment_date,'%Y-%m-%d') <=" => date('Y-m-d')])->hydrate(false)->toArray();
             if (!empty($appoinmentLists)) {
                 $appoinments = [];
                 foreach ($appoinmentLists as $key => $val) {
@@ -2229,7 +2233,7 @@ class WebservicesController extends AppController {
                     $tmp['id'] = $val['id'];
                     $tmp['name'] = $val['person_name'];
                     $tmp['status'] = $val['appoinment_status'];
-                    $tmp['time'] = $val['appoinment_date']->format('Y-m-d') . " " . $val['appoinment_time'];
+                    $tmp['time'] = $val['appoinment_date']->format('d-m-Y') . " " . date('h:i A',  strtotime($val['appoinment_time']));
                     $appoinments[] = $tmp;
                 }
                 $this->success('Appoinmnet List!', $appoinments);
@@ -2249,7 +2253,7 @@ class WebservicesController extends AppController {
             if (isset($requestArr['survey_id']) && $requestArr['survey_id'] != '') {
                 $appoinmentDetails = $this->Surveys->find('all')->select(['id', 'person_name', 'address', 'contact_number', 'appoinment_date', 'appoinment_time', 'appoinment_status'])->where(['id' => $requestArr['survey_id']])->hydrate(false)->first();
                 if (is_array($appoinmentDetails) && !empty($appoinmentDetails)) {
-                    $appoinmentDetails['time'] = $appoinmentDetails['appoinment_date']->format('d-m-Y') . " " . $appoinmentDetails['appoinment_time'];
+                    $appoinmentDetails['time'] = $appoinmentDetails['appoinment_date']->format('d-m-Y') . " " . date('h:i A',  strtotime($appoinmentDetails['appoinment_time']));
                     unset($appoinmentDetails['appoinment_date']);
                     unset($appoinmentDetails['appoinment_time']);
                     $this->success('Survey Data Found!', $appoinmentDetails);

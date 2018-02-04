@@ -18829,3 +18829,96 @@ Stack Trace:
 
 2018-02-02 19:14:22 Error: [BadMethodCallException] Unknown method "getMinimumServiceCharge"
 Request URL: /hmen/webservices/cart/detail
+2018-02-03 12:33:21 Error: Fatal Error (1): Call to undefined method App\Controller\OrdersController::getServiceNameName() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 242]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-03 12:33:21 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\OrdersController::getServiceNameName()
+Request URL: /hmen/orders/edit/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 242)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-03 15:27:30 Warning: Warning (2): implode(): Invalid arguments passed in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1864]
+
+
+2018-02-03 15:27:30 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'what_service_or_repair_work_usually_you_perform_at_your_place' cannot be null
+Request URL: /hmen/webservices/survey/add
+2018-02-03 15:27:58 Warning: Warning (2): implode(): Invalid arguments passed in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1864]
+
+
+2018-02-03 15:27:58 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'what_service_or_repair_work_usually_you_perform_at_your_place' cannot be null
+Request URL: /hmen/webservices/survey/add
+2018-02-03 17:36:08 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-02-03 17:36:08 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-02-03 17:36:08 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-02-03 17:36:09 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-02-03 17:36:32 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-02-03 17:36:32 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-02-03 17:36:32 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-02-03 17:36:34 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-02-03 17:39:22 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+

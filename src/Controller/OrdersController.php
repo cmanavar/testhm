@@ -61,10 +61,10 @@ class OrdersController extends AppController {
             $tmp['username'] = $this->getUserName($order['user_id']);
             $tmp['useremail'] = $this->getEmail($order['user_id']);
             $tmp['userphone'] = $this->getPhone($order['user_id']);
-            //$tmp['category_id'] = $order['category_id'];
-            //$tmp['category_name'] = $this->getCategoryName($order['category_id']);
-            //$tmp['service_id'] = $order['service_id'];
-            $tmp['service_name'] = $this->getServicesNameUsingCartId($order['cart_id']);
+            $tmp['category_id'] = $order['category_id'];
+            $tmp['category_name'] = $this->getCategoryName($order['category_id']);
+            $tmp['service_id'] = $order['service_id'];
+            $tmp['service_name'] = $this->getServiceName($order['service_id']);
             $tmp['order_id'] = $order['order_id'];
             $tmp['user_address'] = $order['service_id'];
             $tmp['created_at'] = $order['created_at']->format('d-M-Y h:i A');
@@ -76,7 +76,8 @@ class OrdersController extends AppController {
             $tmp['status'] = $order['status'];
             $rslt[] = $tmp;
         }
-        //pr($rslt); exit;
+//        pr($rslt);
+//        exit;
         $this->set('orders', $rslt);
     }
 
@@ -115,7 +116,7 @@ class OrdersController extends AppController {
             $this->loadModel('Coupons');
             $order_id = $id;
             $order = $this->Orders->find('all')->where(['id' => $order_id])->hydrate(false)->first();
-            //pr($order); exit;
+//            pr($order); exit;
             if (!empty($order)) {
                 //pr($orderExist); exit;
                 $orderDetails = [];
@@ -144,13 +145,15 @@ class OrdersController extends AppController {
                 $orderDetails['payment_status'] = $order['payment_status'];
                 $orderDetails['images'] = '';
                 $orderDetails['services'] = [];
-                $orderDetails['total'] = [
-                    'amount' => number_format($order['amount'], 2),
-                    'tax' => number_format($order['tax'], 2),
-                    'discount' => (is_string($order['discount'])) ? $order['discount'] : number_format($order['discount'], 2),
-                    'wallet_amount' => number_format($order['wallet_amount'], 2),
-                    'total_amount' => number_format($order['total_amount'], 2)
-                ];
+                $orderDetails['total']['amount'] = number_format($order['amount'], 2);
+                $orderDetails['total']['tax'] = number_format($order['tax'], 2);
+                $orderDetails['total']['discount'] = (is_string($order['discount'])) ? $order['discount'] : number_format($order['discount'], 2);
+                $orderDetails['total']['wallet_amount'] = number_format($order['wallet_amount'], 2);
+                if (isset($orderDetails['is_minimum_charge']) && $orderDetails['is_minimum_charge'] == 'Y') {
+                    $sum = $order['amount'] + $order['tax'];
+                    $orderDetails['total']['bill_amount'] = number_format($sum, 2);
+                }
+                $orderDetails['total']['total_amount'] = number_format($order['total_amount'], 2);
                 $condArr = ['cart_id' => $order['cart_id']];
                 $cartOrders = $this->CartOrders->find('all')->where($condArr)->hydrate(false)->toArray();
                 $ordersItems = [];
@@ -207,7 +210,8 @@ class OrdersController extends AppController {
                 $orderDetails['services'] = $finalOrderDetails;
                 $this->set('orders', $orderDetails);
             } else {
-                $this->wrong('Sorry, Order not found!');
+                $this->Flash->error('Sorry, Order not found!');
+                return $this->redirect(['action' => 'index']);
             }
         } else {
             $this->Flash->error('Unable to found order data!');
@@ -237,6 +241,8 @@ class OrdersController extends AppController {
                 $orderDetails['useremail'] = $this->getEmail($order['user_id']);
                 $orderDetails['userphone'] = $this->getPhone($order['user_id']);
                 $orderDetails['user_address'] = $order['user_address'];
+                $orderDetails['category_name'] = $this->getCategoryName($order['category_id']);
+                $orderDetails['service_name'] = $this->getServiceName($order['service_id']);
                 $orderDetails['created_at'] = $order['created_at']->format('d-M-Y h:i A');
                 $orderDetails['schedule_date'] = $order['schedule_date']->format('d-M-Y');
                 $orderDetails['schedule_time'] = $order['schedule_time'];
@@ -255,13 +261,15 @@ class OrdersController extends AppController {
                 $orderDetails['payment_status'] = $order['payment_status'];
                 $orderDetails['images'] = '';
                 $orderDetails['services'] = [];
-                $orderDetails['total'] = [
-                    'amount' => number_format($order['amount'], 2),
-                    'tax' => number_format($order['tax'], 2),
-                    'discount' => (is_string($order['discount'])) ? $order['discount'] : number_format($order['discount'], 2),
-                    'wallet_amount' => number_format($order['wallet_amount'], 2),
-                    'total_amount' => number_format($order['total_amount'], 2)
-                ];
+                $orderDetails['total']['amount'] = number_format($order['amount'], 2);
+                $orderDetails['total']['tax'] = number_format($order['tax'], 2);
+                $orderDetails['total']['discount'] = (is_string($order['discount'])) ? $order['discount'] : number_format($order['discount'], 2);
+                $orderDetails['total']['wallet_amount'] = number_format($order['wallet_amount'], 2);
+                if (isset($orderDetails['is_minimum_charge']) && $orderDetails['is_minimum_charge'] == 'Y') {
+                    $sum = $order['amount'] + $order['tax'];
+                    $orderDetails['total']['bill_amount'] = number_format($sum, 2);
+                }
+                $orderDetails['total']['total_amount'] = number_format($order['total_amount'], 2);
                 $condArr = ['cart_id' => $order['cart_id']];
                 $cartOrders = $this->CartOrders->find('all')->where($condArr)->hydrate(false)->toArray();
                 $ordersItems = [];
@@ -275,19 +283,20 @@ class OrdersController extends AppController {
                     $tmp['service_name'] = $this->Services->getServiceName($order['service_id']);
                     $tmp['banner_img'] = $this->Services->getServiceImagePAth($order['service_id']);
                     $orderDetails['images'] = $this->Services->getServiceImagePAth($order['service_id']);
-                    //$tmp['banner_img'] = $this->Services->getServiceName($order['service_id']);
                     $tmpDetails = $this->CartOrderQuestions->find('all')->where(['cart_order_id' => $order['id']])->hydrate(false)->toArray();
+                    $serviceDesc = '';
                     foreach ($tmpDetails as $orderQues) {
                         $questArr = $this->getQuestionDetails($orderQues['question_id'], $orderQues['answer_id']);
-                        //pr($questArr); exit;
                         if (isset($order['on_inspections']) && $order['on_inspections'] == 'N') {
                             if ($questArr['parent_question'] != '' && $questArr['parent_answer'] != '') {
                                 $answerTitle = $this->ServiceQuestionAnswers->find('all')->where(['id' => $questArr['parent_answer']])->hydrate(false)->first();
-                                $tmp['serviceDescription'] = $answerTitle['label'];
+                                $serviceDesc .= (isset($questArr['answer']) && $questArr['answer'] != '') ? " " . $questArr['answer'] : '';
+                                $tmp['serviceDescription'] = trim($serviceDesc);
                                 $tmp['quantity'] = $orderQues['question_quantity'];
                                 $tmp['total_amount'] = $order['total_amount'];
                             } else {
-                                $tmp['serviceDescription'] = $questArr['answer'];
+                                $serviceDesc .= (isset($questArr['answer']) && $questArr['answer'] != '') ? " " . $questArr['answer'] : '';
+                                $tmp['serviceDescription'] = trim($serviceDesc);
                                 $tmp['quantity'] = $orderQues['question_quantity'];
                             }
                             if ($tmp['quantity'] == 0) {
@@ -299,7 +308,8 @@ class OrdersController extends AppController {
                             }
                             $tmp['on_inspection'] = 'N';
                         } else {
-                            $tmp['serviceDescription'] = $questArr['answer'];
+                            $serviceDesc .= (isset($questArr['answer']) && $questArr['answer'] != '') ? " " . $questArr['answer'] : '';
+                            $tmp['serviceDescription'] = trim($serviceDesc);
                             $tmp['quantity'] = $orderQues['question_quantity'];
                             $tmp['on_inspection'] = 'Y';
                             $tmp['amount'] = 0;
@@ -338,7 +348,8 @@ class OrdersController extends AppController {
                     }
                 }
             } else {
-                $this->wrong('Sorry, Order not found!');
+                $this->Flash->error('Sorry, Order not found!');
+                return $this->redirect(['action' => 'index']);
             }
         } else {
             $this->Flash->error('Unable to found order data!');
