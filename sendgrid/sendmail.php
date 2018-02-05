@@ -16,16 +16,16 @@ if ($result) {
 }
 
 function sendemail($msg, $to, $ccEmail, $name = null, $subject = null) {
-    $username = base64_decode('dW5jb2Rl');
-    $password = base64_decode('VW4kJCQzMzM=');
+    $username = base64_decode('aG1lbg==');
+    $password = base64_decode('aE0kJCQzMzM=');
     require 'vendor/autoload.php';
     require 'lib/SendGrid.php';
     $sendgrid = new SendGrid($username, $password, array("turn_off_ssl_verification" => true));
     $email = new SendGrid\Email();
     $email->addTo($to)->
             addCc($ccEmail)->
-            setFrom('uncodelab@gmail.com')->
-            setFromName($name)->
+            setFrom('donotreply@hmen.in')->
+            setFromName('H-MEN')->
             setSubject($subject)->
             setHtml($msg)->
             addHeader('X-Sent-Using', 'SendGrid-API')->

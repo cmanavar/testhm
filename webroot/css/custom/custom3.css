@@ -141,7 +141,7 @@ body {
 
 .doctor-table #dataTables-responsive-doctor_wrapper .pull-left{margin-bottom: 10px;}
 .selectize-dropdown-content .option{text-transform: uppercase;}
-.page-header{border-color: #555; color: #555; }
+.page-header{border-color: #ffffff; color: #ffffff; }
 .dataTables_wrapper label, .dataTables_info, .pagination li a{text-transform: uppercase;}
 .multiselect-selected-text{text-transform: uppercase;}
 .reminder .list-group-item{ text-transform: uppercase;}
@@ -154,7 +154,7 @@ body {
 .dropdown-menu.navbar-nav > li a:hover {color:#2E3C54 !Important;}
 .dropdown.yamm-fw.active > a:hover{color:#2E3C54 !important;}
 .dropdown.yamm-fw.active > a{color:#FFF !Important;}
-/*.navbar.navbar-default.yamm{background: #2E3C54;}
+.navbar.navbar-default.yamm{background: #2E3C54;}
 .navbar.navbar-default.yamm ul li a:hover, .navbar.navbar-default.yamm ul li.active > a:hover{background: #eee;color: #2E3C54;}
 .navbar.navbar-default.yamm ul li a, .navbar.navbar-default.yamm a{color:#FFF; font-family: Karla; font-style: normal; font-weight: 300;}
 .navbar.navbar-default.yamm ul li a, .navbar.navbar-default.yamm  {color:#FFF; font-family: Karla; font-style: normal; font-weight: 300;}
@@ -163,7 +163,7 @@ body {
 .navbar.navbar-default.yamm ul li.active > a {background: #3d6da9;}
 .navbar.navbar-default.yamm ul li.active ul li.active a:hover{color:#FFF;}
 .navbar.navbar-default.yamm ul li.active ul li.active a{background: #2E3C54;}
-.navbar.navbar-default.yamm ul li.active ul li.active a:hover{color: #FFF!important;}*/
+.navbar.navbar-default.yamm ul li.active ul li.active a:hover{color: #FFF!important;}
 .col-sm-1.inside-menu {width:160px !important;}
 .navbar ul li a{padding-left: 8px; padding-right: 9px;}
 .navbar-header img{margin:5px 29px;}
@@ -187,8 +187,8 @@ input.error, textarea.error {border: 1px solid red;}
 .heading {background-color: #5CB85C;}
 .rightsection {padding-left: 67px;}
 .authuser {color: white;padding-right: 16px;}
-.active {background-color: #e7e7e7; color:#555;}
-/*.navbar-default {background-color: #428BCA;}*/
+.active {background-color: #3d6da9;}
+.navbar-default {background-color: #428BCA;}
 .navbar-grey  {background-color: #2E3C54;}
 a {color: #FFF ;}
 .datatable123{color: black; text-decoration: none;}
@@ -223,8 +223,8 @@ body .login-window .loginbox .lgarea{background: rgba(255, 255, 255, 0.4) none r
 #page-wrapper{padding-top:0px;}
 .custom-email{text-transform: lowercase;}
 /*sachin End*/
-body , #page-wrapper {background: #F8F8F8; }
-/*body , #page-wrapper {background: rgba(0, 0, 0, 0) url("../../img/clinicsoftwarebg.png") repeat scroll 0 0; border-left:none;}*/
+
+body , #page-wrapper {background: rgba(0, 0, 0, 0) url("../../img/clinicsoftwarebg.png") repeat scroll 0 0; border-left:none;}
 /*#container .background_1{background: rgba(0, 0, 0, 0) url("../../img/background-1.png")repeat scroll 0 0 !important; }
 #container .background_2{background: rgba(0, 0, 0, 0) url("../../img/background-2.png")repeat scroll 0 0 !important; }
 #container .background_3{background: rgba(0, 0, 0, 0) url("../../img/background-3.png")repeat scroll 0 0 !important; }
@@ -1052,7 +1052,7 @@ tr.rxplandetailstatus {
 input.email {
     text-transform : lowercase;
 }
-
+    
 input[type=radio], input[type=checkbox] {
     margin: 2px 0 0;
 }
@@ -1092,34 +1092,8 @@ input[type=radio], input[type=checkbox] {
 }
 /*.family-headings {
     top: 27px;
-}.navbar-logout
+}
 
 .family-label {
     padding-bottom: 5px;
 }*/
-.navbar-logout{
-    height: 30px !important;
-}
-
-.navbar-top-links a, .navbar-top-links ul li a {
-    color: #777;
-}
-
-#delete .modal-header {
-    background-color: #b92c28;
-    
-}
-
-#logOut .modal-header {
-    background-color: #245580;
-    
-}
-
-.modal-header h4{
-    color: #FFF  !important;
-}
-
-.close {
-    color: #FFF !important;
-    opacity: 1 !important;
-}
