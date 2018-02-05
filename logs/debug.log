@@ -9235,3 +9235,354 @@
 2018-02-03 18:30:42 Notice: Notice (8): Undefined variable: servey in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Surveys/index.ctp, line 117]
 
 
+2018-02-05 11:16:35 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Users/addappuser.ctp, line 38]
+
+
+2018-02-05 11:16:52 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Users/addappuser.ctp, line 38]
+
+
+2018-02-05 11:16:55 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Users/addappuser.ctp, line 38]
+
+
+2018-02-05 11:18:00 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Users/addappuser.ctp, line 38]
+
+
+2018-02-05 11:40:21 Notice: Notice (8): Undefined variable: requestArr in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php, line 284]
+
+
+2018-02-05 11:40:21 Notice: Notice (8): Undefined variable: name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php, line 288]
+
+
+2018-02-05 11:40:21 Notice: Notice (8): Undefined variable: phone_no in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php, line 288]
+
+
+2018-02-05 11:40:32 Notice: Notice (8): Undefined variable: requestArr in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php, line 284]
+
+
+2018-02-05 11:40:32 Notice: Notice (8): Undefined variable: name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php, line 288]
+
+
+2018-02-05 11:40:32 Notice: Notice (8): Undefined variable: phone_no in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php, line 288]
+
+
+2018-02-05 11:42:32 Notice: Notice (8): Undefined variable: requestArr in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php, line 286]
+
+
+2018-02-05 11:49:44 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-05 11:51:18 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-05 11:52:45 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-05 11:52:48 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-05 11:53:05 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-05 11:55:26 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-05 11:55:27 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-05 11:55:35 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-05 11:55:39 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-05 11:56:37 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-05 11:56:39 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-05 11:56:46 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-05 11:56:48 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-05 11:57:30 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-05 12:00:48 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-05 12:11:40 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Users/adduser.ctp, line 49]
+
+
+2018-02-05 12:11:56 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Users/addappuser.ctp, line 38]
+
+
+2018-02-05 12:12:00 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Users/addappuser.ctp, line 38]
+
+
+2018-02-05 12:13:21 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Users/addappuser.ctp, line 38]
+
+
+2018-02-05 12:21:27 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-05 12:21:28 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-05 12:35:58 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-05 12:48:04 Notice: Notice (8): Undefined variable: objWorksheet in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyperformancereport.ctp, line 175]
+
+
+2018-02-05 14:09:34 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-05 14:19:51 Notice: Notice (8): Use of undefined constant EOL - assumed 'EOL' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/samplechart.ctp, line 188]
+
+
+2018-02-05 14:47:07 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 39]
+
+
+2018-02-05 14:47:07 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:47:20 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:47:46 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:47:46 Notice: Notice (8): Undefined index: survey_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 99]
+
+
+2018-02-05 14:47:46 Notice: Notice (8): Undefined index: person_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 100]
+
+
+2018-02-05 14:47:46 Notice: Notice (8): Undefined index: user_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 101]
+
+
+2018-02-05 14:47:46 Notice: Notice (8): Undefined index: contact_number in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 103]
+
+
+2018-02-05 14:47:46 Notice: Notice (8): Undefined index: appoinment_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 104]
+
+
+2018-02-05 14:48:05 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:48:05 Notice: Notice (8): Undefined index: survey_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 99]
+
+
+2018-02-05 14:48:05 Notice: Notice (8): Undefined index: person_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 100]
+
+
+2018-02-05 14:48:05 Notice: Notice (8): Undefined index: user_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 101]
+
+
+2018-02-05 14:48:05 Notice: Notice (8): Undefined index: contact_number in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 103]
+
+
+2018-02-05 14:48:05 Notice: Notice (8): Undefined index: survey_by in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 105]
+
+
+2018-02-05 14:48:05 Notice: Notice (8): Undefined index: created in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 106]
+
+
+2018-02-05 14:48:13 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:48:13 Notice: Notice (8): Undefined index: survey_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 99]
+
+
+2018-02-05 14:48:13 Notice: Notice (8): Undefined index: person_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 100]
+
+
+2018-02-05 14:48:13 Notice: Notice (8): Undefined index: user_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 101]
+
+
+2018-02-05 14:48:13 Notice: Notice (8): Undefined index: contact_number in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 103]
+
+
+2018-02-05 14:48:14 Notice: Notice (8): Undefined index: survey_by in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 105]
+
+
+2018-02-05 14:48:52 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:48:52 Notice: Notice (8): Undefined index: survey_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 99]
+
+
+2018-02-05 14:48:52 Notice: Notice (8): Undefined index: person_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 100]
+
+
+2018-02-05 14:48:52 Notice: Notice (8): Undefined index: user_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 101]
+
+
+2018-02-05 14:48:52 Notice: Notice (8): Undefined index: contact_number in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 103]
+
+
+2018-02-05 14:48:52 Notice: Notice (8): Undefined index: survey_by in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 105]
+
+
+2018-02-05 14:49:13 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:49:13 Notice: Notice (8): Undefined index: membership_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 99]
+
+
+2018-02-05 14:49:13 Notice: Notice (8): Undefined index: person_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 100]
+
+
+2018-02-05 14:49:13 Notice: Notice (8): Undefined index: user_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 101]
+
+
+2018-02-05 14:49:13 Notice: Notice (8): Undefined index: contact_number in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 103]
+
+
+2018-02-05 14:49:13 Notice: Notice (8): Undefined index: survey_by in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 105]
+
+
+2018-02-05 14:49:23 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:49:54 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:50:07 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:50:07 Notice: Notice (8): Undefined index: person_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 101]
+
+
+2018-02-05 14:50:07 Notice: Notice (8): Undefined index: user_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 102]
+
+
+2018-02-05 14:50:07 Notice: Notice (8): Undefined index: contact_number in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 104]
+
+
+2018-02-05 14:50:07 Notice: Notice (8): Undefined index: survey_by in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 106]
+
+
+2018-02-05 14:50:15 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:50:15 Notice: Notice (8): Undefined index: user_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 102]
+
+
+2018-02-05 14:50:15 Notice: Notice (8): Undefined index: contact_number in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 104]
+
+
+2018-02-05 14:50:15 Notice: Notice (8): Undefined index: survey_by in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 106]
+
+
+2018-02-05 14:50:35 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:50:35 Notice: Notice (8): Undefined index: user_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 101]
+
+
+2018-02-05 14:50:35 Notice: Notice (8): Undefined index: contact_number in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 103]
+
+
+2018-02-05 14:50:35 Notice: Notice (8): Undefined index: survey_by in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 105]
+
+
+2018-02-05 14:50:42 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:50:42 Notice: Notice (8): Undefined index: contact_number in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 103]
+
+
+2018-02-05 14:50:42 Notice: Notice (8): Undefined index: survey_by in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 105]
+
+
+2018-02-05 14:50:50 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:50:50 Notice: Notice (8): Undefined index: phone_number in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 102]
+
+
+2018-02-05 14:50:50 Notice: Notice (8): Undefined index: contact_number in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 103]
+
+
+2018-02-05 14:50:50 Notice: Notice (8): Undefined index: survey_by in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 105]
+
+
+2018-02-05 14:51:01 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:51:01 Notice: Notice (8): Undefined index: contact_number in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 103]
+
+
+2018-02-05 14:51:01 Notice: Notice (8): Undefined index: survey_by in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 105]
+
+
+2018-02-05 14:51:12 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:51:12 Notice: Notice (8): Undefined index: survey_by in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 105]
+
+
+2018-02-05 14:51:23 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:51:48 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:52:01 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:52:25 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 14:52:30 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 15:03:11 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 15:03:17 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 41]
+
+
+2018-02-05 15:47:00 Notice: Notice (8): Undefined variable: usersTable in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/ReportsController.php, line 251]
+
+
+2018-02-05 15:47:20 Notice: Notice (8): Undefined variable: usersTable in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/ReportsController.php, line 251]
+
+
+2018-02-05 15:47:33 Notice: Notice (8): Undefined variable: usersTable in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/ReportsController.php, line 252]
+
+
+2018-02-05 15:48:05 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportmembershipreports.ctp, line 119]
+
+
+2018-02-05 15:48:05 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportmembershipreports.ctp, line 121]
+
+
+2018-02-05 15:53:10 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportmembershipreports.ctp, line 119]
+
+
+2018-02-05 15:53:10 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportmembershipreports.ctp, line 121]
+
+
+2018-02-05 15:53:30 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportmembershipreports.ctp, line 119]
+
+
+2018-02-05 15:53:30 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportmembershipreports.ctp, line 121]
+
+
+2018-02-05 15:53:30 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportmembershipreports.ctp, line 119]
+
+
+2018-02-05 15:53:30 Notice: Notice (8): Undefined variable: val in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportmembershipreports.ctp, line 121]
+
+
+2018-02-05 15:55:25 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-05 16:18:51 Notice: Notice (8): Undefined variable: salesUser in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesperformancereports.ctp, line 97]
+
+

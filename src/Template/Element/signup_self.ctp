@@ -35,14 +35,14 @@
                                                                     <tr>
                                                                         <td style="box-sizing:border-box;padding:0;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-size:16px;vertical-align:top" valign="top">
                                                                             <h2 style="margin:0;margin-bottom:30px;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-weight:300;line-height:1.5;font-size:24px;color:#294661!important">You're on your way!<br>
-                                                                                    Let's confirm your email address.</h2>
-                                                                            <p style="margin:0;margin-bottom:30px;color:#294661;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-size:16px;font-weight:300">By clicking on the following link, you are confirming your email address and agreeing to <span>H-MEN</span>'s <a href="<?= WEBSITE_TOC_PATH ?>" style="box-sizing:border-box;color:#348eda;font-weight:400;text-decoration:none" target="_blank">Terms of Use</a>.</p>
+                                                                                    Let's check your credentials.</h2>
+                                                                            <p style="margin:0;margin-bottom:30px;color:#294661;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-size:16px;font-weight:300">You are confirm your credentials and agreeing to <span>H-MEN</span>'s <a href="<?= WEBSITE_TOC_PATH ?>" style="box-sizing:border-box;color:#348eda;font-weight:400;text-decoration:none" target="_blank">Terms of Use</a>.</p>
                                                                             <p style="margin:0;margin-bottom:30px;color:#294661;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-size:16px;font-weight:300">Your Account credentials is here:</p>
                                                                             <p style="margin:0;margin-bottom:30px;color:#294661;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-size:16px;font-weight:300"><b>Email:</b> <span><?= $mailData['email']; ?></span></p>
                                                                             <p style="margin:0;margin-bottom:30px;color:#294661;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-size:16px;font-weight:300"><b>Password:</b> <span><?= $mailData['password']; ?></span></p>
                                                                         </td>
                                                                     </tr>
-                                                                    <tr>
+<!--                                                                    <tr>
                                                                         <td style="box-sizing:border-box;padding:0;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-size:16px;vertical-align:top" valign="top">
                                                                             <table cellpadding="0" cellspacing="0" style="box-sizing:border-box;border-spacing:0;width:100%;border-collapse:separate!important" width="100%">
                                                                                 <tbody>
@@ -60,7 +60,7 @@
                                                                                 </tbody>
                                                                             </table>
                                                                         </td>
-                                                                    </tr>
+                                                                    </tr>-->
                                                                 </tbody>
                                                             </table>
                                                         </td>

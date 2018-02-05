@@ -151,7 +151,7 @@ class UsersController extends AppController {
     }
 
     public function appuser() {
-        $user_type = 'app';
+        $user_type = 'customer';
         $users = $this->Users->getuserlisting($user_type)->toArray(); //LISTING USERDATA
         $this->set('user_type', $user_type);
         $this->set('users', $users);
@@ -252,6 +252,164 @@ class UsersController extends AppController {
             $this->Flash->error('THIS USER CAN NOT DELETE!');
         }
         return $this->redirect(['action' => 'index']);
+    }
+
+    //***********************************************************************************************//
+    // * Function     :  addappusers
+    // * Parameter    :  $id
+    // * Description  :  This function used to  make excel of list Users
+    // * Author       :  Chirag Manavar
+    // * Date         :  24-October-2017
+    //***********************************************************************************************//
+
+    public function addappuser() {
+        $user = $this->Users->newEntity();
+        if ($this->request->is('post')) {
+            //pr($this->request->data); exit;
+            $validator = new UsersValidator();
+            $errors = $validator->errors($this->request->data());
+            //pr($errors); exit;
+            if (empty($errors)) {
+                $username = $this->Users->getuservalidation($this->request->data); // USER VALIDATION BY EMAIL
+                if (empty($username)) {
+                    $user = $this->Users->patchEntity($user, $this->request->data);
+                    $name = $this->request->data['name'];
+                    $phone_no = $this->request->data['phone_no'];
+                    $email = $this->request->data['email'];
+                    $password = $this->randomPassword();
+                    $user->password = $password;
+                    $user->signup_with = 'SELF';
+                    $user->user_type = 'CUSTOMER';
+                    $user->profile_pic = '';
+                    $user->ip_address = $this->get_client_ip();
+                    $user->email_newsletters = 'N';
+                    $user->device = '';
+                    $user->phone_verified = 'Y';
+                    $user->email_verified = 'Y';
+                    $user->active = 'Y';
+                    $user->refer_key = $this->getReferKey($name, $phone_no);
+                    $user->referral_id = 0;
+                    $user->created_by = $this->request->session()->read('Auth.User.id');
+                    $user->modified_by = 0;
+                    $user->created = date("Y-m-d H:i:s");
+                    $user->modified = date("Y-m-d H:i:s");
+                    $mailData = [];
+                    $mailData['name'] = $name;
+                    $senderEmail = str_replace("@", "<span>@</span>", $email);
+                    $senderEmail = str_replace(".", "<span>.</span>", $email);
+                    $mailData['email'] = $senderEmail;
+                    $mailData['password'] = $password;
+                    $this->set('mailData', $mailData);
+                    $view_output = $this->render('/Element/signup_self');
+                    $fields = array(
+                        'msg' => $view_output,
+                        'tomail' => $email,
+                        'subject' => 'Welcome To H-Men! Confirm Your Email',
+                        'from_name' => EMAIL_FROM_NAME,
+                        'from_mail' => EMAIL_FROM_EMAIL_ADDRESS,
+                    );
+                    $this->sendemails($fields);
+                    $saveUsers = $this->Users->save($user);
+                    if ($saveUsers) {
+                        //generate api key
+                        $api_key = $this->Users->generateAPIkey();
+                        $mappingData = [];
+                        $this->loadModel('UserMapping');
+                        $userMapping = $this->UserMapping->newEntity();
+                        $map_data = array(
+                            'user_id' => $saveUsers['id'],
+                            'user_type' => 'CUSTOMER',
+                            'mapping_key' => 'api_key',
+                            'mapping_value' => $api_key
+                        );
+                        $userMapping = $this->UserMapping->patchEntity($userMapping, $map_data);
+                        $userMapping->created = date("Y-m-d H:i:s");
+                        $userMapping->modified = date("Y-m-d H:i:s");
+                        if ($this->UserMapping->save($userMapping)) {
+                            $this->Flash->success('APP USER CREATED SUCCESSFULLY!');
+                        } else {
+                            $this->Flash->error('UNABLE TO ADD THE USER MAPPING.');
+                        }
+                    };
+                } else {
+                    $this->Flash->error('EMAIL ID IS ALREAY EXIST. PLEASE, TRY AGAIN LATER!');
+                }
+            } else {
+                $this->set('errors', $errors);
+            }
+        }
+        $this->set('user', $user);
+    }
+
+    //***********************************************************************************************//
+    // * Function     :  changeapppassword
+    // * Parameter    :  $id
+    // * Description  :  This function used to  make excel of list Users
+    // * Author       :  Chirag Manavar
+    // * Date         :  24-October-2017
+    //***********************************************************************************************//
+
+    public function changeapppassword($id = NULL) {
+        $query = $this->Users->getuservalidationID($id); //LISTING USERDATA
+        if ($query->isEmpty()) {
+            $this->Flash->error(__('RECORD DOES NOT EXIST'));
+            return $this->redirect(['action' => 'index']);
+        }
+        $users = $this->Users->getuserId($id); //LISTING USERDATA
+        if ($this->request->is('post')) {
+            $users = $this->Users->patchEntity($users, $this->request->data);
+            $users->modified = date("Y-m-d H:i:s");
+            $users->modified_by = $this->request->session()->read('Auth.User.id');
+            if ($this->Users->save($users)) {
+                $this->Flash->success(__('PASSWORD CHANGED SUCCESSFULLY'));
+                return $this->redirect(['action' => 'appuser']);
+            } else {
+                $this->Flash->error(Configure::read('Settings.FAIL'));
+            }
+        }
+        $username = $this->Users->getuserlisting()->toArray(); //LISTING USERDATA
+        $this->set('users', $username);
+    }
+
+    //***********************************************************************************************//
+    // * Function     :  addappusers
+    // * Parameter    :  $id
+    // * Description  :  This function used to  make excel of list Users
+    // * Author       :  Chirag Manavar
+    // * Date         :  24-October-2017
+    //***********************************************************************************************//
+
+    public function editappuser($id) {
+        //CHECK IF THE RECORD EXISTS OR NOT 
+        $query = $this->Users->getuservalidationID($id); //LISTING USERDATA
+        //pr($query); exit;
+        if ($query->isEmpty()) {
+            $this->Flash->error(__('RECORD DOES NOT EXIST'));
+            return $this->redirect(['action' => 'index']);
+        }
+        $user = $this->Users->getuserId($id); //LISTING USERDATA
+        //pr($user); exit;
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $validator = new UsersValidator();
+            $errors = $validator->errors($this->request->data());
+            if (empty($errors)) {
+                $user = $this->Users->patchEntity($user, $this->request->data());
+                $user->modified_by = $this->request->session()->read('Auth.User.id');
+                $user->modified = date("Y-m-d H:i:s");
+                if ($this->Users->save($user)) {
+                    $this->Flash->success(Configure::read('Settings.SAVE'));
+                    return $this->redirect(['action' => 'appuser', '#' => 'scroll']);
+                } else {
+                    $this->Flash->error(Configure::read('Settings.FAIL'));
+                }
+            } else {
+                $this->set('errors', $errors);
+            }
+        }
+        $user = $this->Users->getuserId($id); //LISTING USERDATA
+        $this->set('user', $user);
+        $username = $this->Users->getuserlisting()->toArray(); //LISTING USERDATA
+        $this->set('users', $username);
     }
 
     //***********************************************************************************************//

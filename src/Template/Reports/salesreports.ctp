@@ -14,7 +14,7 @@
 
 <div id="page-wrapper">
     <div class="row">
-        <input type="hidden" class="excelurl" value="<?php echo $this->Url->build(["controller" => "Reports", "action" => "exportsalesperformancereport"]); ?>">
+        <input type="hidden" class="excelurl" value="<?php echo $this->Url->build(["controller" => "Reports", "action" => "exportsalesperformancereports"]); ?>">
         <div class="col-md-12">
             <h1 class="page-header">
                 <i class="fa fa-book fa-fw"></i>SALES PERFORMANCE REPORTS
@@ -32,7 +32,7 @@
         <div class="row" id="scroll">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    LIST SALES PERFORMANCE
+                    LIST SURVEY PERFORMANCE
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
@@ -51,8 +51,8 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                    if (!empty($salesUser)) {
-                                        foreach ($salesUser as $key => $val):
+                                    if (!empty($memberData)) {
+                                        foreach ($memberData as $key => $val):
                                             ?>
                                             <tr class="odd gradeX">
                                                 <td class="text-center"><?php echo $key + 1; ?></td>

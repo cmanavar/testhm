@@ -18922,3 +18922,533 @@ Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
 2018-02-03 17:39:22 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
 
 
+2018-02-04 11:30:33 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::addappuser() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'addappuser',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/users/addappuser
+2018-02-04 11:31:32 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::addappuser() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'addappuser',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/users/addappuser
+2018-02-05 12:01:44 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-02-05 12:01:44 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-02-05 12:01:45 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-02-05 12:09:21 Error: [Cake\View\Exception\MissingTemplateException] Template file "Users/changeapppassword.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/changeapppassword.ctp',
+)
+Request URL: /hmen/users/changeapppassword/27
+2018-02-05 12:25:19 Error: [Cake\Controller\Exception\MissingActionException] Action ReportsController::surveyperformance() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'ReportsController',
+  'action' => 'surveyperformance',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/reports/surveyperformance
+2018-02-05 12:30:25 Error: [Cake\View\Exception\MissingTemplateException] Template file "Reports/surveyperformance.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Reports/surveyperformance.ctp',
+)
+Request URL: /hmen/reports/surveyperformance
+2018-02-05 12:30:44 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-05 12:31:49 Error: [Cake\View\Exception\MissingTemplateException] Template file "Reports/exportsurveyperformancereport.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Reports/exportsurveyperformancereport.ctp',
+)
+Request URL: /hmen/reports/exportsurveyperformancereport/
+2018-02-05 12:32:14 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-05 12:48:04 Error: Fatal Error (1): Call to a member function fromArray() on null in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsurveyperformancereport.ctp, line 175]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-05 12:48:04 Error: [Cake\Error\FatalErrorException] Call to a member function fromArray() on null
+Request URL: /hmen/reports/exportsurveyperformancereport/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 175)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-05 12:49:01 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-05 12:49:32 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-05 14:19:51 Warning: Warning (2): unlink(/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/samplechart.ctp) [<a href='http://php.net/function.unlink'>function.unlink</a>]: Permission denied in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel2007.php, line 229]
+
+
+2018-02-05 14:19:51 Warning: Warning (2): ZipArchive::close() [<a href='http://php.net/ziparchive.close'>ziparchive.close</a>]: Failure to create temporary file: Permission denied in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel2007.php, line 388]
+
+
+2018-02-05 14:19:51 Error: [PHPExcel_Writer_Exception] Could not close zip file /Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/samplechart.ctp.
+Request URL: /hmen/reports/samplechart
+2018-02-05 14:20:00 Error: [Cake\View\Exception\MissingTemplateException] Template file "Reports/sample_chart.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Reports/sample_chart.ctp',
+)
+Request URL: /hmen/reports/sampleChart
+2018-02-05 14:21:14 Error: [Cake\View\Exception\MissingTemplateException] Template file "Reports/sample_chart.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Reports/sample_chart.ctp',
+)
+Request URL: /hmen/reports/sampleChart
+2018-02-05 14:21:30 Error: [Cake\View\Exception\MissingTemplateException] Template file "Reports/sample_chart.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Reports/sample_chart.ctp',
+)
+Request URL: /hmen/reports/sampleChart
+2018-02-05 14:31:58 Error: [Cake\View\Exception\MissingTemplateException] Template file "Reports/sample_chart.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Reports/sample_chart.ctp',
+)
+Request URL: /hmen/reports/sampleChart
+2018-02-05 14:38:24 Error: [Cake\Controller\Exception\MissingActionException] Action ReportsController::memberships() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'ReportsController',
+  'action' => 'memberships',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/reports/memberships
+2018-02-05 14:39:44 Error: [Cake\View\Exception\MissingTemplateException] Template file "Reports/memberships.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Reports/memberships.ctp',
+)
+Request URL: /hmen/reports/memberships
+2018-02-05 14:40:02 Error: [Cake\View\Exception\MissingTemplateException] Template file "Reports/memberships.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Reports/memberships.ctp',
+)
+Request URL: /hmen/reports/memberships
+2018-02-05 14:40:54 Error: Fatal Error (1): Call to a member function getMembers() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/ReportsController.php, line 181]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-05 14:40:54 Error: [Cake\Error\FatalErrorException] Call to a member function getMembers() on boolean
+Request URL: /hmen/reports/memberships
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 181)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-05 14:41:46 Error: Fatal Error (1): Call to undefined method App\Controller\ReportsController::getPlanName() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/ReportsController.php, line 193]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-05 14:41:46 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\ReportsController::getPlanName()
+Request URL: /hmen/reports/memberships
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 193)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-05 14:46:14 Error: [Cake\View\Exception\MissingTemplateException] Template file "Reports/memberships.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Reports/memberships.ctp',
+)
+Request URL: /hmen/reports/memberships
+2018-02-05 14:47:46 Error: Fatal Error (1): Call to a member function format() on null in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 104]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-05 14:47:46 Error: [Cake\Error\FatalErrorException] Call to a member function format() on null
+Request URL: /hmen/reports/memberships
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 104)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-05 14:48:05 Error: Fatal Error (1): Call to a member function format() on null in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp, line 106]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-05 14:48:05 Error: [Cake\Error\FatalErrorException] Call to a member function format() on null
+Request URL: /hmen/reports/memberships
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 106)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-05 15:04:31 Error: Fatal Error (1): Call to undefined method App\Controller\ReportsController::getPlans() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/ReportsController.php, line 181]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-05 15:04:31 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\ReportsController::getPlans()
+Request URL: /hmen/reports/memberships
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 181)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-05 15:17:40 Error: Fatal Error (1): Call to a member function newEntity() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/ReportsController.php, line 183]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-05 15:17:40 Error: [Cake\Error\FatalErrorException] Call to a member function newEntity() on boolean
+Request URL: /hmen/reports/memberships
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 183)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-05 15:18:24 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-02-05 15:18:24 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-02-05 15:18:24 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-02-05 15:18:25 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-02-05 15:27:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-02-05 15:27:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-02-05 15:27:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-02-05 15:27:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-02-05 15:27:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-02-05 15:27:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-02-05 15:27:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-02-05 15:27:20 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-02-05 15:28:37 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-02-05 15:28:37 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-02-05 15:28:37 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-02-05 15:34:49 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-02-05 15:38:10 Error: [Cake\Controller\Exception\MissingActionException] Action ReportsController::exportmembershipreports() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'ReportsController',
+  'action' => 'exportmembershipreports',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/reports/exportmembershipreports/
+2018-02-05 15:47:00 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/ReportsController.php, line 251]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-05 15:47:00 Error: [Cake\Error\FatalErrorException] Call to a member function find() on null
+Request URL: /hmen/reports/exportmembershipreports/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 251)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-05 15:47:20 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/ReportsController.php, line 251]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-05 15:47:20 Error: [Cake\Error\FatalErrorException] Call to a member function find() on null
+Request URL: /hmen/reports/exportmembershipreports/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 251)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-05 15:47:33 Error: Fatal Error (1): Call to a member function find() on null in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/ReportsController.php, line 252]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-05 15:47:33 Error: [Cake\Error\FatalErrorException] Call to a member function find() on null
+Request URL: /hmen/reports/exportmembershipreports/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 252)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-05 15:48:05 Error: Fatal Error (1): Call to a member function format() on null in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportmembershipreports.ctp, line 121]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-05 15:48:05 Error: [Cake\Error\FatalErrorException] Call to a member function format() on null
+Request URL: /hmen/reports/exportmembershipreports/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 121)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-05 15:53:10 Error: Fatal Error (1): Call to a member function format() on null in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportmembershipreports.ctp, line 121]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-05 15:53:10 Error: [Cake\Error\FatalErrorException] Call to a member function format() on null
+Request URL: /hmen/reports/exportmembershipreports/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 121)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-05 15:53:30 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-05 15:53:58 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-05 15:54:46 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-05 16:08:32 Error: [Cake\Controller\Exception\MissingActionException] Action ReportsController::salesreports() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'ReportsController',
+  'action' => 'salesreports',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/reports/salesreports
+2018-02-05 16:09:06 Error: [Cake\Controller\Exception\MissingActionException] Action ReportsController::salesreports() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'ReportsController',
+  'action' => 'salesreports',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/reports/salesreports
+2018-02-05 16:09:52 Error: [Cake\Controller\Exception\MissingActionException] Action ReportsController::salesreports() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'ReportsController',
+  'action' => 'salesreports',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/reports/salesreports
+2018-02-05 16:09:57 Error: [Cake\Controller\Exception\MissingActionException] Action ReportsController::salesreports() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'ReportsController',
+  'action' => 'salesreports',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/reports/salesreports
+2018-02-05 16:11:26 Error: Fatal Error (1): Call to undefined method App\Controller\ReportsController::getMemberPerformanceReports() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/ReportsController.php, line 271]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-05 16:11:26 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\ReportsController::getMemberPerformanceReports()
+Request URL: /hmen/reports/salesreports
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 271)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-05 16:13:13 Error: [Cake\View\Exception\MissingTemplateException] Template file "Reports/salesreports.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Reports/salesreports.ctp',
+)
+Request URL: /hmen/reports/salesreports
+2018-02-05 16:18:30 Error: [Cake\View\Exception\MissingTemplateException] Template file "Reports/exportsalesperformancereports.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Reports/exportsalesperformancereports.ctp',
+)
+Request URL: /hmen/reports/exportsalesperformancereports/
+2018-02-05 16:18:51 Warning: Warning (2): Invalid argument supplied for foreach() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/exportsalesperformancereports.ctp, line 97]
+
+
+2018-02-05 16:18:51 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-05 16:19:14 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+

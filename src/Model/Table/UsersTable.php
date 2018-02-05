@@ -56,6 +56,8 @@ class UsersTable extends Table {
             $user = $userTable->find('all')->where(['OR' => [['user_type IN' => ['ADMIN', 'OPERATION_MANAGER', 'TELLY_CALLER']]]])->order(['id' => 'DESC']);
         } elseif ($user_type == 'app') {
             $user = $userTable->find('all')->where(['user_type IN' => ['CUSTOMER', 'MEMBERSHIP']])->order(['id' => 'DESC']);
+        } elseif ($user_type == 'customer') {
+            $user = $userTable->find('all')->where(['user_type IN' => ['CUSTOMER']])->order(['id' => 'DESC']);
         } elseif ($user_type == 'vendors') {
             $user = $userTable->find('all')->where(['user_type IN' => ['VENDORS', 'SALES']])->order(['id' => 'DESC']);
         } else {

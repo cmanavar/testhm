@@ -57,74 +57,75 @@ $objPHPExcel->getProperties()->setCreator("H-MEN")
 // Add some data
 
 $objPHPExcel->setActiveSheetIndex(0);
-$objPHPExcel->getActiveSheet()->mergeCells('A6:E6');
-$objPHPExcel->getActiveSheet()->getStyle('A6:E6')->applyFromArray(array('borders' => array('allborders' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
-$objPHPExcel->getActiveSheet()->setCellValue('A6', 'SALES PERFORMANCE REPORT');
+$objPHPExcel->getActiveSheet()->mergeCells('A6:H6');
+$objPHPExcel->getActiveSheet()->getStyle('A6:H6')->applyFromArray(array('borders' => array('allborders' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
+$objPHPExcel->getActiveSheet()->setCellValue('A6', 'SURVEY REPORT');
 $objPHPExcel->getActiveSheet()->getStyle('A6')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 $objPHPExcel->getActiveSheet()->getStyle('A6')->applyFromArray(array('font' => array('bold' => true, 'size' => 16)));
-$objPHPExcel->getActiveSheet()->getStyle('A6:E6')->applyFromArray(array('borders' => array('allborders' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
-$objPHPExcel->getActiveSheet()->getStyle('A7:E7')->applyFromArray(array('borders' => array('allborders' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
+$objPHPExcel->getActiveSheet()->getStyle('A6:H6')->applyFromArray(array('borders' => array('allborders' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
+$objPHPExcel->getActiveSheet()->getStyle('A7:H7')->applyFromArray(array('borders' => array('allborders' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
 
 $objPHPExcel->getActiveSheet()->setCellValue('A7', 'NO');
 $objPHPExcel->getActiveSheet()->getStyle('A7')->applyFromArray(array('font' => array('bold' => true)));
-$objPHPExcel->getActiveSheet()->setCellValue('B7', 'NAME');
+$objPHPExcel->getActiveSheet()->setCellValue('B7', 'Membership Id');
 $objPHPExcel->getActiveSheet()->getStyle('B7')->applyFromArray(array('font' => array('bold' => true)));
-$objPHPExcel->getActiveSheet()->setCellValue('C7', 'DAILY');
+$objPHPExcel->getActiveSheet()->setCellValue('C7', 'Name');
 $objPHPExcel->getActiveSheet()->getStyle('C7')->applyFromArray(array('font' => array('bold' => true)));
-$objPHPExcel->getActiveSheet()->setCellValue('D7', 'WEEKLY');
+$objPHPExcel->getActiveSheet()->setCellValue('D7', 'Email id');
 $objPHPExcel->getActiveSheet()->getStyle('D7')->applyFromArray(array('font' => array('bold' => true)));
-$objPHPExcel->getActiveSheet()->setCellValue('E7', 'MONTHLY');
+$objPHPExcel->getActiveSheet()->setCellValue('E7', 'Phone no');
 $objPHPExcel->getActiveSheet()->getStyle('E7')->applyFromArray(array('font' => array('bold' => true)));
+$objPHPExcel->getActiveSheet()->setCellValue('F7', 'Plan');
+$objPHPExcel->getActiveSheet()->getStyle('F7')->applyFromArray(array('font' => array('bold' => true)));
+$objPHPExcel->getActiveSheet()->setCellValue('G7', 'Sales by');
+$objPHPExcel->getActiveSheet()->getStyle('G7')->applyFromArray(array('font' => array('bold' => true)));
+$objPHPExcel->getActiveSheet()->setCellValue('H7', 'Sales Time');
+$objPHPExcel->getActiveSheet()->getStyle('H7')->applyFromArray(array('font' => array('bold' => true)));
 //
 //
-$objPHPExcel->getActiveSheet()->getStyle('A8:E7')->getAlignment()->setWrapText(true);
-$objPHPExcel->getActiveSheet()->getStyle('A8:E7')->applyFromArray(array('font' => array('bold' => true, 'size' => 11)));
-$objPHPExcel->getActiveSheet()->getStyle('A8:E7')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-$objPHPExcel->getActiveSheet()->getStyle('A8:E7')->getAlignment()->setVertical(PHPExcel_Style_Alignment::VERTICAL_CENTER);
+$objPHPExcel->getActiveSheet()->getStyle('A8:H7')->getAlignment()->setWrapText(true);
+$objPHPExcel->getActiveSheet()->getStyle('A8:H7')->applyFromArray(array('font' => array('bold' => true, 'size' => 11)));
+$objPHPExcel->getActiveSheet()->getStyle('A8:H7')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+$objPHPExcel->getActiveSheet()->getStyle('A8:H7')->getAlignment()->setVertical(PHPExcel_Style_Alignment::VERTICAL_CENTER);
 //
 $objPHPExcel->getActiveSheet()->getColumnDimension('A')->setWidth(10);
-$objPHPExcel->getActiveSheet()->getColumnDimension('B')->setWidth(50);
+$objPHPExcel->getActiveSheet()->getColumnDimension('B')->setWidth(20);
 $objPHPExcel->getActiveSheet()->getColumnDimension('C')->setWidth(20);
 $objPHPExcel->getActiveSheet()->getColumnDimension('D')->setWidth(20);
 $objPHPExcel->getActiveSheet()->getColumnDimension('E')->setWidth(20);
+$objPHPExcel->getActiveSheet()->getColumnDimension('F')->setWidth(20);
+$objPHPExcel->getActiveSheet()->getColumnDimension('G')->setWidth(20);
+$objPHPExcel->getActiveSheet()->getColumnDimension('H')->setWidth(20);
 
-$objPHPExcel->getActiveSheet()->getStyle('A8:E8')->applyFromArray(array('borders' => array('allborders' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
+$objPHPExcel->getActiveSheet()->getStyle('A8:H8')->applyFromArray(array('borders' => array('allborders' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
 $j = 1;
 $row = 8;
-$totDaily = 0;
-$totWeekly = 0;
-$totMonthly = 0;
-foreach ($salesUser as $key => $data) { //pr($data);exit;   
+foreach ($members as $key => $data) {
+//    pr($data);
+//    exit;
     $i = 0;
-    $totDaily = $totDaily + $data['daily'];
-    $totWeekly = $totWeekly + $data['weekly'];
-    $totMonthly = $totMonthly + $data['monthly'];
     $objPHPExcel->getActiveSheet()->setCellValue('A' . $row, $key + 1);
     $objPHPExcel->getActiveSheet()->getStyle('A' . $row)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-    $objPHPExcel->getActiveSheet()->setCellValue('B' . $row, $data['name']);
+    $objPHPExcel->getActiveSheet()->setCellValue('B' . $row, $data['membership_id']);
     $objPHPExcel->getActiveSheet()->getStyle('B' . $row)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-    $objPHPExcel->getActiveSheet()->setCellValue('C' . $row, $data['daily']);
+    $objPHPExcel->getActiveSheet()->setCellValue('C' . $row, $data['name']);
     $objPHPExcel->getActiveSheet()->getStyle('C' . $row)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-    $objPHPExcel->getActiveSheet()->setCellValue('D' . $row, $data['weekly']);
+    $objPHPExcel->getActiveSheet()->setCellValue('D' . $row, $data['email']);
     $objPHPExcel->getActiveSheet()->getStyle('D' . $row)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-    $objPHPExcel->getActiveSheet()->setCellValue('E' . $row, $data['monthly']);
+    $objPHPExcel->getActiveSheet()->setCellValue('E' . $row, $data['phone_no']);
     $objPHPExcel->getActiveSheet()->getStyle('E' . $row)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+    $objPHPExcel->getActiveSheet()->setCellValue('F' . $row, ucfirst(strtolower($data['plan_name'])));
+    $objPHPExcel->getActiveSheet()->getStyle('F' . $row)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+    $objPHPExcel->getActiveSheet()->setCellValue('G' . $row, $data['sales_by']);
+    $objPHPExcel->getActiveSheet()->getStyle('G' . $row)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+    $objPHPExcel->getActiveSheet()->setCellValue('H' . $row, $data['created']);
+    $objPHPExcel->getActiveSheet()->getStyle('H' . $row)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 
-    $objPHPExcel->getActiveSheet()->getStyle('A' . $row . ':E' . $row)->applyFromArray(array('borders' => array('allborders' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
+    $objPHPExcel->getActiveSheet()->getStyle('A' . $row . ':H' . $row)->applyFromArray(array('borders' => array('allborders' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
     $j++;
     $row++;
 }
-$objPHPExcel->getActiveSheet()->mergeCells('A' . $row . ':B' . $row);
-$objPHPExcel->getActiveSheet()->setCellValue('A' . $row, 'TOTAL');
-$objPHPExcel->getActiveSheet()->getStyle('A' . $row . ':B' . $row)->getAlignment()->setWrapText(true);
-$objPHPExcel->getActiveSheet()->getStyle('A' . $row)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
-$objPHPExcel->getActiveSheet()->setCellValue('C' . $row, $totDaily);
-$objPHPExcel->getActiveSheet()->getStyle('C' . $row)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-$objPHPExcel->getActiveSheet()->setCellValue('D' . $row, $totWeekly);
-$objPHPExcel->getActiveSheet()->getStyle('D' . $row)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-$objPHPExcel->getActiveSheet()->setCellValue('E' . $row, $totMonthly);
-$objPHPExcel->getActiveSheet()->getStyle('E' . $row)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-$objPHPExcel->getActiveSheet()->getStyle('A' . $row . ':E' . $row)->applyFromArray(array('borders' => array('allborders' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
+
 
 $objDrawing = new PHPExcel_Worksheet_MemoryDrawing();
 $objDrawing->setName('H-MEN');
@@ -133,9 +134,9 @@ $objDrawing->setDescription('H-MEN Services');
 $objDrawing->setWorksheet($objPHPExcel->getActiveSheet());
 
 //set Address
-$objPHPExcel->getActiveSheet()->mergeCells('A1:E1');
+$objPHPExcel->getActiveSheet()->mergeCells('A1:H1');
 $objPHPExcel->getActiveSheet()->setCellValue('A1', COMPANY_NAME_EXCEL);
-$objPHPExcel->getActiveSheet()->getStyle('A1:E1')->getAlignment()->setWrapText(true);
+$objPHPExcel->getActiveSheet()->getStyle('A1:H1')->getAlignment()->setWrapText(true);
 $objPHPExcel->getActiveSheet()->getStyle('A1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
 $objPHPExcel->getActiveSheet()->getStyle('A1')->applyFromArray(array('font' => array('bold' => true, 'size' => 12, 'color' => array('rgb' => 'FFFFFF'))));
 $objPHPExcel->getActiveSheet()->getStyle('A1')->applyFromArray(
@@ -146,26 +147,26 @@ $objPHPExcel->getActiveSheet()->getStyle('A1')->applyFromArray(
             )
         )
 );
-$objPHPExcel->getActiveSheet()->getStyle('A1:E1')->applyFromArray(array('borders' => array('allborders' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
-$objPHPExcel->getActiveSheet()->mergeCells('A2:E2');
+$objPHPExcel->getActiveSheet()->getStyle('A1:H1')->applyFromArray(array('borders' => array('allborders' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
+$objPHPExcel->getActiveSheet()->mergeCells('A2:H2');
 $objPHPExcel->getActiveSheet()->setCellValue('A2', ADDRESS_1_EXCEL);
 $objPHPExcel->getActiveSheet()->getStyle('A2')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
 $objPHPExcel->getActiveSheet()->getStyle('A2')->applyFromArray(array('font' => array('size' => 10)));
-$objPHPExcel->getActiveSheet()->getStyle('A1:E2')->applyFromArray(array('borders' => array('right' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
-$objPHPExcel->getActiveSheet()->getStyle('A1:E2')->applyFromArray(array('borders' => array('left' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
-$objPHPExcel->getActiveSheet()->mergeCells('A3:E3');
+$objPHPExcel->getActiveSheet()->getStyle('A1:H2')->applyFromArray(array('borders' => array('right' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
+$objPHPExcel->getActiveSheet()->getStyle('A1:H2')->applyFromArray(array('borders' => array('left' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
+$objPHPExcel->getActiveSheet()->mergeCells('A3:H3');
 $objPHPExcel->getActiveSheet()->setCellValue('A3', ADDRESS_2_EXCEL);
 $objPHPExcel->getActiveSheet()->getStyle('A3')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
 $objPHPExcel->getActiveSheet()->getStyle('A3')->applyFromArray(array('font' => array('size' => 9)));
-$objPHPExcel->getActiveSheet()->getStyle('A3:E3')->applyFromArray(array('borders' => array('right' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
-$objPHPExcel->getActiveSheet()->getStyle('A3:E3')->applyFromArray(array('borders' => array('left' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
-$objPHPExcel->getActiveSheet()->mergeCells('A4:E4');
+$objPHPExcel->getActiveSheet()->getStyle('A3:H3')->applyFromArray(array('borders' => array('right' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
+$objPHPExcel->getActiveSheet()->getStyle('A3:H3')->applyFromArray(array('borders' => array('left' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
+$objPHPExcel->getActiveSheet()->mergeCells('A4:H4');
 $objPHPExcel->getActiveSheet()->setCellValue('A4', 'MOBILE: ' . MOBILE_PHONE_EXCEL);
 $objPHPExcel->getActiveSheet()->getStyle('A4')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
 $objPHPExcel->getActiveSheet()->getStyle('A4')->applyFromArray(array('font' => array('size' => 9)));
-$objPHPExcel->getActiveSheet()->getStyle('A4:E4')->applyFromArray(array('borders' => array('right' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
-$objPHPExcel->getActiveSheet()->getStyle('A4:E4')->applyFromArray(array('borders' => array('left' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
-$objPHPExcel->getActiveSheet()->getStyle('A4:E4')->applyFromArray(array('borders' => array('bottom' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
+$objPHPExcel->getActiveSheet()->getStyle('A4:H4')->applyFromArray(array('borders' => array('right' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
+$objPHPExcel->getActiveSheet()->getStyle('A4:H4')->applyFromArray(array('borders' => array('left' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
+$objPHPExcel->getActiveSheet()->getStyle('A4:H4')->applyFromArray(array('borders' => array('bottom' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));
 
 //pr($row);exit;
 //$objPHPExcel->getActiveSheet()->getStyle('H'.$row.':I'.$row)->applyFromArray(array('borders' => array('allborders' => array('style' => PHPExcel_Style_Border::BORDER_THIN,),)));

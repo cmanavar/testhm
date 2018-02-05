@@ -29,8 +29,8 @@
     </div>
 
     <div class="row">
-        <div class="col-md-4">
-            <a href="<?php echo $this->Url->build(["controller" => "Reports", "action" => "salesperformance"]); ?>" >
+        <div class="col-md-3">
+            <a href="<?php echo $this->Url->build(["controller" => "Reports", "action" => "surveyperformance"]); ?>" >
                 <div class="panel panel-green">
                     <div class="panel-heading">
                         <div class="row">
@@ -39,14 +39,14 @@
                             </div>
                             <div class="col-md-9 ">
                                 <div class="huge"> 
-                                    <h2 class="patient "><i>Sales Performance </i></h2>
+                                    <h3 class="patient "><i>Survey </i></h3>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <a href="<?php echo $this->Url->build(["controller" => "Reports", "action" => "salesperformance"]); ?>">
+                    <a href="<?php echo $this->Url->build(["controller" => "Reports", "action" => "surveyperformance"]); ?>">
                         <div class="panel-footer">
-                            <span class="pull-left"><b class="">View Sales Performance Report</b> </span>
+                            <span class="pull-left"><b class="">View Survey Performance Report</b> </span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>
@@ -54,7 +54,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <a href="<?php echo $this->Url->build(["controller" => "Reports", "action" => "surveys"]); ?>" >
                 <div class="panel panel-green">
                     <div class="panel-heading">
@@ -64,7 +64,7 @@
                             </div>
                             <div class="col-md-9 ">
                                 <div class="huge"> 
-                                    <h2 class="patient "><i>Survey Reports </i></h2>
+                                    <h3 class="patient "><i>Survey </i></h3>
                                 </div>
                             </div>
                         </div>
@@ -72,6 +72,56 @@
                     <a href="<?php echo $this->Url->build(["controller" => "Reports", "action" => "surveys"]); ?>">
                         <div class="panel-footer">
                             <span class="pull-left"><b class="">View Survey Reports</b> </span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="<?php echo $this->Url->build(["controller" => "Reports", "action" => "salesreports"]); ?>" >
+                <div class="panel panel-red">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <i class="fa fa-users fa-5x"></i>
+                            </div>
+                            <div class="col-md-9 ">
+                                <div class="huge"> 
+                                    <h3 class="patient "><i>Membership</i></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="<?php echo $this->Url->build(["controller" => "Reports", "action" => "salesreports"]); ?>">
+                        <div class="panel-footer">
+                            <span class="pull-left"><b class="">View Sales Performance Reports</b> </span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="<?php echo $this->Url->build(["controller" => "Reports", "action" => "memberships"]); ?>" >
+                <div class="panel panel-red">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <i class="fa fa-users fa-5x"></i>
+                            </div>
+                            <div class="col-md-9 ">
+                                <div class="huge"> 
+                                    <h3 class="patient "><i>Membership</i></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="<?php echo $this->Url->build(["controller" => "Reports", "action" => "memberships"]); ?>">
+                        <div class="panel-footer">
+                            <span class="pull-left"><b class="">View Membership Signup Reports</b> </span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>
