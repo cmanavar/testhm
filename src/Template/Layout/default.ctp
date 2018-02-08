@@ -34,6 +34,8 @@ $controller = $this->request->params['controller'];
                     /* body .hidden_live{display:none}*/
                 </style>
             <?php endif; ?><?php endif; ?>
+        <?php //echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css'); ?>
+        
         <?php echo $this->Html->css('bootstrap.min.css'); ?>
         <?php //echo $this->Html->css('customresponsive.css'); ?>
         <?php //echo $this->Html->css('bootstrap-select.css'); ?>
@@ -67,13 +69,23 @@ $controller = $this->request->params['controller'];
         echo $this->Html->script(array('hmen/jquery.js',
             'bootstrap.min.js',
             'validate/jquery.validate.js',
-            'bootstrap-typeahead.js', 'selectize.js', 'https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=p4pvlweh2kmrrrcrtkp63pmc73mi9srsg8ov8jjoces5hqby',
+            'bootstrap-typeahead.js', 'selectize.js',
             'custom/custom.js', 'jquery-ui.js',
             'custom/pagesidebar.js'
         ));
         ?>
         <?php
-        // echo $this->Html->script(array('plugins.js','actions.js'));
+        $HTTP_HOST = $_SERVER['HTTP_HOST'];
+        if ($HTTP_HOST == 'localhost') {
+            echo $this->Html->script(array('https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=p4pvlweh2kmrrrcrtkp63pmc73mi9srsg8ov8jjoces5hqby'));
+        } elseif ($HTTP_HOST == 'hmen.in') {
+            echo $this->Html->script(array('https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=p4pvlweh2kmrrrcrtkp63pmc73mi9srsg8ov8jjoces5hqby'));
+        } else {
+            echo $this->Html->script(array('https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=b9fxit11za3pqwzdp0yo6xrf2xdy7ttg25igs4mpmolapo5s'));
+        }
+        ?>
+        <?php
+        // echo $this->Html->script(array('https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=p4pvlweh2kmrrrcrtkp63pmc73mi9srsg8ov8jjoces5hqby'));
         echo $this->fetch('scriptBottom');
         ?>
 

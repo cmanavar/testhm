@@ -3,8 +3,11 @@ $(function () {
         allowEmptyOption: true,
         create: false,
     });
-
-
 });
 
-       
+
+$(function () {
+    $('#appoinment-time').datetimepicker({
+        format: 'HH:mm:ss'
+    });
+});

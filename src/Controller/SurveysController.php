@@ -38,6 +38,7 @@ class SurveysController extends AppController {
         if (in_array($this->request->session()->read('Auth.User.user_type'), ['ADMIN', 'OPERATION_MANAGER', 'TELLY_CALLER'])) {
             AppController::checkNormalAccess();
         }
+        $this->Auth->allow(['delete']);
     }
 
     //***********************************************************************************************//
@@ -99,7 +100,7 @@ class SurveysController extends AppController {
                     } else {
                         $tmpArr = ['-'];
                     }
-                    $serveys['services_name'] = implode(", ",$tmpArr);
+                    $serveys['services_name'] = implode(", ", $tmpArr);
                 }
                 $this->set('servey', $serveys);
             } else {
@@ -123,6 +124,7 @@ class SurveysController extends AppController {
                 }
                 //pr($serveys); exit;
                 if ($this->request->is(['patch', 'post', 'put'])) {
+                    //pr($this->request->data); exit;
                     $appoinment_date = $this->request->data['appoinment_date'];
                     unset($this->request->data['appoinment_date']);
                     $serveys = $this->Surveys->patchEntity($serveys, $this->request->data);
@@ -157,6 +159,36 @@ class SurveysController extends AppController {
     public function getSalesList() {
         $this->loadModel('Users');
         return $this->Users->find('list', [ 'keyField' => 'id', 'valueField' => 'name'])->where(['user_type' => 'SALES'])->hydrate(false)->toArray();
+    }
+
+    public function delete() {
+        $id = $this->request->data['value'];
+        if (isset($id) && $id != '') {
+            $this->loadModel('Surveys');
+            $serveys = $this->Surveys->find('all')->where(['id' => $id])->order(['id' => 'DESC'])->hydrate(false)->first();
+            if (isset($serveys) && !empty($serveys)) {
+                $serveys_data = $this->Surveys->get($id); //SURVEY RECORDS
+                if ($this->Surveys->delete($serveys_data)) {
+                    $this->Flash->success(Configure::read('Settings.DELETE'));
+                    $this->redirect(array('action' => 'index'));
+                    exit;
+                } else {
+                    $this->Flash->error(Configure::read('Settings.DELETEFAIL'));
+                    $this->redirect(array('action' => 'index'));
+                    exit;
+                }
+            } else {
+                $this->Flash->error(__("RECORD DOES NOT EXIST"));
+                $this->redirect(array('action' => 'index'));
+                exit;
+            }
+            pr($serveys);
+            exit;
+        } else {
+            $this->Flash->error(__('RECORD DOES NOT EXIST'));
+            $this->redirect(array('action' => 'index'));
+            exit;
+        }
     }
 
 }

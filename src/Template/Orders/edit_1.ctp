@@ -155,11 +155,11 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <?php //pr($order); //exit; ?>
+                            <?php pr($order); //exit; ?>
                             <?php echo $this->Form->create($order, ['class' => 'form-horizontal validate capitalize', 'enctype' => 'multipart/form-data']); ?>
 <!--                            <input type="hidden" name="cart_order_id" value="<?= $v['cart_order_id']; ?>" />-->
 <!--                            <input type="hidden" name="order_id" value="<?= $orders['order_id']; ?>" />-->
-                            <?php $orderStatus = ['PENDING' => 'PENDING', 'PLACED' => 'PLACED', 'ON_INSPECTION '=> 'ON INSPECTION', 'SCHEDULE' => 'SCHEDULE', 'COMPLETED' => 'COMPLETED', 'CANCELLED' => 'CANCELLED']; ?>
+                            <?php $orderStatus = ['PENDING' => 'PENDING', 'PLACED' => 'PLACED', 'SCHEDULE' => 'SCHEDULE', 'COMPLETED' => 'COMPLETED', 'CANCELLED' => 'CANCELLED']; ?>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">ORDER STATUS <span class="text-danger">*</span></label>
                                 <div class="col-sm-5">

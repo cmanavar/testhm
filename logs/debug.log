@@ -9685,3 +9685,1209 @@
 2018-02-06 01:39:43 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
 
 
+2018-02-06 11:59:38 Notice: Notice (8): Undefined variable: HTTP_HOST in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Layout/default.ctp, line 76]
+
+
+2018-02-06 11:59:38 Notice: Notice (8): Undefined variable: HTTP_HOST in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Layout/default.ctp, line 78]
+
+
+2018-02-06 11:59:40 Notice: Notice (8): Undefined variable: HTTP_HOST in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Layout/default.ctp, line 76]
+
+
+2018-02-06 11:59:40 Notice: Notice (8): Undefined variable: HTTP_HOST in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Layout/default.ctp, line 78]
+
+
+2018-02-06 13:16:21 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 13:57:54 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 15:05:03 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 15:05:43 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 15:09:31 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 15:09:32 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 15:13:18 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-06 15:15:43 Notice: Notice (8): Undefined index: activation_link in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self.ctp, line 54]
+
+
+2018-02-06 15:26:36 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 15:26:41 Notice: Notice (8): Undefined offset: 1 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 15:26:46 Notice: Notice (8): Undefined offset: 1 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 15:50:53 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 15:53:47 Notice: Notice (8): Undefined offset: 1 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 15:56:02 Notice: Notice (8): Undefined offset: 1 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 15:56:24 Notice: Notice (8): Undefined offset: 1 in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:04:42 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 16:06:39 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 16:06:41 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-06 16:06:41 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-06 16:06:41 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-06 16:16:26 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 16:18:25 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 16:18:30 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 16:18:35 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 16:20:21 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 43]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 47]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 51]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 55]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 67]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 71]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 75]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 79]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 109]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 113]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 170]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:21:46 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:21:48 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 43]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 47]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 51]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 55]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 67]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 71]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 75]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 79]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 109]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 113]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 170]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:21:50 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:28:55 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 16:29:02 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 16:29:21 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 43]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 47]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 51]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 55]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 67]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 71]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 75]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 79]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 109]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 113]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 170]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:29:23 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:29:24 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-06 16:29:24 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-06 16:29:24 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 43]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 47]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 51]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 55]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 67]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 71]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 75]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 79]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 109]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 113]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 170]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-06 16:29:57 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 43]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 47]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 51]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 55]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 67]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 71]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 75]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 79]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 109]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 113]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 170]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-06 16:30:11 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 43]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 47]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 51]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 55]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 67]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 71]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 75]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 79]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 109]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 113]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-06 16:30:26 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 55]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 67]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 71]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 75]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 79]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 109]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 113]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-06 16:31:33 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-06 16:31:45 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 67]
+
+
+2018-02-06 16:31:45 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 71]
+
+
+2018-02-06 16:31:45 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 75]
+
+
+2018-02-06 16:31:45 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 79]
+
+
+2018-02-06 16:31:45 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 109]
+
+
+2018-02-06 16:31:45 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 113]
+
+
+2018-02-06 16:31:45 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:31:45 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:31:45 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:31:45 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-06 16:31:45 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:31:45 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:31:45 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:31:45 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-06 16:31:45 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-06 16:31:45 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-06 16:31:52 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 71]
+
+
+2018-02-06 16:31:52 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 75]
+
+
+2018-02-06 16:31:52 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 79]
+
+
+2018-02-06 16:31:52 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 109]
+
+
+2018-02-06 16:31:52 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 113]
+
+
+2018-02-06 16:31:52 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:31:52 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:31:52 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:31:52 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-06 16:31:52 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:31:52 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:31:52 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:31:52 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-06 16:31:52 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-06 16:31:52 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-06 16:31:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 75]
+
+
+2018-02-06 16:31:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 79]
+
+
+2018-02-06 16:31:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 109]
+
+
+2018-02-06 16:31:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 113]
+
+
+2018-02-06 16:31:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:31:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:31:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:31:58 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-06 16:31:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:31:58 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:31:58 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:31:58 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-06 16:31:58 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-06 16:31:58 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-06 16:32:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 109]
+
+
+2018-02-06 16:32:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 113]
+
+
+2018-02-06 16:32:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:32:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:32:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:32:06 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-06 16:32:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:32:06 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:32:06 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 178]
+
+
+2018-02-06 16:32:06 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-06 16:32:06 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-06 16:32:06 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-06 16:32:27 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 92]
+
+
+2018-02-06 16:32:27 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 92]
+
+
+2018-02-06 16:32:27 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 109]
+
+
+2018-02-06 16:32:27 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 113]
+
+
+2018-02-06 16:32:27 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:32:27 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:32:27 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:32:27 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:32:43 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 109]
+
+
+2018-02-06 16:32:43 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 113]
+
+
+2018-02-06 16:32:43 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:32:43 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:32:43 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:32:43 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:33:04 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 113]
+
+
+2018-02-06 16:33:04 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:33:04 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:33:04 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:33:04 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:33:10 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:33:10 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:33:10 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:33:10 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:33:21 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:33:21 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:33:21 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:33:21 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:33:31 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-06 16:33:31 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:33:31 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:33:31 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:33:37 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 127]
+
+
+2018-02-06 16:33:37 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:33:37 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:33:53 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 142]
+
+
+2018-02-06 16:33:53 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:34:08 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 164]
+
+
+2018-02-06 16:34:42 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 160]
+
+
+2018-02-06 16:36:03 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-07 10:46:06 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-07 10:46:08 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-07 10:55:07 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-07 14:25:38 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-07 16:03:41 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-07 16:43:00 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 39]
+
+
+2018-02-07 16:43:00 Notice: Notice (8): Undefined index: username in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 43]
+
+
+2018-02-07 16:43:00 Notice: Notice (8): Undefined index: useremail in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 47]
+
+
+2018-02-07 16:43:00 Notice: Notice (8): Undefined index: userphone in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 51]
+
+
+2018-02-07 16:43:00 Notice: Notice (8): Undefined index: user_address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 55]
+
+
+2018-02-07 16:43:00 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-07 16:43:00 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-07 16:43:00 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-07 16:43:00 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 67]
+
+
+2018-02-07 16:43:00 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 71]
+
+
+2018-02-07 16:43:00 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 75]
+
+
+2018-02-07 16:43:00 Notice: Notice (8): Undefined index: category_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 88]
+
+
+2018-02-07 16:43:00 Notice: Notice (8): Undefined index: service_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 88]
+
+
+2018-02-07 16:43:00 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-07 16:43:18 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 39]
+
+
+2018-02-07 16:43:18 Notice: Notice (8): Undefined index: username in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 43]
+
+
+2018-02-07 16:43:18 Notice: Notice (8): Undefined index: useremail in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 47]
+
+
+2018-02-07 16:43:18 Notice: Notice (8): Undefined index: userphone in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 51]
+
+
+2018-02-07 16:43:18 Notice: Notice (8): Undefined index: user_address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 55]
+
+
+2018-02-07 16:43:18 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-07 16:43:18 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-07 16:43:18 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-07 16:43:18 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 67]
+
+
+2018-02-07 16:43:18 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 71]
+
+
+2018-02-07 16:43:18 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 75]
+
+
+2018-02-07 16:43:18 Notice: Notice (8): Undefined index: category_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 88]
+
+
+2018-02-07 16:43:18 Notice: Notice (8): Undefined index: service_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 88]
+
+
+2018-02-07 16:43:18 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-07 16:43:47 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 40]
+
+
+2018-02-07 16:43:47 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 41]
+
+
+2018-02-07 16:43:47 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 55]
+
+
+2018-02-07 16:43:47 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 55]
+
+
+2018-02-07 16:43:47 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 244]
+
+
+2018-02-07 16:43:47 Notice: Notice (8): Undefined index: value in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 255]
+
+
+2018-02-07 16:43:47 Notice: Notice (8): Undefined index: text in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/View/Widget/SelectBoxWidget.php, line 256]
+
+
+2018-02-07 16:47:33 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 40]
+
+
+2018-02-07 16:47:33 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 41]
+
+
+2018-02-07 16:47:33 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 55]
+
+
+2018-02-07 16:47:33 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 55]
+
+
+2018-02-07 16:47:49 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 40]
+
+
+2018-02-07 16:47:49 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 41]
+
+
+2018-02-07 16:49:34 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 40]
+
+
+2018-02-07 16:49:34 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 41]
+
+
+2018-02-07 16:50:06 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 40]
+
+
+2018-02-07 16:50:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 41]
+
+
+2018-02-07 16:52:45 Notice: Notice (8): Undefined variable: service in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 37]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 39]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 43]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 47]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 51]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 55]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 67]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 71]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 75]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 105]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 109]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 119]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 138]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 158]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 159]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 160]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 175]
+
+
+2018-02-07 17:02:46 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 175]
+
+
+2018-02-07 17:02:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 39]
+
+
+2018-02-07 17:02:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 43]
+
+
+2018-02-07 17:02:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 47]
+
+
+2018-02-07 17:02:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 51]
+
+
+2018-02-07 17:02:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 55]
+
+
+2018-02-07 17:02:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-07 17:02:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-07 17:02:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-07 17:02:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 67]
+
+
+2018-02-07 17:02:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 71]
+
+
+2018-02-07 17:02:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 75]
+
+
+2018-02-07 17:02:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 105]
+
+
+2018-02-07 17:02:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 109]
+
+
+2018-02-07 17:02:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 119]
+
+
+2018-02-07 17:02:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-07 17:02:58 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 138]
+
+
+2018-02-07 17:03:48 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 39]
+
+
+2018-02-07 17:03:48 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 43]
+
+
+2018-02-07 17:03:48 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 47]
+
+
+2018-02-07 17:03:48 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 51]
+
+
+2018-02-07 17:03:48 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 55]
+
+
+2018-02-07 17:03:48 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-07 17:03:48 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 59]
+
+
+2018-02-07 17:03:48 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 63]
+
+
+2018-02-07 17:03:48 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 67]
+
+
+2018-02-07 17:03:48 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 71]
+
+
+2018-02-07 17:03:48 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 75]
+
+
+2018-02-07 17:03:48 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 105]
+
+
+2018-02-07 17:03:48 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 109]
+
+
+2018-02-07 17:03:48 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 119]
+
+
+2018-02-07 17:03:48 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 123]
+
+
+2018-02-07 17:03:48 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 138]
+
+
+2018-02-07 17:04:46 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-07 17:05:05 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-07 17:24:31 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-07 17:54:55 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-07 18:11:12 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-07 18:11:25 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-07 18:11:33 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-07 18:11:34 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-07 18:11:39 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-07 18:12:21 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-07 18:12:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-07 18:12:28 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+

@@ -84,7 +84,7 @@
                                         <th>Appointment Status</th>
                                         <th>Survey by</th>
                                         <th>Survey Time</th>
-                                        <th width="10%">Actions</th>
+                                        <th width="12%">Actions</th>
                                     </tr>   
                                 </thead>
                                 <tbody>
@@ -113,14 +113,14 @@
                                                         <div class="col-md-8">: <?php echo stripslashes($val['user_type']) ?></div>
                                                     </div>
                                                 </td>
-                                                <td><?php echo $val['appoinment_date']->format('d-m-Y') . " " . $val['appoinment_time']; ?></td>
+                                                <td><?php echo $val['appoinment_date']->format('d-m-Y') . " " . date('h:i A', strtotime($val['appoinment_time'])); ?></td>
                                                 <td><?= ucfirst(strtolower($val['appoinment_status'])) ?></td>
                                                 <td><?php echo $val['survey_by']; ?></td>
-                                                <td><?php echo $val['created']->format('d-m-Y h:i'); ?></td>
+                                                <td><?php echo $val['created']->format('d-m-Y h:i A'); ?></td>
                                                 <td>
                                                     <?php echo $this->Html->link('', ['controller' => 'Surveys', 'action' => 'view', $val['id']], ['class' => 'btn btn-info fa fa-eye', 'escape' => false, 'title' => 'VIEW']); ?>
                                                     <?php echo $this->Html->link('', ['controller' => 'Surveys', 'action' => 'edit', $val['id']], ['class' => 'btn btn-warning fa fa-pencil', 'escape' => false, 'title' => 'EDIT']); ?>
-        <!--                                                                    <a data-toggle="modal" title = 'DELETE' url=<?php echo $this->Url->build(['controller' => 'Vendors', 'action' => 'delete']) ?> data-value="<?php echo $val['id']; ?>" data-target="#delete" href="#" class="btn btn-danger fa fa-trash-o delete"></a>                                                                    -->
+                                                    <a data-toggle="modal" title = 'DELETE' url=<?php echo $this->Url->build(['controller' => 'Surveys', 'action' => 'delete']) ?> data-value="<?php echo $val['id']; ?>" data-target="#delete" href="#" class="btn btn-danger fa fa-trash-o delete"></a>
                                                 </td>     
                                             </tr>
                                             <?php

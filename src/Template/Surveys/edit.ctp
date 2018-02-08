@@ -9,9 +9,13 @@
 <?php echo $this->Html->script('selectize.js', array('block' => 'scriptBottom')); ?>
 <?php echo $this->Html->css('selectize.css'); ?>
 <?php echo $this->Html->css('jquery-ui.css'); ?>
+<?php //echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css'); ?>
+<?php //echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css'); ?>
 <?php echo $this->Html->script('jquery-ui.js', array('block' => 'scriptBottom')); ?>
 <?php echo $this->Html->script('maskedinput.js', ['block' => 'scriptBottom']); ?>
 <?php echo $this->Html->script('custom/upload_image.js', array('block' => 'scriptBottom')); ?>
+<?php echo $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js', ['block' => 'scriptBottom']); ?>
+<?php echo $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js', ['block' => 'scriptBottom']); ?>
 <?php echo $this->Html->script('custom/dashboard.js', ['block' => 'scriptBottom']); ?>
 <div id="page-wrapper">
     <div class="row">
@@ -62,7 +66,7 @@
                                 <label class="col-sm-3 control-label">NAME <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="input text">
-                                        <?php echo $this->Form->input('person_name', ['label' => false, 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER PERSON NAME', 'maxlength' => 255, 'readonly' => 'readonly']); ?>
+                                        <?php echo $this->Form->input('person_name', ['label' => false, 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER PERSON NAME', 'maxlength' => 255]); ?>
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +92,7 @@
                                 <label class="col-sm-3 control-label">CONTACT NUMBER <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="input text">
-                                        <?php echo $this->Form->input('contact_number', ['label' => false, 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER CONTACT NUMBER', 'maxlength' => 255, 'readonly' => 'readonly']); ?>
+                                        <?php echo $this->Form->input('contact_number', ['label' => false, 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER CONTACT NUMBER', 'maxlength' => 255]); ?>
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +116,7 @@
                                 <label class="col-sm-3 control-label">APPOINMENT TIME <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="input text">
-                                        <?php echo $this->Form->input('appoinment_time', ['label' => false, 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER COMPANY NAME', 'maxlength' => 255]); ?>
+                                        <?php echo $this->Form->input('appoinment_time', ['label' => false, 'class' => 'form-control required normal-font timepicker', 'placeholder' => 'ENTER COMPANY NAME', 'maxlength' => 255]); ?>
                                     </div>
                                 </div>
                             </div>
@@ -137,7 +141,7 @@
                                 <div class="col-sm-6">
                                     <div class="input text">
                                         <label class="control-label">QUALITY OF SERVICE <span class="text-danger">*</span></label>
-                                        <?php echo $this->Form->input('rating_quality_of_service', ['label' => false,  'type' => 'text', 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER QUALITY OF SERVICE', 'maxlength' => 255, 'readonly' => 'readonly']); ?>
+                                        <?php echo $this->Form->input('rating_quality_of_service', ['label' => false, 'type' => 'text', 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER QUALITY OF SERVICE', 'maxlength' => 255, 'readonly' => 'readonly']); ?>
                                     </div>
                                 </div>
                             </div>
@@ -146,7 +150,7 @@
                                 <div class="col-sm-6">
                                     <div class="input text">
                                         <label class="control-label">PRICE RANGE <span class="text-danger">*</span></label>
-                                        <?php echo $this->Form->input('rating_price_range', ['label' => false,  'type' => 'text', 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER PRICE RANGE', 'maxlength' => 255, 'readonly' => 'readonly']); ?>
+                                        <?php echo $this->Form->input('rating_price_range', ['label' => false, 'type' => 'text', 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER PRICE RANGE', 'maxlength' => 255, 'readonly' => 'readonly']); ?>
                                     </div>
                                 </div>
                             </div>
@@ -155,7 +159,7 @@
                                 <div class="col-sm-6">
                                     <div class="input text">
                                         <label class="control-label">PUNCTUALITY <span class="text-danger">*</span></label>
-                                        <?php echo $this->Form->input('rating_punctuality', ['label' => false,  'type' => 'text', 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER PUNCTUALITY', 'maxlength' => 255, 'readonly' => 'readonly']); ?>
+                                        <?php echo $this->Form->input('rating_punctuality', ['label' => false, 'type' => 'text', 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER PUNCTUALITY', 'maxlength' => 255, 'readonly' => 'readonly']); ?>
                                     </div>
                                 </div>
                             </div>
@@ -164,7 +168,7 @@
                                 <div class="col-sm-6">
                                     <div class="input text">
                                         <label class="control-label">CLEANLINESS <span class="text-danger">*</span></label>
-                                        <?php echo $this->Form->input('rating_cleanliness', ['label' => false,  'type' => 'text', 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER CLEANLINESS', 'maxlength' => 255, 'readonly' => 'readonly']); ?>
+                                        <?php echo $this->Form->input('rating_cleanliness', ['label' => false, 'type' => 'text', 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER CLEANLINESS', 'maxlength' => 255, 'readonly' => 'readonly']); ?>
                                     </div>
                                 </div>
                             </div>
@@ -199,7 +203,7 @@
                                 <label class="col-sm-3 control-label">HOW OFTEN DO YOU TYPICALLY USE REPAIR AND SERVICE WORK? <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="input text">
-                                        <?php echo $this->Form->input('who_performs_the_service_or_repair_work_at_your_place', ['label' => false, 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER HOW OFTEN DO YOU TYPICALLY USE REPAIR AND SERVICE WORK', 'maxlength' => 255, 'value' => str_replace("_", " ", $serveys['how_often_do_you_typically_use_repair_and_service_work']), 'readonly' => 'readonly']); ?>
+                                        <?php echo $this->Form->input('who_performs_the_service_or_repair_work_at_your_place', ['label' => false, 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER HOW OFTEN DO YOU TYPICALLY USE REPAIR AND SERVICE WORK', 'maxlength' => 255, 'value' => $serveys['how_often_do_you_typically_use_repair_and_service_work'], 'readonly' => 'readonly']); ?>
                                     </div>
                                 </div>
                             </div>
@@ -207,7 +211,7 @@
                                 <label class="col-sm-3 control-label">HOW MUCH USUALLY THEY CHARGE FOR REPAIR AND SERVICE WORK? <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="input text">
-                                        <?php echo $this->Form->input('who_performs_the_service_or_repair_work_at_your_place', ['label' => false, 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER HOW MUCH USUALLY THEY CHARGE FOR REPAIR AND SERVICE WORK', 'maxlength' => 255, 'value' => str_replace("_", " ", $serveys['how_much_usually_they_charge_for_repair_and_service_work']), 'readonly' => 'readonly']); ?>
+                                        <?php echo $this->Form->input('who_performs_the_service_or_repair_work_at_your_place', ['label' => false, 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER HOW MUCH USUALLY THEY CHARGE FOR REPAIR AND SERVICE WORK', 'maxlength' => 255, 'value' => $serveys['how_much_usually_they_charge_for_repair_and_service_work'], 'readonly' => 'readonly']); ?>
                                     </div>
                                 </div>
                             </div>
@@ -215,7 +219,7 @@
                                 <label class="col-sm-3 control-label">HOW LONG DO YOU HAVE WAIT TO AVAIL THEIR SERVICE? <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="input text">
-                                        <?php echo $this->Form->input('how_long_do_you_have_wait_to_avail_their_service', ['label' => false, 'type'=>'text', 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER HOW LONG DO YOU HAVE WAIT TO AVAIL THEIR SERVICE', 'maxlength' => 255, 'value' => str_replace("_", " ", $serveys['how_long_do_you_have_wait_to_avail_their_service']), 'readonly' => 'readonly']); ?>
+                                        <?php echo $this->Form->input('how_long_do_you_have_wait_to_avail_their_service', ['label' => false, 'type' => 'text', 'class' => 'form-control required normal-font disabled', 'placeholder' => 'ENTER HOW LONG DO YOU HAVE WAIT TO AVAIL THEIR SERVICE', 'maxlength' => 255, 'value' => $serveys['how_long_do_you_have_wait_to_avail_their_service'], 'readonly' => 'readonly']); ?>
                                     </div>
                                 </div>
                             </div>
@@ -223,7 +227,7 @@
                                 <label class="col-sm-3 control-label">ACCORDING TO YOU WHO IS IDEAL SERVICE PROVIDER? <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="input text">
-                                        <?php echo $this->Form->input('according_to_you_who_is_Ideal_service_provider', ['label' => false, 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER HOW LONG DO YOU HAVE WAIT TO AVAIL THEIR SERVICE', 'maxlength' => 255, 'readonly' => 'readonly']); ?>
+                                        <?php echo $this->Form->input('according_to_you_who_is_Ideal_service_provider', ['label' => false, 'class' => 'form-control required normal-font disabled', 'placeholder' => 'ENTER HOW LONG DO YOU HAVE WAIT TO AVAIL THEIR SERVICE', 'maxlength' => 255, 'readonly' => 'readonly']); ?>
                                     </div>
                                 </div>
                             </div>
@@ -231,7 +235,7 @@
                                 <label class="col-sm-3 control-label">IF WE COME UP WITH THE SERVICE PROVIDER TO YOUR SATISFACTION WILL YOU LISTEN TO US? <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="input text">
-                                        <?php echo $this->Form->input('if_we_come_up_with_the_service_provider_to_your_satisfaction_wil', ['label' => false, 'type'=>'text', 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER HOW LONG DO YOU HAVE WAIT TO AVAIL THEIR SERVICE', 'maxlength' => 255, 'value' => $serveys['if_we_come_up_with_the_service_provider_to_your_satisfaction_wil'], 'readonly' => 'readonly']); ?>
+                                        <?php echo $this->Form->input('if_we_come_up_with_the_service_provider_to_your_satisfaction_wil', ['label' => false, 'type' => 'text', 'class' => 'form-control required normal-font', 'placeholder' => 'ENTER HOW LONG DO YOU HAVE WAIT TO AVAIL THEIR SERVICE', 'maxlength' => 255, 'value' => $serveys['if_we_come_up_with_the_service_provider_to_your_satisfaction_wil'], 'readonly' => 'readonly']); ?>
                                     </div>
                                 </div>
                             </div>
@@ -239,7 +243,7 @@
                                 <label class="col-sm-3 control-label">STATUS <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="input text">
-                                        <?php echo $this->Form->input('appoinment_status', ['label' => false, 'type'=>'text', 'class' => 'form-control required normal-font', 'placeholder' => 'Status', 'maxlength' => 255, 'value' => $serveys['appoinment_status'], 'readonly' => 'readonly']); ?>
+                                        <?php echo $this->Form->input('appoinment_status', ['label' => false, 'type' => 'text', 'class' => 'form-control required normal-font', 'placeholder' => 'Status', 'maxlength' => 255, 'value' => $serveys['appoinment_status'], 'readonly' => 'readonly']); ?>
                                     </div>
                                 </div>
                             </div>

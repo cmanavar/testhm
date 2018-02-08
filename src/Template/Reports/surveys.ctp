@@ -101,9 +101,9 @@
                                                 <td><?php echo stripslashes($val['user_type']) ?></td>
                                                 <td><?php echo stripslashes($val['email']) ?></td>
                                                 <td><?php echo $val['contact_number']; ?></td>
-                                                <td><?php echo $val['appoinment_date']->format('d-m-Y') . " " . $val['appoinment_time']; ?></td>
+                                                <td><?php echo $val['appoinment_date']->format('d-m-Y') . " " . date('h:i A', strtotime($val['appoinment_time'])); ?></td>
                                                 <td><?php echo $val['survey_by']; ?></td>
-                                                <td><?php echo $val['created']->format('d-m-Y h:i'); ?></td>  
+                                                <td><?php echo $val['created']->format('d-m-Y h:i A'); ?></td>  
                                             </tr>
                                             <?php
                                         }

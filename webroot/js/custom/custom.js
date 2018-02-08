@@ -64,7 +64,7 @@ $(function () {
         allowEmptyOption: true,
         create: false,
     });
-    
+
     var $select = $('.select-category').selectize({
         allowEmptyOption: true,
         create: false,
@@ -74,7 +74,7 @@ $(function () {
         allowEmptyOption: true,
         create: false,
     });
-    
+
     var $select = $('.select-type').selectize({
         allowEmptyOption: true,
         create: false,
@@ -711,7 +711,7 @@ $(document).ready(function () {
         var url = $(this).attr('data-url');
         var tmodified_by = $(this).attr('data-modified_by');
         var newDate = new Date();
-        var tmodified = newDate.getFullYear() + "-" + newDate.getMonth() + 1 + "-" + newDate.getDate() + " " + newDate.getHours()	+ ":" + newDate.getMinutes() + ":" + newDate.getSeconds();
+        var tmodified = newDate.getFullYear() + "-" + newDate.getMonth() + 1 + "-" + newDate.getDate() + " " + newDate.getHours() + ":" + newDate.getMinutes() + ":" + newDate.getSeconds();
         $.ajax({
             type: "POST",
             url: url,
@@ -771,28 +771,39 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.dateField').datepicker({
         dateFormat: 'dd-mm-yy',
+        changeMonth: true,
+        changeYear: true,
         minDate: 0,
     });
     $('.pastDate').datepicker({
         dateFormat: 'dd-mm-yy',
+        changeMonth: true,
+        changeYear: true,
         maxDate: 0,
     });
     $('.aniversary_date').datepicker({
         dateFormat: 'dd-mm-yy',
+        changeMonth: true,
+        changeYear: true,
         minDate: 0,
     });
     $('.aniversary_date').datepicker({
         dateFormat: 'dd-mm-yy',
+        changeMonth: true,
+        changeYear: true,
         minDate: 0,
     });
     $('.datepicker').datepicker({
         dateFormat: 'dd-mm-yy',
+        changeMonth: true,
+        changeYear: true,
     });
+
     $('.todayDate').val($.datepicker.formatDate("dd-mm-yy", new Date()));
     var myDate = new Date();
     myDate.setDate(myDate.getDate() + 1);
     $('.tomorrowDate').val($.datepicker.formatDate("dd-mm-yy", myDate));
-    //tomorrowDate
+    //tomorrowDate timepicker
 
     tinymce.init({
         selector: 'textarea.service-descriptions',
@@ -808,7 +819,7 @@ $(document).ready(function () {
             '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
             '//www.tinymce.com/css/codepen.min.css']
     });
-    
+
     //var search;
     $(".btn_excel").on("click", function () {
         var url = $(".excelurl").attr('value');

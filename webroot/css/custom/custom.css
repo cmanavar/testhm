@@ -1123,3 +1123,11 @@ input[type=radio], input[type=checkbox] {
     color: #FFF !important;
     opacity: 1 !important;
 }
+
+.alert-success .close {
+    color: #3c763d !important;
+}
+
+.navbar-default {
+    background-image: linear-gradient(to bottom,#fff 0,#888 100%) !important;
+}

@@ -168,7 +168,7 @@
                                 <label class="col-sm-3 control-label">STATUS <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="custom-radio radio ">
-                                        <?php echo $this->Form->radio('status', [['value' => 'ACTIVE', 'text' => 'ACTIVE'], ['value' => 'INACTIVE', 'text' => 'INACTIVE']], ['value' => 'ACTIVE']); ?>
+                                        <?php echo $this->Form->radio('active', [['value' => 'Y', 'text' => 'ACTIVE'], ['value' => 'N', 'text' => 'INACTIVE']], ['value' => $user['active']]); ?>
                                     </div>  
                                 </div>
                             </div>

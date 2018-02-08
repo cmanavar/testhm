@@ -77,7 +77,7 @@
                                 </tr>
                                 <tr>
                                     <td width="30%"><label class="control-label">Appoinment Time</label></td>
-                                    <td><?= $servey['appoinment_time']; ?></td>
+                                    <td><?= date('h:i A', strtotime($servey['appoinment_time'])) ?></td>
                                 </tr>
                                 <tr>
                                     <td width="30%"><label class="control-label">What service or repair work usually you perform at your place?</label></td>

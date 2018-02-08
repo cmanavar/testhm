@@ -49,7 +49,7 @@
                                                 <td class="text-center"><?php echo $val->name; ?></td>
                                                 <td class="text-center"><?php echo $val->email; ?></td>
                                                 <td class="text-center"><?php echo $val->phone_no; ?></td>
-                                                <td class="text-center"><?php echo (isset($val->user_type) && $val->user_type != "" ) ? $val->user_type : "-"; ?></td>
+                                                <td class="text-center"><?php echo (isset($val->user_type) && $val->user_type != "" ) ? str_replace("_", " ", $val->user_type) : "-"; ?></td>
                                                 <td class="text-center">
                                                     <?php echo $this->Html->link('', ['controller' => 'Users', 'action' => 'changepassword', $val['id']], ['class' => 'btn btn-primary fa fa-key', 'escape' => false, 'title' => 'CHANGE PASSWORD']); ?>
                                                     <?php echo $this->Html->link('', ['controller' => 'Users', 'action' => 'edituser', $val['id']], ['class' => 'btn btn-success fa fa-pencil', 'escape' => false, 'title' => 'EDIT']); ?>
