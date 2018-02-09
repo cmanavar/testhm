@@ -20454,3 +20454,278 @@ Request URL: /hmen/orders/edit2/2
 2018-02-07 18:07:00 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
 
 
+2018-02-08 10:37:23 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must implement interface Cake\Datasource\EntityInterface, array given, called in /Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php on line 334 and defined in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Table.php, line 2030]
+
+
+2018-02-08 10:37:23 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must implement interface Cake\Datasource\EntityInterface, array given, called in /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Table.php on line 2036 and defined in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Marshaller.php, line 419]
+
+
+2018-02-08 10:37:23 Error: Fatal Error (1): Call to a member function isNew() on array in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Marshaller.php, line 424]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-08 10:37:23 Error: [Cake\Error\FatalErrorException] Call to a member function isNew() on array
+Request URL: /hmen/orders/edit/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 424)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-08 10:40:59 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::save() must implement interface Cake\Datasource\EntityInterface, null given, called in /Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php on line 338 and defined in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Table.php, line 1346]
+
+
+2018-02-08 10:40:59 Error: Fatal Error (1): Call to a member function errors() on null in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Table.php, line 1356]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-08 10:40:59 Error: [Cake\Error\FatalErrorException] Call to a member function errors() on null
+Request URL: /hmen/orders/edit/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 1356)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-08 11:29:32 Error: [Cake\Controller\Exception\MissingActionException] Action OrdersController::add() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'add',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/orders/add
+2018-02-08 11:32:03 Error: [Cake\View\Exception\MissingTemplateException] Template file "Orders/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Orders/add.ctp',
+)
+Request URL: /hmen/orders/add
+2018-02-08 11:38:23 Error: Fatal Error (4): syntax error, unexpected ')', expecting '(' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 95]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-08 11:38:23 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting '('
+Request URL: /hmen/orders/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/Applications/X...', 95)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-08 11:47:20 Error: [Cake\Controller\Exception\MissingActionException] Action OrdersController::undefined() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'undefined',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/orders/undefined/1
+2018-02-08 11:49:36 Error: [Cake\Controller\Exception\MissingActionException] Action OrdersController::getServicesList() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'getServicesList',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/orders/getServicesList/1
+2018-02-08 11:49:50 Error: [Cake\Controller\Exception\MissingActionException] Action OrdersController::getServicesList() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'OrdersController',
+  'action' => 'getServicesList',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/orders/getServicesList/3
+2018-02-08 12:32:14 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/users/201802061606115a798.jpg
+2018-02-08 12:32:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/users/201802061606115a798.jpg
+2018-02-08 13:00:49 Error: [Cake\Controller\Exception\MissingActionException] Action WebservicesController::vendor() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'WebservicesController',
+  'action' => 'vendor',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/webservices/vendor/assignedorders
+2018-02-08 13:01:33 Error: [Cake\Controller\Exception\MissingActionException] Action WebservicesController::assignedorders() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'WebservicesController',
+  'action' => 'assignedorders',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/webservices/vendor/assignedorders
+2018-02-08 13:06:16 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/assignedorders.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/assignedorders.ctp',
+)
+Request URL: /hmen/webservices/vendor/assignedorders
+2018-02-08 13:09:35 Error: [Cake\Controller\Exception\MissingActionException] Action WebservicesController::order() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'WebservicesController',
+  'action' => 'order',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/webservices/order/list
+2018-02-08 13:09:40 Error: [Cake\Controller\Exception\MissingActionException] Action WebservicesController::order() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'WebservicesController',
+  'action' => 'order',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/webservices/order/lists
+2018-02-08 13:12:43 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/assignedorders.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/assignedorders.ctp',
+)
+Request URL: /hmen/webservices/vendor/assignedorders
+2018-02-08 13:13:27 Error: [Cake\View\Exception\MissingTemplateException] Template file "Webservices/assignedorders.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Webservices/assignedorders.ctp',
+)
+Request URL: /hmen/webservices/vendor/assignedorders
+2018-02-08 14:11:51 Error: [Cake\Controller\Exception\MissingActionException] Action WebservicesController::vendor() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'WebservicesController',
+  'action' => 'vendor',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/webservices/vendor/order/lists
+2018-02-08 14:46:08 Error: Fatal Error (1): Call to a member function format() on null in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2293]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-08 14:46:08 Error: [Cake\Error\FatalErrorException] Call to a member function format() on null
+Request URL: /hmen/webservices/vendor/order/lists
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 2293)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-08 14:48:10 Error: Fatal Error (4): syntax error, unexpected end of file, expecting function (T_FUNCTION) in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2418]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-08 14:48:11 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file, expecting function (T_FUNCTION)
+Request URL: /hmen/webservices/vendor/order/lists
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/Applications/X...', 2418)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-08 14:48:30 Error: Fatal Error (4): syntax error, unexpected end of file, expecting function (T_FUNCTION) in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2418]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-08 14:48:30 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file, expecting function (T_FUNCTION)
+Request URL: /hmen/webservices/vendor/order/lists
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/Applications/X...', 2418)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-09 12:25:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-02-09 12:25:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-02-09 12:25:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-02-09 12:25:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-02-09 19:41:26 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-09 19:41:43 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-09 19:42:51 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-09 19:50:45 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-09 19:51:29 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-09 19:52:33 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-09 19:52:55 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-09 19:53:55 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-09 19:54:15 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+
+2018-02-09 19:55:05 Warning: Warning (2): imagepng() expects parameter 1 to be resource, null given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/PHPExcel/Classes/PHPExcel/Writer/Excel5.php, line 516]
+
+

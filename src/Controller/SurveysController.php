@@ -122,6 +122,9 @@ class SurveysController extends AppController {
                     $service_name = str_replace(",", ", ", $serveys['what_service_or_repair_work_usually_you_perform_at_your_place']);
                     $serveys->services_name = str_replace("_", " ", $service_name);
                 }
+                $serveyStatusArrs = ['PENDING' => 'PENDING', 'ACCEPTED' => 'ACCEPTED', 'INTERESTED' => 'INTERESTED', 'DECLINED' => 'DECLINED'];
+                $this->set('serveyStatusArrs', $serveyStatusArrs);
+                $this->set('salesLists', $this->getSalesList());
                 //pr($serveys); exit;
                 if ($this->request->is(['patch', 'post', 'put'])) {
                     //pr($this->request->data); exit;
@@ -158,7 +161,7 @@ class SurveysController extends AppController {
 
     public function getSalesList() {
         $this->loadModel('Users');
-        return $this->Users->find('list', [ 'keyField' => 'id', 'valueField' => 'name'])->where(['user_type' => 'SALES'])->hydrate(false)->toArray();
+        return $this->Users->find('list', [ 'keyField' => 'id', 'valueField' => 'name'])->where(['user_type' => 'SALES', 'active' => 'Y'])->hydrate(false)->toArray();
     }
 
     public function delete() {

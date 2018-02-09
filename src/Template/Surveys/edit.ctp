@@ -243,10 +243,19 @@
                                 <label class="col-sm-3 control-label">STATUS <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="input text">
-                                        <?php echo $this->Form->input('appoinment_status', ['label' => false, 'type' => 'text', 'class' => 'form-control required normal-font', 'placeholder' => 'Status', 'maxlength' => 255, 'value' => $serveys['appoinment_status'], 'readonly' => 'readonly']); ?>
+                                        <?php echo $this->Form->input('appoinment_status', ['label' => false, 'type' => 'select', 'options' => $serveyStatusArrs, 'empty' => 'SELECT STATUS', 'id' => 'select-category', 'class' => ' demo-default', 'placeholder' => 'SELECT STATUS']); ?>
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">ASSIGN APPOINTMENT <span class="text-danger">*</span></label>
+                                <div class="col-sm-6">
+                                    <div class="input text">
+                                        <?php echo $this->Form->input('apooinment_for', ['label' => false, 'type' => 'select', 'options' => $salesLists, 'empty' => 'SELECT SALES PERSON', 'id' => '', 'class' => ' demo-default select-category', 'placeholder' => 'SELECT SALES PERSON']); ?>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                     <div class="row">

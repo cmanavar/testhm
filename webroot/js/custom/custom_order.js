@@ -1,32 +1,29 @@
 $(document).ready(function () {
 
-
-
-    $('#select-examination').change(function () {
-        var value = $('select#select-examination option:selected').val();
-
+    $("#serviceCategory").change(function () {
+        var values = $(this).val();
+        var requesturl = $('#ajaxUrlforGetServices').val();
         $.ajax({
-            type: "POST",
-            url: $('.get_examination_fees').val(),
-            dataType: 'JSON',
-            data: {id: value},
-            success: function (data) {
-                if (typeof data[0] != "undefined") {
-                    $('#fees').val(data[0].examination_fees);
+            type: "GET",
+            url: requesturl + '/' + values,
+            data: '',
+            dataType: "json",
+            success: function (rslt) {
+                if (rslt.status == "success") {
+                    var selectize = $('#serviceList')[0].selectize;
+                    rslt.data.forEach(function (element) {
+                        selectize.addOption({value: element.key, text: element.val});
+                    });
+                    selectize.refreshOptions();
                 } else {
-                    $('#fees').val(0);
+                    alert(rslt.msg);
                 }
-                //   $('#fees').val(data.fees);
+            },
+            error: function () {
+
             }
+
         });
     });
-    
-    $(".searchname").click(function(){
-        $('.heading_list_patient_search').submit();
-    });
-
-   
-
-
 
 });

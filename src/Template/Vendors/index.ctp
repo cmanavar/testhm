@@ -49,9 +49,8 @@
                                                         <th>Email id</th>
                                                         <th>Phone no</th>
                                                         <th>Status</th>
-                                                        <th>Shift Timing</th>
                                                         <th>User Type</th>
-                                                        <th width="17%">Actions</th>
+                                                        <th width="10%">Actions</th>
                                                     </tr>   
                                                 </thead>
                                                 <tbody>
@@ -65,7 +64,6 @@
                                                                 <td><?php echo stripslashes($val['email']) ?></td>
                                                                 <td><?php echo stripslashes($val['phone_no']) ?></td>
                                                                 <td><?php echo (isset($val['active']) && $val['active'] == 'Y') ? 'ACTIVE' : 'INACTIVE'; ?></td>
-                                                                <td><?php echo $val['shift_start'] . ' - ' . $val['shift_end']; ?></td>
                                                                 <td><?php echo stripslashes($val['user_type']) ?><?php echo (isset($val['service_name']) && $val['service_name'] != '-') ? " (".$val['service_name'].") " : ''; ?></td>
                                                                 <td>
                                                                     <?php echo $this->Html->link('', ['controller' => 'Vendors', 'action' => 'view', $val['id']], ['class' => 'btn btn-info fa fa-eye', 'escape' => false, 'title' => 'VIEW']); ?>
@@ -77,7 +75,7 @@
                                                             <?php
                                                         }
                                                     } else {
-                                                        echo '<tr><td colspan="8" style="text-align:center;"><b>No Records found </b></td></tr>';
+                                                        echo '<tr><td colspan="7" style="text-align:center;"><b>No Records found </b></td></tr>';
                                                     }
                                                     ?>
                                                 </tbody>

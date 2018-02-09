@@ -298,20 +298,6 @@ $(document).ready(function () {
             allowEmptyOption: true,
             create: false,
         });
-
-//        $("#icons" + room).change(function () {
-//            readURL(this);
-//        });
-//        function readURL(input) {
-//            if (input.files && input.files[0]) {
-//                var reader = new FileReader();
-//                reader.onload = function (e) {
-//                    //icons1_upload_preview
-//                    $('#icons' + room + '_upload_preview').attr('src', e.target.result);
-//                }
-//                reader.readAsDataURL(input.files[0]);
-//            }
-//        }
     }
 
     function add_rates() {

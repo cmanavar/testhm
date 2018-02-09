@@ -144,19 +144,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">SHIFT TIMING <span class="text-danger">*</span></label>
-                                    <div class="col-sm-2">
-                                        <div class="input text">
-                                            <?php echo $this->Form->input('shift_start', ['label' => false, 'class' => 'form-control required normal-font', 'placeholder' => 'SHIFT START TIME', 'id' => 'asdad', 'maxlength' => 255]); ?>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <div class="input text">
-                                            <?php echo $this->Form->input('shift_end', ['label' => false, 'class' => 'form-control required normal-font', 'placeholder' => 'SHIFT END TIME', 'id' => 'asdasdfa', 'maxlength' => 255]); ?>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">STATUS <span class="text-danger">*</span></label>

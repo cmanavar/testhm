@@ -10891,3 +10891,363 @@
 2018-02-07 18:12:28 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
 
 
+2018-02-08 10:27:33 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:27:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-08 10:27:37 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:32:14 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:32:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-08 10:34:37 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-08 10:40:59 Notice: Notice (8): Undefined variable: service in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 338]
+
+
+2018-02-08 10:41:08 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:47:43 Notice: Notice (8): Undefined index: vandor_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 79]
+
+
+2018-02-08 10:47:54 Notice: Notice (8): Undefined index: vendor_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 79]
+
+
+2018-02-08 10:47:56 Notice: Notice (8): Undefined index: vendor_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 79]
+
+
+2018-02-08 10:50:01 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:50:03 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-08 10:50:08 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:51:38 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:52:52 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:53:25 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:53:35 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:53:52 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:53:58 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:54:03 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:54:11 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:54:16 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:54:24 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:55:45 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:56:09 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:58:24 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:58:29 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-08 10:58:31 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:58:52 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:59:20 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:59:26 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 10:59:27 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 11:28:10 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 11:28:53 Notice: Notice (8): Undefined variable: service_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/index.ctp, line 17]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 39]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 43]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 47]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 51]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 55]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 59]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 59]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 63]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 67]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 71]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 75]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 105]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 109]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 119]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 123]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 138]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 158]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 159]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 160]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 161]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 175]
+
+
+2018-02-08 11:32:25 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 175]
+
+
+2018-02-08 11:32:45 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 37]
+
+
+2018-02-08 11:32:45 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 38]
+
+
+2018-02-08 11:32:45 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 39]
+
+
+2018-02-08 11:32:45 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 40]
+
+
+2018-02-08 11:32:45 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 54]
+
+
+2018-02-08 11:32:45 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 54]
+
+
+2018-02-08 11:32:54 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 37]
+
+
+2018-02-08 11:32:54 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 38]
+
+
+2018-02-08 11:32:54 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 39]
+
+
+2018-02-08 11:32:54 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 40]
+
+
+2018-02-08 11:32:54 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 54]
+
+
+2018-02-08 11:32:54 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 54]
+
+
+2018-02-08 11:32:57 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 37]
+
+
+2018-02-08 11:32:57 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 38]
+
+
+2018-02-08 11:32:57 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 39]
+
+
+2018-02-08 11:32:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 40]
+
+
+2018-02-08 11:32:57 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 54]
+
+
+2018-02-08 11:32:57 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 54]
+
+
+2018-02-08 11:33:05 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 37]
+
+
+2018-02-08 11:33:05 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 38]
+
+
+2018-02-08 11:33:05 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 52]
+
+
+2018-02-08 11:33:05 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 52]
+
+
+2018-02-08 11:33:21 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 37]
+
+
+2018-02-08 11:33:21 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 38]
+
+
+2018-02-08 11:33:21 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 52]
+
+
+2018-02-08 11:33:21 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 52]
+
+
+2018-02-08 11:34:14 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 52]
+
+
+2018-02-08 11:34:14 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 52]
+
+
+2018-02-08 11:34:21 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 52]
+
+
+2018-02-08 11:34:21 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 52]
+
+
+2018-02-08 11:41:22 Notice: Notice (8): Undefined variable: orderStatus in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 44]
+
+
+2018-02-08 11:41:25 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-08 11:41:29 Notice: Notice (8): Undefined variable: orderStatus in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/add.ctp, line 44]
+
+
+2018-02-08 11:53:38 Notice: Notice (8): Undefined variable: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 128]
+
+
+2018-02-08 11:54:00 Notice: Notice (8): Undefined variable: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php, line 128]
+
+
+2018-02-08 12:11:34 Notice: Notice (8): Undefined index: shift_start in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Model/Table/VendorsTable.php, line 75]
+
+
+2018-02-08 12:11:34 Notice: Notice (8): Undefined index: shift_end in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Model/Table/VendorsTable.php, line 76]
+
+
+2018-02-08 12:11:57 Notice: Notice (8): Undefined index: shift_start in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/index.ctp, line 68]
+
+
+2018-02-08 12:11:57 Notice: Notice (8): Undefined index: shift_end in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/index.ctp, line 68]
+
+
+2018-02-08 12:11:57 Notice: Notice (8): Undefined index: shift_start in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/index.ctp, line 68]
+
+
+2018-02-08 12:11:57 Notice: Notice (8): Undefined index: shift_end in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/index.ctp, line 68]
+
+
+2018-02-08 12:13:02 Notice: Notice (8): Undefined index: shift_start in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Model/Table/VendorsTable.php, line 38]
+
+
+2018-02-08 12:13:02 Notice: Notice (8): Undefined index: shift_end in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Model/Table/VendorsTable.php, line 39]
+
+
+2018-02-08 12:13:18 Notice: Notice (8): Undefined index: shift_start in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Model/Table/VendorsTable.php, line 38]
+
+
+2018-02-08 12:13:18 Notice: Notice (8): Undefined index: shift_end in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Model/Table/VendorsTable.php, line 39]
+
+
+2018-02-08 12:33:52 Notice: Notice (8): Undefined index: shift_start in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/edit.ctp, line 157]
+
+
+2018-02-08 12:33:52 Notice: Notice (8): Undefined index: shift_end in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/edit.ctp, line 162]
+
+
+2018-02-08 14:17:52 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-08 14:46:08 Notice: Notice (8): Undefined index: created in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2293]
+
+
+2018-02-08 18:25:37 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 161]
+
+
+2018-02-08 18:25:54 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-08 18:26:14 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-08 18:26:21 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-08 18:26:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-09 12:35:09 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-09 19:10:02 Notice: Notice (8): Undefined index: shift_start in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/edit.ctp, line 157]
+
+
+2018-02-09 19:10:02 Notice: Notice (8): Undefined index: shift_end in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/edit.ctp, line 162]
+
+
+2018-02-09 19:11:20 Notice: Notice (8): Undefined index: shift_start in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/edit.ctp, line 157]
+
+
+2018-02-09 19:11:20 Notice: Notice (8): Undefined index: shift_end in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/edit.ctp, line 162]
+
+
+2018-02-09 19:11:27 Notice: Notice (8): Undefined index: shift_start in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/edit.ctp, line 157]
+
+
+2018-02-09 19:11:27 Notice: Notice (8): Undefined index: shift_end in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/edit.ctp, line 162]
+
+
+2018-02-09 19:11:38 Notice: Notice (8): Undefined index: shift_start in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/edit.ctp, line 157]
+
+
+2018-02-09 19:11:38 Notice: Notice (8): Undefined index: shift_end in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/edit.ctp, line 162]
+
+

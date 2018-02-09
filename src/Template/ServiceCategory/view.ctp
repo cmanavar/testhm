@@ -17,13 +17,6 @@
         </div>        
         <!-- /.col-lg-12 -->
     </div>
-    <div class="col-lg-12">
-        <div class="row">
-            <div class="col-md-12">
-
-            </div>
-        </div>
-    </div>
     <div class="col-lg-12 sp-list">        
         <div class="row" id="scroll">
             <div class="panel panel-primary">
@@ -32,7 +25,6 @@
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
-                    <?php //echo "<pre>"; print_r($category_detail); exit; ?>
                     <div class="row">
                         <div class="col-md-12">
                             <table class="table table-bordered">

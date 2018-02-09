@@ -46,7 +46,6 @@ $controller = $this->request->params['controller'];
         <?php echo $this->Html->css('custom/custom.css'); ?>
         <?php echo $this->Html->css('custom/menu/bootstrap-theme.min.css'); ?>
         <?php echo $this->Html->css('custom/menu/yamm.css'); ?>
-        <?php echo $this->Html->css('custom/menu/yamm.css'); ?>
         <?php echo $this->Html->css('custom/green.css'); ?>
         <?php echo $this->Html->css('selectize.css'); ?>
         <?php echo $this->Html->css('jquery-ui.css'); ?>

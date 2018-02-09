@@ -314,6 +314,20 @@ class AppController extends Controller {
         return (isset($user['phone_no']) && ($user['phone_no'] != '')) ? $user['phone_no'] : '-';
     }
 
+    public function getUserProfilePicture($userId) {
+        $userTable = TableRegistry::get('Users');
+        $user = $userTable->find()->select(['profile_pic'])->where(['id' => $userId])->hydrate(false)->first();
+        return (isset($user['profile_pic']) && ($user['profile_pic'] != '')) ? IMAGE_URL_PATH . 'users/' . $user['profile_pic'] : IMAGE_URL_PATH . 'users/user.png';
+    }
+
+    public function getUserType($userId) {
+        $userTable = TableRegistry::get('Users');
+        $user = $userTable->find()->select(['user_type'])->where(['id' => $userId])->hydrate(false)->first();
+        return (isset($user['user_type']) && ($user['user_type'] != '')) ? $user['user_type'] : '-';
+    }
+    
+    
+
     public function getOrderId($id) {
         $orderTable = TableRegistry::get('Orders');
         $order = $orderTable->find()->select(['order_id'])->where(['id' => $id])->hydrate(false)->first();
@@ -403,6 +417,10 @@ class AppController extends Controller {
                 $this->redirect(array('controller' => 'Pages', 'action' => 'permissiondenied'));
             }
         }
+    }
+    
+    public function getAllOrderStatus() {
+        return ['PENDING' => 'PENDING', 'PLACED' => 'PLACED', 'SCHEDULE' => 'SCHEDULE', 'COMPLETED' => 'COMPLETED', 'CANCELLED' => 'CANCELLED'];
     }
 
 }

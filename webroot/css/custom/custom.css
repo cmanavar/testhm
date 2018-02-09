@@ -32,7 +32,13 @@
         padding-top: 7px;
     }
     .navbar-toggle{float: left;margin: 8px;}
-    .navbar-default .navbar-toggle .icon-bar{background-color:#FFF;}
+    .navbar-default .navbar-toggle .icon-bar{background-color:#555;}
+    .navbar-default .navbar-toggle {
+        border-color: #555;
+    }
+    .brand span {
+        color: #555;
+    }
 }
 @media (max-width: 1200px) {
     .horizonatalmenu  {
@@ -1097,6 +1103,11 @@ input[type=radio], input[type=checkbox] {
 .family-label {
     padding-bottom: 5px;
 }*/
+@media (max-width: 1200px) {
+    .navbar-toggle {
+        display: block !important;
+    }
+}
 .navbar-logout{
     height: 30px !important;
 }
@@ -1107,12 +1118,12 @@ input[type=radio], input[type=checkbox] {
 
 #delete .modal-header {
     background-color: #b92c28;
-    
+
 }
 
 #logOut .modal-header {
     background-color: #245580;
-    
+
 }
 
 .modal-header h4{
@@ -1129,5 +1140,53 @@ input[type=radio], input[type=checkbox] {
 }
 
 .navbar-default {
-    background-image: linear-gradient(to bottom,#fff 0,#888 100%) !important;
+    background-image: linear-gradient(to bottom,#fff 0,#aaa 100%) !important;
+}
+
+@media (min-width: 1200px) {
+    .desktopview {
+        display: block;
+    }
+    .mobileview {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .mobileview {
+        display: block;
+    }
+    .desktopview {
+        display: none;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    .navbar .container a {
+        font-size: 14px;
+    }
+    .modal-footer .btn+.btn {
+        margin-bottom: 15px;
+    }
+    .radio-parallel {
+        padding-left: 0px;
+    }
+    .form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
+        margin-bottom: 10px;
+    }
+    .icon_for_text {
+        padding: 14px 12px;
+    }
+    .login-box .form-control {
+        padding: 6px 30px; 
+    }
+}
+
+.navbar .container a {
+    color: #555;    
+}
+
+.brand{
+    padding: 15px 15px;
+    line-height: 50px;
 }

@@ -167,8 +167,6 @@ class VendorsController extends AppController {
                                 }
                                 $vendor = $this->VendorDetails->patchEntity($vendor, $vendorData);
                                 $vendor->service_id = $this->request->data['service_id'];
-                                $vendor->shift_start = $this->request->data['shift_start'];
-                                $vendor->shift_end = $this->request->data['shift_end'];
                                 $vendor->created = date("Y-m-d H:i:s");
                                 $vendor->created_by = $this->request->session()->read('Auth.User.id');
                                 if ($this->VendorDetails->save($vendor)) {
@@ -283,8 +281,6 @@ class VendorsController extends AppController {
                         $vData = [];
                         $vData['user_id'] = $id;
                         $vData['service_id'] = $this->request->data['service_id'];
-                        $vData['shift_start'] = $this->request->data['shift_start'];
-                        $vData['shift_end'] = $this->request->data['shift_end'];
                         $vDetails = $this->VendorDetails->patchEntity($vDetails, $vData);
                         if (isset($this->request->data['agreement']['name']) && $this->request->data['agreement']['name'] != '') {
                             $filename = '';
@@ -444,7 +440,7 @@ class VendorsController extends AppController {
                         $rslt['name'] = $user['name'];
                         $rslt['email'] = $user['email'];
                         $rslt['phone_no'] = $user['phone_no'];
-                        $rslt['profile_pic'] = ($user['profile_pic'] != '') ? IMAGE_URL_PATH . 'users/' . $user['profile_pic'] : IMAGE_URL_PATH . 'users/user.png';
+                        $rslt['profile_pic'] = ($user['profile_pic'] != '') ? IMAGE_URL_PATH . 'profile_picture/' . $user['profile_pic'] : IMAGE_URL_PATH . 'users/user.png';
                         $rslt['user_type'] = $user['user_type'];
                         $this->success('LOGIN!', $rslt);
                     } else {

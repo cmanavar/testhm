@@ -35,8 +35,6 @@ class VendorsTable extends Table {
         $vendorsData = $vendorsTable->find('all')->where(['user_id' => $vendors['id']])->hydrate(false)->first();
         $vendors['service_id'] = $vendorsData['service_id'];
         $vendors['service_name'] = $this->getServiceName($vendorsData['service_id']);
-        $vendors['shift_start'] = $vendorsData['shift_start'];
-        $vendors['shift_end'] = $vendorsData['shift_end'];
         $vendors['agreement'] = $vendorsData['agreement'];
         $vendors['id_proof'] = $vendorsData['id_proof'];
         return $vendors;
@@ -72,8 +70,6 @@ class VendorsTable extends Table {
             $vendorsData = $vendorsTable->find('all')->where(['user_id' => $val['id']])->hydrate(false)->first();
             $vendors[$key]['service_id'] = $vendorsData['service_id'];
             $vendors[$key]['service_name'] = $this->getServiceName($vendorsData['service_id']);
-            $vendors[$key]['shift_start'] = $vendorsData['shift_start'];
-            $vendors[$key]['shift_end'] = $vendorsData['shift_end'];
             $vendors[$key]['agreement'] = $vendorsData['agreement'];
             $vendors[$key]['id_proof'] = $vendorsData['id_proof'];
         }

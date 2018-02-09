@@ -14,7 +14,7 @@
         <div class="col-md-12">
             <h1 class="page-header">
                 <i class="fa fa-shopping-cart fa-fw"></i>  ORDERS
-  <!--                <a href="<?php echo $this->Url->build(["controller" => "Questions", "action" => "add", $service_id]); ?>"><button class="btn btn-primary btn-sm pull-right" >ADD NEW QUESTION</button></a>-->
+                <a href="<?php echo $this->Url->build(["controller" => "Orders", "action" => "add"]); ?>"><button class="btn btn-primary btn-sm pull-right" >ADD NEW ORDER</button></a>
             </h1>
         </div>        
         <!-- /.col-lg-12 -->
@@ -44,9 +44,8 @@
                                                         <th width="2%">Sr.No</th>
                                                         <th>Username</th> 
                                                         <th>User Details</th>
-                                                        <th>Order Id</th>
                                                         <th>Service Details</th>
-                                                        <th>Order Status</th>
+                                                        <th>Order Details</th>
                                                         <th>Order Time</th>
                                                         <th width="11%">Actions</th>
                                                     </tr>   
@@ -62,9 +61,6 @@
                                                                 <td style="text-align:left;" width="19%">
                                                                     <label> <span style="font-weight: bolder">Email :</span> </label> <?php echo stripslashes($order['useremail']); ?><br>
                                                                     <label> Phone : </label> <?php echo stripslashes($order['userphone']); ?>
-                                                                </td>
-                                                                <td>
-                                                                    <?= '#'.$order['order_id'] ?>
                                                                 </td>
                                                                 <td style="text-align:left;">
                                                                     <label> Service Name : </label> <?php echo $order['service_name']; ?><br>
@@ -83,13 +79,19 @@
                                                                         <label> Charge : </label> <?= $tottmps ?>
                                                                     <?php } ?>
                                                                 </td>   
-                                                                <td width="10%"><?php echo $order['status']; ?></td>   
+                                                                <td width="20%">
+                                                                    <label> Order id : </label> <?= '#' . $order['order_id'] ?><br>
+                                                                    <label> Order Status : </label> <?php echo $order['status']; ?><br>
+                                                                    <?php if (isset($order['vandor_name']) && $order['vandor_name'] != '') { ?>
+                                                                        <label> Service Expert : </label> <?php echo $order['vandor_name']; ?>
+                                                                    <?php } ?>
+                                                                </td>   
                                                                 <td width="12%" style="text-align:left;"><?php echo $order['created_at']; ?></td>
                                                                 <td width="8%">
                                                                     <?php echo $this->Html->link('', ['controller' => 'Orders', 'action' => 'view', $order['id']], ['class' => 'btn btn-info fa fa-eye', 'escape' => false, 'title' => 'VIEW']); ?>
                                                                     <?php echo $this->Html->link('', ['controller' => 'Orders', 'action' => 'edit', $order['id']], ['class' => 'btn btn-warning fa fa-pencil', 'escape' => false, 'title' => 'EDIT']); ?>
-                                                                    
-        <!--                                                                                <a class='btn btn-primary btn-sm' href='#'><i class='fa fa-lg fa-pencil'></i></a>-->
+
+                        <!--                                                                                <a class='btn btn-primary btn-sm' href='#'><i class='fa fa-lg fa-pencil'></i></a>-->
                                                                 </td>    
                                                             </tr>
 

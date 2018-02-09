@@ -91,10 +91,6 @@
                                         <td><?= $vendor['service_name']; ?></td>
                                     </tr>
                                     <tr>
-                                        <td width="30%"><label class="control-label">Shift Timing</label></td>
-                                        <td><?= $vendor['shift_start'] . ' - ' . $vendor['shift_end']; ?></td>
-                                    </tr>
-                                    <tr>
                                         <td width="30%"><label class="control-label">Status</label></td>
                                         <td><?= (isset($vendor['active']) && $vendor['active'] == 'Y') ? 'ACTIVE' : 'INACTIVE'; ?></td>
                                     </tr>

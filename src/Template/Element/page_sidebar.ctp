@@ -28,8 +28,9 @@ $userType = $this->request->session()->read('Auth.User.user_type');
             <div class="modal-body" style="color:#000">
                 <p>ARE YOU SURE YOU WANT TO LOG OUT?</p>
             </div>
-            <div class="modal-footer" id=""> <a href="<?php echo $this->Url->build(["controller" => "Users", "action" => "logout"]); ?>" class="btn btn-primary" id="logout">YES</a>
-                <button type="button" class="btn btn-default" data-dismiss="modal">NO</button>
+            <div class="modal-footer" id=""> 
+                <a href="<?php echo $this->Url->build(["controller" => "Users", "action" => "logout"]); ?>" class="btn btn-primary" id="logout">YES</a>
+                <a class="btn btn-default" href="#" data-dismiss="modal">NO</a>
             </div>
         </div>
     </div>
@@ -102,7 +103,7 @@ $userType = $this->request->session()->read('Auth.User.user_type');
         </div>
     </div>
 </div>
-<div class="navbar navbar-default yamm" style="border: none;">
+<div class="navbar navbar-default yamm desktopview" style="border: none;">
     <div class="col-md-1">
         <div class="navbar-header">
             <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle">
@@ -146,11 +147,11 @@ $userType = $this->request->session()->read('Auth.User.user_type');
                             <li class="<?php echo ($this->name == 'Vendors' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>"><a href="<?php echo $this->Url->build(["controller" => "Vendors", "action" => "index"]); ?>"><i class="fa fa-user"></i> &nbsp;VENDORS</a> </li>
                         </ul>
                     </li>
-<!--                    <li class="<?php echo ($this->name == 'Members' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>">
+                    <li class="<?php echo ($this->name == 'Members' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>">
                         <a href="<?php echo $this->Url->build(["controller" => "Members", "action" => "index"]); ?>">
                             <i class="fa fa-user fa-fw"></i> MEMBERS
                         </a>
-                    </li>-->
+                    </li>
                     <li class="<?php echo ($this->name == 'Orders' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>">
                         <a href="<?php echo $this->Url->build(["controller" => "Orders", "action" => "index"]); ?>">
                             <i class="fa fa-shopping-cart fa-fw"></i> ORDERS
@@ -183,10 +184,6 @@ $userType = $this->request->session()->read('Auth.User.user_type');
     <div class="col-md-1"></div>
 
     <div class="col-md-2">
-<!--                <div class="navbar-header">
-                    <a class="navbar-logout" href="#" data-target="#logOut" data-toggle="modal"><i class="fa fa-sign-out fa-fw"></i> LOGOUT</a>
-        
-                </div>-->
         <ul class="nav navbar-top-links navbar-right">
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
@@ -199,5 +196,86 @@ $userType = $this->request->session()->read('Auth.User.user_type');
                 </ul>
             </li>
         </ul>
+    </div>
+</div>
+<div class="navbar navbar-default yamm mobileview">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target="#nav1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#"> <span style="font-size:28px;">H-MEN</span> </a>
+            <div class="nav-collapse collapse" id="nav1">
+                <ul class="nav">
+                    <li>
+                        <a href="<?php echo $this->Url->build(["controller" => "Dashboard", "action" => "index"]); ?>" class="dropdown-toggle"> <i class="fa fa-home fa-fw"></i>DASHBOARD </a>
+                    </li>
+                    <li class="<?php echo (in_array($this->name, array('Services', 'ServiceCategory'))) ? $active : ""; ?>">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href=""><i class="fa fa-cogs fa-fw"></i> SERVICES <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="<?php echo (in_array($this->name, array('ServiceCategory'))) ? $selected : ""; ?>"><a href="<?php echo $this->Url->build(["controller" => "ServiceCategory", "action" => "index"]); ?>"><i class="fa fa-tags"></i> &nbsp;Categories</a> </li>
+                            <li class="divider"></li>
+                            <li class="<?php echo (in_array($this->name, array('Services'))) ? $selected : ""; ?>"><a href="<?php echo $this->Url->build(["controller" => "Services", "action" => "index"]); ?>"><i class="fa fa-asterisk"></i> &nbsp;Services</a> </li>
+                        </ul>
+                    </li>
+                    <li class="<?php echo (in_array($this->name, array('Users'))) ? $active : ""; ?>">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href=""><i class="fa fa-users fa-fw"></i> USERS <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <?php if (isset($userType) && in_array($userType, ['ADMIN'])) { ?>
+                                <li class=""><a href="<?php echo $this->Url->build(["controller" => "Users", "action" => "index"]); ?>"><i class="fa fa-user"></i> &nbsp;HMEN USERS</a> </li>
+                                <li class="divider"></li>
+                            <?php } ?>
+                            <li class=""><a href="<?php echo $this->Url->build(["controller" => "Users", "action" => "appuser"]); ?>"><i class="fa fa-user"></i> &nbsp;APP USERS</a> </li>
+                            <li class="divider"></li>
+                            <li class="<?php echo ($this->name == 'Members' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>"><a href="<?php echo $this->Url->build(["controller" => "Members", "action" => "index"]); ?>"><i class="fa fa-user"></i> &nbsp;MEMBERS</a> </li>
+                            <li class="divider"></li>
+                            <li class="<?php echo ($this->name == 'Vendors' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>"><a href="<?php echo $this->Url->build(["controller" => "Vendors", "action" => "index"]); ?>"><i class="fa fa-user"></i> &nbsp;VENDORS</a> </li>
+                        </ul>
+                    </li>
+                    <li class="<?php echo ($this->name == 'Members' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>">
+                        <a href="<?php echo $this->Url->build(["controller" => "Members", "action" => "index"]); ?>">
+                            <i class="fa fa-user fa-fw"></i> MEMBERS
+                        </a>
+                    </li>
+                    <li class="<?php echo ($this->name == 'Orders' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>">
+                        <a href="<?php echo $this->Url->build(["controller" => "Orders", "action" => "index"]); ?>">
+                            <i class="fa fa-shopping-cart fa-fw"></i> ORDERS
+                        </a>
+                    </li>
+                    <li class="<?php echo ($this->name == 'Settings') ? $active : ""; ?>">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href=""><i class="fa fa-gears fa-fw"></i> SETTINGS <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class=""><a href="<?php echo $this->Url->build(["controller" => "Settings", "action" => "banner"]); ?>"><i class="fa fa-file-image-o"></i> &nbsp;BANNERS</a> </li>
+                            <li class="divider"></li>
+                            <li class=""><a href="<?php echo $this->Url->build(["controller" => "Settings", "action" => "faq"]); ?>"><i class="fa fa-question-circle"></i> &nbsp;FAQS</a> </li>
+                            <li class="divider"></li>
+                            <li class=""><a href="<?php echo $this->Url->build(["controller" => "Settings", "action" => "coupon"]); ?>"><i class="fa fa-tag"></i> &nbsp;COUPON</a> </li>
+                        </ul>
+                    </li>
+                    <li class="<?php echo ($this->name == 'Surveys' && in_array($this->request->action, array('index', 'view', 'edit'))) ? $active : ""; ?>">
+                        <a href="<?php echo $this->Url->build(["controller" => "Surveys", "action" => "index"]); ?>">
+                            <i class="fa fa-user fa-fw"></i> SURVEYS
+                        </a>
+                    </li>
+                    <li class="<?php echo ($this->name == 'Reports' && in_array($this->request->action, array('index', 'salesperformance', 'surveys'))) ? $active : ""; ?>">
+                        <a href="<?php echo $this->Url->build(["controller" => "Reports", "action" => "index"]); ?>">
+                            <i class="fa fa-book fa-fw"></i> REPORTS
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
+                            <i class="fa fa-user fa-fw"></i> <?= $this->request->session()->read('Auth.User.name'); ?> <i class="fa fa-caret-down"></i> 
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li>
+                                <a class="navbar-logout" href="#" data-target="#logOut" data-toggle="modal"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
