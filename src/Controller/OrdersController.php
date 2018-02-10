@@ -75,6 +75,9 @@ class OrdersController extends AppController {
             $tmp['total_amount'] = number_format($order['total_amount'], 2);
             $tmp['status'] = $order['status'];
             if (isset($order['status']) && !empty($order['status'])) {
+                if ($order['status'] == 'PLACED') {
+                    $tmp['vandor_name'] = $this->getUserName($order['vendors_id']);
+                }
                 if ($order['status'] == 'SCHEDULE') {
                     $tmp['vandor_name'] = $this->getUserName($order['vendors_id']);
                 }

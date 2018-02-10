@@ -53,6 +53,7 @@
                                                 <tbody>
                                                     <?php
                                                     if (!empty($orders)) {
+                                                        //pr($orders); 
                                                         foreach ($orders as $key => $order) {
                                                             ?>
                                                             <tr>

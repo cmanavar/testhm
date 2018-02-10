@@ -102,6 +102,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/payment/response', ['controller' => 'Payments', 'action' => 'storeResponse']);
     $routes->connect('/webservices/vendor/order/lists', ['controller' => 'Webservices', 'action' => 'assignedorders']);
     $routes->connect('/webservices/vendor/order/details', ['controller' => 'Webservices', 'action' => 'assignorderdetails']);
+    $routes->connect('/webservices/vendor/order/request', ['controller' => 'Webservices', 'action' => 'orderRequest']);
     
     $routes->connect('/test', ['controller' => 'Webservices', 'action' => 'testNotifications']);
     

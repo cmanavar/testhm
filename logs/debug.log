@@ -11251,3 +11251,21 @@
 2018-02-09 19:11:38 Notice: Notice (8): Undefined index: shift_end in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/edit.ctp, line 162]
 
 
+2018-02-09 20:57:19 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-09 20:57:32 Notice: Notice (8): Undefined index: shift_start in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/edit.ctp, line 157]
+
+
+2018-02-09 20:57:32 Notice: Notice (8): Undefined index: shift_end in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/edit.ctp, line 162]
+
+
+2018-02-10 10:01:11 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-10 10:01:19 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-10 10:17:00 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+

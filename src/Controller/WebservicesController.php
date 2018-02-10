@@ -45,7 +45,7 @@ class WebservicesController extends AppController {
             'cartOrderPlaced', 'forgorPassword', 'changePassword', 'changeVandorPassword', 'applyCouponCode', 'walletDetails', 'getCartId', 'orderDetails',
             'orderLists', 'orderQuery', 'orderSummary', 'storeReview', 'updateOrder', 'serviceReviews', 'getquestionArr', 'surverysubmit', 'surverylists',
             'serviceLists', 'addMembership', 'planLists', 'referenceUsers', 'listMembership', 'appoinmentLists', 'appoinmentDetails',
-            'appoinmentCompleted', 'appoinmentDeclined', 'appoinmentInterested', 'assignedorders', 'assignorderdetails', 'testNotifications']);
+            'appoinmentCompleted', 'appoinmentDeclined', 'appoinmentInterested', 'assignedorders', 'assignorderdetails', 'orderRequest', 'testNotifications']);
     }
 
     public function counteunreadmsg() {
@@ -2427,8 +2427,55 @@ class WebservicesController extends AppController {
                 $orderDetails['services'] = $finalOrderDetails;
                 $this->success('order detail fetched successfully', $orderDetails);
             } else {
-                $this->wrong('Invalid API key.');
+                $this->wrong('Order data not found!');
             }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function orderRequest() {
+        $this->loadModel('Orders');
+        $user_id = $this->checkVerifyApiKey('VENDOR');
+        if (isset($user_id) && $user_id != '') {
+            $requestArr = $this->getInputArr();
+            $requiredFields = array(
+                'Order Id' => (isset($requestArr['order_id']) && $requestArr['order_id'] != '') ? $requestArr['order_id'] : '',
+                'Order Request Status' => (isset($requestArr['status']) && $requestArr['status'] != '') ? $requestArr['status'] : '',
+            );
+            $validate = $this->checkRequiredFields($requiredFields);
+            if ($validate != "") {
+                $this->wrong($validate);
+            }
+            $order_id = $requestArr['order_id'];
+            $status = $requestArr['status'];
+            $orders = [];
+            $getOrderId = $this->Orders->find('all')->select(['id'])->where(['order_id' => $order_id])->hydrate(false)->first();
+            if (isset($getOrderId['id']) && $getOrderId['id'] != '') {
+                $id = $getOrderId['id'];
+                $order = $this->Orders->get($id);
+                $updateFields = [];
+                if ($status == 'ACCEPT') {
+                    $updateFields['status'] = 'SCHEDULE';
+                    $msg = "Order Accepted!";
+                } else {
+                    $updateFields['status'] = 'PENDING';
+                    $updateFields['vendors_id'] = 0;
+                    $msg = "Order Rejected!";
+                }
+                $order = $this->Orders->patchEntity($order, $updateFields);
+                $order->modified_by = $user_id;
+                $order->modified_at = date('Y-m-d H:i:s');
+                if ($this->Orders->save($order)) {
+                    $this->success($msg);
+                } else {
+                    $this->wrong('Order status update failed.');
+                }
+            } else {
+                $this->wrong('Order data not found.');
+            }
+        } else {
+            $this->wrong('Invalid API key.');
         }
     }
 
