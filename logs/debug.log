@@ -11344,3 +11344,9 @@
 2018-02-10 12:59:36 Notice: Notice (8): A non well formed numeric value encountered in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/view.ctp, line 155]
 
 
+2018-02-10 15:26:48 Notice: Notice (8): Undefined variable: unseenCount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2640]
+
+
+2018-02-10 15:26:48 Notice: Notice (8): Undefined variable: msgList in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2640]
+
+

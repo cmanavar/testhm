@@ -122,6 +122,7 @@ define('VENDOR_AGREEMENT_PATH', 'vendors/agreements/');
 define('VENDOR_IDPROOF_PATH', 'vendors/idproof/');
 
 define('GST_TAX', 5);
+define('VISITING_CHARGE', 100.00);
 define('REFERRAL_COMISSION', 100.00);
 define('GREEN_CASH_REWERDS_AMOUNT', 100.00);
 define('EMAIL_FROM_NAME', 'Uncode Lab');

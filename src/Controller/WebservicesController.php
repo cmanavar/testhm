@@ -46,7 +46,7 @@ class WebservicesController extends AppController {
             'orderLists', 'orderQuery', 'orderSummary', 'storeReview', 'updateOrder', 'serviceReviews', 'getquestionArr', 'surverysubmit', 'surverylists',
             'serviceLists', 'addMembership', 'planLists', 'referenceUsers', 'listMembership', 'appoinmentLists', 'appoinmentDetails',
             'appoinmentCompleted', 'appoinmentDeclined', 'appoinmentInterested', 'assignedorders', 'assignorderdetails', 'orderRequest',
-            'vendorOrderUpdate', 'testNotifications']);
+            'vendorOrderUpdate', 'vendorJobCounts', 'vendorJobLists', 'vendorJobDetails', 'testNotifications']);
     }
 
     public function counteunreadmsg() {
@@ -2535,6 +2535,11 @@ class WebservicesController extends AppController {
                 }
                 if ($action == 'VISIT_CHARGE') {
                     $updateFields['is_visiting_charge'] = 'Y';
+                    $total_price = VISITING_CHARGE;
+                    $tax = $total_price * GST_TAX / 100;
+                    $updateFields['amount'] = $total_price - $tax;
+                    $updateFields['tax'] = $tax;
+                    $updateFields['total_amount'] = $total_price;
                     $updateFields['status'] = 'CANCELLED';
                     $updateFields['payment_status'] = 'PAID';
                     $msg = 'Order Cancelled Successfully!';
@@ -2549,6 +2554,114 @@ class WebservicesController extends AppController {
                 } else {
                     $this->wrong('Order status update failed.');
                 }
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function vendorJobCounts() {
+        $this->loadModel('Orders');
+        $user_id = $this->checkVerifyApiKey('VENDOR');
+        if (isset($user_id) && $user_id != '') {
+            $countArr = [];
+            $countArr['ongoing'] = $this->Orders->find('all')->where(['vendors_id' => $user_id, 'status IN' => ['PLACED', 'ON_INSPECTION']])->hydrate(false)->count();
+            $countArr['schedule'] = $this->Orders->find('all')->where(['vendors_id' => $user_id, 'status' => 'SCHEDULE'])->hydrate(false)->count();
+            $countArr['completed'] = $this->Orders->find('all')->where(['vendors_id' => $user_id, 'status' => 'COMPLETED'])->hydrate(false)->count();
+            $countArr['cancelled'] = $this->Orders->find('all')->where(['vendors_id' => $user_id, 'status' => 'CANCELLED'])->hydrate(false)->count();
+            //pr($countArr); exit;
+            $this->success('Job Counts!', $countArr);
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function vendorJobLists() {
+        $this->loadModel('Orders');
+        $user_id = $this->checkVerifyApiKey('VENDOR');
+        if (isset($user_id) && $user_id != '') {
+            $requestArr = $this->getInputArr();
+            $requiredFields = array(
+                'Order List Type' => (isset($requestArr['order_type']) && $requestArr['order_type'] != '') ? $requestArr['order_type'] : ''
+            );
+            $validate = $this->checkRequiredFields($requiredFields);
+            if ($validate != "") {
+                $this->wrong($validate);
+            }
+            $orderListType = $requestArr['order_type'];
+            if (isset($requestArr['page_no']) && $requestArr['page_no'] != '') {
+                $page_no = $requestArr['page_no'];
+            } else {
+                $page_no = 1;
+            }
+            $condArr['vendors_id'] = $user_id;
+            if ($orderListType == 'ONGOING') {
+                $condArr['status IN'] = ['PLACED', 'ON_INSPECTION'];
+            } elseif ($orderListType == 'SCHEDULE') {
+                $condArr['status'] = 'SCHEDULE';
+            } elseif ($orderListType == 'COMPLETED') {
+                $condArr['status'] = 'COMPLETED';
+            } elseif ($orderListType == 'CANCELLED') {
+                $condArr['status'] = 'CANCELLED';
+            } else {
+                $this->wrong('Invalid List type');
+            }
+            $orderLists = $this->Orders->find('all')->where($condArr)->order(['id' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no)->hydrate(false)->toArray();
+            if (isset($orderLists) && !empty($orderLists)) {
+                $orders = [];
+                foreach ($orderLists as $key => $val) {
+                    $tmp = [];
+                    $tmp['id'] = $val['id'];
+                    $tmp['order_id'] = $val['order_id'];
+                    $tmp['user_id'] = $val['user_id'];
+                    $tmp['username'] = $this->getUserName($val['user_id']);
+                    $tmp['userimage'] = $this->getUserProfilePicture($val['user_id']);
+                    $tmp['status'] = ucfirst(strtolower($val['status']));
+                    $tmp['created_at'] = $val['created_at']->format('d-M-Y');
+                    $orders[] = $tmp;
+                }
+                $nextPageReviews = $this->Orders->find('all')->where($condArr)->order(['id' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no + 1)->hydrate(false)->toArray();
+                $next_page = (!empty($nextPageReviews)) ? true : false;
+                $resp_data = ['orders' => $orders, 'next_page' => $next_page];
+                $this->success('Orders fetched successfully.', $resp_data);
+            } else {
+                $resp_data = ['orders' => $orderLists];
+                $this->success('Orders fetched successfully.', $resp_data);
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function vendorJobDetails() {
+        $this->loadModel('Orders');
+        $user_id = $this->checkVerifyApiKey('VENDOR');
+        if (isset($user_id) && $user_id != '') {
+            $requestArr = $this->getInputArr();
+            $requiredFields = array(
+                'Order Id' => (isset($requestArr['order_id']) && $requestArr['order_id'] != '') ? $requestArr['order_id'] : ''
+            );
+            $validate = $this->checkRequiredFields($requiredFields);
+            if ($validate != "") {
+                $this->wrong($validate);
+            }
+            $order_id = $requestArr['order_id'];
+            $orderDetails = $this->Orders->find('all')->where(['order_id' => $order_id])->hydrate(false)->first();
+            if (is_array($orderDetails) && !empty($orderDetails)) {
+                $rslt = [];
+                $rslt['id'] = $orderDetails['id'];
+                $rslt['user_id'] = $orderDetails['user_id'];
+                $rslt['order_id'] = $orderDetails['order_id'];
+                $rslt['username'] = $this->getUserName($orderDetails['user_id']);
+                $rslt['userphone'] = $this->getPhone($orderDetails['user_id']);
+                $rslt['useraddress'] = $orderDetails['user_address'];
+                $rslt['schedule_date'] = $orderDetails['schedule_date']->format('d-M-Y');
+                $rslt['schedule_time'] = $orderDetails['schedule_time'];
+                $rslt['total_amount'] = $orderDetails['total_amount'];
+                $rslt['payment_method'] = $orderDetails['payment_method'];
+                $this->success('Orders Details!', $rslt);
+            } else {
+                $this->wrong('Order Details Not Found!');
             }
         } else {
             $this->wrong('Invalid API key.');

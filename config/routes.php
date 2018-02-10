@@ -104,6 +104,9 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/vendor/order/details', ['controller' => 'Webservices', 'action' => 'assignorderdetails']);
     $routes->connect('/webservices/vendor/order/request', ['controller' => 'Webservices', 'action' => 'orderRequest']);
     $routes->connect('/webservices/vendor/order/update', ['controller' => 'Webservices', 'action' => 'vendorOrderUpdate']);
+    $routes->connect('/webservices/vendor/job/counts', ['controller' => 'Webservices', 'action' => 'vendorJobCounts']);
+    $routes->connect('/webservices/vendor/job/lists', ['controller' => 'Webservices', 'action' => 'vendorJobLists']);
+    $routes->connect('/webservices/vendor/job/details', ['controller' => 'Webservices', 'action' => 'vendorJobDetails']);
     $routes->connect('/test', ['controller' => 'Webservices', 'action' => 'testNotifications']);
     
     
