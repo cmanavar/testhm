@@ -431,5 +431,11 @@ class AppController extends Controller {
         $orderCounts = $ordersTable->find()->where(['payment_method' => 'CREDITS', 'user_id' => $userId, 'status' => 'COMPLETED'])->count();
         return $totCredits - $orderCounts;
     }
+    
+    public function getServiceImagePath($id) {
+        $serviceTable = TableRegistry::get('Services');
+        $services = $serviceTable->find()->select(['square_image'])->where(['id' => $id])->hydrate(false)->first();
+        return (isset($services['square_image']) && $services['square_image'] != '') ? IMAGE_URL_PATH . 'services/square/' . $services['square_image'] : '';
+    }
 
 }

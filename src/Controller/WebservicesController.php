@@ -46,7 +46,7 @@ class WebservicesController extends AppController {
             'orderLists', 'orderQuery', 'orderSummary', 'storeReview', 'updateOrder', 'serviceReviews', 'getquestionArr', 'surverysubmit', 'surverylists',
             'serviceLists', 'addMembership', 'planLists', 'referenceUsers', 'listMembership', 'appoinmentLists', 'appoinmentDetails',
             'appoinmentCompleted', 'appoinmentDeclined', 'appoinmentInterested', 'assignedorders', 'assignorderdetails', 'orderRequest',
-            'vendorOrderUpdate', 'vendorJobCounts', 'vendorJobLists', 'vendorJobDetails', 'testNotifications']);
+            'vendorOrderUpdate', 'vendorJobCounts', 'vendorJobLists', 'vendorJobDetails', 'vendorReviewsDetails', 'vendorOrderLists', 'testNotifications']);
     }
 
     public function counteunreadmsg() {
@@ -379,7 +379,6 @@ class WebservicesController extends AppController {
 
     public function categoryList() {
         $this->loadModel('ServiceCategory');
-// Get Category Icon - Start
         $categoryIcon = [];
         $category = $this->ServiceCategory->find('all')->select(['id', 'name', 'banner_image'])->where(['status' => 'ACTIVE'])->order(['order_id' => 'ASC'])->hydrate(false)->toArray();
         foreach ($category as $val) {
@@ -391,7 +390,6 @@ class WebservicesController extends AppController {
                 $categoryIcon[] = $tmp;
             }
         }
-// Get Category Icon - End
         $this->success('Homepage Data Fateched!', $categoryIcon);
     }
 
@@ -1654,7 +1652,7 @@ class WebservicesController extends AppController {
                 $query->created = date('Y-m-d H:i:s');
                 $query->modified = date('Y-m-d H:i:s');
                 if ($this->OrderQueries->save($query)) {
-                    $this->wrong('Query is Submitted Successfully!');
+                    $this->success('Query is Submitted Successfully!');
                 } else {
                     $this->wrong('Query is not Submitted!');
                 }
@@ -1698,6 +1696,7 @@ class WebservicesController extends AppController {
             $requestArr = $this->getInputArr();
             $requiredFields = array(
                 'Service Id' => (isset($requestArr['service_id']) && $requestArr['service_id'] != '') ? $requestArr['service_id'] : '',
+                'Order Id' => (isset($requestArr['order_id']) && $requestArr['order_id'] != '') ? $requestArr['order_id'] : '',
                 'Review Title' => (isset($requestArr['review_title']) && $requestArr['review_title'] != '') ? $requestArr['review_title'] : '',
                 'Review Description' => (isset($requestArr['review_description']) && $requestArr['review_description'] != '') ? $requestArr['review_description'] : '',
                 'Review Rattings' => (isset($requestArr['review_rates']) && $requestArr['review_rates'] != '') ? $requestArr['review_rates'] : '',
@@ -1710,6 +1709,7 @@ class WebservicesController extends AppController {
             $review = [];
             $review['user_id'] = $userId;
             $review['service_id'] = $requestArr['service_id'];
+            $review['order_id'] = $requestArr['order_id'];
             $review['review_title'] = $requestArr['review_title'];
             $review['review_description'] = $requestArr['review_description'];
             $review['review_rates'] = $requestArr['review_rates'];
@@ -1741,10 +1741,16 @@ class WebservicesController extends AppController {
             $orderExist = $this->Orders->find('all')->where(['order_id' => $order_id, 'user_id' => $userId])->hydrate(false)->first();
             if (isset($orderExist) && !empty($orderExist)) {
                 $order = $this->Orders->get($orderExist['id']);
-                $updatedData['status'] = (isset($requestArr['status']) && $requestArr['status'] != '') ? $requestArr['status'] : '';
-                $updatedData['reason_order_cancelled'] = (isset($requestArr['reason']) && $requestArr['reason'] != '') ? $requestArr['reason'] : '';
+                $updatedData['payment_method'] = (isset($requestArr['payment_method']) && $requestArr['payment_method'] != '') ? $requestArr['payment_method'] : '';
+                if (isset($requestArr['status']) && $requestArr['status'] != '') {
+                    $updatedData['status'] = $requestArr['status'];
+                }
+                if (isset($requestArr['reason']) && $requestArr['reason'] != '') {
+                    $updatedData['reason_order_cancelled'] = (isset($requestArr['reason']) && $requestArr['reason'] != '') ? $requestArr['reason'] : '';
+                }
                 $updatedData['user_id'] = $userId;
                 $order = $this->Orders->patchEntity($order, $updatedData);
+                $order->modified_by = $userId;
                 $order->modified_at = date('Y-m-d H:i:s');
                 if ($this->Orders->save($order)) {
                     $this->success('Order Update!');
@@ -2396,6 +2402,7 @@ class WebservicesController extends AppController {
                     $tmp = [];
                     $tmp['category_name'] = $this->Services->getCategoryName($order['category_id']);
                     $tmp['service_name'] = $this->Services->getServiceName($order['service_id']);
+                    $tmp['banner'] = $this->getServiceImagePAth($order['service_id']);
                     $orderDetails['images'] = $this->Services->getServiceImagePAth($order['service_id']);
                     $tmpDetails = $this->CartOrderQuestions->find('all')->where(['cart_order_id' => $order['id']])->hydrate(false)->toArray();
                     foreach ($tmpDetails as $orderQues) {
@@ -2544,6 +2551,22 @@ class WebservicesController extends AppController {
                     $updateFields['payment_status'] = 'PAID';
                     $msg = 'Order Cancelled Successfully!';
                 }
+                if ($action == 'ORDER_COMPLETED') {
+                    $updateFields['payment_method'] = 'COMPLETED';
+                    $updateFields['payment_status'] = 'PAID';
+                }
+                if ($action == 'ORDER_CANCELLED') {
+                    $requiredFields = array(
+                        'Cancellation Reason' => (isset($requestArr['order_cancellation_reason']) && $requestArr['order_cancellation_reason'] != '') ? $requestArr['order_cancellation_reason'] : '',
+                    );
+                    $validate = $this->checkRequiredFields($requiredFields);
+                    if ($validate != "") {
+                        $this->wrong($validate);
+                    }
+                    $updateFields['payment_method'] = 'CANCELLED';
+                    $updateFields['reason_order_cancelled'] = $requestArr['order_cancellation_reason'];
+                    $updateFields['payment_status'] = 'PAID';
+                }
                 //pr($updateFields);
                 $order = $this->Orders->patchEntity($order, $updateFields);
                 //pr($order); exit;
@@ -2572,12 +2595,16 @@ class WebservicesController extends AppController {
             //pr($countArr); exit;
             $tmpOngoing = $tmpSchedule = $tmpCompleted = $tmpCancelled = [];
             $tmpOngoing['name'] = 'Ongoing';
+            $tmpOngoing['image'] = IMAGE_URL_PATH . 'icons/order-placed.png';
             $tmpOngoing['count'] = $ongoingCounter;
             $tmpSchedule['name'] = 'Schedule';
+            $tmpSchedule['image'] = IMAGE_URL_PATH . 'icons/order-schedule.png';
             $tmpSchedule['count'] = $scheduleCounter;
             $tmpCompleted['name'] = 'Completed';
+            $tmpCompleted['image'] = IMAGE_URL_PATH . 'icons/order-completed.png';
             $tmpCompleted['count'] = $completedCounter;
             $tmpCancelled['name'] = 'Cancelled';
+            $tmpCancelled['image'] = IMAGE_URL_PATH . 'icons/order-cancelled.png';
             $tmpCancelled['count'] = $cancelledCounter;
             $countArr[] = $tmpOngoing;
             $countArr[] = $tmpSchedule;
@@ -2669,6 +2696,7 @@ class WebservicesController extends AppController {
                 $rslt['username'] = $this->getUserName($orderDetails['user_id']);
                 $rslt['userphone'] = $this->getPhone($orderDetails['user_id']);
                 $rslt['useraddress'] = $orderDetails['user_address'];
+                $rslt['banner'] = $this->getServiceImagePAth($orderDetails['service_id']);
                 $rslt['schedule_date'] = $orderDetails['schedule_date']->format('d-M-Y');
                 $rslt['schedule_time'] = $orderDetails['schedule_time'];
                 $rslt['total_amount'] = $orderDetails['total_amount'];
@@ -2677,6 +2705,121 @@ class WebservicesController extends AppController {
             } else {
                 $this->wrong('Order Details Not Found!');
             }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function vendorReviewsDetails() {
+        $this->loadModel('Orders');
+        $this->loadModel('ServiceReviews');
+        $user_id = $this->checkVerifyApiKey('VENDOR');
+        if (isset($user_id) && $user_id != '') {
+            $getOrdersIds = $this->Orders->find('list', ['keyField' => 'id', 'valueField' => 'order_id'])->where(['vendors_id' => $user_id])->hydrate(false)->toArray();
+            if (is_array($getOrdersIds) && !empty($getOrdersIds)) {
+                $getOrderReviews = $this->ServiceReviews->find('all')->where(['order_id IN' => $getOrdersIds])->hydrate(false)->toArray();
+                $rslt = [];
+                $totReviews = $sumReviews = $avgReviews = 0;
+                if (is_array($getOrderReviews) && !empty($getOrderReviews)) {
+                    foreach ($getOrderReviews as $key => $val) {
+                        $tmp = [];
+                        $tmp['id'] = $val['id'];
+                        $tmp['user_id'] = $val['user_id'];
+                        $tmp['user_name'] = $this->getUserName($val['user_id']);
+                        $tmp['user_image'] = $this->getUserProfilePicture($val['user_id']);
+                        $tmp['review_title'] = $val['review_title'];
+                        $tmp['review_description'] = $val['review_description'];
+                        $tmp['review_rates'] = $val['review_rates'];
+                        $tmp['created'] = $val['created']->format('d-M-Y');
+                        $totReviews = $totReviews + 1;
+                        $sumReviews = $sumReviews + $val['review_rates'];
+                        $rslt[] = $tmp;
+                    }
+                    if ($totReviews != 0) {
+                        $avgReviews = $sumReviews / $totReviews;
+                    } else {
+                        $avgReviews = 0;
+                    }
+                    $data = ['reviews' => $rslt, 'avg_rating' => number_format($avgReviews, 2)];
+                    $this->success('Order Reviews!', $data);
+                } else {
+                    $this->wrong('No Reviews!');
+                }
+            } else {
+                $this->wrong('No Order Completed!');
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function vendorOrderLists() {
+        $userId = $this->checkVerifyApiKey('VENDOR');
+        if ($userId) {
+            $this->loadModel('CartOrders');
+            $this->loadModel('Orders');
+            $this->loadModel('Services');
+            $requestArr = $this->getInputArr();
+            if (isset($requestArr['page_no']) && $requestArr['page_no'] != '') {
+                $page_no = $requestArr['page_no'];
+            } else {
+                $page_no = 1;
+            }
+            $filter_key = (isset($requestArr['filter_key']) && $requestArr['filter_key'] != '') ? $requestArr['filter_key'] : '';
+            $filter_vals = (isset($requestArr['filter_vals']) && $requestArr['filter_vals'] != '') ? $requestArr['filter_vals'] : '';
+            $filter_status = (isset($requestArr['filter_status']) && $requestArr['filter_status'] != '') ? $requestArr['filter_status'] : '';
+            $to_date = date('Y-m-d');
+            if (isset($filter_key) && ($filter_key == 'days')) {
+                $from_date = date('Y-m-d', strtotime('-' . $filter_vals . '  days', strtotime($to_date)));
+                $filter_type = 'date';
+                $filter_val = ['from_date' => $from_date, 'to_date' => $to_date, 'order_status' => (isset($filter_status) && $filter_status != '') ? $filter_status : ''];
+                $filter_titles = "Last " . $filter_vals . " days ago";
+            } else if (isset($filter_key) && ($filter_key == 'months')) {
+                $from_date = date('Y-m-d', strtotime('-' . $filter_vals . '  month', strtotime($to_date)));
+                $filter_type = 'date';
+                $filter_val = ['from_date' => $from_date, 'to_date' => $to_date, 'order_status' => (isset($filter_status) && $filter_status != '') ? $filter_status : ''];
+                $filter_titles = "Last " . $filter_vals . " months ago";
+            } else if (isset($filter_key) && ($filter_key == 'years')) {
+                $from_date = date('Y-01-01', strtotime($filter_vals . '-01-01'));
+                $filter_type = 'year';
+                $filter_val = ['year' => $filter_vals, 'order_status' => (isset($filter_status) && $filter_status != '') ? $filter_status : ''];
+                $filter_titles = "Last " . $filter_vals . " years";
+            } else {
+                $filter_type = 'date';
+                $from_date = date('Y-m-d', strtotime('-6 month', strtotime($to_date)));
+                $filter_val = ['from_date' => $from_date, 'to_date' => $to_date, 'order_status' => (isset($filter_status) && $filter_status != '') ? $filter_status : ''];
+                $filter_titles = "Last 6 months ago";
+            }
+            $condArr = [];
+            $condArr["vendors_id"] = $userId;
+            if ($filter_type == 'date') {
+                $condArr["DATE_FORMAT(created_at,'%Y-%m-%d') >="] = $filter_val['from_date'];
+                $condArr["DATE_FORMAT(created_at,'%Y-%m-%d') <="] = $filter_val['to_date'];
+            } else if ($filter_type == 'year') {
+                $condArr["DATE_FORMAT(created_at,'%Y')"] = $filter_val['year'];
+            }
+//pr($filter_val['order_status']); exit;
+            if (isset($filter_val['order_status']) && $filter_val['order_status'] != '') {
+                $condArr["status"] = $filter_val['order_status'];
+            }
+            $orderLists = [];
+            $orders = $this->Orders->find('all')->select(['cart_id', 'status', 'order_id', 'created_at'])->where($condArr)->order(['created_at' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no)->hydrate(false)->toArray();
+            if (!empty($orders)) {
+                foreach ($orders as $val) {
+                    $tmp = [];
+                    $serviceArr = $this->CartOrders->find('all')->select(['service_id'])->where(['cart_id' => $val['cart_id']])->hydrate(false)->first();
+                    $service_id = $serviceArr['service_id'];
+                    $tmp['name'] = $this->Services->getServiceName($service_id);
+                    $tmp['images'] = $this->Services->getServiceImagePath($service_id);
+                    $tmp['status'] = $val['status'];
+                    $tmp['order_id'] = $val['order_id'];
+                    $tmp['date'] = $val['created_at']->format('d-M-Y');
+                    $orderLists[] = $tmp;
+                }
+            }
+            $nextPageOrders = $this->Orders->find('all')->select(['cart_id', 'status', 'order_id', 'created_at'])->where($condArr)->order(['created_at' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no + 1)->hydrate(false)->toArray();
+            $next_page = (!empty($nextPageOrders)) ? true : false;
+            $this->success('orders fetched successfully', ["filter_name" => $filter_titles, "orders" => $orderLists, "next_page" => $next_page]);
         } else {
             $this->wrong('Invalid API key.');
         }
