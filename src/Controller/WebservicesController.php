@@ -2565,11 +2565,25 @@ class WebservicesController extends AppController {
         $user_id = $this->checkVerifyApiKey('VENDOR');
         if (isset($user_id) && $user_id != '') {
             $countArr = [];
-            $countArr['ongoing'] = $this->Orders->find('all')->where(['vendors_id' => $user_id, 'status IN' => ['PLACED', 'ON_INSPECTION']])->hydrate(false)->count();
-            $countArr['schedule'] = $this->Orders->find('all')->where(['vendors_id' => $user_id, 'status' => 'SCHEDULE'])->hydrate(false)->count();
-            $countArr['completed'] = $this->Orders->find('all')->where(['vendors_id' => $user_id, 'status' => 'COMPLETED'])->hydrate(false)->count();
-            $countArr['cancelled'] = $this->Orders->find('all')->where(['vendors_id' => $user_id, 'status' => 'CANCELLED'])->hydrate(false)->count();
+            $ongoingCounter = $this->Orders->find('all')->where(['vendors_id' => $user_id, 'status IN' => ['PLACED', 'ON_INSPECTION']])->hydrate(false)->count();
+            $scheduleCounter = $this->Orders->find('all')->where(['vendors_id' => $user_id, 'status' => 'SCHEDULE'])->hydrate(false)->count();
+            $completedCounter = $this->Orders->find('all')->where(['vendors_id' => $user_id, 'status' => 'COMPLETED'])->hydrate(false)->count();
+            $cancelledCounter = $this->Orders->find('all')->where(['vendors_id' => $user_id, 'status' => 'CANCELLED'])->hydrate(false)->count();
             //pr($countArr); exit;
+            $tmpOngoing = $tmpSchedule = $tmpCompleted = $tmpCancelled = [];
+            $tmpOngoing['name'] = 'Ongoing';
+            $tmpOngoing['count'] = $ongoingCounter;
+            $tmpSchedule['name'] = 'Schedule';
+            $tmpSchedule['count'] = $scheduleCounter;
+            $tmpCompleted['name'] = 'Completed';
+            $tmpCompleted['count'] = $completedCounter;
+            $tmpCancelled['name'] = 'Cancelled';
+            $tmpCancelled['count'] = $cancelledCounter;
+            $countArr[] = $tmpOngoing;
+            $countArr[] = $tmpSchedule;
+            $countArr[] = $tmpCompleted;
+            $countArr[] = $tmpCancelled;
+
             $this->success('Job Counts!', $countArr);
         } else {
             $this->wrong('Invalid API key.');
