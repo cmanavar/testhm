@@ -61,7 +61,8 @@
                                                                 <td width="10%"><?php echo stripslashes($order['username']) ?></td>
                                                                 <td style="text-align:left;" width="19%">
                                                                     <label> <span style="font-weight: bolder">Email :</span> </label> <?php echo stripslashes($order['useremail']); ?><br>
-                                                                    <label> Phone : </label> <?php echo stripslashes($order['userphone']); ?>
+                                                                    <label> Phone : </label> <?php echo stripslashes($order['userphone']); ?><br>
+                                                                    <label> Usertype : </label> <?php echo (isset($order['usertype']) && $order['usertype'] != '') ? stripslashes($order['usertype']) : '-'; ?>
                                                                 </td>
                                                                 <td style="text-align:left;">
                                                                     <label> Service Name : </label> <?php echo $order['service_name']; ?><br>
@@ -92,7 +93,7 @@
                                                                     <?php echo $this->Html->link('', ['controller' => 'Orders', 'action' => 'view', $order['id']], ['class' => 'btn btn-info fa fa-eye', 'escape' => false, 'title' => 'VIEW']); ?>
                                                                     <?php echo $this->Html->link('', ['controller' => 'Orders', 'action' => 'edit', $order['id']], ['class' => 'btn btn-warning fa fa-pencil', 'escape' => false, 'title' => 'EDIT']); ?>
 
-                        <!--                                                                                <a class='btn btn-primary btn-sm' href='#'><i class='fa fa-lg fa-pencil'></i></a>-->
+                                <!--                                                                                <a class='btn btn-primary btn-sm' href='#'><i class='fa fa-lg fa-pencil'></i></a>-->
                                                                 </td>    
                                                             </tr>
 

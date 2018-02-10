@@ -128,7 +128,7 @@ class MembersController extends AppController {
                         if ($paymentType == 'CHEQUE') {
                             $msgT = '';
                             $sendMsg = [];
-                            $msgT = "Congratulation, your payment with the Cheques No. " . $chequeNo . " has been received and in process. We will update you within 3-4 working days once it is clear. Membership ID: " . $memberIdArrs['membership_id'] . ". Hmen Services.";
+                            $msgT = "Congratulation, your payment with the Cheques No " . $chequeNo . " has been received and in process. We will update you within 3-4 working days once it is clear. Membership ID: " . $memberIdArrs['membership_id'] . ". Hmen Services.";
                             $sendMsg = $this->sendOtp($phone_no, $msgT);
                             if ($sendMsg['status'] == 'fail') {
                                 $this->wrong($sendMsg['msg']);
@@ -137,7 +137,7 @@ class MembersController extends AppController {
                         if ($paymentType == 'UPI') {
                             $msgT = '';
                             $sendMsg = [];
-                            $msgT = "Congratulation, your payment with the UPI Transaction ID. " . $chequeNo . " has been received and in process. It will update in next 24 hours. Membership ID: " . $memberIdArrs['membership_id'] . ". Hmen Services.";
+                            $msgT = "Congratulation, your payment with the UPI Transaction ID " . $transcationId . " has been received and in process. It will update in next 24 hours. Membership ID: " . $memberIdArrs['membership_id'] . ". Hmen Services.";
                             $sendMsg = $this->sendOtp($phone_no, $msgT);
                             if ($sendMsg['status'] == 'fail') {
                                 $this->wrong($sendMsg['msg']);

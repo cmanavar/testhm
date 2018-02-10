@@ -45,7 +45,8 @@ class WebservicesController extends AppController {
             'cartOrderPlaced', 'forgorPassword', 'changePassword', 'changeVandorPassword', 'applyCouponCode', 'walletDetails', 'getCartId', 'orderDetails',
             'orderLists', 'orderQuery', 'orderSummary', 'storeReview', 'updateOrder', 'serviceReviews', 'getquestionArr', 'surverysubmit', 'surverylists',
             'serviceLists', 'addMembership', 'planLists', 'referenceUsers', 'listMembership', 'appoinmentLists', 'appoinmentDetails',
-            'appoinmentCompleted', 'appoinmentDeclined', 'appoinmentInterested', 'assignedorders', 'assignorderdetails', 'orderRequest', 'testNotifications']);
+            'appoinmentCompleted', 'appoinmentDeclined', 'appoinmentInterested', 'assignedorders', 'assignorderdetails', 'orderRequest',
+            'vendorOrderUpdate', 'testNotifications']);
     }
 
     public function counteunreadmsg() {
@@ -102,7 +103,7 @@ class WebservicesController extends AppController {
                 $resp_data = ['unseen_count' => $unseenCount, 'messages' => $msg, 'next_page' => $next_page];
                 $this->success('Messages fetched successfully.', $resp_data);
             } else {
-                $resp_data = ['unseen_count' => $unseen_count, 'messages' => $msgList];
+                $resp_data = ['unseen_count' => $unseenCount, 'messages' => $msgList];
                 $this->success('Messages fetched successfully.', $resp_data);
             }
         } else {
@@ -115,14 +116,14 @@ class WebservicesController extends AppController {
         if ($user_id) {
             $this->loadModel('Messages');
             $requestArr = $this->getInputArr();
-            //pr($requestArr); exit;
+//pr($requestArr); exit;
             if (isset($requestArr['message_ids']) && !empty($requestArr['message_ids'])) {
                 $msgIdArr = $requestArr['message_ids'];
                 $msgarr = [];
                 foreach ($msgIdArr as $id) {
                     $msg = [];
                     $msg = $this->Messages->get($id); //LISTING USERDATA
-                    //pr($msg); exit;
+//pr($msg); exit;
                     $updateFields = ['seen' => 'Y'];
                     $msg = $this->Messages->patchEntity($msg, $updateFields);
                     $msg->modified_by = $user_id;
@@ -132,7 +133,7 @@ class WebservicesController extends AppController {
                     } else {
                         $this->wrong(Configure::read('Settings.FAIL'));
                     }
-                    //pr($msg); exit;
+//pr($msg); exit;
                 }
                 $this->success('Messages seen successfully.');
             } else {
@@ -170,7 +171,7 @@ class WebservicesController extends AppController {
                 'from_name' => EMAIL_FROM_NAME,
                 'from_mail' => EMAIL_FROM_EMAIL_ADDRESS,
             );
-            //if ($this->sendemails($fields)) {
+//if ($this->sendemails($fields)) {
             $this->success('Mail Send!');
 //            } else {
 //                $this->wrong('Sorry, Something wrong!');
@@ -258,20 +259,20 @@ class WebservicesController extends AppController {
         }
     }
 
-    //***********************************************************************************************//
-    // * Function     :  homepage
-    // * Parameter    :  
-    // * Description  :  This function used to app home page data
-    // * Author       :  Chirag Manavar
-    // * Date         :  24-October-2017
-    //***********************************************************************************************//
+//***********************************************************************************************//
+// * Function     :  homepage
+// * Parameter    :  
+// * Description  :  This function used to app home page data
+// * Author       :  Chirag Manavar
+// * Date         :  24-October-2017
+//***********************************************************************************************//
 
     public function homepage() {
         $this->loadModel('Banners');
         $this->loadModel('ServiceCategory');
         $this->loadModel('Services');
         $rsltArr = [];
-        // Get Banner Images - Start
+// Get Banner Images - Start
         $bannerImages = [];
         $images = $this->Banners->find('all')->select(['banner_images'])->where(['status' => 'ACTIVE'])->order(['order_id' => 'ASC'])->hydrate(false)->toArray();
         foreach ($images as $val) {
@@ -279,8 +280,8 @@ class WebservicesController extends AppController {
                 $bannerImages[] = IMAGE_URL_PATH . 'banners/' . $val['banner_images'];
             }
         }
-        // Get Banner Images - End
-        // Get Category Icon - Start
+// Get Banner Images - End
+// Get Category Icon - Start
         $categoryIcon = [];
         $category = $this->ServiceCategory->find('all')->select(['id', 'name', 'icon_image'])->where(['status' => 'ACTIVE', 'display_app' => 'YES'])->order(['order_id' => 'ASC'])->hydrate(false)->toArray();
         foreach ($category as $val) {
@@ -292,8 +293,8 @@ class WebservicesController extends AppController {
                 $categoryIcon[] = $tmp;
             }
         }
-        // Get Category Icon - End
-        // Get Service Details - Start
+// Get Category Icon - End
+// Get Service Details - Start
         $serviceDetails = [];
         $category = $this->ServiceCategory->find('all')->select(['id', 'name', 'banner_image'])->where(['status' => 'ACTIVE', 'display_app' => 'YES'])->order(['order_id' => 'ASC'])->hydrate(false)->toArray();
         foreach ($category as $val) {
@@ -317,20 +318,20 @@ class WebservicesController extends AppController {
                 }
             }
         }
-        // Get Service Details - End
+// Get Service Details - End
         $rsltArr['banner_images'] = $bannerImages;
         $rsltArr['categories_icon'] = $categoryIcon;
         $rsltArr['services'] = $serviceDetails;
         $this->success('Homepage Data Fateched!', $rsltArr);
     }
 
-    //***********************************************************************************************//
-    // * Function     :  homepage
-    // * Parameter    :  
-    // * Description  :  This function used to app home page data
-    // * Author       :  Chirag Manavar
-    // * Date         :  24-October-2017
-    //***********************************************************************************************//
+//***********************************************************************************************//
+// * Function     :  homepage
+// * Parameter    :  
+// * Description  :  This function used to app home page data
+// * Author       :  Chirag Manavar
+// * Date         :  24-October-2017
+//***********************************************************************************************//
 
     public function categoryDetails($id = '') {
         if (isset($id) && $id != '') {
@@ -354,7 +355,7 @@ class WebservicesController extends AppController {
                     $tmpS[] = $tmp;
                 }
                 $rslt['services'] = $tmpS;
-                //pr($rslt); exit;
+//pr($rslt); exit;
                 if ($rslt) {
                     $this->success('Service Categories Fetched Successfully!', $rslt);
                 } else {
@@ -368,17 +369,17 @@ class WebservicesController extends AppController {
         }
     }
 
-    //***********************************************************************************************//
-    // * Function     :  homepage
-    // * Parameter    :  
-    // * Description  :  This function used to app home page data
-    // * Author       :  Chirag Manavar
-    // * Date         :  24-October-2017
-    //***********************************************************************************************//
+//***********************************************************************************************//
+// * Function     :  homepage
+// * Parameter    :  
+// * Description  :  This function used to app home page data
+// * Author       :  Chirag Manavar
+// * Date         :  24-October-2017
+//***********************************************************************************************//
 
     public function categoryList() {
         $this->loadModel('ServiceCategory');
-        // Get Category Icon - Start
+// Get Category Icon - Start
         $categoryIcon = [];
         $category = $this->ServiceCategory->find('all')->select(['id', 'name', 'banner_image'])->where(['status' => 'ACTIVE'])->order(['order_id' => 'ASC'])->hydrate(false)->toArray();
         foreach ($category as $val) {
@@ -390,17 +391,17 @@ class WebservicesController extends AppController {
                 $categoryIcon[] = $tmp;
             }
         }
-        // Get Category Icon - End
+// Get Category Icon - End
         $this->success('Homepage Data Fateched!', $categoryIcon);
     }
 
-    //***********************************************************************************************//
-    // * Function     :  serviceDetails
-    // * Parameter    :  
-    // * Description  :  This function used to app home page data
-    // * Author       :  Chirag Manavar
-    // * Date         :  24-October-2017
-    //***********************************************************************************************//
+//***********************************************************************************************//
+// * Function     :  serviceDetails
+// * Parameter    :  
+// * Description  :  This function used to app home page data
+// * Author       :  Chirag Manavar
+// * Date         :  24-October-2017
+//***********************************************************************************************//
 
     public function serviceDetails($id = '') {
         $this->loadModel('Users');
@@ -465,12 +466,12 @@ class WebservicesController extends AppController {
 //                    $tmpD['text'] = $sDetails['desc_text_6'];
 //                    $rslt['service_description'][] = $tmpD;
 //                }
-                // Ratecard - Start
+// Ratecard - Start
                 $rateArr = [];
                 $rateCards = $this->ServiceRatecards->find('all')->where(['service_id' => $sDetails['id']])->hydrate(false)->toArray();
                 if (!empty($rateCards)) {
                     foreach ($rateCards as $ratecard) {
-                        //pr($ratecard); exit;
+//pr($ratecard); exit;
                         $tmp = [];
                         $tmp['id'] = $ratecard['id'];
                         $tmp['service_id'] = $ratecard['service_id'];
@@ -488,7 +489,7 @@ class WebservicesController extends AppController {
                     }
                 }
                 $rslt['service_ratecard'] = $rateArr;
-                // Ratecard - End
+// Ratecard - End
                 $this->success('Service Details Fetched Successfully', $rslt);
             } else {
                 $this->wrong('Service data not found!');
@@ -524,7 +525,7 @@ class WebservicesController extends AppController {
                                     $qID = $val1['id'];
                                     $aID = $val2['id'];
                                     $tmpsq = $this->getsubquestionArr($qID, $aID);
-                                    //pr($tmpsq); exit;
+//pr($tmpsq); exit;
                                     if (isset($tmpsq) && !empty($tmpsq)) {
                                         foreach ($tmpsq as $key3 => $val3) {
                                             $tmpS = [];
@@ -539,7 +540,7 @@ class WebservicesController extends AppController {
                                                 $qID = $val3['question_id'];
                                                 $aID = $val3['option_id'];
                                                 $tmpssq = $this->getsubquestionArr($qID, $aID);
-                                                //pr($tmpsq); exit;
+//pr($tmpsq); exit;
                                                 if (isset($tmpssq) && !empty($tmpssq)) {
                                                     foreach ($tmpssq as $key4 => $val4) {
                                                         $tmpSS = [];
@@ -554,7 +555,7 @@ class WebservicesController extends AppController {
                                                             $qID = $val4['question_id'];
                                                             $aID = $val4['option_id'];
                                                             $tmpsssq = $this->getsubquestionArr($qID, $aID);
-                                                            // pr($tmpsssq); exit;
+// pr($tmpsssq); exit;
                                                             if (isset($tmpsssq) && !empty($tmpsssq)) {
                                                                 foreach ($tmpsssq as $key5 => $val5) {
                                                                     $tmpSSS = [];
@@ -633,7 +634,7 @@ class WebservicesController extends AppController {
             $rslt = [];
             $sDetails = $this->Services->find('all')->where(['status' => 'ACTIVE', 'id' => $id])->order(['id' => 'ASC'])->hydrate(false)->first();
             if (isset($sDetails) && !empty($sDetails)) {
-                // Review - Start
+// Review - Start
                 $reviewsArr = [];
                 $reviews = $this->ServiceReviews->find('all')->where(['service_id' => $sDetails['id']])->order(['id' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no)->hydrate(false)->toArray();
                 foreach ($reviews as $review) {
@@ -650,7 +651,7 @@ class WebservicesController extends AppController {
                 $nextPageReviews = $this->ServiceReviews->find('all')->where(['service_id' => $sDetails['id']])->order(['id' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no + 1)->hydrate(false)->toArray();
                 $rslt['service_reveiws'] = $reviewsArr;
                 $rslt['next_page'] = (!empty($nextPageReviews)) ? true : false;
-                // Review - End
+// Review - End
                 $this->success("Service Reviews Fetched!", $rslt);
             } else {
                 $this->wrong('Service reviews not found!');
@@ -700,7 +701,7 @@ class WebservicesController extends AppController {
             $quesArr = $this->ServiceQuestions->find('all')->where($condArr)->hydrate(false)->toArray();
             if (!empty($quesArr)) {
                 foreach ($quesArr as $key => $val) {
-                    //pr($val); exit;
+//pr($val); exit;
                     $tmp = [];
                     $tmp['id'] = $val['id'];
                     $tmp['question'] = $val['question_title'];
@@ -713,14 +714,14 @@ class WebservicesController extends AppController {
                     $service_questions_answers = $this->ServiceQuestionAnswers->find('all')->where(['question_id' => $val['id']])->hydrate(false)->toArray();
                     if (isset($service_questions_answers) && !empty($service_questions_answers)) {
                         foreach ($service_questions_answers as $v) {
-                            //print_r($v); exit;
+//print_r($v); exit;
                             $tmpA = [];
                             $tmpA['id'] = $v['id'];
                             $tmpA['question_id'] = $v['question_id'];
                             $tmpA['label'] = $v['label'];
-                            // $tmpA['quantity'] = (isset($v['quantity']) && $v['quantity'] == 'YES') ? 'Y' : 'N';
+// $tmpA['quantity'] = (isset($v['quantity']) && $v['quantity'] == 'YES') ? 'Y' : 'N';
                             $tmpA['price'] = $v['price'];
-                            //$tmpA['child_questions'] = ($this->checkChildQuestionsExist($val['id'], $v['id'])) ? 'Yes' : 'No';
+//$tmpA['child_questions'] = ($this->checkChildQuestionsExist($val['id'], $v['id'])) ? 'Yes' : 'No';
                             $tmpA['nextstep'] = "-";
                             if ($v['quantity'] == 'YES') {
                                 $tmpA['nextstep'] = "QUANTITY";
@@ -760,7 +761,7 @@ class WebservicesController extends AppController {
             $this->loadModel('Carts');
             $checkArrs = $this->Carts->find('all')->where(['user_id' => $user_id, 'status' => 'PROCESS'])->hydrate(false)->first();
             if (!empty($checkArrs)) {
-                //pr($checkArrs); exit;
+//pr($checkArrs); exit;
                 $this->success('Cart Found!', ['id' => $checkArrs['id']]);
             } else {
                 $this->wrong('Sorry, no cart availble');
@@ -817,7 +818,7 @@ class WebservicesController extends AppController {
             } else {
                 $this->wrong('Sorry, Service id is missing!');
             }
-            // Check Cart is already Exist or not
+// Check Cart is already Exist or not
             $checkArrs = $this->Carts->find('all')->where(['user_id' => $user_id, 'service_id !=' => $service_id, 'status' => 'PROCESS'])->hydrate(false)->first();
             if (empty($checkArrs)) {
                 $checkArr = $this->Carts->find('all')->where(['user_id' => $user_id, 'service_id' => $service_id, 'status' => 'PROCESS'])->hydrate(false)->first();
@@ -868,19 +869,19 @@ class WebservicesController extends AppController {
                 $this->loadModel('Services');
                 $this->loadModel('ServiceQuestions');
                 $this->loadModel('ServiceQuestionAnswers');
-                // Check Cart is exist or not
+// Check Cart is exist or not
                 $checkCart = $this->Carts->find('all')->where(['user_id' => $user_id, 'id' => $cartId, 'status' => 'PROCESS'])->hydrate(false)->first();
                 if ($checkCart) {
                     $serviceDetails = $this->Services->find('all')->where(['id' => $serviceId])->hydrate(false)->first();
                     if (!isset($serviceDetails) || empty($serviceDetails)) {
                         $this->wrong("Sorry, Service Details not found!");
                     }
-                    // Check Cart is already Exist or not
+// Check Cart is already Exist or not
                     $on_inspection = 'N';
                     $checkCart = $this->Carts->find('all')->where(['id' => $requestArr['cart_id'], 'status' => 'PROCESS'])->hydrate(false)->first();
                     if (!empty($checkCart)) {
                         $questionsData = isset($requestArr['questions_data']) ? $requestArr['questions_data'] : array();
-                        //pr($questionsData); exit;
+//pr($questionsData); exit;
                         if (empty($questionsData)) {
                             $this->wrong("Sorry, Questions data is not found!");
                         } else {
@@ -889,13 +890,13 @@ class WebservicesController extends AppController {
                                 $questionDetails = $questionStoreDetails = [];
                                 $answer_id = $questions->option_id;
                                 $getAnswerData = $this->ServiceQuestionAnswers->find('all')->where(['id' => $answer_id])->hydrate(false)->first();
-                                //pr($questions); exit;
+//pr($questions); exit;
                                 $question_id = $getAnswerData['question_id'];
-                                //$answer_id = $questions->option_id;
+//$answer_id = $questions->option_id;
                                 if (isset($questions->option_quantity) && $questions->option_quantity != '') {
-                                    //echo $question_id . " " . $answer_id;
+//echo $question_id . " " . $answer_id;
                                     $AnswersArr = $this->ServiceQuestionAnswers->find('all')->where(['question_id' => $question_id, 'id' => $answer_id])->hydrate(false)->first();
-                                    //pr($AnswersArr); exit;
+//pr($AnswersArr); exit;
                                     if ($AnswersArr['quantity'] == 'YES') {
                                         $total_price = $questions->option_quantity * $AnswersArr['price'];
                                     } else {
@@ -927,7 +928,7 @@ class WebservicesController extends AppController {
                                     }
                                 } else {
                                     $questionsArr = $this->ServiceQuestionAnswers->find('all')->where(['question_id' => $question_id, 'id' => $answer_id])->hydrate(false)->first();
-                                    //pr($questionsArr); exit;
+//pr($questionsArr); exit;
 //                                    continue;
                                     if (isset($questionsArr['quantity']) && $questionsArr['quantity'] == 'NO') {
                                         if ($questionsArr['price'] != 0) {
@@ -951,17 +952,17 @@ class WebservicesController extends AppController {
                             'created_by' => $user_id,
                             'modified_by' => $user_id
                         );
-                        //pr($order_data); exit;
+//pr($order_data); exit;
                         $cartOrders = $this->CartOrders->patchEntity($cartOrders, $order_data);
                         $cartOrders->order_id = 0;
                         $cartOrders->created_at = date('Y-m-d H:i:s');
                         $cartOrders->modified_at = date('Y-m-d H:i:s');
                         $cartOrderSave = $this->CartOrders->save($cartOrders);
-                        //pr($cartOrderSave); exit;
+//pr($cartOrderSave); exit;
                         if ($cartOrderSave) {
                             $cartOrderId = $cartOrderSave['id'];
                             if (!empty($questionsData)) {
-                                //print_R($questionsData); exit;
+//print_R($questionsData); exit;
                                 $flag = false;
                                 foreach ($questionsData as $queData) {
                                     $queAnsData = $this->CartOrderQuestions->newEntity();
@@ -1020,7 +1021,7 @@ class WebservicesController extends AppController {
             $requestArr = $this->getInputArr();
             $cartId = isset($requestArr['cart_id']) ? $requestArr['cart_id'] : $this->wrong('Sorry, Cart id missing');
             $checkCart = $this->Carts->find('all')->where(['user_id' => $user_id, 'id' => $cartId, 'status' => 'PROCESS'])->hydrate(false)->first();
-            //pr($checkCart); exit;
+//pr($checkCart); exit;
             if (isset($checkCart) && !empty($checkCart)) {
                 $cartPriceDetails = $this->totalCartPrice($cartId);
                 if (!empty($cartPriceDetails['services'])) {
@@ -1070,7 +1071,7 @@ class WebservicesController extends AppController {
             $requestArr = $this->getInputArr();
             $cartOrderId = isset($requestArr['cart_order_id']) ? $requestArr['cart_order_id'] : $this->wrong('Sorry, Cart Order id missing');
             $checkCartOrderExist = $this->CartOrders->find('all')->where(['id' => $cartOrderId])->hydrate(false)->first();
-            //pr($checkCartOrderExist['cart_id']); exit;
+//pr($checkCartOrderExist['cart_id']); exit;
             if (isset($checkCartOrderExist) && !empty($checkCartOrderExist)) {
                 $cartId = $checkCartOrderExist['cart_id'];
                 $cartProduct = $this->CartOrders->get($cartOrderId);
@@ -1087,14 +1088,14 @@ class WebservicesController extends AppController {
             } else {
                 $this->wrong('Cart Product is not available');
             }
-            //cart_order_id
+//cart_order_id
         } else {
             $this->wrong('Invalid API key.');
         }
     }
 
     public function totalCartPrice($cartID) {
-        //echo $cartID; exit;
+//echo $cartID; exit;
         if (isset($cartID) && $cartID != '') {
             $this->loadModel('Carts');
             $this->loadModel('Categories');
@@ -1199,15 +1200,15 @@ class WebservicesController extends AppController {
         $rslt = [];
         $condArrQ = ['id' => $question_id];
         $service_questions = $this->serviceQuestions->find('all')->where($condArrQ)->hydrate(false)->first();
-        //pr($service_questions); exit;
+//pr($service_questions); exit;
         if (isset($service_questions['question_title']) && $service_questions['question_title'] != '') {
             $rslt['questions'] = $service_questions['question_title'];
             $condArrA = ['id' => $answer_id];
             $service_answers = $this->serviceQuestionAnswers->find('all')->where($condArrA)->hydrate(false)->first();
             if (isset($service_answers) && !empty($service_answers)) {
                 $answerData = $service_answers;
-                //$rslt['question_id'] = (isset($answerData['question_id']) && $answerData['question_id'] != '') ? $answerData['question_id'] : '';
-                //$rslt['answer_id'] = (isset($answerData['id']) && $answerData['id'] != '') ? $answerData['id'] : '';
+//$rslt['question_id'] = (isset($answerData['question_id']) && $answerData['question_id'] != '') ? $answerData['question_id'] : '';
+//$rslt['answer_id'] = (isset($answerData['id']) && $answerData['id'] != '') ? $answerData['id'] : '';
                 $rslt['parent_question'] = (isset($service_questions['parent_question_id']) && $service_questions['parent_question_id'] != '') ? $service_questions['parent_question_id'] : '';
                 $rslt['parent_answer'] = (isset($service_questions['parent_answer_id']) && $service_questions['parent_answer_id'] != '') ? $service_questions['parent_answer_id'] : '';
                 $rslt['answer'] = (isset($answerData['label']) && $answerData['label'] != '') ? $answerData['label'] : '';
@@ -1249,7 +1250,7 @@ class WebservicesController extends AppController {
                         echo json_encode(['status' => 'fail', 'msg' => 'Sorry, Discount coupon was expired!', 'data' => $cartDetails]);
                         exit;
                     } else {
-                        //echo ' valid';
+//echo ' valid';
                         $discount = 0.00;
                         if (isset($couponCodeDetails['discount_type']) && $couponCodeDetails['discount_type'] == 'PRICE') {
                             $discount = $couponCodeDetails['amount'];
@@ -1300,10 +1301,10 @@ class WebservicesController extends AppController {
             $cart_id = $requestArr['cart_id'];
             $coupon_code = isset($requestArr['coupon_code']) && $requestArr['coupon_code'] != '' ? strtoupper($requestArr['coupon_code']) : '';
             $wallet_amount = isset($requestArr['wallet_amount']) && $requestArr['wallet_amount'] != '' ? $requestArr['wallet_amount'] : '';
-            // Check Cart Order Placed
+// Check Cart Order Placed
             $cartExist = $this->Carts->find('all')->where(['id' => $requestArr['cart_id'], 'status' => 'PROCESS'])->hydrate(false)->first();
             if ($cartExist) {
-                //pr($cartExist); exit;
+//pr($cartExist); exit;
                 $order = $this->Orders->newEntity();
                 $orderData = [];
                 $orderData['user_id'] = $user_id;
@@ -1312,7 +1313,7 @@ class WebservicesController extends AppController {
                 $orderData['cart_id'] = $cart_id;
                 $orderData['order_id'] = $this->orderIdCreate();
                 $orderData['user_address'] = $requestArr['user_address'];
-                //$orderData['schedule_date'] = date('Y-m-d', strtotime($requestArr['schedule_date']));
+//$orderData['schedule_date'] = date('Y-m-d', strtotime($requestArr['schedule_date']));
                 $orderData['schedule_time'] = $requestArr['schedule_time'];
                 $orderData['on_inspections'] = '';
                 $orderData['is_visiting_charge'] = 'N';
@@ -1324,7 +1325,7 @@ class WebservicesController extends AppController {
                 $orderData['tax'] = 0.00;
                 $orderData['total_amount'] = 0.00;
                 $cartDetails = $this->totalCartPrice($cart_id);
-                //pr($cartDetails['total']); exit;
+//pr($cartDetails['total']); exit;
                 $orderData['is_minimum_charge'] = (isset($cartDetails['total']['minimum_charges']) && $cartDetails['total']['minimum_charges'] != 'N') ? $cartDetails['total']['minimum_charges'] : 'N';
                 $orderData['on_inspections'] = (isset($cartDetails['total']['on_inspection']) && $cartDetails['total']['on_inspection'] != '') ? $cartDetails['total']['on_inspection'] : 'N';
                 $orderData['amount'] = str_replace(",", "", $cartDetails['total']['order_amount']);
@@ -1338,7 +1339,7 @@ class WebservicesController extends AppController {
                 $orderData['payment_status'] = 'PENDING';
                 $orderData['cart_product'] = json_encode($cartDetails);
                 $orderData['created_by'] = $orderData['modified_by'] = $user_id;
-                // pr($orderData); exit;
+// pr($orderData); exit;
                 $order = $this->Orders->patchEntity($order, $orderData);
                 $order->schedule_date = date('Y-m-d', strtotime($requestArr['schedule_date']));
                 $order->created_at = date('Y-m-d H:i:s');
@@ -1366,7 +1367,7 @@ class WebservicesController extends AppController {
     public function orderDetails() {
         $userId = $this->checkVerifyApiKey('CUSTOMER');
         if ($userId) {
-            //echo $userId; exit;
+//echo $userId; exit;
             $this->loadModel('Orders');
             $this->loadModel('Services');
             $this->loadModel('Carts');
@@ -1385,7 +1386,7 @@ class WebservicesController extends AppController {
             $order_id = $requestArr['order_id'];
             $order = $this->Orders->find('all')->where(['order_id' => $order_id])->hydrate(false)->first();
             if (!empty($order)) {
-                //pr($orderExist); exit;
+//pr($orderExist); exit;
                 $orderDetails = [];
                 $orderDetails['user_id'] = $order['user_id'];
                 $orderDetails['order_id'] = $order['order_id'];
@@ -1440,11 +1441,11 @@ class WebservicesController extends AppController {
                     $tmp['service_name'] = $this->Services->getServiceName($order['service_id']);
                     $tmp['banner_img'] = $this->Services->getServiceImagePAth($order['service_id']);
                     $orderDetails['images'] = $this->Services->getServiceImagePAth($order['service_id']);
-                    //$tmp['banner_img'] = $this->Services->getServiceName($order['service_id']);
+//$tmp['banner_img'] = $this->Services->getServiceName($order['service_id']);
                     $tmpDetails = $this->CartOrderQuestions->find('all')->where(['cart_order_id' => $order['id']])->hydrate(false)->toArray();
                     foreach ($tmpDetails as $orderQues) {
                         $questArr = $this->getQuestionDetails($orderQues['question_id'], $orderQues['answer_id']);
-                        //pr($questArr); exit;
+//pr($questArr); exit;
                         if (isset($order['on_inspections']) && $order['on_inspections'] == 'N') {
                             if ($questArr['parent_question'] != '' && $questArr['parent_answer'] != '') {
                                 $answerTitle = $this->ServiceQuestionAnswers->find('all')->where(['id' => $questArr['parent_answer']])->hydrate(false)->first();
@@ -1586,7 +1587,7 @@ class WebservicesController extends AppController {
             } else if ($filter_type == 'year') {
                 $condArr["DATE_FORMAT(created_at,'%Y')"] = $filter_val['year'];
             }
-            //pr($filter_val['order_status']); exit;
+//pr($filter_val['order_status']); exit;
             if (isset($filter_val['order_status']) && $filter_val['order_status'] != '') {
                 $condArr["status"] = $filter_val['order_status'];
             }
@@ -1746,7 +1747,7 @@ class WebservicesController extends AppController {
                 $order = $this->Orders->patchEntity($order, $updatedData);
                 $order->modified_at = date('Y-m-d H:i:s');
                 if ($this->Orders->save($order)) {
-                    $this->success('Order Updated!');
+                    $this->success('Order Update!');
                 } else {
                     $this->wrong('Order Updated Faild!');
                 }
@@ -1758,12 +1759,12 @@ class WebservicesController extends AppController {
         }
     }
 
-    //public function testNotifications($title, $msg, $url = '', $user = 'All') {
+//public function testNotifications($title, $msg, $url = '', $user = 'All') {
     public function testNotifications() {
         $title = 'Title 1';
-        //$msg = 'Lorem lipsum is dummy text';
+//$msg = 'Lorem lipsum is dummy text';
         $msg = 'Message Aviyo?';
-        //$url = 'http://localhost/www/#/tab/message';
+//$url = 'http://localhost/www/#/tab/message';
         $url = '';
         $user = '806e3158-f53b-46d0-85a1-3b257c25610d';
         $response = $this->sendMessage($title, $msg, $url, $user);
@@ -1826,7 +1827,7 @@ class WebservicesController extends AppController {
         if ($user_id) {
             $this->loadModel('Surveys');
             $surveyLists = $this->Surveys->find('all')->select(['person_name', 'user_type'])->where(['created_by' => $user_id, "DATE_FORMAT(created,'%Y-%m-%d')" => date('Y-m-d')])->order(['id' => 'DESC'])->hydrate(false)->toArray();
-            //pr($surveyLists); exit;
+//pr($surveyLists); exit;
             if (!empty($surveyLists)) {
                 $this->success('Survey List!', $surveyLists);
             } else {
@@ -1891,7 +1892,7 @@ class WebservicesController extends AppController {
             $this->loadModel('Plans');
             $user = $this->Users->newEntity();
             $requestArr = $this->getInputArr();
-            //pr($requestArr); exit;
+//pr($requestArr); exit;
 //            $myfile = fopen("newfileMember.txt", "w") or die("Unable to open file!");
 //            $txt = "Array\n";
 //            fwrite($myfile, $txt);
@@ -1912,7 +1913,7 @@ class WebservicesController extends AppController {
                     $name = $requestArr['name'];
                     $email = $requestArr['email'];
                     $phone_no = $requestArr['phone_no'];
-                    //echo $email. " ".$phone_no; exit;
+//echo $email. " ".$phone_no; exit;
                     $userExists = $this->uniqueEmailOrPhone($email, $phone_no);
                     if (isset($userExists['status']) && $userExists['status'] == 'fail') {
                         $this->wrong($userExists['msg']);
@@ -1971,7 +1972,7 @@ class WebservicesController extends AppController {
                                 $this->wrong($sendMsg['msg']);
                             }
                         }
-                        // SEND SMS 
+// SEND SMS 
                         $msgT = '';
                         $sendMsg = [];
                         $msgT = "Dear $name, Your Hmen Account access Email address: $email and  Password: $password You can login after your payment clearance. Regards, Hmen Service.";
@@ -1979,7 +1980,7 @@ class WebservicesController extends AppController {
                         if ($sendMsg['status'] == 'fail') {
                             $this->wrong($sendMsg['msg']);
                         }
-                        // SEND EMAIL
+// SEND EMAIL
                         $this->sentEmails($name, $email, $password);
                         if (isset($requestArr['birthdate']) && $requestArr['birthdate'] != '') {
                             $user->birthdate = date('Y-m-d', strtotime($requestArr['birthdate']));
@@ -1992,7 +1993,7 @@ class WebservicesController extends AppController {
                         $saveUsers = $this->Users->save($user);
                         if ($saveUsers) {
                             $userId = $saveUsers['id'];
-                            //generate api key
+//generate api key
                             $api_key = $this->Users->generateAPIkey();
                             $mappingData = [];
                             $this->loadModel('UserMapping');
@@ -2079,7 +2080,7 @@ class WebservicesController extends AppController {
         $mailData['email'] = $email;
         $mailData['password'] = $password;
         $this->set('mailData', $mailData);
-        //pr($mailData); exit;
+//pr($mailData); exit;
         $view_output = $this->render('/Element/membership_signup');
         $fields = array(
             'msg' => $view_output,
@@ -2334,17 +2335,27 @@ class WebservicesController extends AppController {
             }
             $order_id = $requestArr['order_id'];
             $orders = [];
-            //$orderDetails = $this->Orders->find('all')->where(['order_id' => $order_id])->hydrate(false)->first();
-            //pr($orderDetails); exit;
-            //$this->success('Order Data Found!', $orders);
             $order = $this->Orders->find('all')->where(['order_id' => $order_id])->hydrate(false)->first();
             if (!empty($order)) {
-                //pr($orderExist); exit;
                 $orderDetails = [];
                 $orderDetails['user_id'] = $order['user_id'];
                 $orderDetails['username'] = $this->getUserName($order['user_id']);
                 $orderDetails['userimage'] = $this->getUserProfilePicture($order['user_id']);
-                $orderDetails['usertype'] = $this->getUserType($order['user_id']);
+                $orderDetails['usertype'] = $usertype = $this->getUserType($order['user_id']);
+                $orderDetails['available_service'] = 0;
+                $orderDetails['use_credits'] = 'NO';
+                if ($usertype == 'MEMBERSHIP') {
+                    if (in_array($order['service_id'], ['1', '2', '3'])) {
+                        $availableServices = $this->getMemberCredits($order['user_id']);
+                        $orderDetails['available_service'] = $availableServices;
+                        if ($availableServices > 0) {
+                            $todayorder = $this->Orders->find('all')->where(['order_id !=' => $order_id, 'service_id' => $order['service_id'], 'payment_method' => 'CREDITS', "DATE_FORMAT(created_at,'%Y-%m-%d')" => date('Y-m-d')])->hydrate(false)->count();
+                            if ($todayorder == 0) {
+                                $orderDetails['use_credits'] = 'YES';
+                            }
+                        }
+                    }
+                }
                 $orderDetails['order_id'] = $order['order_id'];
                 $orderDetails['user_address'] = $order['user_address'];
                 $orderDetails['created_at'] = $order['created_at']->format('d-M-Y h:i A');
@@ -2473,6 +2484,71 @@ class WebservicesController extends AppController {
                 }
             } else {
                 $this->wrong('Order data not found.');
+            }
+        } else {
+            $this->wrong('Invalid API key.');
+        }
+    }
+
+    public function vendorOrderUpdate() {
+        $this->loadModel('Orders');
+        $user_id = $this->checkVerifyApiKey('VENDOR');
+        if (isset($user_id) && $user_id != '') {
+            $requestArr = $this->getInputArr();
+            $requiredFields = array(
+                'Order Id' => (isset($requestArr['order_id']) && $requestArr['order_id'] != '') ? $requestArr['order_id'] : '',
+                'Order Action' => (isset($requestArr['order_action']) && $requestArr['order_action'] != '') ? $requestArr['order_action'] : '',
+            );
+            $validate = $this->checkRequiredFields($requiredFields);
+            if ($validate != "") {
+                $this->wrong($validate);
+            }
+            $order_id = $requestArr['order_id'];
+            $action = $requestArr['order_action'];
+            $getOrderId = $this->Orders->find('all')->select(['id'])->where(['order_id' => $order_id])->hydrate(false)->first();
+            if (isset($getOrderId['id']) && $getOrderId['id'] != '') {
+                $id = $getOrderId['id'];
+                $order = $this->Orders->get($id);
+                $updateFields = [];
+                //pr($order['total_amount']); exit;
+                $msg = 'Order Updated!';
+                if ($action == 'USE_CREDITS') {
+                    $updateFields['payment_method'] = 'CREDITS';
+                    $updateFields['payment_status'] = 'PAID';
+                }
+                if ($action == 'ON_INSPECTION') {
+                    $requiredFields = array(
+                        'On Inspection Cost' => (isset($requestArr['on_inspections_cost']) && $requestArr['on_inspections_cost'] != '') ? $requestArr['on_inspections_cost'] : '',
+                    );
+                    $validate = $this->checkRequiredFields($requiredFields);
+                    if ($validate != "") {
+                        $this->wrong($validate);
+                    }
+                    $updateFields['on_inspections_cost'] = $requestArr['on_inspections_cost'];
+                    $total_price = $order['total_amount'] + $requestArr['on_inspections_cost'];
+                    $tax = $total_price * GST_TAX / 100;
+                    $updateFields['amount'] = $total_price - $tax;
+                    $updateFields['tax'] = $tax;
+                    $updateFields['total_amount'] = $total_price;
+                    $updateFields['on_inspections'] = 'D';
+                    $msg = 'Order Inspection Cost Updated!';
+                }
+                if ($action == 'VISIT_CHARGE') {
+                    $updateFields['is_visiting_charge'] = 'Y';
+                    $updateFields['status'] = 'CANCELLED';
+                    $updateFields['payment_status'] = 'PAID';
+                    $msg = 'Order Cancelled Successfully!';
+                }
+                //pr($updateFields);
+                $order = $this->Orders->patchEntity($order, $updateFields);
+                //pr($order); exit;
+                $order->modified_by = $user_id;
+                $order->modified_at = date('Y-m-d H:i:s');
+                if ($this->Orders->save($order)) {
+                    $this->success($msg);
+                } else {
+                    $this->wrong('Order status update failed.');
+                }
             }
         } else {
             $this->wrong('Invalid API key.');

@@ -61,6 +61,7 @@ class OrdersController extends AppController {
             $tmp['username'] = $this->getUserName($order['user_id']);
             $tmp['useremail'] = $this->getEmail($order['user_id']);
             $tmp['userphone'] = $this->getPhone($order['user_id']);
+            $tmp['usertype'] = $this->getUserType($order['user_id']);
             $tmp['category_id'] = $order['category_id'];
             $tmp['category_name'] = $this->getCategoryName($order['category_id']);
             $tmp['service_id'] = $order['service_id'];

@@ -11269,3 +11269,78 @@
 2018-02-10 10:17:00 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
 
 
+2018-02-10 10:42:27 Notice: Notice (8): Undefined index: plan_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Model/Table/MembersTable.php, line 40]
+
+
+2018-02-10 10:42:27 Notice: Notice (8): Undefined index: name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 50]
+
+
+2018-02-10 10:42:27 Notice: Notice (8): Undefined index: address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 54]
+
+
+2018-02-10 10:42:27 Notice: Notice (8): Undefined index: city in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 58]
+
+
+2018-02-10 10:42:27 Notice: Notice (8): Undefined index: phone_no in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 63]
+
+
+2018-02-10 10:42:27 Notice: Notice (8): Undefined index: email in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 69]
+
+
+2018-02-10 10:42:27 Notice: Notice (8): Undefined index: birthdate in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/view.ctp, line 73]
+
+
+2018-02-10 10:44:47 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-10 12:24:51 Notice: Notice (8): Undefined variable: unseen_count in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 105]
+
+
+2018-02-10 12:25:31 Notice: Notice (8): Undefined variable: unseen_count in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 105]
+
+
+2018-02-10 12:28:02 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-10 12:31:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-10 12:46:40 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-10 12:46:52 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-10 12:49:43 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-10 12:49:49 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-10 12:50:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-10 12:50:17 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-10 12:50:17 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-10 12:50:18 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 163]
+
+
+2018-02-10 12:50:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 66]
+
+
+2018-02-10 12:50:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 68]
+
+
+2018-02-10 12:50:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 173]
+
+
+2018-02-10 12:51:04 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 173]
+
+
+2018-02-10 12:59:36 Notice: Notice (8): A non well formed numeric value encountered in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/view.ctp, line 155]
+
+

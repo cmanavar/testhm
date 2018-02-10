@@ -25,6 +25,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-12">
+                            <?php //pr($orders); exit; ?>
                             <div class="table-responsive">
                                 <table class="table table-bordered">
                                     <tr>
@@ -53,7 +54,17 @@
                                     </tr>
                                     <tr>
                                         <td>On Inspections</td>
-                                        <td colspan="4"><?= $orders['on_inspections']; ?></td>
+                                        <td colspan="4">
+                                            <?php
+                                            if ($orders['on_inspections'] == 'D') {
+                                                echo "Inspection Done";
+                                            } elseif ($orders['on_inspections'] == 'Y') {
+                                                echo "YES";
+                                            } else {
+                                                echo "NO";
+                                            }
+                                            ?>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Payment Status</td>
@@ -142,10 +153,10 @@
                                                 (Minimum Charges Applied)
                                             <?php } ?>
                                         </td>
-                                        <td><?php echo number_format($orders['total']['total_amount'], 2); ?></td>
+                                        <td><?php echo $orders['total']['total_amount']; ?></td>
                                     </tr>
                                     <?php //if (isset($orders['is_coupon_applied']) && $orders['is_coupon_applied'] == 'Y') { ?>
-                                    <?php //} ?>
+                                    <?php //}  ?>
                                 </table>
                             </div>
                         </div>

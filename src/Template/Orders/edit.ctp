@@ -61,7 +61,17 @@
                                     </tr>
                                     <tr>
                                         <td>On Inspections</td>
-                                        <td colspan="4"><?= $orderDetails['on_inspections']; ?></td>
+                                        <td colspan="4">
+                                            <?php
+                                            if ($orderDetails['on_inspections'] == 'D') {
+                                                echo "Inspection Done";
+                                            } elseif ($orderDetails['on_inspections'] == 'Y') {
+                                                echo "YES";
+                                            } else {
+                                                echo "NO";
+                                            }
+                                            ?>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Status</td>

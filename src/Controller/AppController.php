@@ -326,8 +326,6 @@ class AppController extends Controller {
         $user = $userTable->find()->select(['user_type'])->where(['id' => $userId])->hydrate(false)->first();
         return (isset($user['user_type']) && ($user['user_type'] != '')) ? $user['user_type'] : '-';
     }
-    
-    
 
     public function getOrderId($id) {
         $orderTable = TableRegistry::get('Orders');
@@ -419,9 +417,19 @@ class AppController extends Controller {
             }
         }
     }
-    
+
     public function getAllOrderStatus() {
         return ['PENDING' => 'PENDING', 'PLACED' => 'PLACED', 'SCHEDULE' => 'SCHEDULE', 'COMPLETED' => 'COMPLETED', 'CANCELLED' => 'CANCELLED'];
+    }
+
+    public function getMemberCredits($userId) {
+        $userDetailsTable = TableRegistry::get('UserDetails');
+        $ordersTable = TableRegistry::get('Orders');
+        $totCredits = $orderCounts = 0;
+        $userDetails = $userDetailsTable->find()->select(['credits'])->where(['user_id' => $userId])->hydrate(false)->first();
+        $totCredits = $userDetails['credits'];
+        $orderCounts = $ordersTable->find()->where(['payment_method' => 'CREDITS', 'user_id' => $userId, 'status' => 'COMPLETED'])->count();
+        return $totCredits - $orderCounts;
     }
 
 }
