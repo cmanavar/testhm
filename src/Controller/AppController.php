@@ -315,6 +315,12 @@ class AppController extends Controller {
         return (isset($user['phone_no']) && ($user['phone_no'] != '')) ? $user['phone_no'] : '-';
     }
 
+    public function getAddress($userId) {
+        $userTable = TableRegistry::get('Users');
+        $user = $userTable->find()->select(['address'])->where(['id' => $userId])->hydrate(false)->first();
+        return (isset($user['address']) && ($user['address'] != '')) ? $user['address'] : '-';
+    }
+
     public function getUserProfilePicture($userId) {
         $userTable = TableRegistry::get('Users');
         $user = $userTable->find()->select(['profile_pic'])->where(['id' => $userId])->hydrate(false)->first();
@@ -428,14 +434,65 @@ class AppController extends Controller {
         $totCredits = $orderCounts = 0;
         $userDetails = $userDetailsTable->find()->select(['credits'])->where(['user_id' => $userId])->hydrate(false)->first();
         $totCredits = $userDetails['credits'];
-        $orderCounts = $ordersTable->find()->where(['payment_method' => 'CREDITS', 'user_id' => $userId, 'status' => 'COMPLETED'])->count();
+        $orderCounts = $ordersTable->find()->where(['payment_method' => 'CREDITS', 'user_id' => $userId, 'credits_applied' => 'Y'])->count();
         return $totCredits - $orderCounts;
     }
-    
+
+    public function getMemberTotalCredits($userId) {
+        $userDetailsTable = TableRegistry::get('UserDetails');
+        $totCredits = 0;
+        $userDetails = $userDetailsTable->find()->select(['credits'])->where(['user_id' => $userId])->hydrate(false)->first();
+        $totCredits = $userDetails['credits'];
+        return $totCredits;
+    }
+
     public function getServiceImagePath($id) {
         $serviceTable = TableRegistry::get('Services');
         $services = $serviceTable->find()->select(['square_image'])->where(['id' => $id])->hydrate(false)->first();
         return (isset($services['square_image']) && $services['square_image'] != '') ? IMAGE_URL_PATH . 'services/square/' . $services['square_image'] : '';
+    }
+
+    public function getMembershipPlanname($id) {
+        $planTable = TableRegistry::get('plans');
+        $plans = $planTable->find()->select(['name'])->where(['id' => $id])->hydrate(false)->first();
+        return (isset($plans['name']) && $plans['name'] != '') ? $plans['name'] : '';
+    }
+
+    public function getPlanId($id) {
+        $userTable = TableRegistry::get('Users');
+        $users = $userTable->find()->select(['plan_id'])->where(['id' => $id])->hydrate(false)->first();
+        return (isset($users['plan_id']) && $users['plan_id'] != '') ? $users['plan_id'] : 0;
+    }
+
+    public function getPackageOrders($userId) {
+        $packageOrderTable = TableRegistry::get('PackageOrders');
+        $packageOrders = $packageOrderTable->find()->where(['user_id' => $userId])->hydrate(false)->toArray();
+        //pr($packageOrders); exit;
+        $rslt = [];
+        if (is_array($packageOrders) && !empty($packageOrders)) {
+            foreach ($packageOrders as $packageorder) {
+                $tmp = [];
+                $tmp['id'] = $packageorder['id'];
+                $tmp['service_name'] = $packageorder['service_name'];
+                $tmp['service_image'] = IMAGE_URL_PATH.'services/square/'.$packageorder['service_image'];
+                if (!empty($packageorder['service_date'])) {
+                    $tmp['service_date'] = $packageorder['service_date']->format('d-m-Y');
+                } else {
+                    $tmp['service_date'] = '-';
+                }
+                $tmp['service_status'] = ucfirst(strtolower($packageorder['service_status']));
+                $rslt[] = $tmp;
+            }
+        }
+        return $rslt;
+    }
+
+    public function sendPlanInvoiceEmails() {
+        
+    }
+
+    public function sendOrderInvoiceEmails() {
+        
     }
 
 }

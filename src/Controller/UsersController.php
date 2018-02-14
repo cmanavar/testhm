@@ -606,6 +606,20 @@ class UsersController extends AppController {
                             $rslt['city'] = $user['city'];
                             $rslt['email_verified'] = $user['email_verified'];
                             $rslt['phone_verified'] = $user['phone_verified'];
+                            $rslt['usertype'] = $usertype = $user['user_type'];
+                            $rslt['can_update'] = 'N';
+                            if ($usertype == 'MEMBERSHIP') {
+                                $rslt['avail_credits'] = $this->getMemberCredits($user['id']);
+                                $rslt['total_credits'] = $this->getMemberTotalCredits($user['id']);
+                                $rslt['plan_name'] = $this->getMembershipPlanname($user['plan_id']);
+                                if (in_array($user['plan_id'], [RUBIES_PLAN_ID, SAPPHIRES_PLAN_ID, BOOM_AC_PLAN_ID, ZOOM_RO_PLAN_ID])) {
+                                    $packageOrders = $this->getPackageOrders($user['id']);
+                                    $rslt['free_services'] = $packageOrders;
+                                }
+                                if (in_array($user['plan_id'], [RUBIES_PLAN_ID, SAPPHIRES_PLAN_ID])) {
+                                    $rslt['can_update'] = 'Y';
+                                }
+                            }
                             $rslt['wallet_amount'] = $this->walletAmount($user['id']);
                             $rslt['referral'] = ($user['referral_id'] != 0) ? 'YES' : 'NO';
                             $users = $this->Users->get($user['id']);

@@ -111,6 +111,12 @@
                                             <?php } ?>
                                         <?php } ?>
                                     <?php } ?>
+                                    <?php if (isset($orders['on_inspections_cost']) && $orders['on_inspections_cost'] != 0.00) { ?>
+                                        <tr class="text-right">
+                                            <td colspan="4"><b>On Inspection Cost</b></td>
+                                            <td class="text-right"><?php echo $orders['on_inspections_cost']; ?></td>
+                                        </tr>
+                                    <?php } ?>
                                     <tr class="text-right">
                                         <td colspan="4"><b>Total</b></td>
                                         <td class="text-right"><?php echo $orderDetails['total']['amount']; ?></td>
@@ -146,7 +152,7 @@
                                                 (Minimum Charges Applied)
                                             <?php } ?>
                                         </td>
-                                        <td><?php echo number_format($orderDetails['total']['total_amount'], 2); ?></td>
+                                        <td><?php echo $orderDetails['total']['total_amount']; ?></td>
                                     </tr>
                                 </table>
                             </div>

@@ -53,7 +53,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/otp/resend', ['controller' => 'Users', 'action' => 'resendOtp']);
     $routes->connect('/webservices/resend/verify_email', ['controller' => 'Users', 'action' => 'resendActivationLinks']);
     $routes->connect('/webservices/forgot_password/link', ['controller' => 'Webservices', 'action' => 'forgorPassword']);
-    $routes->connect('/reset/password/*', ['controller' => 'Users', 'action' => 'resetpasswords']);//reset/password/
+    $routes->connect('/reset/password/*', ['controller' => 'Users', 'action' => 'resetpasswords']); //reset/password/
     $routes->connect('/webservices/change/password', ['controller' => 'Webservices', 'action' => 'changePassword']);
     $routes->connect('/webservices/vandor/change/password', ['controller' => 'Webservices', 'action' => 'changeVandorPassword']);
     $routes->connect('/webservices/email/activate/*', ['controller' => 'Users', 'action' => 'verifiedemail']);
@@ -67,7 +67,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/categories/details/*', ['controller' => 'Webservices', 'action' => 'categoryDetails']);
     $routes->connect('/webservices/categories/list', ['controller' => 'Webservices', 'action' => 'categoryList']);
     $routes->connect('/webservices/service/details/*', ['controller' => 'Webservices', 'action' => 'serviceDetails']);
-    $routes->connect('/webservices/service/questions/*', ['controller' => 'Webservices', 'action' => 'getquestionArr']);    
+    $routes->connect('/webservices/service/questions/*', ['controller' => 'Webservices', 'action' => 'getquestionArr']);
     $routes->connect('/webservices/service/reviews/*', ['controller' => 'Webservices', 'action' => 'serviceReviews']);
     $routes->connect('/webservices/service/getsubquestions', ['controller' => 'Webservices', 'action' => 'getServicesSubQuestions']);
     $routes->connect('/webservices/service/review', ['controller' => 'Webservices', 'action' => 'storeReview']);
@@ -109,12 +109,14 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/vendor/job/details', ['controller' => 'Webservices', 'action' => 'vendorJobDetails']);
     $routes->connect('/webservices/vendor/job/reviews', ['controller' => 'Webservices', 'action' => 'vendorReviewsDetails']);
     $routes->connect('/webservices/vendors/orders', ['controller' => 'Webservices', 'action' => 'vendorOrderLists']);
+    $routes->connect('/webservices/packageservice/book', ['controller' => 'Webservices', 'action' => 'packageServiceBook']);
+    $routes->connect('/webservices/membership/credithistory', ['controller' => 'Webservices', 'action' => 'creditOrderHistory']);
     $routes->connect('/test', ['controller' => 'Webservices', 'action' => 'testNotifications']);
-    
-    
-    
-    
-    
+
+
+
+
+
 
 
     /**

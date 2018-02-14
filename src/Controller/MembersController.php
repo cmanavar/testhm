@@ -176,6 +176,168 @@ class MembersController extends AppController {
                             $userMapping = $this->UserMapping->patchEntity($userMapping, $map_data);
                             $userMapping->created = date("Y-m-d H:i:s");
                             if ($this->UserMapping->save($userMapping)) {
+                                $this->loadModel('PackageOrders');
+                                if ($plan_id == RUBIES_PLAN_ID) {
+                                    // INSERT BOOM AC ONE SERVICES
+                                    for ($i = 1; $i <= 1; $i++) {
+                                        $insertData = $packageOrder = [];
+                                        $packageOrder = $this->PackageOrders->newEntity();
+                                        $insertData['user_id'] = $userId;
+                                        $insertData['service_id'] = BOOM_AC_SERVICE_ID;
+                                        $insertData['service_name'] = RUBIES_AC_SERVICE_NAME;
+                                        $insertData['service_image'] = BOOM_AC_SERVICE_IMAGE;
+                                        $insertData['service_status'] = 'PENDING';
+                                        $packageOrder = $this->PackageOrders->patchEntity($packageOrder, $insertData);
+                                        $packageOrder->service_date = '';
+                                        $packageOrder->created_by = $userId;
+                                        $packageOrder->created = date('Y-m-d H:i:s');
+                                        $packageOrder->modified_by = $userId;
+                                        $packageOrder->modified = date('Y-m-d H:i:s');
+                                        if (!$this->PackageOrders->save($packageOrder)) {
+                                            $this->Flash->error('Packeage Order Insertion Failed!');
+                                        }
+                                    }
+                                    // INSERT ZOOM RO ONE SERVICES
+                                    for ($i = 1; $i <= 1; $i++) {
+                                        $insertData = $packageOrder = [];
+                                        $packageOrder = $this->PackageOrders->newEntity();
+                                        $insertData['user_id'] = $userId;
+                                        $insertData['service_id'] = ZOOM_RO_SERVICE_ID;
+                                        $insertData['service_name'] = RUBIES_RO_SERVICE_NAME;
+                                        $insertData['service_image'] = ZOOM_RO_SERVICE_IMAGE;
+                                        $insertData['service_status'] = 'PENDING';
+                                        $packageOrder = $this->PackageOrders->patchEntity($packageOrder, $insertData);
+                                        $packageOrder->service_date = '';
+                                        $packageOrder->created_by = $userId;
+                                        $packageOrder->created = date('Y-m-d H:i:s');
+                                        $packageOrder->modified_by = $userId;
+                                        $packageOrder->modified = date('Y-m-d H:i:s');
+                                        if (!$this->PackageOrders->save($packageOrder)) {
+                                            $this->Flash->error('Packeage Order Insertion Failed!');
+                                        }
+                                    }
+                                }
+                                if ($plan_id == SAPPHIRES_PLAN_ID) {
+                                    // INSERT BOOM AC TWO SERVICES
+                                    for ($i = 1; $i <= 2; $i++) {
+                                        $insertData = $packageOrder = [];
+                                        $packageOrder = $this->PackageOrders->newEntity();
+                                        $insertData['user_id'] = $userId;
+                                        $insertData['service_id'] = BOOM_AC_SERVICE_ID;
+                                        $insertData['service_name'] = SAPPHIRES_AC_SERVICE_NAME;
+                                        $insertData['service_image'] = BOOM_AC_SERVICE_IMAGE;
+                                        $insertData['service_status'] = 'PENDING';
+                                        $packageOrder = $this->PackageOrders->patchEntity($packageOrder, $insertData);
+                                        $packageOrder->service_date = '';
+                                        $packageOrder->created_by = $userId;
+                                        $packageOrder->created = date('Y-m-d H:i:s');
+                                        $packageOrder->modified_by = $userId;
+                                        $packageOrder->modified = date('Y-m-d H:i:s');
+                                        if (!$this->PackageOrders->save($packageOrder)) {
+                                            $this->Flash->error('Packeage Order Insertion Failed!');
+                                        }
+                                    }
+                                    // INSERT ZOOM RO TWO SERVICES
+                                    for ($i = 1; $i <= 2; $i++) {
+                                        $insertData = $packageOrder = [];
+                                        $packageOrder = $this->PackageOrders->newEntity();
+                                        $insertData['user_id'] = $userId;
+                                        $insertData['service_id'] = ZOOM_RO_SERVICE_ID;
+                                        $insertData['service_name'] = SAPPHIRES_RO_SERVICE_NAME;
+                                        $insertData['service_image'] = ZOOM_RO_SERVICE_IMAGE;
+                                        $insertData['service_status'] = 'PENDING';
+                                        $packageOrder = $this->PackageOrders->patchEntity($packageOrder, $insertData);
+                                        $packageOrder->service_date = '';
+                                        $packageOrder->created_by = $userId;
+                                        $packageOrder->created = date('Y-m-d H:i:s');
+                                        $packageOrder->modified_by = $userId;
+                                        $packageOrder->modified = date('Y-m-d H:i:s');
+                                        if (!$this->PackageOrders->save($packageOrder)) {
+                                            $this->Flash->error('Packeage Order Insertion Failed!');
+                                        }
+                                    }
+                                }
+                                if ($plan_id == BOOM_AC_PLAN_ID) {
+                                    $serviceDateArr = [];
+                                    $service_date_1 = $service_date_2 = $service_date_3 = '';
+                                    $service_date_1 = date('Y-m-d', strtotime("+7 day"));
+                                    $service_day_1 = date('D', strtotime($service_date_1));
+                                    if ($service_day_1 == 'Sun') {
+                                        $service_date_1 = date('Y-m-d', strtotime($service_date_1 . "+1 day"));
+                                    }
+                                    $serviceDateArr['1'] = $service_date_1;
+                                    $service_date_2 = date('Y-m-d', strtotime($service_date_1 . "+4 month"));
+                                    $service_day_2 = date('D', strtotime($service_date_2));
+                                    if ($service_day_2 == 'Sun') {
+                                        $service_date_2 = date('Y-m-d', strtotime($service_date_2 . "+1 day"));
+                                    }
+                                    $serviceDateArr['2'] = $service_date_2;
+                                    $service_date_3 = date('Y-m-d', strtotime($service_date_2 . "+4 month"));
+                                    $service_day_3 = date('D', strtotime($service_date_3));
+                                    if ($service_day_3 == 'Sun') {
+                                        $service_date_3 = date('Y-m-d', strtotime($service_date_3 . "+1 day"));
+                                    }
+                                    $serviceDateArr['3'] = $service_date_3;
+                                    for ($i = 1; $i <= 3; $i++) {
+                                        $insertData = $packageOrder = [];
+                                        $packageOrder = $this->PackageOrders->newEntity();
+                                        $insertData['user_id'] = $userId;
+                                        $insertData['service_id'] = BOOM_AC_SERVICE_ID;
+                                        $insertData['service_name'] = BOOM_AC_SERVICE_NAME;
+                                        $insertData['service_image'] = BOOM_AC_SERVICE_IMAGE;
+                                        //$insertData['service_date'] = $serviceDateArr[$i];
+                                        $insertData['service_status'] = 'PENDING';
+                                        $packageOrder = $this->PackageOrders->patchEntity($packageOrder, $insertData);
+                                        $packageOrder->service_date = $serviceDateArr[$i];
+                                        $packageOrder->created_by = $userId;
+                                        $packageOrder->created = date('Y-m-d H:i:s');
+                                        $packageOrder->modified_by = $userId;
+                                        $packageOrder->modified = date('Y-m-d H:i:s');
+                                        if (!$this->PackageOrders->save($packageOrder)) {
+                                            $this->Flash->error('Packeage Order Insertion Failed!');
+                                        }
+                                    }
+                                }
+                                if ($plan_id == ZOOM_RO_PLAN_ID) {
+                                    $serviceDateArr = [];
+                                    $service_date_1 = $service_date_2 = $service_date_3 = '';
+                                    $service_date_1 = date('Y-m-d', strtotime("+7 day"));
+                                    $service_day_1 = date('D', strtotime($service_date_1));
+                                    if ($service_day_1 == 'Sun') {
+                                        $service_date_1 = date('Y-m-d', strtotime($service_date_1 . "+1 day"));
+                                    }
+                                    $serviceDateArr['1'] = $service_date_1;
+                                    $service_date_2 = date('Y-m-d', strtotime($service_date_1 . "+4 month"));
+                                    $service_day_2 = date('D', strtotime($service_date_2));
+                                    if ($service_day_2 == 'Sun') {
+                                        $service_date_2 = date('Y-m-d', strtotime($service_date_2 . "+1 day"));
+                                    }
+                                    $serviceDateArr['2'] = $service_date_2;
+                                    $service_date_3 = date('Y-m-d', strtotime($service_date_2 . "+4 month"));
+                                    $service_day_3 = date('D', strtotime($service_date_3));
+                                    if ($service_day_3 == 'Sun') {
+                                        $service_date_3 = date('Y-m-d', strtotime($service_date_3 . "+1 day"));
+                                    }
+                                    $serviceDateArr['3'] = $service_date_3;
+                                    for ($i = 1; $i <= 3; $i++) {
+                                        $insertData = $packageOrder = [];
+                                        $packageOrder = $this->PackageOrders->newEntity();
+                                        $insertData['user_id'] = $userId;
+                                        $insertData['service_id'] = ZOOM_RO_SERVICE_ID;
+                                        $insertData['service_name'] = ZOOM_RO_SERVICE_NAME;
+                                        $insertData['service_image'] = ZOOM_RO_SERVICE_IMAGE;
+                                        $insertData['service_status'] = 'PENDING';
+                                        $packageOrder = $this->PackageOrders->patchEntity($packageOrder, $insertData);
+                                        $packageOrder->service_date = $serviceDateArr[$i];
+                                        $packageOrder->created_by = $userId;
+                                        $packageOrder->created = date('Y-m-d H:i:s');
+                                        $packageOrder->modified_by = $userId;
+                                        $packageOrder->modified = date('Y-m-d H:i:s');
+                                        if (!$this->PackageOrders->save($packageOrder)) {
+                                            $this->Flash->error('Packeage Order Insertion Failed!');
+                                        }
+                                    }
+                                }
                                 $planDetails = $this->Plans->find('all')->where(['id' => $plan_id])->hydrate(false)->first();
                                 // Membership Plan Green Cash Return to Referral Users.
                                 if ((isset($referIds) && $referIds != '')) {

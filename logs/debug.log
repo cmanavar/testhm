@@ -11350,3 +11350,1662 @@
 2018-02-10 15:26:48 Notice: Notice (8): Undefined variable: msgList in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2640]
 
 
+2018-02-10 19:27:54 Notice: Notice (8): A non well formed numeric value encountered in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 119]
+
+
+2018-02-10 20:01:26 Notice: Notice (8): Use of undefined constant BOOM_AC_SERVICE_ID - assumed 'BOOM_AC_SERVICE_ID' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 205]
+
+
+2018-02-10 20:01:26 Notice: Notice (8): Use of undefined constant BOOM_AC_SERVICE_NAME - assumed 'BOOM_AC_SERVICE_NAME' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 206]
+
+
+2018-02-10 20:01:26 Notice: Notice (8): Use of undefined constant BOOM_AC_SERVICE_IMAGE - assumed 'BOOM_AC_SERVICE_IMAGE' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 207]
+
+
+2018-02-10 20:46:35 Notice: Notice (8): Undefined index: usertype in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php, line 609]
+
+
+2018-02-12 15:30:10 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 173]
+
+
+2018-02-12 15:57:22 Notice: Notice (8): A non well formed numeric value encountered in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 155]
+
+
+2018-02-12 15:57:22 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-12 15:57:24 Notice: Notice (8): A non well formed numeric value encountered in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 155]
+
+
+2018-02-12 15:57:24 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-12 15:57:42 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-12 17:03:22 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3012]
+
+
+2018-02-12 17:04:48 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3013]
+
+
+2018-02-12 17:16:37 Notice: Notice (8): Undefined index: category_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 67]
+
+
+2018-02-12 17:17:09 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 70]
+
+
+2018-02-12 17:17:09 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 72]
+
+
+2018-02-12 17:17:18 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 71]
+
+
+2018-02-12 17:17:25 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 72]
+
+
+2018-02-12 17:19:42 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 73]
+
+
+2018-02-12 17:22:26 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 69]
+
+
+2018-02-12 17:22:26 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 69]
+
+
+2018-02-12 17:22:26 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 70]
+
+
+2018-02-12 17:22:26 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 85]
+
+
+2018-02-12 17:22:26 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 69]
+
+
+2018-02-12 17:22:26 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 69]
+
+
+2018-02-12 17:22:26 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 70]
+
+
+2018-02-12 17:22:26 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 85]
+
+
+2018-02-12 17:22:26 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 69]
+
+
+2018-02-12 17:22:26 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 69]
+
+
+2018-02-12 17:22:26 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 70]
+
+
+2018-02-12 17:22:26 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 85]
+
+
+2018-02-12 17:22:26 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 69]
+
+
+2018-02-12 17:22:26 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 69]
+
+
+2018-02-12 17:22:26 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 70]
+
+
+2018-02-12 17:22:26 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 85]
+
+
+2018-02-12 17:27:56 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 69]
+
+
+2018-02-12 17:27:56 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 70]
+
+
+2018-02-12 17:27:56 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 85]
+
+
+2018-02-12 17:29:07 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/index.ctp, line 72]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 33]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 37]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 41]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 45]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 49]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 59]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 71]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 75]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 79]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 143]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 147]
+
+
+2018-02-12 17:31:13 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 162]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 33]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 37]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 41]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 45]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 49]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 59]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 71]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 75]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 79]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 143]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 147]
+
+
+2018-02-12 17:34:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 162]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 33]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 37]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 41]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 45]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 49]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 59]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 71]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 75]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 79]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 143]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 147]
+
+
+2018-02-12 17:35:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 162]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 33]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 37]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 41]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 45]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 49]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 59]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 71]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 75]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 79]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 143]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 147]
+
+
+2018-02-12 17:35:06 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 162]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 33]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 37]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 41]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 45]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 49]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 59]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 71]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 75]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 79]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 143]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 147]
+
+
+2018-02-12 17:48:12 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 162]
+
+
+2018-02-12 17:49:53 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 110]
+
+
+2018-02-12 17:49:53 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 111]
+
+
+2018-02-12 17:49:53 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 112]
+
+
+2018-02-12 17:49:53 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 113]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 110]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 111]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 112]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 113]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 33]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: username in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 37]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: useremail in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 41]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: userphone in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 45]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: user_address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 49]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 59]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 71]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 75]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 79]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 143]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 147]
+
+
+2018-02-12 17:49:57 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 162]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 110]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 111]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 112]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 113]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: username in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 37]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: useremail in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 41]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: userphone in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 45]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: user_address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 49]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 59]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 71]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 75]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 79]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 143]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 147]
+
+
+2018-02-12 17:50:03 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 162]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 110]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 111]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: username in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 37]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: useremail in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 41]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: userphone in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 45]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: user_address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 49]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 59]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 71]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 75]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 79]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 143]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 147]
+
+
+2018-02-12 17:50:21 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 162]
+
+
+2018-02-12 17:50:42 Notice: Notice (8): Undefined index: username in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 37]
+
+
+2018-02-12 17:50:42 Notice: Notice (8): Undefined index: useremail in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 41]
+
+
+2018-02-12 17:50:42 Notice: Notice (8): Undefined index: userphone in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 45]
+
+
+2018-02-12 17:50:42 Notice: Notice (8): Undefined index: user_address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 49]
+
+
+2018-02-12 17:50:42 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:50:42 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:50:42 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 59]
+
+
+2018-02-12 17:50:42 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:50:42 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 71]
+
+
+2018-02-12 17:50:42 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 75]
+
+
+2018-02-12 17:50:42 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 79]
+
+
+2018-02-12 17:50:42 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:50:42 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:50:42 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 143]
+
+
+2018-02-12 17:50:42 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 147]
+
+
+2018-02-12 17:50:42 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 162]
+
+
+2018-02-12 17:51:10 Notice: Notice (8): Undefined index: useremail in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 41]
+
+
+2018-02-12 17:51:10 Notice: Notice (8): Undefined index: userphone in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 45]
+
+
+2018-02-12 17:51:10 Notice: Notice (8): Undefined index: user_address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 49]
+
+
+2018-02-12 17:51:10 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:51:10 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:51:10 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 59]
+
+
+2018-02-12 17:51:10 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:51:10 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 71]
+
+
+2018-02-12 17:51:10 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 75]
+
+
+2018-02-12 17:51:10 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 79]
+
+
+2018-02-12 17:51:10 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:51:10 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:51:10 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 143]
+
+
+2018-02-12 17:51:10 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 147]
+
+
+2018-02-12 17:51:10 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 162]
+
+
+2018-02-12 17:51:23 Notice: Notice (8): Undefined index: userphone in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 45]
+
+
+2018-02-12 17:51:23 Notice: Notice (8): Undefined index: user_address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 49]
+
+
+2018-02-12 17:51:23 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:51:23 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:51:23 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 59]
+
+
+2018-02-12 17:51:23 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:51:23 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 71]
+
+
+2018-02-12 17:51:23 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 75]
+
+
+2018-02-12 17:51:23 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 79]
+
+
+2018-02-12 17:51:23 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:51:23 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:51:23 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 143]
+
+
+2018-02-12 17:51:23 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 147]
+
+
+2018-02-12 17:51:23 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 162]
+
+
+2018-02-12 17:51:29 Notice: Notice (8): Undefined index: userphone in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 45]
+
+
+2018-02-12 17:51:29 Notice: Notice (8): Undefined index: user_address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 49]
+
+
+2018-02-12 17:51:29 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:51:29 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:51:29 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 59]
+
+
+2018-02-12 17:51:29 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:51:29 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 71]
+
+
+2018-02-12 17:51:29 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 75]
+
+
+2018-02-12 17:51:29 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 79]
+
+
+2018-02-12 17:51:29 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:51:29 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:51:29 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 143]
+
+
+2018-02-12 17:51:29 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 147]
+
+
+2018-02-12 17:51:29 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 162]
+
+
+2018-02-12 17:51:39 Notice: Notice (8): Undefined index: user_address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 49]
+
+
+2018-02-12 17:51:39 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:51:39 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:51:39 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 59]
+
+
+2018-02-12 17:51:39 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:51:39 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 71]
+
+
+2018-02-12 17:51:39 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 75]
+
+
+2018-02-12 17:51:39 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 79]
+
+
+2018-02-12 17:51:39 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:51:39 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:51:39 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 143]
+
+
+2018-02-12 17:51:39 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 147]
+
+
+2018-02-12 17:51:39 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 162]
+
+
+2018-02-12 17:52:03 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:52:03 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 59]
+
+
+2018-02-12 17:52:03 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:52:03 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 71]
+
+
+2018-02-12 17:52:03 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 75]
+
+
+2018-02-12 17:52:03 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 79]
+
+
+2018-02-12 17:52:03 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:52:03 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:52:03 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 143]
+
+
+2018-02-12 17:52:03 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 147]
+
+
+2018-02-12 17:52:03 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 162]
+
+
+2018-02-12 17:52:31 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 116]
+
+
+2018-02-12 17:52:37 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 53]
+
+
+2018-02-12 17:52:37 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 59]
+
+
+2018-02-12 17:52:37 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:52:37 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 71]
+
+
+2018-02-12 17:52:37 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 75]
+
+
+2018-02-12 17:52:37 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 79]
+
+
+2018-02-12 17:52:37 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:52:37 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:52:37 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 143]
+
+
+2018-02-12 17:52:37 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 147]
+
+
+2018-02-12 17:52:37 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 162]
+
+
+2018-02-12 17:52:56 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 59]
+
+
+2018-02-12 17:52:56 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:52:56 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 71]
+
+
+2018-02-12 17:52:56 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 75]
+
+
+2018-02-12 17:52:56 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 79]
+
+
+2018-02-12 17:52:56 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:52:56 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:52:56 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 143]
+
+
+2018-02-12 17:52:56 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 147]
+
+
+2018-02-12 17:52:56 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 162]
+
+
+2018-02-12 17:53:06 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 57]
+
+
+2018-02-12 17:53:06 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 61]
+
+
+2018-02-12 17:53:06 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 65]
+
+
+2018-02-12 17:53:06 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 115]
+
+
+2018-02-12 17:53:06 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 119]
+
+
+2018-02-12 17:53:06 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 129]
+
+
+2018-02-12 17:53:06 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 133]
+
+
+2018-02-12 17:53:06 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 148]
+
+
+2018-02-12 17:53:14 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 58]
+
+
+2018-02-12 17:53:14 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 62]
+
+
+2018-02-12 17:53:14 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 112]
+
+
+2018-02-12 17:53:14 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 116]
+
+
+2018-02-12 17:53:14 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 126]
+
+
+2018-02-12 17:53:14 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 130]
+
+
+2018-02-12 17:53:14 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 145]
+
+
+2018-02-12 17:53:20 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 58]
+
+
+2018-02-12 17:53:20 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 108]
+
+
+2018-02-12 17:53:20 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 112]
+
+
+2018-02-12 17:53:20 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 122]
+
+
+2018-02-12 17:53:20 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 126]
+
+
+2018-02-12 17:53:20 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 141]
+
+
+2018-02-12 17:53:44 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 117]
+
+
+2018-02-12 17:53:44 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 107]
+
+
+2018-02-12 17:53:44 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 111]
+
+
+2018-02-12 17:53:44 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 121]
+
+
+2018-02-12 17:53:44 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 125]
+
+
+2018-02-12 17:53:44 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 140]
+
+
+2018-02-12 17:53:59 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 118]
+
+
+2018-02-12 17:53:59 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 107]
+
+
+2018-02-12 17:53:59 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 111]
+
+
+2018-02-12 17:53:59 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 121]
+
+
+2018-02-12 17:53:59 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 125]
+
+
+2018-02-12 17:53:59 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 140]
+
+
+2018-02-12 17:54:10 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 107]
+
+
+2018-02-12 17:54:10 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 111]
+
+
+2018-02-12 17:54:10 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 121]
+
+
+2018-02-12 17:54:10 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 125]
+
+
+2018-02-12 17:54:10 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 140]
+
+
+2018-02-12 17:54:24 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 107]
+
+
+2018-02-12 17:54:24 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 111]
+
+
+2018-02-12 17:54:24 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 121]
+
+
+2018-02-12 17:54:24 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 125]
+
+
+2018-02-12 17:54:24 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/view.ctp, line 140]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: serviceArr in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 150]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 40]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 44]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 48]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 52]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 56]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 60]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 60]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 66]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 68]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 78]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 82]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 86]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 122]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 126]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 136]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 140]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 155]
+
+
+2018-02-12 18:02:36 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 177]
+
+
+2018-02-12 18:02:37 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 178]
+
+
+2018-02-12 18:02:37 Notice: Notice (8): Undefined variable: orderStatus in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 185]
+
+
+2018-02-12 18:02:37 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 193]
+
+
+2018-02-12 18:02:37 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 193]
+
+
+2018-02-12 18:02:41 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 118]
+
+
+2018-02-12 18:02:41 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 120]
+
+
+2018-02-12 18:02:41 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 121]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: serviceArr in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 150]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 40]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 44]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 48]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 52]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 56]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 60]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 60]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 66]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 68]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 78]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 82]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 86]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 122]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 126]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 136]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 140]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 155]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 177]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 178]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: orderStatus in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 185]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 193]
+
+
+2018-02-12 18:14:03 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 193]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: serviceArr in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 150]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 40]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 44]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 48]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 52]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 56]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 60]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 60]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 66]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 68]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 78]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 82]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 86]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 122]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 126]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 136]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 140]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 155]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 177]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 178]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: orderStatus in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 185]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 193]
+
+
+2018-02-12 18:15:15 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 193]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined variable: serviceArr in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 150]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 60]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 66]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 68]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 82]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 86]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 122]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 126]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 136]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 140]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined index: total in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 155]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 177]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 178]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 179]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined variable: orderStatus in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 185]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 193]
+
+
+2018-02-12 18:15:36 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 193]
+
+
+2018-02-12 18:15:59 Notice: Notice (8): Undefined variable: serviceArr in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 150]
+
+
+2018-02-12 18:15:59 Notice: Notice (8): Undefined index: service_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 65]
+
+
+2018-02-12 18:15:59 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 97]
+
+
+2018-02-12 18:15:59 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 18:15:59 Notice: Notice (8): Undefined variable: orderStatus in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 105]
+
+
+2018-02-12 18:15:59 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 113]
+
+
+2018-02-12 18:15:59 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 113]
+
+
+2018-02-12 18:16:28 Notice: Notice (8): Undefined variable: serviceArr in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 151]
+
+
+2018-02-12 18:16:28 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 97]
+
+
+2018-02-12 18:16:28 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 18:16:28 Notice: Notice (8): Undefined variable: orderStatus in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 105]
+
+
+2018-02-12 18:16:28 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 113]
+
+
+2018-02-12 18:16:28 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 113]
+
+
+2018-02-12 18:18:07 Notice: Notice (8): Undefined variable: serviceArr in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 194]
+
+
+2018-02-12 18:18:16 Notice: Notice (8): Undefined variable: serviceArr in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 194]
+
+
+2018-02-12 18:18:33 Notice: Notice (8): Undefined variable: serviceArr in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 194]
+
+
+2018-02-12 18:20:20 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 97]
+
+
+2018-02-12 18:20:20 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 18:20:20 Notice: Notice (8): Undefined variable: orderStatus in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 105]
+
+
+2018-02-12 18:20:20 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 113]
+
+
+2018-02-12 18:20:20 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 113]
+
+
+2018-02-12 18:32:43 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 97]
+
+
+2018-02-12 18:32:43 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 18:32:43 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 113]
+
+
+2018-02-12 18:32:43 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 113]
+
+
+2018-02-12 18:33:28 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 97]
+
+
+2018-02-12 18:33:28 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 18:33:28 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 113]
+
+
+2018-02-12 18:33:28 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 113]
+
+
+2018-02-12 18:33:30 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 97]
+
+
+2018-02-12 18:33:30 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 18:33:30 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 113]
+
+
+2018-02-12 18:33:30 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 113]
+
+
+2018-02-12 18:34:42 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 18:34:42 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 113]
+
+
+2018-02-12 18:34:42 Notice: Notice (8): Undefined index:  in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 113]
+
+
+2018-02-12 18:35:07 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 18:39:40 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 18:43:01 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 18:43:40 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 18:43:50 Notice: Notice (8): Undefined variable: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 155]
+
+
+2018-02-12 18:45:59 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 18:46:06 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 19:11:36 Notice: Notice (8): Undefined index: user_address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2459]
+
+
+2018-02-12 19:11:36 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2460]
+
+
+2018-02-12 19:11:36 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2461]
+
+
+2018-02-12 19:11:36 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2462]
+
+
+2018-02-12 19:11:36 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2463]
+
+
+2018-02-12 19:12:00 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2460]
+
+
+2018-02-12 19:12:00 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2461]
+
+
+2018-02-12 19:12:00 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2462]
+
+
+2018-02-12 19:12:00 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2463]
+
+
+2018-02-12 19:12:18 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2461]
+
+
+2018-02-12 19:12:18 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2462]
+
+
+2018-02-12 19:12:18 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2463]
+
+
+2018-02-12 19:12:26 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2462]
+
+
+2018-02-12 19:12:26 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2463]
+
+
+2018-02-12 19:12:32 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2463]
+
+
+2018-02-12 19:44:23 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2615]
+
+
+2018-02-12 19:44:23 Notice: Notice (8): Undefined index: user_address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2616]
+
+
+2018-02-12 19:44:23 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2617]
+
+
+2018-02-12 19:44:35 Notice: Notice (8): Undefined index: user_address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2616]
+
+
+2018-02-12 19:44:35 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2617]
+
+
+2018-02-12 19:44:51 Notice: Notice (8): Undefined index: user_address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2616]
+
+
+2018-02-12 19:44:51 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2617]
+
+
+2018-02-12 19:45:13 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2617]
+
+
+2018-02-12 19:45:24 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2618]
+
+
+2018-02-12 19:45:36 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2619]
+
+
+2018-02-12 19:45:36 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2620]
+
+
+2018-02-12 19:45:36 Notice: Notice (8): Undefined index: is_minimum_charge in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2621]
+
+
+2018-02-12 19:45:36 Notice: Notice (8): Undefined index: credits_applied in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2622]
+
+
+2018-02-12 19:45:36 Notice: Notice (8): Undefined index: on_inspections_cost in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2623]
+
+
+2018-02-12 19:45:36 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2624]
+
+
+2018-02-12 19:45:36 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2625]
+
+
+2018-02-12 19:45:36 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2626]
+
+
+2018-02-12 19:45:44 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2619]
+
+
+2018-02-12 19:45:44 Notice: Notice (8): Undefined index: is_minimum_charge in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2620]
+
+
+2018-02-12 19:45:44 Notice: Notice (8): Undefined index: credits_applied in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2621]
+
+
+2018-02-12 19:45:44 Notice: Notice (8): Undefined index: on_inspections_cost in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2622]
+
+
+2018-02-12 19:45:44 Notice: Notice (8): Undefined index: total_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2623]
+
+
+2018-02-12 19:45:44 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2624]
+
+
+2018-02-12 19:45:44 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2625]
+
+
+2018-02-12 19:46:23 Notice: Notice (8): Undefined index: payment_status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2625]
+
+
+2018-02-12 20:27:58 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 20:30:05 Notice: Notice (8): Undefined index: vendors_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 78]
+
+
+2018-02-12 20:30:05 Notice: Notice (8): Undefined index: vendors_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 78]
+
+
+2018-02-12 20:30:05 Notice: Notice (8): Undefined index: vendors_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 78]
+
+
+2018-02-12 20:30:05 Notice: Notice (8): Undefined index: vendors_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/PackageServicesController.php, line 78]
+
+
+2018-02-12 20:32:00 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 20:32:13 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 20:32:16 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 20:32:21 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 20:32:26 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 20:32:36 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 21:06:53 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2929]
+
+
+2018-02-12 21:06:53 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2934]
+
+
+2018-02-12 21:07:02 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2934]
+
+
+2018-02-12 21:14:09 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3008]
+
+
+2018-02-12 21:14:09 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3009]
+
+
+2018-02-12 21:14:09 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3010]
+
+
+2018-02-12 21:14:09 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3011]
+
+
+2018-02-12 21:14:09 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3012]
+
+
+2018-02-12 21:14:09 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3013]
+
+
+2018-02-12 21:14:09 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3014]
+
+
+2018-02-12 21:14:09 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3015]
+
+
+2018-02-12 21:14:09 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3016]
+
+
+2018-02-12 21:14:09 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3019]
+
+
+2018-02-12 21:14:09 Notice: Notice (8): Undefined variable: orderDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3020]
+
+
+2018-02-12 21:14:33 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3010]
+
+
+2018-02-12 21:14:33 Notice: Notice (8): Undefined index: user_address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3013]
+
+
+2018-02-12 21:14:33 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3015]
+
+
+2018-02-12 21:14:33 Notice: Notice (8): Undefined index: credits_applied in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3016]
+
+
+2018-02-12 21:14:33 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3020]
+
+
+2018-02-12 21:14:41 Notice: Notice (8): Undefined index: user_address in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3013]
+
+
+2018-02-12 21:14:41 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3015]
+
+
+2018-02-12 21:14:41 Notice: Notice (8): Undefined index: credits_applied in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3016]
+
+
+2018-02-12 21:14:41 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3020]
+
+
+2018-02-12 21:14:56 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3015]
+
+
+2018-02-12 21:14:56 Notice: Notice (8): Undefined index: credits_applied in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3016]
+
+
+2018-02-12 21:14:56 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 3020]
+
+
+2018-02-12 23:05:49 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-12 23:32:22 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-12 23:32:31 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/PackageServices/edit.ctp, line 98]
+
+
+2018-02-14 00:19:37 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1295]
+
+
+2018-02-14 00:37:24 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-14 00:37:33 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-14 00:45:51 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-14 01:12:00 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-14 01:16:07 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+

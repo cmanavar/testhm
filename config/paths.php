@@ -125,8 +125,8 @@ define('GST_TAX', 5);
 define('VISITING_CHARGE', 100.00);
 define('REFERRAL_COMISSION', 100.00);
 define('GREEN_CASH_REWERDS_AMOUNT', 100.00);
-define('EMAIL_FROM_NAME', 'Uncode Lab');
-define('EMAIL_FROM_EMAIL_ADDRESS', 'uncodelab@gmail.com');
+define('EMAIL_FROM_NAME', 'H-MEN');
+define('EMAIL_FROM_EMAIL_ADDRESS', 'donotreply@hmen.in');
 
 // Msg Title for Referral
 define('MSG_TYPE_REFERRAL', 'REFERRAL');
@@ -139,6 +139,36 @@ define('MSG_TITLE_CASHBACK_PLAN', 'Membership Plan Cashback');
 define('MSG_TITLE_REFER_MAMBERSHIP', 'Rewarded for refer');
 
 
+define('RUBIES_PLAN_ID', 1);
+define('SAPPHIRES_PLAN_ID', 2);
+define('BOOM_AC_PLAN_ID', 3);
+define('ZOOM_RO_PLAN_ID', 4);
+
+define('RUBIES_DISCOUNT_RATE', 15);
+define('SAPPHIRES_DISCOUNT_RATE', 20);
+
+if ($HTTP_HOST == 'localhost') {
+    define('BOOM_AC_SERVICE_ID', 11);
+    define('BOOM_AC_SERVICE_NAME', 'BOOM AC SERVICE');
+    define('BOOM_AC_SERVICE_IMAGE', '201802091504375a7d6.png');
+    define('ZOOM_RO_SERVICE_ID', 13);
+    define('ZOOM_RO_SERVICE_NAME', 'ZOOM RO SERVICE');
+    define('ZOOM_RO_SERVICE_IMAGE', '201802091507205a7d6.png');
+} elseif ($HTTP_HOST == 'hmen.in') {
+    define('BOOM_AC_SERVICE_ID', 9);
+    define('BOOM_AC_SERVICE_NAME', 'BOOM AC SERVICE');
+    define('BOOM_AC_SERVICE_IMAGE', '201802091504375a7d6.png');
+    define('ZOOM_RO_SERVICE_ID', 13);
+    define('ZOOM_RO_SERVICE_NAME', 'ZOOM RO SERVICE');
+    define('ZOOM_RO_SERVICE_IMAGE', '201802091507205a7d6.png');
+} else {
+    define('BOOM_AC_SERVICE_ID', 9);
+    define('BOOM_AC_SERVICE_NAME', 'BOOM AC SERVICE');
+    define('BOOM_AC_SERVICE_IMAGE', '201801301556455a704.png');
+    define('ZOOM_RO_SERVICE_ID', 13);
+    define('ZOOM_RO_SERVICE_NAME', 'ZOOM RO SERVICE');
+    define('ZOOM_RO_SERVICE_IMAGE', '201801301613435a704.png');
+}
 
 
 define('PAGINATION_LIMIT', 10);

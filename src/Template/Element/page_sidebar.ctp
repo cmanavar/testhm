@@ -157,6 +157,11 @@ $userType = $this->request->session()->read('Auth.User.user_type');
                             <i class="fa fa-shopping-cart fa-fw"></i> ORDERS
                         </a>
                     </li>
+                    <li class="<?php echo ($this->name == 'PackageServices' && in_array($this->request->action, array('index', 'edit'))) ? $active : ""; ?>">
+                        <a href="<?php echo $this->Url->build(["controller" => "PackageServices", "action" => "index"]); ?>">
+                            <i class="fa fa-gift fa-fw"></i> PACKAGE SERVICES
+                        </a>
+                    </li>
                     <li class="<?php echo ($this->name == 'Settings') ? $active : ""; ?>">
                         <a class="dropdown-toggle" data-toggle="dropdown" href=""><i class="fa fa-gears fa-fw"></i> SETTINGS <i class="fa fa-caret-down"></i></a>
                         <ul class="dropdown-menu">
@@ -242,6 +247,11 @@ $userType = $this->request->session()->read('Auth.User.user_type');
                     <li class="<?php echo ($this->name == 'Orders' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>">
                         <a href="<?php echo $this->Url->build(["controller" => "Orders", "action" => "index"]); ?>">
                             <i class="fa fa-shopping-cart fa-fw"></i> ORDERS
+                        </a>
+                    </li>
+                    <li class="<?php echo ($this->name == 'PackageServices' && in_array($this->request->action, array('index', 'edit'))) ? $active : ""; ?>">
+                        <a href="<?php echo $this->Url->build(["controller" => "PackageServices", "action" => "index"]); ?>">
+                            <i class="fa fa-gift fa-fw"></i> PACKAGE SERVICES
                         </a>
                     </li>
                     <li class="<?php echo ($this->name == 'Settings') ? $active : ""; ?>">
