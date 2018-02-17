@@ -589,11 +589,24 @@ class WebservicesController extends AppController {
         $this->loadModel('Users');
         $this->loadModel('Services');
         $this->loadModel('ServiceReviews');
+        $avgReviews = 0;
         if (isset($id) && $id != '') {
+            
             $rslt = [];
             $sDetails = $this->Services->find('all')->where(['status' => 'ACTIVE', 'id' => $id])->order(['id' => 'ASC'])->hydrate(false)->first();
             //pr($sDetails); exit;
             if (isset($sDetails) && !empty($sDetails)) {
+                // Count Average Rating - Start
+                $sumReviews = $this->ServiceReviews->find('all')->select(['review_rates'])->where(['service_id' => $sDetails['id']])->hydrate(false)->toArray();
+                $countReviews = count($sumReviews);
+                $totReviews = 0;
+                foreach ($sumReviews as $reviews) {
+                    $totReviews += $reviews['review_rates'];
+                }
+                $avgReviews = $totReviews / $countReviews;
+                //pr(number_format($avgReviews, 2));
+                //exit;
+                // Count Average Rating - End
                 // Review - Start
                 $reviewsArr = [];
                 $reviews = $this->ServiceReviews->find('all')->where(['service_id' => $sDetails['id']])->order(['id' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no)->hydrate(false)->toArray();
@@ -614,6 +627,7 @@ class WebservicesController extends AppController {
                 //pr($reviewsArr); exit;
                 $nextPageReviews = $this->ServiceReviews->find('all')->where(['service_id' => $sDetails['id']])->order(['id' => 'DESC'])->limit(PAGINATION_LIMIT)->page($page_no + 1)->hydrate(false)->toArray();
                 $rslt['service_reveiws'] = $reviewsArr;
+                $rslt['average_reviews'] = number_format($avgReviews, 2);
                 $rslt['next_page'] = (!empty($nextPageReviews)) ? true : false;
                 // Review - End
                 $this->success("Service Reviews Fetched!", $rslt);
@@ -3615,7 +3629,7 @@ class WebservicesController extends AppController {
         }
         $this->success('Homepage Data Fateched!', $rsltArr);
     }
-    
+
     public function sendPlanInvoiceEmails($planID, $userDetails) {
         if (isset($planID) && $planID != '') {
             $this->layout = 'ajax';

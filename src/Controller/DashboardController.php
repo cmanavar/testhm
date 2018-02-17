@@ -37,7 +37,16 @@ class DashboardController extends AppController {
      *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
      */
     public function index() {
-        
+        $this->loadModel('Services');
+        $this->loadModel('Users');
+        $this->loadModel('Orders');
+        $counters = [];
+        $counters['services'] = $this->Services->find('all')->where(['status' => 'ACTIVE'])->count();
+        $counters['vendor'] = $this->Users->find('all')->where(['user_type' => 'VENDOR'])->count();
+        $counters['members'] = $this->Users->find('all')->where(['user_type IN' => ['CUSTOMER', 'MEMBERSHIP']])->count();
+        $counters['orders'] = $this->Orders->find('all')->count();
+        $this->set('counters', $counters);
+        //echo $orderCounter; exit;
     }
 
 }

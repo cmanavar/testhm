@@ -22249,3 +22249,9 @@ Exception Attributes: array (
   '_ext' => NULL,
 )
 Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-02-17 15:10:28 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS ServiceReviews__SUM(`review_rates`) AS `totReviews` FROM service_reviews Serv' at line 1
+Request URL: /hmen/webservices/service/reviews/1
+2018-02-17 15:10:59 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS ServiceReviews__SUM('review_rates') AS `totReviews` FROM service_reviews Serv' at line 1
+Request URL: /hmen/webservices/service/reviews/1
+2018-02-17 15:12:29 Error: [BadMethodCallException] Unknown method "sum"
+Request URL: /hmen/webservices/service/reviews/1
