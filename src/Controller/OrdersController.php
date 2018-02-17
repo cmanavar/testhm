@@ -75,17 +75,18 @@ class OrdersController extends AppController {
             $tmp['is_minimum_charge'] = $order['is_minimum_charge'];
             $tmp['total_amount'] = number_format($order['total_amount'], 2);
             $tmp['status'] = $order['status'];
-            if (isset($order['status']) && !empty($order['status'])) {
-                if ($order['status'] == 'PLACED') {
-                    $tmp['vandor_name'] = $this->getUserName($order['vendors_id']);
-                }
-                if ($order['status'] == 'SCHEDULE') {
-                    $tmp['vandor_name'] = $this->getUserName($order['vendors_id']);
-                }
-                if ($order['status'] == 'ON_INSPECTION') {
-                    $tmp['vandor_name'] = $this->getUserName($order['vendors_id']);
-                }
-            }
+            $tmp['vandor_name'] = $this->getUserName($order['vendors_id']);
+//            if (isset($order['status']) && !empty($order['status'])) {
+//                if ($order['status'] == 'PLACED') {
+//                    $tmp['vandor_name'] = $this->getUserName($order['vendors_id']);
+//                }
+//                if ($order['status'] == 'SCHEDULE') {
+//                    $tmp['vandor_name'] = $this->getUserName($order['vendors_id']);
+//                }
+//                if ($order['status'] == 'ON_INSPECTION') {
+//                    $tmp['vandor_name'] = $this->getUserName($order['vendors_id']);
+//                }
+//            }
             $rslt[] = $tmp;
         }
         $this->set('orders', $rslt);
@@ -382,6 +383,11 @@ class OrdersController extends AppController {
                 $orderDetails['services'] = $finalOrderDetails;
                 $this->set('orderDetails', $orderDetails);
                 if ($this->request->is(['patch', 'post', 'put'])) {
+                    //echo $this->request->data['status']; exit;
+                    if ($this->request->data['status'] == 'COMPLETED') {
+                        $orderDetails['new_status'] = 'COMPLETED';
+                        $this->sendOrderInvoiceEmails($orderDetails);
+                    }
                     $orders = $this->Orders->get($order_id);
                     $orders = $this->Orders->patchEntity($orders, $this->request->data);
                     $orders->modified = date("Y-m-d H:i:s");

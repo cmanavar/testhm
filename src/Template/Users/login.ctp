@@ -19,7 +19,7 @@
                     <div class="col-md-4 col-md-offset-4">
                         <div class=" login-box">
                             <div class="text-center" style="padding:20px;">
-                                <?= $this->Html->image('logo/hlogo200px.png', ['height' => 54, 'width' => 200]); ?>
+                                <?= $this->Html->image('logo/hlogo.svg', ['height' => 54, 'width' => 200]); ?>
                             </div>
                             <div class="panel-body">
                                 <?php echo $this->Form->create('User', ['class' => 'required validate']);

@@ -13009,3 +13009,159 @@
 2018-02-14 01:16:07 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
 
 
+2018-02-14 14:17:23 Notice: Notice (8): Use of undefined constant GST - assumed 'GST' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/plan_invoice.ctp, line 110]
+
+
+2018-02-14 14:55:05 Notice: Notice (8): Undefined index: usermobile in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/plan_invoice.ctp, line 159]
+
+
+2018-02-14 14:55:05 Notice: Notice (8): Undefined index: usermobile in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/plan_invoice.ctp, line 159]
+
+
+2018-02-14 14:55:05 Notice: Notice (8): Undefined index: usermobile in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/plan_invoice.ctp, line 159]
+
+
+2018-02-14 14:55:05 Notice: Notice (8): Undefined variable: email in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/AppController.php, line 552]
+
+
+2018-02-14 14:55:21 Notice: Notice (8): Undefined index: usermobile in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/plan_invoice.ctp, line 159]
+
+
+2018-02-14 14:55:21 Notice: Notice (8): Undefined index: usermobile in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/plan_invoice.ctp, line 159]
+
+
+2018-02-14 14:55:21 Notice: Notice (8): Undefined index: usermobile in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/plan_invoice.ctp, line 159]
+
+
+2018-02-14 15:38:54 Notice: Notice (8): Use of undefined constant SAPPHIRES_AC_SERVICE_NAME - assumed 'SAPPHIRES_AC_SERVICE_NAME' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 228]
+
+
+2018-02-14 15:38:54 Notice: Notice (8): Use of undefined constant SAPPHIRES_AC_SERVICE_NAME - assumed 'SAPPHIRES_AC_SERVICE_NAME' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 228]
+
+
+2018-02-14 15:38:54 Notice: Notice (8): Use of undefined constant SAPPHIRES_RO_SERVICE_NAME - assumed 'SAPPHIRES_RO_SERVICE_NAME' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 247]
+
+
+2018-02-14 15:38:54 Notice: Notice (8): Use of undefined constant SAPPHIRES_RO_SERVICE_NAME - assumed 'SAPPHIRES_RO_SERVICE_NAME' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 247]
+
+
+2018-02-14 15:50:26 Notice: Notice (8): Undefined variable: userID in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 770]
+
+
+2018-02-14 15:56:57 Notice: Notice (8): Undefined index: payment_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 86]
+
+
+2018-02-14 15:56:57 Notice: Notice (8): Undefined index: payment_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 88]
+
+
+2018-02-14 15:56:57 Notice: Notice (8): Undefined index: payment_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 102]
+
+
+2018-02-14 15:57:00 Notice: Notice (8): Undefined index: payment_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 86]
+
+
+2018-02-14 15:57:00 Notice: Notice (8): Undefined index: payment_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 88]
+
+
+2018-02-14 15:57:00 Notice: Notice (8): Undefined index: payment_type in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Members/index.ctp, line 102]
+
+
+2018-02-14 16:05:57 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-14 16:09:22 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-14 16:09:31 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-14 16:23:27 Notice: Notice (8): Use of undefined constant ç - assumed 'ç' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1321]
+
+
+2018-02-14 16:25:59 Notice: Notice (8): Use of undefined constant ç - assumed 'ç' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 1321]
+
+
+2018-02-14 16:42:05 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-14 16:43:59 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-14 17:09:24 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-14 17:23:07 Notice: Notice (8): Use of undefined constant GST - assumed 'GST' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 108]
+
+
+2018-02-14 17:24:01 Notice: Notice (8): Use of undefined constant GST - assumed 'GST' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 108]
+
+
+2018-02-14 17:25:15 Notice: Notice (8): Use of undefined constant GST - assumed 'GST' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 108]
+
+
+2018-02-14 17:25:26 Notice: Notice (8): Use of undefined constant GST - assumed 'GST' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 108]
+
+
+2018-02-14 17:25:50 Notice: Notice (8): Use of undefined constant GST - assumed 'GST' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 108]
+
+
+2018-02-14 17:26:15 Notice: Notice (8): Use of undefined constant GST - assumed 'GST' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 108]
+
+
+2018-02-14 17:26:41 Notice: Notice (8): Use of undefined constant GST - assumed 'GST' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 108]
+
+
+2018-02-14 17:26:51 Notice: Notice (8): Use of undefined constant GST - assumed 'GST' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 108]
+
+
+2018-02-14 17:27:12 Notice: Notice (8): Use of undefined constant GST - assumed 'GST' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 108]
+
+
+2018-02-14 17:27:26 Notice: Notice (8): Use of undefined constant GST - assumed 'GST' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 108]
+
+
+2018-02-14 17:28:07 Notice: Notice (8): Use of undefined constant GST - assumed 'GST' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 109]
+
+
+2018-02-14 17:43:50 Notice: Notice (8): Use of undefined constant GST - assumed 'GST' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 123]
+
+
+2018-02-14 17:47:02 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-14 17:48:25 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-14 18:52:10 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-14 19:08:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-14 19:39:53 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-16 23:36:54 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-16 23:42:49 Notice: Notice (8): Undefined variable: orderData in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2760]
+
+
+2018-02-17 10:54:57 Notice: Notice (8): Undefined index: email in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/plan_invoice.ctp, line 66]
+
+
+2018-02-17 10:54:57 Notice: Notice (8): Undefined index: plain_pass in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/plan_invoice.ctp, line 69]
+
+
+2018-02-17 10:55:02 Notice: Notice (8): Use of undefined constant RUBIES_AC_SERVICE_NAME - assumed 'RUBIES_AC_SERVICE_NAME' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 191]
+
+
+2018-02-17 10:55:02 Notice: Notice (8): Use of undefined constant RUBIES_RO_SERVICE_NAME - assumed 'RUBIES_RO_SERVICE_NAME' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 210]
+
+
+2018-02-17 10:59:23 Notice: Notice (8): Undefined index: email in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/plan_invoice.ctp, line 66]
+
+
+2018-02-17 10:59:23 Notice: Notice (8): Undefined index: plain_pass in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/plan_invoice.ctp, line 69]
+
+

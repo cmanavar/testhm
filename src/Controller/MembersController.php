@@ -149,8 +149,11 @@ class MembersController extends AppController {
                         if ($sendMsg['status'] == 'fail') {
                             $this->Flash->error($sendMsg['msg']);
                         }
+                        // Send Invoice
+                        $user['plain_pass'] = $password;
+                        $this->sendPlanInvoiceEmails($plan_id, $user);
                         // SEND EMAIL
-                        $this->sentEmails($name, $email, $password);
+                        //$this->sentEmails($name, $email, $password);
                         if (isset($this->request->data['birthdate']) && $this->request->data['birthdate'] != '') {
                             $user->birthdate = date('Y-m-d', strtotime($this->request->data['birthdate']));
                         }
@@ -745,6 +748,41 @@ class MembersController extends AppController {
         }
         echo json_encode($this->data);
         exit;
+    }
+
+    public function sendPlanInvoiceEmails($planID, $userDetails) {
+        if (isset($planID) && $planID != '') {
+            $this->layout = 'ajax';
+            $view_output = '';
+            $mailData = [];
+            $mailData['username'] = $userDetails['name'];
+            $mailData['usermobile'] = $userDetails['phone_no'];
+            $mailData['email'] = $userDetails['email'];
+            $mailData['plain_pass'] = $userDetails['plain_pass'];
+            $mailData['member_id'] = $userDetails['membership_id'];
+            $mailData['plan_name'] = $this->getPlanNames($planID);
+            $mailData['plan_details'] = $this->getPlanDetails($planID);
+            $planRate = $this->getPlanRates($planID);
+            $mailData['plan_rate'] = number_format($planRate, 2);
+            $gst = $planRate * GST_TAX / 100;
+            $mailData['tax'] = number_format($gst, 2);
+            $tots = $planRate + $gst;
+            $mailData['total'] = number_format($tots, 2);
+            $emailAddress = $userDetails['email'];
+            $this->set('mailData', $mailData);
+            $view_output = $this->render('/Element/plan_invoice');
+            //pr($view_output); exit;
+            $fields = array(
+                'msg' => $view_output,
+                'tomail' => $emailAddress,
+                //'cc_email' => $patient['email'],
+                'subject' => 'Invoice for Membership Plan',
+                'from_name' => 'Uncode Lab',
+                'from_mail' => 'uncodelab@gmail.com',
+            );
+            $this->sendemails($fields);
+            return;
+        }
     }
 
 }

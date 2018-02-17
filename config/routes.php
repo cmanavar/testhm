@@ -64,6 +64,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/vendor/login', ['controller' => 'Vendors', 'action' => 'login']); //P
     $routes->connect('/webservices/services/list', ['controller' => 'Webservices', 'action' => 'homepage']);
     $routes->connect('/webservices/services/lists', ['controller' => 'Webservices', 'action' => 'serviceLists']);
+    $routes->connect('/webservices/servicelists', ['controller' => 'Webservices', 'action' => 'getServiceLists']);
     $routes->connect('/webservices/categories/details/*', ['controller' => 'Webservices', 'action' => 'categoryDetails']);
     $routes->connect('/webservices/categories/list', ['controller' => 'Webservices', 'action' => 'categoryList']);
     $routes->connect('/webservices/service/details/*', ['controller' => 'Webservices', 'action' => 'serviceDetails']);
@@ -111,6 +112,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/vendors/orders', ['controller' => 'Webservices', 'action' => 'vendorOrderLists']);
     $routes->connect('/webservices/packageservice/book', ['controller' => 'Webservices', 'action' => 'packageServiceBook']);
     $routes->connect('/webservices/membership/credithistory', ['controller' => 'Webservices', 'action' => 'creditOrderHistory']);
+    $routes->connect('/webservices/membership/details', ['controller' => 'Webservices', 'action' => 'membershipDetails']);
     $routes->connect('/test', ['controller' => 'Webservices', 'action' => 'testNotifications']);
 
 

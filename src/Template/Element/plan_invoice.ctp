@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-            <title>Invoice For PLAN</title>
+            <title>Invoice For <?= $mailData['plan_name']; ?></title>
     </head>
     <body leftmargin="0" marginwidth="0" topmargin="1" marginheight="0" offset="0">
         <center>
@@ -23,7 +23,7 @@
                                                         <td align="left" style="box-sizing:border-box;padding:0;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-size:16px;vertical-align:top;text-align:left" valign="top">
                                                             <span>
                                                                 <a href="<?= WEBSITE_PATH ?>" style="box-sizing:border-box;color:#348eda;font-weight:400;text-decoration:none" target="_blank">
-                                                                    <img alt="H-MEN" height="22" src="http://localhost/hmen/img/logo/hlogo150px.png" style="max-width:100%;border-style:none;width:150px;height:41px" width="123">
+                                                                    <img alt="H-MEN" height="22" src="<?= IMAGE_URL_PATH; ?>logo/hlogo01.png" style="max-width:100%;border-style:none;width:150px;height:41px" width="123">
                                                                 </a>
                                                             </span>
                                                         </td>
@@ -43,10 +43,9 @@
                                                                             <table style="font-size:13px!important" width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                                 <tbody>
                                                                                     <tr>
-                                                                                        <td align="left" valign="middle"><img src="https://image.flaticon.com/icons/svg/634/634623.svg" width="45" height="45" alt="" class="CToWUd"></td>
-                                                                                        <td align="left" valign="middle" style="font-size:13px;padding-left:10px">Member ID<br><span style="color:#156095!important"><strong>M-2015946456</strong></span></td>
-                                                                                        <!--                                                                                        <td align="left" valign="middle" style="font-size:13px;padding-left:10px">Memeber Name<br><span style="color:#156095!important"><strong>SCHEDULED</strong></span></td>-->
-                                                                                        <td align="left" valign="middle" style="font-size:13px;padding-left:10px">Plan Name<br><span style="color:#156095!important"><strong>RUBIES</strong></span></td>
+                                                                                        <td align="left" valign="middle"><img src="<?= IMAGE_URL_PATH; ?>icons/ic-invoice.svg" width="45" height="45" alt="" class="CToWUd"></td>
+                                                                                        <td align="left" valign="middle" style="font-size:13px;padding-left:10px">Member ID<br><span style="color:#156095!important"><strong><?= $mailData['member_id']; ?></strong></span></td>
+                                                                                        <td align="left" valign="middle" style="font-size:13px;padding-left:10px">Plan Name<br><span style="color:#156095!important"><strong><?= $mailData['plan_name']; ?></strong></span></td>
                                                                                     </tr>
                                                                                 </tbody>
                                                                             </table>
@@ -54,11 +53,23 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td align="left" style="padding-top:10px;padding-bottom:10px;padding-left:30px;padding-right:30px">
-                                                                            <h1 style="font-size:20px!important;margin-bottom:9px!important;color:#333333!important">Dear Chirag Manavar,</h1>
-                                                                            Thank you for purchasing memebership plan.
+                                                                            <h1 style="font-size:20px!important;margin-bottom:9px!important;color:#333333!important">Dear <?= $mailData['username']; ?>,</h1>
+                                                                            Thank you for purchasing membership plan.
                                                                             <p style="margin-top:10px!important;margin-bottom:10px!important;float:left!important;clear:both!important">Please use this Member Id
-                                                                                <span style="color:#156095!important">M-2015946456</span> 
+                                                                                <span style="color:#156095!important"><?= $mailData['member_id']; ?></span> 
                                                                                 for further communication.
+                                                                            </p>
+                                                                            <p style="margin-top:10px!important;margin-bottom:10px!important;float:left!important;clear:both!important">
+                                                                                Your Account credentials is here:
+                                                                            </p>
+                                                                            <p style="margin-top:10px!important;margin-bottom:10px!important;float:left!important;clear:both!important">
+                                                                                <label><b>Email :</b></label> <?= $mailData['email']; ?> <br>
+                                                                            </p>
+                                                                            <p style="margin-top:10px!important;margin-bottom:10px!important;float:left!important;clear:both!important">
+                                                                                <label><b>Password :</b></label> <?= $mailData['plain_pass']; ?> <br>
+                                                                            </p>
+                                                                            <p style="margin-top:10px!important;margin-bottom:10px!important;float:left!important;clear:both!important">
+                                                                                Sorry, you can login after your payment clearance and setup your account.
                                                                             </p>
                                                                             <div style="margin-top:10px;margin-bottom:20px;width:100%;float:left">
                                                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -69,39 +80,21 @@
                                                                                                 <div style="width:100%;float:left">
                                                                                                     <table width="100%" border="0" cellpadding="0" cellspacing="0">
                                                                                                         <tbody>
-                                                                                                            <tr>
-                                                                                                                <td style="padding:10px 0; color: #156095" align="left" valign="top">1)
-                                                                                                                    <span style="color:#156095!important">Free Service Visits </span>
-                                                                                                                    <br>
-                                                                                                                </td>
-                                                                                                                <td colspan="2" style="padding:10px 0;min-width:100px" align="right" valign="top">
-                                                                                                                    <span style="color:#156095!important">
-                                                                                                                        <strong>10</strong>
-                                                                                                                    </span>
-                                                                                                                </td>
-                                                                                                            </tr>
-                                                                                                            <tr>
-                                                                                                                <td style="padding:10px 0; color: #156095" align="left" valign="top">2)
-                                                                                                                    <span style="color:#156095!important">FREE AC SERVICE </span>
-                                                                                                                    <br>
-                                                                                                                </td>
-                                                                                                                <td colspan="2" style="padding:10px 0;min-width:100px" align="right" valign="top">
-                                                                                                                    <span style="color:#156095!important">
-                                                                                                                        <strong>1</strong>
-                                                                                                                    </span>
-                                                                                                                </td>
-                                                                                                            </tr>
-                                                                                                            <tr>
-                                                                                                                <td style="padding:10px 0; color: #156095" align="left" valign="top">3)
-                                                                                                                    <span style="color:#156095!important">FREE RO SERVICE </span>
-                                                                                                                    <br>
-                                                                                                                </td>
-                                                                                                                <td colspan="2" style="padding:10px 0;min-width:100px" align="right" valign="top">
-                                                                                                                    <span style="color:#156095!important">
-                                                                                                                        <strong>1</strong>
-                                                                                                                    </span>
-                                                                                                                </td>
-                                                                                                            </tr>
+                                                                                                            <?php if (!empty($mailData['plan_details'])) { ?>
+                                                                                                                <?php foreach ($mailData['plan_details'] as $key => $val) { ?>
+                                                                                                                    <tr>
+                                                                                                                        <td style="padding:10px 0; color: #156095" align="left" valign="top"><?= $key + 1; ?>)
+                                                                                                                            <span style="color:#156095!important"><?= $val['name']; ?> </span>
+                                                                                                                            <br>
+                                                                                                                        </td>
+                                                                                                                        <td colspan="2" style="padding:10px 0;min-width:100px" align="right" valign="top">
+                                                                                                                            <span style="color:#156095!important">
+                                                                                                                                <strong><?= $val['tot_services']; ?></strong>
+                                                                                                                            </span>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                <?php } ?>
+                                                                                                            <?php } ?>
                                                                                                         </tbody>
                                                                                                     </table>
                                                                                                 </div>
@@ -109,7 +102,6 @@
                                                                                         </tr>
                                                                                     </tbody>
                                                                                 </table>
-                                                                                <!--                                                                                <p style="color:#333333!important"> *Inspection amount of Rs 350.00 will be charged upfront. In case you avail the service, the same value will be adjusted against the final bill amount.</p>-->
                                                                             </div>
                                                                             <div style="margin-top:5px;margin-bottom:15px;width:100%;float:left">
                                                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -121,17 +113,17 @@
                                                                                                 </span>
                                                                                             </td>
                                                                                             <td style="padding:10px 0;" align="right" valign="top">
-                                                                                                <span style="color:#333333!important;font-size:13px!important;line-height:15px!important">₹ 400.00 </span>
+                                                                                                <span style="color:#333333!important;font-size:13px!important;line-height:15px!important">₹ <?= $mailData['plan_rate']; ?> </span>
                                                                                             </td>
                                                                                         </tr>
                                                                                         <tr>
                                                                                             <td style="padding:10px 0;border-bottom:solid 1px #c6c6c6" align="left" valign="top">
                                                                                                 <span style="font-size:13px!important;line-height:15px!important">
-                                                                                                    <strong>GST (<?php echo GST."%"; ?>) :</strong>
+                                                                                                    <strong>GST (<?php echo GST_TAX . "%"; ?>) :</strong>
                                                                                                 </span>
                                                                                             </td>
                                                                                             <td style="padding:10px 0;border-bottom:solid 1px #c6c6c6" align="right" valign="top">
-                                                                                                <span style="color:#333333!important;font-size:13px!important;line-height:15px!important">₹ 20.00 </span>
+                                                                                                <span style="color:#333333!important;font-size:13px!important;line-height:15px!important">₹ <?= $mailData['tax']; ?> </span>
                                                                                             </td>
                                                                                         </tr>
                                                                                         <tr>
@@ -142,7 +134,7 @@
                                                                                             </td>
                                                                                             <td style="padding:15px 0 10px 0" align="right" valign="top">
                                                                                                 <span style="color:#333333!important">₹
-                                                                                                    <strong>420.00 </strong>
+                                                                                                    <strong> <?= $mailData['total']; ?> </strong>
                                                                                                 </span>
                                                                                             </td>
                                                                                         </tr> 
@@ -173,10 +165,10 @@
                                                                                                         </tr>
                                                                                                         <tr>
                                                                                                             <td align="left" valign="top" style="padding-top:15px">
-                                                                                                                <span style="color:#333333!important">Chirag Manavar</span><br>
+                                                                                                                <span style="color:#333333!important"><?= $mailData['username']; ?></span><br>
                                                                                                                     Mobile :
                                                                                                                     <span style="color:#333333!important">
-                                                                                                                        <a href="tel:+91%2090164%2088588" value="+919016488588" target="_blank">+91 9016488588</a>
+                                                                                                                        <a href="tel:<?= '+91' . $mailData['usermobile']; ?>" value="<?= '+91' . $mailData['usermobile']; ?>" target="_blank"><?= '+91' . $mailData['usermobile']; ?></a>
                                                                                                                     </span>
                                                                                                             </td>
                                                                                                         </tr>
@@ -203,7 +195,7 @@
                                                                                                         </tr>
                                                                                                         <tr>
                                                                                                             <td align="left" valign="top" style="">
-                                                                                                                <span style="color:#333333!important">GSTIN: 12445645767</span>
+                                                                                                                <span style="color:#333333!important">GSTIN: <?= COMPANY_GST_NUMBER; ?></span>
                                                                                                             </td>
                                                                                                         </tr>
                                                                                                     </tbody>
@@ -223,7 +215,7 @@
                                                                                         <li> Material Cost will be on customer.</li>
                                                                                         <li> Service can be avail in Ahmedabad City.</li>
                                                                                         <li> Job will be perform within Business Wall.</li>
-                                                                                        <li> For More Details, Click <a href="http://www.housejoy.in/faq-and-terms/COMP000000" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://www.housejoy.in/faq-and-terms/COMP000000&amp;source=gmail&amp;ust=1518590716113000&amp;usg=AFQjCNGW1Verf7IMZFJZgvxoVyAItP_DJQ"><strong>here</strong> </a></li>
+                                                                                        <li> For More Details, Click <a href="<?php echo WEBSITE_TOC_PATH; ?>" target="_blank"><strong>here</strong> </a></li>
                                                                                     </ul>
                                                                             </div>
                                                                         </td>
@@ -232,7 +224,8 @@
                                                             </table>
                                                         </td>
                                                     </tr>
-                                                    <tr><td bgcolor="#f7f7f7" style="border:solid 1px #f7f7f7;border-top:none;padding-top:10px;padding-bottom:10px"><table width="550" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr><td bgcolor="#f7f7f7" style="border:solid 1px #f7f7f7;border-top:none;padding-top:10px;padding-bottom:10px">
+                                                            <table width="550" border="0" cellspacing="0" cellpadding="0">
                                                                 <tbody>
                                                                     <tr>
                                                                         <td width="150">
@@ -240,7 +233,7 @@
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td width="150" align="center" valign="middle">
-                                                                                            <img src="http://hmen.in/img/icons/guarantee/ic-step1.svg" width="30" alt="" class="CToWUd">
+                                                                                            <img src="<?php echo IMAGE_URL_PATH . 'icons/guarantee/ic-step1.png'; ?>" width="30" alt="" class="CToWUd">
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr>
@@ -257,7 +250,7 @@
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td width="150" align="center" valign="middle">
-                                                                                            <img src="http://hmen.in/img/icons/guarantee/ic-step2.svg" width="30" alt="" class="CToWUd">
+                                                                                            <img src="<?php echo IMAGE_URL_PATH . 'icons/guarantee/ic-step2.png'; ?>" width="30" alt="" class="CToWUd">
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr>
@@ -274,7 +267,7 @@
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td width="150" align="center" valign="middle">
-                                                                                            <img src="http://hmen.in/img/icons/guarantee/ic-step3.svg" width="30" alt="" class="CToWUd">
+                                                                                            <img src="<?php echo IMAGE_URL_PATH . 'icons/guarantee/ic-step3.png'; ?>" width="30" alt="" class="CToWUd">
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr>
@@ -291,7 +284,7 @@
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td width="150" align="center" valign="middle">
-                                                                                            <img src="http://hmen.in/img/icons/guarantee/ic-step4.svg" width="30" alt="" class="CToWUd">
+                                                                                            <img src="<?php echo IMAGE_URL_PATH . 'icons/guarantee/ic-step4.png'; ?>" width="30" alt="" class="CToWUd">
                                                                                         </td>
                                                                                     </tr>
                                                                                     <tr>
@@ -316,7 +309,7 @@
                                                 <table style="box-sizing:border-box;width:100%;border-spacing:0;font-size:12px;border-collapse:separate!important" width="100%">
                                                     <tbody>
                                                         <tr style="font-size:12px">
-                                                            <td align="center" style="box-sizing:border-box;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;vertical-align:top;font-size:12px;text-align:center;padding:20px 0" valign="top"><span style="float:none;display:block;text-align:center"><a href="#" style="box-sizing:border-box;color:#348eda;font-weight:400;text-decoration:none;font-size:12px" target="_blank" ><img alt="H-MEN" height="16" src="http://localhost/hmen/img/logo/hlogo125px.png" style="max-width:100%;border-style:none;font-size:12px;width:125px;height:34px" width="89" ></a></span>
+                                                            <td align="center" style="box-sizing:border-box;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;vertical-align:top;font-size:12px;text-align:center;padding:20px 0" valign="top"><span style="float:none;display:block;text-align:center"><a href="#" style="box-sizing:border-box;color:#348eda;font-weight:400;text-decoration:none;font-size:12px" target="_blank" ><img alt="H-MEN" height="16" src="<?= IMAGE_URL_PATH; ?>logo/hlogo01.png" style="max-width:100%;border-style:none;font-size:12px;width:125px;height:34px" width="89" ></a></span>
                                                                 <p style="margin:0;color:#294661;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-weight:300;font-size:12px;margin-bottom:5px">&copy; <span >H-MEN</span>, <?= EMAIL_FOOTER_TEXT; ?></p>
                                                                 <p style="margin:0;color:#294661;font-family:'Open Sans','Helvetica Neue','Helvetica',Helvetica,Arial,sans-serif;font-weight:300;font-size:12px;margin-bottom:5px"><a href="<?= SOCIAL_MEDIA_LINK_FB ?>" style="box-sizing:border-box;color:#348eda;font-weight:400;text-decoration:none;font-size:12px;padding:0 5px" target="_blank" >Facebook</a> <a href="<?= SOCIAL_MEDIA_LINK_TW ?>" style="box-sizing:border-box;color:#348eda;font-weight:400;text-decoration:none;font-size:12px;padding:0 5px" target="_blank" >Twitter</a> <a href="<?= SOCIAL_MEDIA_LINK_IN ?>" style="box-sizing:border-box;color:#348eda;font-weight:400;text-decoration:none;font-size:12px;padding:0 5px" target="_blank" >Instagram</a></p>
                                                             </td>

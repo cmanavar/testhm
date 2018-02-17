@@ -10,7 +10,8 @@
                 <div class="row">
                     <div class="col-md-12 col-xs-12 text-center" style="padding: 5px 0px; background: none;">
                         <a href="#" class="login_image">
-                            <h1><b>H-Men</b></h1>
+                            <!--                            <h1><b>H-Men</b></h1>-->
+                            
                         </a>
                     </div>    
                 </div>
@@ -18,7 +19,10 @@
                     <!-- Welcome Message -->
                     <div class="col-md-4 col-md-offset-4">
                         <div class=" login-box">
-                            <h1 class="text-center fontFamily">RESET PASSWORD</h1>
+                            <div class="text-center" style="padding:20px;">
+                                <?php echo $this->Html->image('logo/hlogo.svg', ['height' => 54, 'width' => 200]); ?>
+                            </div>
+                            <h1 class="text-center fontFamily" style="color: #000;">RESET PASSWORD</h1>
                             <div class="panel-body">
                                 <?php echo $this->Form->create('', ['class' => 'form-horizontal validate']); ?>
                                 <div class="row">

@@ -303,6 +303,12 @@ class AppController extends Controller {
         return $user['name'];
     }
 
+    public function getUserMembershipId($userId) {
+        $userTable = TableRegistry::get('Users');
+        $user = $userTable->find()->select(['membership_id'])->where(['id' => $userId])->hydrate(false)->first();
+        return $user['membership_id'];
+    }
+
     public function getEmail($userId) {
         $userTable = TableRegistry::get('Users');
         $user = $userTable->find()->select(['email'])->where(['id' => $userId])->hydrate(false)->first();
@@ -458,10 +464,53 @@ class AppController extends Controller {
         return (isset($plans['name']) && $plans['name'] != '') ? $plans['name'] : '';
     }
 
+    public function getMembershipPlanimage($id) {
+        $planTable = TableRegistry::get('plans');
+        $plans = $planTable->find()->select(['plan_image'])->where(['id' => $id])->hydrate(false)->first();
+        return (isset($plans['plan_image']) && $plans['plan_image'] != '') ? IMAGE_URL_PATH . 'plans/' . $plans['plan_image'] : '';
+    }
+
     public function getPlanId($id) {
         $userTable = TableRegistry::get('Users');
         $users = $userTable->find()->select(['plan_id'])->where(['id' => $id])->hydrate(false)->first();
         return (isset($users['plan_id']) && $users['plan_id'] != '') ? $users['plan_id'] : 0;
+    }
+
+    public function getPlanNames($plan_id) {
+        $plansTable = TableRegistry::get('Plans');
+        $planDetails = $plansTable->find()->select(['name'])->where(['id' => $plan_id])->hydrate(false)->first();
+        return (isset($planDetails['name']) && $planDetails['name'] != '') ? $planDetails['name'] : '-';
+    }
+
+    public function getPlanRates($plan_id) {
+        $plansTable = TableRegistry::get('Plans');
+        $planDetails = $plansTable->find()->select(['price'])->where(['id' => $plan_id])->hydrate(false)->first();
+        return (isset($planDetails['price']) && $planDetails['price'] != '') ? $planDetails['price'] : 0.00;
+    }
+
+    public function getPlanDetails($plan_id) {
+        $plansTable = TableRegistry::get('Plans');
+        $planDetails = $plansTable->find()->where(['id' => $plan_id])->hydrate(false)->first();
+        $rslt = [];
+        if ($planDetails['totservices'] != 0) {
+            $tmp = [];
+            $tmp['name'] = 'Free Visit Services';
+            $tmp['tot_services'] = $planDetails['totservices'];
+            $rslt[] = $tmp;
+        }
+        if ($planDetails['ac_services'] != 0) {
+            $tmp = [];
+            $tmp['name'] = 'Free AC Services';
+            $tmp['tot_services'] = $planDetails['ac_services'];
+            $rslt[] = $tmp;
+        }
+        if ($planDetails['ro_services'] != 0) {
+            $tmp = [];
+            $tmp['name'] = 'Free RO Services';
+            $tmp['tot_services'] = $planDetails['ro_services'];
+            $rslt[] = $tmp;
+        }
+        return $rslt;
     }
 
     public function getPackageOrders($userId) {
@@ -474,25 +523,37 @@ class AppController extends Controller {
                 $tmp = [];
                 $tmp['id'] = $packageorder['id'];
                 $tmp['service_name'] = $packageorder['service_name'];
-                $tmp['service_image'] = IMAGE_URL_PATH.'services/square/'.$packageorder['service_image'];
+                $tmp['service_image'] = IMAGE_URL_PATH . 'services/square/' . $packageorder['service_image'];
                 if (!empty($packageorder['service_date'])) {
                     $tmp['service_date'] = $packageorder['service_date']->format('d-m-Y');
                 } else {
                     $tmp['service_date'] = '-';
                 }
-                $tmp['service_status'] = ucfirst(strtolower($packageorder['service_status']));
+                $tmp['service_status'] = $packageorder['service_status'];
                 $rslt[] = $tmp;
             }
         }
         return $rslt;
     }
 
-    public function sendPlanInvoiceEmails() {
-        
-    }
-
-    public function sendOrderInvoiceEmails() {
-        
+    public function sendOrderInvoiceEmails($orderData) {
+        if (is_array($orderData) && !empty($orderData)) {
+            $this->layout = false;
+//            pr($orderData); exit;
+            $this->set('orderData', $orderData);
+            $view_output = $this->render('/Element/order_invoice');
+            //pr($orderData['useremail']); exit;
+            $fields = array(
+                'msg' => $view_output,
+                'tomail' => $orderData['useremail'],
+                //'cc_email' => $patient['email'],
+                'subject' => 'Invoice for Membership Plan',
+                'from_name' => 'Uncode Lab',
+                'from_mail' => 'uncodelab@gmail.com',
+            );
+            $this->sendemails($fields);
+            return;
+        }
     }
 
 }

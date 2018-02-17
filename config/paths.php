@@ -121,6 +121,8 @@ define('USER_PROFILE_PATH', 'profile_picture/');
 define('VENDOR_AGREEMENT_PATH', 'vendors/agreements/');
 define('VENDOR_IDPROOF_PATH', 'vendors/idproof/');
 
+
+define('COMPANY_GST_NUMBER', '24DDVPP8257B1Z3');
 define('GST_TAX', 5);
 define('VISITING_CHARGE', 100.00);
 define('REFERRAL_COMISSION', 100.00);
@@ -132,9 +134,15 @@ define('EMAIL_FROM_EMAIL_ADDRESS', 'donotreply@hmen.in');
 define('MSG_TYPE_REFERRAL', 'REFERRAL');
 define('MSG_TYPE_CASHBACK', 'MEMBERSHIP_CASHBACK');
 define('MSG_TYPE_OFFER', 'OFFER');
+define('MSG_TYPE_ORDER', 'ORDER');
 define('MSG_TYPE_OTHER', 'OTHER');
 define('MSG_TYPE_GREEN_CASH', 'GREENCASH');
 define('MSG_TITLE_REFERRAL', 'Rewarded for refer');
+define('MSG_TITLE_ORDER_PLACED', 'Order Placed');
+define('MSG_TITLE_ORDER_ASSIGN', 'Order Assigned');
+define('MSG_TITLE_ORDER_UPDATED', 'Order Updated');
+define('MSG_TITLE_ORDER_CANCELLED', 'Order Cancelled');
+define('MSG_TITLE_ORDER_COMPLETED', 'Order Completed');
 define('MSG_TITLE_CASHBACK_PLAN', 'Membership Plan Cashback');
 define('MSG_TITLE_REFER_MAMBERSHIP', 'Rewarded for refer');
 
@@ -146,6 +154,12 @@ define('ZOOM_RO_PLAN_ID', 4);
 
 define('RUBIES_DISCOUNT_RATE', 15);
 define('SAPPHIRES_DISCOUNT_RATE', 20);
+
+define('RUBIES_AC_SERVICE_NAME', 'Rubies AC Service');
+define('RUBIES_RO_SERVICE_NAME', 'Rubies RO Service');
+
+define('SAPPHIRES_AC_SERVICE_NAME', 'Sapphires AC Service');
+define('SAPPHIRES_RO_SERVICE_NAME', 'Sapphires RO Service');
 
 if ($HTTP_HOST == 'localhost') {
     define('BOOM_AC_SERVICE_ID', 11);

@@ -39,6 +39,7 @@
         //echo $this->Html->css('bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet');
         echo $this->Html->css('bower_components/bootstrap/dist/css/bootstrap.min.css');
         echo $this->Html->css('dist/css/sb-admin-2.css');
+        echo $this->Html->css('login.css');
         echo $this->Html->css('custom/custom.css');
         ?>      
         <!-- EOF CSS INCLUDE -->                                      

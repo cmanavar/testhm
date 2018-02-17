@@ -21651,3 +21651,601 @@ Exception Attributes: array (
   '_ext' => NULL,
 )
 Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-02-14 13:26:16 Error: Fatal Error (4): syntax error, unexpected '?>' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Users/resetpasswords.ctp, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-14 13:26:16 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /hmen/reset/password/Y2hpcmFnY2UxOTkyQGdtYWlsLmNvbQ==
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/Applications/X...', 14)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-14 13:26:24 Error: Fatal Error (4): syntax error, unexpected '?>' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Users/resetpasswords.ctp, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-14 13:26:24 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /hmen/reset/password/Y2hpcmFnY2UxOTkyQGdtYWlsLmNvbQ==
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/Applications/X...', 14)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-14 13:26:31 Error: Fatal Error (4): syntax error, unexpected '?>' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Users/resetpasswords.ctp, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-14 13:26:31 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /hmen/reset/password/Y2hpcmFnY2UxOTkyQGdtYWlsLmNvbQ==
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/Applications/X...', 14)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-14 14:17:25 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step1.svg
+2018-02-14 14:17:25 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step2.svg
+2018-02-14 14:17:25 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step4.svg
+2018-02-14 14:17:25 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step3.svg
+2018-02-14 14:17:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step1.svg
+2018-02-14 14:17:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step4.svg
+2018-02-14 14:17:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step2.svg
+2018-02-14 14:17:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step3.svg
+2018-02-14 14:19:02 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step1.svg
+2018-02-14 14:19:02 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step4.svg
+2018-02-14 14:19:02 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step2.svg
+2018-02-14 14:19:02 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step3.svg
+2018-02-14 14:19:25 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step1.svg
+2018-02-14 14:19:25 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step3.svg
+2018-02-14 14:19:25 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step2.svg
+2018-02-14 14:19:25 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step4.svg
+2018-02-14 14:19:42 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step1.svg
+2018-02-14 14:19:42 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step3.svg
+2018-02-14 14:19:42 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step2.svg
+2018-02-14 14:19:42 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/icons/guarantee/ic-step4.svg
+2018-02-14 15:03:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-02-14 15:03:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+x100.png
+2018-02-14 15:04:01 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-02-14 15:10:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-02-14 15:10:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-02-14 15:24:02 Error: Fatal Error (1): Call to undefined method App\Controller\MembersController::viewBuilder() in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php, line 706]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-14 15:24:02 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\MembersController::viewBuilder()
+Request URL: /hmen/members/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/Applications/X...', 706)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-14 15:57:31 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-02-14 15:57:32 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-02-14 15:57:32 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-02-14 16:10:11 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "orders"
+Request URL: /hmen/orders/edit/1
+2018-02-14 18:28:52 Error: Fatal Error (1): Call to a member function find() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2916]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-14 18:28:52 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /hmen/webservices/vendor/order/update
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 2916)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-14 18:29:35 Error: Fatal Error (1): Call to a member function find() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2916]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-14 18:29:35 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /hmen/webservices/vendor/order/update
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 2916)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-14 18:38:41 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must implement interface Cake\Datasource\EntityInterface, array given, called in /Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php on line 2998 and defined in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Table.php, line 2030]
+
+
+2018-02-14 18:38:41 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must implement interface Cake\Datasource\EntityInterface, array given, called in /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Table.php on line 2036 and defined in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Marshaller.php, line 419]
+
+
+2018-02-14 18:38:41 Error: Fatal Error (1): Call to a member function isNew() on array in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Marshaller.php, line 424]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-14 18:38:41 Error: [Cake\Error\FatalErrorException] Call to a member function isNew() on array
+Request URL: /hmen/webservices/vendor/order/update
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 424)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-14 18:40:26 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must implement interface Cake\Datasource\EntityInterface, array given, called in /Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php on line 2999 and defined in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Table.php, line 2030]
+
+
+2018-02-14 18:40:26 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must implement interface Cake\Datasource\EntityInterface, array given, called in /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Table.php on line 2036 and defined in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Marshaller.php, line 419]
+
+
+2018-02-14 18:40:26 Error: Fatal Error (1): Call to a member function isNew() on array in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Marshaller.php, line 424]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-14 18:40:26 Error: [Cake\Error\FatalErrorException] Call to a member function isNew() on array
+Request URL: /hmen/webservices/vendor/order/update
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 424)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-14 18:41:00 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must implement interface Cake\Datasource\EntityInterface, array given, called in /Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php on line 2999 and defined in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Table.php, line 2030]
+
+
+2018-02-14 18:41:00 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must implement interface Cake\Datasource\EntityInterface, array given, called in /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Table.php on line 2036 and defined in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Marshaller.php, line 419]
+
+
+2018-02-14 18:41:00 Error: Fatal Error (1): Call to a member function isNew() on array in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Marshaller.php, line 424]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-14 18:41:00 Error: [Cake\Error\FatalErrorException] Call to a member function isNew() on array
+Request URL: /hmen/webservices/vendor/order/update
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 424)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-14 18:43:02 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must implement interface Cake\Datasource\EntityInterface, array given, called in /Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php on line 3000 and defined in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Table.php, line 2030]
+
+
+2018-02-14 18:43:02 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must implement interface Cake\Datasource\EntityInterface, array given, called in /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Table.php on line 2036 and defined in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Marshaller.php, line 419]
+
+
+2018-02-14 18:43:02 Error: Fatal Error (1): Call to a member function isNew() on array in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/ORM/Marshaller.php, line 424]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-14 18:43:02 Error: [Cake\Error\FatalErrorException] Call to a member function isNew() on array
+Request URL: /hmen/webservices/vendor/order/update
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 424)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-14 18:53:24 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/services/square/201802091504375a7d6.png
+2018-02-14 18:54:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/services/square/201802091504375a7d6.png
+2018-02-14 18:54:33 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/services/square/201802091504375a7d6.png
+2018-02-14 18:55:56 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/services/square/201802091504375a7d6.png
+2018-02-14 18:55:58 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/services/square/201802091504375a7d6.png
+2018-02-14 18:55:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/services/square/201802091504375a7d6.png
+2018-02-14 19:07:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/services/square/201802091504375a7d6.png
+2018-02-14 19:16:16 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/services/square/201802091504375a7d6.png
+2018-02-14 19:37:58 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/services/square/201802091504375a7d6.png
+2018-02-14 19:40:24 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/services/square/201802091504375a7d6.png
+2018-02-14 19:40:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/services/square/201802091504375a7d6.png
+2018-02-14 21:11:28 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/users/201802061606115a798.jpg
+2018-02-14 21:11:31 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/img/users/201802061606115a798.jpg
+2018-02-16 23:17:26 Warning: Warning (2): session_destroy(): Session object destruction failed in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Network/Session.php, line 517]
+
+
+2018-02-17 10:53:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-02-17 10:53:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-02-17 10:53:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-02-17 10:58:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-02-17 10:58:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-02-17 10:58:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-02-17 10:59:01 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-02-17 11:02:32 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-02-17 11:02:32 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-02-17 11:02:32 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
