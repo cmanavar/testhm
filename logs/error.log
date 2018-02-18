@@ -22255,3 +22255,316 @@ Request URL: /hmen/webservices/service/reviews/1
 Request URL: /hmen/webservices/service/reviews/1
 2018-02-17 15:12:29 Error: [BadMethodCallException] Unknown method "sum"
 Request URL: /hmen/webservices/service/reviews/1
+2018-02-17 15:41:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-02-17 15:41:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-02-17 15:41:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-02-17 16:07:35 Warning: Warning (4096): Argument 1 passed to App\Controller\GreenCashbacksController::beforeFilter() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Event/EventManager.php on line 385 and defined in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 32]
+
+
+2018-02-17 16:09:07 Warning: Warning (4096): Argument 1 passed to App\Controller\GreenCashbacksController::beforeFilter() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Event/EventManager.php on line 385 and defined in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 32]
+
+
+2018-02-17 16:09:13 Warning: Warning (4096): Argument 1 passed to App\Controller\GreenCashbacksController::beforeFilter() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Event/EventManager.php on line 385 and defined in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 32]
+
+
+2018-02-17 16:09:21 Warning: Warning (4096): Argument 1 passed to App\Controller\GreenCashbacksController::beforeFilter() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Event/EventManager.php on line 385 and defined in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 32]
+
+
+2018-02-17 16:09:42 Warning: Warning (4096): Argument 1 passed to App\Controller\GreenCashbacksController::beforeFilter() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Event/EventManager.php on line 385 and defined in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 32]
+
+
+2018-02-17 16:11:44 Warning: Warning (4096): Object of class DateTime could not be converted to string in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 53]
+
+
+2018-02-17 16:16:32 Error: Fatal Error (4): syntax error, unexpected '}' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 71]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-17 16:16:32 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /hmen/green_cashbacks/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/Applications/X...', 71)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-17 16:16:42 Error: Fatal Error (1): Call to a member function find() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 75]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-17 16:16:42 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /hmen/green_cashbacks/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 75)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-17 16:27:49 Error: Fatal Error (1): Call to a member function find() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 73]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-17 16:27:49 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /hmen/green_cashbacks/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 73)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-17 16:28:34 Error: Fatal Error (1): Call to a member function find() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 74]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-17 16:28:34 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /hmen/green_cashbacks/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 74)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-17 16:29:55 Error: Fatal Error (4): syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 71]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-17 16:29:55 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /hmen/green_cashbacks/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/Applications/X...', 71)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-17 16:34:03 Error: Fatal Error (1): Call to a member function find() on boolean in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 77]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 192
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 91
+[main] - [internal], line ??
+
+
+
+2018-02-17 16:34:03 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /hmen/green_cashbacks/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(91): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Applications/X...', 77)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-02-17 16:44:40 Error: [Cake\View\Exception\MissingTemplateException] Template file "GreenCashbacks/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'GreenCashbacks/index.ctp',
+)
+Request URL: /hmen/green_cashbacks/
+2018-02-17 16:49:32 Error: [Cake\Controller\Exception\MissingActionException] Action GreenCashbacksController::view() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'GreenCashbacksController',
+  'action' => 'view',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/green_cashbacks/view/69
+2018-02-17 16:49:40 Error: [Cake\Controller\Exception\MissingActionException] Action GreenCashbacksController::view() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'GreenCashbacksController',
+  'action' => 'view',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /hmen/green_cashbacks/view/44
+2018-02-17 16:54:43 Error: [Cake\View\Exception\MissingTemplateException] Template file "GreenCashbacks/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'GreenCashbacks/view.ctp',
+)
+Request URL: /hmen/green_cashbacks/view/44
+2018-02-17 16:57:49 Error: [Cake\View\Exception\MissingTemplateException] Template file "GreenCashbacks/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'GreenCashbacks/view.ctp',
+)
+Request URL: /hmen/green_cashbacks/view/44
+2018-02-17 16:57:54 Error: [Cake\View\Exception\MissingTemplateException] Template file "GreenCashbacks/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'GreenCashbacks/view.ctp',
+)
+Request URL: /hmen/green_cashbacks/view/44
+2018-02-17 17:05:56 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-02-17 17:05:56 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-02-17 17:05:56 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-02-17 17:05:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-02-17 17:06:07 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2018-02-17 17:06:07 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+2018-02-17 17:06:07 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+2018-02-17 17:06:08 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /hmen/css/images/ui-bg_glass_75_dadada_1x400.png
+2018-02-17 17:37:10 Warning: Warning (2): Division by zero in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 606]
+
+
+2018-02-17 18:19:44 Warning: Warning (2): session_destroy(): Session object destruction failed in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Network/Session.php, line 517]
+
+
+2018-02-17 18:21:16 Warning: Warning (2): Division by zero in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 606]
+
+
+2018-02-17 18:23:44 Warning: Warning (2): Division by zero in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 606]
+
+
+2018-02-17 18:32:49 Warning: Warning (2): Division by zero in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 606]
+
+
+2018-02-17 18:36:24 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 136]
+
+
+2018-02-17 18:36:31 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 136]
+
+
+2018-02-17 18:36:35 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 136]
+
+
+2018-02-17 18:36:58 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 136]
+
+
+2018-02-17 18:37:14 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 136]
+
+
+2018-02-17 18:49:48 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 136]
+
+
+2018-02-17 18:49:50 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 136]
+
+
+2018-02-17 18:50:26 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 136]
+
+
+2018-02-17 19:01:27 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 136]
+
+
+2018-02-17 19:01:32 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/view.ctp, line 143]
+
+
+2018-02-17 19:04:39 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 136]
+
+
+2018-02-17 19:04:42 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 136]
+
+
+2018-02-17 19:04:43 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 136]
+
+
+2018-02-17 19:08:15 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 137]
+
+
+2018-02-17 19:08:32 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 137]
+
+
+2018-02-17 19:08:42 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 137]
+
+
+2018-02-17 19:08:47 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 137]
+
+
+2018-02-17 19:08:52 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 137]
+
+
+2018-02-17 19:09:02 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 137]
+
+
+2018-02-17 19:11:16 Warning: Warning (2): number_format() expects parameter 1 to be double, string given in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 137]
+
+

@@ -143,6 +143,7 @@ define('MSG_TITLE_ORDER_ASSIGN', 'Order Assigned');
 define('MSG_TITLE_ORDER_UPDATED', 'Order Updated');
 define('MSG_TITLE_ORDER_CANCELLED', 'Order Cancelled');
 define('MSG_TITLE_ORDER_COMPLETED', 'Order Completed');
+define('MSG_TITLE_ORDER_CASHBACK', 'Order Cashback');
 define('MSG_TITLE_CASHBACK_PLAN', 'Membership Plan Cashback');
 define('MSG_TITLE_REFER_MAMBERSHIP', 'Rewarded for refer');
 

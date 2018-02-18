@@ -35,6 +35,7 @@
                         <div class="col-md-12">
                             <div class="table-responsive">
                                 <table class="table table-bordered">
+                                    <?php //pr($orderDetails);  ?>
                                     <tr>
                                         <td width="15%">Order ID</td>
                                         <td colspan="4"><?= "#" . $orderDetails['order_id']; ?></td>
@@ -125,7 +126,7 @@
                                         <td colspan="4"><b>GST (<?= GST_TAX; ?>%)</b></td>
                                         <td><?php echo $orderDetails['total']['tax']; ?></td>
                                     </tr>
-                                    <tr class="text-right">
+<!--                                    <tr class="text-right">
                                         <td colspan="4">
                                             <?php if (isset($orderDetails['is_coupon_applied']) && $orderDetails['is_coupon_applied'] == 'Y') { ?>
                                                 <b>Discount Applied <?php echo $orderDetails['coupon_code']; ?></b>
@@ -134,10 +135,10 @@
                                             <?php } ?>
                                         </td>
                                         <td><?php echo "- " . number_format($orderDetails['total']['discount'], 2); ?></td>
-                                    </tr>
+                                    </tr>-->
                                     <tr class="text-right">
                                         <td colspan="4"><b>Wallet</b></td>
-                                        <td><?php echo "- " . number_format($orderDetails['total']['wallet_amount'], 2); ?></td>
+                                        <td><?php echo "- " . $orderDetails['total']['wallet_amount']; ?></td>
                                     </tr>
                                     <?php if (isset($orderDetails['is_minimum_charge']) && $orderDetails['is_minimum_charge'] == 'Y') { ?>
                                         <tr class="text-right">

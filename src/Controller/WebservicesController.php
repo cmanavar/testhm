@@ -42,7 +42,7 @@ class WebservicesController extends AppController {
         }
         $this->Auth->allow(['homepage', 'categoryDetails', 'categoryList', 'serviceDetails', 'getServicesSubQuestions', 'helpDetails',
             'createCart', 'addCartProduct', 'cartDetails', 'cartClear', 'removeCartProduct', 'counteunreadmsg', 'msgList', 'msgView',
-            'cartOrderPlaced', 'forgorPassword', 'changePassword', 'changeVandorPassword', 'applyCouponCode', 'walletDetails', 'getCartId', 'orderDetails',
+            'cartOrderPlaced', 'forgorPassword', 'changePassword', 'changeVandorPassword', 'walletDetails', 'getCartId', 'orderDetails',
             'orderLists', 'orderQuery', 'orderSummary', 'storeReview', 'updateOrder', 'serviceReviews', 'getquestionArr', 'surverysubmit', 'surverylists',
             'serviceLists', 'addMembership', 'planLists', 'referenceUsers', 'listMembership', 'appoinmentLists', 'appoinmentDetails',
             'appoinmentCompleted', 'appoinmentDeclined', 'appoinmentInterested', 'assignedorders', 'assignorderdetails', 'orderRequest',
@@ -591,7 +591,7 @@ class WebservicesController extends AppController {
         $this->loadModel('ServiceReviews');
         $avgReviews = 0;
         if (isset($id) && $id != '') {
-            
+
             $rslt = [];
             $sDetails = $this->Services->find('all')->where(['status' => 'ACTIVE', 'id' => $id])->order(['id' => 'ASC'])->hydrate(false)->first();
             //pr($sDetails); exit;
@@ -603,7 +603,11 @@ class WebservicesController extends AppController {
                 foreach ($sumReviews as $reviews) {
                     $totReviews += $reviews['review_rates'];
                 }
-                $avgReviews = $totReviews / $countReviews;
+                if ($countReviews != 0) {
+                    $avgReviews = $totReviews / $countReviews;
+                } else {
+                    $avgReviews = 0.00;
+                }
                 //pr(number_format($avgReviews, 2));
                 //exit;
                 // Count Average Rating - End
@@ -830,12 +834,11 @@ class WebservicesController extends AppController {
             $requestArr = $this->getInputArr();
             $cartId = isset($requestArr['cart_id']) ? $requestArr['cart_id'] : '';
             $serviceId = isset($requestArr['service']) ? $requestArr['service'] : '';
-            $categoryId = isset($requestArr['category_id']) ? $requestArr['category_id'] : '';
             $requiredFields = [
                 'Cart Id' => $cartId,
-                'Category Id' => $categoryId,
                 'Service Id' => $serviceId
             ];
+            $categoryId = $this->getCategoryId($serviceId);
             $validate = $this->checkRequiredFields($requiredFields);
             if ($validate != "") {
                 $this->wrong($validate);
@@ -1149,7 +1152,6 @@ class WebservicesController extends AppController {
                 }
             }
             $minimum_charges = $this->Services->getMinimumServiceCharge($category_id);
-            //echo $minimum_charges; exit;
             $tax = $order_amount * GST_TAX / 100;
             $totals = $order_amount + $tax;
             if (isset($total['on_inspection']) && $total['on_inspection'] != 'Y') {
@@ -1180,15 +1182,12 @@ class WebservicesController extends AppController {
         $rslt = [];
         $condArrQ = ['id' => $question_id];
         $service_questions = $this->serviceQuestions->find('all')->where($condArrQ)->hydrate(false)->first();
-//pr($service_questions); exit;
         if (isset($service_questions['question_title']) && $service_questions['question_title'] != '') {
             $rslt['questions'] = $service_questions['question_title'];
             $condArrA = ['id' => $answer_id];
             $service_answers = $this->serviceQuestionAnswers->find('all')->where($condArrA)->hydrate(false)->first();
             if (isset($service_answers) && !empty($service_answers)) {
                 $answerData = $service_answers;
-//$rslt['question_id'] = (isset($answerData['question_id']) && $answerData['question_id'] != '') ? $answerData['question_id'] : '';
-//$rslt['answer_id'] = (isset($answerData['id']) && $answerData['id'] != '') ? $answerData['id'] : '';
                 $rslt['parent_question'] = (isset($service_questions['parent_question_id']) && $service_questions['parent_question_id'] != '') ? $service_questions['parent_question_id'] : '';
                 $rslt['parent_answer'] = (isset($service_questions['parent_answer_id']) && $service_questions['parent_answer_id'] != '') ? $service_questions['parent_answer_id'] : '';
                 $rslt['answer'] = (isset($answerData['label']) && $answerData['label'] != '') ? $answerData['label'] : '';
@@ -1201,72 +1200,11 @@ class WebservicesController extends AppController {
         }
     }
 
-    public function applyCouponCode() {
-        $user_id = $this->checkVerifyApiKey('CUSTOMER');
-        if ($user_id) {
-            $this->loadModel('Carts');
-            $this->loadModel('Coupons');
-            $requestArr = $this->getInputArr();
-            $requiredFields = array(
-                'Cart Id' => (isset($requestArr['cart_id']) && $requestArr['cart_id'] != '') ? $requestArr['cart_id'] : '',
-                'Coupon Code' => (isset($requestArr['coupon_code']) && $requestArr['coupon_code'] != '') ? $requestArr['coupon_code'] : ''
-            );
-            $validate = $this->checkRequiredFields($requiredFields);
-            if ($validate != "") {
-                $this->wrong($validate);
-            }
-            $cart_id = $requestArr['cart_id'];
-            $coupon_code = strtoupper($requestArr['coupon_code']);
-            $cartExist = $this->Carts->find('all')->where(['id' => $requestArr['cart_id'], 'status' => 'PROCESS'])->hydrate(false)->first();
-            if ($cartExist) {
-                $cartDetails = $this->totalCartPrice($cart_id);
-                $couponCodeDetails = $this->Coupons->find('all')->where(['code' => $coupon_code])->hydrate(false)->first();
-                if ($couponCodeDetails) {
-                    $todayDate = date('Y-m-d');
-                    $validTo = $couponCodeDetails['valid_to']->format('Y-m-d');
-                    $validFrom = $couponCodeDetails['valid_from']->format('Y-m-d');
-                    $curDate = strtotime($todayDate);
-                    if ($curDate < strtotime($validTo) || $curDate > strtotime($validFrom)) {
-                        echo json_encode(['status' => 'fail', 'msg' => 'Sorry, Discount coupon was expired!', 'data' => $cartDetails]);
-                        exit;
-                    } else {
-//echo ' valid';
-                        $discount = 0.00;
-                        if (isset($couponCodeDetails['discount_type']) && $couponCodeDetails['discount_type'] == 'PRICE') {
-                            $discount = $couponCodeDetails['amount'];
-                            $cartDetails["total"]["discount"] = "-" . number_format($discount, 2);
-                            $cartDetails["total"]["payable_amount"] = number_format($cartDetails["total"]["total_amount"] - $discount, 2);
-                        } else {
-                            $discountPercentage = $couponCodeDetails['amount'];
-                            if ($cartDetails["total"]["total_amount"] != 0.00) {
-                                $discount = ($couponCodeDetails['amount'] * $cartDetails["total"]["total_amount"]) / 100;
-                                $cartDetails["total"]["discount"] = "-" . number_format($discount, 2);
-                                $cartDetails["total"]["payable_amount"] = number_format($cartDetails["total"]["total_amount"] - $discount, 2);
-                            } else {
-                                $cartDetails["total"]["discount"] = $couponCodeDetails['amount'] . "%";
-                            }
-                        }
-                        echo json_encode(['status' => 'success', 'msg' => 'Coupon code Applied!', 'data' => $cartDetails]);
-                        exit;
-                    }
-                } else {
-                    echo json_encode(['status' => 'fail', 'msg' => 'Sorry. No Discount coupon is invalid!', 'data' => $cartDetails]);
-                    exit;
-                }
-            } else {
-                $this->wrong('Sorry, Cart is not Exist!');
-            }
-        } else {
-            $this->wrong('Invalid API key.');
-        }
-    }
-
     public function cartOrderPlaced() {
         $user_id = $this->checkVerifyApiKey('CUSTOMER');
         if ($user_id) {
             $this->loadModel('Orders');
             $this->loadModel('Carts');
-            $this->loadModel('Coupons');
             $requestArr = $this->getInputArr();
             $requiredFields = array(
                 'Cart Id' => (isset($requestArr['cart_id']) && $requestArr['cart_id'] != '') ? $requestArr['cart_id'] : '',
@@ -1279,7 +1217,6 @@ class WebservicesController extends AppController {
                 $this->wrong($validate);
             }
             $cart_id = $requestArr['cart_id'];
-            $coupon_code = isset($requestArr['coupon_code']) && $requestArr['coupon_code'] != '' ? strtoupper($requestArr['coupon_code']) : '';
             $wallet_amount = 0.00;
             $wallet_amount = isset($requestArr['wallet_amount']) && $requestArr['wallet_amount'] != '' ? $requestArr['wallet_amount'] : '';
             $cartExist = $this->Carts->find('all')->where(['id' => $requestArr['cart_id'], 'status' => 'PROCESS'])->hydrate(false)->first();
@@ -1298,8 +1235,6 @@ class WebservicesController extends AppController {
                 $orderData['schedule_time'] = $requestArr['schedule_time'];
                 $orderData['on_inspections'] = '';
                 $orderData['is_visiting_charge'] = 'N';
-                $orderData['is_coupon_applied'] = 'N';
-                $orderData['coupon_code'] = '';
                 $orderData['amount'] = 0.00;
                 $orderData['on_inspections_cost'] = 0.00;
                 $orderData['tax'] = 0.00;
@@ -1309,7 +1244,9 @@ class WebservicesController extends AppController {
                 $orderData['on_inspections'] = (isset($cartDetails['total']['on_inspection']) && $cartDetails['total']['on_inspection'] != '') ? $cartDetails['total']['on_inspection'] : 'N';
                 $orderData['amount'] = str_replace(",", "", $cartDetails['total']['order_amount']);
                 $orderData['tax'] = str_replace(",", "", $cartDetails['total']['tax']);
-                $total_amounts = $cartDetails['total']['total_amount'];
+                //pr($cartDetails); exit;
+                $total_amounts = str_replace(",", "", $cartDetails['total']['total_amount']);
+                //echo $usertype; exit;
                 if ($usertype == "MEMBERSHIP") {
                     $available_walletcash = $this->walletAmount($user_id);
                     if ($available_walletcash != 0) {
@@ -1323,15 +1260,14 @@ class WebservicesController extends AppController {
                         }
                         if ($wallet_cash_per != 0) {
                             $walletCash = $total_amounts * ($wallet_cash_per / 100);
-                            if ($walletCash > $wallet_amount) {
-                                if ($available_walletcash > $walletCash) {
-                                    $wallet_amount = $walletCash;
-                                } else {
-                                    $wallet_amount = $available_walletcash;
-                                }
+                            if ($available_walletcash > $walletCash) {
+                                $wallet_amount = $walletCash;
+                            } else {
+                                $wallet_amount = $available_walletcash;
                             }
                         }
                     }
+                    //echo $wallet_amount; exit;
                     $orderData['wallet_amount'] = $wallet_amount;
                 } else {
                     $orderData['wallet_amount'] = $wallet_amount;
@@ -1348,8 +1284,8 @@ class WebservicesController extends AppController {
                     }
                 }
                 $total_amounts = $total_amounts - $wallet_amount;
+                //pr($total_amounts); exit;
                 $orderData['total_amount'] = str_replace(",", "", $total_amounts);
-                $orderData['discount'] = 0.00;
                 $orderData['payable_amount'] = 0.00;
                 $orderData['payment_method'] = '';
                 if ($usertype == 'CUSTOMER') {
@@ -1366,6 +1302,7 @@ class WebservicesController extends AppController {
                 $order->schedule_date = date('Y-m-d', strtotime($requestArr['schedule_date']));
                 $order->created_at = date('Y-m-d H:i:s');
                 $order->modified_at = date('Y-m-d H:i:s');
+                //pr($order); exit;
                 if ($this->Orders->save($order)) {
                     $cartArr = $this->Carts->get($cart_id);
                     $cartUpdate['status'] = 'PLACED';
@@ -1397,7 +1334,6 @@ class WebservicesController extends AppController {
             $this->loadModel('CartOrders');
             $this->loadModel('CartOrderQuestions');
             $this->loadModel('ServiceQuestionAnswers');
-            $this->loadModel('Coupons');
             $requestArr = $this->getInputArr();
             $requiredFields = array(
                 'Order Id' => (isset($requestArr['order_id']) && $requestArr['order_id'] != '') ? $requestArr['order_id'] : ''
@@ -1420,9 +1356,6 @@ class WebservicesController extends AppController {
                 $orderDetails['on_inspections'] = $order['on_inspections'];
                 $orderDetails['is_minimum_charge'] = $order['is_minimum_charge'];
                 $orderDetails['is_visiting_charge'] = $order['is_visiting_charge'];
-                $orderDetails['is_coupon_applied'] = $order['is_coupon_applied'];
-                $orderDetails['coupon_code'] = $order['coupon_code'];
-                $orderDetails['discount'] = (is_string($order['discount'])) ? $order['discount'] : number_format($order['discount'], 2);
                 $orderDetails['wallet_amount'] = number_format($order['wallet_amount'], 2);
                 $orderDetails['amount'] = number_format($order['amount'], 2);
                 $orderDetails['on_inspections_cost'] = number_format($order['on_inspections_cost'], 2);
@@ -1450,7 +1383,6 @@ class WebservicesController extends AppController {
                 $orderDetails['services'] = [];
                 $orderDetails['total']['amount'] = number_format($order['amount'], 2);
                 $orderDetails['total']['tax'] = number_format($order['tax'], 2);
-                $orderDetails['total']['discount'] = (is_string($order['discount'])) ? $order['discount'] : number_format($order['discount'], 2);
                 $orderDetails['total']['wallet_amount'] = number_format($order['wallet_amount'], 2);
                 if (isset($orderDetails['is_minimum_charge']) && $orderDetails['is_minimum_charge'] == 'Y') {
                     $sum = $order['amount'] + $order['tax'];
@@ -2549,7 +2481,6 @@ class WebservicesController extends AppController {
             $this->loadModel('CartOrders');
             $this->loadModel('CartOrderQuestions');
             $this->loadModel('ServiceQuestionAnswers');
-            $this->loadModel('Coupons');
             $this->loadModel('PackageOrders');
             $requestArr = $this->getInputArr();
             $requiredFields = array(
@@ -2614,7 +2545,6 @@ class WebservicesController extends AppController {
                     $orderDetails['services'] = [];
                     $orderDetails['total']['amount'] = number_format($order['amount'], 2);
                     $orderDetails['total']['tax'] = number_format($order['tax'], 2);
-                    $orderDetails['total']['discount'] = (is_string($order['discount'])) ? $order['discount'] : number_format($order['discount'], 2);
                     $orderDetails['total']['wallet_amount'] = number_format($order['wallet_amount'], 2);
                     if (isset($orderDetails['is_minimum_charge']) && $orderDetails['is_minimum_charge'] == 'Y') {
                         $sum = $order['amount'] + $order['tax'];
@@ -2714,7 +2644,6 @@ class WebservicesController extends AppController {
                     $orderDetails['services'][] = $serviceArr;
                     $orderDetails['total']['amount'] = 0.00;
                     $orderDetails['total']['tax'] = 0.00;
-                    $orderDetails['total']['discount'] = 0.00;
                     $orderDetails['total']['wallet_amount'] = 0.00;
                     $orderDetails['total']['total_amount'] = 0.00;
                     $this->success('order detail fetched successfully', $orderDetails);
@@ -2808,7 +2737,7 @@ class WebservicesController extends AppController {
         $this->loadModel('CartOrders');
         $this->loadModel('CartOrderQuestions');
         $this->loadModel('ServiceQuestionAnswers');
-        $this->loadModel('Coupons');
+
         $this->loadModel('Wallets');
         $user_id = $this->checkVerifyApiKey('VENDOR');
         if (isset($user_id) && $user_id != '') {
@@ -2845,7 +2774,6 @@ class WebservicesController extends AppController {
                             $updateFields['credits_applied'] = 'Y';
                             $updateFields['payment_method'] = 'CREDITS';
                             $updateFields['payment_status'] = 'PAID';
-                            $updateFields['discount'] = 0.00;
                             $updateFields['wallet_amount'] = 0.00;
                             $updateFields['amount'] = 0.00;
                             $updateFields['on_inspections_cost'] = 0.00;
@@ -2883,25 +2811,23 @@ class WebservicesController extends AppController {
                                 }
                                 if ($wallet_cash_per != 0) {
                                     $walletCash = $tmptotAmount * ($wallet_cash_per / 100);
-                                    if ($walletCash > $wallet_amount) {
-                                        if ($available_walletcash > $walletCash) {
-                                            $wallet_amount = $walletCash;
-                                        } else {
-                                            $wallet_amount = $available_walletcash;
-                                        }
+                                    if ($available_walletcash > $walletCash) {
+                                        $wallet_amount = $walletCash;
+                                    } else {
+                                        $wallet_amount = $available_walletcash;
                                     }
                                 }
                             }
-                            $orderData['wallet_amount'] = $wallet_amount;
+                            $updateFields['wallet_amount'] = $wallet_amount;
                         } else {
-                            $orderData['wallet_amount'] = $wallet_amount;
+                            $updateFields['wallet_amount'] = $wallet_amount;
                         }
                         if ($wallet_amount != 0) {
                             $vW = [];
                             $vW['amount'] = $wallet_amount;
                             $vW['wallet_type'] = 'DEBIT';
                             $vW['purpose'] = 'ORDER';
-                            $vW['purpose_id'] = $orderData['order_id'];
+                            $vW['purpose_id'] = $order_id;
                             $walletId = $this->addWalletAmount($user_id, $vW['amount'], $vW['wallet_type'], $vW['purpose'], $vW['purpose_id']);
                             if (!$walletId) {
                                 $this->wrong('Wallet Amount Add operation Failed!');
@@ -2910,47 +2836,6 @@ class WebservicesController extends AppController {
                         $total_amounts = $tmptotAmount - $wallet_amount;
                         $updateFields['amount'] = $total_price;
                         $updateFields['tax'] = $tax;
-                        $tmptotAmount = $total_price + $tax;
-                        $customer_id = $order['user_id'];
-                        $usertype = $this->getUserType($customer_id);
-                        if ($usertype == "MEMBERSHIP") {
-                            $available_walletcash = $this->walletAmount($customer_id);
-                            if ($available_walletcash != 0) {
-                                $plan_id = $this->getPlanId($customer_id);
-                                $wallet_cash_per = 0;
-                                if ($plan_id = RUBIES_PLAN_ID) {
-                                    $wallet_cash_per = RUBIES_DISCOUNT_RATE;
-                                }
-                                if ($plan_id = SAPPHIRES_PLAN_ID) {
-                                    $wallet_cash_per = SAPPHIRES_DISCOUNT_RATE;
-                                }
-                                if ($wallet_cash_per != 0) {
-                                    $walletCash = $tmptotAmount * ($wallet_cash_per / 100);
-                                    if ($walletCash > $wallet_amount) {
-                                        if ($available_walletcash > $walletCash) {
-                                            $wallet_amount = $walletCash;
-                                        } else {
-                                            $wallet_amount = $available_walletcash;
-                                        }
-                                    }
-                                }
-                            }
-                            $orderData['wallet_amount'] = $wallet_amount;
-                        } else {
-                            $orderData['wallet_amount'] = $wallet_amount;
-                        }
-                        if ($wallet_amount != 0) {
-                            $vW = [];
-                            $vW['amount'] = $wallet_amount;
-                            $vW['wallet_type'] = 'DEBIT';
-                            $vW['purpose'] = 'ORDER';
-                            $vW['purpose_id'] = $orderData['order_id'];
-                            $walletId = $this->addWalletAmount($user_id, $vW['amount'], $vW['wallet_type'], $vW['purpose'], $vW['purpose_id']);
-                            if (!$walletId) {
-                                $this->wrong('Wallet Amount Add operation Failed!');
-                            }
-                        }
-                        $total_amounts = $tmptotAmount - $wallet_amount;
                         $updateFields['total_amount'] = str_replace(",", "", $total_amounts);
                         $updateFields['on_inspections'] = 'D';
                         $msg = 'Order Inspection Cost Updated!';
@@ -2969,7 +2854,6 @@ class WebservicesController extends AppController {
                             $updateFields['credits_applied'] = 'Y';
                             $updateFields['payment_method'] = 'CREDITS';
                             $updateFields['payment_status'] = 'PAID';
-                            $updateFields['discount'] = 0.00;
                             $updateFields['wallet_amount'] = 0.00;
                             $updateFields['amount'] = 0.00;
                             $updateFields['on_inspections_cost'] = 0.00;
@@ -2978,15 +2862,58 @@ class WebservicesController extends AppController {
                             $this->Wallets->deleteAll(['Wallets.purpose_id' => $order_id]);
                         } else {
                             $updateFields['credits_applied'] = 'N';
+                            $updateFields['on_inspections_cost'] = $requestArr['on_inspections_cost'];
+                            $total_price = $order['amount'] + $requestArr['on_inspections_cost'];
+                            $tax = $total_price * GST_TAX / 100;
+                            $updateFields['amount'] = $total_price;
+                            $updateFields['tax'] = $tax;
+                            $tmptotAmount = $total_price + $tax;
+                            $customer_id = $order['user_id'];
+                            $usertype = $this->getUserType($customer_id);
+                            if ($usertype == "MEMBERSHIP") {
+                                $available_walletcash = $this->walletAmount($customer_id);
+                                //echo $available_walletcash; exit;
+                                if ($available_walletcash != 0) {
+                                    $plan_id = $this->getPlanId($customer_id);
+                                    $wallet_cash_per = 0;
+                                    if ($plan_id = RUBIES_PLAN_ID) {
+                                        $wallet_cash_per = RUBIES_DISCOUNT_RATE;
+                                    }
+                                    if ($plan_id = SAPPHIRES_PLAN_ID) {
+                                        $wallet_cash_per = SAPPHIRES_DISCOUNT_RATE;
+                                    }
+                                    //echo $wallet_cash_per; exit;
+                                    if ($wallet_cash_per != 0) {
+                                        $walletCash = $tmptotAmount * ($wallet_cash_per / 100);
+                                        //echo $walletCash; exit;
+
+                                        if ($available_walletcash > $walletCash) {
+                                            $wallet_amount = $walletCash;
+                                        } else {
+                                            $wallet_amount = $available_walletcash;
+                                        }
+                                    }
+                                }
+                                $updateFields['wallet_amount'] = $wallet_amount;
+                            } else {
+                                $updateFields['wallet_amount'] = $wallet_amount;
+                            }
+                            if ($wallet_amount != 0) {
+                                $vW = [];
+                                $vW['amount'] = $wallet_amount;
+                                $vW['wallet_type'] = 'DEBIT';
+                                $vW['purpose'] = 'ORDER';
+                                $vW['purpose_id'] = $order_id;
+                                $walletId = $this->addWalletAmount($user_id, $vW['amount'], $vW['wallet_type'], $vW['purpose'], $vW['purpose_id']);
+                                if (!$walletId) {
+                                    $this->wrong('Wallet Amount Add operation Failed!');
+                                }
+                            }
+                            $total_amounts = $tmptotAmount - $wallet_amount;
+                            $updateFields['total_amount'] = str_replace(",", "", $total_amounts);
+                            $updateFields['on_inspections'] = 'D';
+                            $msg = 'Order Inspection Cost Updated!';
                         }
-                        $updateFields['on_inspections_cost'] = $requestArr['on_inspections_cost'];
-                        $total_price = $order['amount'] + $requestArr['on_inspections_cost'];
-                        $tax = $total_price * GST_TAX / 100;
-                        $updateFields['amount'] = $total_price;
-                        $updateFields['tax'] = $tax;
-                        $updateFields['total_amount'] = $total_price + $tax;
-                        $updateFields['on_inspections'] = 'D';
-                        $msg = 'Order Inspection Cost Updated!';
                     }
                     if ($action == 'VISITING_CHARGE') {
                         $updateFields['is_visiting_charge'] = 'Y';
@@ -3016,9 +2943,6 @@ class WebservicesController extends AppController {
                         $orderDetails['on_inspections'] = $order['on_inspections'];
                         $orderDetails['is_minimum_charge'] = $order['is_minimum_charge'];
                         $orderDetails['is_visiting_charge'] = $order['is_visiting_charge'];
-                        $orderDetails['is_coupon_applied'] = $order['is_coupon_applied'];
-                        $orderDetails['coupon_code'] = $order['coupon_code'];
-                        $orderDetails['discount'] = (is_string($order['discount'])) ? $order['discount'] : number_format($order['discount'], 2);
                         $orderDetails['wallet_amount'] = number_format($order['wallet_amount'], 2);
                         $orderDetails['amount'] = number_format($order['amount'], 2);
                         $orderDetails['on_inspections_cost'] = number_format($order['on_inspections_cost'], 2);
@@ -3030,7 +2954,6 @@ class WebservicesController extends AppController {
                         $orderDetails['services'] = [];
                         $orderDetails['total']['amount'] = number_format($order['amount'], 2);
                         $orderDetails['total']['tax'] = number_format($order['tax'], 2);
-                        $orderDetails['total']['discount'] = (is_string($order['discount'])) ? $order['discount'] : number_format($order['discount'], 2);
                         $orderDetails['total']['wallet_amount'] = number_format($order['wallet_amount'], 2);
                         if (isset($orderDetails['is_minimum_charge']) && $orderDetails['is_minimum_charge'] == 'Y') {
                             $sum = $order['amount'] + $order['tax'];
@@ -3121,6 +3044,8 @@ class WebservicesController extends AppController {
                     $order = $this->Orders->patchEntity($order, $updateFields);
                     $order->modified_by = $user_id;
                     $order->modified_at = date('Y-m-d H:i:s');
+//                    pr($order);
+//                    exit;
                     if ($this->Orders->save($order)) {
                         if ($action == 'USE_CREDITS') {
                             if ($status == 'Y') {

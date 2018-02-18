@@ -284,6 +284,7 @@ class OrdersController extends AppController {
             $order = $this->Orders->get($order_id);
             $this->set('order', $order);
             $this->set('orderStatus', $this->getAllOrderStatus());
+            //pr($order); exit;
             if (!empty($order)) {
                 $orderDetails = [];
                 $orderDetails['id'] = $order['id'];

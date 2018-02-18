@@ -13165,3 +13165,495 @@
 2018-02-17 10:59:23 Notice: Notice (8): Undefined index: plain_pass in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/plan_invoice.ctp, line 69]
 
 
+2018-02-17 16:07:35 Notice: Strict (2048): Declaration of App\Controller\GreenCashbacksController::beforeFilter() should be compatible with Cake\Controller\Controller::beforeFilter(Cake\Event\Event $event) in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 30]
+
+
+2018-02-17 16:07:35 Notice: Notice (8): Undefined variable: _SESSION in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Network/Session.php, line 440]
+
+
+2018-02-17 16:09:07 Notice: Strict (2048): Declaration of App\Controller\GreenCashbacksController::beforeFilter() should be compatible with Cake\Controller\Controller::beforeFilter(Cake\Event\Event $event) in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 30]
+
+
+2018-02-17 16:09:07 Notice: Notice (8): Undefined variable: _SESSION in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Network/Session.php, line 440]
+
+
+2018-02-17 16:09:13 Notice: Strict (2048): Declaration of App\Controller\GreenCashbacksController::beforeFilter() should be compatible with Cake\Controller\Controller::beforeFilter(Cake\Event\Event $event) in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 30]
+
+
+2018-02-17 16:09:13 Notice: Notice (8): Undefined variable: _SESSION in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Network/Session.php, line 440]
+
+
+2018-02-17 16:09:21 Notice: Strict (2048): Declaration of App\Controller\GreenCashbacksController::beforeFilter() should be compatible with Cake\Controller\Controller::beforeFilter(Cake\Event\Event $event) in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 30]
+
+
+2018-02-17 16:09:21 Notice: Notice (8): Undefined variable: _SESSION in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Network/Session.php, line 440]
+
+
+2018-02-17 16:09:42 Notice: Strict (2048): Declaration of App\Controller\GreenCashbacksController::beforeFilter() should be compatible with Cake\Controller\Controller::beforeFilter(Cake\Event\Event $event) in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 30]
+
+
+2018-02-17 16:09:42 Notice: Notice (8): Undefined variable: _SESSION in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Network/Session.php, line 440]
+
+
+2018-02-17 16:46:05 Notice: Notice (8): Undefined variable: counters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 41]
+
+
+2018-02-17 16:46:05 Notice: Notice (8): Undefined variable: counters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 63]
+
+
+2018-02-17 16:46:05 Notice: Notice (8): Undefined variable: counters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 85]
+
+
+2018-02-17 16:46:05 Notice: Notice (8): Undefined variable: counters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 107]
+
+
+2018-02-17 16:46:15 Notice: Notice (8): Undefined variable: counters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 41]
+
+
+2018-02-17 16:46:15 Notice: Notice (8): Undefined variable: counters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 63]
+
+
+2018-02-17 16:46:15 Notice: Notice (8): Undefined variable: counters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 85]
+
+
+2018-02-17 16:46:15 Notice: Notice (8): Undefined variable: counters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 107]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: useremail in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 60]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: userphone in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 61]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: service_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 65]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 66]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 66]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 67]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 82]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 83]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 88]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: useremail in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 60]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: userphone in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 61]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: service_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 65]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: schedule_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 66]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: schedule_time in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 66]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: on_inspections in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 67]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 82]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 83]
+
+
+2018-02-17 16:48:16 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 88]
+
+
+2018-02-17 16:48:36 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 59]
+
+
+2018-02-17 16:48:36 Notice: Notice (8): Undefined index: created_at in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 59]
+
+
+2018-02-17 16:48:42 Notice: Notice (8): Undefined index: tot in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 59]
+
+
+2018-02-17 16:48:42 Notice: Notice (8): Undefined index: tot in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/index.ctp, line 59]
+
+
+2018-02-17 18:36:24 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-17 18:36:31 Notice: Notice (8): A non well formed numeric value encountered in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 140]
+
+
+2018-02-17 18:36:31 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-17 18:36:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-17 18:36:58 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-17 18:37:14 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-17 18:43:58 Notice: Notice (8): Undefined variable: wallet_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2886]
+
+
+2018-02-17 18:43:58 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2904]
+
+
+2018-02-17 18:44:35 Notice: Notice (8): Undefined variable: wallet_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2886]
+
+
+2018-02-17 18:44:35 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2904]
+
+
+2018-02-17 18:46:26 Notice: Notice (8): Undefined variable: wallet_amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2889]
+
+
+2018-02-17 18:48:50 Notice: Notice (8): Undefined index: order_id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php, line 2903]
+
+
+2018-02-17 18:49:48 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-17 18:49:50 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-17 18:50:26 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-17 19:01:27 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-17 19:04:39 Notice: Notice (8): A non well formed numeric value encountered in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 140]
+
+
+2018-02-17 19:04:39 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-17 19:04:42 Notice: Notice (8): A non well formed numeric value encountered in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 140]
+
+
+2018-02-17 19:04:42 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-17 19:04:43 Notice: Notice (8): A non well formed numeric value encountered in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 140]
+
+
+2018-02-17 19:04:43 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 179]
+
+
+2018-02-17 19:08:15 Notice: Notice (8): A non well formed numeric value encountered in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 141]
+
+
+2018-02-17 19:08:15 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 180]
+
+
+2018-02-17 19:08:32 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 180]
+
+
+2018-02-17 19:08:42 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 180]
+
+
+2018-02-17 19:08:47 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 180]
+
+
+2018-02-17 19:08:52 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 180]
+
+
+2018-02-17 19:09:02 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 180]
+
+
+2018-02-17 19:11:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 180]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 33]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 37]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 41]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 45]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 49]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 53]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 53]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 59]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 61]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 71]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 75]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 79]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 129]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 133]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 143]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 147]
+
+
+2018-02-17 19:21:16 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 162]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 33]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 37]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 41]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 45]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 49]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 53]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 53]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 59]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 61]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 71]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 75]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 79]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 129]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 133]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 143]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 147]
+
+
+2018-02-17 19:23:28 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 162]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 33]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 37]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 41]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 45]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 49]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 53]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 53]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 59]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 61]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 71]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 75]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 79]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 129]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 133]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 143]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 147]
+
+
+2018-02-17 19:23:35 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 162]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 33]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 37]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 41]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 45]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 49]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 53]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 53]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 59]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 61]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 71]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 75]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 79]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 129]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 133]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 143]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 147]
+
+
+2018-02-17 19:23:56 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 162]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 33]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 37]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 41]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 45]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 49]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 53]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 53]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 59]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 61]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 71]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 75]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 79]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 129]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 133]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 143]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 147]
+
+
+2018-02-17 19:24:01 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 162]
+
+
+2018-02-17 19:24:25 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 33]
+
+
+2018-02-17 19:24:25 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 37]
+
+
+2018-02-17 19:24:25 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 41]
+
+
+2018-02-17 19:24:25 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 45]
+
+
+2018-02-17 19:24:25 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 49]
+
+
+2018-02-17 19:24:25 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 49]
+
+
+2018-02-17 19:25:00 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 37]
+
+
+2018-02-17 19:25:00 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 41]
+
+
+2018-02-17 19:25:00 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 45]
+
+

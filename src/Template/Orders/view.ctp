@@ -132,7 +132,7 @@
                                         <td colspan="4"><b>GST</b></td>
                                         <td><?php echo $orders['total']['tax']; ?></td>
                                     </tr>
-                                    <tr class="text-right">
+<!--                                    <tr class="text-right">
                                         <td colspan="4">
                                             <?php if (isset($orders['is_coupon_applied']) && $orders['is_coupon_applied'] == 'Y') { ?>
                                                 <b>Discount Applied <?php echo $orders['coupon_code']; ?></b>
@@ -141,7 +141,7 @@
                                             <?php } ?>
                                         </td>
                                         <td><?php echo "- " . number_format($orders['total']['discount'], 2); ?></td>
-                                    </tr>
+                                    </tr>-->
                                     <tr class="text-right">
                                         <td colspan="4"><b>Wallet</b></td>
                                         <td><?php echo "- " . number_format($orders['total']['wallet_amount'], 2); ?></td>
