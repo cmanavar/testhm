@@ -85,7 +85,7 @@ class WebservicesController extends AppController {
                     if ($message['msg_type'] == 'OFFER') {
                         $tmp['image'] = IMAGE_URL_PATH . 'icons/msg-offer.png';
                     } else if ($message['msg_type'] == 'ORDER') {
-                        $tmp['image'] = IMAGE_URL_PATH . 'icons/msg-order.png';
+                        $tmp['image'] = IMAGE_URL_PATH . 'icons/msg-order.svg';
                     } else if ($message['msg_type'] == 'REFERRAL') {
                         $tmp['image'] = IMAGE_URL_PATH . 'icons/msg-referral.png';
                     } else if ($message['msg_type'] == 'CASHBACK') {
@@ -93,7 +93,7 @@ class WebservicesController extends AppController {
                     } else if ($message['msg_type'] == 'GREENCASH') {
                         $tmp['image'] = IMAGE_URL_PATH . 'icons/msg-cashback.png';
                     } else {
-                        $tmp['image'] = IMAGE_URL_PATH . 'icons/msg-other.png';
+                        $tmp['image'] = IMAGE_URL_PATH . 'icons/msg-other.svg';
                     }
                     $tmp['message_detail'] = $message['message_detail'];
                     $tmp['seen'] = $message['seen'];
@@ -299,7 +299,7 @@ class WebservicesController extends AppController {
         foreach ($category as $val) {
             $tmp = $tmpS = [];
             if (isset($val) && !empty($val)) {
-                $tServices = $this->Services->find('all')->select(['id', 'service_name', 'service_description', 'service_specification', 'visit_charge', 'minimum_charge', 'banner_image'])->where(['status' => 'ACTIVE', 'category_id' => $val['id']])->order(['id' => 'ASC'])->hydrate(false)->toArray();
+                $tServices = $this->Services->find('all')->select(['id', 'service_name', 'service_description', 'service_specification', 'visit_charge', 'minimum_charge', 'square_image'])->where(['status' => 'ACTIVE', 'category_id' => $val['id']])->order(['id' => 'ASC'])->hydrate(false)->toArray();
                 if (!empty($tServices)) {
                     $tmp['category_id'] = $val['id'];
                     $tmp['category_name'] = $val['name'];
@@ -310,7 +310,7 @@ class WebservicesController extends AppController {
                         $tmpS['service_description'] = $v['service_description'];
                         $tmpS['visit_charge'] = $v['visit_charge'];
                         $tmpS['minimum_charge'] = $v['minimum_charge'];
-                        $tmpS['banner_image'] = IMAGE_URL_PATH . 'services/banner/' . $v['banner_image'];
+                        $tmpS['banner_image'] = IMAGE_URL_PATH . 'services/square/' . $v['square_image'];
                         $tmp['services'][] = $tmpS;
                     }
                     $serviceDetails[] = $tmp;
@@ -339,7 +339,7 @@ class WebservicesController extends AppController {
             $category = $this->ServiceCategory->find('all')->select(['id', 'name', 'banner_image'])->where(['id' => $id, 'status' => 'ACTIVE'])->order(['order_id' => 'ASC'])->hydrate(false)->first();
             if (isset($category) && !empty($category)) {
                 $tmp = $tmpS = [];
-                $tServices = $this->Services->find('all')->select(['id', 'service_name', 'service_description', 'service_specification', 'visit_charge', 'minimum_charge', 'banner_image'])->where(['status' => 'ACTIVE', 'category_id' => $id])->order(['id' => 'ASC'])->hydrate(false)->toArray();
+                $tServices = $this->Services->find('all')->select(['id', 'service_name', 'service_description', 'service_specification', 'visit_charge', 'minimum_charge', 'banner_image', 'square_image'])->where(['status' => 'ACTIVE', 'category_id' => $id])->order(['id' => 'ASC'])->hydrate(false)->toArray();
                 $rslt['id'] = $category['id'];
                 $rslt['name'] = $category['name'];
                 $rslt['banner_image'] = IMAGE_URL_PATH . 'categories/banner/' . $category['banner_image'];
@@ -350,7 +350,7 @@ class WebservicesController extends AppController {
                     $tmp['service_description'] = $v['service_description'];
                     $tmp['visit_charge'] = $v['visit_charge'];
                     $tmp['minimum_charge'] = $v['minimum_charge'];
-                    $tmp['banner_image'] = IMAGE_URL_PATH . 'services/banner/' . $v['banner_image'];
+                    $tmp['banner_image'] = IMAGE_URL_PATH . 'services/square/' . $v['square_image'];
                     $tmpS[] = $tmp;
                 }
                 $rslt['services'] = $tmpS;
@@ -1330,6 +1330,7 @@ class WebservicesController extends AppController {
 //echo $userId; exit;
             $this->loadModel('Orders');
             $this->loadModel('Services');
+            $this->loadModel('ServiceReviews');
             $this->loadModel('Carts');
             $this->loadModel('CartOrders');
             $this->loadModel('CartOrderQuestions');
@@ -1346,7 +1347,9 @@ class WebservicesController extends AppController {
             $order = $this->Orders->find('all')->where(['order_id' => $order_id])->hydrate(false)->first();
             if (!empty($order)) {
                 $orderDetails = [];
-                //pr($order['vendors_id']); exit;
+                $orderReview = [];
+                $orderReview = $this->ServiceReviews->find('all')->where(['order_id' => $order_id])->hydrate(false)->first();
+                //pr($orderReview); exit;
                 $orderDetails['user_id'] = $order['user_id'];
                 $orderDetails['order_id'] = $order['order_id'];
                 $orderDetails['user_address'] = $order['user_address'];
@@ -1364,6 +1367,7 @@ class WebservicesController extends AppController {
                 $orderDetails['status'] = $order['status'];
                 $orderDetails['payment_status'] = $order['payment_status'];
                 $orderDetails['images'] = '';
+                $orderDetails['reviews_pending'] = (empty($orderReview)) ? 'Y' : 'N';
                 if (isset($order['vendors_id']) && $order['vendors_id'] != 0) {
                     $orderDetails['vendor']['name'] = $this->getUserName($order['vendors_id']);
                     $orderDetails['vendor']['image'] = $this->getUserProfilePicture($order['vendors_id']);
@@ -3542,12 +3546,12 @@ class WebservicesController extends AppController {
         $this->loadModel('Services');
         $rsltArr = [];
         $tmpS = [];
-        $tServices = $this->Services->find('all')->select(['id', 'service_name', 'service_description', 'service_specification', 'visit_charge', 'minimum_charge', 'banner_image'])->where(['status' => 'ACTIVE'])->order(['id' => 'ASC'])->hydrate(false)->toArray();
+        $tServices = $this->Services->find('all')->select(['id', 'service_name', 'service_description', 'service_specification', 'visit_charge', 'minimum_charge', 'square_image'])->where(['status' => 'ACTIVE'])->order(['id' => 'ASC'])->hydrate(false)->toArray();
         if (!empty($tServices)) {
             foreach ($tServices as $v) {
                 $tmpS['service_id'] = $v['id'];
                 $tmpS['service_name'] = $v['service_name'];
-                $tmpS['banner_image'] = IMAGE_URL_PATH . 'services/banner/' . $v['banner_image'];
+                $tmpS['banner_image'] = IMAGE_URL_PATH . 'services/square/' . $v['square_image'];
                 $tmp[] = $tmpS;
             }
             $rsltArr = $tmp;

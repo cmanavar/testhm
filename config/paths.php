@@ -172,10 +172,10 @@ if ($HTTP_HOST == 'localhost') {
 } elseif ($HTTP_HOST == 'hmen.in') {
     define('BOOM_AC_SERVICE_ID', 9);
     define('BOOM_AC_SERVICE_NAME', 'BOOM AC SERVICE');
-    define('BOOM_AC_SERVICE_IMAGE', '201802091504375a7d6.png');
+    define('BOOM_AC_SERVICE_IMAGE', '201802181823165a897.png');
     define('ZOOM_RO_SERVICE_ID', 13);
     define('ZOOM_RO_SERVICE_NAME', 'ZOOM RO SERVICE');
-    define('ZOOM_RO_SERVICE_IMAGE', '201802091507205a7d6.png');
+    define('ZOOM_RO_SERVICE_IMAGE', '201802181913135a898.png');
 } else {
     define('BOOM_AC_SERVICE_ID', 9);
     define('BOOM_AC_SERVICE_NAME', 'BOOM AC SERVICE');

@@ -152,6 +152,7 @@ class MembersController extends AppController {
                         // Send Invoice
                         $user['plain_pass'] = $password;
                         $this->sendPlanInvoiceEmails($plan_id, $user);
+                        //exit;
                         // SEND EMAIL
                         //$this->sentEmails($name, $email, $password);
                         if (isset($this->request->data['birthdate']) && $this->request->data['birthdate'] != '') {

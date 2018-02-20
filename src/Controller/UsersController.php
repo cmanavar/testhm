@@ -608,6 +608,7 @@ class UsersController extends AppController {
                             $rslt['phone_verified'] = $user['phone_verified'];
                             $rslt['usertype'] = $usertype = $user['user_type'];
                             $rslt['can_update'] = 'N';
+                            //echo $usertype; exit;
                             if ($usertype == 'MEMBERSHIP') {
                                 $rslt['avail_credits'] = $this->getMemberCredits($user['id']);
                                 $rslt['total_credits'] = $this->getMemberTotalCredits($user['id']);
@@ -625,6 +626,7 @@ class UsersController extends AppController {
                             $users = $this->Users->get($user['id']);
                             $users->last_login = date('Y-m-d H:i:s');
                             $this->Users->save($users);
+                            //pr($rslt); exit;
                             $this->success('LOGIN!', $rslt);
                         } else {
                             $this->wrong('Sorry, Your account is not exists!');

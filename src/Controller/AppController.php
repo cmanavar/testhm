@@ -525,11 +525,14 @@ class AppController extends Controller {
                 $tmp['service_name'] = $packageorder['service_name'];
                 $tmp['service_image'] = IMAGE_URL_PATH . 'services/square/' . $packageorder['service_image'];
                 if (!empty($packageorder['service_date'])) {
-                    $tmp['service_date'] = $packageorder['service_date']->format('d-m-Y');
+                    //$tmp['service_date'] = $packageorder['service_date']->format('d-m-Y');
+                    //echo $packageorder['service_date']; exit;
+                    $tmp['service_date'] = (isset($packageorder['service_date']) && $packageorder['service_date'] != '0000-00-00') ? date('d-m-Y', strtotime($packageorder['service_date'])) : "";
                 } else {
                     $tmp['service_date'] = '-';
                 }
                 $tmp['service_status'] = $packageorder['service_status'];
+                //pr($tmp); exit;
                 $rslt[] = $tmp;
             }
         }
