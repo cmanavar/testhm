@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-md-12">
             <h1 class="page-header">
-                <i class="fa fa-usd fa-fw"></i>  GREEN CASH
+                <i class="fa fa-star fa-fw"></i>  GREEN CASH
 <!--                <a href="<?php echo $this->Url->build(["controller" => "Orders", "action" => "add"]); ?>"><button class="btn btn-primary btn-sm pull-right" >ADD NEW ORDER</button></a>-->
             </h1>
         </div>        

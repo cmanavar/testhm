@@ -38,7 +38,7 @@ class VendorsController extends AppController {
         if (in_array($this->request->session()->read('Auth.User.user_type'), ['ADMIN', 'OPERATION_MANAGER', 'TELLY_CALLER'])) {
             AppController::checkNormalAccess();
         }
-        $this->Auth->allow(['delete', 'login']);
+        $this->Auth->allow(['delete', 'login', 'deleteprofileimage']);
     }
 
     //***********************************************************************************************//
@@ -267,10 +267,20 @@ class VendorsController extends AppController {
             $validator = new UsersValidator();
             $usersController = new UsersController();
             //$this->request->data['password'] = $usersController->randomPassword();
+            //pr($this->request->data); exit;
             $errors = $validator->errors($this->request->data());
             if (empty($errors)) {
                 $user = $this->Users->getuserId($id); //LISTING USERDATA
                 $user = $this->Users->patchEntity($user, $this->request->data());
+                if (isset($this->request->data['profile_picture']['name']) && $this->request->data['profile_picture']['name'] != '') {
+                    $filename = '';
+                    $file = $this->request->data['profile_picture']['name'];
+                    $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                    $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                    $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                    move_uploaded_file($this->request->data['profile_picture']['tmp_name'], WWW_ROOT . 'img/' . USER_PROFILE_PATH . $filename);
+                    $user->profile_pic = $filename;
+                }
                 $user->modified_by = $this->request->session()->read('Auth.User.id');
                 $user->modified = date("Y-m-d H:i:s");
                 if ($this->Users->save($user)) {
@@ -357,6 +367,25 @@ class VendorsController extends AppController {
         }
     }
 
+    public function deleteprofileimage($id) {
+        $this->loadModel('Users');
+        $users = $this->Users->get($id);
+        if ($users->profile_pic != '') {
+            $fpath = WWW_ROOT . 'img/' . USER_PROFILE_PATH . $photo;
+        }
+        if (file_exists($fpath)) {
+            unlink($fpath);
+        }
+        $users->profile_pic = '';
+        if ($this->Users->save($users)) {
+            $this->Flash->success(Configure::read('Settings.DELETE'));
+            return $this->redirect(['action' => 'edit', $id]);
+        } else {
+            $this->Flash->success(Configure::read('Settings.DELETEFAIL'));
+            return $this->redirect(['action' => 'edit', $id]);
+        }
+    }
+
     //***********************************************************************************************//
     // * Function     :  view
     // * Parameter    :  
@@ -366,13 +395,18 @@ class VendorsController extends AppController {
     //***********************************************************************************************//
 
     public function view($id) {
-        $vendor = [];
-        $vendor = $this->Vendors->getVendorId($id);
-        if (empty($vendor)) {
+        if (isset($id) && $id != '') {
+            $vendor = [];
+            $vendor = $this->Vendors->getVendorId($id);
+            if (empty($vendor)) {
+                $this->Flash->error(__('RECORD DOES NOT EXIST'));
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->set('vendor', $vendor);
+        } else {
             $this->Flash->error(__('RECORD DOES NOT EXIST'));
             return $this->redirect(['action' => 'index']);
         }
-        $this->set('vendor', $vendor);
     }
 
     public function sentEmails($name, $email, $password) {
@@ -481,6 +515,127 @@ class VendorsController extends AppController {
             'name' => $vendor['id_proof'],
         ));
         return $this->response;
+    }
+
+    public function workdetails($id) {
+        $this->loadModel('VendorCash');
+        if (isset($id) && $id != '') {
+            $vendor = [];
+            $vendor = $this->Vendors->getVendorId($id);
+            if (empty($vendor)) {
+                $this->Flash->error(__('RECORD DOES NOT EXIST'));
+                return $this->redirect(['action' => 'index']);
+            }
+            $filter = $this->VendorCash->newEntity();
+            $condArrPending = [];
+            $condArrClear = [];
+            $condArrTotal = [];
+            $condArrCashDetails = [];
+            if ($this->request->is('post')) {
+                //pr($this->request->data); exit;
+                if (isset($this->request->data['from_date']) && $this->request->data['from_date'] != 0) {
+                    $condArrPending["DATE_FORMAT(created,'%Y-%m-%d') >="] = date('Y-m-d', strtotime($this->request->data['from_date']));
+                    $condArrClear["DATE_FORMAT(created,'%Y-%m-%d') >="] = date('Y-m-d', strtotime($this->request->data['from_date']));
+                    $condArrTotal["DATE_FORMAT(created,'%Y-%m-%d') >="] = date('Y-m-d', strtotime($this->request->data['from_date']));
+                    $condArrCashDetails["DATE_FORMAT(created,'%Y-%m-%d') >="] = date('Y-m-d', strtotime($this->request->data['from_date']));
+                }
+                if (isset($this->request->data['to_date']) && $this->request->data['to_date'] != 0) {
+                    $condArrPending["DATE_FORMAT(created,'%Y-%m-%d') <="] = date('Y-m-d', strtotime($this->request->data['to_date']));
+                    $condArrClear["DATE_FORMAT(created,'%Y-%m-%d') <="] = date('Y-m-d', strtotime($this->request->data['to_date']));
+                    $condArrTotal["DATE_FORMAT(created,'%Y-%m-%d') <="] = date('Y-m-d', strtotime($this->request->data['to_date']));
+                    $condArrCashDetails["DATE_FORMAT(created,'%Y-%m-%d') <="] = date('Y-m-d', strtotime($this->request->data['to_date']));
+                }
+                $this->request->session()->write('vendorcashFilter', $this->request->data);
+            }
+            $condArrPending['vendor_id'] = $id;
+            $condArrPending['payment_type'] = 'CREDIT';
+            $condArrPending['payment_status'] = 'PENDING';
+            $condArrClear['vendor_id'] = $id;
+            $condArrClear['payment_type'] = 'CREDIT';
+            $condArrClear['payment_status'] = 'CLEAR';
+            $condArrTotal['vendor_id'] = $id;
+            $condArrTotal['payment_type'] = 'CREDIT';
+            $condArrCashDetails['vendor_id'] = $id;
+            $this->set('filter', $filter);
+            $creditPendingCash = $this->VendorCash->find('all')->select(['tot' => 'SUM(commissions)'])->where($condArrPending)->hydrate(false)->first();
+            $creditClearCash = $this->VendorCash->find('all')->select(['tot' => 'SUM(commissions)'])->where($condArrClear)->hydrate(false)->first();
+            $credittotalCash = $this->VendorCash->find('all')->select(['tot' => 'SUM(commissions)'])->where($condArrTotal)->hydrate(false)->first();
+            $vendor['due_cash'] = isset($creditPendingCash['tot']) && $creditPendingCash['tot'] != 0 ? $creditPendingCash['tot'] : 0.00;
+            $vendor['clear_cash'] = isset($creditClearCash['tot']) && $creditClearCash['tot'] != 0 ? $creditClearCash['tot'] : 0.00;
+            $vendor['total_cash'] = isset($credittotalCash['tot']) && $credittotalCash['tot'] != '' ? $credittotalCash['tot'] : 0.00;
+            $vendorCashDetails = $this->VendorCash->find('all')->where($condArrCashDetails)->hydrate(false)->toArray();
+//            if (!empty($vendorCashDetails)) {
+//                foreach ($vendorCashDetails as $key => $val) {
+//                    
+//                }
+//            }
+            $vendor['vendor_cash'] = $vendorCashDetails;
+            $this->set('vendor', $vendor);
+        } else {
+            $this->Flash->error(__('RECORD DOES NOT EXIST'));
+            return $this->redirect(['action' => 'index']);
+        }
+    }
+
+    public function resetFilter($id) {
+        $this->request->session()->delete('vendorcashFilter');
+        return $this->redirect(array('action' => 'workdetails', $id));
+    }
+
+    public function payment($id) {
+        $this->loadModel('VendorCash');
+
+        $this->loadModel('Users');
+        if (isset($id) && $id != '') {
+            $vendor = [];
+            $vendor = $this->Vendors->getVendorId($id);
+            if (empty($vendor)) {
+                $this->Flash->error(__('RECORD DOES NOT EXIST'));
+                return $this->redirect(['action' => 'index']);
+            }
+            $users = $this->Users->find('list')->select(['id', 'name'])->where(['user_type IN' => ['ADMIN', 'OPERATION_MANAGER']])->hydrate(false)->toArray();
+            $this->set('users', $users);
+            $searchdatavendors = $this->request->session()->read('vendorcashFilter');
+            $condArr = [];
+
+            $filterArr = $searchdatavendors;
+            $condArr['vendor_id'] = $id;
+            $from_date = $to_date = '';
+            if (isset($filterArr['from_date']) && $filterArr['from_date'] != 0) {
+                $from_date = $filterArr['from_date'];
+                $condArr["DATE_FORMAT(created,'%Y-%m-%d') >="] = date('Y-m-d', strtotime($filterArr['from_date']));
+            }
+            if (isset($filterArr['to_date']) && $filterArr['to_date'] != 0) {
+                $to_date = $filterArr['to_date'];
+                $condArr["DATE_FORMAT(created,'%Y-%m-%d') <="] = date('Y-m-d', strtotime($filterArr['to_date']));
+            }
+            $condArr['payment_status'] = 'PENDING';
+            $condArrCredit = $condArr;
+            $condArrDebit = $condArr;
+            $condArrCredit['payment_type'] = 'CREDIT';
+            $condArrDebit['payment_type'] = 'DEBIT';
+            $totCredits = $this->VendorCash->find('all')->select(['tot' => 'SUM(commissions)'])->where($condArrCredit)->hydrate(false)->first();
+            $totDebits = $this->VendorCash->find('all')->select(['tot' => 'SUM(commissions)'])->where($condArrDebit)->hydrate(false)->first();
+            $vendor['credits'] = ($totCredits['tot'] != 0) ? $totCredits['tot'] : 0.00;
+            $vendor['debit'] = ($totDebits['tot'] != 0) ? $totDebits['tot'] : 0.00;
+            $vendorCashDetails = $this->VendorCash->find('all')->where($condArr)->hydrate(false)->toArray();
+            if (isset($vendorCashDetails) && !empty($vendorCashDetails)) {
+                $vendor['vendor_cash'] = $vendorCashDetails;
+                $this->set('vendor', $vendor);
+                $vendorCash = $this->VendorCash->newEntity();
+                $this->set('vendorCash', $vendorCash);
+                if ($this->request->is('post')) {
+                    pr($this->request->data);
+                    exit;
+                }
+            } else {
+                $this->Flash->error(__('Vendor Cash Not Found!'));
+                return $this->redirect(['action' => 'workdetails', $id]);
+            }
+        } else {
+            $this->Flash->error(__('RECORD DOES NOT EXIST'));
+            return $this->redirect(['action' => 'index']);
+        }
     }
 
 }

@@ -44,7 +44,7 @@
                                                         <th width="2%">Sr.No</th>
                                                         <th>Username</th> 
                                                         <th>User Details</th>
-                                                        <th>Service Details</th>
+                                                        <th width="13%">Service Details</th>
                                                         <th>Order Details</th>
                                                         <th>Order Time</th>
                                                         <th width="11%">Actions</th>

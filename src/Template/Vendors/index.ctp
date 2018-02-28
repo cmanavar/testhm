@@ -50,7 +50,7 @@
                                                         <th>Phone no</th>
                                                         <th>Status</th>
                                                         <th>User Type</th>
-                                                        <th width="10%">Actions</th>
+                                                        <th width="13%">Actions</th>
                                                     </tr>   
                                                 </thead>
                                                 <tbody>
@@ -64,10 +64,13 @@
                                                                 <td><?php echo stripslashes($val['email']) ?></td>
                                                                 <td><?php echo stripslashes($val['phone_no']) ?></td>
                                                                 <td><?php echo (isset($val['active']) && $val['active'] == 'Y') ? 'ACTIVE' : 'INACTIVE'; ?></td>
-                                                                <td><?php echo stripslashes($val['user_type']) ?><?php echo (isset($val['service_name']) && $val['service_name'] != '-') ? " (".$val['service_name'].") " : ''; ?></td>
+                                                                <td><?php echo stripslashes($val['user_type']) ?><?php echo (isset($val['service_name']) && $val['service_name'] != '-') ? " (" . $val['service_name'] . ") " : ''; ?></td>
                                                                 <td>
                                                                     <?php echo $this->Html->link('', ['controller' => 'Vendors', 'action' => 'view', $val['id']], ['class' => 'btn btn-info fa fa-eye', 'escape' => false, 'title' => 'VIEW']); ?>
                                                                     <?php echo $this->Html->link('', ['controller' => 'Vendors', 'action' => 'edit', $val['id']], ['class' => 'btn btn-warning fa fa-pencil', 'escape' => false, 'title' => 'EDIT']); ?>
+                                                                    <?php if ($val['user_type'] == 'VENDOR') { ?>
+                                                                        <?php echo $this->Html->link('', ['controller' => 'Vendors', 'action' => 'workdetails', $val['id']], ['class' => 'btn btn-primary fa fa-usd', 'escape' => false, 'title' => 'EDIT']); ?>
+                                                                    <?php } ?>
         <!--                                                                    <a data-toggle="modal" title = 'DELETE' url=<?php echo $this->Url->build(['controller' => 'Vendors', 'action' => 'delete']) ?> data-value="<?php echo $val['id']; ?>" data-target="#delete" href="#" class="btn btn-danger fa fa-trash-o delete"></a>                                                                    -->
                                                                 </td>     
                                                             </tr>
@@ -87,7 +90,6 @@
                         </div>
                         <!-- /.table-responsive -->
                         <!--paginations-->
-
                     </div>
                     <!-- /.panel-body -->
                 </div>

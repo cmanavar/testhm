@@ -71,7 +71,7 @@ class PackageServicesController extends AppController {
             $tmp['status'] = $order['service_status'];
             $tmp['vandor_name'] = $this->getUserName($order['vendors_id']);
             if (!empty($order['service_date'])) {
-                $tmp['schedule_date'] = $order['service_date']->format('d-M-Y');
+                $tmp['schedule_date'] = date('d-M-Y', strtotime($order['service_date']));
                 $rslt[] = $tmp;
             }
         }

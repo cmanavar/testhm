@@ -13657,3 +13657,735 @@
 2018-02-17 19:25:00 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 45]
 
 
+2018-02-20 11:47:31 Notice: Notice (8): Undefined index: anount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 82]
+
+
+2018-02-20 11:47:31 Notice: Notice (8): Undefined index: anount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 82]
+
+
+2018-02-20 11:47:31 Notice: Notice (8): Undefined index: anount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 82]
+
+
+2018-02-21 11:39:31 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 11:39:31 Notice: Notice (8): Undefined variable: salesLists in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 63]
+
+
+2018-02-21 11:39:31 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 76]
+
+
+2018-02-21 11:39:45 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 11:39:45 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 73]
+
+
+2018-02-21 11:39:58 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 11:39:58 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 70]
+
+
+2018-02-21 11:40:11 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 12:24:43 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 12:29:05 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 62]
+
+
+2018-02-21 12:29:16 Notice: Notice (8): Undefined variable: serviceCategory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 33]
+
+
+2018-02-21 12:29:16 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 69]
+
+
+2018-02-21 12:29:27 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 69]
+
+
+2018-02-21 12:29:41 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 69]
+
+
+2018-02-21 12:29:45 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 69]
+
+
+2018-02-21 12:29:50 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 69]
+
+
+2018-02-21 12:30:03 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 12:30:17 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 12:30:30 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 12:30:40 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 12:30:46 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 12:31:02 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 12:31:15 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 12:31:20 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 12:31:24 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 12:31:44 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 12:32:00 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 12:32:06 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 12:32:17 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 61]
+
+
+2018-02-21 12:33:19 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 62]
+
+
+2018-02-21 12:34:28 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 62]
+
+
+2018-02-21 12:41:14 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 62]
+
+
+2018-02-21 12:41:23 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 62]
+
+
+2018-02-21 12:41:50 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 62]
+
+
+2018-02-21 12:43:02 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 62]
+
+
+2018-02-21 12:43:12 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 62]
+
+
+2018-02-21 12:43:21 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 62]
+
+
+2018-02-21 12:46:27 Notice: Notice (8): Undefined variable: v in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 66]
+
+
+2018-02-21 12:46:27 Notice: Notice (8): Undefined variable: vendors in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 66]
+
+
+2018-02-21 13:39:37 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 63]
+
+
+2018-02-21 13:39:37 Notice: Notice (8): Undefined index: cashHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 110]
+
+
+2018-02-21 13:40:08 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 63]
+
+
+2018-02-21 13:40:08 Notice: Notice (8): Undefined index: cashHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 110]
+
+
+2018-02-21 13:40:21 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 63]
+
+
+2018-02-21 13:40:21 Notice: Notice (8): Undefined index: cashHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 110]
+
+
+2018-02-21 13:40:23 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 63]
+
+
+2018-02-21 13:40:23 Notice: Notice (8): Undefined index: cashHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 110]
+
+
+2018-02-21 13:42:30 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 63]
+
+
+2018-02-21 13:42:30 Notice: Notice (8): Undefined index: cashHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 110]
+
+
+2018-02-21 13:44:45 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 63]
+
+
+2018-02-21 13:45:22 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 63]
+
+
+2018-02-21 13:45:29 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 63]
+
+
+2018-02-21 13:46:00 Notice: Notice (8): Undefined variable: filters in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 63]
+
+
+2018-02-21 13:46:44 Notice: Notice (8): Undefined variable: filter in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php, line 152]
+
+
+2018-02-21 13:49:06 Notice: Notice (8): Undefined variable: filter in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 63]
+
+
+2018-02-21 13:49:08 Notice: Notice (8): Undefined variable: filter in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 63]
+
+
+2018-02-21 13:53:38 Notice: Notice (8): Undefined variable: filter in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 63]
+
+
+2018-02-21 13:53:38 Notice: Notice (8): Undefined index: cashHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 110]
+
+
+2018-02-21 14:19:26 Notice: Notice (8): Undefined variable: filter in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 63]
+
+
+2018-02-21 14:19:26 Notice: Notice (8): Undefined index: cashHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 110]
+
+
+2018-02-21 14:19:34 Notice: Notice (8): Undefined index: cashHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 110]
+
+
+2018-02-21 14:19:39 Notice: Notice (8): Undefined index: cashHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 110]
+
+
+2018-02-21 15:13:41 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 145]
+
+
+2018-02-21 15:14:05 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 145]
+
+
+2018-02-21 15:14:16 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 145]
+
+
+2018-02-21 15:14:31 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 145]
+
+
+2018-02-21 15:14:37 Notice: Notice (8): Undefined variable: order in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 145]
+
+
+2018-02-21 15:36:57 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/payment.ctp, line 88]
+
+
+2018-02-21 15:37:24 Notice: Notice (8): Undefined variable: user in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/payment.ctp, line 88]
+
+
+2018-02-21 15:37:40 Notice: Notice (8): Undefined variable: greencashpayment in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/payment.ctp, line 88]
+
+
+2018-02-21 15:55:42 Notice: Notice (8): Undefined variable: greencashpayment in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/payment.ctp, line 88]
+
+
+2018-02-21 16:10:59 Notice: Notice (8): Undefined variable: greencashpayment in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/payment.ctp, line 88]
+
+
+2018-02-21 17:24:59 Notice: Notice (8): Object of class Cake\ORM\Entity could not be converted to int in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Database/Type/IntegerType.php, line 44]
+
+
+2018-02-21 17:26:12 Notice: Notice (8): Object of class Cake\ORM\Entity could not be converted to int in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Database/Type/IntegerType.php, line 44]
+
+
+2018-02-21 18:14:10 Notice: Notice (8): Undefined index: paymnetHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 139]
+
+
+2018-02-21 18:14:10 Notice: Notice (8): Undefined index: paymnetHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 140]
+
+
+2018-02-21 18:14:10 Notice: Notice (8): Undefined index: paymnetHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 144]
+
+
+2018-02-21 18:14:10 Notice: Notice (8): Undefined index: paymnetHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 147]
+
+
+2018-02-21 18:14:10 Notice: Notice (8): Undefined index: paymnetHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 150]
+
+
+2018-02-21 18:14:42 Notice: Notice (8): Undefined index: paymnetHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 150]
+
+
+2018-02-21 18:18:51 Notice: Notice (8): Undefined index: totPayments in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 156]
+
+
+2018-02-21 18:20:03 Notice: Notice (8): Undefined index: totPayments in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/view.ctp, line 156]
+
+
+2018-02-21 21:29:40 Notice: Notice (8): Undefined index: cashHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp, line 110]
+
+
+2018-02-21 21:32:07 Notice: Notice (8): Object of class Cake\ORM\Entity could not be converted to int in [/Applications/XAMPP/xamppfiles/htdocs/hmen/vendor/cakephp/cakephp/src/Database/Type/IntegerType.php, line 44]
+
+
+2018-02-24 12:04:30 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 180]
+
+
+2018-02-24 12:05:34 Notice: Notice (8): Undefined index: discount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 130]
+
+
+2018-02-24 12:43:08 Notice: Notice (8): Undefined index: discount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 130]
+
+
+2018-02-24 14:29:26 Notice: Notice (8): Undefined variable: id in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/VendorsController.php, line 488]
+
+
+2018-02-24 16:20:17 Notice: Notice (8): Undefined variable: filter in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 94]
+
+
+2018-02-24 16:20:17 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 113]
+
+
+2018-02-24 16:20:32 Notice: Notice (8): Undefined variable: filter in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 94]
+
+
+2018-02-24 16:20:32 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 104]
+
+
+2018-02-24 16:21:10 Notice: Notice (8): Undefined variable: filter in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 94]
+
+
+2018-02-24 16:23:48 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 132]
+
+
+2018-02-24 16:23:57 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 132]
+
+
+2018-02-24 16:24:10 Notice: Notice (8): Undefined index: cashHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 132]
+
+
+2018-02-24 16:24:25 Notice: Notice (8): Undefined index: cashHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 132]
+
+
+2018-02-24 16:24:33 Notice: Notice (8): Undefined index: cashHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 132]
+
+
+2018-02-24 16:25:13 Notice: Notice (8): Undefined index: cashHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 132]
+
+
+2018-02-24 16:25:21 Notice: Notice (8): Undefined index: cashHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 132]
+
+
+2018-02-24 16:25:27 Notice: Notice (8): Undefined index: cashHistory in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 132]
+
+
+2018-02-24 16:25:40 Notice: Notice (8): Undefined index: refer_membership_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 136]
+
+
+2018-02-24 16:25:40 Notice: Notice (8): Undefined index: plan_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 137]
+
+
+2018-02-24 16:25:40 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 138]
+
+
+2018-02-24 16:25:40 Notice: Notice (8): Undefined index: date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 139]
+
+
+2018-02-24 16:25:40 Notice: Notice (8): Undefined index: amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 140]
+
+
+2018-02-24 16:25:40 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 145]
+
+
+2018-02-24 16:25:40 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 149]
+
+
+2018-02-24 16:25:40 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 153]
+
+
+2018-02-24 16:25:40 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 153]
+
+
+2018-02-24 16:25:55 Notice: Notice (8): Undefined index: plan_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 137]
+
+
+2018-02-24 16:25:55 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 138]
+
+
+2018-02-24 16:25:55 Notice: Notice (8): Undefined index: date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 139]
+
+
+2018-02-24 16:25:55 Notice: Notice (8): Undefined index: amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 140]
+
+
+2018-02-24 16:25:55 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 145]
+
+
+2018-02-24 16:25:55 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 149]
+
+
+2018-02-24 16:25:55 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 153]
+
+
+2018-02-24 16:25:55 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 153]
+
+
+2018-02-24 16:26:07 Notice: Notice (8): Undefined index: plan_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 137]
+
+
+2018-02-24 16:26:07 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 138]
+
+
+2018-02-24 16:26:07 Notice: Notice (8): Undefined index: date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 139]
+
+
+2018-02-24 16:26:07 Notice: Notice (8): Undefined index: amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 140]
+
+
+2018-02-24 16:26:07 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 145]
+
+
+2018-02-24 16:26:07 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 149]
+
+
+2018-02-24 16:26:07 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 153]
+
+
+2018-02-24 16:26:07 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 153]
+
+
+2018-02-24 16:26:25 Notice: Notice (8): Undefined index: plan_name in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 138]
+
+
+2018-02-24 16:26:25 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 139]
+
+
+2018-02-24 16:26:25 Notice: Notice (8): Undefined index: date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 140]
+
+
+2018-02-24 16:26:25 Notice: Notice (8): Undefined index: amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 141]
+
+
+2018-02-24 16:26:25 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 146]
+
+
+2018-02-24 16:26:25 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 150]
+
+
+2018-02-24 16:26:25 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 154]
+
+
+2018-02-24 16:26:25 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 154]
+
+
+2018-02-24 16:26:52 Notice: Notice (8): Undefined index: status in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 139]
+
+
+2018-02-24 16:26:52 Notice: Notice (8): Undefined index: date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 140]
+
+
+2018-02-24 16:26:52 Notice: Notice (8): Undefined index: amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 141]
+
+
+2018-02-24 16:26:52 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 146]
+
+
+2018-02-24 16:26:52 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 150]
+
+
+2018-02-24 16:26:52 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 154]
+
+
+2018-02-24 16:26:52 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 154]
+
+
+2018-02-24 16:27:06 Notice: Notice (8): Undefined index: date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 140]
+
+
+2018-02-24 16:27:06 Notice: Notice (8): Undefined index: amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 141]
+
+
+2018-02-24 16:27:06 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 146]
+
+
+2018-02-24 16:27:06 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 150]
+
+
+2018-02-24 16:27:06 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 154]
+
+
+2018-02-24 16:27:06 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 154]
+
+
+2018-02-24 16:27:17 Notice: Notice (8): Undefined index: date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 140]
+
+
+2018-02-24 16:27:17 Notice: Notice (8): Undefined index: amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 141]
+
+
+2018-02-24 16:27:17 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 146]
+
+
+2018-02-24 16:27:17 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 150]
+
+
+2018-02-24 16:27:17 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 154]
+
+
+2018-02-24 16:27:17 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 154]
+
+
+2018-02-24 16:27:35 Notice: Notice (8): Undefined index: amount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 141]
+
+
+2018-02-24 16:27:35 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 146]
+
+
+2018-02-24 16:27:35 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 150]
+
+
+2018-02-24 16:27:35 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 154]
+
+
+2018-02-24 16:27:35 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 154]
+
+
+2018-02-24 16:27:51 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 146]
+
+
+2018-02-24 16:27:51 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 150]
+
+
+2018-02-24 16:27:51 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 154]
+
+
+2018-02-24 16:27:51 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 154]
+
+
+2018-02-24 16:28:15 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 147]
+
+
+2018-02-24 16:28:15 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 151]
+
+
+2018-02-24 16:28:15 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 155]
+
+
+2018-02-24 16:28:15 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 155]
+
+
+2018-02-24 16:28:26 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 147]
+
+
+2018-02-24 16:28:27 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 151]
+
+
+2018-02-24 16:28:27 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 155]
+
+
+2018-02-24 16:28:27 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 155]
+
+
+2018-02-24 16:28:35 Notice: Notice (8): Undefined index: totalCash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 147]
+
+
+2018-02-24 16:28:35 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 151]
+
+
+2018-02-24 16:28:35 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 155]
+
+
+2018-02-24 16:28:35 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 155]
+
+
+2018-02-24 16:28:46 Notice: Notice (8): Undefined index: totalCash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 147]
+
+
+2018-02-24 16:28:46 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 151]
+
+
+2018-02-24 16:28:46 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 155]
+
+
+2018-02-24 16:28:46 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 155]
+
+
+2018-02-24 16:29:43 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 169]
+
+
+2018-02-24 16:29:53 Notice: Notice (8): Undefined variable: greencash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp, line 169]
+
+
+2018-02-24 16:32:19 Notice: Notice (8): Undefined index: discount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 130]
+
+
+2018-02-24 16:34:23 Notice: Notice (8): Undefined variable: orders in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Orders/edit.ctp, line 180]
+
+
+2018-02-24 16:36:27 Notice: Notice (8): Undefined index: discount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 130]
+
+
+2018-02-24 16:36:56 Notice: Notice (8): Undefined index: discount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 130]
+
+
+2018-02-24 16:37:07 Notice: Notice (8): Undefined index: discount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 130]
+
+
+2018-02-24 16:37:54 Notice: Notice (8): Undefined index: discount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/order_invoice.ctp, line 130]
+
+
+2018-02-24 19:13:59 Notice: Notice (8): Undefined variable: condArrCashDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/VendorsController.php, line 586]
+
+
+2018-02-24 19:14:39 Notice: Notice (8): Undefined variable: filter in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 94]
+
+
+2018-02-24 19:17:31 Notice: Notice (8): Undefined variable: greencashpayment in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 155]
+
+
+2018-02-24 19:17:31 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-24 19:17:31 Notice: Notice (8): Undefined variable: dueamount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 224]
+
+
+2018-02-24 19:17:44 Notice: Notice (8): Undefined variable: vandorCash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 155]
+
+
+2018-02-24 19:17:44 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-24 19:17:44 Notice: Notice (8): Undefined variable: dueamount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 224]
+
+
+2018-02-24 19:21:23 Notice: Notice (8): Undefined index: from_date in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/VendorsController.php, line 575]
+
+
+2018-02-24 19:21:23 Notice: Notice (8): Undefined variable: vandorCash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 155]
+
+
+2018-02-24 19:21:23 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-24 19:21:23 Notice: Notice (8): Undefined variable: dueamount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 224]
+
+
+2018-02-24 19:21:47 Notice: Notice (8): Undefined variable: vandorCash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 155]
+
+
+2018-02-24 19:21:47 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-24 19:21:47 Notice: Notice (8): Undefined variable: dueamount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 224]
+
+
+2018-02-24 19:23:04 Notice: Notice (8): Undefined variable: vandorCash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 155]
+
+
+2018-02-24 19:23:04 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-24 19:23:04 Notice: Notice (8): Undefined variable: dueamount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 224]
+
+
+2018-02-24 19:23:16 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-24 19:31:23 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-24 19:31:23 Notice: Notice (8): Undefined variable: dueamount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 224]
+
+
+2018-02-24 19:36:04 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-24 19:36:04 Notice: Notice (8): Undefined variable: dueamount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 224]
+
+
+2018-02-24 19:37:55 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-24 19:37:55 Notice: Notice (8): Undefined variable: dueamount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 224]
+
+
+2018-02-24 19:39:51 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-24 19:39:51 Notice: Notice (8): Undefined variable: dueamount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 224]
+
+
+2018-02-24 19:40:19 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-24 19:40:19 Notice: Notice (8): Undefined variable: dueamount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 224]
+
+
+2018-02-24 19:40:37 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-24 19:40:37 Notice: Notice (8): Undefined variable: dueamount in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 224]
+
+
+2018-02-24 19:42:15 Notice: Notice (8): Undefined index: due_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 74]
+
+
+2018-02-24 19:42:15 Notice: Notice (8): Undefined index: total_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 124]
+
+
+2018-02-24 19:42:15 Notice: Notice (8): Undefined index: clear_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 128]
+
+
+2018-02-24 19:42:15 Notice: Notice (8): Undefined index: due_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 133]
+
+
+2018-02-24 19:47:45 Notice: Notice (8): Undefined index: due_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 74]
+
+
+2018-02-24 19:47:45 Notice: Notice (8): Undefined index: total_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 124]
+
+
+2018-02-24 19:47:45 Notice: Notice (8): Undefined index: clear_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 128]
+
+
+2018-02-24 19:47:45 Notice: Notice (8): Undefined index: due_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 133]
+
+
+2018-02-24 19:50:04 Notice: Notice (8): Undefined index: due_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 74]
+
+
+2018-02-24 19:50:04 Notice: Notice (8): Undefined index: total_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 124]
+
+
+2018-02-24 19:50:04 Notice: Notice (8): Undefined index: clear_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 128]
+
+
+2018-02-24 19:50:04 Notice: Notice (8): Undefined index: due_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 133]
+
+
+2018-02-24 19:51:07 Notice: Notice (8): Undefined index: due_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 74]
+
+
+2018-02-24 19:51:07 Notice: Notice (8): Undefined index: total_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 124]
+
+
+2018-02-24 19:51:07 Notice: Notice (8): Undefined index: clear_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 128]
+
+
+2018-02-24 19:51:22 Notice: Notice (8): Undefined index: due_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 74]
+
+
+2018-02-24 19:51:56 Notice: Notice (8): Undefined index: due_cash in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 74]
+
+
+2018-02-24 19:53:14 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 163]
+
+
+2018-02-24 19:54:00 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-24 19:54:17 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-24 19:54:42 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-24 19:54:46 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-24 19:55:23 Notice: Notice (8): Undefined variable: monthDetails in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp, line 162]
+
+
+2018-02-26 14:25:19 Notice: Notice (8): Undefined variable: photo in [/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/VendorsController.php, line 364]
+
+

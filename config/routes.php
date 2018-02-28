@@ -112,6 +112,7 @@ Router::scope('/', function ($routes) {
     $routes->connect('/webservices/packageservice/book', ['controller' => 'Webservices', 'action' => 'packageServiceBook']);
     $routes->connect('/webservices/membership/credithistory', ['controller' => 'Webservices', 'action' => 'creditOrderHistory']);
     $routes->connect('/webservices/membership/details', ['controller' => 'Webservices', 'action' => 'membershipDetails']);
+    $routes->connect('/webservices/freeservice/details/*', ['controller' => 'Webservices', 'action' => 'freeServiceDetails']);
     $routes->connect('/test', ['controller' => 'Webservices', 'action' => 'testNotifications']);
 
 

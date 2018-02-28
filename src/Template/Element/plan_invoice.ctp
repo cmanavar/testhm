@@ -43,7 +43,7 @@
                                                                             <table style="font-size:13px!important" width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                                 <tbody>
                                                                                     <tr>
-                                                                                        <td align="left" valign="middle"><img src="<?= IMAGE_URL_PATH; ?>icons/ic-invoice.svg" width="45" height="45" alt="" class="CToWUd"></td>
+                                                                                        <td align="left" valign="middle"><img src="<?= IMAGE_URL_PATH; ?>icons/ic-invoice.png" width="45" height="45" alt="" class="CToWUd"></td>
                                                                                         <td align="left" valign="middle" style="font-size:13px;padding-left:10px">Member ID<br><span style="color:#156095!important"><strong><?= $mailData['member_id']; ?></strong></span></td>
                                                                                         <td align="left" valign="middle" style="font-size:13px;padding-left:10px">Plan Name<br><span style="color:#156095!important"><strong><?= $mailData['plan_name']; ?></strong></span></td>
                                                                                     </tr>

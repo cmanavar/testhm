@@ -146,6 +146,7 @@ define('MSG_TITLE_ORDER_COMPLETED', 'Order Completed');
 define('MSG_TITLE_ORDER_CASHBACK', 'Order Cashback');
 define('MSG_TITLE_CASHBACK_PLAN', 'Membership Plan Cashback');
 define('MSG_TITLE_REFER_MAMBERSHIP', 'Rewarded for refer');
+define('MSG_TITLE_CLOSE_LAST_ORDERS', 'CLOSE PREVIOUS ORDERS');
 
 
 define('RUBIES_PLAN_ID', 1);
@@ -185,6 +186,7 @@ if ($HTTP_HOST == 'localhost') {
     define('ZOOM_RO_SERVICE_IMAGE', '201801301613435a704.png');
 }
 
+define('VENDOR_CREDIT_COMMISSION', 20);
 
 define('PAGINATION_LIMIT', 10);
 

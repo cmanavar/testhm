@@ -108,7 +108,7 @@
                                             echo $this->Html->image(USER_PROFILE_PATH . $user['profile_pic'], ['height' => 100, 'width' => 100]) . "<br/>";
                                             ?>
                                             <br/>
-                                            <a data-toggle="modal" url=<?php echo $this->Url->build(['controller' => 'Vendors', 'action' => 'deleteimage', 'profile_picture', $user['profile_pic']]) ?> data-value="<?php echo $user['profile_pic']; ?>" data-target="#delete" href="#"  class="btn btn-danger delete ">REMOVE IMAGE</a>
+                                            <a data-toggle="modal" url=<?php echo $this->Url->build(['controller' => 'Vendors', 'action' => 'deleteprofileimage', $user['id']]) ?> data-value="<?php echo $user['profile_pic']; ?>" data-target="#delete" href="#"  class="btn btn-danger delete ">REMOVE IMAGE</a>
                                             <?php
                                         } else {
                                             echo $this->Form->input('profile_picture', ['label' => false, 'type' => 'file', 'class' => 'required imgpreview', 'id' => 'squarebanner']);
@@ -147,19 +147,6 @@
                                             <?php } else { ?>
                                                 <?php echo $this->Form->input('id_proof', ['label' => false, 'type' => 'file', 'class' => 'required', 'id' => 'idproof']); ?>
                                             <?php } ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">SHIFT TIMING <span class="text-danger">*</span></label>
-                                    <div class="col-sm-2">
-                                        <div class="input text">
-                                            <?php echo $this->Form->input('shift_start', ['label' => false, 'class' => 'form-control required normal-font', 'placeholder' => 'SHIFT START TIME', 'id' => 'asdad', 'maxlength' => 255, 'value' => $user['shift_start']]); ?>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <div class="input text">
-                                            <?php echo $this->Form->input('shift_end', ['label' => false, 'class' => 'form-control required normal-font', 'placeholder' => 'SHIFT END TIME', 'id' => 'asdasdfa', 'maxlength' => 255, 'value' => $user['shift_end']]); ?>
                                         </div>
                                     </div>
                                 </div>
