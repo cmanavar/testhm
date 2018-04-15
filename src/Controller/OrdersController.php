@@ -193,6 +193,7 @@ class OrdersController extends AppController {
                     }
                 }
                 $orderDetails['payment_status'] = $order['payment_status'];
+                $orderDetails['payment_method'] = $order['payment_method'];
                 $orderDetails['images'] = '';
                 $orderDetails['services'] = [];
                 $orderDetails['total']['amount'] = number_format($order['amount'], 2);

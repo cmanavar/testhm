@@ -144,7 +144,9 @@ $userType = $this->request->session()->read('Auth.User.user_type');
                             <li class="divider"></li>
                             <li class="<?php echo ($this->name == 'Members' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>"><a href="<?php echo $this->Url->build(["controller" => "Members", "action" => "index"]); ?>"><i class="fa fa-user"></i> &nbsp;MEMBERS</a> </li>
                             <li class="divider"></li>
-                            <li class="<?php echo ($this->name == 'Vendors' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>"><a href="<?php echo $this->Url->build(["controller" => "Vendors", "action" => "index"]); ?>"><i class="fa fa-user"></i> &nbsp;VENDORS</a> </li>
+                            <li class="<?php echo ($this->name == 'Vendors' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>"><a href="<?php echo $this->Url->build(["controller" => "Vendors", "action" => "index"]); ?>"><i class="fa fa-user"></i> &nbsp;SERVICE EXPERTS</a> </li>
+                            <li class="divider"></li>
+                            <li class="<?php echo ($this->name == 'Sales' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>"><a href="<?php echo $this->Url->build(["controller" => "Sales", "action" => "index"]); ?>"><i class="fa fa-user"></i> &nbsp;SALES</a> </li>
                         </ul>
                     </li>
                     <li class="<?php echo ($this->name == 'GreenCashbacks' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>">
@@ -168,8 +170,8 @@ $userType = $this->request->session()->read('Auth.User.user_type');
                             <li class=""><a href="<?php echo $this->Url->build(["controller" => "Settings", "action" => "banner"]); ?>"><i class="fa fa-file-image-o"></i> &nbsp;BANNERS</a> </li>
                             <li class="divider"></li>
                             <li class=""><a href="<?php echo $this->Url->build(["controller" => "Settings", "action" => "faq"]); ?>"><i class="fa fa-question-circle"></i> &nbsp;FAQS</a> </li>
-<!--                            <li class="divider"></li>
-                            <li class=""><a href="<?php echo $this->Url->build(["controller" => "Settings", "action" => "coupon"]); ?>"><i class="fa fa-tag"></i> &nbsp;COUPON</a> </li>-->
+                            <!--                            <li class="divider"></li>
+                                                        <li class=""><a href="<?php echo $this->Url->build(["controller" => "Settings", "action" => "coupon"]); ?>"><i class="fa fa-tag"></i> &nbsp;COUPON</a> </li>-->
                         </ul>
                     </li>
                     <li class="<?php echo ($this->name == 'Surveys' && in_array($this->request->action, array('index', 'view', 'edit'))) ? $active : ""; ?>">
@@ -236,7 +238,9 @@ $userType = $this->request->session()->read('Auth.User.user_type');
                             <li class="divider"></li>
                             <li class="<?php echo ($this->name == 'Members' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>"><a href="<?php echo $this->Url->build(["controller" => "Members", "action" => "index"]); ?>"><i class="fa fa-user"></i> &nbsp;MEMBERS</a> </li>
                             <li class="divider"></li>
-                            <li class="<?php echo ($this->name == 'Vendors' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>"><a href="<?php echo $this->Url->build(["controller" => "Vendors", "action" => "index"]); ?>"><i class="fa fa-user"></i> &nbsp;VENDORS</a> </li>
+                            <li class="<?php echo ($this->name == 'Vendors' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>"><a href="<?php echo $this->Url->build(["controller" => "Vendors", "action" => "index"]); ?>"><i class="fa fa-user"></i> &nbsp;SERVICE EXPERTS</a> </li>
+                            <li class="divider"></li>
+                            <li class="<?php echo ($this->name == 'Sales' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>"><a href="<?php echo $this->Url->build(["controller" => "Sales", "action" => "index"]); ?>"><i class="fa fa-user"></i> &nbsp;SALES</a> </li>
                         </ul>
                     </li>
                     <li class="<?php echo ($this->name == 'GreenCashbacks' && in_array($this->request->action, array('index', 'add', 'edit'))) ? $active : ""; ?>">

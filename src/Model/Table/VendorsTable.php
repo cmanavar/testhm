@@ -34,6 +34,7 @@ class VendorsTable extends Table {
         $vendors = $usersTable->find('all')->where(['user_type IN' => ['VENDOR', 'SALES'], 'id' => $id])->order(['id' => 'DESC'])->hydrate(false)->first();
         $vendorsData = $vendorsTable->find('all')->where(['user_id' => $vendors['id']])->hydrate(false)->first();
         $vendors['service_id'] = $vendorsData['service_id'];
+        $vendors['vendor_type'] = $vendorsData['vendor_type'];
         $vendors['service_name'] = $this->getServiceName($vendorsData['service_id']);
         $vendors['agreement'] = $vendorsData['agreement'];
         $vendors['id_proof'] = $vendorsData['id_proof'];
@@ -65,10 +66,11 @@ class VendorsTable extends Table {
     public function getVendors() {
         $usersTable = TableRegistry::get('Users');
         $vendorsTable = TableRegistry::get('VendorDetails');
-        $vendors = $usersTable->find('all')->where(['user_type IN' => ['VENDOR', 'SALES']])->order(['id' => 'ASC'])->hydrate(false)->toArray();
+        $vendors = $usersTable->find('all')->where(['user_type' => 'VENDOR'])->order(['id' => 'ASC'])->hydrate(false)->toArray();
         foreach ($vendors as $key => $val) {
             $vendorsData = $vendorsTable->find('all')->where(['user_id' => $val['id']])->hydrate(false)->first();
             $vendors[$key]['service_id'] = $vendorsData['service_id'];
+            $vendors[$key]['vendor_type'] = $vendorsData['vendor_type'];
             $vendors[$key]['service_name'] = $this->getServiceName($vendorsData['service_id']);
             $vendors[$key]['agreement'] = $vendorsData['agreement'];
             $vendors[$key]['id_proof'] = $vendorsData['id_proof'];
@@ -137,7 +139,7 @@ class VendorsTable extends Table {
             return 0;
         }
     }
-    
+
 }
 
 ?>

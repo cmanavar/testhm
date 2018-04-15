@@ -199,6 +199,7 @@ class GreenCashbacksController extends AppController {
                 $rslt['totalpaidCash'] = (isset($paidgreenCash['tot']) && $paidgreenCash['tot'] != '') ? $paidgreenCash['tot'] : 0;
                 $greenCashHistory = $this->GreenCashbacks->find('all')->select(['id', 'user_id', 'amount', 'refer_membership_id', 'status', 'payment_id', 'created'])->where($condArr)->hydrate(false)->toArray();
                 //  pr($greenCashHistory); exit;
+                $rslt['cashHistory'] = [];
                 foreach ($greenCashHistory as $key => $val) {
                     $tmp = [];
                     $tmp['id'] = $val['id'];

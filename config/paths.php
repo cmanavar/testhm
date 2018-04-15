@@ -126,18 +126,21 @@ define('COMPANY_GST_NUMBER', '24DDVPP8257B1Z3');
 define('GST_TAX', 5);
 define('VISITING_CHARGE', 100.00);
 define('REFERRAL_COMISSION', 100.00);
+define('SIGNUP_COMISSION', 100.00);
 define('GREEN_CASH_REWERDS_AMOUNT', 100.00);
 define('EMAIL_FROM_NAME', 'H-MEN');
 define('EMAIL_FROM_EMAIL_ADDRESS', 'donotreply@hmen.in');
 
 // Msg Title for Referral
 define('MSG_TYPE_REFERRAL', 'REFERRAL');
+define('MSG_TYPE_SIGNUP', 'REFERRAL');
 define('MSG_TYPE_CASHBACK', 'MEMBERSHIP_CASHBACK');
 define('MSG_TYPE_OFFER', 'OFFER');
 define('MSG_TYPE_ORDER', 'ORDER');
 define('MSG_TYPE_OTHER', 'OTHER');
 define('MSG_TYPE_GREEN_CASH', 'GREENCASH');
 define('MSG_TITLE_REFERRAL', 'Rewarded for refer');
+define('MSG_TITLE_SIGNUP', 'Rewarded for signup');
 define('MSG_TITLE_ORDER_PLACED', 'Order Placed');
 define('MSG_TITLE_ORDER_ASSIGN', 'Order Assigned');
 define('MSG_TITLE_ORDER_UPDATED', 'Order Updated');
@@ -187,6 +190,7 @@ if ($HTTP_HOST == 'localhost') {
 }
 
 define('VENDOR_CREDIT_COMMISSION', 20);
+define('EMPLOYMENT_CREDIT_COMMISSION', 100);
 
 define('PAGINATION_LIMIT', 10);
 

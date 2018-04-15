@@ -16,8 +16,8 @@
     <div class="row">
         <div class="col-md-12">
             <h1 class="page-header">
-                <i class="fa fa-user fa-fw"></i>EXPERTS
-                <a href="<?php echo $this->Url->build(["controller" => "Vendors", "action" => "add"]); ?>"><button class="btn btn-primary btn-sm pull-right" >ADD NEW EXPERTS</button></a>
+                <i class="fa fa-user fa-fw"></i>SALES PERSON
+                <a href="<?php echo $this->Url->build(["controller" => "Sales", "action" => "add"]); ?>"><button class="btn btn-primary btn-sm pull-right" >ADD NEW SALES PERSON</button></a>
             </h1>
         </div>        
         <!-- /.col-lg-12 -->
@@ -31,7 +31,7 @@
         <div class="row" id="scroll">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    LIST EXPERTS
+                    LIST SALES PERSON
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
@@ -49,7 +49,6 @@
                                                         <th>Email id</th>
                                                         <th>Phone no</th>
                                                         <th>Status</th>
-                                                        <th>Service</th>
                                                         <th width="13%">Actions</th>
                                                     </tr>   
                                                 </thead>
@@ -64,12 +63,10 @@
                                                                 <td><?php echo stripslashes($val['email']) ?></td>
                                                                 <td><?php echo stripslashes($val['phone_no']) ?></td>
                                                                 <td><?php echo (isset($val['active']) && $val['active'] == 'Y') ? 'ACTIVE' : 'INACTIVE'; ?></td>
-                                                                <td><?php echo (isset($val['service_name']) && $val['service_name'] != '-') ? $val['service_name'] : ''; ?></td>
                                                                 <td>
-                                                                    <?php echo $this->Html->link('', ['controller' => 'Vendors', 'action' => 'view', $val['id']], ['class' => 'btn btn-info fa fa-eye', 'escape' => false, 'title' => 'VIEW']); ?>
-                                                                    <?php echo $this->Html->link('', ['controller' => 'Vendors', 'action' => 'edit', $val['id']], ['class' => 'btn btn-warning fa fa-pencil', 'escape' => false, 'title' => 'EDIT']); ?>
-                                                                    <?php echo $this->Html->link('', ['controller' => 'Vendors', 'action' => 'workdetails', $val['id']], ['class' => 'btn btn-primary fa fa-usd', 'escape' => false, 'title' => 'EDIT']); ?>
-                <!--                                                                    <a data-toggle="modal" title = 'DELETE' url=<?php echo $this->Url->build(['controller' => 'Vendors', 'action' => 'delete']) ?> data-value="<?php echo $val['id']; ?>" data-target="#delete" href="#" class="btn btn-danger fa fa-trash-o delete"></a>                                                                    -->
+                                                                    <?php echo $this->Html->link('', ['controller' => 'Sales', 'action' => 'view', $val['id']], ['class' => 'btn btn-info fa fa-eye', 'escape' => false, 'title' => 'VIEW']); ?>
+                                                                    <?php echo $this->Html->link('', ['controller' => 'Sales', 'action' => 'edit', $val['id']], ['class' => 'btn btn-warning fa fa-pencil', 'escape' => false, 'title' => 'EDIT']); ?>
+        <!--                                                                    <a data-toggle="modal" title = 'DELETE' url=<?php echo $this->Url->build(['controller' => 'Vendors', 'action' => 'delete']) ?> data-value="<?php echo $val['id']; ?>" data-target="#delete" href="#" class="btn btn-danger fa fa-trash-o delete"></a>                                                                    -->
                                                                 </td>     
                                                             </tr>
 

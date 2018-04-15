@@ -3,22 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/MembersController.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/edit.ctp</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/VendorsController.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/GreenCashbacksController.php</file>
             <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/config/routes.php</file>
             <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/AppController.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/workdetails.ctp</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/UsersController.php</file>
             <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/config/paths.php</file>
             <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/edit.ctp</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/GreenCashbacks/payment.ctp</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/index.ctp</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/ReportsController.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/OrdersController.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Controller/WebservicesController.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/payment.ctp</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Reports/memberships.ctp</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Element/signup_self_confirm.ctp</file>
+            <file>file:/Applications/XAMPP/xamppfiles/htdocs/hmen/src/Template/Vendors/add.ctp</file>
         </group>
     </open-files>
 </project-private>

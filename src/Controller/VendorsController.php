@@ -83,6 +83,7 @@ class VendorsController extends AppController {
             $this->request->data['password'] = $usersController->randomPassword();
             $errors = $validator->errors($this->request->data());
             if (empty($errors)) {
+                //pr($this->request->data); exit;
                 $name = $this->request->data['name'];
                 $email = $this->request->data['email'];
                 $phone_no = $this->request->data['phone_no'];
@@ -91,90 +92,88 @@ class VendorsController extends AppController {
                 if (isset($userExists['status']) && $userExists['status'] == 'fail') {
                     $this->Flash->error($userExists['msg']);
                 } else {
-                    if ($this->request->data['user_type'] == 'VENDOR') {
-                        $uController = new UsersController();
-                        $password = $uController->randomPassword();
-                        $userData = [];
-                        $userData['name'] = $name;
-                        $userData['email'] = $email;
-                        $userData['phone_no'] = $phone_no;
-                        $userData['password'] = $password;
-                        $userData['city'] = (isset($requestArr['city']) && $requestArr['city'] != '') ? $requestArr['city'] : '';
-                        $userData['signup_with'] = 'SELF';
-                        $userData['user_type'] = 'VENDOR';
-                        $userData['ip_address'] = $this->get_client_ip();
-                        $userData['email_newsletters'] = (isset($requestArr['email_newsletters']) && $requestArr['email_newsletters'] != '') ? $requestArr['email_newsletters'] : 'N';
-                        $userData['phone_verified'] = 'Y';
-                        $userData['email_verified'] = 'Y';
-                        $userData['active'] = 'Y';
-                        if (isset($this->request->data['profile_picture']['name']) && $this->request->data['profile_picture']['name'] != '') {
-                            $filename = '';
-                            $file = $this->request->data['profile_picture']['name'];
-                            $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
-                            $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
-                            $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
-                            move_uploaded_file($this->request->data['profile_picture']['tmp_name'], WWW_ROOT . 'img/' . USER_PROFILE_PATH . $filename);
-                            $userData['profile_pic'] = $filename;
-                        }
-                        $user = $this->Users->patchEntity($user, $userData);
-                        // SEND SMS
-                        $msgT = "Dear $name, Your credentials email:$email, password:$password . Regards, H-Men";
-                        $sendMsg = $this->sendOtp($phone_no, $msgT);
-                        if ($sendMsg['status'] == 'fail') {
-                            $this->Flash->error($sendMsg['msg']);
-                        }
-                        // SEND EMAIL
-                        $this->sentEmails($name, $email, $password);
-                        $user->created = date("Y-m-d H:i:s");
-                        $user->created_by = $this->request->session()->read('Auth.User.id');
-                        $saveUsers = $this->Users->save($user);
-                        if ($saveUsers) {
-                            $userId = $saveUsers['id'];
-                            //generate api key
-                            $api_key = $this->Users->generateAPIkey();
-                            $mappingData = [];
-                            $this->loadModel('UserMapping');
-                            $userMapping = $this->UserMapping->newEntity();
-                            $map_data = array(
-                                'user_id' => $userId,
-                                'user_type' => 'VENDOR',
-                                'mapping_key' => 'api_key',
-                                'mapping_value' => $api_key
-                            );
-                            $userMapping = $this->UserMapping->patchEntity($userMapping, $map_data);
-                            $userMapping->created = date("Y-m-d H:i:s");
-                            if ($this->UserMapping->save($userMapping)) {
-                                $vendor = $this->VendorDetails->newEntity();
-                                $vendorData = [];
-                                $vendorData['user_id'] = $userId;
-                                if (isset($this->request->data['agreement']['name']) && $this->request->data['agreement']['name'] != '') {
-                                    $filename = '';
-                                    $file = $this->request->data['agreement']['name'];
-                                    $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
-                                    $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
-                                    $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
-                                    move_uploaded_file($this->request->data['agreement']['tmp_name'], WWW_ROOT . 'img/' . VENDOR_AGREEMENT_PATH . $filename);
-                                    $vendorData['agreement'] = $filename;
-                                }
-                                if (isset($this->request->data['id_proof']['name']) && $this->request->data['id_proof']['name'] != '') {
-                                    $filename = '';
-                                    $file = $this->request->data['id_proof']['name'];
-                                    $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
-                                    $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
-                                    $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
-                                    move_uploaded_file($this->request->data['id_proof']['tmp_name'], WWW_ROOT . 'img/' . VENDOR_IDPROOF_PATH . $filename);
-                                    $vendorData['id_proof'] = $filename;
-                                }
-                                $vendor = $this->VendorDetails->patchEntity($vendor, $vendorData);
-                                $vendor->service_id = $this->request->data['service_id'];
-                                $vendor->created = date("Y-m-d H:i:s");
-                                $vendor->created_by = $this->request->session()->read('Auth.User.id');
-                                if ($this->VendorDetails->save($vendor)) {
-                                    $this->Flash->success(__('THE VENDOR HAS BEEN SAVED.'));
-                                    return $this->redirect(['action' => 'index']);
-                                } else {
-                                    $this->Flash->error(__('UNABLE TO ADD THE VENDOR.'));
-                                }
+                    $uController = new UsersController();
+                    $password = $uController->randomPassword();
+                    $userData = [];
+                    $userData['name'] = $name;
+                    $userData['email'] = $email;
+                    $userData['phone_no'] = $phone_no;
+                    $userData['phone_number_2'] = (isset($this->request->data['phone_number_2']) && $this->request->data['phone_number_2'] != '') ? $this->request->data['phone_number_2'] : '-';
+                    $userData['password'] = $password;
+                    $userData['city'] = (isset($this->request->data['city']) && $this->request->data['city'] != '') ? $this->request->data['city'] : '';
+                    $userData['signup_with'] = 'SELF';
+                    $userData['user_type'] = 'VENDOR';
+                    $userData['ip_address'] = $this->get_client_ip();
+                    $userData['email_newsletters'] = (isset($this->request->data['email_newsletters']) && $this->request->data['email_newsletters'] != '') ? $this->request->data['email_newsletters'] : 'N';
+                    $userData['phone_verified'] = 'Y';
+                    $userData['email_verified'] = 'Y';
+                    $userData['active'] = 'Y';
+                    if (isset($this->request->data['profile_picture']['name']) && $this->request->data['profile_picture']['name'] != '') {
+                        $filename = '';
+                        $file = $this->request->data['profile_picture']['name'];
+                        $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                        $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                        $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                        move_uploaded_file($this->request->data['profile_picture']['tmp_name'], WWW_ROOT . 'img/' . USER_PROFILE_PATH . $filename);
+                        $userData['profile_pic'] = $filename;
+                    }
+                    $user = $this->Users->patchEntity($user, $userData);
+                    // SEND SMS
+                    $msgT = "Dear $name, Your credentials email:$email, password:$password . Regards, H-Men";
+                    $sendMsg = $this->sendOtp($phone_no, $msgT);
+                    if ($sendMsg['status'] == 'fail') {
+                        $this->Flash->error($sendMsg['msg']);
+                    }
+                    // SEND EMAIL
+                    $this->sentEmails($name, $email, $password);
+                    $user->created = date("Y-m-d H:i:s");
+                    $user->created_by = $this->request->session()->read('Auth.User.id');
+                    $saveUsers = $this->Users->save($user);
+                    if ($saveUsers) {
+                        $userId = $saveUsers['id'];
+                        //generate api key
+                        $api_key = $this->Users->generateAPIkey();
+                        $mappingData = [];
+                        $this->loadModel('UserMapping');
+                        $userMapping = $this->UserMapping->newEntity();
+                        $map_data = array(
+                            'user_id' => $userId,
+                            'user_type' => 'VENDOR',
+                            'mapping_key' => 'api_key',
+                            'mapping_value' => $api_key
+                        );
+                        $userMapping = $this->UserMapping->patchEntity($userMapping, $map_data);
+                        $userMapping->created = date("Y-m-d H:i:s");
+                        if ($this->UserMapping->save($userMapping)) {
+                            $vendor = $this->VendorDetails->newEntity();
+                            $vendorData = [];
+                            $vendorData['user_id'] = $userId;
+                            if (isset($this->request->data['agreement']['name']) && $this->request->data['agreement']['name'] != '') {
+                                $filename = '';
+                                $file = $this->request->data['agreement']['name'];
+                                $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                                $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                                $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                                move_uploaded_file($this->request->data['agreement']['tmp_name'], WWW_ROOT . 'img/' . VENDOR_AGREEMENT_PATH . $filename);
+                                $vendorData['agreement'] = $filename;
+                            }
+                            if (isset($this->request->data['id_proof']['name']) && $this->request->data['id_proof']['name'] != '') {
+                                $filename = '';
+                                $file = $this->request->data['id_proof']['name'];
+                                $filename = pathinfo($file, PATHINFO_FILENAME); //find file name
+                                $ext = pathinfo($file, PATHINFO_EXTENSION); //find extension						
+                                $filename = date('YmdHis') . substr(uniqid(), 0, 5) . "." . $ext;
+                                move_uploaded_file($this->request->data['id_proof']['tmp_name'], WWW_ROOT . 'img/' . VENDOR_IDPROOF_PATH . $filename);
+                                $vendorData['id_proof'] = $filename;
+                            }
+                            $vendor = $this->VendorDetails->patchEntity($vendor, $vendorData);
+                            $vendor->service_id = $this->request->data['service_id'];
+                            $vendor->vendor_type = $this->request->data['vendor_type'];
+                            $vendor->created = date("Y-m-d H:i:s");
+                            $vendor->created_by = $this->request->session()->read('Auth.User.id');
+                            if ($this->VendorDetails->save($vendor)) {
+                                $this->Flash->success(__('THE VENDOR HAS BEEN SAVED.'));
+                                return $this->redirect(['action' => 'index']);
                             } else {
                                 $this->Flash->error(__('UNABLE TO ADD THE VENDOR.'));
                             }
@@ -182,57 +181,7 @@ class VendorsController extends AppController {
                             $this->Flash->error(__('UNABLE TO ADD THE VENDOR.'));
                         }
                     } else {
-                        $uController = new UsersController();
-                        $password = $uController->randomPassword();
-                        $userData = [];
-                        $userData['name'] = $name;
-                        $userData['email'] = $email;
-                        $userData['phone_no'] = $phone_no;
-                        $userData['password'] = $password;
-                        $userData['city'] = (isset($requestArr['city']) && $requestArr['city'] != '') ? $requestArr['city'] : '';
-                        $userData['signup_with'] = 'SELF';
-                        $userData['user_type'] = 'SALES';
-                        $userData['ip_address'] = $this->get_client_ip();
-                        $userData['email_newsletters'] = (isset($requestArr['email_newsletters']) && $requestArr['email_newsletters'] != '') ? $requestArr['email_newsletters'] : 'N';
-                        $userData['phone_verified'] = 'Y';
-                        $userData['email_verified'] = 'Y';
-                        $userData['active'] = 'Y';
-                        $user = $this->Users->patchEntity($user, $userData);
-                        // SEND SMS
-                        $msgT = "Dear $name, Your credentials email:$email, password:$password . Regards, H-Men";
-                        $sendMsg = $this->sendOtp($phone_no, $msgT);
-                        if ($sendMsg['status'] == 'fail') {
-                            $this->Flash->error($sendMsg['msg']);
-                        }
-                        // SEND EMAIL
-                        $this->sentSalesEmails($name, $email, $password);
-                        $user->created = date("Y-m-d H:i:s");
-                        $user->created_by = $this->request->session()->read('Auth.User.id');
-                        $saveUsers = $this->Users->save($user);
-                        if ($saveUsers) {
-                            $userId = $saveUsers['id'];
-                            //generate api key
-                            $api_key = $this->Users->generateAPIkey();
-                            $mappingData = [];
-                            $this->loadModel('UserMapping');
-                            $userMapping = $this->UserMapping->newEntity();
-                            $map_data = array(
-                                'user_id' => $userId,
-                                'user_type' => 'SALES',
-                                'mapping_key' => 'api_key',
-                                'mapping_value' => $api_key
-                            );
-                            $userMapping = $this->UserMapping->patchEntity($userMapping, $map_data);
-                            $userMapping->created = date("Y-m-d H:i:s");
-                            if ($this->UserMapping->save($userMapping)) {
-                                $this->Flash->success(__('THE SALES HAS BEEN SAVED.'));
-                                return $this->redirect(['action' => 'index']);
-                            } else {
-                                $this->Flash->error(__('UNABLE TO ADD THE SALES.'));
-                            }
-                        } else {
-                            $this->Flash->error(__('UNABLE TO ADD THE SALES.'));
-                        }
+                        $this->Flash->error(__('UNABLE TO ADD THE VENDOR.'));
                     }
                 }
             } else {
@@ -291,6 +240,7 @@ class VendorsController extends AppController {
                         $vData = [];
                         $vData['user_id'] = $id;
                         $vData['service_id'] = $this->request->data['service_id'];
+                        $vData['vendor_type'] = $this->request->data['vendor_type'];
                         $vDetails = $this->VendorDetails->patchEntity($vDetails, $vData);
                         if (isset($this->request->data['agreement']['name']) && $this->request->data['agreement']['name'] != '') {
                             $filename = '';
@@ -339,33 +289,6 @@ class VendorsController extends AppController {
     // * Author       :  Chirag Manavar
     // * Date         :  24-October-2017
     //***********************************************************************************************//
-
-    public function deleteimage($fields, $photo = NULL) {
-        $category = $this->ServiceCategory->find('all')->where([$fields => $photo])->hydrate(false)->first();
-        $category_id = $category['id'];
-        $category = $this->ServiceCategory->get($category_id);
-
-        if ($fields == 'icon_image') {
-            $fpath = WWW_ROOT . 'img/' . SERVICE_CATEGORY_ICON_PATH . $photo;
-        }
-        if ($fields == 'banner_image') {
-            $fpath = WWW_ROOT . 'img/' . SERVICE_CATEGORY_BANNER_PATH . $photo;
-        }
-        if ($fields == 'square_image') {
-            $fpath = WWW_ROOT . 'img/' . SERVICE_CATEGORY_SQUARE_BANNER_PATH . $photo;
-        }
-        if (file_exists($fpath)) {
-            unlink($fpath);
-        }
-        $category->$fields = "";
-        if ($this->ServiceCategory->save($category)) {
-            $this->Flash->success(Configure::read('Settings.DELETE'));
-            return $this->redirect(['action' => 'edit', $category_id]);
-        } else {
-            $this->Flash->success(Configure::read('Settings.DELETEFAIL'));
-            return $this->redirect(['action' => 'edit', $category_id]);
-        }
-    }
 
     public function deleteprofileimage($id) {
         $this->loadModel('Users');
@@ -421,27 +344,8 @@ class VendorsController extends AppController {
             'msg' => $view_output,
             'tomail' => $email,
             'subject' => 'VENDOR EMAIL',
-            'from_name' => 'Uncode Lab',
-            'from_mail' => 'uncodelab@gmail.com',
-        );
-        $this->sendemails($fields);
-        return;
-    }
-
-    public function sentSalesEmails($name, $email, $password) {
-        $this->layout = 'ajax';
-        $mailData = [];
-        $mailData['name'] = $name;
-        $mailData['email'] = $email;
-        $mailData['password'] = $password;
-        $this->set('mailData', $mailData);
-        $view_output = $this->render('/Element/vendors_template');
-        $fields = array(
-            'msg' => $view_output,
-            'tomail' => $email,
-            'subject' => 'SALES EMAIL',
-            'from_name' => 'Uncode Lab',
-            'from_mail' => 'uncodelab@gmail.com',
+            'from_name' => EMAIL_FROM_NAME,
+            'from_mail' => EMAIL_FROM_EMAIL_ADDRESS,
         );
         $this->sendemails($fields);
         return;
@@ -519,6 +423,7 @@ class VendorsController extends AppController {
 
     public function workdetails($id) {
         $this->loadModel('VendorCash');
+        $this->loadModel('VendorCashHistory');
         if (isset($id) && $id != '') {
             $vendor = [];
             $vendor = $this->Vendors->getVendorId($id);
@@ -564,12 +469,9 @@ class VendorsController extends AppController {
             $vendor['clear_cash'] = isset($creditClearCash['tot']) && $creditClearCash['tot'] != 0 ? $creditClearCash['tot'] : 0.00;
             $vendor['total_cash'] = isset($credittotalCash['tot']) && $credittotalCash['tot'] != '' ? $credittotalCash['tot'] : 0.00;
             $vendorCashDetails = $this->VendorCash->find('all')->where($condArrCashDetails)->hydrate(false)->toArray();
-//            if (!empty($vendorCashDetails)) {
-//                foreach ($vendorCashDetails as $key => $val) {
-//                    
-//                }
-//            }
             $vendor['vendor_cash'] = $vendorCashDetails;
+            $vendorCashHistory = $this->VendorCashHistory->find('all')->where(['vendor_id' => $id])->hydrate(false)->toArray();
+            $vendor['cash_history'] = $vendorCashHistory;
             $this->set('vendor', $vendor);
         } else {
             $this->Flash->error(__('RECORD DOES NOT EXIST'));
@@ -584,7 +486,7 @@ class VendorsController extends AppController {
 
     public function payment($id) {
         $this->loadModel('VendorCash');
-
+        $this->loadModel('VendorCashHistory');
         $this->loadModel('Users');
         if (isset($id) && $id != '') {
             $vendor = [];
@@ -620,16 +522,62 @@ class VendorsController extends AppController {
             $vendor['debit'] = ($totDebits['tot'] != 0) ? $totDebits['tot'] : 0.00;
             $vendorCashDetails = $this->VendorCash->find('all')->where($condArr)->hydrate(false)->toArray();
             if (isset($vendorCashDetails) && !empty($vendorCashDetails)) {
+                //pr($vendorCashDetails); exit;
+                $dateArr = [];
+                foreach ($vendorCashDetails as $val) {
+                    $dateArr[] = $val['created']->format('Y-m-d');
+                }
+                if ($from_date == '') {
+                    $from_date = min($dateArr);
+                }
+                if ($to_date == '') {
+                    $to_date = max($dateArr);
+                }
+                //echo $from_date . " " . $to_date; exit;
                 $vendor['vendor_cash'] = $vendorCashDetails;
                 $this->set('vendor', $vendor);
-                $vendorCash = $this->VendorCash->newEntity();
-                $this->set('vendorCash', $vendorCash);
+                $vendorCashHistory = $this->VendorCashHistory->newEntity();
+                $this->set('vendorCash', $vendorCashHistory);
                 if ($this->request->is('post')) {
-                    pr($this->request->data);
-                    exit;
+                    //pr($this->request->data); exit;
+                    $newRecords = [];
+                    $newRecords['vendor_id'] = $id;
+                    //$newRecords['from_date'] = $from_date;
+                    //$newRecords['to_date'] = $to_date;
+                    if ($this->request->data['payment_amount'] < 0) {
+                        $amount = $this->request->data['payment_amount'];
+                        $payment_type = 'DEBIT';
+                    } else {
+                        $amount = $this->request->data['payment_amount'];
+                        $payment_type = 'CREDIT';
+                    }
+                    $newRecords['payment_type'] = $payment_type;
+                    $newRecords['amount'] = $amount;
+                    $newRecords['payment_received_by'] = $this->request->session()->read('Auth.User.id');
+                    $vendorCashHistory = $this->VendorCashHistory->patchEntity($vendorCashHistory, $newRecords);
+                    $vendorCashHistory->from_date = $from_date;
+                    $vendorCashHistory->to_date = $to_date;
+                    $vendorCashHistory->created = date('Y-m-d H:i:s');
+                    $vendorCashHistory->created_by = $this->request->session()->read('Auth.User.id');
+                    if ($this->VendorCashHistory->save($vendorCashHistory)) {
+                        $newCondArr = [];
+                        $newCondArr["vendor_id"] = $id;
+                        $newCondArr["DATE_FORMAT(created,'%Y-%m-%d') >="] = date('Y-m-d', strtotime($from_date));
+                        $newCondArr["DATE_FORMAT(created,'%Y-%m-%d') <="] = date('Y-m-d', strtotime($to_date));
+                        $updateRecords = ['payment_status' => 'CLEAR', 'payment_receivedby' => $this->request->session()->read('Auth.User.id')];
+                        $this->VendorCash->updateAll($updateRecords, $newCondArr);
+                        $this->Flash->success(__('Vendor Cash Received!'));
+                        $this->request->session()->delete('vendorcashFilter');
+                        return $this->redirect(['action' => 'workdetails', $id]);
+                    } else {
+                        $this->Flash->error(__('Vendor Cash Not saved!'));
+                        $this->request->session()->delete('vendorcashFilter');
+                        return $this->redirect(['action' => 'workdetails', $id]);
+                    }
                 }
             } else {
                 $this->Flash->error(__('Vendor Cash Not Found!'));
+                $this->request->session()->delete('vendorcashFilter');
                 return $this->redirect(['action' => 'workdetails', $id]);
             }
         } else {

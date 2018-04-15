@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-md-12">
             <h1 class="page-header">
-                <i class="fa fa-user fa-fw"></i>VENDORS
+                <i class="fa fa-user fa-fw"></i>EXPERTS
             </h1>
         </div>        
         <!-- /.col-lg-12 -->
@@ -43,7 +43,7 @@
         <div class="row" id="scroll">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <?php if ($this->request->action == 'add') { ?>ADD NEW<?php } else { ?>EDIT<?php } ?> VENDOR 
+                    <?php if ($this->request->action == 'add') { ?>ADD NEW<?php } else { ?>EDIT<?php } ?> EXPERTS 
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
@@ -54,7 +54,8 @@
                                 <label class="col-sm-3 control-label">USER TYPE <span class="text-danger">*</span></label>
                                 <div class="col-sm-6">
                                     <div class="custom-radio radio ">
-                                        <?php echo $this->Form->radio('user_type', [['value' => 'SALES', 'text' => 'SALES'], ['value' => 'VENDOR', 'text' => 'VENDOR']], ['value' => 'SALES']); ?>
+                                        VENDOR
+                                        <input type="hidden" name="user_type" value="VENDOR" />
                                     </div>
                                 </div>
                             </div>
@@ -82,66 +83,70 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="salesDetails" style="display:block">
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">PHONE NUMBER 2 <span class="text-danger">*</span></label>
+                                <div class="col-sm-6">
+                                    <div class="input text">
+                                        <?php echo $this->Form->input('phone_number_2', ['label' => false, 'class' => 'form-control required normal-font number', 'placeholder' => 'ENTER PHONE NUMBER 2', 'maxlength' => 10]); ?>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="vendorDetails" style="display:none">
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">PHONE NUMBER 2 <span class="text-danger">*</span></label>
-                                    <div class="col-sm-6">
-                                        <div class="input text">
-                                            <?php echo $this->Form->input('phone_number_2', ['label' => false, 'class' => 'form-control required normal-font number', 'placeholder' => 'ENTER PHONE NUMBER 2', 'maxlength' => 10]); ?>
-                                        </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">SERVICE <span class="text-danger">*</span></label>
+                                <div class="col-sm-6">
+                                    <div class="input tel">
+                                        <?php echo $this->Form->input('service_id', ['label' => false, 'type' => 'select', 'options' => $services, 'empty' => 'SELECT CATEGORY', 'id' => 'select-category', 'class' => ' demo-default', 'placeholder' => 'ENTER CATEGORY NAME']); ?>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">SERVICE <span class="text-danger">*</span></label>
-                                    <div class="col-sm-6">
-                                        <div class="input tel">
-                                            <?php echo $this->Form->input('service_id', ['label' => false, 'type' => 'select', 'options' => $services, 'empty' => 'SELECT CATEGORY', 'id' => 'select-category', 'class' => ' demo-default', 'placeholder' => 'ENTER CATEGORY NAME']); ?>
-    <!--                                        <input type="number" name="order_id" class="form-control  required number" placeholder="Enter Category order id" id="order_id" aria-required="true">-->
-                                        </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">VENDOR TYPE <span class="text-danger">*</span></label>
+                                <div class="col-sm-6">
+                                    <div class="custom-radio radio ">
+                                        <?php echo $this->Form->radio('vendor_type', [['value' => 'EMPLOYMENT', 'text' => 'EMPLOYMENT'], ['value' => 'SELF_EMPLOYMENT', 'text' => 'SELF EMPLOYMENT']], ['value' => 'SELF_EMPLOYMENT']); ?>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label padng_rgtrmv">PROFILE PHOTO <span class="text-danger">*</span></label>
-                                    <div class="col-sm-6">
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label padng_rgtrmv">PROFILE PHOTO <span class="text-danger">*</span></label>
+                                <div class="col-sm-6">
+                                    <?php
+                                    if (isset($user['profile_picture']) && $user['profile_picture'] != '') {
+                                        echo $this->Html->image(SERVICE_CATEGORY_SQUARE_BANNER_PATH . $user['profile_picture'], ['height' => 100, 'width' => 100]) . "<br/>";
+                                        ?>
+                                        <br/>
+                                        <a data-toggle="modal" url=<?php echo $this->Url->build(['controller' => 'Vendors', 'action' => 'deleteimage', 'profile_picture', $user['profile_picture']]) ?> data-value="<?php echo $user['profile_picture']; ?>" data-target="#delete" href="#"  class="btn btn-danger delete ">REMOVE IMAGE</a>
                                         <?php
-                                        if (isset($user['profile_picture']) && $user['profile_picture'] != '') {
-                                            echo $this->Html->image(SERVICE_CATEGORY_SQUARE_BANNER_PATH . $user['profile_picture'], ['height' => 100, 'width' => 100]) . "<br/>";
-                                            ?>
-                                            <br/>
-                                            <a data-toggle="modal" url=<?php echo $this->Url->build(['controller' => 'Vendors', 'action' => 'deleteimage', 'profile_picture', $user['profile_picture']]) ?> data-value="<?php echo $user['profile_picture']; ?>" data-target="#delete" href="#"  class="btn btn-danger delete ">REMOVE IMAGE</a>
-                                            <?php
-                                        } else {
-                                            echo $this->Form->input('profile_picture', ['label' => false, 'type' => 'file', 'class' => 'required imgpreview', 'id' => 'squarebanner']);
-                                            ?>
-                                            <br/>
-                                            <div class="imageblock">
-                                                <div class="form-group hover-element scanimgblock">
-                                                    <div class="col-sm-8 td-inputbox">
-                                                        <?php echo $this->Html->image('upload_image.png', ['class' => 'square_upload', 'alt' => 'Your image', 'id' => 'squarebanner_upload_preview', 'height' => '75']); ?>
-                                                    </div>
+                                    } else {
+                                        echo $this->Form->input('profile_picture', ['label' => false, 'type' => 'file', 'class' => 'required imgpreview', 'id' => 'squarebanner']);
+                                        ?>
+                                        <br/>
+                                        <div class="imageblock">
+                                            <div class="form-group hover-element scanimgblock">
+                                                <div class="col-sm-8 td-inputbox">
+                                                    <?php echo $this->Html->image('upload_image.png', ['class' => 'square_upload', 'alt' => 'Your image', 'id' => 'squarebanner_upload_preview', 'height' => '75']); ?>
                                                 </div>
                                             </div>
-                                            <?php
-                                        }
-                                        ?> 
+                                        </div>
+                                        <?php
+                                    }
+                                    ?> 
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">AGREEMENTS </label>
+                                <div class="col-sm-6">
+                                    <div class="input text">
+                                        <?php echo $this->Form->input('agreement', ['label' => false, 'type' => 'file', 'id' => 'agrements']); ?>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">AGREEMENTS <span class="text-danger">*</span></label>
-                                    <div class="col-sm-6">
-                                        <div class="input text">
-                                            <?php echo $this->Form->input('agreement', ['label' => false, 'type' => 'file', 'class' => 'required', 'id' => 'agrements']); ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-3 control-label">ID PROOF <span class="text-danger">*</span></label>
-                                    <div class="col-sm-6">
-                                        <div class="input text">
-                                            <?php echo $this->Form->input('id_proof', ['label' => false, 'type' => 'file', 'class' => 'required', 'id' => 'idproof']); ?>
-                                        </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">ID PROOF </label>
+                                <div class="col-sm-6">
+                                    <div class="input text">
+                                        <?php echo $this->Form->input('id_proof', ['label' => false, 'type' => 'file', 'id' => 'idproof']); ?>
                                     </div>
                                 </div>
                             </div>
@@ -156,20 +161,13 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="salesDetails" style="display:block">
-                            <label class="col-sm-3  control-label"></label>
-                            <div class="col-sm-6">
-                                <button type="submit" class="btn btn-primary">SAVE SALES</button>                                    
-                                <?php echo $this->Html->link('CANCEL', array('controller' => 'Vendors', 'action' => 'index'), array('class' => 'removeimage btn btn-warning', 'escape' => false)); ?>                        
-                            </div>
+
+                        <label class="col-sm-3  control-label"></label>
+                        <div class="col-sm-6">
+                            <button type="submit" class="btn btn-primary">SAVE EXPERTS</button>                                    
+                            <?php echo $this->Html->link('CANCEL', array('controller' => 'Vendors', 'action' => 'index'), array('class' => 'removeimage btn btn-warning', 'escape' => false)); ?>                        
                         </div>
-                        <div class="vendorDetails" style="display:none">
-                            <label class="col-sm-3  control-label"></label>
-                            <div class="col-sm-6">
-                                <button type="submit" class="btn btn-primary">SAVE VENDORS</button>                                    
-                                <?php echo $this->Html->link('CANCEL', array('controller' => 'Vendors', 'action' => 'index'), array('class' => 'removeimage btn btn-warning', 'escape' => false)); ?>                        
-                            </div>
-                        </div>
+
                     </div>
                     <?php echo $this->Form->end(); ?>
                     <!-- /.panel-body -->

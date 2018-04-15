@@ -333,6 +333,12 @@ class AppController extends Controller {
         return (isset($user['profile_pic']) && ($user['profile_pic'] != '')) ? IMAGE_URL_PATH . 'users/' . $user['profile_pic'] : IMAGE_URL_PATH . 'users/user.png';
     }
 
+    public function getVendorProfilePicture($userId) {
+        $userTable = TableRegistry::get('Users');
+        $user = $userTable->find()->select(['profile_pic'])->where(['id' => $userId])->hydrate(false)->first();
+        return (isset($user['profile_pic']) && ($user['profile_pic'] != '')) ? IMAGE_URL_PATH . USER_PROFILE_PATH . $user['profile_pic'] : IMAGE_URL_PATH . 'users/user.png';
+    }
+
     public function getUserType($userId) {
         $userTable = TableRegistry::get('Users');
         $user = $userTable->find()->select(['user_type'])->where(['id' => $userId])->hydrate(false)->first();
@@ -343,6 +349,12 @@ class AppController extends Controller {
         $orderTable = TableRegistry::get('Orders');
         $order = $orderTable->find()->select(['order_id'])->where(['id' => $id])->hydrate(false)->first();
         return $order['order_id'];
+    }
+
+    public function getVendorType($userId) {
+        $vdTable = TableRegistry::get('VendorDetails');
+        $user = $vdTable->find()->select(['vendor_type'])->where(['user_id' => $userId])->hydrate(false)->first();
+        return $user['vendor_type'];
     }
 
     public function sendMessage($title, $msg, $url = '', $user = 'All') {
@@ -431,7 +443,7 @@ class AppController extends Controller {
     }
 
     public function getAllOrderStatus() {
-        return ['PENDING' => 'PENDING', 'PLACED' => 'PLACED', 'SCHEDULE' => 'SCHEDULE', 'COMPLETED' => 'COMPLETED', 'CANCELLED' => 'CANCELLED'];
+        return ['PENDING' => 'PENDING', 'PLACED' => 'PLACED', 'SCHEDULE' => 'SCHEDULE', 'COMPLETED' => 'COMPLETED', 'CANCELLED' => 'CANCELLED', 'CLOSED' => 'CLOSED'];
     }
 
     public function getMemberCredits($userId) {

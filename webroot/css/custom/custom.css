@@ -1139,6 +1139,10 @@ input[type=radio], input[type=checkbox] {
     color: #3c763d !important;
 }
 
+.alert-danger .close {
+    color: #a94442!important;
+}
+
 .navbar-default {
     background-image: linear-gradient(to bottom,#fff 0,#aaa 100%) !important;
 }

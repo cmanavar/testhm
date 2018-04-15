@@ -48,7 +48,7 @@ class UsersController extends AppController {
 
     //***********************************************************************************************//
     // * Function     :  login
-    // * Parameter    :  
+    // * Parameter    :
     // * Description  :  This function used to Login in to system set authdata
     // * Author       :  Chirag Manavar
     // * Date         :  24-October-2017
@@ -81,7 +81,7 @@ class UsersController extends AppController {
 
     //***********************************************************************************************//
     // * Function     :  logout
-    // * Parameter    :  
+    // * Parameter    :
     // * Description  :  This function used to Logout from system and delete auth data
     // * Author       :  Chirag Manavar
     // * Date         :  24-October-2017
@@ -100,7 +100,7 @@ class UsersController extends AppController {
 
     //***********************************************************************************************//
     // * Function     :  index
-    // * Parameter    :  
+    // * Parameter    :
     // * Description  :  This function used to Find All Users and add new user
     // * Author       :  Chirag Manavar
     // * Date         :  24-October-2017
@@ -116,7 +116,7 @@ class UsersController extends AppController {
 
     //***********************************************************************************************//
     // * Function     :  index
-    // * Parameter    :  
+    // * Parameter    :
     // * Description  :  This function used to Find All Users and add new user
     // * Author       :  Chirag Manavar
     // * Date         :  24-October-2017
@@ -167,7 +167,7 @@ class UsersController extends AppController {
 
 
     public function edituser($id = null) {
-        //CHECK IF THE RECORD EXISTS OR NOT 
+        //CHECK IF THE RECORD EXISTS OR NOT
         $query = $this->Users->getuservalidationID($id); //LISTING USERDATA
         if ($query->isEmpty()) {
             $this->Flash->error(__('RECORD DOES NOT EXIST'));
@@ -293,22 +293,7 @@ class UsersController extends AppController {
                     $user->modified_by = 0;
                     $user->created = date("Y-m-d H:i:s");
                     $user->modified = date("Y-m-d H:i:s");
-                    $mailData = [];
-                    $mailData['name'] = $name;
-                    $senderEmail = str_replace("@", "<span>@</span>", $email);
-                    $senderEmail = str_replace(".", "<span>.</span>", $email);
-                    $mailData['email'] = $senderEmail;
-                    $mailData['password'] = $password;
-                    $this->set('mailData', $mailData);
-                    $view_output = $this->render('/Element/signup_self');
-                    $fields = array(
-                        'msg' => $view_output,
-                        'tomail' => $email,
-                        'subject' => 'Welcome To H-Men! Confirm Your Email',
-                        'from_name' => EMAIL_FROM_NAME,
-                        'from_mail' => EMAIL_FROM_EMAIL_ADDRESS,
-                    );
-                    $this->sendemails($fields);
+                    $this->sentEmails($name, $email, $password);
                     $saveUsers = $this->Users->save($user);
                     if ($saveUsers) {
                         //generate api key
@@ -327,12 +312,15 @@ class UsersController extends AppController {
                         $userMapping->modified = date("Y-m-d H:i:s");
                         if ($this->UserMapping->save($userMapping)) {
                             $this->Flash->success('APP USER CREATED SUCCESSFULLY!');
+                            return $this->redirect(['action' => 'appuser']);
                         } else {
                             $this->Flash->error('UNABLE TO ADD THE USER MAPPING.');
+                            return $this->redirect(['action' => 'appuser']);
                         }
                     };
                 } else {
                     $this->Flash->error('EMAIL ID IS ALREAY EXIST. PLEASE, TRY AGAIN LATER!');
+                    return $this->redirect(['action' => 'appuser']);
                 }
             } else {
                 $this->set('errors', $errors);
@@ -348,6 +336,47 @@ class UsersController extends AppController {
     // * Author       :  Chirag Manavar
     // * Date         :  24-October-2017
     //***********************************************************************************************//
+
+    public function sentEmails($name, $email, $password) {
+        $this->layout = 'ajax';
+        $mailData = [];
+        $mailData['name'] = $name;
+        $mailData['email'] = $email;
+        $mailData['password'] = $password;
+        $this->set('mailData', $mailData);
+        $view_output = $this->render('/Element/signup_self');
+        $fields = array(
+            'msg' => $view_output,
+            'tomail' => $email,
+            'subject' => 'Welcome To H-Men! Confirm Your Credentials',
+            'from_name' => EMAIL_FROM_NAME,
+            'from_mail' => EMAIL_FROM_EMAIL_ADDRESS,
+        );
+        $this->sendemails($fields);
+        return;
+    }
+
+    public function sendCustomeremails($name, $email, $password) {
+        $this->layout = 'ajax';
+        $mailData = [];
+        $mailData['name'] = $name;
+        $senderEmail = str_replace("@", "<span>@</span>", $email);
+        $senderEmail = str_replace(".", "<span>.</span>", $email);
+        $mailData['email'] = $senderEmail;
+        $mailData['email_address'] = $email;
+        $mailData['password'] = $password;
+        $this->set('mailData', $mailData);
+        $view_output = $this->render('/Element/signup_self');
+        $fields = array(
+            'msg' => $view_output,
+            'tomail' => $email,
+            'subject' => 'Welcome To H-Men! Confirm Your Credentials',
+            'from_name' => EMAIL_FROM_NAME,
+            'from_mail' => EMAIL_FROM_EMAIL_ADDRESS,
+        );
+        $this->sendemails($fields);
+        return;
+    }
 
     public function changeapppassword($id = NULL) {
         $query = $this->Users->getuservalidationID($id); //LISTING USERDATA
@@ -380,7 +409,7 @@ class UsersController extends AppController {
     //***********************************************************************************************//
 
     public function editappuser($id) {
-        //CHECK IF THE RECORD EXISTS OR NOT 
+        //CHECK IF THE RECORD EXISTS OR NOT
         $query = $this->Users->getuservalidationID($id); //LISTING USERDATA
         //pr($query); exit;
         if ($query->isEmpty()) {
@@ -490,9 +519,9 @@ class UsersController extends AppController {
                 $senderEmail = str_replace(".", "<span>.</span>", $email);
                 $mailData['email'] = $senderEmail;
                 $mailData['password'] = $password;
-                $mailData['activation_link'] = APP_PATH . '/webservices/email/activate/' . base64_encode($email);
+                $mailData['activation_link'] = APP_PATH . 'webservices/email/activate/' . base64_encode($email);
                 $this->set('mailData', $mailData);
-                $view_output = $this->render('/Element/signup_self');
+                $view_output = $this->render('/Element/signup_self_confirm');
                 //echo $view_output; exit;
                 $fields = array(
                     'msg' => $view_output,
@@ -504,16 +533,25 @@ class UsersController extends AppController {
                 $this->sendemails($fields);
                 $saveUsers = $this->Users->save($user);
                 if ($saveUsers) {
-                    if ($flagAff == true) {
-                        $this->loadModel('Wallets');
-                        $vW['amount'] = REFERRAL_COMISSION;
-                        $vW['wallet_type'] = 'CREDIT';
-                        $vW['purpose'] = 'REFERRAL';
-                        $vW['purpose_id'] = $saveUsers['id'];
-                        $walletId = $this->addWalletAmount($vW['user_id'], $vW['amount'], $vW['wallet_type'], $vW['purpose'], $vW['purpose_id']);
-                        if ($walletId) {
-                            $this->newMsg($vW['user_id'], MSG_TITLE_REFERRAL, MSG_TYPE_REFERRAL, 'Rs. 100 Rewarded for referring to ' . $name);
-                        }
+//                    if ($flagAff == true) {
+//                        $this->loadModel('Wallets');
+//                        $vW['amount'] = REFERRAL_COMISSION;
+//                        $vW['wallet_type'] = 'CREDIT';
+//                        $vW['purpose'] = 'REFERRAL';
+//                        $vW['purpose_id'] = $saveUsers['id'];
+//                        $walletId = $this->addWalletAmount($vW['user_id'], $vW['amount'], $vW['wallet_type'], $vW['purpose'], $vW['purpose_id']);
+//                        if ($walletId) {
+//                            $this->newMsg($vW['user_id'], MSG_TITLE_REFERRAL, MSG_TYPE_REFERRAL, 'Rs. 100 Rewarded for referring to ' . $name);
+//                        }
+//                    }
+                    $this->loadModel('Wallets');
+                    $vW['amount'] = SIGNUP_COMISSION;
+                    $vW['wallet_type'] = 'CREDIT';
+                    $vW['purpose'] = 'SIGNUP';
+                    $vW['purpose_id'] = $saveUsers['id'];
+                    $walletId = $this->addWalletAmount($saveUsers['id'], $vW['amount'], $vW['wallet_type'], $vW['purpose'], $vW['purpose_id']);
+                    if ($walletId) {
+                        $this->newMsg($saveUsers['id'], MSG_TITLE_SIGNUP, MSG_TYPE_SIGNUP, 'Rs. 100 Rewarded for H-MEN Signup');
                     }
                     //generate api key
                     $api_key = $this->Users->generateAPIkey();
@@ -809,7 +847,7 @@ class UsersController extends AppController {
         $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
         $pass = array(); //remember to declare $pass as an array
         $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 6; $i++) {
             $n = rand(0, $alphaLength);
             $pass[] = $alphabet[$n];
         }

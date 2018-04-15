@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-md-12">
             <h1 class="page-header">
-                <i class="fa fa-user fa-fw"></i>VENDORS
+                <i class="fa fa-user fa-fw"></i>EXPERTS
                 <a href="<?php echo $this->Url->build(["controller" => "Vendors", "action" => "index"]); ?>"><button class="btn btn-warning btn-sm pull-right" >BACK</button></a>
             </h1>
         </div>        
@@ -28,7 +28,7 @@
         <div class="row" id="scroll">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    VIEW VENDOR DETAILS
+                    VIEW EXPERTS DETAILS
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
@@ -40,11 +40,6 @@
                     <div class="row">
                         <div class="col-md-12">
                             <table class="table table-bordered">
-                                <?php // foreach ($category as $key => $val) {   ?>
-                                <tr>
-                                    <td width="30%"><label class="control-label">Usertype</label></td>
-                                    <td><?= $vendor['user_type']; ?></td>
-                                </tr>
                                 <tr>
                                     <td width="30%"><label class="control-label">Name</label></td>
                                     <td><?= $vendor['name']; ?></td>
@@ -61,40 +56,44 @@
                                     ?>
                                     <td><?= $phoneNumber; ?></td>
                                 </tr>
-                                <?php if ($vendor['user_type'] == 'VENDOR') { ?>
-                                    <tr>
-                                        <td width="30%"><label class="control-label">Profile Picture</label></td>
-                                        <td><?= $this->Html->image(USER_PROFILE_PATH . $vendor['profile_pic'], ['height' => 100, 'width' => 100]) . "<br/>" ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%"><label class="control-label">Agreement </label></td>
-                                        <td>
-                                            <?php if (isset($vendor['agreement']) && $vendor['agreement'] != '') { ?>
-                                                <a href="<?php echo $this->Url->build(['controller' => 'Vendors', 'action' => 'downloadAgreements', $vendor['id']]) ?>"  class="btn btn-success btn-sm">DOWNLOAD AGREEMENTS</a>
-                                            <?php } else { ?>
-                                                <?php echo "-"; ?>
-                                            <?php } ?>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%"><label class="control-label">Id Proof </label></td>
-                                        <td>
-                                            <?php if (isset($vendor['id_proof']) && $vendor['id_proof'] != '') { ?>
-                                                <a href="<?php echo $this->Url->build(['controller' => 'Vendors', 'action' => 'downloadIdProof', $vendor['id']]) ?>"  class="btn btn-success btn-sm">DOWNLOAD ID PROOF</a>
-                                            <?php } else { ?>
-                                                <?php echo "-"; ?>
-                                            <?php } ?>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%"><label class="control-label">Service Name </label></td>
-                                        <td><?= $vendor['service_name']; ?></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="30%"><label class="control-label">Status</label></td>
-                                        <td><?= (isset($vendor['active']) && $vendor['active'] == 'Y') ? 'ACTIVE' : 'INACTIVE'; ?></td>
-                                    </tr>
-                                <?php } ?>
+
+                                <tr>
+                                    <td width="30%"><label class="control-label">Profile Picture</label></td>
+                                    <td><?= $this->Html->image(USER_PROFILE_PATH . $vendor['profile_pic'], ['height' => 100, 'width' => 100]) . "<br/>" ?></td>
+                                </tr>
+                                <tr>
+                                    <td width="30%"><label class="control-label">Agreement </label></td>
+                                    <td>
+                                        <?php if (isset($vendor['agreement']) && $vendor['agreement'] != '') { ?>
+                                            <a href="<?php echo $this->Url->build(['controller' => 'Vendors', 'action' => 'downloadAgreements', $vendor['id']]) ?>"  class="btn btn-success btn-sm">DOWNLOAD AGREEMENTS</a>
+                                        <?php } else { ?>
+                                            <?php echo "-"; ?>
+                                        <?php } ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="30%"><label class="control-label">Id Proof </label></td>
+                                    <td>
+                                        <?php if (isset($vendor['id_proof']) && $vendor['id_proof'] != '') { ?>
+                                            <a href="<?php echo $this->Url->build(['controller' => 'Vendors', 'action' => 'downloadIdProof', $vendor['id']]) ?>"  class="btn btn-success btn-sm">DOWNLOAD ID PROOF</a>
+                                        <?php } else { ?>
+                                            <?php echo "-"; ?>
+                                        <?php } ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="30%"><label class="control-label">Service Name </label></td>
+                                    <td><?= $vendor['service_name']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td width="30%"><label class="control-label">Vendor Type </label></td>
+                                    <td><?= ucfirst(strtolower(str_replace("_", " ", $vendor['vendor_type']))); ?></td>
+                                </tr>
+                                <tr>
+                                    <td width="30%"><label class="control-label">Status</label></td>
+                                    <td><?= (isset($vendor['active']) && $vendor['active'] == 'Y') ? 'ACTIVE' : 'INACTIVE'; ?></td>
+                                </tr>
+
                             </table>
                         </div>
                     </div>

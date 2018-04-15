@@ -71,6 +71,10 @@
                                         <td colspan="4"><?= $orders['payment_status']; ?></td>
                                     </tr>
                                     <tr>
+                                        <td>Payment Method</td>
+                                        <td colspan="4"><?= (isset($orders['payment_method']) && $orders['payment_method'] != '') ? $orders['payment_method'] : '-'; ?></td>
+                                    </tr>
+                                    <tr>
                                         <td>Order Total</td>
                                         <td colspan="4"><?= $orders['total_amount']; ?></td>
                                     </tr>
@@ -134,11 +138,11 @@
                                     </tr>
 <!--                                    <tr class="text-right">
                                         <td colspan="4">
-                                            <?php if (isset($orders['is_coupon_applied']) && $orders['is_coupon_applied'] == 'Y') { ?>
-                                                <b>Discount Applied <?php echo $orders['coupon_code']; ?></b>
-                                            <?php } else { ?>
-                                                <b>Discount Applied</b>
-                                            <?php } ?>
+                                    <?php if (isset($orders['is_coupon_applied']) && $orders['is_coupon_applied'] == 'Y') { ?>
+                                                    <b>Discount Applied <?php echo $orders['coupon_code']; ?></b>
+                                    <?php } else { ?>
+                                                    <b>Discount Applied</b>
+                                    <?php } ?>
                                         </td>
                                         <td><?php echo "- " . number_format($orders['total']['discount'], 2); ?></td>
                                     </tr>-->

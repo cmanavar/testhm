@@ -1,0 +1,8 @@
+Array
+(
+    [api_key] => aa88617fe7d04dd6abe028bc5ede82be
+    [user_address] => A/24, Satellite, Ahmedabad, Gujarat 380015, India
+    [schedule_date] => 01-03-2018
+    [schedule_time] => 12 - 2 PM
+    [cart_id] => 5
+)

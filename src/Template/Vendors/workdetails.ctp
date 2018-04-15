@@ -177,6 +177,60 @@
                 </div>
                 <!-- /.panel-body -->
             </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    PAYMENT HISTORY
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <?php //pr($vendor); //exit;  ?>
+                            <div class="table-responsive">
+                                <table class="table table-bordered text-center">
+                                    <thead>
+                                        <tr>
+                                            <td>No</td>
+                                            <td>From Date</td>
+                                            <td>To Date</td>
+                                            <td>Type</td>
+                                            <td>Payment Date</td>
+                                            <td class="text-right">Amount</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php if (is_array($vendor['cash_history']) && !empty($vendor['cash_history'])) { ?>
+                                            <?php foreach ($vendor['cash_history'] as $key => $val) { ?>
+                                                <tr>
+                                                    <td><?= $key + 1; ?></td>
+                                                    <td><?= $val['from_date']->format('d-M-Y'); ?></td>
+                                                    <td><?= $val['to_date']->format('d-M-Y'); ?></td>
+                                                    <td><?= ucfirst(strtolower($val['payment_type'])); ?></td>
+                                                    <td><?= $val['created']->format('d-M-Y'); ?></td>
+                                                    <td class="text-right"><?= number_format($val['amount'], 2); ?></td>
+                                                </tr>
+                                            <?php } ?>
+                                        <?php } else { ?>
+                                            <tr>
+                                                <td colspan="5">No Records Found</td>
+                                            </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
+                                <?php if (isset($vendor['due_cash']) && $vendor['due_cash'] != 0) { ?>
+                                    <div class="row">
+                                        <label class="col-sm-3"></label>
+                                        <div class="col-sm-9 text-right">
+                                            <?php echo $this->Html->link('VENDOR CASH SETTLEMENT', ['controller' => 'Vendors', 'action' => 'payment', $vendor['id']], ['class' => 'btn btn-primary', 'escape' => false, 'title' => 'Green Cash Settlement']); ?>
+                                            <?php echo $this->Html->link('CANCEL', array('controller' => 'Vendors', 'action' => 'index'), array('class' => 'removeimage btn btn-warning', 'escape' => false)); ?>                        
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /.row -->
     </div>

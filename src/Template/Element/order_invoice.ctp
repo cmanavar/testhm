@@ -127,18 +127,6 @@
                                                                                                     <span style="color:#333333!important;font-size:12px!important;line-height:15px!important">₹ <?= $orderData['total']['tax']; ?> </span>
                                                                                                 </td>
                                                                                             </tr>
-                                                                                            <?php if ($orderData['total']['discount'] != 0) { ?>
-                                                                                                <tr>
-                                                                                                    <td style="padding:10px 0;" align="left" valign="top">
-                                                                                                        <span style="font-size:12px!important;line-height:15px!important">
-                                                                                                            <strong>Discount :</strong>
-                                                                                                        </span>
-                                                                                                    </td>
-                                                                                                    <td style="padding:10px 0;" align="right" valign="top">
-                                                                                                        <span style="color:#333333!important;font-size:12px!important;line-height:15px!important">(-) ₹ <?= $orderData['total']['discount']; ?> </span>
-                                                                                                    </td>
-                                                                                                </tr>
-                                                                                            <?php } ?>
                                                                                             <?php if ($orderData['total']['wallet_amount'] != 0) { ?>
                                                                                                 <tr>
                                                                                                     <td style="padding:10px 0;" align="left" valign="top">
